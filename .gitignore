@@ -1,0 +1,10 @@
+src/config/config.json
+test/config.json
+.venv
+demand.egg-info/
+.vscode/
+tmp/
+.env*
+__pycache__
+note/
+output/

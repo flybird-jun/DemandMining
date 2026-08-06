@@ -1,0 +1,376 @@
+{
+    "story": [
+        [
+            49300001,
+            1756800000,
+            "Show HN: A simple inventory management tool for small warehouses",
+            "story",
+            "https://news.ycombinator.com/item?id=49300001"
+        ],
+        [
+            49300002,
+            1756886400,
+            "Ask HN: What repetitive tasks have you automated with Python?",
+            "story",
+            "https://news.ycombinator.com/item?id=49300002"
+        ],
+        [
+            49300003,
+            1756972800,
+            "Ask HN: What do you use for lightweight CRM?",
+            "story",
+            "https://news.ycombinator.com/item?id=49300003"
+        ],
+        [
+            49300004,
+            1757059200,
+            "Show HN: A tiny tool for reconciling invoices",
+            "story",
+            "https://news.ycombinator.com/item?id=49300004"
+        ],
+        [
+            49300005,
+            1757145600,
+            "Ask HN: How do small teams manage customer support?",
+            "story",
+            "https://news.ycombinator.com/item?id=49300005"
+        ],
+        [
+            49300006,
+            1757232000,
+            "Show HN: Automated weekly reporting for small businesses",
+            "story",
+            "https://news.ycombinator.com/item?id=49300006"
+        ],
+        [
+            49300007,
+            1757318400,
+            "Ask HN: What is your workaround for vendor CSV exports?",
+            "story",
+            "https://news.ycombinator.com/item?id=49300007"
+        ],
+        [
+            49300008,
+            1757404800,
+            "Show HN: Simple scheduling software for local service businesses",
+            "story",
+            "https://news.ycombinator.com/item?id=49300008"
+        ],
+        [
+            49300009,
+            1757491200,
+            "Ask HN: What business software do you wish were simpler?",
+            "story",
+            "https://news.ycombinator.com/item?id=49300009"
+        ],
+        [
+            49300010,
+            1757577600,
+            "Show HN: A small-team tool for tracking recurring operations",
+            "story",
+            "https://news.ycombinator.com/item?id=49300010"
+        ]
+    ],
+    "comment": [
+        [
+            49300101,
+            1756803600,
+            "Most inventory systems I evaluated seem designed for much larger warehouses. We only need something simple, but everything feels unnecessarily complicated.",
+            49300001
+        ],
+        [
+            49300102,
+            1756807200,
+            "We ended up using spreadsheets because the existing inventory tools were too expensive and had far more features than we needed.",
+            49300101
+        ],
+        [
+            49300103,
+            1756810800,
+            "👍",
+            49300001
+        ],
+        [
+            49300104,
+            1756814400,
+            "https://example.com/inventory-tool",
+            49300001
+        ],
+        [
+            49300105,
+            1756818000,
+            "Exactly.",
+            49300101
+        ],
+        [
+            49300201,
+            1756890000,
+            "We built a Python script to clean warehouse CSV files and upload the changes automatically. It saves several hours every week.",
+            49300002
+        ],
+        [
+            49300202,
+            1756893600,
+            "The annoying part is maintenance. One vendor changes a CSV column and the automation breaks.",
+            49300201
+        ],
+        [
+            49300203,
+            1756897200,
+            "",
+            49300002
+        ],
+        [
+            49300204,
+            1756900800,
+            "```python\nimport csv\nprint('hello')\n```",
+            49300002
+        ],
+        [
+            49300205,
+            1756904400,
+            "The annoying part is maintenance. One vendor changes a CSV column and the automation breaks.",
+            49300201
+        ],
+        [
+            49300301,
+            1756976400,
+            "Most CRMs are overkill for our five-person company. We mainly need contacts, notes, and follow-up reminders.",
+            49300003
+        ],
+        [
+            49300302,
+            1756980000,
+            "We currently track customers in a shared spreadsheet, but overdue follow-ups are easy to miss.",
+            49300301
+        ],
+        [
+            49300303,
+            1756983600,
+            "Thanks for sharing.",
+            49300003
+        ],
+        [
+            49300304,
+            1756987200,
+            null,
+            49300003
+        ],
+        [
+            49300305,
+            1756990800,
+            "I would pay for a lightweight CRM if pricing stayed predictable as our team grows.",
+            49300003
+        ],
+        [
+            49300401,
+            1757062800,
+            "We reconcile invoices against bank transactions manually every month. The process takes about half a day.",
+            49300004
+        ],
+        [
+            49300402,
+            1757066400,
+            "Our accounting software handles normal invoices, but unusual supplier formats still require manual spreadsheet work.",
+            49300401
+        ],
+        [
+            49300403,
+            1757070000,
+            "The current workflow is basically {invoice} -> {spreadsheet} -> {bank} -> {accounting}; every exception needs manual review.",
+            49300004
+        ],
+        [
+            49300404,
+            1757073600,
+            "> This is exactly what we do today.\n> Every month.\n> With spreadsheets.\n> And manual checks.",
+            49300004
+        ],
+        [
+            49300405,
+            1757077200,
+            "A reliable matching tool would be valuable if it could work without forcing us to replace our accounting software.",
+            49300004
+        ],
+        [
+            49300501,
+            1757149200,
+            "We use a shared inbox because dedicated helpdesk software feels excessive for a five-person company.",
+            49300005
+        ],
+        [
+            49300502,
+            1757152800,
+            "The shared inbox works until two people answer the same customer or nobody notices an unanswered message.",
+            49300501
+        ],
+        [
+            49300503,
+            1757156400,
+            "Nope",
+            49300005
+        ],
+        [
+            49300504,
+            1757160000,
+            "https://news.ycombinator.com/",
+            49300005
+        ],
+        [
+            49300505,
+            1757163600,
+            "Simple assignment and response tracking would probably solve most of our support workflow.",
+            49300005
+        ],
+        [
+            49300601,
+            1757235600,
+            "Every Monday I download sales data from Shopify, Stripe, and PayPal and merge it into a spreadsheet. It takes around two hours.",
+            49300006
+        ],
+        [
+            49300602,
+            1757239200,
+            "I wrote a small script to automate part of it, but API changes keep breaking the workflow.",
+            49300601
+        ],
+        [
+            49300603,
+            1757242800,
+            "def report():\n    data = load()\n    return data",
+            49300006
+        ],
+        [
+            49300604,
+            1757242800,
+            "Interesting.",
+            49300006
+        ],
+        [
+            49300605,
+            1757250000,
+            "I wrote a small script to automate part of it, but API changes keep breaking the workflow.",
+            49300601
+        ],
+        [
+            49300701,
+            1757322000,
+            "Every vendor exports CSV files with slightly different column names, so we clean them before importing.",
+            49300007
+        ],
+        [
+            49300702,
+            1757325600,
+            "I maintain a separate script for each vendor. It works until someone changes the export format.",
+            49300701
+        ],
+        [
+            49300703,
+            1757329200,
+            "Same.",
+            49300701
+        ],
+        [
+            49300704,
+            1757329200,
+            "https://example.com/csv-standardizer?source=hn",
+            49300007
+        ],
+        [
+            49300705,
+            1757336400,
+            "A standardization layer would remove a surprisingly annoying amount of recurring manual work.",
+            49300007
+        ],
+        [
+            49300801,
+            1757408400,
+            "We currently coordinate appointments through text messages. It works, but missed appointments cost us real money.",
+            49300008
+        ],
+        [
+            49300802,
+            1757412000,
+            "Most scheduling tools seem designed for larger teams with complex shift management.",
+            49300801
+        ],
+        [
+            49300803,
+            1757415600,
+            "> We tried three scheduling tools.\n> Customers found the booking flow confusing.\n> We went back to text messages.",
+            49300008
+        ],
+        [
+            49300804,
+            1757419200,
+            "🔥🔥🔥",
+            49300008
+        ],
+        [
+            49300805,
+            1757422800,
+            "We would mainly need simple booking, availability, and reminders rather than a full workforce management system.",
+            49300008
+        ],
+        [
+            49300901,
+            1757494800,
+            "Our project management software has dozens of features that our team never uses. Important tasks get buried under configuration.",
+            49300009
+        ],
+        [
+            49300902,
+            1757498400,
+            "We temporarily went back to a simple board and weekly spreadsheet because the full system was slowing us down.",
+            49300901
+        ],
+        [
+            49300903,
+            1757502000,
+            "Interesting.",
+            49300009
+        ],
+        [
+            49300904,
+            1757505600,
+            "task => workflow => automation; task == done; task != blocked",
+            49300009
+        ],
+        [
+            49300905,
+            1757509200,
+            "I would rather pay for fewer features if the software was faster to understand and easier to maintain.",
+            49300009
+        ],
+        [
+            49301001,
+            1757581200,
+            "We track recurring operational tasks in a spreadsheet with one row per week. Someone has to copy the checklist forward every Monday.",
+            49300010
+        ],
+        [
+            49301002,
+            1757584800,
+            "I made a small script to generate next week's tasks automatically, but only I know how it works.",
+            49301001
+        ],
+        [
+            49301003,
+            1757588400,
+            "   ",
+            49300010
+        ],
+        [
+            49301004,
+            1757592000,
+            "We track recurring operational tasks in a spreadsheet with one row per week. Someone has to copy the checklist forward every Monday.",
+            49300010
+        ],
+        [
+            49301005,
+            1757595600,
+            "A simple recurring checklist with ownership and reminders would solve most of this without adding much process overhead.",
+            49300010
+        ]
+    ]
+}

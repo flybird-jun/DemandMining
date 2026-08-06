@@ -1,0 +1,1413 @@
+{
+    "hacker_news_ai_client_test": {
+        "test_extract_valuable_comments": {
+            "data": {
+                "story_id": 0,
+                "title": "Show HN: I built an open-source tool to replace our internal analytics stack",
+                "text": "We built this tool after spending years stitching together Google Analytics, Mixpanel, BigQuery and several internal scripts. It provides event tracking, funnels, retention analysis and a SQL interface. It is open source and self-hosted.",
+                "comments": [
+                    {
+                        "item_id": 1001,
+                        "text": "This is really interesting. I've been looking for something like this.",
+                        "parent": 0
+                    },
+                    {
+                        "item_id": 1002,
+                        "text": "We tried doing something similar, but getting our historical data into it was a nightmare.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1003,
+                        "text": "The biggest problem for us is that there doesn't seem to be a good way to migrate years of Mixpanel data.",
+                        "parent": 1002
+                    },
+                    {
+                        "item_id": 1004,
+                        "text": "Yeah, we ended up writing our own Python importer because none of the tools we evaluated handled our custom event properties.",
+                        "parent": 1003
+                    },
+                    {
+                        "item_id": 1005,
+                        "text": "This is exactly the kind of thing I've wanted.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1006,
+                        "text": "Our analysts also need scheduled reports emailed to stakeholders every Monday, so we'd need that before replacing our current setup.",
+                        "parent": 1005
+                    },
+                    {
+                        "item_id": 1007,
+                        "text": "Does it support scheduled reports?",
+                        "parent": 1006
+                    },
+                    {
+                        "item_id": 1008,
+                        "text": "We have about 20 million events per day. I'm wondering how expensive it gets at that scale.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1009,
+                        "text": "The SQL interface is built on DuckDB, so query performance should be pretty good.",
+                        "parent": 1008
+                    },
+                    {
+                        "item_id": 1010,
+                        "text": "The technical architecture is fascinating.",
+                        "parent": 1009
+                    },
+                    {
+                        "item_id": 1011,
+                        "text": "We currently have to export data to CSV and upload it into BigQuery manually because our existing analytics vendor doesn't expose all the data through its API.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1012,
+                        "text": "If this could sync the raw events to BigQuery automatically, that would save us several hours every week.",
+                        "parent": 1011
+                    },
+                    {
+                        "item_id": 1013,
+                        "text": "I've used a few of these and they all feel basically the same.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1014,
+                        "text": "Why doesn't it just replace Google Analytics?",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1015,
+                        "text": "It would be great if there were a way to define retention cohorts using arbitrary SQL instead of only the UI filters.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1016,
+                        "text": "We have non-technical marketing people creating dashboards, so the current SQL-based workflow is too difficult for them.",
+                        "parent": 1015
+                    },
+                    {
+                        "item_id": 1017,
+                        "text": "I don't understand why anyone would pay for another analytics tool.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1018,
+                        "text": "This reminds me of a project I built in college.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1019,
+                        "text": "We need role-based permissions because our analysts and external agencies shouldn't have access to the same customer data.",
+                        "parent": 1001
+                    },
+                    {
+                        "item_id": 1020,
+                        "text": "The event tracking API currently requires us to send events one at a time, which makes high-volume ingestion unnecessarily complicated.",
+                        "parent": 1019
+                    }
+                ]
+            },
+            "expect": [
+                {
+                    "item_id": 1002,
+                    "text": "We tried doing something similar, but getting our historical data into this open-source self-hosted analytics tool was a nightmare."
+                },
+                {
+                    "item_id": 1003,
+                    "text": "The biggest problem for us is that there doesn't seem to be a good way to migrate years of Mixpanel data."
+                },
+                {
+                    "item_id": 1004,
+                    "text": "We ended up writing our own Python importer because none of the analytics tools we evaluated handled our custom event properties."
+                },
+                {
+                    "item_id": 1006,
+                    "text": "Our analysts also need scheduled reports emailed to stakeholders every Monday, so we'd need scheduled reports before replacing our current analytics setup."
+                },
+                {
+                    "item_id": 1007,
+                    "text": "Does this open-source self-hosted analytics tool support scheduled reports?"
+                },
+                {
+                    "item_id": 1008,
+                    "text": "We have about 20 million events per day. I'm wondering how expensive this open-source self-hosted analytics tool gets at that scale."
+                },
+                {
+                    "item_id": 1011,
+                    "text": "We currently have to export data to CSV and upload it into BigQuery manually because our existing analytics vendor doesn't expose all the data through its API."
+                },
+                {
+                    "item_id": 1012,
+                    "text": "If this open-source self-hosted analytics tool could sync raw events to BigQuery automatically, that would save us several hours every week."
+                },
+                {
+                    "item_id": 1015,
+                    "text": "It would be great if this open-source self-hosted analytics tool allowed us to define retention cohorts using arbitrary SQL instead of only the UI filters."
+                },
+                {
+                    "item_id": 1016,
+                    "text": "We have non-technical marketing people creating dashboards, so the current SQL-based workflow in this open-source self-hosted analytics tool is too difficult for them."
+                },
+                {
+                    "item_id": 1019,
+                    "text": "We need role-based permissions in this open-source self-hosted analytics tool because our analysts and external agencies shouldn't have access to the same customer data."
+                },
+                {
+                    "item_id": 1020,
+                    "text": "The event tracking API in this open-source self-hosted analytics tool currently requires us to send events one at a time, which makes high-volume ingestion unnecessarily complicated."
+                }
+            ]
+        },
+        "test_extract_demand_object": {
+            "data": [
+                {
+                    "item_id": 100001,
+                    "text": "We spend hours every week manually matching invoices with payments in QuickBooks. It's becoming a huge burden for our accounting team."
+                },
+                {
+                    "item_id": 100002,
+                    "text": "I really wish Salesforce supported bulk editing for contacts. I have to update hundreds of records one by one."
+                },
+                {
+                    "item_id": 100003,
+                    "text": "I wrote a Python script to sync customer data between Salesforce and Stripe because Salesforce has no native integration with Stripe."
+                },
+                {
+                    "item_id": 100004,
+                    "text": "We've been using Salesforce for six months, but we're looking for something else because Salesforce keeps crashing during our monthly close."
+                },
+                {
+                    "item_id": 100005,
+                    "text": "There should be a simple product for small businesses that can automatically reconcile bank transactions with receipts. None of the accounting products we've tried really solve this end to end."
+                },
+                {
+                    "item_id": 100006,
+                    "text": "Our sales team has to copy lead information from Gmail into Salesforce every day. It's annoying, but we usually just do it manually."
+                },
+                {
+                    "item_id": 100007,
+                    "text": "The Salesforce reporting dashboard is a little slow when I open it, but it doesn't really affect my work."
+                },
+                {
+                    "item_id": 100008,
+                    "text": "I need to export historical transaction data from the Stripe API. Right now the Stripe API only gives us recent transactions, so our data engineer has to work around the limitation."
+                },
+                {
+                    "item_id": 100009,
+                    "text": "We manage payroll for several countries using Gusto, and Gusto doesn't support local tax rules for those countries. We've had to hire an external payroll provider to handle them."
+                },
+                {
+                    "item_id": 100010,
+                    "text": "QuickBooks doesn't support international currencies, and our accounting team also spends hours every month manually matching invoices with payments."
+                }
+            ],
+            "expect":[
+                {
+                    "item_id": 100001,
+                    "demand_type": "pain_point",
+                    "persona": "accounting team",
+                    "problem": "manually matching invoices with payments in QuickBooks",
+                    "context": "matching invoices with payments in QuickBooks every week",
+                    "job_to_be_done": "match invoices with payments",
+                    "current_solution": "manually matching invoices with payments",
+                    "severity": 75
+                },
+                {
+                    "item_id": 100002,
+                    "demand_type": "feature_request",
+                    "persona": "unknown",
+                    "problem": "Salesforce does not support bulk editing for contacts",
+                    "context": "updating hundreds of contact records in Salesforce",
+                    "job_to_be_done": "bulk edit contact records",
+                    "current_solution": "update hundreds of records one by one",
+                    "severity": 45
+                },
+                {
+                    "item_id": 100003,
+                    "demand_type": "feature_request",
+                    "persona": "unknown",
+                    "problem": "Salesforce has no native integration with Stripe",
+                    "context": "syncing customer data between Salesforce and Stripe",
+                    "job_to_be_done": "sync customer data between Salesforce and Stripe",
+                    "current_solution": "Python script",
+                    "severity": 35
+                },
+                {
+                    "item_id": 100004,
+                    "demand_type": "replacement",
+                    "persona": "unknown",
+                    "problem": "Salesforce keeps crashing during monthly close",
+                    "context": "monthly close",
+                    "job_to_be_done": "complete the monthly close",
+                    "current_solution": "Salesforce",
+                    "severity": 55
+                },
+                {
+                    "item_id": 100005,
+                    "demand_type": "missing_product",
+                    "persona": "small businesses",
+                    "problem": "existing accounting products do not solve bank transaction and receipt reconciliation end to end",
+                    "context": "reconciling bank transactions with receipts for small businesses",
+                    "job_to_be_done": "automatically reconcile bank transactions with receipts",
+                    "current_solution": "accounting products we've tried",
+                    "severity": 65
+                },
+                {
+                    "item_id": 100006,
+                    "demand_type": "pain_point",
+                    "persona": "sales team",
+                    "problem": "copying lead information from Gmail into Salesforce every day",
+                    "context": "copying lead information from Gmail into Salesforce every day",
+                    "job_to_be_done": "copy lead information from Gmail into Salesforce",
+                    "current_solution": "do it manually",
+                    "severity": 45
+                },
+                {
+                    "item_id": 100007,
+                    "demand_type": "pain_point",
+                    "persona": "unknown",
+                    "problem": "Salesforce reporting dashboard is a little slow when opened",
+                    "context": "opening the Salesforce reporting dashboard",
+                    "job_to_be_done": "open the Salesforce reporting dashboard",
+                    "current_solution": "unknown",
+                    "severity": 8
+                },
+                {
+                    "item_id": 100008,
+                    "demand_type": "feature_request",
+                    "persona": "data engineer",
+                    "problem": "Stripe API only gives us recent transactions",
+                    "context": "exporting historical transaction data from the Stripe API",
+                    "job_to_be_done": "export historical transaction data from the Stripe API",
+                    "current_solution": "work around the limitation",
+                    "severity": 30
+                },
+                {
+                    "item_id": 100009,
+                    "demand_type": "feature_request",
+                    "persona": "unknown",
+                    "problem": "Gusto doesn't support local tax rules for those countries",
+                    "context": "managing payroll for several countries using Gusto",
+                    "job_to_be_done": "manage payroll for several countries using local tax rules",
+                    "current_solution": "hire an external payroll provider",
+                    "severity": 58
+                },
+                {
+                    "item_id": 100010,
+                    "demand_type": "feature_request",
+                    "persona": "unknown",
+                    "problem": "QuickBooks doesn't support international currencies",
+                    "context": "using QuickBooks with international currencies",
+                    "job_to_be_done": "use international currencies in QuickBooks",
+                    "current_solution": "accounting team",
+                    "severity": 35
+                },
+                {
+                    "item_id": 100010,
+                    "demand_type": "pain_point",
+                    "persona": "accounting team",
+                    "problem": "manually matching invoices with payments takes hours every month",
+                    "context": "matching invoices with payments every month",
+                    "job_to_be_done": "match invoices with payments",
+                    "current_solution": "manually matching invoices with payments",
+                    "severity": 55
+                }
+            ]
+        },
+        "test_product_score": {
+            "data": [
+                {
+                    "item_id": 6001,
+                    "demand_type": "pain_point",
+                    "persona": "independent software developer",
+                    "problem": "Every few months, the user spends several hours manually updating screenshots and promotional images for an app listing after changing the product UI.",
+                    "context": "Maintaining app-store marketing assets after occasional product interface changes.",
+                    "job_to_be_done": "Keep app-store screenshots synchronized with the latest product interface without manually recreating every image.",
+                    "current_solution": "Manually taking new screenshots and editing them in an image editor.",
+                    "severity": 25
+                }, 
+                {
+                    "item_id": 6002,
+                    "demand_type": "pain_point",
+                    "persona": "accounting manager at a mid-sized company",
+                    "problem": "The accounting team spends several hours every month reconciling transactions that arrive from multiple payment processors in different formats.",
+                    "context": "Monthly financial reconciliation across several payment providers.",
+                    "job_to_be_done": "Reconcile payment transactions accurately without manually normalizing and comparing multiple exports.",
+                    "current_solution": "Exporting CSV files from each provider and reconciling them manually in spreadsheets.",
+                    "severity": 72
+                },
+                {
+                    "item_id": 6003,
+                    "demand_type": "pain_point",
+                    "persona": "large enterprise compliance team",
+                    "problem": "The team needs to review a very large number of internal documents against changing regulatory requirements and currently spends substantial staff time identifying potentially relevant passages.",
+                    "context": "Periodic compliance reviews across large internal document repositories.",
+                    "job_to_be_done": "Identify potentially relevant compliance issues across large document collections more efficiently.",
+                    "current_solution": "A combination of document search, spreadsheets, internal review workflows, and manual expert analysis.",
+                    "severity": 88
+                },
+                {
+                    "item_id": 6004,
+                    "demand_type": "pain_point",
+                    "persona": "freelance photographer",
+                    "problem": "The user occasionally forgets which external drive contains older photo projects and spends time searching through folders to locate archived files.",
+                    "context": "Finding infrequently accessed photography archives stored across several external drives.",
+                    "job_to_be_done": "Locate archived photo projects quickly when an old client requests them.",
+                    "current_solution": "Searching folders manually across external drives.",
+                    "severity": 30
+                },
+                {
+                    "item_id": 6005,
+                    "demand_type": "workaround",
+                    "persona": "software engineering team",
+                    "problem": "The team repeatedly copies deployment information from several systems into an internal release checklist before production releases.",
+                    "context": "Production deployment preparation involving multiple engineering tools.",
+                    "job_to_be_done": "Generate a reliable release checklist automatically from information already available in engineering systems.",
+                    "current_solution": "A manually maintained checklist assembled from GitHub, CI/CD and issue-tracking systems.",
+                    "severity": 61
+                },
+                {
+                    "item_id": 6006,
+                    "demand_type": "pain_point",
+                    "persona": "parents of young children",
+                    "problem": "The user sometimes struggles to find a convenient indoor activity for a child when outdoor plans are cancelled because of bad weather.",
+                    "context": "Occasional weekend planning when outdoor family activities are unavailable.",
+                    "job_to_be_done": "Find a suitable nearby indoor activity for a child with minimal planning effort.",
+                    "current_solution": "Searching Google Maps, local websites, social media and asking other parents.",
+                    "severity": 42
+                }, 
+                {
+                    "item_id": 6007,
+                    "demand_type": "pain_point",
+                    "persona": "hospital emergency department administrator",
+                    "problem": "The administrator has difficulty predicting short-term patient arrival volume, making staffing adjustments reactive and sometimes inefficient.",
+                    "context": "Hourly emergency department staffing and capacity planning.",
+                    "job_to_be_done": "Anticipate near-term patient demand so staffing and resources can be adjusted earlier.",
+                    "current_solution": "Historical reports, spreadsheets, operational dashboards and staff judgment.",
+                    "severity": 91
+                },
+                {
+                    "item_id": 6008,
+                    "demand_type": "pain_point",
+                    "persona": "consumer",
+                    "problem": "The user wishes there were a tool that automatically chose the most enjoyable movie to watch tonight.",
+                    "context": "Choosing entertainment from a large streaming catalog.",
+                    "job_to_be_done": "Select a movie without spending much time browsing.",
+                    "current_solution": "Browsing recommendations and streaming-platform catalogs.",
+                    "severity": 18
+                }, 
+                {
+                    "item_id": 6009,
+                    "demand_type": "workaround",
+                    "persona": "data analyst",
+                    "problem": "The analyst repeatedly writes small SQL queries to transform similar datasets for recurring reports.",
+                    "context": "Recurring internal analytics workflows involving similar data transformations.",
+                    "job_to_be_done": "Reuse common data transformations without rewriting similar SQL every time.",
+                    "current_solution": "Copying and modifying previously written SQL queries.",
+                    "severity": 48
+                }, 
+                {
+                    "item_id": 6010,
+                    "demand_type": "pain_point",
+                    "persona": "small medical clinic",
+                    "problem": "Staff spend significant time calling patients to fill appointment cancellations, but the clinic does not have a systematic way to match cancellations with patients who want earlier appointments.",
+                    "context": "Managing appointment cancellations and waitlists at a small clinic.",
+                    "job_to_be_done": "Fill cancelled appointments efficiently without requiring staff to manually contact many patients.",
+                    "current_solution": "Staff manually calling or messaging patients on a waiting list.",
+                    "severity": 79
+                }
+            ],
+            "expect":[38, 75, 84, 28, 67, 43, 87, 22, 55, 82]
+        },
+        "test_output_solution":[
+            {
+                "item_id": 8001,
+                "demand_type": "pain_point",
+                "persona": "sales team",
+                "problem": "HubSpot doesn't automatically assign leads to the right sales rep, so the team has to check the list and assign them manually.",
+                "context": "Checking incoming leads and assigning them to sales representatives.",
+                "job_to_be_done": "assign leads to the right sales rep",
+                "current_solution": "manually check the lead list and assign leads",
+                "severity": 32
+            },
+            {
+                "item_id": 8002,
+                "demand_type": "pain_point",
+                "persona": "unknown",
+                "problem": "The user spends nearly an hour every morning reviewing failed orders and updating records.",
+                "context": "Every morning when handling failed orders in WooCommerce and updating records.",
+                "job_to_be_done": "review failed orders and update records",
+                "current_solution": "manually review failed orders and update records",
+                "severity": 68
+            },
+            {
+                "item_id": 8003,
+                "demand_type": "feature_request",
+                "persona": "unknown",
+                "problem": "WooCommerce doesn't automatically flag duplicate orders.",
+                "context": "Identifying duplicate orders before they reach the accounting system.",
+                "job_to_be_done": "identify duplicate orders before they reach the accounting system",
+                "current_solution": "a small script",
+                "severity": 35
+            },
+            {
+                "item_id": 8004,
+                "demand_type": "feature_request",
+                "persona": "unknown",
+                "problem": "Asana does not support recurring tasks with different schedules for each assignee.",
+                "context": "Managing recurring tasks with different schedules for each assignee.",
+                "job_to_be_done": "schedule recurring tasks differently for each assignee",
+                "current_solution": "unknown",
+                "severity": 35
+            },
+            {
+                "item_id": 8005,
+                "demand_type": "feature_request",
+                "persona": "unknown",
+                "problem": "Asana doesn't support the scheduling rules the team needs.",
+                "context": "Managing task schedules according to the team's scheduling rules.",
+                "job_to_be_done": "manage tasks according to the required scheduling rules",
+                "current_solution": "export tasks to Google Sheets and manage the schedule there",
+                "severity": 48
+            },
+            {
+                "item_id": 8006,
+                "demand_type": "missing_product",
+                "persona": "unknown",
+                "problem": "The user couldn't find a ready-made tool that combines data from the warehouse and online store into one daily inventory report.",
+                "context": "Creating a daily inventory report using warehouse and online store data.",
+                "job_to_be_done": "combine warehouse and online store data into one daily inventory report",
+                "current_solution": "unknown",
+                "severity": 30
+            },
+            {
+                "item_id": 8007,
+                "demand_type": "missing_product",
+                "persona": "unknown",
+                "problem": "The warehouse system doesn't integrate with the online store.",
+                "context": "Synchronizing inventory between the warehouse system and online store.",
+                "job_to_be_done": "sync inventory automatically between the warehouse system and online store",
+                "current_solution": "unknown",
+                "severity": 38
+            },
+            {
+                "item_id": 8008,
+                "demand_type": "replacement",
+                "persona": "unknown",
+                "problem": "The customer support software is too slow when handling large ticket queues.",
+                "context": "Handling large ticket queues in customer support software.",
+                "job_to_be_done": "handle large ticket queues efficiently",
+                "current_solution": "the current customer support software",
+                "severity": 55
+            },
+            {
+                "item_id": 8009,
+                "demand_type": "feature_request",
+                "persona": "unknown",
+                "problem": "The CRM doesn't support bulk status changes for contacts.",
+                "context": "Updating the status of hundreds of contacts.",
+                "job_to_be_done": "update hundreds of contacts at once",
+                "current_solution": "unknown",
+                "severity": 50
+            },
+            {
+                "item_id": 8010,
+                "demand_type": "replacement",
+                "persona": "unknown",
+                "problem": "The inventory platform is difficult to use for large orders.",
+                "context": "Using the inventory platform to manage large orders.",
+                "job_to_be_done": "manage large orders with a simpler platform",
+                "current_solution": "the current inventory platform",
+                "severity": 38
+            }
+        ],
+        "test_summary_text": [
+            "有报道称，某国政府已经决定取消全国大选。但根据该国选举委员会当天发布的公告，目前并不存在取消选举的决定，选举日期仍按照此前公布的时间执行。委员会同时表示，网络上流传的相关消息属于未经证实的信息",
+            "用户反馈昨天购买的耳机收到后无法正常充电。用户尝试更换充电线和充电器，但问题仍然存在。客服建议用户恢复出厂设置，操作后仍无法解决。用户希望退货退款，并表示商品页面宣传“续航可达40小时”，但实际使用不到10小时。"
+        ]
+    },
+    "hacker_news_storage_test": {
+        "test_insert_fetch": {
+            "hacker_news":[
+                {
+                    "item_id": 10001, 
+                    "time": 1710000000, 
+                    "title": "Show HN: My first AI project", 
+                    "type": "story",
+                    "url": "https://news.ycombinator.com/item?id=10001"
+                },
+                {
+                    "item_id": 10004, 
+                    "time": 1710000300, 
+                    "text": "This is a very useful project.", 
+                    "parent": 10001,
+                    "type": "comment"
+                }, 
+                {
+                    "item_id": 10002, 
+                    "time": 1710000400, 
+                    "text": "I love three things", 
+                    "parent": 10001,
+                    "type": "comment"
+                },
+                {
+                    "item_id": 10003, 
+                    "time": 1710000400, 
+                    "text": "the sun, the moon and you", 
+                    "parent": 10002,
+                    "type": "comment"
+                },
+                {
+                    "item_id": 20001, 
+                    "time": 1710000000, 
+                    "title": "The sun is for the day", 
+                    "type": "story",
+                    "url": "https://news.ycombinator.com/item?id=10001"
+                },
+                {
+                    "item_id": 20004, 
+                    "time": 1710000300, 
+                    "text": " the moon is for the night.", 
+                    "parent": 10001,
+                    "type": "comment"
+                }, 
+                {
+                    "item_id": 20002, 
+                    "time": 1710000400, 
+                    "text": "and you forever", 
+                    "parent": 20004,
+                    "type": "comment"
+                },
+                {
+                    "item_id": 20003, 
+                    "time": 1710000400, 
+                    "text": "the sun, the moon and you", 
+                    "parent": 20004,
+                    "type": "comment"
+                }
+            ],
+            "filter":[[10001, "filter 10001"], [10002, "filter 10002"]],
+            "demand_object": [
+                {
+                    "item_id": 10001,
+                    "demand_type": "pain_point",
+                    "persona": "software developer",
+                    "problem": "需要在 PostgreSQL 中快速实现向量搜索，但配置复杂",
+                    "context": "开发 AI 应用，需要存储和检索 embedding 数据",
+                    "job_to_be_done": "快速搭建支持语义搜索的数据库",
+                    "current_solution": "使用 Elasticsearch 或自建向量数据库",
+                    "severity": 8
+                }, 
+                {
+                    "item_id": 10002,
+                    "demand_type": "pain_point",
+                    "persona": "software developer",
+                    "problem": "需要在 PostgreSQL 中快速实现向量搜索，但配置复杂",
+                    "context": "开发 AI 应用，需要存储和检索 embedding 数据",
+                    "job_to_be_done": "快速搭建支持语义搜索的数据库",
+                    "current_solution": "使用 Elasticsearch 或自建向量数据库",
+                    "severity": 80
+                }
+            ],
+            "score": [[10001, 75]],
+            "story_summary": [[10001, "An introduction about an AI project."], [10002, "client.responses.create"]],
+            "hwm":[[10000, 10003, 20000, 20003, 30000, 30003, 30006, 30009]]
+        }
+    },
+    "hacker_news_task_test": {
+        "test_filter_task": [
+            {
+                "id": 49300001,
+                "time": 1710000000,
+                "type": "story",
+                "title": "Show HN: Self-hosted observability platform that doesn't charge per seat",
+                "url": "https://news.ycombinator.com/item?id=49300001"
+            },
+            {
+                "id": 49300002,
+                "time": 1710000100,
+                "type": "story",
+                "title": "Ask HN: How do you manage cross-cloud cost monitoring?",
+                "url": "https://news.ycombinator.com/item?id=49300002"
+            },
+            {
+                "id": 49300003,
+                "time": 1710000200,
+                "type": "story",
+                "title": "Show HN: An open-source pprof UI for production debugging",
+                "url": "https://news.ycombinator.com/item?id=49300003"
+            },
+            {
+                "id": 49300004,
+                "time": 1710000300,
+                "type": "story",
+                "title": "Why we switched from Notion to a self-hosted wiki for engineering docs",
+                "url": "https://news.ycombinator.com/item?id=49300004"
+            },
+            {
+                "id": 49300005,
+                "time": 1710000400,
+                "type": "story",
+                "title": "Show HN: A scheduler that handles timezone math correctly",
+                "url": "https://news.ycombinator.com/item?id=49300005"
+            },
+            {
+                "id": 49300101,
+                "time": 1710001000,
+                "type": "comment",
+                "parent": 49300001,
+                "text": "We evaluated Datadog and Honeycomb but the per-seat pricing became painful for our 50-engineer team, so we ended up self-hosting."
+            },
+            {
+                "id": 49300102,
+                "time": 1710001100,
+                "type": "comment",
+                "parent": 49300001,
+                "text": "How does ingestion cost compare to Grafana Cloud at your scale?"
+            },
+            {
+                "id": 49300103,
+                "time": 1710001200,
+                "type": "comment",
+                "parent": 49300102,
+                "text": "Last time we benchmarked it, Grafana's ingestion at our scale was about 3x cheaper than Datadog for the same cardinality."
+            },
+            {
+                "id": 49300104,
+                "time": 1710001300,
+                "type": "comment",
+                "parent": 49300001,
+                "text": "nice"
+            },
+            {
+                "id": 49300105,
+                "time": 1710001400,
+                "type": "comment",
+                "parent": 49300001,
+                "text": "We had similar problems and ended up running Prometheus plus Grafana self-hosted on Kubernetes for our staging environment."
+            },
+            {
+                "id": 49300106,
+                "time": 1710001500,
+                "type": "comment",
+                "parent": 49300105,
+                "text": "Prometheus storage got really expensive at our scale though, we ended up switching to Mimir for long term retention."
+            },
+            {
+                "id": 49300107,
+                "time": 1710001600,
+                "type": "comment",
+                "parent": 49300001,
+                "text": "🔥"
+            },
+            {
+                "id": 49300108,
+                "time": 1710002000,
+                "type": "comment",
+                "parent": 49300002,
+                "text": "We use a custom Lambda that scrapes the AWS, GCP, and Azure cost APIs and writes everything to a single BigQuery table for analysis."
+            },
+            {
+                "id": 49300109,
+                "time": 1710002100,
+                "type": "comment",
+                "parent": 49300002,
+                "text": "Have you tried Vantage? It centralizes cost data from multiple cloud providers into one dashboard."
+            },
+            {
+                "id": 49300110,
+                "time": 1710002200,
+                "type": "comment",
+                "parent": 49300108,
+                "text": "How do you handle the granularity differences between providers when reconciling cost data?"
+            },
+            {
+                "id": 49300111,
+                "time": 1710002300,
+                "type": "comment",
+                "parent": 49300110,
+                "text": "We normalize everything to hourly granularity but it loses some of the per-request detail we needed for chargeback."
+            },
+            {
+                "id": 49300112,
+                "time": 1710002400,
+                "type": "comment",
+                "parent": 49300002,
+                "text": "+1"
+            },
+            {
+                "id": 49300113,
+                "time": 1710002500,
+                "type": "comment",
+                "parent": 49300002,
+                "text": "We had this exact problem at my last company and built an internal tool, but maintenance became a full-time job for someone."
+            },
+            {
+                "id": 49300114,
+                "time": 1710002600,
+                "type": "comment",
+                "parent": 49300002,
+                "text": "Why not just use Cloudability? They support multi-cloud cost reporting out of the box."
+            },
+            {
+                "id": 49300115,
+                "time": 1710003000,
+                "type": "comment",
+                "parent": 49300003,
+                "text": "I tried installing this today but the docs are unclear about the auth setup with our existing identity provider."
+            },
+            {
+                "id": 49300116,
+                "time": 1710003100,
+                "type": "comment",
+                "parent": 49300003,
+                "text": "How does this compare to pyroscope for continuous profiling in production environments?"
+            },
+            {
+                "id": 49300117,
+                "time": 1710003200,
+                "type": "comment",
+                "parent": 49300115,
+                "text": "Same issue here. I ended up reading the source code to figure out how to configure oauth with our SSO provider."
+            },
+            {
+                "id": 49300118,
+                "time": 1710003300,
+                "type": "comment",
+                "parent": 49300003,
+                "text": "We use this in production. The continuous profiling saved us hours of debugging last week during an incident."
+            },
+            {
+                "id": 49300119,
+                "time": 1710003400,
+                "type": "comment",
+                "parent": 49300118,
+                "text": "What was the issue you were debugging? Curious about real-world wins from this tool."
+            },
+            {
+                "id": 49300120,
+                "time": 1710003500,
+                "type": "comment",
+                "parent": 49300003,
+                "text": "lol"
+            },
+            {
+                "id": 49300121,
+                "time": 1710003600,
+                "type": "comment",
+                "parent": 49300003,
+                "text": "Cool project, bookmarked. I will try it on our staging cluster this week and report back."
+            },
+            {
+                "id": 49300122,
+                "time": 1710004000,
+                "type": "comment",
+                "parent": 49300004,
+                "text": "The Notion API rate limits made it painful to sync our engineering docs automatically across multiple workspaces."
+            },
+            {
+                "id": 49300123,
+                "time": 1710004100,
+                "type": "comment",
+                "parent": 49300004,
+                "text": "How did you handle full-text search across the migrated content from Notion to your new wiki?"
+            },
+            {
+                "id": 49300124,
+                "time": 1710004200,
+                "type": "comment",
+                "parent": 49300122,
+                "text": "Same problem at our company, our automation kept hitting 429s every few minutes and we would lose sync state."
+            },
+            {
+                "id": 49300125,
+                "time": 1710004300,
+                "type": "comment",
+                "parent": 49300004,
+                "text": "yes"
+            },
+            {
+                "id": 49300126,
+                "time": 1710004400,
+                "type": "comment",
+                "parent": 49300004,
+                "text": "We considered Notion but the pricing for our 200-person company was hard to justify against self-hosted alternatives."
+            },
+            {
+                "id": 49300127,
+                "time": 1710004500,
+                "type": "comment",
+                "parent": 49300126,
+                "text": "Curious what you ended up using instead? We are evaluating options for our own team right now."
+            },
+            {
+                "id": 49300128,
+                "time": 1710004600,
+                "type": "comment",
+                "parent": 49300004,
+                "text": "Migration looked painful. How long did it take your team to move everything over to the new platform?"
+            },
+            {
+                "id": 49300129,
+                "time": 1710005000,
+                "type": "comment",
+                "parent": 49300005,
+                "text": "Every team I have worked on has built something like this internally. There should be a canonical open source solution."
+            },
+            {
+                "id": 49300130,
+                "time": 1710005100,
+                "type": "comment",
+                "parent": 49300005,
+                "text": "What happens when a scheduled task crosses a DST boundary in a country that observes daylight saving?"
+            },
+            {
+                "id": 49300131,
+                "time": 1710005200,
+                "type": "comment",
+                "parent": 49300130,
+                "text": "It uses IANA tz database and stores everything in UTC internally, so DST transitions just work for cron expressions."
+            },
+            {
+                "id": 49300132,
+                "time": 1710005300,
+                "type": "comment",
+                "parent": 49300005,
+                "text": "👀"
+            },
+            {
+                "id": 49300133,
+                "time": 1710005400,
+                "type": "comment",
+                "parent": 49300005,
+                "text": "We built something similar and it broke every time a country changed their DST rules unexpectedly."
+            },
+            {
+                "id": 49300134,
+                "time": 1710005500,
+                "type": "comment",
+                "parent": 49300133,
+                "text": "Yes, Egypt and Morocco both made last-minute changes recently and our scheduler broke silently for several days."
+            },
+            {
+                "id": 49300135,
+                "time": 1710005600,
+                "type": "comment",
+                "parent": 49300005,
+                "text": "How does this handle leap seconds in scheduling? That has bitten us before with homegrown schedulers."
+            }
+        ],
+        "test_demand_object_task":[
+            {
+                "item_id": 49400001,
+                "text": "Every sprint, our QA team spends about 2 days manually retesting features that were already covered by automated tests because our test coverage reports are unreliable."
+            },
+            {
+                "item_id": 49400002,
+                "text": "GitHub Actions doesn't have a built-in way to chain workflows with conditional logic, so we ended up using a third-party orchestrator just to handle our release pipeline."
+            },
+            {
+                "item_id": 49400003,
+                "text": "We have 14 different spreadsheets tracking customer support tickets across product lines, and we couldn't find a tool that integrates with all our helpdesk providers into one unified dashboard."
+            },
+            {
+                "item_id": 49400004,
+                "text": "Jira's automation rules trigger way too many notifications. Half of my team has muted the channel entirely and now we miss critical alerts."
+            },
+            {
+                "item_id": 49400005,
+                "text": "I built a custom Slack bot to summarize our 50 plus daily standups because the existing standup tools don't support our multi-team setup."
+            },
+            {
+                "item_id": 49400006,
+                "text": "Our finance team wastes 6 hours every week reconciling payment data between Stripe, PayPal, and our bank statements, and none of those tools offer built-in reconciliation."
+            },
+            {
+                "item_id": 49400007,
+                "text": "Linear does not support custom field workflows. We need to route issues to different teams based on a custom property, but Linear can't do that."
+            },
+            {
+                "item_id": 49400008,
+                "text": "We migrated from Jenkins to GitHub Actions but the migration took 3 months because the existing Jenkins CI configuration was so complex and the tooling gap is large."
+            },
+            {
+                "item_id": 49400009,
+                "text": "We have 200 plus microservices and no tool gives us a unified view of dependencies. We have been manually maintaining a dependency graph in Notion for two years."
+            },
+            {
+                "item_id": 49400010,
+                "text": "Slack's search is essentially unusable once you have more than a few years of history. I end up scrolling through channels instead of searching for old messages."
+            },
+            {
+                "item_id": 49400011,
+                "text": "I'd love a calendar tool that automatically blocks focus time based on my actual work patterns, not just heuristics like the existing calendar apps."
+            },
+            {
+                "item_id": 49400012,
+                "text": "Our warehouse staff uses pen and paper to track inventory because our current WMS terminal app crashes every 30 minutes, and we are seriously considering switching vendors."
+            },
+            {
+                "item_id": 49400013,
+                "text": "Postman doesn't handle our internal API authentication well. The token refresh logic in Postman breaks every time the auth server changes the TTL value."
+            },
+            {
+                "item_id": 49400014,
+                "text": "Every quarter we spend 2 weeks manually preparing SOC 2 compliance evidence. The compliance tools on the market don't support our custom infrastructure setup."
+            },
+            {
+                "item_id": 49400015,
+                "text": "I had to write a custom script to convert our Figma designs to Storybook stories because none of the existing Figma-to-Storybook plugins handle our design system tokens."
+            },
+            {
+                "item_id": 49400016,
+                "text": "We use 6 different monitoring tools at our company and on-call engineers spend 30 minutes per incident figuring out which one to check first to debug the issue."
+            },
+            {
+                "item_id": 49400017,
+                "text": "Notion's offline mode is unusable. Every time I open Notion on a plane, I have to wait 5 minutes for it to sync before I can edit any document."
+            },
+            {
+                "item_id": 49400018,
+                "text": "We are evaluating Datadog but the per-host pricing is killing us at our scale. We process 20TB of logs per day and the Datadog bill keeps growing month over month."
+            },
+            {
+                "item_id": 49400019,
+                "text": "Our product team needs a way to A/B test across web and mobile simultaneously. The existing experimentation tools treat web and mobile as separate experiments entirely."
+            },
+            {
+                "item_id": 49400020,
+                "text": "I wish there were a simple tool for non-technical founders to set up basic GDPR compliance documentation, because every solution I have found is either too complex or too expensive."
+            }
+        ],
+        "test_product_score_task": [
+            {
+                "item_id": 49400101,
+                "demand_type": "pain_point",
+                "persona": "finance team at a mid-sized SaaS company",
+                "problem": "Finance team wastes 6 hours every week manually reconciling payment data across multiple processors",
+                "context": "Weekly reconciliation of Stripe, PayPal, and bank statement transactions",
+                "job_to_be_done": "Reconcile payment transactions from multiple processors automatically",
+                "current_solution": "Manual cross-checking of CSVs from each provider",
+                "severity": 72
+            },
+            {
+                "item_id": 49400102,
+                "demand_type": "feature_request",
+                "persona": "developer using an internal wiki",
+                "problem": "The internal wiki tool does not support a dark mode",
+                "context": "Reading internal documentation during late evening hours",
+                "job_to_be_done": "Switch the wiki interface to a dark color theme",
+                "current_solution": "Use a browser-level dark mode extension",
+                "severity": 12
+            },
+            {
+                "item_id": 49400103,
+                "demand_type": "missing_product",
+                "persona": "platform engineering team running workloads on multiple clouds",
+                "problem": "Existing tools do not provide a unified view of cost data across AWS, GCP, and Azure",
+                "context": "Monthly cloud cost review across multiple providers",
+                "job_to_be_done": "Combine cost data from all cloud providers into one dashboard",
+                "current_solution": "A custom Lambda that scrapes cost APIs and writes to BigQuery",
+                "severity": 80
+            },
+            {
+                "item_id": 49400104,
+                "demand_type": "replacement",
+                "persona": "sales operations team at a 100-person company",
+                "problem": "The current CRM is too slow when handling bulk contact updates",
+                "context": "Daily contact updates performed by the sales operations team",
+                "job_to_be_done": "Update hundreds of contacts at once without the CRM slowing down",
+                "current_solution": "The current CRM",
+                "severity": 65
+            },
+            {
+                "item_id": 49400105,
+                "demand_type": "pain_point",
+                "persona": "occasional freelancer",
+                "problem": "Converting a single PowerPoint deck to PDF requires uploading to a heavy web tool",
+                "context": "One-off file conversion a few times per year",
+                "job_to_be_done": "Convert a PowerPoint file to PDF quickly",
+                "current_solution": "Upload to an online converter",
+                "severity": 8
+            },
+            {
+                "item_id": 49400106,
+                "demand_type": "missing_product",
+                "persona": "non-technical founder of a small startup",
+                "problem": "Existing GDPR compliance tools are either too complex or too expensive for early-stage founders",
+                "context": "Preparing basic GDPR compliance documentation for an early-stage company",
+                "job_to_be_done": "Generate GDPR compliance documentation with minimal legal expertise",
+                "current_solution": "Hiring a lawyer or using enterprise compliance platforms",
+                "severity": 55
+            },
+            {
+                "item_id": 49400107,
+                "demand_type": "feature_request",
+                "persona": "customer support lead at a SaaS company",
+                "problem": "Slack does not natively convert long customer threads into support tickets",
+                "context": "Triaging incoming customer requests from a shared Slack channel",
+                "job_to_be_done": "Convert a Slack thread into a structured support ticket",
+                "current_solution": "Manual copy-paste of the Slack thread into the helpdesk tool",
+                "severity": 48
+            },
+            {
+                "item_id": 49400108,
+                "demand_type": "pain_point",
+                "persona": "on-call engineer at a 50-engineer company",
+                "problem": "On-call alerts from monitoring tools fire so frequently that the on-call engineer ignores them and risks missing real incidents",
+                "context": "After-hours on-call rotation across the engineering team",
+                "job_to_be_done": "Receive only the alerts that require human attention",
+                "current_solution": "6 different monitoring tools each sending alerts independently",
+                "severity": 88
+            },
+            {
+                "item_id": 49400109,
+                "demand_type": "replacement",
+                "persona": "warehouse manager at a small distribution company",
+                "problem": "The current WMS terminal app crashes every 30 minutes, forcing staff to track inventory on paper",
+                "context": "Daily inventory operations in the warehouse",
+                "job_to_be_done": "Track warehouse inventory without an unstable terminal app",
+                "current_solution": "Current WMS plus pen and paper as fallback",
+                "severity": 82
+            },
+            {
+                "item_id": 49400110,
+                "demand_type": "missing_product",
+                "persona": "compliance team at a mid-sized SaaS company",
+                "problem": "Compliance teams spend weeks per quarter manually collecting SOC 2 evidence because existing tools do not support custom infrastructure",
+                "context": "Quarterly SOC 2 audit evidence collection",
+                "job_to_be_done": "Automate SOC 2 evidence collection across custom infrastructure",
+                "current_solution": "Spreadsheets, screenshots, and manual exports",
+                "severity": 78
+            },
+            {
+                "item_id": 49400111,
+                "demand_type": "pain_point",
+                "persona": "QA engineer in a 10-person engineering team",
+                "problem": "Every sprint the QA team spends about 2 days manually retesting features that automated tests already cover",
+                "context": "Sprint-end regression verification",
+                "job_to_be_done": "Trust automated test coverage reports without manual retests",
+                "current_solution": "Manual retest of features flagged by unreliable coverage reports",
+                "severity": 60
+            },
+            {
+                "item_id": 49400112,
+                "demand_type": "feature_request",
+                "persona": "DevOps engineer managing CI/CD pipelines",
+                "problem": "GitHub Actions does not support chaining workflows with conditional logic natively",
+                "context": "Production release pipelines that span multiple repositories",
+                "job_to_be_done": "Chain GitHub Actions workflows with conditional logic",
+                "current_solution": "A third-party workflow orchestrator",
+                "severity": 45
+            },
+            {
+                "item_id": 49400113,
+                "demand_type": "missing_product",
+                "persona": "growth PM at a mobile-first product",
+                "problem": "No existing A/B testing tool treats web and mobile as a single experiment",
+                "context": "Running experiments that affect both web and mobile users",
+                "job_to_be_done": "Run an A/B test across web and mobile simultaneously",
+                "current_solution": "Run separate experiments on web and mobile",
+                "severity": 38
+            },
+            {
+                "item_id": 49400114,
+                "demand_type": "pain_point",
+                "persona": "engineering manager at a 50-engineer company",
+                "problem": "Engineering manager has to manually summarize 50 plus daily standups every morning",
+                "context": "Daily cross-team standup coordination",
+                "job_to_be_done": "Get a daily standup summary without manual reading",
+                "current_solution": "A custom Slack bot that summarizes the standups",
+                "severity": 70
+            },
+            {
+                "item_id": 49400115,
+                "demand_type": "pain_point",
+                "persona": "frequent business traveler who edits documents offline",
+                "problem": "Notion's offline mode forces a 5 minute sync before any edit is possible on a plane",
+                "context": "Editing documents during flights",
+                "job_to_be_done": "Edit documents offline without a long sync wait",
+                "current_solution": "Wait for Notion to finish syncing before editing",
+                "severity": 50
+            },
+            {
+                "item_id": 49400116,
+                "demand_type": "replacement",
+                "persona": "platform team at a high-volume logging company",
+                "problem": "Datadog per-host pricing makes the monthly bill unsustainable at 20TB of logs per day",
+                "context": "Monthly observability cost review",
+                "job_to_be_done": "Retain logs at scale without per-host pricing",
+                "current_solution": "Datadog",
+                "severity": 85
+            },
+            {
+                "item_id": 49400117,
+                "demand_type": "missing_product",
+                "persona": "customer support lead",
+                "problem": "There is no ready-made tool that unifies support tickets across multiple helpdesk providers",
+                "context": "Daily support triage across product lines",
+                "job_to_be_done": "View all support tickets across providers in one dashboard",
+                "current_solution": "14 different spreadsheets tracking tickets by product line",
+                "severity": 68
+            },
+            {
+                "item_id": 49400118,
+                "demand_type": "pain_point",
+                "persona": "occasional reader of an internal wiki",
+                "problem": "The wiki does not let users bookmark long articles for quick access",
+                "context": "Re-reading internal documentation a few times per month",
+                "job_to_be_done": "Bookmark an article for quick access later",
+                "current_solution": "Browser bookmarks",
+                "severity": 10
+            },
+            {
+                "item_id": 49400119,
+                "demand_type": "missing_product",
+                "persona": "database engineer migrating a legacy application",
+                "problem": "There is no reliable tool that automates schema and data migration from Oracle to PostgreSQL for legacy enterprise schemas",
+                "context": "Quarter-long legacy database migration project",
+                "job_to_be_done": "Migrate database schema and data from Oracle to PostgreSQL automatically",
+                "current_solution": "Hand-written migration scripts and manual verification",
+                "severity": 90
+            },
+            {
+                "item_id": 49400120,
+                "demand_type": "missing_product",
+                "persona": "frontend developer at a design-system-driven company",
+                "problem": "Existing Figma to Storybook plugins do not handle design system tokens correctly",
+                "context": "Maintaining the Storybook library from Figma source of truth",
+                "job_to_be_done": "Convert Figma designs to Storybook stories that respect design tokens",
+                "current_solution": "A custom script maintained manually",
+                "severity": 62
+            }
+        ],
+        "test_product_solution_task": {
+            "demand_object": [
+                {
+                    "item_id": 49400201,
+                    "demand_type": "pain_point",
+                    "persona": "on-call engineer at a mid-sized SaaS company",
+                    "problem": "On-call monitoring tools fire so many alerts that engineers ignore them and miss real incidents",
+                    "context": "After-hours on-call rotation across the engineering team",
+                    "job_to_be_done": "Receive only the alerts that require human attention",
+                    "current_solution": "Six different monitoring tools each sending alerts independently",
+                    "severity": 88
+                },
+                {
+                    "item_id": 49400202,
+                    "demand_type": "replacement",
+                    "persona": "warehouse manager at a small distribution company",
+                    "problem": "The current WMS terminal app crashes every 30 minutes, forcing staff to track inventory on paper",
+                    "context": "Daily inventory operations in the warehouse",
+                    "job_to_be_done": "Track warehouse inventory without an unstable terminal app",
+                    "current_solution": "Current WMS plus pen and paper as fallback",
+                    "severity": 82
+                },
+                {
+                    "item_id": 49400203,
+                    "demand_type": "missing_product",
+                    "persona": "compliance team at a mid-sized SaaS company",
+                    "problem": "Compliance teams spend weeks per quarter manually collecting SOC 2 evidence because existing tools do not support custom infrastructure",
+                    "context": "Quarterly SOC 2 audit evidence collection",
+                    "job_to_be_done": "Automate SOC 2 evidence collection across custom infrastructure",
+                    "current_solution": "Spreadsheets, screenshots, and manual exports",
+                    "severity": 78
+                },
+                {
+                    "item_id": 49400204,
+                    "demand_type": "replacement",
+                    "persona": "platform team at a high-volume logging company",
+                    "problem": "Datadog per-host pricing makes the monthly bill unsustainable at 20TB of logs per day",
+                    "context": "Monthly observability cost review",
+                    "job_to_be_done": "Retain logs at scale without per-host pricing",
+                    "current_solution": "Datadog",
+                    "severity": 85
+                },
+                {
+                    "item_id": 49400205,
+                    "demand_type": "missing_product",
+                    "persona": "database engineer migrating a legacy application",
+                    "problem": "There is no reliable tool that automates schema and data migration from Oracle to PostgreSQL for legacy enterprise schemas",
+                    "context": "Quarter-long legacy database migration project",
+                    "job_to_be_done": "Migrate database schema and data from Oracle to PostgreSQL automatically",
+                    "current_solution": "Hand-written migration scripts and manual verification",
+                    "severity": 90
+                },
+                {
+                    "item_id": 49400206,
+                    "demand_type": "missing_product",
+                    "persona": "platform engineering team running workloads on multiple clouds",
+                    "problem": "Existing tools do not provide a unified view of cost data across AWS, GCP, and Azure",
+                    "context": "Monthly cloud cost review across multiple providers",
+                    "job_to_be_done": "Combine cost data from all cloud providers into one dashboard",
+                    "current_solution": "A custom Lambda that scrapes cost APIs and writes to BigQuery",
+                    "severity": 80
+                },
+                {
+                    "item_id": 49400207,
+                    "demand_type": "pain_point",
+                    "persona": "finance team at a mid-sized SaaS company",
+                    "problem": "Finance team wastes 6 hours every week manually reconciling payment data across multiple processors",
+                    "context": "Weekly reconciliation of Stripe, PayPal, and bank statement transactions",
+                    "job_to_be_done": "Reconcile payment transactions from multiple processors automatically",
+                    "current_solution": "Manual cross-checking of CSVs from each provider",
+                    "severity": 72
+                },
+                {
+                    "item_id": 49400208,
+                    "demand_type": "missing_product",
+                    "persona": "customer support lead",
+                    "problem": "There is no ready-made tool that unifies support tickets across multiple helpdesk providers",
+                    "context": "Daily support triage across product lines",
+                    "job_to_be_done": "View all support tickets across providers in one dashboard",
+                    "current_solution": "14 different spreadsheets tracking tickets by product line",
+                    "severity": 68
+                },
+                {
+                    "item_id": 49400209,
+                    "demand_type": "pain_point",
+                    "persona": "engineering manager at a 50-engineer company",
+                    "problem": "Engineering manager has to manually summarize 50 plus daily standups every morning",
+                    "context": "Daily cross-team standup coordination",
+                    "job_to_be_done": "Get a daily standup summary without manual reading",
+                    "current_solution": "A custom Slack bot that summarizes the standups",
+                    "severity": 70
+                },
+                {
+                    "item_id": 49400210,
+                    "demand_type": "replacement",
+                    "persona": "sales operations team at a 100-person company",
+                    "problem": "The current CRM is too slow when handling bulk contact updates",
+                    "context": "Daily contact updates performed by the sales operations team",
+                    "job_to_be_done": "Update hundreds of contacts at once without the CRM slowing down",
+                    "current_solution": "The current CRM",
+                    "severity": 65
+                },
+                {
+                    "item_id": 49400211,
+                    "demand_type": "missing_product",
+                    "persona": "frontend developer at a design-system-driven company",
+                    "problem": "Existing Figma to Storybook plugins do not handle design system tokens correctly",
+                    "context": "Maintaining the Storybook library from Figma source of truth",
+                    "job_to_be_done": "Convert Figma designs to Storybook stories that respect design tokens",
+                    "current_solution": "A custom script maintained manually",
+                    "severity": 62
+                },
+                {
+                    "item_id": 49400212,
+                    "demand_type": "missing_product",
+                    "persona": "non-technical founder of a small startup",
+                    "problem": "Existing GDPR compliance tools are either too complex or too expensive for early-stage founders",
+                    "context": "Preparing basic GDPR compliance documentation for an early-stage company",
+                    "job_to_be_done": "Generate GDPR compliance documentation with minimal legal expertise",
+                    "current_solution": "Hiring a lawyer or using enterprise compliance platforms",
+                    "severity": 55
+                },
+                {
+                    "item_id": 49400213,
+                    "demand_type": "feature_request",
+                    "persona": "DevOps engineer managing CI/CD pipelines",
+                    "problem": "GitHub Actions does not support chaining workflows with conditional logic natively",
+                    "context": "Production release pipelines that span multiple repositories",
+                    "job_to_be_done": "Chain GitHub Actions workflows with conditional logic",
+                    "current_solution": "A third-party workflow orchestrator",
+                    "severity": 45
+                },
+                {
+                    "item_id": 49400214,
+                    "demand_type": "pain_point",
+                    "persona": "QA engineer in a 10-person engineering team",
+                    "problem": "Every sprint the QA team spends about 2 days manually retesting features that automated tests already cover",
+                    "context": "Sprint-end regression verification",
+                    "job_to_be_done": "Trust automated test coverage reports without manual retests",
+                    "current_solution": "Manual retest of features flagged by unreliable coverage reports",
+                    "severity": 60
+                },
+                {
+                    "item_id": 49400215,
+                    "demand_type": "feature_request",
+                    "persona": "customer support lead at a SaaS company",
+                    "problem": "Slack does not natively convert long customer threads into support tickets",
+                    "context": "Triaging incoming customer requests from a shared Slack channel",
+                    "job_to_be_done": "Convert a Slack thread into a structured support ticket",
+                    "current_solution": "Manual copy-paste of the Slack thread into the helpdesk tool",
+                    "severity": 48
+                },
+                {
+                    "item_id": 49400216,
+                    "demand_type": "pain_point",
+                    "persona": "frequent business traveler who edits documents offline",
+                    "problem": "Notion's offline mode forces a 5 minute sync before any edit is possible on a plane",
+                    "context": "Editing documents during flights",
+                    "job_to_be_done": "Edit documents offline without a long sync wait",
+                    "current_solution": "Wait for Notion to finish syncing before editing",
+                    "severity": 50
+                },
+                {
+                    "item_id": 49400217,
+                    "demand_type": "missing_product",
+                    "persona": "growth PM at a mobile-first product",
+                    "problem": "No existing A/B testing tool treats web and mobile as a single experiment",
+                    "context": "Running experiments that affect both web and mobile users",
+                    "job_to_be_done": "Run an A/B test across web and mobile simultaneously",
+                    "current_solution": "Run separate experiments on web and mobile",
+                    "severity": 38
+                },
+                {
+                    "item_id": 49400218,
+                    "demand_type": "feature_request",
+                    "persona": "developer using an internal wiki",
+                    "problem": "The internal wiki tool does not support a dark mode",
+                    "context": "Reading internal documentation during late evening hours",
+                    "job_to_be_done": "Switch the wiki interface to a dark color theme",
+                    "current_solution": "Use a browser-level dark mode extension",
+                    "severity": 12
+                },
+                {
+                    "item_id": 49400219,
+                    "demand_type": "pain_point",
+                    "persona": "occasional freelancer",
+                    "problem": "Converting a single PowerPoint deck to PDF requires uploading to a heavy web tool",
+                    "context": "One-off file conversion a few times per year",
+                    "job_to_be_done": "Convert a PowerPoint file to PDF quickly",
+                    "current_solution": "Upload to an online converter",
+                    "severity": 8
+                },
+                {
+                    "item_id": 49400220,
+                    "demand_type": "pain_point",
+                    "persona": "occasional reader of an internal wiki",
+                    "problem": "The wiki does not let users bookmark long articles for quick access",
+                    "context": "Re-reading internal documentation a few times per month",
+                    "job_to_be_done": "Bookmark an article for quick access later",
+                    "current_solution": "Browser bookmarks",
+                    "severity": 10
+                }
+            ],
+            "score": [
+                [49400201, 87],
+                [49400202, 83],
+                [49400203, 78],
+                [49400204, 86],
+                [49400205, 91],
+                [49400206, 82],
+                [49400207, 76],
+                [49400208, 73],
+                [49400209, 74],
+                [49400210, 71],
+                [49400211, 70],
+                [49400212, 65],
+                [49400213, 58],
+                [49400214, 62],
+                [49400215, 55],
+                [49400216, 53],
+                [49400217, 48],
+                [49400218, 18],
+                [49400219, 14],
+                [49400220, 16]
+            ]
+        }
+    }
+
+}

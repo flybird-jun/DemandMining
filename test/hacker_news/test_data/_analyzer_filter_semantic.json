@@ -1,0 +1,136 @@
+{
+  "origin_story": [
+    [49300001, 1756800000, "Show HN: A simple inventory management tool for small warehouses", "story", "https://news.ycombinator.com/item?id=49300001"],
+    [49300002, 1756886400, "Ask HN: What repetitive tasks have you automated with Python?", "story", "https://news.ycombinator.com/item?id=49300002"],
+    [49300003, 1756972800, "Ask HN: What do you use for lightweight CRM?", "story", "https://news.ycombinator.com/item?id=49300003"],
+    [49300004, 1757059200, "Show HN: A tiny tool for reconciling invoices", "story", "https://news.ycombinator.com/item?id=49300004"],
+    [49300005, 1757145600, "Ask HN: How do small teams manage customer support?", "story", "https://news.ycombinator.com/item?id=49300005"],
+    [49300006, 1757232000, "Show HN: Automated weekly reporting for small businesses", "story", "https://news.ycombinator.com/item?id=49300006"],
+    [49300007, 1757318400, "Ask HN: What is your workaround for vendor CSV exports?", "story", "https://news.ycombinator.com/item?id=49300007"],
+    [49300008, 1757404800, "Show HN: Simple scheduling software for local service businesses", "story", "https://news.ycombinator.com/item?id=49300008"],
+    [49300009, 1757491200, "Ask HN: What business software do you wish were simpler?", "story", "https://news.ycombinator.com/item?id=49300009"],
+    [49300010, 1757577600, "Show HN: A small-team tool for tracking recurring operations", "story", "https://news.ycombinator.com/item?id=49300010"]
+  ],
+  "origin_comment": [
+    [49300101, 1756803600, "Most inventory systems we evaluated are designed for much larger warehouses. We only need basic receiving and stock counts, but the existing products feel unnecessarily complicated.", 49300001],
+    [49300102, 1756807200, "We went back to spreadsheets because the inventory software we tried was too expensive for a warehouse with only three employees.", 49300001],
+    [49300103, 1756810800, "The demo looks polished and the interface is quite clean compared with most warehouse software I have seen.", 49300001],
+    [49300104, 1756814400, "We eventually built our own spreadsheet template because none of the systems we tested matched the way our small warehouse actually works.", 49300001],
+    [49300105, 1756818000, "I think inventory software has become much better over the last few years, especially for larger companies.", 49300001],
+
+    [49300201, 1756890000, "I built a Python script to clean vendor CSV files and upload the changes automatically. It saves me about two hours every week.", 49300002],
+    [49300202, 1756893600, "The automation works well until a vendor changes a column name, then I have to spend another hour fixing the script.", 49300002],
+    [49300203, 1756897200, "Python is surprisingly good for this kind of automation, and the standard library has most of what I usually need.", 49300002],
+    [49300204, 1756900800, "I have several small scripts running on a cron job because doing these tasks manually every week became too tedious.", 49300002],
+    [49300205, 1756904400, "It is interesting how many people use Python for small internal tools instead of buying commercial software.", 49300002],
+
+    [49300301, 1756976400, "Our company only needs contacts, notes, and follow-up reminders, but most CRMs feel designed for much larger sales teams.", 49300003],
+    [49300302, 1756980000, "We currently use a shared spreadsheet, and follow-ups are frequently missed because nobody has a clear view of what is overdue.", 49300003],
+    [49300303, 1756983600, "I have used several CRMs and generally prefer the ones with fewer configuration options.", 49300003],
+    [49300304, 1756987200, "We stopped using our CRM because adding another user increased the monthly bill more than we expected.", 49300003],
+    [49300305, 1756990800, "A simple CRM with predictable pricing for small teams is something I would seriously consider paying for.", 49300003],
+
+    [49300401, 1757062800, "We reconcile invoices against bank transactions manually at the end of every month, and the process takes about half a day.", 49300004],
+    [49300402, 1757066400, "Our accounting software handles normal invoices, but unusual supplier formats still require a spreadsheet and manual checking.", 49300004],
+    [49300403, 1757070000, "The matching algorithm in the demo seems clever and should handle most straightforward cases.", 49300004],
+    [49300404, 1757073600, "We created spreadsheet formulas to flag mismatches, but they need to be updated whenever suppliers change their invoice format.", 49300004],
+    [49300405, 1757077200, "The accounting industry has adopted a lot more automation recently, so I expect this problem will become less common.", 49300004],
+
+    [49300501, 1757149200, "We use a shared inbox because dedicated helpdesk software feels excessive for a five-person company.", 49300005],
+    [49300502, 1757152800, "The biggest problem is that two people sometimes answer the same customer while other messages sit unanswered.", 49300005],
+    [49300503, 1757156400, "I like shared inboxes because everyone can see the conversation history without switching between applications.", 49300005],
+    [49300504, 1757160000, "We tried a popular helpdesk but abandoned it because configuring all the workflows took longer than managing support manually.", 49300005],
+    [49300505, 1757163600, "Basic assignment, reminders, and response tracking would probably be enough for our team, and I would prefer that over a complicated helpdesk.", 49300005],
+
+    [49300601, 1757235600, "Every Monday I download sales reports from three different services and merge them into a spreadsheet.", 49300006],
+    [49300602, 1757239200, "The weekly reporting process takes me at least two hours, even though the actual analysis only takes about twenty minutes.", 49300006],
+    [49300603, 1757242800, "The dashboard in the demo looks much nicer than the spreadsheet we currently use.", 49300006],
+    [49300604, 1757246400, "I wrote a script to automate part of the reporting process, but an API change broke it last month.", 49300006],
+    [49300605, 1757250000, "A low-cost reporting service would be interesting if it could connect to our existing payment platforms without requiring a large monthly contract.", 49300006],
+
+    [49300701, 1757322000, "Every vendor exports CSV files with slightly different column names, so we clean the files manually before importing them.", 49300007],
+    [49300702, 1757325600, "I maintain a separate script for each vendor, and every format change creates another maintenance task.", 49300007],
+    [49300703, 1757329200, "CSV is still one of the most convenient formats for moving structured data between simple business systems.", 49300007],
+    [49300704, 1757332800, "We have accumulated dozens of small transformation rules over the years because there is no consistent format across our suppliers.", 49300007],
+    [49300705, 1757336400, "A service that standardized vendor files automatically could remove a surprising amount of repetitive work from our operations team.", 49300007],
+
+    [49300801, 1757408400, "We currently coordinate appointments through text messages, and missed appointments cost us real money every month.", 49300008],
+    [49300802, 1757412000, "Most scheduling tools we evaluated are built around larger teams with complex shift management, which we do not need.", 49300008],
+    [49300803, 1757415600, "The booking flow in this product is straightforward and much easier to understand than some of the scheduling tools we tested.", 49300008],
+    [49300804, 1757419200, "We tried an online scheduler but customers found the booking process confusing, so staff went back to handling appointments manually.", 49300008],
+    [49300805, 1757422800, "We mainly need availability, simple booking, and reminders. Paying for advanced workforce management features would not make sense for us.", 49300008],
+
+    [49300901, 1757494800, "Our project management software has dozens of features that nobody on our team uses, and important tasks sometimes get buried under configuration.", 49300009],
+    [49300902, 1757498400, "We temporarily returned to a simple board and weekly spreadsheet because the full system was slowing down our planning meetings.", 49300009],
+    [49300903, 1757502000, "The new interface is visually impressive and the animations make the application feel modern.", 49300009],
+    [49300904, 1757505600, "I would rather pay for fewer features if the software were faster to understand and required less administration.", 49300009],
+    [49300905, 1757509200, "Project management tools have become a huge category, and there are probably too many products competing for the same customers.", 49300009],
+
+    [49301001, 1757581200, "We track recurring operational tasks in a spreadsheet with one row per week, and someone has to copy the checklist forward every Monday.", 49300010],
+    [49301002, 1757584800, "I made a small script to generate next week's tasks automatically because manually copying the checklist kept getting forgotten.", 49300010],
+    [49301003, 1757588400, "The recurring task feature looks useful, and I like that the interface does not try to do too much.", 49300010],
+    [49301004, 1757592000, "The spreadsheet works, but only one person understands all the formulas and nobody else wants to maintain them.", 49300010],
+    [49301005, 1757595600, "A simple recurring checklist with ownership and reminders would solve most of this without adding much process overhead.", 49300010]
+  ],
+  "expected_semantic_labels": [
+    [49300101, "KEEP"],
+    [49300102, "KEEP"],
+    [49300103, "FILTER"],
+    [49300104, "KEEP"],
+    [49300105, "FILTER"],
+
+    [49300201, "KEEP"],
+    [49300202, "KEEP"],
+    [49300203, "FILTER"],
+    [49300204, "KEEP"],
+    [49300205, "FILTER"],
+
+    [49300301, "KEEP"],
+    [49300302, "KEEP"],
+    [49300303, "FILTER"],
+    [49300304, "KEEP"],
+    [49300305, "KEEP"],
+
+    [49300401, "KEEP"],
+    [49300402, "KEEP"],
+    [49300403, "FILTER"],
+    [49300404, "KEEP"],
+    [49300405, "FILTER"],
+
+    [49300501, "KEEP"],
+    [49300502, "KEEP"],
+    [49300503, "FILTER"],
+    [49300504, "KEEP"],
+    [49300505, "KEEP"],
+
+    [49300601, "KEEP"],
+    [49300602, "KEEP"],
+    [49300603, "FILTER"],
+    [49300604, "KEEP"],
+    [49300605, "KEEP"],
+
+    [49300701, "KEEP"],
+    [49300702, "KEEP"],
+    [49300703, "FILTER"],
+    [49300704, "KEEP"],
+    [49300705, "KEEP"],
+
+    [49300801, "KEEP"],
+    [49300802, "KEEP"],
+    [49300803, "FILTER"],
+    [49300804, "KEEP"],
+    [49300805, "KEEP"],
+
+    [49300901, "KEEP"],
+    [49300902, "KEEP"],
+    [49300903, "FILTER"],
+    [49300904, "KEEP"],
+    [49300905, "FILTER"],
+
+    [49301001, "KEEP"],
+    [49301002, "KEEP"],
+    [49301003, "FILTER"],
+    [49301004, "KEEP"],
+    [49301005, "KEEP"]
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "origin_story": [
+    {
+      "item_id": 1001,
+      "time": 1725440400,
+      "title": "Teams need a simpler way to turn customer feedback into product priorities",
+      "type": "product",
+      "Url": "https://example.com/stories/1001"
+    },
+    {
+      "item_id": 1002,
+      "time": 1725526800,
+      "title": "Small teams struggle to keep support requests aligned with the roadmap",
+      "type": "product",
+      "Url": "https://example.com/stories/1002"
+    }
+  ],
+
+  "origin_comment": [
+    {
+      "item_id": 2001,
+      "time": 1725444001,
+      "text": "We spend hours reading feedback and still don't know which problems deserve engineering time.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2002,
+      "time": 1725444062,
+      "text": "A summary is useful, but I really need the recurring customer problems grouped automatically.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2003,
+      "time": 1725444123,
+      "text": "It would help if the system could separate feature requests from actual pain points.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2004,
+      "time": 1725444184,
+      "text": "Our team currently copies comments into a spreadsheet before deciding what to build.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2005,
+      "time": 1725444245,
+      "text": "The hardest part is comparing the same complaint across different customers and channels.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2006,
+      "time": 1725444306,
+      "text": "I want evidence attached to every insight so product managers can validate it quickly.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2007,
+      "time": 1725444367,
+      "text": "A confidence score would make it easier to distinguish a common demand from a one-off comment.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2008,
+      "time": 1725444428,
+      "text": "We need a way to prioritize problems by how severely they affect users.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2009,
+      "time": 1725444489,
+      "text": "I'd like to know what users are doing today to work around each problem.",
+      "parent_id": 1001
+    },
+    {
+      "item_id": 2010,
+      "time": 1725444550,
+      "text": "Product analysis should tell us which demands are worth investigating rather than just counting mentions.",
+      "parent_id": 1001
+    },
+
+    {
+      "item_id": 2011,
+      "time": 1725529001,
+      "text": "Support requests are scattered across email, chat, and tickets, so roadmap planning becomes manual.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2012,
+      "time": 1725529062,
+      "text": "We often lose context when a ticket is converted into a product requirement.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2013,
+      "time": 1725529123,
+      "text": "Small teams need lightweight prioritization; a complicated planning tool is too much overhead.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2014,
+      "time": 1725529184,
+      "text": "It would be great to identify which customer segments repeatedly report the same issue.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2015,
+      "time": 1725529245,
+      "text": "Urgent problems should stand out even when they have fewer comments.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2016,
+      "time": 1725529306,
+      "text": "We need to know whether customers have a workaround before deciding the problem is critical.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2017,
+      "time": 1725529367,
+      "text": "A useful analysis would connect a demand back to the original customer wording.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2018,
+      "time": 1725529428,
+      "text": "Sometimes five similar requests come from the same persona, which should affect prioritization.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2019,
+      "time": 1725529489,
+      "text": "I want product scores that combine frequency, severity, and confidence instead of frequency alone.",
+      "parent_id": 1002
+    },
+    {
+      "item_id": 2020,
+      "time": 1725529550,
+      "text": "The final output should help a PM decide what to investigate next.",
+      "parent_id": 1002
+    }
+  ],
+
+  "demandmining": [
+    {
+      "item_id": 3001,
+      "data": {
+        "item_id": 3001,
+        "demand_type": [
+          "automation",
+          "insight_extraction"
+        ],
+        "persona": [
+          "product_manager",
+          "small_product_team"
+        ],
+        "problem": "Product teams spend too much manual effort reading and organizing customer feedback before they can identify recurring problems.",
+        "context": "Teams receive feedback from many customers and channels and currently review or copy comments manually.",
+        "job_to_be_done": "Automatically group recurring customer problems so product managers can identify meaningful demands quickly.",
+        "current_solution": "Manually reading comments and maintaining spreadsheets.",
+        "severity": 4,
+        "confidence": "high",
+        "evidence": "Comments 2001, 2002, 2004, and 2011 describe repeated manual effort in collecting, summarizing, and organizing feedback."
+      },
+      "embedding": null
+    },
+
+    {
+      "item_id": 3002,
+      "data": {
+        "item_id": 3002,
+         "demand_type": [
+      "workflow_automation",
+      "cost_reduction",
+      "exception_management"
+    ],
+    "persona": [
+      "accounts_payable_manager",
+      "finance_manager",
+      "mid_market_company",
+      "enterprise_company"
+    ],
+    "problem": "Accounts payable teams repeatedly spend 20-40 staff hours per week manually investigating invoice exceptions, matching invoices against purchase orders and receipts, and resolving discrepancies across ERP, procurement, email, and document systems. The work causes payment delays, month-end closing delays, duplicate-payment risk, and measurable finance labor costs.",
+    "context": "This problem occurs continuously in companies processing large invoice volumes. Basic three-way matching is already automated by major ERP and AP platforms, but exception investigation remains highly manual because employees must search across systems, inspect documents, determine the cause of mismatches, communicate with suppliers, and update records.",
+    "job_to_be_done": "Automatically investigate invoice exceptions across ERP, purchase orders, receipts, supplier documents, and payment records, determine the root cause, provide supporting evidence, and resolve or route the exception without requiring manual cross-system investigation.",
+    "current_solution": "Major ERP and AP platforms automate standard invoice matching, but their exception workflows still require substantial manual investigation. Finance teams use spreadsheets, email, ERP searches, document attachments, and manual follow-up to resolve exceptions.",
+    "severity": 5,
+    "confidence": "high",
+    "evidence": [
+      "Multiple AP teams report spending 20-40 staff hours every week on invoice exception investigation.",
+      "The workload occurs every week and increases with invoice volume rather than being an occasional problem.",
+      "Finance teams report direct labor costs, delayed supplier payments, delayed month-end closing, and duplicate-payment risk caused by unresolved exceptions.",
+      "Existing ERP and AP products already automate standard matching, but customers continue to employ dedicated finance staff for exception investigation.",
+      "Multiple target customers explicitly state that reducing exception-handling labor is a budget-justified business objective.",
+      "Prospective customers have agreed to paid pilots for an automated exception-investigation solution integrated with their existing ERP.",
+      "The product can initially integrate with a small number of standardized ERP and accounting APIs rather than requiring custom infrastructure.",
+      "The core MVP can be built as an API-based workflow layer using existing ERP, document-processing, and LLM infrastructure.",
+      "The initial product does not require regulatory approval, physical infrastructure, or network effects.",
+      "The differentiation is specifically automated exception investigation and evidence-backed resolution rather than basic invoice matching, which is already commoditized."
+    ]
+  },
+      "embedding": null
+    },
+
+    {
+      "item_id": 3003,
+      "data": {
+        "item_id": 3003,
+        "demand_type": [
+          "evidence_traceability",
+          "feedback_analysis"
+        ],
+        "persona": [
+          "product_manager",
+          "product_analyst"
+        ],
+        "problem": "Product insights can be difficult to validate because the original customer evidence and wording are disconnected from the analysis.",
+        "context": "A PM needs to verify whether an extracted demand accurately represents customer feedback before acting on it.",
+        "job_to_be_done": "Trace each product insight back to the original customer comments and supporting evidence.",
+        "current_solution": "Manually searching source comments or keeping copied excerpts in spreadsheets.",
+        "severity": 4,
+        "confidence": "high",
+        "evidence": "Comments 2006 and 2017 ask for evidence and original customer wording to remain connected to each insight."
+      },
+      "embedding": null
+    },
+
+    {
+      "item_id": 3004,
+      "data": {
+        "item_id": 3004,
+        "demand_type": [
+          "persona_segmentation",
+          "demand_clustering"
+        ],
+        "persona": [
+          "product_manager",
+          "customer_insights_team"
+        ],
+        "problem": "Teams have difficulty determining whether similar demands come from the same customer persona or segment.",
+        "context": "Multiple customers can report similar problems, and the concentration of those reports within a persona can influence prioritization.",
+        "job_to_be_done": "Group similar demands by customer persona and reveal repeated problems within each segment.",
+        "current_solution": "Manual comparison of customer profiles and feedback records.",
+        "severity": 3,
+        "confidence": "medium",
+        "evidence": "Comments 2014 and 2018 highlight repeated issues within customer segments or personas."
+      },
+      "embedding": null
+    },
+
+    {
+      "item_id": 3005,
+      "data": {
+        "item_id": 3005,
+        "demand_type": [
+          "workflow_support",
+          "roadmap_planning"
+        ],
+        "persona": [
+          "small_product_team",
+          "product_manager"
+        ],
+        "problem": "Small teams lose context when customer support requests are transformed into product requirements and then prioritized for the roadmap.",
+        "context": "Requests arrive through email, chat, and tickets, creating fragmented information and manual handoffs.",
+        "job_to_be_done": "Preserve customer context while converting support feedback into actionable product demands and roadmap decisions.",
+        "current_solution": "Manual transfer of support tickets into product requirements and roadmap documents.",
+        "severity": 4,
+        "confidence": "high",
+        "evidence": "Comments 2011, 2012, and 2020 describe fragmented support channels, loss of context, and the need to turn feedback into next-step decisions."
+      },
+      "embedding": null
+    }
+  ],
+
+  "product_analysis": [
+    {
+      "item_id": 3001,
+      "score": 68
+    },
+    {
+      "item_id": 3002,
+      "score": 70
+    },
+    {
+      "item_id": 3003,
+      "score": 63
+    },
+    {
+      "item_id": 3004,
+      "score": 55
+    },
+    {
+      "item_id": 3005,
+      "score": 69
+    }
+  ]
+}
