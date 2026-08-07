@@ -1,50 +1,25 @@
-import requests
-import time
-from typing import Any, Iterable
+"""Collector 抽象基类, 描述 “生产者/消费者” 流水线的最小协议。
+
+不依赖任何网络/HTTP 实现, 只描述协程队列交互。
+"""
+from __future__ import annotations
+
+import asyncio
 from abc import ABC, abstractmethod
+from typing import Any
 
-class SocialMediaApi:
-    MAX_RETRIES = 3
-    SLEEP_FACTOR = 0.3
-    TIMEOUT = 10.0
-    def __init__(self) -> None:
-        self._session = requests.Session()
 
-    def _request(self, url:str) -> Any:
-        attempt = 0
-        while attempt < self.MAX_RETRIES:
-            try:
-                response = self._session.get(url, timeout = self.TIMEOUT)
-                response.raise_for_status()
-                return response
-            except requests.HTTPError as e:
-                if e.response is None or e.response.status_code < 500 or e.response.status_code >= 600:
-                    raise e
-            time.sleep(self.SLEEP_FACTOR * (2 ** attempt))
-            attempt += 1
-        raise Exception("request {str} error")
-
-"""
-迭代模型, 每次返回如下格式字典
-{
-    "title": "", # 标题
-    "text": "", # 正文
-    "comment": [ # 多条同样的格式的评论
-        {
-            "text": "" # 评论
-            "comment": [] # comment节点, 本评论的回复, 可能为空, 即没有回复, 也可能有多条回复、回复评论的回复
-        },
-        {
-            ...
-        }
-    ]
-}
-"""
 class Collector(ABC):
-    @abstractmethod
-    def __iter__(self):
-        pass
-    @abstractmethod
-    def __next__(self):
-        pass
+    def __init__(self, queue_size: int, api: Any = None) -> None:
+        self._queue: asyncio.Queue = asyncio.Queue(maxsize=queue_size)
+        self._api = api
 
+    @abstractmethod
+    async def producer_item_ids(self) -> None:
+        """往 self._queue 写入需要抓取的 item id, 以 INVALID_ITEM_ID 结束。"""
+        raise NotImplementedError
+
+    @abstractmethod
+    async def producer_item(self, out_queue: asyncio.Queue) -> None:
+        """从 self._queue 读 id, 抓数据, 写入 out_queue。"""
+        raise NotImplementedError
