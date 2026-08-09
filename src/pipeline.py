@@ -6,12 +6,12 @@ from storage.storage import storage
 async def run():
     # 初始化日志
     logging.basicConfig(
-        filename="../../log/run.log",
+        filename="log/run.log",
         level = logging.WARNING,
         format="%(asctime)s.%(msecs)03d | [%(levelname)s] | %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
         encoding = "utf-8")
-    with open("config/config.json", "r", encoding="utf-8") as fd:
+    with open("src/config/config.json", "r", encoding="utf-8") as fd:
         config = json.load(fd)
 
     collector = HackerNewsCollector()
@@ -25,7 +25,7 @@ async def run():
     item_producers = [asyncio.create_task(collector.producer_item(item_queue)) for i in range(item_producers_count)]
 
     storage_ = storage(config["raw_data_path"])
-    
+
     storage_customer_count = 4
     item_customers = [asyncio.create_task(storage_.save_article(item_queue)) for i in range(storage_customer_count)]
 
@@ -35,3 +35,6 @@ async def run():
     await asyncio.gather(*item_customers)
 
     await collector.destroy()
+
+if __name__ == "__main__":
+    asyncio.run(run())

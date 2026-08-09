@@ -46,9 +46,12 @@ class HackerNewsCollector(Collector):
             if not item_json or item_json.get("type") != "story":
                 logger.info(f"get {item_id} failed")
                 continue
-
-            text = await self._get_article(item_json["url"]) if not "text" in item_json else item_json["text"]
-
+            text = ""
+            if "url" in item_json:
+                text = await self._get_article(item_json["url"]) if not "text" in item_json else item_json["text"]
+            else:
+                logger.info("{item_id} don't have url: {item_json}")
+                
             out: dict[str, Any] = {
                 "title": item_json.get("title", ""),
                 "url": item_json.get("url", ""),

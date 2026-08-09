@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 import asyncio
 import json
 class storage:
@@ -18,6 +19,9 @@ class storage:
         now = datetime.now()
         timestamp = now.strftime("%Y_%m_%d_%H_%M_%S_%f")
         timestamp = timestamp[:-3]
-
-        with open(timestamp, "w", encoding="utf-8") as fd:
+        today = now.strftime("%Y_%m_%d")
+        directory = Path(self._raw_data_path) / today
+        directory.mkdir(parents=True, exist_ok=True)
+        file_path = directory / f"{timestamp}.json"
+        with open(file_path, "w", encoding="utf-8") as fd:
             json.dump(data, fd, ensure_ascii = False, indent = 4)
