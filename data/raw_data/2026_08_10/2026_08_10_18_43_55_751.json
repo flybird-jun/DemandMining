@@ -1,0 +1,100 @@
+{
+    "item_id": 49230891,
+    "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
+    "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
+    "text": "This is a version of the\nProject Oberon System\nmigrated\nfrom Oberon 07 to the more common Oberon 90, using a recent version of the\nOP2 compiler\nwith a RISC-V (RV32) backend;\nthe repository also includes an emulation of a machine (VM) very similar to the one described by Wirth in his\nProject Oberon Book\n,\nbased on the well-known\nRV32 emulator\n;\nthe latter is a stripped-down and slightly modified version with only the interpreter,\ncombined with my own implementation of the machine and the peripherals;\nthe memory map of Wirth's machine is reproduced 1:1 so that Kernel.Mod, Display.Mod and\nInput.Mod are unchanged.\nHere is a screenshot of the system running natively on the RISC-V VM:\nWhat is the Project Oberon System 2013\nAs you might know, between 1986 and 1989, Niklaus Wirth and Jürg Gutknecht at ETH Zürich designed\nand implemented an entire computer system, including an operating system, compiler,\nprogramming language, text and graphics editors, essentially by themselves,\nand then documented everything in the book\nProject Oberon - The Design of an Operating System and Compiler\n(1992).\nWirth continued this journey after his retirement. The sources published on\nprojectoberon.net\nare written in\nOberon-07\n, which is Wirth's last and most radical simplification of the language.\nThere is also a free 2013 revision of the Project Oberon book available.\nThe declared purpose of the 2013 project is unchanged from 1992:\nto provide a single book that serves as an example of a system that exists, is in actual use, and is explained in all detail\n.\nThe 1992 book and project used the\nNational Semiconductor NS32032\nprocessor, which \"is now neither available nor is its architecture recommendable\".\nInstead of retargeting the compiler to some other commercial architecture, Wirth decided to design his own processor,\nwhich he called\nRISC-5\n,\n\"in order to extend the desire for simplicity and regularity to the hardware\".\nHe even implemented it with a programmable gate array (FPGA) and turned his design into\n\"a real, functioning processor on a single chip\". The whole system runs on a low-cost development board (Xilinx Spartan-3 by\nDigilent, with 1 MB of static RAM) that \"easily accommodates the entire Oberon System, including its compiler\".\nSo for the first time not only the software but also the hardware of the Oberon System is described completely\nand rigorously. The hardware modules are implemented in\nVerilog\n, also available on projectoberon.net.\nThanks to the simplifications of language and processor, all parts that in 1992 had been written in assembly code (and\nwere not in the book) are now expressed in Oberon as well, from device drivers to raster operations. Wirth based his\nnew system directly on the original Ceres version, discarding the features of the later Oberon lines.\n\"It has been my desire to present the system essentially as it existed 25 years ago, without embellishments\".\nThe result is a small and sufficiently complete system which is well documented and easy to migrate to other architectures.\nThe entire hardware/software contract of Project Oberon consists of a memory map plus the instruction set.\nWhy the migration\nThe name collision with\nRISC-V\nis amusing, but the kinship is real at the level of RISC design philosophy:\nRISC-V, developed at UC Berkeley from 2010 on, is the fifth RISC architecture of the Berkeley line (RISC-I, RISC-II, SOAR, SPUR),\nand both Berkeley's and Wirth's share common design goals and features:\ne.g. a regular 32-bit load/store, compiler-friendly ISA, with fixed 32-bit base instruction encodings.\nMigrating the Project Oberon System from RISC-5 to RISC-V is a pragmatic way to bring the system to widely available contemporary hardware\nwhile preserving the principles that make Oberon valuable. Espressif offers inexpensive, readily available microcontrollers in several ESP32 families,\nand board makers such as Olimex build practical development boards around them, for example the ESP32-P4-PC which provides all resources needed\nby the Oberon System at a very attractive price.\nSince the Oberon system does not require an MMU, it is well-suited for this type of microcontroller.\nSo far, this migration runs on an emulated RISC-V machine, which helps both debugging and keeping the code close to the book.\nFuture iterations will migrate this (and also System 3) to the mentioned Olimex board.\nWirth's own compiler (OR) targets his RISC-5 architecture and compiles Oberon-07.\nI could have added an RV32 back end to it; instead, this project reuses the OP2 compiler\nwhich I already used for the\nmigration of Oberon System 3 to the Raspberry Pi\n.\nOP2 is itself part of the ETH Oberon heritage; its front end/back end separation was designed exactly for this:\nthe same front end has produced code for SPARC, MIPS, i386, and recently ARMv7 and RV32.\nMy OP2 modifications\n, the ARMv7 backend and boot linker have proven themselves in the System 3 migration.\nExtending OR would have meant maintaining another compiler. Migrating the system to the 1990 language\nkeeps one compiler for both migrated systems, and the source code is still close enough to the book to keep it useful.\nMigration Details\nThe original version of the Project Oberon source code was downloaded from\nhttps://www.projectoberon.net/\non 2026-04-14.\nI particularly downloaded the following archives:\nhttp://www.projectoberon.net/zip/inner.zip\nhttp://www.projectoberon.net/zip/outer.zip\nhttp://www.projectoberon.net/zip/systools.zip\nhttp://www.projectoberon.net/zip/graph.zip\nhttp://www.projectoberon.net/zip/apptools.zip\nThe latest file modification date is 2018-11-28. Each subdirectory of this repository\ncorresponds to the archive of the same name, besides apptools and systools which\nhave been merged in files.\nMigrated all Oberon-07 sources to Oberon 90 so that they compile with the\nActiveOberon project o2c compiler and OP2. Some notes:\nINTEGER renamed to LONGINT throughout\nSYS.Mod provides the Oberon 07 built-ins not present in Oberon 90\nbyte-sized data becomes SYSTEM.BYTE where possible, or CHAR where unavoidable\ntype case statements are expressed as IF with IS relation and type guards\narray assignments that Oberon 90 rejects use COPY\nOberon 07 byte-string literals (\n$..$\n) are initialized at runtime via SYS.PutHex\nORD(SYSTEM.BYTE) is signed in OP2, so we use CHAR instead where necessary\nSYSTEM.BIT with variable instead of constant address because of OP2 issue\nImplemented a RISC-V machine based on rv32emu similar to Wirth's RISC-5 described in PO book\nand made the necessary (minimal) changes to the Oberon code to run it.\nAll modules are linked into the boot image by the boot linker and their bodies have been executed at startup,\nno dynamic loading.\nAdded additional apps, see readme in corresponding subdirectory.\nPrecompiled versions\nSo far, the following version is available\nLinux x64\nWindows x86\nNote that the included po.bin and disk.img files work on all platforms. Only the rv32vm executable is\nplatform dependent. If you therefore just want to build the vm on another platform, you can reuse the other files.\nHow to build\nThere is a build.sh in the vm subdirectory which has to be run first. Then the build.sh in the root can be executed like\n./build.sh run\nto build, pack and run the system in the VM\n./build.sh disk\nto build and pack the system without running it\n./build.sh link\nto build and link the system without creating the disk nor running it\n./build.sh\njust compile all Oberon modules and stop\nThe build scripts were implemented and tested on Debian Bookworm Linux.\nThere is also a qmake (vm.pro) project to build the VM which\nis likely to work on macOS as well, but it has only been tested on Linux so far.\nThe VM can also be built using the\nBUSY build system\n;\nit only requires a C99 compiler and SDL2 and has successfully been tested on Linux and Windows.\nAn SDL2 development package matching your toolchain\nhas to be downloaded\n.\nUse\n-P win_sdl_dir=<path>\nwith path pointing to the root of the SDL2 directory (where\nSDL2/include\nand\nSDL2/lib\nexist).\nRun the system on Windows with\nrv32vm.exe --base 0x0 --disk disk.img po.bin\nCredits\nSee oberon_license.txt which applies to the Oberon source code and documentation.\nSee vm/rv32emu/README_orig.md and vm/rv32emu/LICENSE for more information about the RISC-V emulator.\nSee vm/softfloat/README_orig.md and vm/softfloat/COPYING.txt for more information about the Berkeley SoftFloat library.\nThe machine in the vm subdirectory is available under the terms of the GNU General Public License (GPL) versions 2.0 or 3.0 as published by the Free Software Foundation.",
+    "comment": [
+        {
+            "text": "Readers encountering this project for the first time should be aware that the earlier Oberon-on-RISC-V project &lt;<a href=\"https:&#x2F;&#x2F;github.com&#x2F;solbjorg&#x2F;oberon-riscv\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;solbjorg&#x2F;oberon-riscv</a>&gt; (HN discussion: &lt;<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=25497002\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=25497002</a>&gt;) exists and was already discussed on the mailing list:<p>&lt;<a href=\"https:&#x2F;&#x2F;lists.inf.ethz.ch&#x2F;pipermail&#x2F;oberon&#x2F;2026&#x2F;017161.html\" rel=\"nofollow\">https:&#x2F;&#x2F;lists.inf.ethz.ch&#x2F;pipermail&#x2F;oberon&#x2F;2026&#x2F;017161.html</a>&gt;",
+            "comment": [
+                {
+                    "text": "People unaware of Project Oberon should rather have a look at <a href=\"https:&#x2F;&#x2F;projectoberon.net&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;projectoberon.net&#x2F;</a> where they can find the free book and additional material by Prof. Wirth.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Love your commitment to this. You are doing excellent work to keep Wirth&#x27;s computing spirit alive. Oberon&#x27;s philosophy ( <a href=\"https:&#x2F;&#x2F;people.inf.ethz.ch&#x2F;wirth&#x2F;Oberon&#x2F;Oberon07.Report.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;people.inf.ethz.ch&#x2F;wirth&#x2F;Oberon&#x2F;Oberon07.Report.pdf</a> ) is beautiful for the power it hides behind its simplicity and I wish it was a more popular language ...",
+            "comment": [
+                {
+                    "text": "Thanks. Though I migrated the code from Oberon-07 to Oberon 90 (so I could compile it with my OP2 version) and currently I even migrate it to my forthcoming Micron language. The Project Oberon System is very well suited for these kinds of experiments.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Would it be practical to have the ESP P4 self-host?",
+            "comment": [
+                {
+                    "text": "The ESP32-P4 is actually my target platform. I have a cross-compiler toolchain based on my own OP2 compiler version (see <a href=\"https:&#x2F;&#x2F;github.com&#x2F;rochus-keller&#x2F;op2&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;rochus-keller&#x2F;op2&#x2F;</a>) which makes it easier to migrate. The Project Oberon System is an &quot;intermezzo&quot; for my actual goal, the Oberon System 3; the latter can also run my OP2 version and would thus be able to self-host. I didn&#x27;t try yet to run OP2 under the Project Oberon System, but with some patience I assume it is feasible.",
+                    "comment": [
+                        {
+                            "text": "This is super interesting Rochus. Are you targeting Oberon System 3 in particular because it adds tcp&#x2F;ip networking support? In my opinion that would make it a much more interesting system to kick the tires on, if so!",
+                            "comment": [
+                                {
+                                    "text": "Thanks. I rather do it as a &quot;proof of concept&quot; to demonstrate that the Oberon System is a (hopefully) great fit with today&#x27;s microcontroller boards, particularly the Olimex ESP32-P4-PC, which even has a HDMI connector. I already migrated the system to the Raspi Zero 2 which is yet another lean target, but actually oversized for the Oberon System, which doesn&#x27;t even require an MMU (not to mention multiple cores). The networking support code is currently not used, because it would require yet another (pretty complex) driver. But it might be feasible (with a lot of patience) to implement it directly on the board as soon as the system and compiler run stable on it.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "what does RISC-V instead of RISC-5 mean?",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;RISC5\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;RISC5</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; The whole system runs on a low-cost development board (Xilinx Spartan-3 by Digilent, with 1 MB of static RAM)<p>If somebody wants their FPGA work to be available, they better choose MiSTer FPGA from the beginning. Costlier, but way more likely to be found around.",
+            "comment": [
+                {
+                    "text": "The availability of the board to run Wirt&#x27;s system was an issue pretty soon. There were even people who offered their own boards to fill the gap (e.g. <a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160831063355&#x2F;http:&#x2F;&#x2F;oberonstation.x10.mx&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160831063355&#x2F;http:&#x2F;&#x2F;oberonstat...</a>).<p>My system version instead runs on RISC-V, so no custom FPGA implementation, currently on an emulator, but eventually on the ESP32 (which has a much better availability).",
+                    "comment": [
+                        {
+                            "text": "What do you think about ClockworkPi uConsole Kit R-01, ClockworkPi DevTerm Kit R-01, OrangePi?",
+                            "comment": [
+                                {
+                                    "text": "I have mostly experience with the smaller (older) boards of OrangePi, and I think they have great boards, some even with a long availability.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; they better choose MiSTer FPGA from the beginning.<p>Well, the MiSTer project was yet 4 years from being launched back in 2013 when the RISC-5 was implemented in FPGA, so I hope you&#x27;d excuse Wirth from not choosing it.",
+                    "comment": [
+                        {
+                            "text": "Indeed, I excuse",
+                            "comment": []
+                        },
+                        {
+                            "text": "And shortly after Wirth launched his RISC-5 system, the original FPGA board went out of production.",
+                            "comment": [
+                                {
+                                    "text": "Which most likely wasn&#x27;t predictable for him.<p>FPGAs were never that maker friendly, due to the whole ecosystem.",
+                                    "comment": [
+                                        {
+                                            "text": "It probably was NRND on mouser&#x2F;digikey by then... not that there was much choice in 2013- you went with what you had instead of $1000+ dev boards.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

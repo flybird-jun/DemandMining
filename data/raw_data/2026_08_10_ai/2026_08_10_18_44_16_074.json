@@ -1,0 +1,25 @@
+```json
+{
+  "topic": "Transmission BitTorrent 客户端被分叉为 'ReTransmission',因维护者之间关于是否新增维护者存在长期分歧",
+  "users": [
+    "开源项目用户(Transmission 现有用户)",
+    "开源贡献者/开发者",
+    "项目维护者",
+    "BitTorrent 重度用户"
+  ],
+  "pain_points": [
+    "Transmission 项目长期停滞,新功能、Bug 修复、PR 合并进度缓慢",
+    "维护者团队结构封闭,贡献者难以加入核心开发",
+    "代码库现代化进程缓慢",
+    "分叉后用户担心项目分裂、错误报告重复、维护分散",
+    "担心两个项目之间的代码同步成为新负担"
+  ],
+  "existing_solution": [
+    "继续使用原版 Transmission(维护停滞)",
+    "切换到其他 BitTorrent 客户端如 qBittorrent、Deluge、Vuze 等",
+    "等待 ReTransmission 成熟"
+  ],
+  "opportunity": "有限。开源分叉本质上不是产品机会,而是社区治理问题。可能的边缘机会:基于 Transmission/ReTransmission 构建增值服务(如远程管理面板、统计仪表板、跨平台同步工具),但市场需求未明确显示",
+  "score": 15
+}
+```

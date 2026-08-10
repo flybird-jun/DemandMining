@@ -1,0 +1,182 @@
+{
+    "item_id": 49232253,
+    "title": "出租车司机很少死于阿尔茨海默病",
+    "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+    "text": "Figuring out a circuitous route between point A to point B can strengthen your brain.\njusthavealook/iStock via Getty Images Plus\nTaxi and ambulance drivers are less likely than workers in almost any other job to\ndie of Alzheimer's disease\n. That was the surprising result of a 2024 study examining the death certificates of nearly 9 million people in the U.S.\nThese findings stopped me in my tracks because those two jobs rely on the same thing as my own work: maps.\nI have spent more than two decades staring at maps. Not paper maps on a wall, but digital ones with multiple layers: flood boundaries draped over census blocks, car crash hot spots plotted against road geometry, and satellite readings of rainfall stitched across river basins. Much of my work as a\ncivil and environmental engineer\nis done through\nGIS – that is, geographic information systems\n. Engineers like me hold several spatial relationships in their minds at once, reasoning about where things sit relative to one another across scales ranging from a city block to a whole watershed.\nI always assumed that spatial reasoning across map layers was purely professional. But that study on taxi and ambulance drivers made me wonder whether all that mental work might be doing something good to the brain.\nTaxi driver brains\nOf the 9 million death certificates from January 2020 to December 2022 that researchers examined, taxi and ambulance drivers had the\nlowest risk of dying from Alzheimer's disease\nout of 443 occupations. After adjusting for age, sex, race, ethnicity and education, roughly 1 in 100 taxi and ambulance drivers died of Alzheimer's, compared with 1 in 60 people overall.\nThis pattern did not extend to other driving jobs. The researchers concluded that the key to reducing the risk of Alzheimer's was not driving itself but continuous real-time navigation: the constant work of locating yourself in space, tracking a destination and updating a\nmental map\nas conditions change. Drivers whose jobs relied on\nfixed or predetermined routes\n, like bus drivers and aircraft pilots, didn't seem to experience a similar advantage.\nResearchers believe the association between navigation-heavy work and lower Alzheimer's risk centers on the hippocampus, a part of the brain that governs memory and spatial navigation. It's one of the first brain regions that Alzheimer's damages:\nProblems with spatial navigation and orientation\nare among the earliest signs of the disease, sometimes surfacing before obvious memory loss.\nIn one landmark 2000 study, neuroscientists compared the brains of licensed London taxi drivers with those of people who did not drive cabs. Their findings provided the first evidence via structural imaging that regions of the\nadult brain can measurably change\nunder sustained navigational demand. To earn a license, London cabbies must memorize more than 25,000 streets within a 6-mile radius of Charing Cross, a challenge known as “\nThe Knowledge\n” that takes three to four years.\nCan you memorize 25,000 streets and how to navigate them?\nThe researchers found that London taxi drivers had measurably more gray matter in the posterior hippocampus, a brain area tied to storing large-scale spatial maps. That volume\ntracked with experience\n: The longer someone had driven, the larger that part of the brain. The change was built through practice, not inherited. While people who are good at navigation might gravitate to this kind of job, the job itself does have an impact on the brain.\nTogether, these two studies make a coherent case: Work that intensively exercises the hippocampus may reshape it, and that reshaping may protect against one of the most feared diseases of aging.\nWhere map specialists fit in\nCartographers, urban planners and geospatial analysts spend their working days in\nsustained spatial reasoning\n. A geographic information system specialist might use a computer to overlap population data on flood exposure maps to find who is at risk, or read satellite imagery to map land cover after a wildfire. Researchers juggle several layers of data, coordinate systems and scales at once.\nDoes spatial reasoning through a screen engage the hippocampus the way moving through a real city does?\nWhile a taxi driver navigates from inside the scene at street level, GIS researchers picture space from above as a map – what cognitive scientists call\nallocentric reasoning\n. But these two perspectives overlap in the brain: The hippocampus also builds maps from outside viewpoints, not just from a navigator's own position.\nResearch on cognitive maps points toward the same conclusion as the study on taxi drivers. In 2023, researchers ran a machine learning model on more than 22,500 people in a national dataset and were able to predict which ZIP codes had higher rates of Alzheimer's with 84% accuracy based on how complex the environment was. Those\nliving in spatially complex surroundings\n– the kind that force active map building, such as dense street networks with numerous intersections, diverse points of interest and landmarks, and multiple path options – were less likely to develop Alzheimer's.\nLiving in spatially complex places challenges your brain.\nfhm/Moment via Getty Images\nA follow-up study tied geospatial complexity in one's environment to greater volume in the brain's spatial navigation regions. The researchers hypothesized that routinely building cognitive maps\nexercises the very circuitry\nthat Alzheimer's attacks first. Repeatedly engaging the cognitive systems involved in spatial navigation could help delay symptoms of disease.\nHowever, these two studies focus on where people live, not the work people do. Whether spatial reasoning through a screen exercises the same circuitry as real-life city navigation remains untested.\nProtecting your brain\nThe implications of whether sustained spatial reasoning protects the brain reach beyond mapmakers and cab drivers. Studies have repeatedly found a link between mentally complex occupations and\ndelayed cognitive decline and lower dementia risk\n, even after accounting for education.\nResearch on\ncognitive reserve\n– the brain's capacity to continue functioning despite disease – can help explain why two people with a similar disease burden can show markedly different levels of cognitive impairment. If demanding spatial thinking protects the brain, then how societies design schooling, professional training and retirement all become questions of brain health.\nSpatial reasoning\ncan be trained\n, and\ntraining opportunities\nare already widespread. GIS and remote sensing instruction are available through geography, engineering, public health and environmental science programs worldwide.\nIf sustained engagement with spatial reasoning can help the brain strengthen the circuitry that Alzheimer's attacks first, its value reaches well beyond the technical skills it builds.\nNeurodegenerative disease\nNeuroscience\nSpatial\nBrain\nGeography\nHippocampus\nCivil engineering\nGeographic Information Systems\nAlzheimer's disease\nMaps\nBrain health\nSpatial reasoning\nTaxi drivers\nSpatial memory\nSpatial skills\nGIS\nMental maps\nAlzheimer's risk",
+    "comment": [
+        [
+            "出租车司机：平均死亡年龄约为67.8岁。普通人群：在同一数据集中，平均预期寿命为74岁。阿尔茨海默病患者通常的平均诊断年龄为79岁。这些职业的人平均活得不够长，无法以相同的比率被诊断出来。任何会降低预期寿命的职业都会产生同样的效果。",
+            "看到这样的低水平反对意见排在前面让我很痛苦：正如原文所述，在控制年龄因素后，出租车司机低于其他职业，而且有多个预期寿命更低的职业，其阿尔茨海默病发病率仍显著高于出租车司机。",
+            "这位仁兄读过文章，有论点和一些统计数据。你还想从评论中得到什么呢？他又不是在搞研究。而且，这个观点很好。职业很多。如果我们看一下基础研究[0]的图1，可能会发现由于偶然因素会有一两个异常值，我们期望看到一些p<0.01。在这种情况下，出租车司机表现得特别好看起来并不特别令人印象深刻，特别是因为它似乎是那些英年早逝的职业之一，我们可能期望这些职业中的某一个在阿尔茨海默病方面表现得相当好。[0] <a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194</a>",
+            "该评论暗示这项研究没有控制年龄因素。但该研究控制了年龄。提出一个不好的观点并不是什么大问题，但它确实不是一个好观点。不好的观点不应该被高排名。",
+            "但在该研究控制年龄后，这种效果的显著性或多或少会消失（目测图1，第二张图）。结果证明，存在一种阿尔茨海默病风险最低的职业（当然，必须存在一种），它看起来像是一个轻微的异常值（它是最低的，我们期望那个看起来像轻微的异常值）。作为异常值来说，它并不那么令人印象深刻，它看起来是一个相当平淡分布的一部分。我们只是在图上绘制了400个数据点，1/400的奇怪数据点会有点奇怪。我们实际上只是在过度解读救护车司机的第二个数据点这一事实，因为它并不是那么有说服力。并不是要诋毁这项研究，我相信这是一项很棒的研究。做了大量的科学工作。他们做了很好的图表等等。但这项研究似乎在告诉我，阿尔茨海默病相对于职业是随机的，理想情况下，如果你想活到老年，就不要在路上花太多时间。",
+            "区别在于阿尔茨海默病属于一种不常见的疑难疾病类别。如果一项研究发现经常游泳的人不太可能患心脏病，这不会令人惊讶，因为我们非常了解人们为什么会患心脏病。因此，坚持更严格地接受（游泳 => 心脏病减少）是合理的，因为该信息的唯一用途是健康建议。然而，即使薄弱的统计相关性也可以为进一步研究阿尔茨海默病提供有效线索，如果它们暗示了研究方向的话。你不需要证明路标是正确的才能使用它们。"
+        ],
+        [
+            "出租车司机：平均死亡年龄约为67.8岁。普通人群：在同一数据集中，平均预期寿命为74岁。阿尔茨海默病患者通常的平均诊断年龄为79岁。这些职业的人平均活得不够长，无法以相同的比率被诊断出来。任何会降低预期寿命的职业都会产生同样的效果。",
+            "看到这样的低水平反对意见排在前面让我很痛苦：正如原文所述，在控制年龄因素后，出租车司机低于其他职业，而且有多个预期寿命更低的职业，其阿尔茨海默病发病率仍显著高于出租车司机。",
+            "这位仁兄读过文章，有论点和一些统计数据。你还想从评论中得到什么呢？他又不是在搞研究。而且，这个观点很好。职业很多。如果我们看一下基础研究[0]的图1，可能会发现由于偶然因素会有一两个异常值，我们期望看到一些p<0.01。在这种情况下，出租车司机表现得特别好看起来并不特别令人印象深刻，特别是因为它似乎是那些英年早逝的职业之一，我们可能期望这些职业中的某一个在阿尔茨海默病方面表现得相当好。[0] <a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>",
+            "该评论暗示这项研究没有控制年龄因素。但该研究控制了年龄。提出一个不好的观点并不是什么大问题，但它确实不是一个好观点。不好的观点不应该被高排名。",
+            "但在该研究控制年龄后，这种效果的显著性或多或少会消失（目测图1，第二张图）。结果证明，存在一种阿尔茨海默病风险最低的职业（当然，必须存在一种），它看起来像是一个轻微的异常值（它是最低的，我们期望那个看起来像轻微的异常值）。作为异常值来说，它并不那么令人印象深刻，它看起来是一个相当平淡分布的一部分。我们只是在图上绘制了400个数据点，1/400的奇怪数据点会有点奇怪。我们实际上只是在过度解读救护车司机的第二个数据点这一事实，因为它并不是那么有说服力。并不是要诋毁这项研究，我相信这是一项很棒的研究。做了大量的科学工作。他们做了很好的图表等等。但这项研究似乎在告诉我，阿尔茨海默病相对于职业是随机的，理想情况下，如果你想活到老年，就不要在路上花太多时间。",
+            "区别在于阿尔茨海默病属于一种不常见的疑难疾病类别。如果一项研究发现经常游泳的人不太可能患心脏病，这不会令人惊讶，因为我们非常了解人们为什么会患心脏病。因此，坚持更严格地接受（游泳 => 心脏病减少）是合理的，因为该信息的唯一用途是健康建议。然而，即使薄弱的统计相关性也可以为进一步研究阿尔茨海默病提供有效线索，如果它们暗示了研究方向的话。你不需要证明路标是正确的才能使用它们。",
+            "真的。但是，对于预期寿命低来说，这两个职业仍然是奇怪的异常值，这是实际引用的BMJ文章（<a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>）或原文根本没有谈到的事情。两者的预期寿命低得令人尴尬。我也稍微担心BMJ的风险调整死亡率图仍显示与死亡年龄呈明显的正相关性，我强烈怀疑这在统计学上是显著的。调整似乎不正确，因此，虽然这可能仍保留这些奇怪的发现，但它绝对不理想。从图表来看，更好的职业是第三个异常值——采矿和地质工程师。预期寿命：80.3，风险调整死亡率：1.1%。或者，经济学家也很接近（80.6；1.19%）。顺便说一下，飞机飞行员的规模确实相反（78.1；2.3%），足以令人惊讶，值得注意不仅仅是作为对照（BMJ文章确实稍微讨论了这一点，但说真的——对于一个高学历的职业来说，这是非常令人惊讶的）。",
+            "一个更好的低水平反对意见——不是那种有“储备”的人早期症状出现得更少吗？保持精神活跃（或身体活跃？）据我记得，这使得实际的斑块不太可能形成，但也更难检测——出租车司机可以忘记他们所知道的90%，仍然不会被诊断出来，因为他们不会在去商店的路上迷路。此外，他们通常很擅长闲聊。",
+            "只是最上面的吗？每个顶级话题都像是多项选择的业余拆台。这里有一个有趣的反论点。“不可思议”展示了2D/3D导航任务和测试/训练的研究。海马体测量与技能和训练相关。有趣的是，这种技能和训练和测量都与灾难中的有益反应相关（即，不会恐慌）。奇怪吧？",
+            "[已删除]",
+            "我想知道你是否真的能在这种情况下控制它，或者这样做本身不会引入一种生存偏差，掩盖因果关系的逆转。也就是说：那些因其他原因已经倾向于不太可能患阿尔茨海默病的出租车司机，是否也是那些更有可能活到比普通出租车司机年龄更大的人？",
+            "但在某种程度上，我理解这种即时的低水平批评。当然，不阅读相关内容就批评是愚蠢的。然而，我见过的研究远不止这些，甚至更低水平。例如，前几天我想弄清楚性别平等是否会给公司带来可衡量的利益……而这些研究很糟糕。所有的都很糟糕。它们中的大多数是关于挪威的，几乎所有都以2008年——最大的经济危机之一——作为参考点，不知何故它们中的大多数甚至比这更糟。他们公然歪曲统计数据。根据他们想要实现的单向或另一个方向。即使是最常被引用的那些。这令人恶心。最好的那些只能证明不平等不是经济固有的，而是社会的。但他们的议程也不同，所以他们一直试图撒更大的谎，而这些足以支持它。",
+            "第一次来HN？",
+            "[已标记]"
+        ],
+        [
+            "出租车司机：平均死亡年龄约为67.8岁。普通人群：在同一数据集中，平均预期寿命为74岁。阿尔茨海默病患者通常的平均诊断年龄为79岁。这些职业的人平均活得不够长，无法以相同的比率被诊断出来。任何会降低预期寿命的职业都会产生同样的效果。",
+            "看到这样的低水平反对意见排在前面让我很痛苦：正如原文所述，在控制年龄因素后，出租车司机低于其他职业，而且有多个预期寿命更低的职业，其阿尔茨海默病发病率仍显著高于出租车司机。",
+            "这位仁兄读过文章，有论点和一些统计数据。你还想从评论中得到什么呢？他又不是在搞研究。而且，这个观点很好。职业很多。如果我们看一下基础研究[0]的图1，可能会发现由于偶然因素会有一两个异常值，我们期望看到一些p<0.01。在这种情况下，出租车司机表现得特别好看起来并不特别令人印象深刻，特别是因为它似乎是那些英年早逝的职业之一，我们可能期望这些职业中的某一个在阿尔茨海默病方面表现得相当好。[0] <a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>",
+            "该评论暗示这项研究没有控制年龄因素。但该研究控制了年龄。提出一个不好的观点并不是什么大问题，但它确实不是一个好观点。不好的观点不应该被高排名。",
+            "但在该研究控制年龄后，这种效果的显著性或多或少会消失（目测图1，第二张图）。结果证明，存在一种阿尔茨海默病风险最低的职业（当然，必须存在一种），它看起来像是一个轻微的异常值（它是最低的，我们期望那个看起来像轻微的异常值）。作为异常值来说，它并不那么令人印象深刻，它看起来是一个相当平淡分布的一部分。我们只是在图上绘制了400个数据点，1/400的奇怪数据点会有点奇怪。我们实际上只是在过度解读救护车司机的第二个数据点这一事实，因为它并不是那么有说服力。并不是要诋毁这项研究，我相信这是一项很棒的研究。做了大量的科学工作。他们做了很好的图表等等。但这项研究似乎在告诉我，阿尔茨海默病相对于职业是随机的，理想情况下，如果你想活到老年，就不要在路上花太多时间。",
+            "区别在于阿尔茨海默病属于一种不常见的疑难疾病类别。如果一项研究发现经常游泳的人不太可能患心脏病，这不会令人惊讶，因为我们非常了解人们为什么会患心脏病。因此，坚持更严格地接受（游泳 => 心脏病减少）是合理的，因为该信息的唯一用途是健康建议。然而，即使薄弱的统计相关性也可以为进一步研究阿尔茨海默病提供有效线索，如果它们暗示了研究方向的话。你不需要证明路标是正确的才能使用它们。",
+            "你会如何控制这种因果可能性，即那些最终会早期发展出阿尔茨海默病的人可能倾向于有无法检测的记忆问题，从而一开始就阻止他们成为出租车司机？你无法控制职业，因为那是声明本身背后的东西。",
+            "更糟糕的是，我可以想象患有未确诊的早期阿尔茨海默病的人通过额外的精神疲劳压力自我选择车祸和心脏问题，而他们的大脑试图补偿功能丧失。所以你有人自我选择离开这个职业，自我选择在职业内早期死亡，而且除此之外，还有一个几乎无法调整的总体预期寿命差异。",
+            "在自动驾驶汽车时代会发生什么？",
+            "更少的车祸死亡，导致更多的老年人，这不可避免地意味着患有阿尔茨海默病的人口增加。（除非高度倾向于在车祸中死亡的人也高度倾向于谋杀那些将会但尚未患阿尔茨海默病的人。但出于这个假设的目的，这似乎不太可能。）说笑，认真的回答取决于这种联系是因果关系还是仅仅是相关性。",
+            "在某个时刻，人为引发的事故数量将会增加，因为没有任何人能够预测自动驾驶汽车的突然异常刹车，即使它正确预测了与另一辆V2V连接汽车的即将发生的事故。",
+            "没有出租车司机"
+        ],
+        [
+            "出租车司机：平均死亡年龄约为67.8岁。普通人群：在同一数据集中，平均预期寿命为74岁。阿尔茨海默病患者通常的平均诊断年龄为79岁。这些职业的人平均活得不够长，无法以相同的比率被诊断出来。任何会降低预期寿命的职业都会产生同样的效果。",
+            "看到这样的低水平反对意见排在前面让我很痛苦：正如原文所述，在控制年龄因素后，出租车司机低于其他职业，而且有多个预期寿命更低的职业，其阿尔茨海默病发病率仍显著高于出租车司机。",
+            "这位仁兄读过文章，有论点和一些统计数据。你还想从评论中得到什么呢？他又不是在搞研究。而且，这个观点很好。职业很多。如果我们看一下基础研究[0]的图1，可能会发现由于偶然因素会有一两个异常值，我们期望看到一些p<0.01。在这种情况下，出租车司机表现得特别好看起来并不特别令人印象深刻，特别是因为它似乎是那些英年早逝的职业之一，我们可能期望这些职业中的某一个在阿尔茨海默病方面表现得相当好。[0] <a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>",
+            "该评论暗示这项研究没有控制年龄因素。但该研究控制了年龄。提出一个不好的观点并不是什么大问题，但它确实不是一个好观点。不好的观点不应该被高排名。",
+            "但在该研究控制年龄后，这种效果的显著性或多或少会消失（目测图1，第二张图）。结果证明，存在一种阿尔茨海默病风险最低的职业（当然，必须存在一种），它看起来像是一个轻微的异常值（它是最低的，我们期望那个看起来像轻微的异常值）。作为异常值来说，它并不那么令人印象深刻，它看起来是一个相当平淡分布的一部分。我们只是在图上绘制了400个数据点，1/400的奇怪数据点会有点奇怪。我们实际上只是在过度解读救护车司机的第二个数据点这一事实，因为它并不是那么有说服力。并不是要诋毁这项研究，我相信这是一项很棒的研究。做了大量的科学工作。他们做了很好的图表等等。但这项研究似乎在告诉我，阿尔茨海默病相对于职业是随机的，理想情况下，如果你想活到老年，就不要在路上花太多时间。",
+            "区别在于阿尔茨海默病属于一种不常见的疑难疾病类别。如果一项研究发现经常游泳的人不太可能患心脏病，这不会令人惊讶，因为我们非常了解人们为什么会患心脏病。因此，坚持更严格地接受（游泳 => 心脏病减少）是合理的，因为该信息的唯一用途是健康建议。然而，即使薄弱的统计相关性也可以为进一步研究阿尔茨海默病提供有效线索，如果它们暗示了研究方向的话。你不需要证明路标是正确的才能使用它们。",
+            "该研究考虑到了这一点。通过大量使用你的大脑，一直学习远离你已经知道的全新事物，来延缓你的衰老。",
+            "阿尔茨海默病与正常的精神萎缩是完全不同的疾病，有很多本应聪明的人最终患上它的故事。我并不是说你不应该更努力地使用你的大脑，但这就像说斯蒂芬·霍金应该更努力地锻炼。",
+            "这是否更接近于说阿诺德·施瓦辛格应该更努力地锻炼？",
+            "如果以年龄为控制变量，斯蒂芬·霍金和阿诺德·施瓦辛格都会从锻炼中受益，/s",
+            "收集一堆协变量永远不能替代认识到你不能强迫人们一辈子当出租车司机。",
+            "然而，你也许可以找到一个自然实验，出租车司机被随机阻止继续他们的驾驶生涯？",
+            "可能只是导致某些出租车司机比他们的同辈活得长得多，也免于阿尔茨海默病。我想他们可能也考虑到了这一点——我得看看这项研究。",
+            "或者，如果你能幸免于杀死他们同辈的东西，它有有益的权衡。也就是说，也许吸烟可以预防阿尔茨海默病，如果它没有先杀死你的话。",
+            "在这样一个死亡率高的职业中控制年龄似乎像是在控制高警觉性、意识、快速反应时间以及良好的休息/低压力、低娱乐性药物和酒精使用。其中，睡眠问题与阿尔茨海默病高度相关，也与车祸相关。仅在此控制年龄会选择低睡眠问题发生率。",
+            "学习新语言（并真正使用它们）是所有年龄段做到这一点的好方法！",
+            "我会双语。如果没有人用新语言交流，学习新语言是没有意义的。语言技能衰减得惊人地快。",
+            ""
+        ],
+        [
+            "| 在调整年龄、性别、种族、民族和教育程度后，大约每100名出租车和救护车司机中就有1人死于阿尔茨海默病，而总体比例是每60人中就有1人。他们声称在本文第五段控制了这些因素。这是此类研究中的标准做法。所以你的观点要么不相关，要么是他们没有正确控制年龄？"
+        ],
+        [
+            "研究通常使用回归来考虑类似的事情。懒得看这篇文章，但我敢打赌这已经控制住了。",
+            "> 在调整年龄、性别、种族、民族和教育程度后，大约每100名出租车和救护车司机中就有1人死于阿尔茨海默病，而总体比例是每60人中就有1人。所以没有迹象表明他们考虑了职业的预期寿命。",
+            "对我来说，调整年龄似乎是一个迹象",
+            "这是不够的。例如，患阿尔茨海默病的人可能由于任何原因不太可能在这个职业中幸存下来，其中阿尔茨海默病是死亡原因（例如发生致命车祸，未确诊的早发期是问题）。公共汽车司机通常一遍又一遍地走相同的路线，可能比出租车和救护车司机的整体行程更安全。这是一个合理的假设，但要弄清楚这些事情真的非常非常困难，控制年龄是显而易见的事情，但这不会给你认为的结论性结果。",
+            "调整样本/总体年龄是对此最简单的解释",
+            "确实。我觉得虽然许多人尝试学习新语言，但这样做的智力刺激被低估了。特别是学习与你的母语截然不同的语言（语法上、形态学上等）。这几乎就像找到新的思维方式。",
+            "似乎是一个公平的观点。",
+            "> 懒得看这篇文章",
+            "那就别发",
+            "老兄，你读过科学论文吗？你懂回归吗？你自己读过原文吗？我错了吗？"
+        ],
+        [
+            "是的。自由攀岩者也很少死于阿尔茨海默病。",
+            "翼装飞行和翼装跳伞者也是。",
+            "这就是为什么我确保每周至少穿一次翼装飞行服。"
+        ],
+        [
+            ""
+        ],
+        [
+            "正如论文所指出的，分析中考虑到了这一点，因为令大多数互联网评论员惊讶的是，研究人员知道他们需要控制混杂变量<p><a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#x2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>",
+            "让我始终感到不可思议的是，人们只会读文章的标题，并指出基于他们假设文章所说的“缺陷”",
+            "人们急于展示他们自以为是的智力优越感。通常同一类人是最后承认错误的人。",
+            "这不一定与智识主义有关。现代科学受到“不发表就出局”的困扰。研究人员只需要发表东西来维持工作，而负面结果不会发表。所以我认为人们经常发表没有适当控制/缺失混杂变量/因果倒置/等的研究，并非出于无知，而是因为他们知道结论是靠不住的——但如果他们不发表，他们就会失业。我认为很少有人意识到复制危机有多严重。在一本领先的社会心理学杂志中，你有75%的研究未能复制。[1]另一项关于临床前医学研究的复制工作发现只有11%能够复制，一项关于癌症研究的复制工作发现平均效应大小比发表的低85%，还有很多。如果你假设大多数科学头条——至少在传统硬科学之外——是错误的，那么你更有可能是对的，而不是错的。[1] - <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Replication_crisis#In_psychology\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Replication_crisis#In_psycholo...</a>",
+            "> 这不一定与智识主义有关。现代科学受到“不发表就出局”的困扰。研究人员只需要发表东西来维持工作，而负面结果不会发表。所以我认为人们经常发表没有适当控制/缺失混杂变量/因果倒置/等的研究，并非出于无知，而是因为他们知道结论是靠不住的——但如果他们不发表，他们就会失业。这非常真实。在我的博士研究中，我使用随机森林完美预测了安慰剂效应。现在，这实际上是<i>由于</i>采样差异，当我对拆分取平均值时，结果消失了。我常常在想，如果这件事发生时我还在学术界，我是否能够抵挡住《自然》/《科学》论文（以及随之而来的职业好处）的诱惑。",
+            "然后他们的评论也可靠地成为帖子中获赞最多的评论",
+            "你真的读过链接吗？",
+            "他们被糟糕的煽情“科学新闻”训练出了假设。还记得电线是如何导致儿童脑损伤的吗？不是通过磁场或类似的东西，而是通过降低的房产价值。"
+        ],
+        [
+            "正如论文所指出的，分析中考虑到了这一点，因为令大多数互联网评论员惊讶的是，研究人员知道他们需要控制混杂变量<p><a href=\"https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bmj.com&#x2F;content&#x2F;387&#2F;bmj-2024-082194</a>",
+            "让我始终感到不可思议的是，人们只会读文章的标题，并指出基于他们假设文章所说的“缺陷”",
+            "人们急于展示他们自以为是的智力优越感。通常同一类人是最后承认错误的人。",
+            "这不一定与智识主义有关。现代科学受到“不发表就出局”的困扰。研究人员只需要发表东西来维持工作，而负面结果不会发表。所以我认为人们经常发表没有适当控制/缺失混杂变量/因果倒置/等的研究，并非出于无知，而是因为他们知道结论是靠不住的——但如果他们不发表，他们就会失业。我认为很少有人意识到复制危机有多严重。在一本领先的社会心理学杂志中，你有75%的研究未能复制。[1]另一项关于临床前医学研究的复制工作发现只有11%能够复制，一项关于癌症研究的复制工作发现平均效应大小比发表的低85%，还有很多。如果你假设大多数科学头条——至少在传统硬科学之外——是错误的，那么你更有可能是对的，而不是错的。[1] - <a href=\"https:&#x2F;&#2F;en.wikipedia.org&#x2F;wiki&#x2F;Replication_crisis#In_psychology\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#2F;Replication_crisis#In_psycholo...</a>",
+            "> 这不一定与智识主义有关。现代科学受到“不发表就出局”的困扰。研究人员只需要发表东西来维持工作，而负面结果不会发表。所以我认为人们经常发表没有适当控制/缺失混杂变量/因果倒置/等的研究，并非出于无知，而是因为他们知道结论是靠不住的——但如果他们不发表，他们就会失业。这非常真实。在我的博士研究中，我使用随机森林完美预测了安慰剂效应。现在，这实际上是<i>由于</i>采样差异，当我对拆分取平均值时，结果消失了。我常常在想，如果这件事发生时我还在学术界，我是否能够抵挡住《自然》/《科学》论文（以及随之而来的职业好处）的诱惑。",
+            "然后他们的评论也可靠地成为帖子中获赞最多的评论",
+            "你真的读过链接吗？",
+            "他们被糟糕的煽情“科学新闻”训练出了假设。还记得电线是如何导致儿童脑损伤的吗？不是通过磁场或类似的东西，而是通过降低的房产价值。",
+            "1/60到1/100的差异可能仅由一个无法涵盖的小混杂因素来解释。因此，在我看来，基于这项研究得出任何结论都不会是有益的。",
+            "> \"<i>研究人员知道他们需要控制混杂变量</i>\" 'Why ‟controlling for a variable” doesn't (usually) work' - <a href=\"https:&#x2F;&#x2F;dynomight.net&#x2F;control&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;dynomight.net&#x2F;control&#x2F;</a><p>其他不起作用的事情，包括项目39到43中的另外四个“控制变量”条目：<a href=\"https:&#x2F;&#x2F;dynomight.net&#x2F;things&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;dynomight.net&#x2F;things&#x2F;</a>",
+            "还有<a href=\"https:&#x2F;&#x2F;journals.plos.org&#x2F;plosone&#x2F;article?id=10.1371&#x2F;journal.pone.0152719\" rel=\"nofollow\">https:&#x2F;&#x2F;journals.plos.org&#x2F;plosone&#x2F;article?id=10.1371&#x2F;journal...</a>和<a href=\"https:&#x2F;&#x2F;slatestarcodex.com&#x2F;2014&#x2F;04&#x2F;26&#x2F;stop-confounding-yourself-stop-confounding-yourself&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;slatestarcodex.com&#x2F;2014&#x2F;04&#x2F;26&#x2F;stop-confounding-yours...</a>"
+        ],
+        [
+            "他们可能在研究那些没有在工作中被刺伤或枪击就退休的个人。",
+            "不是工作中的暴力，而是他们的工作在其他方面对他们的健康有害。一整天坐着不起来，开着窗户开车，所有的紫外线。此外，年龄较大的人接触了大量香烟烟雾。",
+            "还有道路事故。",
+            "我可以想象出租车司机发生致命/严重道路事故比普通人少，或者最多稍微多一点。他们倾向于在城市里驾驶，受到更好的训练，工作时不能喝酒或吸毒。自2020年以来，伦敦只有1名出租车司机死于交通事故。",
+            "如果你开得更多，你更有可能卷入事故，这就是道路和事故的运作方式。当然他们可能更好，按他们开车的时间单位，他们的事故肯定很少。但如果有每小时0.001%的概率，那么足够多的小时后，几起事故是不可避免的。",
+            "他们不只是增加更多的驾驶小时，如果他们改变地点/工作，他们会用少量高风险小时换取大量低风险小时。",
+            "城市地区的司机一般不太可能在事故中死亡，高速公路上则不同。行人的风险要大得多。所以每年有1/2名出租车司机可能因此致命受伤并不奇怪。但我会假设其他司机与出租车司机的比例足够高，这个数字也应该为零。",
+            "我要冒个险说，甚至不到两位数的百分比出租车司机的职业生涯是由于暴力袭击而结束的。出租车司机甚至没有出现在美国劳工统计局前20个最危险的职业中。",
+            "> 甚至不到两位数的百分比",
+            "如果你敢猜这么低，那真的太疯狂了。我会很容易猜到那是一小部分百分比。十分之一是该死的疯了。",
+            "那就像是，几乎所有人。",
+            "幸存者偏差"
+        ],
+        [
+            "\" (...) 在调整年龄、性别、种族、民族和教育程度后，大约每100名出租车和救护车司机中就有1人死于阿尔茨海默病，而总体比例是每60人中就有1人。\"",
+            "是的。\"对于每个职业，我们首先计算了因阿尔茨海默病死亡的比例和平均死亡年龄（即平均预期寿命）。我们绘制了这两个变量之间的关联，每个观察值反映一个单一的职业。*此分析的目的是说明需要考虑死亡时年龄的必要性，因为阿尔茨海默病的风险随年龄增长而上升，因此阿尔茨海默病死亡率自然会在预期寿命较低的职业中较低。*\""
+        ],
+        [
+            ""
+        ],
+        [
+            ""
+        ],
+        [
+            ">这些工作的人平均活得不够长，无法被诊断出来<p>更不用说这些研究中的另一个魔鬼了：一些职业在统计上将对每种可能的疾病具有最低的患病率。你不能只挑选异常值就宣称“因果关系！”"
+        ],
+        [
+            ">出租车司机：平均死亡年龄约为67.8岁。哪里？哪些国家？",
+            "在美国，但你可能会在其他国家看到类似的效果。出租车司机高度久坐不动，职业上比大多数工作接触更多道路污染。"
+        ],
+        [
+            "这非常有趣，但为什么出租车司机的工作会降低预期寿命？是因为他们坐得太多吗？还是因为他们吸入太多汽车中的一氧化碳？或者待在车里（车里）太久？还是只是压力大？从外观上看，这看起来并不是一份特别辛苦的工作（顺便说一下，我兄弟做了几年的“VTC”：<i>“带司机的旅游车”</i>，基本上是高端出租车，没有“出租车”标志）。",
+            "我做过，短暂的，二十多年前。糟糕的工作——一整天坐着，收入不稳定，危险，乘客恶劣，醉酒的乘客，好斗的乘客，似乎整天无所事事只会想办法欺骗司机的乘客。但真正糟糕的是工作时间：班次是12小时长，要么在凌晨3点结束，要么在凌晨3点开始，因为你的出租车租金在工作周开始时最高，每隔一天下降一次（第七天免费），薪酬结构是这样的，只有通过大量工作小时，你才能赚到好钱。",
+            "因为它报酬不高。富裕会增加预期寿命。",
+            "1. 他们几乎不属于最低的五分之一，收入效应大到足以将他们的寿命缩短7年。我预计夜间工作、不规律的睡眠、过多的快餐，也许还有更高的吸烟频率会起到作用。2. 最初的研究不仅研究了出租车司机，还研究了救护车司机。我怀疑他们的预期寿命没有那么低。",
+            "如果你考虑到他们的工作时间，他们是。",
+            ">从外观上看，这看起来并不是一份特别辛苦的工作",
+            "定义“辛苦的工作”。搬重物？",
+            "对身体有压力。",
+            "不规律的时间，坐得太多，吸入太多废气，如果他们迟到，人们会对你大喊大叫。",
+            "听起来是一份相当辛苦的工作。",
+            "是的，开出租车可能很辛苦。",
+            "有一些工作对大脑也有压力——它们中的一些有非常低的“预期寿命”。",
+            "低收入，他们的工作中身体活动少，不断吸入交通废气，以及轮胎和刹车粉尘将是我的首选嫌疑人。",
+            "这是一份非常久坐的工作，基本上是定义上的。",
+            "被肮脏的街头流浪汉刺伤脖子。",
+            "在同一个留言板上发表这样的内容可能不明智，因为你正在用它来找工作",
+            "一个玩笑？",
+            "结果可能他们申请的下家公司是由街头流浪汉经营的，他们对这种刻板印象不太友好？或者可能是不懂幽默的说教者，他们不希望员工在空闲时间讲笑话？"
+        ],
+        [
+            ""
+        ],
+        [
+            "你读过这项研究吗"
+        ],
+        [
+            "啊，对一篇论文的典型廉价HN反应，伴随“相关性不是因果关系”，而且一如既往，对于已经纳入其中的事情。",
+            "搞笑，因为在学习软科学（如心理学）时，即使是本科生也会被反复灌输考虑这些事情。",
+            "下一篇：“我没有做统计分析，但样本量似乎很小”",
+            "...在小鼠身上！"
+        ],
+        [
+            "德尼罗82岁，没有阿尔茨海默病。/s",
+            "他是方法派表演，所以我接受。"
+        ],
+        [
+            "[已删除]"
+        ]
+    ]
+}

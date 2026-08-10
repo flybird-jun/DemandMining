@@ -1,0 +1,103 @@
+{
+    "item_id": 49223105,
+    "title": "Wireblast a 100 Gbps packet generator in Go using AF_XDP",
+    "url": "https://toonk.io/index.html",
+    "text": "Go\nWireblast: a 100Gbs packet generator in Go with AF_XDP\nIf you’ve followed my blog for a while, you know I love tinkering with packets and making them go fast in software. Today I'm releasing a new tool called\nAndree Toonk\n5 Aug 2026\n•\n6 min read",
+    "comment": [
+        {
+            "text": "As someone who has worked in the Telco&#x2F;NFV industry for well over 10 years now, I can confidently say this is a breath of fresh air. Don’t get me wrong, DPDK-based tools are great, but setting up Cisco TRex or even basic TestPMD requires a lot of specialized knowledge. Indeed, in the era of LLMs, the barrier to entry is much lower, but hardware requirements remain regardless of whether an AI agent handles the implementation for you.\nFor anybody looking for XDP-supported drivers&#x2F;NICs -&gt; <a href=\"https:&#x2F;&#x2F;github.com&#x2F;iovisor&#x2F;bcc&#x2F;blob&#x2F;master&#x2F;docs&#x2F;kernel-versions.md#xdp\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;iovisor&#x2F;bcc&#x2F;blob&#x2F;master&#x2F;docs&#x2F;kernel-versi...</a>",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;toonk.io&#x2F;wireblast-building-a-line-rate-packet-generator-in-go-with-af_xdp&#x2F;index.html\" rel=\"nofollow\">https:&#x2F;&#x2F;toonk.io&#x2F;wireblast-building-a-line-rate-packet-gener...</a>",
+            "comment": [
+                {
+                    "text": "Ah thanks!!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "That’s very interesting, thank you for sharing. Looks like it could be a very useful tool for testing high performance networking.<p>I wonder if something similar could be done using TC BPF instead of AF_XDP? My only reservation about AF XDP is that it requires a special NIC to support it, so it may not be useful for a “regular Joe” user. I wonder if TC BPF would also work since it similarly bypasses the Kernel networking stack, I believe you can put packets directly into the NIC TX queue for transmission",
+            "comment": [
+                {
+                    "text": "You can, but the interesting thing about AF_XDP is that you&#x27;ve got a userland path to writing directly to the card&#x27;s DMA buffers; TC BPF still allocates an skbuff for every packet you send.",
+                    "comment": [
+                        {
+                            "text": "Also with liburing you have zero-copy send and receive operations for normal protocols like UDP or TCP, but this requires a NIC that supports scatter&#x2F;gather DMA (so that the packet headers go to&#x2F;from kernel buffers, while the data goes to&#x2F;from userland buffers).<p>AF_XDP is also available in older kernels, but with recent enough kernels (zero-copy receive is a recent addition) and with a good NIC, liburing should provide a similar performance.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "it seems like every NIC on the market that can do 100Gb has support in its linux kernel driver, so probably not a big deal in practice",
+                    "comment": []
+                },
+                {
+                    "text": "you can use generic af_xdp which sits at the TC layer. Just get a bit less performance.",
+                    "comment": [
+                        {
+                            "text": "That&#x27;s what the veth examples are using",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "The video demo is pretty neat as well \n<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=8EmxvaOR5uA\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=8EmxvaOR5uA</a>",
+            "comment": []
+        },
+        {
+            "text": "ooh no more DPDK, this will make it a lot easier. I just started working with trex but it&#x27;s all really complicated. Going to give this a try",
+            "comment": [
+                {
+                    "text": "I think, and I&#x27;m saying this in part to get someone to correct me, that post-XDP (so 5 years or so now) DPDK is basically obsolete. Is there a circumstance where it would make sense to start from DPDK rather than XDP?",
+                    "comment": [
+                        {
+                            "text": "I think access to offload engines is a big part of the appeal of dpdk still, especially for me all the GPUdirect nvidia-only packet steerer.<p>I need to check about the af_xdp ecosystem around fragmentation&#x2F;reassembly in UDP too, every time I needed something there DPDK had it, often with an offload path.<p>Some silly stuff in DPDK are very useful for testing too (in-memory devices).<p>Also I&#x27;m not clear on the virtualization story on af_xdp, with dpdk I got something working at full blast 400G in VMs with little (but finnicky) work.",
+                            "comment": [
+                                {
+                                    "text": "I am corrected. Thanks! :)",
+                                    "comment": [
+                                        {
+                                            "text": "I half-wished I&#x27;d get Cunningham&#x27;s law-ed here. I read a bit more and there seems to be some support for tcp and udp offload, <a href=\"https:&#x2F;&#x2F;netdevconf.info&#x2F;0x17&#x2F;sessions&#x2F;talk&#x2F;tcp-offload-via-af_xdp-sockets-not-your-grandmothers-tcp-offload.html\" rel=\"nofollow\">https:&#x2F;&#x2F;netdevconf.info&#x2F;0x17&#x2F;sessions&#x2F;talk&#x2F;tcp-offload-via-a...</a> but I haven&#x27;t checked how easy it is to use.<p>A lot of the socket featureset of io_uring seems available in AF_XDP <a href=\"https:&#x2F;&#x2F;docs.kernel.org&#x2F;networking&#x2F;af_xdp.html\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.kernel.org&#x2F;networking&#x2F;af_xdp.html</a> which shows lots of progress since I looked last.<p>To get an idea of what DPDK gives low-level access to there is the overview   \n<a href=\"https:&#x2F;&#x2F;doc.dpdk.org&#x2F;guides&#x2F;nics&#x2F;features.html\" rel=\"nofollow\">https:&#x2F;&#x2F;doc.dpdk.org&#x2F;guides&#x2F;nics&#x2F;features.html</a> and my &quot;favorite annual terabit read&quot; <a href=\"https:&#x2F;&#x2F;doc.dpdk.org&#x2F;guides&#x2F;nics&#x2F;mlx5.html#mlx5-net-features\" rel=\"nofollow\">https:&#x2F;&#x2F;doc.dpdk.org&#x2F;guides&#x2F;nics&#x2F;mlx5.html#mlx5-net-features</a> for NVIDIA NICs. Broadcom has some fun stuff too. The first time you hit top RX speed (2x400G my latest) with only one busy core (yay DMA engines) is always a thrill.",
+                                            "comment": [
+                                                {
+                                                    "text": "I&#x27;m definitely familiar with DPDK, but when I think about it I mostly just think &quot;polling mode driver&quot; and not &quot;offloading&quot;.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "At this point there&#x27;s a much bigger ecosystem for DPDK than AF_XDP I think. Also more people know about DPDK than AF_XDP right now e.g. the Ostinato traffic generator&#x27;s line-rate Turbo functionality uses AF_XDP but most customers assume it uses DPDK.<p>Disclosure: Ostinato creator here.",
+                            "comment": []
+                        },
+                        {
+                            "text": "While I am a big proponent of XDP there are use-cases better suited to DPDK: Being able to offload flows and crypto operations to the NIC is important to a lot of use-cases. The first packet to user space is essentially the slow path even with DMA, that sets up the fast path.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I think you&#x27;re correct. Not really aware of any real limitations, other than it&#x27;s slightly slower than dpdk (it&#x27;s not a complete bypass), but at a much easier ease of use.",
+                            "comment": [
+                                {
+                                    "text": "AF_XDP kind of is a complete bypass, right? RX get scooped right off the DMA buffer for the card, and TX get shoved right back in.",
+                                    "comment": [
+                                        {
+                                            "text": "Yeah fair point. I should have been more precise. AF_XDP with ZC bypasses the kernel networking stack and the NIC DMA&#x27;s directly into UMEM and so in that sense it absolutely is a kernel bypass.<p>The difference I was getting at vs DPDK is that the kernel NIC driver&#x2F;NAPI&#x2F;XDP path is still involvd. With DPDK the userspace PMD is effectively driving the NIC and accessing the queues directly.<p>either way, it&#x27;s great and everyone should use it :) that is assuming they have a use case for it. The use-cases are perhaps somewhat limited as it also bypasses the kernel tcp-ip stack, so you gotta do a lot yourself.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,927 @@
+{
+    "item_id": 49223079,
+    "title": "Can Intel finally beat ARM on performance per Watt?",
+    "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
+    "text": "With a title like “\nIntel Just Matched Apple Silicon. Seriously.\n“, the latest video from [Jeff Geerling] makes some pretty bold claims. But as we’d expect from [Jeff], he’s got the benchmarks up on GitHub for both the\nMacBook Neo\nand Dell’s latest\nXPS 13\nto back it up.\nWe’ve embedded the full video below, which has [Jeff]’s comparative review of the two laptops. The Mac wins on iGPU, sound, and not shipping Windows, while the Dell gets points for being able to load Linux and having a backlit keyboard. But the figure we were hoping to see is the\nefficiency\n. After all, it’s ARM’s ability to crank out gigaflops on fewer watts that won them the mobile market and got Apple interested in that architecture in the first place. If Intel is catching up, that’s news.\nOn\n[Jeff]’s version of the Top500\nbenchmark — the same HPL Linpak test\nused for Supercomputers\n— the MacBook cranked out 57.012 Gflops at 10.6W, for 5.38 Gflops/W while the Dell managed 127.91 Gflops at 20.6W, for 6.21 Gflops/W. That’s just astounding, considering the historical data all goes the other way. This Dell also beats out both M4 and M3 Mac Studios, only failing to the M4 Mac Mini at 7.57 Gflops/W. Even when not crunching big numbers, say at idle or web browsing, the XPS matches the MacBook sip for sip in energy efficiency.\nSome people have been saying for a few years now that ARM’s observed advantages in power consumption have more to do with the chips themselves than the instruction architecture, and it looks like the Core 5 320 chip in this Dell proves them right when it comes to x86.\nWhile you might think you need to code in Assembly or C to maximize those efficiency gains, your choice of language\nmay not be as important as you think.",
+    "comment": [
+        {
+            "text": "Rather than the Hackaday article, which doesn&#x27;t add anything to the original, here&#x27;s Jeff&#x27;s actual video:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=A2B7oI0FYqo\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=A2B7oI0FYqo</a><p>and post:<p><a href=\"https:&#x2F;&#x2F;www.jeffgeerling.com&#x2F;blog&#x2F;2026&#x2F;excited-for-intel-efficiency&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.jeffgeerling.com&#x2F;blog&#x2F;2026&#x2F;excited-for-intel-eff...</a>",
+            "comment": [
+                {
+                    "text": "Did Jeff Geerling get paid to post misleading headlines and reviews on Intel vs Apple?<p>He&#x27;s basing this on his own &quot;super computing benchmark&quot; measuring only FP64 performance. Meanwhile, any normal person using these $600 laptops will never run FP64 supercomputing tasks on the CPU.<p>He also only showed perf&#x2F;watt in this one benchmark but skipped the fact that Apple Silicon is significantly faster.<p><pre><code>  Obviously, all this efficiency is on the low end—the laptop only achieves a little over 120 Gflops, while Apple&#x27;s faster M3 and M4 Macs are pushing through up to 1.2 Teraflops.\n</code></pre>\nI can&#x27;t believe this crap is getting upvoted. Hopefully this guy loses all his credibility going forward. This kind of post is seriously misleading and smells like like an undisclosed sponsor review.",
+                    "comment": [
+                        {
+                            "text": "No, this laptop was loaned to me for a couple weeks (it&#x27;s boxed up and ready to ship back now), and I fully disclose any and all sponsorship (this was not sponsored in any way); see my policies here: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;youtube#sponsorships\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;youtube#sponsorships</a><p>Further, I&#x27;m basing my opinion on a number of benchmarks and power measurements besides just HPL. I just favor that because it&#x27;s one of the few that push a CPU hard, fills system memory, and can&#x27;t easily be gamed&#x2F;made irrelevant with new architecture.<p>The main point of my blog post is to say this is the first Intel chip that&#x27;s even punched in the same weight class as any Apple Silicon, wrt efficiency. It quite surprised me.",
+                            "comment": [
+                                {
+                                    "text": "This is your actual headline:<p><pre><code>  &quot;Intel just matched Apple Silicon. Seriously.&quot;\n</code></pre>\nYou&#x27;re basing the headline on a single FP64 test for a $600 laptop. Come on man.<p>If your headline was being honest, it&#x27;d say &quot;Apple A18 Pro is still 3-4x more efficient and significantly faster than Intel&#x27;s low end chip in common tasks&quot;.<p>If this isn&#x27;t an undisclosed sponsored review, then it&#x27;s just  misleading clickbait for Youtube views. It&#x27;s clearly working for you.<p>You can do better.",
+                                    "comment": [
+                                        {
+                                            "text": "I had three YouTube titles, this one got about 2x the watch time as the other two, so I let YT pick it.<p>For technical readers, I write my blog posts. I don&#x27;t have to (I lose money hosting that thing and all it&#x27;s mostly just free training data for Anthropic, OpenAI, et all), but I enjoy writing, so I do it anyway. If you don&#x27;t like the YT game, please subscribe to the blog&#x27;s RSS feed. I much prefer text over video.",
+                                            "comment": [
+                                                {
+                                                    "text": "Just because this title did the best doesn&#x27;t make it not misleading. If you are a serious reviewer, it wouldn&#x27;t have been an option in the first place.<p>You can make an even more outlandish title and get even more views. Doesn&#x27;t make it right.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "since it&#x27;s too much to paste in here, here&#x27;s 10 recent tech review videos from each of the top 10 most viewed tech youtubers:<p><a href=\"https:&#x2F;&#x2F;pastebin.com&#x2F;4PZe9iTf\" rel=\"nofollow\">https:&#x2F;&#x2F;pastebin.com&#x2F;4PZe9iTf</a><p>Here&#x27;s a few of them:<p>- Humane AI Pin Review: The Worst Product I&#x27;ve Ever Reviewed<p>- I Tested the World&#x27;s Craziest Smartphone<p>- Do NOT Buy These Fake Tech Products!<p>- This Is Not a Normal Laptop...<p>- Unboxing the $10,000 Mystery Tech Box<p>- Don&#x27;t Make This PC Building Mistake<p>- This Desk Accessory Changes Everything<p>- I Didn&#x27;t Expect This Phone to Be This Good<p>- I Bought a Mystery Tech Box from Amazon<p>- Testing the Craziest Cheap Tech on Temu<p>Jeff Geerling&#x27;s videos have <i>fine</i> titles.<p>Declaring that Jeff can&#x27;t be a serious reviewer because he uses clickbait is kinda silly.  Have you seen the state of journalism?  Somehow the tabloids are frequently less clickbaity.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "It also seems that YouTube is steering the ship: they could simply push content that’s straightforward and non-clickbait (and in fact: downgrade clickbait), but as Geoff says the clickbait got 2x the traffic.<p>That’s not “the same amount of people were shown the video and 2x the people clicked in”. The algo is always skewing.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "Sounds like you’re trying to justify kicking dogs because everyone in the industry goes around kicking dogs. Say it ain’t so.<p>Just because lots of people are doing something that sucks does not make it OK.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "It&#x27;s a <i>hook</i>.  That&#x27;s been a standard part of writing for like at least a hundred years.<p>It&#x27;s not kicking dogs.  Or, if it is kicking dogs, society has been doing it for at least as long as publishable media has been a thing, probably longer with the likes of bards.<p>This is ridiculous",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "I’m a writer, I write for a few magazines and have published three books. I write hooks all the time.<p>A good hook does not have to be clickbait.<p>In my experience, when a person struggles to come up with a good hook, they write clickbait.",
+                                                                                    "comment": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "You are trying to launder responsibility for a clickbait title to a computer program. Then you try to shift the topic to the public good you are providing.<p>I don’t think it’s wrong to use clickbait, but come on, own up to it. You consciously chose to “let [YouTube] pick it.”",
+                                                    "comment": [
+                                                        {
+                                                            "text": "",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "I never said it wasn&#x27;t clickbait.<p>If you don&#x27;t like it, either install DeArrow or subscribe to my blog, where I tone it down for the more technical audience. (Or block&#x2F;ignore my content, no skin off my back!)",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "That&#x27;s why you&#x27;re not a serious reviewer. If you&#x27;re serious, you wouldn&#x27;t mislead people.<p>Even your blog post does not tell the truth nor does it have highlights of benchmarks that represent how people will actually use a $600 laptop.<p>The people who are buying these laptops are likely not very technical and it&#x27;s your job to guide them. They wouldn&#x27;t know that an FP64 test on the $600 laptop is near useless - yet you base the entire conclusion on it.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Jeff has a day job. He is not a professional reviewer. He shows cool products and showcases what he’s passionate about. YouTube as a medium requires clickbait - that’s the belly of the beast.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "I&#x27;m not denying that clickbait works on Youtube. He&#x27;s amassed 1 million Youtube subscribers doing clickbait it seems.<p>My problem is that both the clickbait title and the conclusion are straight up wrong and misleading.<p>Even clickbait titles on Youtube will often have the correct conclusion. This is not the case here.",
+                                                                                    "comment": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Jeff, you may want to think about your credibility going forward. Please avoid becoming one of the &quot;influencers&quot; who collect pennies via clicks.<p>You have an opportunity to be continue to be taken seriously like you have been so far.<p>Surely there must be some way to avoid mis-leading clickbait titles.<p>Separately, asking your fellow community-members to not bother, and that too with an unaffected shrug, just kills the conversation we would want to have with you.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "It sounds like you agree with the criticism that your title is a bunch of baloney, but somehow think that&#x27;s not your fault? You wrote the lies in that title, not an algorithm.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Overall you can always say - if you don&#x27;t like it then ignore my content.<p>Then... people doing scam or misinformation can also say that<p>- ignore it.<p>No. We like your content.<p>While you may get more clicks etc at the moment - eventually you will lose subscribers.<p>You could have made the title at least like<p>- Intel tries hard to win against apple silicon\n- Almost there but not yet...",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "&gt; We like your content.<p>I feel like this is the first time I noticed his content, and the only reason for being notable is that it is a lying piece of crap.<p>Maybe you should review your former trust in the guy.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "&gt; and the only reason for being notable is that it is a lying piece of crap<p>That&#x27;s your takeaway from the outrage in this thread, but now you should actually watch a few videos to understand why this is a silly accusation.<p>Jeff Geerling is not Digital Foundry. He&#x27;s not Louis Rossmann. We do not rely on him or trust him to release <i>Chips and Cheese</i>-tier flawless benchmarks and datasets. He&#x27;s not writing the <i>Beej&#x27;s Guide to Computer Architectures</i>, he&#x27;s an enthusiast that likes to ask basic questions like &quot;how does a GPU perform on a Raspberry Pi?&quot; and then answer it for his followers. If that constitutes &quot;a lying piece of crap&quot; to you, then I don&#x27;t know what to tell you. &quot;Clickbait&quot; has always been a component of his content and it just seems like people are upset when it&#x27;s clickbait that offends their own identity.",
+                                                                                    "comment": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "I think the lite tip of: “take your credibility seriously” stands, however you are getting attacked by pretty much one (ab-)user. (Those type of users are normally not even in your market.)<p>I think it’s pretty normal that you are incentivized by YT. Too bad the internet favors screaming and yelling. Pretty clear line you draw between writing and video.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "No, I disagree with you here - it isn&#x27;t one user and certainly not an abuser. This is reputationally damaging, and doubling down is not helping. Arguably, the doubling down is the most damaging part.<p>An absence of open expression of disapproval is not the same as approval - people may just be avoiding dogpiling a member of our community.<p>I would add that people have a right to express disagreement or disappointment in a respectful manner in accordance with the rules of this moderated private space, and we have not had moderation&#x2F;interventions suggesting otherwise. The criticisms are reasonable, to my mind at least, and probably ought to be taken as a massive hint that something is wrong. We are less than a day in, and it&#x27;s not too late to fix things.<p>I am trying not to be too critical, as I have enjoyed previous content from this channel and I wish the poster well for the future.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "I’ll just go and pick out those sentences I find not of curious good will for this forum:<p>“Did Jeff […] get paid to post misleading headlines”<p>“I can&#x27;t believe this crap is getting upvoted. Hopefully this guy loses all his credibility going forward. This kind of post is seriously misleading and smells like like an undisclosed sponsor review.”<p>Ad hominem, cursing, opinion as fact with a barrage of replies.<p>That could have gone three steps up in politeness without losing any of the criticism.",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "Yep, there is just <i>one account</i> going ballistic in this HN thread, Jeff would be well within his right to ignore that kind of ragebait.<p>All of us have watched enough Jeff Geerling videos to know that he&#x27;s not a secret spy for Intel or the Manchurian Candidate for Apple haters. He just wants to try out new technology with the curiosity that most people have, and apparently that&#x27;s enough to outrage some people. Accusing him of avoiding disclosure is against HN&#x27;s guidelines <i>and</i> generally an absentminded accusation to level. Methinks somebody doth protest too much...",
+                                                                                            "comment": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "&gt; <i>I had three YouTube titles, this one got about 2x the watch time as the other two, so I let YT pick it.</i><p>I think you’re being mid leading here Jeff. You almost make it sound like YT actually came up with the title.<p>For anyone that is not a YouTuber, Jeff wrote three different titles himself, then YouTube ran an A&#x2F;B test and just kept the one that resulted in the most watch time.<p>Jeff consciously chose to write a click bait title, he could equally have chosen not to.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "[dead]",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "You mentioned in your you were interested in seeing the 18A replacement for the N100 series.<p>My understanding is the Wildcat lake 304 is that replacement, and it&#x27;s been &quot;released&quot; for a while. It can be configured down to 10W vs 6W for the N100. Both draw about 7W from the wall when idle. The 304 is about 80% faster for the same power draw, has a better GPU in includes a 15 TOPS NPU.<p>Despite the 304 being released, it&#x27;s not easily available yet.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Don&#x27;t worry too much about it. For what it&#x27;s worth, you made the sponsorship disclaimer abundantly clear up front and the comparison was fair.<p>I went through the whole thread of this conversion, and as the old adage goes, don&#x27;t feed the trolls.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; this laptop was loaned to me for a couple weeks<p>&gt; this was not sponsored in any way<p>Aren&#x27;t you contradicting yourself here? For what purpose was the laptop loaned to you, and by whom? I&#x27;d consider a review loan a kind of sponsorship, even if you weren&#x27;t paid to come to a specific conclusion.",
+                                    "comment": [
+                                        {
+                                            "text": "It&#x27;s common for manufacturers to loan devices for review, without having any input in the content of the review. It is disclosed here in the video, which seems fine imo.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "It was obviously loaned so he could do a review. That&#x27;s not sponsorship.<p>You should _want_ that to happen, otherwise the only people who can do reviews will be the few who can afford to spend thousands for hardware they don&#x27;t want or need.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "You&#x27;re completely right. Power draw scales non-linearly with clock frequency. Therefore one can easily increase perf&#x2F;W by lowering the clock frequency, at the expense of performance. This is not new information, this is basic physics. The Apple M-chips were not revolutionary because of their efficiency, but because they were (and still are) efficient AND fast. In fact the fastest consumer chips on the market.<p>So agreed, this is extremely misleading.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; faster M3 and M4 Macs are pushing through up to 1.2 Teraflops.<p>That Intel chip is competing against the A series in the Neo. To get to M you need to spend at least 50% more (and there are considerably better Intel chip in laptops at that price range as well)<p>Also benchmark performance hardly matters for people buying laptops like this. It just has to be fast enough and not lag when running a handful of apps and have decent battery life (which presumably is the case here)",
+                            "comment": []
+                        },
+                        {
+                            "text": "Getting performance per watt out of the smaller CPUs is actually more impressive because they can&#x27;t amortize the non-CPU power draws in the system over as much performance. Increasing the performance while maintaining that performance per watt is then entirely straightforward because you just use more of the same cores.",
+                            "comment": [
+                                {
+                                    "text": "Except Intel&#x27;s Core 5 320 is almost certainly bigger than the A18 Pro CPU.",
+                                    "comment": [
+                                        {
+                                            "text": "They both have 2 P-cores and 4 E-cores.",
+                                            "comment": [
+                                                {
+                                                    "text": "Yes, they both have the same and Intel cores are known to be bigger than AMD and Apple cores but poor in area&#x2F;performance.<p>So I&#x27;m not sure what your original post about smaller cores is all about considering that the A18 Pro CPU is almost certainly smaller in actual die size.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "It&#x27;s not about die area at all. It&#x27;s about the SSD and chipset and WiFi etc. each using power on top of what the CPU uses, and ending up as a much larger percentage of system power draw for a 15W CPU than for the same system with a 60W CPU that has around four times the multi-thread performance by having four times as many of the exact same cores.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "You lost me.<p>Maybe you can articulate what you&#x27;re arguing from the start?",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Suppose you have a system that under some workload will draw 10W to run the chipset, WiFi, SSD and so on and another 15W to run the CPU, so that it&#x27;s 25W in total. The 15W CPU has X number of cores and gets a score of 1000 on some benchmark. Performance per watt is 40 points per watt.<p>If you put 4X of the same cores in the same system then the CPU uses 60W, the WiFi etc. still use 10W, so the whole system uses 70W. It scores 4000 points and the performance per watt is 57 points per watt. You got four times the multi-thread performance and performance per watt went <i>up</i>.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "That&#x27;s why any CPU reviewer worth their salt will isolate CPU power.",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "Which reviewer does that? How do you isolate CPU power? Measuring the pins? Software reporting is half bullshit. Also nobody even reports idle power. Don&#x27;t tell me idle is hard to define bla bla we all know what&#x27;s idle. Even an inaccurate figure is better than no figure. And there are community compiled lists that are very helpful when building systems.<p>So where is the reviewer worth their salt you&#x27;re talking about?",
+                                                                                            "comment": [
+                                                                                                {
+                                                                                                    "text": "Notebookcheck always isolates CPU power by measuring idle and draw from the wall.<p>Many top quality CPU reviewers also do this. Chinese reviewer Geekerwan is probably the best at it. In the past, written reviews like Anandtech will always do it. Today, anyone with video editing software thinks they can review CPU performance.<p>Ever since Youtube, there have been plenty of low quality reviewers that mislead people. I didn’t know who this Jeff guy was but now he’s on my list as one. There are still some who do proper reviews.",
+                                                                                                    "comment": [
+                                                                                                        {
+                                                                                                            "text": "&gt; Notebookcheck always isolates CPU power by measuring idle and draw from the wall.<p>That&#x27;s not actually isolating CPU power. To begin with, the CPU itself has idle power draw. Measuring that way would favor a CPU that has <i>worse</i> power management because it would be excluding the draw the CPU itself fails to shed at idle.<p>It also gets it wrong the other way. The SSD etc. is using however much at idle but that isn&#x27;t the amount it uses when running the benchmark. Many of them don&#x27;t have very fine grained power management and will draw ~100mW at idle but consume close to full power under even moderate load.",
+                                                                                                            "comment": [
+                                                                                                                {
+                                                                                                                    "text": "You can never fully isolate CPU power. Even software reading of CPU power is not always accurate.<p>The most accurate is reading from the wall. Thats what Notebookcheck does.<p>For all intents and purposes, it is good enough to get a read on CPU efficiency. Furthermore, if you are comparing equivalent systems, it is good enough to compare the two.",
+                                                                                                                    "comment": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; This is like saying my Intel Pentium 3 matches Apple M5 in perf&#x2F;watt<p>... if it was within orders of magnitude of being true, perhaps.",
+                            "comment": []
+                        },
+                        {
+                            "text": "If the result isn&#x27;t what you want it to be ... it&#x27;s undisclosed sponsor review.<p>If it&#x27;s utter Apple shill bullcrap like Geekbench, caught 100x rewriting results in favor of Apple (for what rea$on it&#x27;$ not hard to figure out), it&#x27;s perfectly OK because it supports what you believe in.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Thank you - especially for linking the article.",
+                    "comment": []
+                },
+                {
+                    "text": "Sounds like a good option. Still having fans keeps it way behind the Neo in my mind.",
+                    "comment": [
+                        {
+                            "text": "Given how appalling the thermal throttling behaviour is on the Neo - sustained workloads can lose up to 50% performance, making it substantially slower than an M1 Air - you should instead be asking for a fan in the Neo.",
+                            "comment": [
+                                {
+                                    "text": "Fans are a good addition if they only activate during peak load, but my experience with Dell is that the hardware and firmware design is so poor that the fans always operate at near full speed.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "<p><pre><code>  &gt; no headphone jack\n</code></pre>\nI am fully old man screaming at the clouds here, but what does this cost for Dell to include? I insist on a wired headset - telecommunications already barely works, I don&#x27;t want to add wireless+battery problems into the mix.",
+            "comment": [
+                {
+                    "text": "Agreed, losing the headphone jack on something the size of a phone was already questionable space saving for a bigger battery. But on something the size of a laptop, it is a joke. I&#x27;m sure it has more to do with saving $1 per laptop than any user benefit.",
+                    "comment": [
+                        {
+                            "text": "More likely just ecosystem consistency.<p>Selling wired headphones to wireless-iPhone users for wired-MacBooks could (arguably, maybe) create Apple sponsored interoperability dissonance.<p>MacBook charging mats and wireless Thunderbolt coming in early 2018... &#x2F;h",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "For a school laptop it’s a unfortunate omission IMHO.<p>Cheap wired headphones are the default choice in the classroom, in my experience.<p>Bluetooth headphones that need charging aren’t really what you want.<p>It’s easy enough to get cheap USB headphone adapter, but still, I t would nice if it was built in.<p>Apple knows what they are doing sometimes it seems! :-)",
+                    "comment": [
+                        {
+                            "text": "Given there are enough USB-C ports - it is not an issue. For old headphones buy an adapter and next time buy cheap USB-c headphones.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I want to say I’ve broken every headphone jack I ever had. Yanking on them, debris getting in the switch, debris triggering the optical if it had one. 3.5 was never a great design. Too many physical ways for it to break, from static from a loose connection, debris stuck inside like pebbles getting jammed, debris stuck under the switch preventing recognition. False positive or accidental triggers that take a while to track down why the speakers are muted.<p>Of all the parts on electronics I have owned i would put headphone jack just behind power supply for least reliable and that it was set to override digital settings when something was connected felt like a loss of control.<p>I am very forgetful, wireless has been a godsend by comparison and I don’t get hurt with cable snags. I’d pay extra to remove it before shipping if it were an option.",
+                    "comment": [
+                        {
+                            "text": "I have aeen usb-c bent but I have never seen 3.5 break in decades of use. Walkmans then discmans falling. Shooting back out of my chair and snagging it such that the whole tower spins unplugging ps&#x2F;2 mouse. But the headphones are fine. What do you do to those poor things? The only time I have seen one fail it was on a custom pcb and the solder joint broke. A couple minutes with an iron and it was back.",
+                            "comment": [
+                                {
+                                    "text": "Some terrible jacks are held on by the contacts.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "And every set of headphones I’ve ever had either has an incredibly thick cable or the cable has failed due to repeated wear.<p>I bought a pair of AirPods and have never looked back. If you have a pair of wired studio headphones, there are a million USB-C adapters you can buy to have this functionality. Or migrate eventually to a set of USB-C native headphones. This is such a non-issue.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; I want to say I’ve broken every headphone jack I ever had<p>&gt; i would put headphone jack just behind power supply for least reliable<p>I&#x27;ve never broken a headphone jack, or known many people who have, honestly. Your experience sounds pretty unique.<p>I suspect way more people have had issues with Bluetooth connectivity, though thankfully, that&#x27;s improved over time.",
+                            "comment": []
+                        },
+                        {
+                            "text": "How many times has a next-door neighbor accidentally plugged their headphones into your system? How many times did you try to plug your headphones into your wife’s jack? How many times did the cord fall out because you or your neighbor microwaved popcorn? Is it physically impossible to send an authentic stereo signal into your two earpieces? Every time you open your drawer, do you sift through 2 dozen earphones, speakers, phones and blood pressure cuffs that don’t belong to you? Is the NSA&#x2F;CIA&#x2F;FBI&#x2F;ICE&#x2F;USDA listening to your Spotify from the Starbucks parking lot? Everywhere you walk&#x2F;drive&#x2F;travel, are your earphones shouting, “Beats! Beats by Dr Dre! We are Beats! By Dr Dre!” five times per second?",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "3.5mm TRS jacks might cost 10 cents to include and then hundreds of dollars to service when they break. The issue is not the BOM cost.",
+                    "comment": [
+                        {
+                            "text": "&gt; then hundreds of dollars to service when they break<p>Can you explain what do you mean by that? It is quite rare to see broken trrs jack on a laptop, at least I have never experienced one, nor on walkman or anything getting heavy plug&#x2F;unplug use.<p>I thought it is an issue in reducing the cost to manufacture the case or something.",
+                            "comment": [
+                                {
+                                    "text": "The jack actually broke on my old xps. Changing it with an aliexpress replacement took about 15 minutes and something like 3€<p>So yeah, they break, but they are (or used to be?) quite cheap to fix (and this was one of the super thin 13&quot; xps)",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; So yeah, they break, but they are (or used to be?) quite cheap to fix (and this was one of the super thin 13&quot; xps)<p>I had a slim XPS13 and IIRC the headphone jack was on it&#x27;s own little board. That makes it quick&#x2F;easy&#x2F;cheap to repair if you know what you&#x27;re doing &#x2F; have the service manual &#x2F; are comfortable taking it apart.<p>Not all things are designed that way; sometimes the jack is right on the main board and most people that buy dell laptops are not going to DIY through ali express; they&#x27;re going to use up phone support time, require a shipping label, technician time ... etc.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "All physical receptacles break and increase failures by measurable amounts at mass-production scale.<p>You take care of your hardware, even during &quot;heavy use,&quot; many people absolutely do not - and are downright abusive.<p>Many of these parts exhibit partial or intermittent failure modes where it&#x27;s more expensive and difficult to determine warranty eligibility than to just fix the problem. Peanut butter in the jack, loose solder joints, whatever.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I’ve never had one break due to heavy use, but broke one on my work desktop due to forgetting I was wearing headphones and yanking on it when I got up.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Does anyone even do repairs anymore? Swap a motherboard and that&#x27;s it.",
+                                    "comment": [
+                                        {
+                                            "text": "So... swapping $100 component for a $0.3 break?<p>Doesn&#x27;t this make including the jack even less justifiable?",
+                                            "comment": [
+                                                {
+                                                    "text": "Or don&#x27;t swap it and live without the jack. But I have never seen a broken 3.5mm port but I&#x27;ve seen many, many broken or flaky USB-C ports.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "If anything it becomes way more lucrative for the manufacturer.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Motherboard companies do hot air work, absolutely.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "We&#x27;ve got laptops with modular USB-C ports that solve this effectively perfectly. An audio one would be even simpler. The only reason you don&#x27;t see it everywhere is because they&#x27;re being outrageously hostile to repairs, and <i>choosing</i> to charge you hundreds of dollars for repairs on a part that they know is easily broken.",
+                            "comment": [
+                                {
+                                    "text": "Why is anything modular a good solution over a USB-C DAC-containing dongle cable?",
+                                    "comment": [
+                                        {
+                                            "text": "Modular ports are a physical disconnect between &quot;thing that routinely experiences stresses and has a relatively short expected lifespan under heavy use&quot; and &quot;extremely expensive and long-lived motherboard&quot;, usually a separate circuit board connected by a ribbon cable. They serve a completely different purpose from a dongle that converts a common port to a less common one.<p>Framework laptops have another decent strategy, where you&#x27;ve got on-motherboard ports that have relatively few usage cycles, and are protected from most forces because the easily-replaceable custom-dongle-squares are held in place quite securely. They take the damage, protecting the motherboard. And as long as the motherboard ports are still good, you can even forego the modular thing and just plug in directly if needed.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "That’s the cost of doing it too cheaply: I’ve never had an Apple device fail but multiple cheap PCs were obviously designed by some MBA who overrode the mechanical engineers to save $0.10.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Since when is damage covered by warranty?",
+                            "comment": [
+                                {
+                                    "text": "When you are unable to prove the issue wasn&#x27;t a workmanship defect, also companies often eat these costs out of goodwill.<p>Furthermore, the warranty determination isn&#x27;t free, either: in addition to the repair itself, some (likely multiple) employee&#x27;s time was spent determining whether or not an issue existed at all, whether or not the issue was covered, whether it could be fixed, and facilitating the whole transaction.<p>Repairs also don&#x27;t result in 100% yield. Depending on your company policy you might be eating the whole unit because of a mishap or just plain stubborn components&#x2F;physical realities.<p>Repair fees don&#x27;t cover all of the organizational moving parts required to actually carry out repairs.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "no jack doesn&#x27;t mean wireless only. Not having TRRS 3.5mm is a bit annoying but there are lots of usb-a or usb-c headset that have an embedded DAC + you can always use the DAC&#x2F;USB soundcard of your choice. Also many laptops only had TRS which really killed the appeal of having analog wired equipment if you were forced to use the embedded laptop microphone.",
+                    "comment": [
+                        {
+                            "text": "With only two USB-C ports that means you get just headphones and power if you&#x27;re not using a hub or USB dock.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I like a good old headphone jack, but then the USB DACs these days are also super small and portable that I just keep connected to my wired sets. I have couple nice IEMs, and because my phone doesn&#x27;t have jack, I&#x27;ve to carry around USB DAC anyway.",
+                    "comment": [
+                        {
+                            "text": "My (Razer Blackshark) gaming headset does that - the actual headset has a 3.5mm jack on it but the &quot;guts&quot; is a USB DAC with some THX stuff supposedly built in (questionable utility but most of the games I play don&#x27;t support it anyway) - I figure they reuse the same headset components down the market and just don&#x27;t ship the DAC, it works flawlessly under Windows&#x2F;Linux so no real issues with it and I can use it with any other set of wired headphones (of similar impedance) which is nice since headsets wear out eventually but the DAC is solid state so should last much longer.",
+                            "comment": [
+                                {
+                                    "text": "Doesn&#x27;t it use the CPU more because of the inefficiency of USB?",
+                                    "comment": [
+                                        {
+                                            "text": "Theoretically maybe (assuming it&#x27;s not doing hardware offloading but I don&#x27;t think that is all that common) but feeding a DAC with audio over USB isn&#x27;t even a rounding error on one core and I have 16 of them (16C&#x2F;32T) - iirc the actual DAC just takes PCM over USB 2.0 (Linux did tell me when I was curious), that&#x27;s <i>nothing</i> to a modern desktop computer never mind a powerful gaming&#x2F;development one.<p>Nothing for the desktop in the last couple of decades is going to struggle with that.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "I mainly use Apple one on MacBook, and haven&#x27;t noticed any CPU or issues with that. I&#x27;ve another one which has more power, can&#x27;t say I use it that much so no idea about CPU, but I think because of higher power draw may affect battery slightly (prob bigger issue on phones).",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "The dolby&#x2F;thx stuff for headphone s is done at the software level. It&#x27;s just preset filters provided by synapse. There is no hardware dolby unless you get into the PCI audio card stuff, or audiophile dedicated sound board setups. Different USB DAC might impact noise levels. If you don&#x27;t have noticeable audio artifacts then there&#x27;s not really any reason to use another one.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I have to say, I prefer dongles lately. There are many inexpensive hifi dongles that sound great with in-ears. They’re also USB class-compliant audio devices and work everywhere. Obviously a preference, but as other commenters have mentioned, 3.5 jacks do break, and I’ve personally broken plenty.",
+                    "comment": []
+                },
+                {
+                    "text": "There are USB headsets, that usually provides a few extra handy features, like volume&#x2F;mute and call answer&#x2F;hangup buttons.<p>Does it have to be wired via headphones jack?",
+                    "comment": [
+                        {
+                            "text": "It does if it’s a pair of big studio monitors like what I wear for calls.",
+                            "comment": [
+                                {
+                                    "text": "These would have a 3.5 port themselves, ready for a usb-c-3.5 cable of questionable DAC quality.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt;&gt; what does this cost for dell to include?<p>1) a few cents of components<p>2) the opportunity cost of selling you a high margin dongle<p>3) minus the risk of a lost sale if you buy a competitor",
+                    "comment": []
+                },
+                {
+                    "text": "Surely a usb c headset would work",
+                    "comment": []
+                },
+                {
+                    "text": "repair costs, more substantial than bom.<p>&gt; I insist on a wired headset<p>usb audio generally works great, and because it&#x27;s powered, you often get better audio quality (with microphone arrays for anc)<p>and even neat features like system volume integration with buttons and ANC<p>i have a yealink uh48 but you can get almost-as-good functionality for a lot less (or pay more for even better!)",
+                    "comment": []
+                },
+                {
+                    "text": "When the laptop is literally the thickness of a headphone jack? Because a USB-C port is less than 2mm, but a 3.5mm headphone jack port is more like 6mm. That becomes a problem when the actual shell it need to go in is 7.5mm.<p>Did it need to be that thin? Heck no. But it is, and yeah there is absolutely no room for one because of that decision.",
+                    "comment": []
+                },
+                {
+                    "text": "I think they probably just aren&#x27;t used much any more. Plus if you really need one you can get a tiny dongle for virtually no money that will probably better sound quality anyway.",
+                    "comment": []
+                },
+                {
+                    "text": "jfc. hold me back.",
+                    "comment": []
+                },
+                {
+                    "text": "Many headphones can do audio over usb-c if you want a wired connection. If you want to use a fully analog set of cans, you can also just get a usb-c to 3.5mm adapter for a few bucks.<p>No need for wireless and battery, just not the plug you were expecting.",
+                    "comment": [
+                        {
+                            "text": "If it’s anything like the lightning to 3.5mm adapters I’ll be buying one of those once a month for the rest of my life.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "The improved efficiency is great!<p>The Apple Neo was still 2x faster for graphics and around 1.4x faster for single core cpu.  And remember the Apple Neo is running an iPhone CPU that is much slower than the M series.<p>It is strange that this chip is so crazy efficient though. I would love to know the details of exactly why it is?  It seems like some new tech or process?<p>I do want 1.5x battery life for free out of my next laptop. Who wouldn’t?",
+            "comment": [
+                {
+                    "text": "Apple has been working ruthlessly on battery efficiency for a long time because of the phones and their tendency to minimize battery sizes on Macs for thinness.<p>The exact design of the cores, how they’re scheduled, the way background stuff is handled on MacOS. All of it. The chips are made on a fantastic process too, but that alone isn’t it. For example they’ve been putting the ability to drop refresh rate really low when nothing changes to more and more of their machines.<p>It could be that the Intel chip is close, IDK.<p>But add in other motherboard components, the screen, the OS, the software and system libraries, all are optimized together to hit those numbers. And any of those alone or in combination could be part of the differences.",
+                    "comment": [
+                        {
+                            "text": "&gt; their tendency to minimize battery sizes on Macs for thinness.<p>Is this actually a thing? Macbook Pro goes up to 100 Wh and almost nobody goes above that because it&#x27;s the highest capacity battery you don&#x27;t need special permission to have in a carry on at the airport.<p>&gt; But add in other motherboard components, the screen, the OS, the software and system libraries, all are optimized together to hit those numbers.<p>I always find this argument weird because there is so little actual &quot;together&quot; having anything to do with it. Are TSMC&#x27;s current process nodes efficient? Yes. Can you save power by dropping the refresh rate? Yes. Do the teams doing these things need to coordinate with each other somehow rather than each doing their part independently? Not really.",
+                            "comment": [
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I think the Top500 benchmark is biased here. It’s a supercomputing benchmark which means it’s going to heavily weight SIMD and float64 performance, which are things that rarely matter for everyday computing. SIMD has uses in the real world - image or video editing, data crunching, graphics. But consumers basically never use fp64 any more, and so many modern chips have next to zero performance on them. That could easily skew the numbers in intel’s favor.",
+                            "comment": [
+                                {
+                                    "text": "I run a number of other benchmarks for a better comparison (linked from my blog post: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;sbc-reviews&#x2F;issues&#x2F;111\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;sbc-reviews&#x2F;issues&#x2F;111</a>).<p>The Intel chip holds its own for multicore in less bursty workloads, where the fans help.",
+                                    "comment": [
+                                        {
+                                            "text": "An interesting thing there is how much better the Geekbench scores are on Linux than Windows. Makes you think how the Intel&#x2F;AMD chips would compare to Apple when both running the same OS. Or even just when both not being held back by Windows.",
+                                            "comment": [
+                                                {
+                                                    "text": "It&#x27;s funny, too — in my testing with Asahi Linux, some benchmarks ran better on Linux than macOS on Apple Silicon!",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "What? Pretty much every general-purpose calculation on your computer that isn’t an integer is done with FP64. AI may not use it and games may prefer FP32 for many things, but your CPU certainly does a ton of FP64 work.",
+                                    "comment": [
+                                        {
+                                            "text": "Which workloads?",
+                                            "comment": [
+                                                {
+                                                    "text": "Literally every workload not named above. It’s the default for a non-integer number.<p>* Web rendering and almost all web apps (see the JS number type)<p>* Most things in a game not done on the GPU<p>* Audio processing<p>* Most GUI processing&#x2F;rendering<p>* Every miscellaneous&#x2F;scalar calculation these days<p>Believe it or not, on a CPU this adds up to a lot more than the work you get doing AI processing.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "JS converts most number into 31-bit ints internally (which is why it’s so fast). GUI work often prefers int or f32.<p>You have a point about games, but the CPU is seldom the limiting factor.<p>Very few people are handling raw audio. For the rest, codec hardware beats everything else by a massive margin.<p>Being good at floats matters, but even float-heavy code generally has way more integers than floats making integer performance king.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Quite a lot of web rendering is done with non-integer JS Number types, aka FP64. You are right that there’s a 31-bit integer optimization, but once you have a non-integer in the mix, it’s FP64. Many GUIs some time ago would use FP32, but in 2026 there’s a lot more FP64 out there than you give credit for.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "&gt; consumers basically never use fp64 any more<p>They do in audio processing. ;)",
+                                    "comment": [
+                                        {
+                                            "text": "I usually use fp32 for the sole reason I can fit twice as many ~24 bit samples per register.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "[dead]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Yes, it seems to be a new process, 18A. (18 Ångström, allegedly). Manufactured in North America. If the shiny video they did didn&#x27;t fool me, it&#x27;s a two sided wafer process, power grid on one side, then the silicon wafer (with through-silicon vias), then transistors, then signal layers.<p>The processor is this one:  Intel Core 5 processor 320\n <a href=\"https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;products&#x2F;sku&#x2F;246018&#x2F;intel-core-5-processor-320-6m-cache-up-to-4-60-ghz&#x2F;specifications.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;products&#x2F;sku&#x2F;246018&#x2F;...</a>  in the Wildcat Lake series.",
+                    "comment": []
+                },
+                {
+                    "text": "They have control over the OS and the design of the chip, Intel does not…",
+                    "comment": [
+                        {
+                            "text": "Intel doesn&#x27;t have control of the design of their chips?<p>Jokes aside, I don&#x27;t think the engineering incentive case can be overstated. Apple has been working to squeeze every milliwatt of energy efficiency out of their chips since they started making their own iphone chips in 2010. Their chip is a win if it lets the user have phone battery longer.<p>Intel and AMD have <i>never</i> been on a power budget. Their chips are a win if they can crank the benchmark performance numbers just a little higher, electricity cost be damned.<p>This is what you get when you spend 15 years optimizing for energy efficiency per $ instead of raw power per $: a workstation cpu that doesn&#x27;t even need a fan.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; And remember the Apple Neo is running an iPhone CPU that is much slower than the M series.<p>We really need to get over generalization like &quot;phone CPU&quot;. Times have changed. Phone or not really isn&#x27;t the focus.<p>Per core the A series (cough phone) isn&#x27;t that much slower than equivalent M series. It&#x27;s literally the same family just with some extra features, more power, etc.",
+                    "comment": [
+                        {
+                            "text": "I suspect that the comment is more about this not being Apple’s best standard consumer CPU for computers, which would be the M5 (though to your point that’s also in iPads).<p>It’s good Intel can match anything while staying cool and efficient. That’s a great step. But I’d like to see them match the M5.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Phone is a sort of short hand for what tradeoffs are likely in the chip. A phone processor is going to prioritize efficiency and thermals over raw performance. Mobile will strike a different balance. While desktop likely prioritizes raw power over performance per watt, thermals be damned!",
+                            "comment": [
+                                {
+                                    "text": "The biggest tell of the A-series&#x27; chip concessions are the ports. A first for Apple, only one USB-C port is Thunderbolt, the other one is USB 2.0 speed. Apple made a computer with a chip made for devices with one port.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Of course, that same &quot;phone&quot; processor gets to operate with battery and thermal headroom of a laptop in the Macbook Neo. The bigger trade-offs are due to the device the chip operates within.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Phones have markedly different thermal limits compared to desktop or even laptops. A laptop CPU can easily suck 30W or more while a phone might not ever reach 10W.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt;It is strange that this chip is so crazy efficient though.<p>Its only strange if you believe Apples lies.<p>The truth is, architecture doesn&#x27;t matter. Single core performance, Apple was always on par with the best chips. Compute is compute, under the hood moving data costs energy, an you can&#x27;t get away from that.<p>The reason for &quot;efficiency&quot; of Apple silicon it is because they spent a long time basically optimizing their chips for their specific hardware while running specific programs.  Its like building an ASIC to specifically watch youtube vides. When it came to things that are not pipelinable (i.e a lot of branching), the efficieny&#x2F;battery life statistics flew out the window.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Intel  wins, in HPL FP64.\nIts a stretch to take a single metric and apply it&#x27;s outcome broadly to the chip&#x27;s general functionality. Especially when by large the A18 chip with half the power requirement beats it in almost every other benchmark.",
+            "comment": [
+                {
+                    "text": "Yeah this is misleading cherrypicking. Also it&#x27;s super slow. Not impressed with slow efficient chips. Anyone can make a chip efficient by reducing clock frequency and sacrificing performance in the process.",
+                    "comment": []
+                },
+                {
+                    "text": "M4&#x27;s GPU does not support 64 float. So, yeah. No hardware support, so what are you expecting? The fact that it comes close is pretty impressive.",
+                    "comment": [
+                        {
+                            "text": "These tests were done on the CPU cores, not on the GPU. In every test I ran the A18 chip blew past Intel&#x27;s Core 5 on GPU performance.<p>There were a series of other benchmarks too, but the Hackaday article only highlights HPL as that was the benchmark that changed my perspective on Intel a bit. This was the first X86 chip to trade blows in efficiency (and idle power draw) with Apple&#x27;s M3&#x2F;M4 (I don&#x27;t have any M5 to test with right now).",
+                            "comment": [
+                                {
+                                    "text": "I really think you should use a more representative benchmark. Heck, even just take Chrome and run some browser benchmark on it like speedometer.",
+                                    "comment": [
+                                        {
+                                            "text": "I run a large number of benchmarks; the Hackaday article of course focuses on the headline findings, but you can see the rest here: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;sbc-reviews&#x2F;issues&#x2F;111\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;sbc-reviews&#x2F;issues&#x2F;111</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; While you might think you need to code in Assembly or C to maximize those efficiency gains, your choice of language may not be as important as you think.<p>Yep, and the linked article is also kind of interesting.",
+            "comment": []
+        },
+        {
+            "text": "In Germany the Dell XPS 13 2026 is 56% more expensive (over 1000 Euros) than the MacBook Neo (below 700). So the claim does not hold World wide, maybe only in US on local prices.",
+            "comment": [
+                {
+                    "text": "Yeah, not sure why Dell has such a spread on US vs rest-of-world pricing here.<p>I know some have mentioned the $699&#x2F;$599 price could also change a bit in the US come November. The internal assembly and parts seem like they&#x27;d cost Dell a little more than Apple&#x27;s cost building the Neo, so maybe in the US they&#x27;re selling them closer to at cost, and subsidizing it with the Windows exclusivity and price elsewhere? Not sure, but it stinks the price only applies here. It&#x27;s a good deal at $699. Harder to justify at $1,000+.",
+                    "comment": [
+                        {
+                            "text": "Easy, it&#x27;s priced much lower in the US on purpose so that reviewers will directly compare it with the Neo to get more favorable reviews, while in fact it should be compared to the Air from a price perspective (and then it will lose on everything big time except the 120Hz display). It&#x27;s all misleading marketing.<p>MacBooks simply have the best value proposition. Compared to the competition at similar price point they are much faster, have much better build quality, better displays, better battery life, less fan noise, etc. Also much higher resale value.",
+                            "comment": [
+                                {
+                                    "text": "Value proposition is still subjective. Apple <i>should</i> be making money hand-over-fist from the AI boom, but Nvidia is the one that wooed over the datacenter with their high-performance ARM chipsets. Apple&#x27;s unwillingness to support CUDA cost them a market that was worth almost $2-3 trillion, and forces local CoreML to compete with CUDNN in ways that it can never triumph.<p>Macs are great if you want a Mac. If you want a flexible workstation, a gaming PC, a retrocomputing build, an inference server, a programming environment, or a headless VPS, macOS doesn&#x27;t even attempt to cover your use-case. It&#x27;s the reason why the Mac install base is still vying for pole position after 40 years of &quot;you&#x27;re holding it wrong&quot; to their users.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Seems like it&#x27;s targeted at students. They&#x27;re probably expecting to sell a bunch of them at the time of &quot;back to school&quot; and they&#x27;ll increase the price after.<p>At least for Europe, and more specifically France, laptop use in classrooms in high school, is still not a thing. So that would explain why they don&#x27;t do it everywhere the same and the huge price difference.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Nice and organised work!<p>My only reservation wrt the core of it is that it tests the cpus on a matrix operations task, and power efficiency in this case refers specifically to doing matrix operations. This is fine if that&#x27;s the kind of task one wants to optimise for, but it does not necessarily translate to general energy efficiency for a broader spectrum of tasks that most people may do most of the time.<p>And thus, if one wants to optimise for matrix operations, wouldn&#x27;t it make sense to use apple&#x27;s accelerate framework instead of blis&#x2F;openblas (I think you used blis?)? I compiled hpl to use accelerate [0] on my m1 max (macbook), and ran it with settings almost identical to the original m1 max settings [1]. I get 422 Gflops vs 264 Gflops in m1 max mac studio (docker) [2]. My average draw (using a wall power meter, but not interfaced with computer to keep a log, just me looking at it) is around 55-57W (probably less because it peaked at 57W but the last half was getting around 52W). With the most conservative estimate of 57W, this gave a 7.4 Gflops&#x2F;W which is second place, just below the m4 mac mini in the benchmark table. The m1 max in the original did 4 Gflops&#x2F;W (at 66W).<p>So tbh I do not really trust the conclusion of the benchmark page, except if I miss sth. It is quite nice, organised work anyway.<p>[0] <a href=\"https:&#x2F;&#x2F;github.com&#x2F;tycho&#x2F;hpl&#x2F;blob&#x2F;master&#x2F;setup&#x2F;Make.MacOSX_Accelerate\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tycho&#x2F;hpl&#x2F;blob&#x2F;master&#x2F;setup&#x2F;Make.MacOSX_A...</a><p>[1] I just fixed the p:q ratio, which was prob not really meant to be 1:10 there, I assume, also judging from the settings in the other tests. I put p=2,q=4. Also I was unable to put more than 8 processes in total.<p>[2] The original m1 max benchmark: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;top500-benchmark&#x2F;issues&#x2F;4\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;top500-benchmark&#x2F;issues&#x2F;4</a>",
+            "comment": [
+                {
+                    "text": "Can you please post an issue on the repo? Long on my todo list has been trying to get the Mac tests more repeatable&#x2F;consistent and optimized (always easier on Linux).",
+                    "comment": [
+                        {
+                            "text": "Will def do!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "When you test matmul these days you want bf16 max. FP64 is a niche workload 100% unused by 95%+ users.",
+                    "comment": [
+                        {
+                            "text": "AI is not the only thing in the world. The rendering of this webpage involves a lot of FP64 work.",
+                            "comment": []
+                        },
+                        {
+                            "text": "That&#x27;s probably gonna run in gpu anyway. There is a lot of data work that involves double (or single) precision arithmetic, outside of ML, LLMs etc. It is definitely also worth testing 32 bit floats too, though.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "A more accurate title is can Intel (Linux&#x2F;Windows) beat Apple?<p>If you don&#x27;t want to run Windows, is there even a choice? My issue now with the non-Apple computers if you want to run Linux it&#x27;s really hard to predict how awful Chromium&#x2F;Firefox will be. My work Dell Laptop is only a 3 year old CPU with integrated GPU (and unused Nvidia GPU) but Chromium and Firefox are both slow as shit just loading pages like Slack and Outlook. Even resizing the browser windows seems 4-5x times slower than my M3 Macbook Air.<p>Maybe this is strictly a Linux issue but it hardly matters when the Windows ecosystem is pretty stagnant, full of junk-ware, and software development is much, much better on Linux&#x2F;MacOS.",
+            "comment": [
+                {
+                    "text": "You might want to try getting the Nvidia GPU working. They&#x27;re several times faster than intel integrated, and browsers are a GPU-heavy application.<p>Intel keeps trying to say their integrated graphics are finally decently fast, but that&#x27;s only a select few special models. Their high-volume chips continue to have integrated GPUs that are barely fast enough for web browsing.",
+                    "comment": [
+                        {
+                            "text": "How are laptop GPUs these days in terms of energy consumption? My last experience was a while ago, but the battery drained fast with them active.",
+                            "comment": [
+                                {
+                                    "text": "They still eat battery, but at least the midrange ones, not nearly as much as they used to.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "My servers run linux, my customers run windows, but if I run Mac that only adds to my complexity.  So all our dev boxes run Linux.",
+                    "comment": []
+                },
+                {
+                    "text": "I’m running CachyOS (based on arch) and it is blazing fast. Both with Firefox and Vivaldi. Especially compared to the windows install I used to have on the same machine. Or is your point only about windows?",
+                    "comment": [
+                        {
+                            "text": "Hmm, I&#x27;m using the CachyOS kernel but on NixOS. What CPU&#x2F;GPU are you using?<p>I tried using the flatpak Chromium in case it was some NixOS build optimization oddities but didn&#x27;t see much of a difference.",
+                            "comment": [
+                                {
+                                    "text": "I’m currently on a AMD 5900X with 9070 XT. Previously a 6700XT, didn’t make a difference in desktop only in games. Using KDE with Wayland. Recently I switched to the bore-lto flavour kernel as it seems to handle memory contention slightly better.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This is interesting but what I would love to see is Mac M4&#x2F;M5 performance (speed) on an Intel laptop CPU. I know that it will be really difficult to pull off (assuming it&#x27;s achievable at all) given that Intel just makes the CPU and the computer manufacturers for PCs don&#x27;t do the kind of tuning that Apple is able to do, but still, I can&#x27;t help but hope that maybe it can be done somehow. Maybe even while making the machines still serviceable! (Yes yes, I know, but a man can dream...)",
+            "comment": []
+        },
+        {
+            "text": "This field (XPS 13 and Neo) includes the Chromebook Plus Spin 514 with Mediatek Kompanio Ultra inside, which is superior to both in performance and hardware (and default OS, IMHO) and sells for $100 less.",
+            "comment": []
+        },
+        {
+            "text": "Does it maintain the same performance when running only on battery?",
+            "comment": []
+        },
+        {
+            "text": "Intel’s low end SoCs are such an undervalued gem.<p>A couple of years ago I got tired of dealing with OpenWRT and various Tomato based firmware or hunting down compatibility between ARM and MIPS based routers. I finally took the plunge and bought myself a mini pc with an Intel N100.<p>The thing has 4 cores (no SMT), a 6W TDP and boosts to 3.4 GHz and can support 16GB of ram. The mini pc I bought cost me $200, includes the processor as well 4x Intel 10Gbps Ethernet ports. At 6W, it needs no fan, and the whole chassis is metal and specifically designed to act as a heatsink, which means 0 noise and 0 moving parts.<p>I ran a power virus on it for a few hours to test the thermals, and on a warm day in Melbourne, after hours of having all 4 cores running full throttle, CPU temperature never exceeded 90 C and the chassis barely hit 55 C.<p>The best thing about it? Full upstream support for any Linux distro and FreeBSD. No more wondering if this particular Broadcom chipset needs a weird binary blob, no more being hostage to an OEM and having to run old forked kernels.<p>I installed OPNSense on it, VESA mounted it behind our TV, and it hasn’t been seen or heard since. Not only has it been the most reliable router I’ve ever had at home, it’s providing various other services such as DNS server, apt cache, WireGuard server and client etc for my homelab.<p>I’ve been waiting for ARM to get here since ARMv8 was announced in 2011, but it just hasn’t happened.<p>Long live x86.",
+            "comment": [
+                {
+                    "text": "Personally have the same experience too. I am tired trying to find out if the xyzPi of the day boards can do Linux. Vendors should also try harder. There are so many boards that release with half baked implementations or proprietary blobs. x86 always just works. Devices are also almost always just pcie devices even for those mini PCs with lots of interfaces. Compare to something like bananapi R4 that I think have some oddities with a mux chip not available in vanilla linux…<p>It&#x27;s also super easy to spec out your own devices in this regime on x86. There are mini itx boards with n100&#x2F;n305 with pcie slots so you can add your own cards, and the n100 has a surprisingly number of available lanes for its small size.<p>There just seems to be no viable &quot;just works&quot; solution in the below 10 or 20W range apart from raspberry pi, and Intel n100&#x2F;n305.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; bought myself a mini pc with an Intel N100<p>Instead of Raspi I&#x27;ve got a N100 uATX mainboard with N100 (120 EUR). Fortunately it does work with normal 32GB DIMM (55 EUR, those were the days!). But I&#x27;m still missing a pico-PSU, which can be powered directly from 220V (for reasonable costs).",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Depends on whether the OS actually puts the laptop or sleep or not.",
+            "comment": []
+        },
+        {
+            "text": "It&#x27;s long been possible (since Alder Lake at the latest) to tune Intel CPUs for task energy consumption competitive with Apple Silicon, but bone-headed OEMs including Apple always tuned them the other way, wasting a lot of power for tiny performance gains. It is inappropriate to say that you evaluated the perf per watt on a Core Ultra 7 265K because what you really evaluated was how HP, Lenovo, or Dell configured that chip. But for years it has been the case that with one of the Atom variants (Gracemont, Skymont, ___mont) tuned to non-ridiculous scaling modes (capped at 2GHz, say) the energy story is quite good. The Apple platform does not have eager scaling and this is part of their efficiency story.",
+            "comment": [
+                {
+                    "text": "Max power Intel consumer chips are already losing to Apple chips in raw performance, especially ST. Tuning them for better perf&#x2F;watt by turning down the Ghz would just make them even less competitive in performance.<p>- Performance<p>- Performance&#x2F;watt<p>- Die area<p>These are the 3 things determine a competitive chip. You can increase perf&#x2F;watt but decrease performance. You can increase performance by giving the chip a lot of cache and transistors but it&#x27;s more costly to manufacture.<p>The problem is that Intel chips are losing in all 3 areas simultaneously against Apple chips. They are slower, less efficient, and the CPU cores are bigger physically.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Well, they beat even TSMC on performance so they’re at least halfway there.",
+            "comment": []
+        },
+        {
+            "text": "Betteridge&#x27;s Law of Headlines",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Why people are excited about Intel barely matching already outdated CPUs of the competition?<p>Shouldn&#x27;t we be concerned that the company instead of aiming for the leap is producing legacy hardware destined for landfill?<p>Wake me up when Intel produces something groundbreaking.",
+            "comment": [
+                {
+                    "text": "Comments like this one remind me of all the people saying &quot;China can&#x27;t invent things, they can only copy the US&quot; 20 years ago.<p>Like, we&#x27;re comparing a new Dell to a Mac released only 4 months ago. How did you feel about the Mac Neo then, and now? Is it also legacy hardware destined for the landfill?",
+                    "comment": [
+                        {
+                            "text": "Not only that, the efficiency (FP64, HPL) is also beating all the M4&#x2F;M3&#x2F;M2&#x2F;M1 systems I&#x27;ve tested besides the M4 Mac mini: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;top500-benchmark#results\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;geerlingguy&#x2F;top500-benchmark#results</a><p>I think the bigger news is Intel&#x27;s made a chip that isn&#x27;t just pushing clocks to hit some performance number, they&#x27;ve actually tuned clocks for efficiency... which also leads to much better battery life.<p>And the fan on the system in the original article[1] also allows the Intel system to run substantially faster for longer tasks (where the Neo thermally saturates and has to stay throttled).<p>(The iGPU is another matter... sadly still a bit lacking.)<p>I&#x27;m hoping Intel makes a follow-up to the N100-series chips with just four of their newer low power E-cores.<p>[1] <a href=\"https:&#x2F;&#x2F;www.jeffgeerling.com&#x2F;blog&#x2F;2026&#x2F;excited-for-intel-efficiency&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.jeffgeerling.com&#x2F;blog&#x2F;2026&#x2F;excited-for-intel-eff...</a>",
+                            "comment": [
+                                {
+                                    "text": "Efficiency is one thing.<p>Efficiency and performance is another.<p>We&#x27;ve long known that pushing clock speeds results in diminishing efficiency, so it&#x27;s about time we see Intel stop pushing the clocks (and power) so hard that the chip melts down and the battery drains quickly.",
+                                    "comment": [
+                                        {
+                                            "text": "Intel&#x27;s actual problem was that their process fell behind TSMC&#x27;s. That meant competing on performance per watt was out of the question and the best they could do was turn up the clock speed and try to stay on top for performance.<p>If they&#x27;ve managed to fix their process then they don&#x27;t have to do that anymore.",
+                                            "comment": [
+                                                {
+                                                    "text": "They have finally prioritized buying leading edge Fab technology over stock buybacks, so their design team finally has a chance.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "“But they can’t match Intels performance” used to be the rejoinder of the Intel crowd.  Now we’ve come full circle.",
+                                            "comment": [
+                                                {
+                                                    "text": "Until Intel is capable of  making a fanless laptop chip that also has industry leading single core performance, they aren&#x27;t in the same ballpark.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Getting sustained single-core performance requires you to push the P-cores to junction temp. It&#x27;s only efficient in bursty workloads, under load it will go back to Intel-tier efficiency.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Ok so Intel managed to make a 20W TDP chip that gets 6.x Gflops&#x2F;W. Call me back when they’ve got a chip that still gets 6.x Gf&#x2F;W with a 200W 1,200Gflop package like the M3 next on your list. This little fellow is only 50% more efficient than my aging M1 Max!<p>It’s great that they are making progress. Competition is good. They certainly need good news right now. I have exactly one intel cpu in my house in a NUC I got off eBay and it’s about to be replaced by my M4 mini. My other x86  are Zen (threadripper, 5800x3d, 5950s).",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; I have exactly one intel cpu in my house in a NUC I got off eBay and it’s about to be replaced by my M4 mini.<p>Do some tests pre and post upgrade. It’s ridiculous how efficient the mini is. My power usage is about 1&#x2F;12 what it was with a Nuc.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Yeah, the first step is they realize pushing clocks is not the most important thing; second step is to apply that to other chips they make too! I want to see more desktop and server chips getting closer to Arm efficiency.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I don’t think it’s completely unfair to say that the Neo is based on a chip that was first announced in Sep 2024 while the Intel chip is from Apr 2026.<p>Also, I think the battery life most people are practically interested in is more like running (close to) idle and less like the number of Watts spent when running maxed out, and I wouldn’t be surprised if Arm chips still win on that metric…",
+                            "comment": [
+                                {
+                                    "text": "Plus it’s a phone chip. Yeah it’s used in the Neo but it’s no M5.<p>It’s good Intel got to this point, but you can’t declare them tied with Apple. They qualified for the real race, which us great, but they&#x27;re not going to win with that chip.",
+                                    "comment": [
+                                        {
+                                            "text": "Doesn&#x27;t it being a phone chip make the efficiency claim more impressive, not less?<p>Moreover, from tfa:<p>&gt; This Dell also beats out both M4 and M3 Mac Studios, only failing to the M4 Mac Mini at 7.57 Gflops&#x2F;W.",
+                                            "comment": [
+                                                {
+                                                    "text": "I haven’t followed the PC chip business anywhere near as much as I used to around the turn of the millennium. I was under the impression Intel actually made a few chips that could go quite low power. The problem was their performance sucked.<p>It’s good that this performs good and can go low power, but the big question to me is whether they can scale it up without it becoming a power sucking furnace.<p>There’s no other comment somewhere in here, where someone is pointing out that that was in FP64, which is not something most people use. Especially people who are going to buy a computer like this.<p>I suspect for me personally, integer use matters far, far, far more than anything else.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "&gt; in FP64, which is not something most people use<p>It&#x27;s used in audio processing. But large DAW sessions need something beefier than both tested devices (Macbook Neo, XPS).",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "It might be used a little bit in other places, wouldn’t surprise me one bit. And it’s good that the computers are capable of it. Even if someone can’t get a more powerful computer, it’s nice that they have the ability to use it for almost anything (within some limits) if they’re patient.<p>But as you said, if your workflow really needs FP64 you’re probably not reaching for a MacBook Neo or this Intel thing.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; Comments like this one remind me of all the people saying &quot;China can&#x27;t invent things, they can only copy the US&quot; 20 years ago.<p>We still get these comments. Now about AI. China can only distill and are still years behind. Well well...",
+                            "comment": [
+                                {
+                                    "text": "Really curious to see how ByteDance’s 10T model works out.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "[dead]",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "If Intel is competitive with Apple again, this should be good for the customer.",
+                    "comment": [
+                        {
+                            "text": "&quot;competing&quot; is not the same thing as &quot;competitive&quot;. Apple is 1-2 years ahead. If they remain so indefinitely into the future then Intel is not competitive.",
+                            "comment": [
+                                {
+                                    "text": "Except Intel can run Linux. A powerful enough laptop with M efficiency that can run Linux is compelling for many laptop buyers, especially the HN crowd.",
+                                    "comment": [
+                                        {
+                                            "text": "True. I was referring only to the silicon. Apple&#x27;s OS totally sucks.<p>I can envision a day when Apple properly supports Linux. I cannot envision a day when their OS doesn&#x27;t suck.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "If you normalise for both process node and clock speed, AMD and Apple are tied on single threaded perf&#x2F;watt, and AMD Zen 5c cores have about a 12% perf&#x2F;area advantage.",
+            "comment": [
+                {
+                    "text": "Absolutely not true.<p>Apple leads in IPC, perf&#x2F;area in CPU, and raw performance. We already have TSMC N7, N5, N4 AMD vs Apple CPUs to compare.",
+                    "comment": [
+                        {
+                            "text": "I wasn&#x27;t talking about any of those",
+                            "comment": [
+                                {
+                                    "text": "Please clarify?",
+                                    "comment": [
+                                        {
+                                            "text": "never mind, I messed up the math",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Whoever used the most recent TSMC node will have the best specs.<p>My guess is that even the designs of the transistors and perhaps logic gates are IP blocks owned by TSMC and not whoever wants to get their chip fabricated.",
+            "comment": [
+                {
+                    "text": "This isn&#x27;t true because Apple&#x27;s N5 CPUs are faster and more efficient than Intel&#x27;s TSMC N3 CPUs (Lunar Lake).",
+                    "comment": [
+                        {
+                            "text": "I suppose in that case Intel tried to make its own transistors.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "No headphone jack! Why Dell?<p>The processor is a Intel Core 5 320 Wildcat lake, with 4 &quot;low power efficient cores&quot; and 2 non-hyperthreaded Performance-cores.<p>It&#x27;s variant of Panther Lake which has some models with Arc GPUs: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Panther_Lake_(microprocessor)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Panther_Lake_(microprocessor)</a><p><a href=\"https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;products&#x2F;sku&#x2F;246018&#x2F;intel-core-5-processor-320-6m-cache-up-to-4-60-ghz&#x2F;specifications.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;products&#x2F;sku&#x2F;246018&#x2F;...</a>",
+            "comment": []
+        }
+    ]
+}

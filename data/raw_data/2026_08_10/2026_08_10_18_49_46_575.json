@@ -1,0 +1,538 @@
+{
+    "item_id": 49209385,
+    "title": "Show HN: Wyzer Programming Language",
+    "url": "https://github.com/Wyzer-Lang/wyzer",
+    "text": "So i&#x27;ve been working on this project since a few days (or months i should say), it&#x27;s called wyzer (meaning wiser) it&#x27;s a statically typed, compiled, resource-oriented programming language with integrated distributed safety via choreographic programming and perceus memory model, The reason why i began this project is out of frustration from Rust, you see it does provide safety for your memory by the strict type checking but what it does not gurantee safety against are distributed deadlocks which is basically a few independent nodes or services wait permanently for resources or messages held by each other, forming a circular wait, the rest are cross-service correctness and protocol mismatch as well. If we are specific over here Wyzer works on mainly generalizing the concept of choreographic programming in a high level programming language because its the very few attempts of actually solving these gaps of safety. Instead of borrow checkers and lifetimes wyzer has linear&#x2F;affine types and a perceus reference counting which is computationally much simpler for an LSP to understand as well<p>after 5 months of research and a few weeks of development i am soon going to release version 0.1.0 of it, if you would like to contribute to it you&#x27;re most welcome!",
+    "comment": [
+        {
+            "text": "I love the ambition and the fact that this is not just another &quot;state of the art in 2015&quot; language like I see so often. It&#x27;s trying to do something genuinely different. The field of &quot;taking stuff out of academia and making it work&quot; is a rich and underharvested one.<p>However, your light is hidden under a basket, to use an old metaphor. I&#x27;m having to go digging to find the genuinely new things going on. I suggest recalibrating the entire documentation with a focus on the new stuff. People on HN often complain about not having syntax examples front and center but I would say for you, the very first thing I you should be hitting your new visitors with is the choreography idea.<p>Set up a simple example of doing something like a concurrent remote counter that is atomically safe by the construction of your language and immediately dive in to what that means. Forget even educating us on the rest of the mundane syntax of the language, immediately dive in to what that is and what that means. I see in the docs&#x2F; dir that it probably hurts your programmer mind to cover the choreography before covering sections 1-8, but you can safely assume that if you intrigue with the choreography that they&#x27;ll hang around to learn about the rest, whereas you can&#x27;t safely assume that a new reader will wade through all the rest of the relatively mundane details to get to the really interesting stuff.<p>A modern language with a modern take on compiling a &quot;program&quot; that takes a unified view of the world at the programming language level, and then emits a &quot;server&quot; and a &quot;client&quot; (and perhaps other roles) as separate executables is a pretty nifty idea. Hit it early and hit it hard.",
+            "comment": [
+                {
+                    "text": "Thank you for this comment. I had mostly shrugged off this project as “neat” but didn’t go digging until I read this.<p>The choreography stuff is actually really cool! Definitely agree this should be front and center",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; What&#x27;s the elevator pitch, one more time?&quot; One ownership rule for memory, threads, and networks. No garbage collector, no complex borrow checker, and no network errors.<p>Should be the header.",
+                    "comment": []
+                },
+                {
+                    "text": "They did the right thing highlighting a working example front and center.<p>Nothing worse than PDFs full of theory and no working examples of the thing you’ll actually be doing all day.<p>I get that it’s important to show what abstractions and methodologies can arise out of using it, but with a good example that would be obvious. It’s the developer community using the language that will come up with the best abstractions (libraries) that - if it has an active community - helps shape what those novel developer experiences are.<p>A good analogy is the development of the skateboard - released first as a scooter - until someone knocked the handle off a started “surfing” down the street. Just show me the thing. I’ll tell you if it’s cool and how to use it",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; not just another &quot;state of the art in 2015&quot; language like I see so often.<p>Newer is not always better. Lisp is full of good ideas that haven&#x27;t stopped being good, even if a pure Lisp experience is understandably not to everyone&#x27;s liking.",
+                    "comment": []
+                },
+                {
+                    "text": "This is hands down some of the most constructive feedback we’ve received. You hit the nail on the head.<p>We definitely fell into the author’s trap of structuring docs &quot;bottom-up&quot; (Prerequisites -&gt; Basic Syntax -&gt; Advanced Concepts) rather than leading with our actual core innovation: choreography.<p>We are restructuring the main README&#x2F;docs front page right now to lead immediately with a concrete example of choreographic execution (e.g., atomic multi-node orchestration &#x2F; client-server emitting) before getting into standard syntax.<p>Really appreciate you taking the time to dig into the docs&#x2F; dir to pull this out it’s a huge help for our presentation.",
+                    "comment": [
+                        {
+                            "text": "You should avoid LLMs in your communications.",
+                            "comment": [
+                                {
+                                    "text": "You do realize its not the real creator right? Its someone impersonating.",
+                                    "comment": [
+                                        {
+                                            "text": "It’s the OP who posted the link.",
+                                            "comment": [
+                                                {
+                                                    "text": "Yes, but the OP is not the creator, which he claims to be. You can see the discussion about it on the discord server of Wyzer. This guy made all of this post, then left the account credentials to the real creator a few hours ago.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "You should still keep doing the bottom-up approach for the rest of the docs. Just update the README first paragraph or two as the gp says.",
+                            "comment": [
+                                {
+                                    "text": "Yes, strong agree, normalcy resumes at some point. But you want the hook in first.<p>I mean, I&#x27;m phrasing that in marketing terms, but in this case it&#x27;s in harmony with what your users want anyhow. We want to know ASAP why we should care about this language. So it works for everyone. Of course when it comes time to deliver the promise, normal programming language documentation is the way it is for a reason.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "you should really put some of the content in RESEARCH.md to the README.md. The language&#x27;s core idea shouldn&#x27;t just be known to contributors.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt;  linear&#x2F;affine types and a perceus reference counting<p>You should put these up front also.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Lmfao.<p>This is not an LLM talking but a kid who is learning to write with them, if you look closely. Still concerning",
+                            "comment": []
+                        },
+                        {
+                            "text": "I think it&#x27;s quite rude to reply to a well thought out comment with AI slop",
+                            "comment": [
+                                {
+                                    "text": "The OP is not the creator of wyzer. Its someone impersonating. You can see the discussion about it in the discord.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "author is 12 year old. future kids are AI native i guess",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "this REALLY reads like claude responded to this comment, so I really hope that I&#x27;m just mistaken and you just naturally talk like this",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "First of all, the syntax is very generic and conservative. I’m extremely positive about that. It just looks like C or Typescript or Java to me and I don’t see mysterious diacritical marks.<p>The next thing is, I need more examples. Read me documents can scroll forever and that’s fine. Add examples for every concept your language wants to cover to it. This is your chance to think things through and make the read me and the language astonishing.<p>And your AI disclaimer (or your AI’s disclaimer) makes sense.",
+            "comment": [
+                {
+                    "text": "i&#x27;m actively working on the documentation without AI because it has been an awful experience with it , i&#x27;ve also restricted AI from contributing to it in any way except for helping the developer write their commit messages (Refer to AGENTS.md) properly which is pretty much useless anyways, the language is in it&#x27;s early stages as well and things might change a lot",
+                    "comment": [
+                        {
+                            "text": "I love this choice. As I began reading, it was immediately clear that it was deliberately written by the author, not AI marketing slop",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "also , yes i have an example i reprogrammed donut.c in my programming language and called it donut.wyz <a href=\"https:&#x2F;&#x2F;github.com&#x2F;rudywasfound&#x2F;donut.wyz\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;rudywasfound&#x2F;donut.wyz</a> go check it out!",
+                    "comment": [
+                        {
+                            "text": "Please don&#x27;t take this personally, trying to offer this as constructive criticism. I don&#x27;t find this to be a very interesting example of the language. If the main feature is a unique approach to memory&#x2F;multithreading&#x2F;network safety, I would like to see an example of a multithreaded networking program that uses dynamic allocations, not a ~100 line a procedure that uses static buffers and terminal IO.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I would like to see an examples directory with a diverse set of example programs. What would be most interesting to me is programs with non-trivial memory usage and data structures, because that&#x27;s where differences in the memory model would matter. I want to know what&#x27;s possible and what&#x27;s not allowed in this language. What makes this different and better than Rust&#x27;s borrow checker.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "One thing I don’t understand is how you can guarantee the lack of a distributed deadlock. I’m sure it’s covered in the underlying research, but just conceptually it’s hard to picture.<p>What stops a choreography where Claire send a message to Bob but Bob is waiting for Alice and Alice is waiting for Claire?<p>Is it like Rust memory safety where not all valid programs are accepted but all invalid programs are rejected?<p>I think some examples of the distributed code in action on a trivial and non trivial distributed example is more compelling than a 3d donut render",
+            "comment": [
+                {
+                    "text": "You can think about it as a protocol.<p>The protocol doesn&#x27;t describe &quot;Claire sends&quot; and &quot;Bob receives&quot; as two independent actions that wait for each other, it describes them as a single communication in the global program&#x2F;state.<p>When it gets executed into code, every send already has a corresponding receive by construction, so you can&#x27;t write something like &quot;Claire sends to Bob while Bob is actually waiting for Alice&quot; unless the protocol itself allowed that execution.<p>So the cycle you&#x27;re describing can&#x27;t just accidentally appear because of sync issues, because the assumption is a communication is represented correctly at each turn.<p>So yeah it kinda does limit the set of all possible programs since I would expect not everything can be encoded this way also seems hard to resolve this in practice without only allowing communication b&#x2F;w Wyzer systems.<p>I am not very familiar with this topic in practice so OP would be the best person to answer this, I am quite intrigued by how it works in practice as well.",
+                    "comment": []
+                },
+                {
+                    "text": "This question is in fact core to research in the paradigm. Let me first address how it works and then the expressivity question.<p>A choreographic programming language features programming abstractions for programming communication intent. For example, often they have a primitive like:<p>Alice.expr -&gt; Bob.x<p>read &#x27;Alice communicates the evaluation of expr to Bob, which stores the message in its local variable x&#x27;. (In fact, we discovered that we can extend any mainstream language to have this kind of high-level primitives by extending data types with locations, see choral-lang.org).<p>This makes it impossible to write mismatched communication actions, because you&#x27;re expressing both the send and receive actions in a single atomic instruction: they are well-matched by construction. You then build a compiler (typically called &#x27;projection&#x27;) that generates distributed programs for Alice and Bob -- the former doing the send to Bob and the latter doing the receive from Alice. We like making formal models of these compilers and mathematically proving them correct. A compiler that respects the choreography then automatically entails deadlock-freedom of the compiled code without the need for complex checks, because the source choreography cannot syntactically express deadlocked terms.<p>Consequently, there are no deadlocked distributed programs that we can compile from choreographies. It&#x27;s an application of the neat trick of designing high-level languages for &#x27;guiding&#x27; programming: instead of programming a distributed system with low-level primitives and then attempting the generally very hard task of checking for deadlocks, we use a high-level language where deadlocks cannot be written (or are at least easy to check against).<p>The above hopefully explains the intuition of how choreographic programming works. But then, as you did, one naturally asks: What can we express in choreographic programming languages? Are there fundamental limitations?<p>We do not know exactly yet; this is an area of very active exploration. Over the years, people have developed more and more clever choreographic programming languages that capture more and more interaction patterns.<p>What&#x27;s perhaps surprising is that, for some theories of distributed languages (or interaction patterns, if you like), we know that choreographic programming is <i>complete</i>, in the sense that it can capture all deadlock-free systems that can be modelled in those theories. The first result of this kind was about capturing all interaction behaviours that can be described in linear logic (in the Curry-Howard interpretation of it with process calculi), but there are also works that can deal with recursive behaviour and even process spawning (fork). That&#x27;s encouraging.<p>I think that investigating what the paradigm precisely can and cannot do is fascinating (but I&#x27;m very biased here..), not least because using a mathematically-modelled compiler lets us optimise the generated code aggressively (e.g., adding more asynchrony, as in Ozone). From the state of the art already out there, it looks like choreographic programming is &#x27;expressive enough&#x27; for many different purposes. Hopefully it&#x27;s gonna be the typical situation with high-level abstractions, whereby for most cases and most people the high-level language is gonna be good and low-level communication actions will be necessary only in niche scenarios. In the meantime, there are choreographic languages that can be integrated with middleware and foreign APIs to cover up for deficiencies (like Choral, HasChor, etc.).",
+                    "comment": [
+                        {
+                            "text": "I hope you liked wyzer :)",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "hmm, I suspect distributed systems can be modelled with a form of probabilistic borrow-checking as long as you have control all the connected systems.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "For anyone looking for an easily digestible primer on choreographies: <a href=\"https:&#x2F;&#x2F;decomposition.al&#x2F;zines&#x2F;communicating-chorrectly-zine.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;decomposition.al&#x2F;zines&#x2F;communicating-chorrectly-zine...</a><p>Too bad the github readme doesn&#x27;t explain how the choreographic side of Wyzer works, or even what it looks like (please correct me if I&#x27;m wrong, couldn&#x27;t find it after a quick skim).",
+            "comment": [
+                {
+                    "text": "This was a great introduction! Thanks for sharing",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Your README and docs don’t describe any of the interesting or unique things here. You cover `if` in README but not choreographic programming or perceus. Did i miss some big link?<p>Where’s the cool stuff?",
+            "comment": [
+                {
+                    "text": "you did read RESEARCH.md didn&#x27;t you? :)",
+                    "comment": [
+                        {
+                            "text": "i poked around in there, under choreographic programming there’s one example of <i>something not in the language</i> as a discarded idea.<p>if you claim X and Y make us cool and different, then you should document X and Y in your readme. don’t tell me something is the star, and then hide it away. this is baffling to me.",
+                            "comment": [
+                                {
+                                    "text": "its speaking of discarded syntax for choreo, not that the feature was discarded",
+                                    "comment": [
+                                        {
+                                            "text": "Still there&#x27;s not a single example.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Why would they? The only thing the readme says about RESEARCH.md is &quot;if you want to contribute to the language please read RESEARCH.md&quot;. The OP doesn&#x27;t want to contribute, they want to see an example of choreographic programming. This shouldn&#x27;t be hard. What <i>is</i> hard is guessing which of the random markdown documents to click to find an example.",
+                            "comment": []
+                        },
+                        {
+                            "text": "GitHub hides RESEARCH.md for my convenience. I have to click &quot;Show All Files&quot; to see that it even exists.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I saw this medium post from you <a href=\"https:&#x2F;&#x2F;medium.com&#x2F;@atixwasfound&#x2F;how-i-began-writing-my-own-programming-language-01a1672d3bd8\" rel=\"nofollow\">https:&#x2F;&#x2F;medium.com&#x2F;@atixwasfound&#x2F;how-i-began-writing-my-own-...</a><p>In there it says you started this journey when you were 8 years old and that you are a 14 year old programmer<p>I&#x27;m not sure how I feel about this to be honest, I need to process that.",
+            "comment": [
+                {
+                    "text": "time flies :) the grass was greener before though and i miss that!",
+                    "comment": []
+                },
+                {
+                    "text": "Incredible if a 14 year old did this, the ven with AI",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Based on the comments here, are we really supposed to believe that the following actually happened?<p>1. The v0id_isgood HN user impersonated the actual creator of Wyzer and posted this Show HN.<p>2. The v0id_isgood HN user then left the credentials to his HN account in the Wyzer discord.<p>3. Now the real creator of Wyzer is apparently using the v0id_isgood account to answer questions here?!<p>What&#x27;s going on? This whole thing feels like a really strange hoax.",
+            "comment": []
+        },
+        {
+            "text": "i heard you guys and took my time to improve the project with the feedback which i really appreciate, i really don&#x27;t know how to delete this HN since someone impersonated me from this account which really isn&#x27;t mine. You might have expected a polished language and found a WIP programming language which i&#x27;m really sorry for, i updated the README as per the people&#x27;s request and also got the documentations up on the website! :) , i&#x27;m open to more feedback and assistance to make the project better and most importantly questions! (i do have to really fix the documentation but i&#x27;d rather focus on the language first)",
+            "comment": []
+        },
+        {
+            "text": "<p><pre><code>    const MAX: u32 = 100;  &#x2F;&#x2F; Compile-time constant\n    let x: u32 = 10;       &#x2F;&#x2F; Cannot be changed\n</code></pre>\nIf x cannot be changed, how does it differ (meaningfully) from a compile time constant in a safe language, ie in a case of no raw pointers",
+            "comment": [
+                {
+                    "text": "const can be used in places that need a compile-time-known value (like a fixed array size). let can&#x27;t, even if it obviously holds a fixed number.",
+                    "comment": [
+                        {
+                            "text": "isn&#x27;t there a way to infer that from context? like if the variable is declared with the Comptime role. Some guy said that the const keyword was a mistake C made that is then blindly followed by its successors.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I really appreciate this:<p>&gt; 1. What Wyzer Is, In One Paragraph...<p>&gt; 2. Why Make a New Language At All?...<p>Far too often I see projects on HN where, on a casual skim, I just can&#x27;t figure out &quot;the point.&quot; This is clear and concise.<p>---<p>One of the issues with &quot;Writing one network rule that creates code for every computer. We borrowed this from academic research&quot; is that often it&#x27;s hard to have the same language on every computer. For example, for a web application, you&#x27;re either going to have to transpile to Javascript or target WASM. (And WASM has a lot of overhead compared to Javascript.)",
+            "comment": []
+        },
+        {
+            "text": "Huh, the Choreographic Programming (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;Wyzer-Lang&#x2F;wyzer&#x2F;blob&#x2F;master&#x2F;docs&#x2F;08_choreography.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Wyzer-Lang&#x2F;wyzer&#x2F;blob&#x2F;master&#x2F;docs&#x2F;08_chor...</a>) looks very like &quot;server functions&quot; as implemented in Next.js &#x2F; Dioxus &#x2F; Leptos, but generalized as a language feature.<p>Definitely a cool idea. I guess time will tell whether lifting it into the language proves itself as worth it.",
+            "comment": []
+        },
+        {
+            "text": "&gt; Go, Java, C#, and Python use garbage collectors. This makes them easier to use but slower and less predictable.<p>It does not. The term &quot;garbage collectors&quot; covers a whole spectrum of algorithms, some might slow you down (though not for the reason you may think) while others were invented to <i>speed up</i> memory management beyond that of C++, in exchange for other tradeoffs. Python&#x27;s (mostly) refcounting GC is actually closer to C in its memory management overhead than to either Go or Java. It&#x27;s also not what makes Python slow. Go uses a mark-and-sweep collector to find a balanace between speed, FFI, and footprint. Java uses moving collectors, which are faster - and some of which are even more predictable - than memory management in C++. That&#x27;s because Java aims to offer better performance than C++ in large concurrent software, where low-level languages tend to suffer from various overheads due to their requirement for low-level control (Java trades off some performance in smaller programs, but mostly it trades of startup time and footprint). Moving collectors (but not refcoting collectors or mark-and-sweep collectors) are an optimisation over free-list approaches, not a compromise for convenience.<p>So it is true that slow programming languages tend to use some kind of GC, but that&#x27;s not what makes them slow, nor does it make the super-fast languages that also use a GC (often of a very different kind) any slower. The range of languages that use GCs covers everything from the super slow to the super fast.",
+            "comment": [
+                {
+                    "text": "I don&#x27;t understand how you can claim that using a GC does not make a language slower and less predictable.<p>Running a GC takes time, pollutes the cache, and is often run at an unpredictable time.  Sure, the GC is not necessarily the SLOWEST thing about the language (python), but it&#x27;s not helping, either.",
+                    "comment": [
+                        {
+                            "text": "&gt; Running a GC takes time, pollutes the cache, and is often run at an unpredictable time.<p>Isn’t this only the case for tracing garbage collectors? (And even then, not all of them are stop-the-world.)",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; Running a GC takes time<p>Yes, but for a <i>moving collector</i> that&#x27;s <i>less</i> time than it takes to run malloc and free. The interaction of a moving collector with most object is bump allocation when they&#x27;re allocated (similar to stack allocation) and... that&#x27;s it. The GC never sees them again, scans them again, or is even aware of their existence (moving collectors don&#x27;t have a free operation). Overall, moving collectors (but not other kinds of GC) reduce the work of memory management compared to malloc&#x2F;free.<p>In low-level languages we try to avoid doing a lot of malloc&#x2F;free not because heap memory management is slow in general, but because <i>that approach</i> to memory management is slow. Moving collectors are an optimisation designed to make heap memory management fast, but it requires that (nearly) all pointers be movable, something that low-level languages can&#x27;t do because they have constraints that are more important to them than speed (you can&#x27;t interact with the OS or hardware directly, i.e. without an FFI API, if your pointers are movable, and such direct interaction is the point of low-level languages).<p>That moving collectors (NOT the GC Python has; NOT the GC Go has) can, in principle, make heap memory management cheaper than stack allocation has been well known since the eighties. But until recently they had excellent throughput (somewhat similar to arenas) but potentially long pauses. It was only recently that they were made &quot;pauseless&quot;.<p>&gt; and is often run at an unpredictable time<p>How much work malloc and free need to do is also unpredictable, and a modern pauseless moving collector like ZGC spreads the work needed for memory management more evenly than malloc and free.<p>&gt; Sure, the GC is not necessarily the SLOWEST thing about the language (python), but it&#x27;s not helping, either.<p>There is very little resemblance between CPython&#x27;s GC and Java. Python&#x27;s memory management is closer to C&#x27;s than to Java&#x27;s. GCs cover such a wide spectrum of algorithms that it doesn&#x27;t make sense to talk about them as a single category as far as performance tradeoffs are concerned.",
+                            "comment": [
+                                {
+                                    "text": "Okay.<p>I&#x27;ve written two separate moving collectors for dynamic language runtimes, as well as done significant work in realtime 3D graphics, and what you&#x27;re saying mostly smells like bullshit.<p>&gt; The interaction of a moving collector with most object is bump allocation when they&#x27;re allocated (similar to stack allocation) and... that&#x27;s it. The GC never sees them again, scans them again, or is even aware of their existence<p>I mean .. sure, but, a copying GC eats somewhere on the order of 10% of your total memory bandwidth just copying shit around.  I can guarantee that if you use sane allocation strategies (arenas &amp; freelists, pools, whatever) you spend &lt;1% of your total system resources fucking around with memory allocation.<p>&gt; Moving collectors [...] requires that (nearly) all pointers be movable, something that low-level languages can&#x27;t do<p>Completely false.  You have to do some manual bookkeeping in C++, Rust, Zig, whatever, but you can do it, and in fact many commercial GCs do (V8 is a good example).<p>...<p>The rest of what you said is just empty-sounding claims that I&#x27;m not going to address.  I looked at the single paper that you linked in another comment, from the 80s, which is hardly relevant on modern hardware.<p>Please, if you&#x27;re going to make the claims you&#x27;re making, back them up with hard evidence.  I&#x27;ve looked, and the overwhelming majority of papers out there claim that GCs are slow, memory hungry and, generally, a waste of time.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; I&#x27;ve written two separate moving collectors for dynamic language runtimes, as well as done significant work in realtime 3D graphics<p>That&#x27;s nice. I have ~25 years of experience with large C++ software, including hard and soft realtime systems, and I now work on the JVM.<p>&gt; I mean .. sure, but, a copying GC eats somewhere on the order of 10% of your total memory bandwidth just copying shit around<p>Good moving collectors are designed to copy very little. That&#x27;s the entire purpose of generations.<p>&gt; I can guarantee that if you use sane allocation strategies (arenas &amp; freelists, pools, whatever) you spend &lt;1% of your total system resources fucking around with memory allocation.<p>In theory. When you&#x27;re in charge of a &gt;2 MLOC C++ system, maintained by a large team for well over a decade, you find that these optimisations are <i>very</i> costly. Plus, you commonly find large C++ software that needs sophisticated malloc&#x2F;free allocators for acceptable performance (BTW, some of those allocators are almost the same size, in LOC, as that of ZGC, probably the world&#x27;s most sophisticated moving collector).<p>That&#x27;s why, where I used to work and oversee large projects, we migrated pretty much all systems (mostly soft-realtime defence software) to Java from C++ - for better performance. One of the goals of the JVM was to tackle the familiar performance issues that plague large C++ programs.<p>And BTW, using arenas isn&#x27;t so easy when programs get large and sprawling, or even in general. Zig definitely makes that much easier, though.<p>&gt; Completely false. You have to do some manual bookkeeping in C++, Rust, Zig, whatever, but you can do it, and in fact many commercial GCs do (V8 is a good example).<p>What I said is completely true, but you may have misunderstood it. You can, of course, combine moving collectors with things that expect stable ones in the same process. In fact, you absolutely must, because at some point in the stack you need to talk to the OS and&#x2F;or hardware, and they expect stable pointers. But you <i>have</i> to have some distinct FFI layer between the two, and the entire point of low-level languages is to be at the lower level.<p>&gt; Please, if you&#x27;re going to make the claims you&#x27;re making, back them up with hard evidence. I&#x27;ve looked, and the overwhelming majority of papers out there claim that GCs are slow, memory hungry and, generally, a waste of time.<p>I don&#x27;t know what you&#x27;ve read, but that is very clearly not the consensus among memory management experts. My &quot;claims&quot; are pretty common industry knowledge, and why the majority of performance-critical <i>large</i> software has migrated away from low-level languages over the past couple of decades, and the trend continues. I&#x27;m not trying to change anything, I&#x27;m just explaining why the industry is doing what it&#x27;s doing to those who may not be familiar with large, long-lived software.<p>It&#x27;s funny, but 25 years ago, the people who doubted the amazing performance-per-effort of moving collectors and JITs were those who (like me) had not used those technologies and were mostly familiar with low-level languages. These days, it&#x27;s the people who have little experience developing and evolving large and complex software in low-level languages (TBF, there&#x27;s much less such software written in low-level languages these days) that believe the low-level languages are inherently fast.<p>Having said all that, when programs are relatively small and&#x2F;or not very concurrent, the effort required to match or beat Java&#x27;s performance in a low-level language through careful manual optimisation is sometimes worth it. In large software, it gets harder and harder.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "The quoted text says &quot;slower&quot;. It does not claim that GC makes those languages slow overall.<p>Are you arguing that GC is not inherently slower than other memory management strategies (e.g. the Rust approach)? Or just that the cost is not worth optimizing away?",
+                    "comment": [
+                        {
+                            "text": "Of course GC is not inherently slower than other memory management strategies. Not only because GC is not a &quot;memory management strategy&quot; but a wide spectrum of them, but also because some GCs are used to speed up memory management compared to low-level languages. Dynamic heap allocations in low-level languages is often minimised because it is slow; some GCs are used to solve this problem.",
+                            "comment": [
+                                {
+                                    "text": "Have the Rust and Zig communities been outright lying to me? I know very little about the details. I genuinely thought that the overhead of GC was a well-established tradeoff in language design.",
+                                    "comment": [
+                                        {
+                                            "text": "That some specific kinds of GCs, specifically moving GCs (of the kind used in Java and .NET, but <i>not</i> the kinds used in Python or Go, which are also very different from each other) can be highly efficient, at least in principle, has been well known since the eighties (see <i>Garbage Collection Can Be Faster Than Stack Allocation</i>, 1986 [1]). However:<p>1. Moving collectors have long been more efficient than malloc&#x2F;free but only in the total work devoted to heap management, i.e. throughput. Moving collectors that also offer predictable low latency are much more recent. In fact, the first open-source, production-quality, high-throughput, low-latency moving collector is less than three years old [2].<p>2. Much more importantly - and this is something that we experienced low-level programmers have known forever but people without much experience in low-level programming seem to not know these days is that low-level languages are not optimised for maximum performance. They&#x27;re designed for maximum low-level control. When programs are small, when they&#x27;re not heavily concurrent, or when the hot path is relatively simple, this low-level control can, indeed, translate to very high performance. But when programs grow larger or more concurrent, low-level control can actually make some optimisations harder. In particular, moving pointers, which are required to enjoy the optimisation offered by moving collectors, is not compatible with the low-level control needed in low-level languages, and these languages prioritise low-level control over everything else, including performance (as low-level control is their primary purpose). And this is not the only example of optimisations that these languages make harder. This is why large and&#x2F;or concurrent programs have largely migrated from C++ to Java and C# over the past few decades, and this trend isn&#x27;t reversing. Again, for smaller and&#x2F;or less concurrent programs, low-level languages still offer excellent performance in expert hands, provided you invest sufficient effort into manual optimisation.<p>3. The optimisation offered by moving collectors isn&#x27;t free. Until recently, you had to pay in unpredictability and high latency (which is still the case in all languages except Java), and since the algorithm uses RAM to reduce the CPU needed for heap management, it does necessarily require higher footprint. You can enjoy a similar optimisation that turns RAM into free CPU in Zig by using arenas (this is harder to do in C++ and Rust). Zig&#x27;s arenas are even more efficient than moving collectors, but they do require more effort, and they&#x27;re less general.<p>[1]: <a href=\"https:&#x2F;&#x2F;www.cs.princeton.edu&#x2F;techreports&#x2F;1986&#x2F;045.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cs.princeton.edu&#x2F;techreports&#x2F;1986&#x2F;045.pdf</a> Note that in practice, moving GCs are not quite as efficient as stack allocation (let alone more efficient), but heap allocations in Java are not as expensive as heap allocations in C&#x2F;C++&#x2F;Rust&#x2F;Zig that utilise malloc&#x2F;free. This is why in these languages we try to avoid heap allocations on the fast path.<p>[2]: <a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;jeps&#x2F;439\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;jeps&#x2F;439</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It would be worth writing examples of the resource ownership model (especially network wise), this is the rare feature here it seems.<p>ps: were you looking at efforts such as clojure electric (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;hyperfiddle&#x2F;electric\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;hyperfiddle&#x2F;electric</a>) ? they aim to represent computation on different hosts as one expression.",
+            "comment": []
+        },
+        {
+            "text": "Reminds me of <a href=\"https:&#x2F;&#x2F;github.com&#x2F;lovrosdu&#x2F;klor\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;lovrosdu&#x2F;klor</a>",
+            "comment": []
+        },
+        {
+            "text": "&gt; Memory (Section 5): You write functional code that does not change data. Behind the scenes, if a piece of data has only one owner, the compiler changes it directly in memory. This makes it as fast as C without a garbage collector or lifetime rules.<p>What happens if the piece of data has multiple owners? Do you get sudden performance bugs which are hard to debug?",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "As someone working on a language in this space, I think your README could be much better.<p>Most of the important stuff is in this section:<p>```3. What&#x27;s Actually New About It?```<p>But you don&#x27;t really go into any details about what&#x27;s actually happening, have any honest conversation about any trade-offs, mention anything about why this <i>is</i> memory safe &amp; correct now (highly skeptical), or why you have a clear path towards that in the near future.<p>From the <i>VERY</i> brief examples you show, it looks like it&#x27;s just Rust without a borrow checker.  The borrow checker gives Rust a bad reputation, but it&#x27;s only a very small part of why Rust is hard.  You didn&#x27;t give any insight into how you&#x27;re solving the rest of the problems.",
+            "comment": []
+        },
+        {
+            "text": "Would you say that &quot;choreographic programming&quot; is different from an architecturally-aware compiler?<p><a href=\"https:&#x2F;&#x2F;hale-lang.org&#x2F;articles&#x2F;claims-in-hale&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hale-lang.org&#x2F;articles&#x2F;claims-in-hale&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "I like the ideas a lot. The Readme needs some polish (I think it’s great that it reads as hand-written; an LLM could make suggestions that make it just 10% easier to read).<p>Is choreographic programming the same as session types?",
+            "comment": []
+        },
+        {
+            "text": "Congratulations your language is trying to solve an hard problem.<p>But .. your language mostly hide when you&#x27;re doing an &#x27;inside&#x27; function call or an &#x27;external&#x27; function call.\nI&#x27;m not sure I like this;\n1) the latency of both operation is very different so you want to minimise the number of &#x27;external&#x27; function calls\n2) what happens in case of &#x27;timeout&#x27; for external function calls?\nI didn&#x27;t see it in the doc, did I miss it?",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;Wyzer-Lang&#x2F;wyzer#3-control-flow\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Wyzer-Lang&#x2F;wyzer#3-control-flow</a><p>Is <i>mut</i> a thing? looks like rust.",
+            "comment": [
+                {
+                    "text": "examples aren&#x27;t updated yet some guy who mocked me earlier for the language on discord deleted his statements and walked away blocking me after giving me his hacker news credentials, now here i am answering to your questions",
+                    "comment": [
+                        {
+                            "text": "wait what? You&#x27;re joking. Some rando just picked a fight, walked it back, then gave you his HN account?",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "wow it is great to see that there is still life in distributed programming languages. I would like to know what are the differences to MPI programming, chapel and PGAS languages like Co-Array Fortran and the rust extension ChoRus?<p>Can you you give a hello world example in each of them and show where your languages shines?",
+            "comment": []
+        },
+        {
+            "text": "Is it memory safe? Can I cause a memory-related bug writing normal (safe) code in this language?<p>&gt; The one rule is that once you use a resource, you cannot use it again<p>What about data structures which need to be shared? Can I use some sort of mutex for them?",
+            "comment": []
+        },
+        {
+            "text": "nice Rust-inspired syntax, although if the main selling point is choreography here, that isn&#x27;t featured enough on web page or README. Needs more examples&#x2F;explanation of how that works.<p>Promising insofar as all of the essentials seem to be right (for me): compiled, good type checker, no garbage checker etc.",
+            "comment": []
+        },
+        {
+            "text": "Could one compare choreography with this model<p><a href=\"https:&#x2F;&#x2F;felix-tutorial.readthedocs.io&#x2F;en&#x2F;latest&#x2F;intro_coroutines_termination.html\" rel=\"nofollow\">https:&#x2F;&#x2F;felix-tutorial.readthedocs.io&#x2F;en&#x2F;latest&#x2F;intro_corout...</a><p>Note this is for cooperative threading.",
+            "comment": []
+        },
+        {
+            "text": "Very interesting. Maybe this would benefit from concrete examples, of things that are difficult or impossible in other languages, but well supported in Wyzer? I see there&#x27;s a few high level examples, but I&#x27;m thinking concrete scenarios with code snippets might be helpful.",
+            "comment": []
+        },
+        {
+            "text": "This looks cool! Memory safety beyond Rust with simpler code is a strong claim. Something I&#x27;d love to see is examples that mimic issues Rust borrow checker would catch as well as ones only wyzer would catch.",
+            "comment": []
+        },
+        {
+            "text": "&gt; prentensious quote<p>It&#x27;s &quot;pretentious.&quot;<p>(said pretentiously, lol)<p>Hey, at least we know AI didn&#x27;t write it, lol",
+            "comment": [
+                {
+                    "text": "I&#x27;m guessing it refers to this paper:<p><a href=\"https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;research&#x2F;wp-content&#x2F;uploads&#x2F;2020&#x2F;11&#x2F;perceus-tr-v1.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;research&#x2F;wp-content&#x2F;uploads&#x2F;...</a><p>(wait what is that WordPress?)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I like idea about removing too many ways to do something. I do not like that programming languages can be too complex becausd there could be few ways to just write simple thing. So thanks for reducing complexity.<p>Also I really like that somebody said that Rust syntax is complex and too hard to learn. So many unreadble things. However Rust did good think about fn keyword - it fits better than fun, func, function keywords. I hope you will not choose path where every 2nd word is abbreviated.",
+            "comment": []
+        },
+        {
+            "text": "The fact that the author is 14 years old makes my day. Nice work!",
+            "comment": [
+                {
+                    "text": "Awesome! How did you find that out?",
+                    "comment": [
+                        {
+                            "text": "It was written in the GitHub bio.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I skimmed so I may have missed it, but nowhere in the README do I actually see a description of what &quot;choreographic programming&quot; is, or an example of it.",
+            "comment": []
+        },
+        {
+            "text": "So variables are declared with var, constants are declared with const or with let unless it is let mut which isn’t described? I stopped right there.",
+            "comment": []
+        },
+        {
+            "text": "docs.wyzer-lang.org doesn&#x27;t resolve for me, and it&#x27;s prominently linked from <a href=\"https:&#x2F;&#x2F;wyzer-lang.vercel.app&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;wyzer-lang.vercel.app&#x2F;</a>. Since I&#x27;m not familiar with wyzer or perceus, how would one write, say, a doubly linked list in wyzer?",
+            "comment": [
+                {
+                    "text": "docs are under development, you can check them out soon :)",
+                    "comment": [
+                        {
+                            "text": "Great. I&#x27;m also writing a new language with the same memory management idea (Perceus-style reference counting &#x2F; ownership). My language [1] is not functional and currently lacks multi-threading and networking, so there are big differences. But I really like the moto &quot;easy to use memory safety without tracing GC&quot;.<p>[1] <a href=\"https:&#x2F;&#x2F;github.com&#x2F;thomasmueller&#x2F;bau-lang&#x2F;tree&#x2F;main\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;thomasmueller&#x2F;bau-lang&#x2F;tree&#x2F;main</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "maybe wait until you have something to share before Show HN? overall your work seems like a cool thing that i’d like to look at in a few months once there’s more substantial education stuff to read about it.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Since your language is very &quot;rust-like&quot;, what made you choose Ocaml as the implementation language?",
+            "comment": [
+                {
+                    "text": "Ocaml was very simple to program in to be honest, and has very minimal rules as well so i can be productive with the development of the language, Rust also used ocaml in it&#x27;s early versions for bootstrapping",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is very exciting! Curious to learn more about how the linear types fits into the picture here?",
+            "comment": []
+        },
+        {
+            "text": "Ref counting IS a form of GC. It can be slow and have issues in high perf scenarios.",
+            "comment": []
+        },
+        {
+            "text": "No mention of the much more mature Chapel, with industry support, given the domain?",
+            "comment": []
+        },
+        {
+            "text": "The website on mobile is basically unusable. I like the general theme though",
+            "comment": []
+        },
+        {
+            "text": "Looks promising, let&#x27;s see into what this evolves",
+            "comment": []
+        },
+        {
+            "text": "i wonder how agents would adopt a whole new programming language, as not much syntax examples &#x2F; references are out there.",
+            "comment": []
+        },
+        {
+            "text": "question: how accurate is the intuition that role types are the location a computation happens?",
+            "comment": []
+        },
+        {
+            "text": "The syntax is soooo promising but still we need more documentation. Good job anyway for doing such an amazing work with no ai",
+            "comment": []
+        },
+        {
+            "text": "I love the website!",
+            "comment": []
+        },
+        {
+            "text": "Compiler should be called Bud.<p>Made an error? Hold your beer, Bud&#x27;s got your back: the Bud Wyzer compiler!",
+            "comment": []
+        },
+        {
+            "text": "The pitch is &quot;one ownership rule for memory, threads, and networks,&quot; but I think there are two rules in here and they pull against each other.<p>The resource rule as stated is linear: once you use a resource, you can&#x27;t use it again. Perceus is not that. Perceus exists precisely because values are shared — it inserts dup&#x2F;drop and then reuses the allocation in place when the count happens to be 1. If everything in the language were genuinely use-once, you wouldn&#x27;t need refcounting at all; a linear type system gives you the frees statically. The fact that Perceus is in the design implies aliasing is allowed, which means &quot;one owner&quot; is a description of the socket&#x2F;interrupt layer, not of memory.<p>That&#x27;s fine as a design — but then the elevator pitch is &quot;two rules that rhyme,&quot; and the FAQ&#x27;s central claim (&quot;you only need to learn one rule&quot;) is the thing I&#x27;d expect to break first under contact with real programs.<p>Related, and more concrete: Koka and Lean get away with RC partly because their data is overwhelmingly acyclic by construction. Your README shows var bindings and mutable struct fields. Mutation plus refcounting gives you cycles, and cycles leak. What&#x27;s the plan — a cycle collector, weak references, a type-level acyclicity restriction, or accepting the leak? DESIGN.md would be a good place to state it outright, because it&#x27;s the first question anyone with RC experience will ask.",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "Yawn",
+            "comment": []
+        },
+        {
+            "text": "The tests I could find for ‘choreographed programming’ were 1-2 lines long and demonstrated absolutely nothing, certainly nothing as elaborate as the research text is stating.<p>This is just slop",
+            "comment": []
+        },
+        {
+            "text": "syntax reminds me rust labguage.",
+            "comment": [
+                {
+                    "text": "this is a pretty common observation and yeah it sure is inspired by rust&#x27;s syntax a bit because i have been a rust dev since quite a long time so i&#x27;m much more in favor of it&#x27;s design philosophy as well",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; Wyzer supports standard if&#x2F;else, while, and for loops. Note that loops don&#x27;t need parentheses around the condition.<p>But <i>why</i>!? You know what&#x27;d be cool? If we started supporting control statements that were a bit more sophisticated!<p>```\ndo\n{\n}\nwhile (c)\n{\n  if (x) break foo;\n}\nelse\n{\ncase foo : ...;\ndefault  : ...;\n}\n```",
+            "comment": [
+                {
+                    "text": "open an issue we can discuss about it there :D",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; see a new programing language\n&gt; look inside\n&gt; it&#x27;s rust<p>asking out of my own ignorance, what&#x27;s so hard with rust that you cannot convince people and contribute to that directly instead of going on your way? i remember so few of these projects survived over the years. do you think it&#x27;ll really become something other than your pet project?",
+            "comment": [
+                {
+                    "text": "That&#x27;s a really bad attitude. &quot;You should work on the thing you dont like instead of the one you like because it might not be successful&quot;",
+                    "comment": []
+                },
+                {
+                    "text": "Rust is just hard.<p>It takes the fun out of this. I like JavaScript and Python. If I need to type system, there’s always type script and C#.<p>I don’t care about a bunch of memory management details, and if I ever want to I might as well use C++ and become a quant.<p>I learn a new programming language for one of two reasons, there’s a framework or engine that requires it. For example, Godot with GD script.<p>Or to make more money.<p>Python was a very happy mix of both, I learned it to work with ML libraries as a hobby and later found it pays a lot more.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Simplicity in the tag line but uses Result&lt;T, E&gt;. Should&#x27;ve followed Zig&#x27;s direction for error handling. With that out of the way looks like a fun little language.",
+            "comment": [
+                {
+                    "text": "Zig&#x27;s way is &quot;simple&quot; but not elegant, specifically since it hard codes how error handling is done. Algebraic data types are more elegant, since it can be used not just for error handling, but also other kinds of data modeling.",
+                    "comment": []
+                },
+                {
+                    "text": "if you think so then open an issue or contribute to it :D we can discuss about it and decide which is the best option",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&quot;Choreographic programming&quot;?<p>Are we just straight up inventing buzzwords now?<p>Hey guess what, I&#x27;m more into symphonic opus programming, none of that backyard dance-club programming for me thanks.<p>&#x2F;s [no hate, just laffs]",
+            "comment": [
+                {
+                    "text": "That is apparently the existing academic term. It&#x27;s got a Wikipedia page. But yes, all buzzwords were invented.",
+                    "comment": [
+                        {
+                            "text": "This confirms to me it was indeed originally intended as a buzzword then. :D<p>Nothing like establishing a new buzzword in a field to get them citations rolling.",
+                            "comment": [
+                                {
+                                    "text": "New? It stretches back industrially to the WS-* stuff in the early 00s (this is where the term originated), and on the academic side has roots in process calculi from the 90s and session types from the late 00s and early 10s.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

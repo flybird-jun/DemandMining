@@ -1,0 +1,492 @@
+{
+    "item_id": 49223475,
+    "title": "LinkedIn Feed Blocker",
+    "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
+    "text": "LinkedIn Feed Blocker\nA minimal Chrome extension that disables LinkedIn's home feed while keeping the rest of LinkedIn usable.\nInstall\nChrome Web Store:\nCurrently pending review. The listing will be available shortly\nhere\n. In the meantime, follow the\nmanual installation instructions below\n.\nWhat it does\nHides the entire main feed on\n/feed\nBlocks infinite-scroll feed pagination\nLeaves profiles, jobs, search, messaging, notifications, and other LinkedIn features alone\nWhy?\nI like LinkedIn for finding jobs and chatting with recruiters. I do not like being greeted by the wild-west social feed.\nAfter having \"experienced\" the Before image below, I decided to do something about it. Hence, this extension.\nBefore / After\nBefore\nAfter\nManual install\nDownload or clone this repository somewhere permanent on your computer.\nOpen Chrome and go to:\nchrome://extensions\nEnable\nDeveloper mode\nin the top-right corner.\nClick\nLoad unpacked\n.\nSelect the\nlinkedin-feed-blocker\ndirectory.\nReload LinkedIn.\nThe extension will remain enabled unless you disable or remove it from\nchrome://extensions\n.\nDeveloper Notes\nUpdating\nAfter changing\nmanifest.json\n,\nrules.json\n, or\nfeed.css\n:\nOpen\nchrome://extensions\nFind\nLinkedIn Feed Blocker\nClick\nReload\nReload LinkedIn\nHow it works\nfeed.css\nHides LinkedIn's main feed, including the post composer:\n[\ndata-testid\n=\n\"mainFeed\"\n] {\ndisplay\n:\nnone\n!important\n;\n}\nrules.json\nBlocks requests for additional main-feed posts by targeting:\nsduiid=com.linkedin.sdui.pagers.feed.mainFeed\nThe rule intentionally targets LinkedIn's\nmainFeed\npager instead of the generic pagination endpoint, which could interfere with other parts of LinkedIn.",
+    "comment": [
+        {
+            "text": "I&#x27;d love to be able to filter the feed so it only shows me actual posts by my connections. I do not care about comments my connections made on strangers&#x27; posts, and I surely do not care about posts by strangers that my connections &#x27;liked&#x27;.<p>Anyone know if such a tool exists?",
+            "comment": [
+                {
+                    "text": "Built one 6 years ago that I gave up on <a href=\"https:&#x2F;&#x2F;github.com&#x2F;mihailthebuilder&#x2F;simplyfeed\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mihailthebuilder&#x2F;simplyfeed</a>. The problem was that so many posts were filtered out that the feed would just show up empty.",
+                    "comment": [
+                        {
+                            "text": "I used a great one for FB until it stopped working, it blocked 95% of everything. Andrew Kelley had a good analogy in his <i>Don&#x27;t Take the Black Pill</i> talk:<p>&gt; the user-facing software of Facebook is categorically, fundamentally coercive. It&#x27;s like an arbitrary code execution exploit running on our brains. Scrolling down is the program counter, and the content that pops up is the instructions.<p><a href=\"https:&#x2F;&#x2F;andrewkelley.me&#x2F;post&#x2F;dont-take-black-pill.html#:~:text=Doomscrolling%2E\" rel=\"nofollow\">https:&#x2F;&#x2F;andrewkelley.me&#x2F;post&#x2F;dont-take-black-pill.html#:~:te...</a>",
+                            "comment": [
+                                {
+                                    "text": "Write a browser plugin&#x2F;userscript that, every time you hit &#x2F; on facebook, redirects you to &#x2F;?filter=all&amp;sk=h_chr<p>(In the age of AI it&#x27;s better to DIY it, IMO, because it&#x27;s one less bit of self-updating code you&#x27;ve downloaded from a stranger).",
+                                    "comment": [
+                                        {
+                                            "text": "Thanks for the tip, the hidden feeds are much nicer.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Tells more about the Linkedin-feed than the tool.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; The problem was that so many posts were filtered out that the feed would just show up empty.<p>Sounds like<p>1) it&#x27;s working as designed<p>2) your direct connections are normal human beings",
+                            "comment": []
+                        },
+                        {
+                            "text": "Sounds like a great feature!",
+                            "comment": []
+                        },
+                        {
+                            "text": "Because nobody posts anything and it is 90% bots?",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;m not at my computer, but I&#x27;ve got such a thing. It&#x27;s a ViolentMonkey script, something like LinkedIn Sponsor Block or similar. Does just what you need.",
+                    "comment": [
+                        {
+                            "text": "Are you able to get this script? Sounds delightful.",
+                            "comment": [
+                                {
+                                    "text": "Not the author, but here you go: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Hogwai&#x2F;LinkedinSponsorBlock&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Hogwai&#x2F;LinkedinSponsorBlock&#x2F;</a>",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "You can custom filter this with uBlock origin but sometimes linkedin changes the content blocks (e.g. from “x commented” to “x left a comment”) so you’ll need to do some maintenance.<p>Also, if you filter all the junk linkedin throws you’ll get some delay as ublock filters everything out.",
+                    "comment": []
+                },
+                {
+                    "text": "I use this: <a href=\"https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;linkoff-filter-and-custom&#x2F;maanaljajdhhnllllmhmiiboodmoffon\" rel=\"nofollow\">https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;linkoff-filter-and-...</a>",
+                    "comment": [
+                        {
+                            "text": "Just tried it, and it&#x27;s great! I like that the blocked posts are retained and minimized&#x2F;greyed out. That way I can see that it&#x27;s blocking 90+ percent of the posts.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Right, there are real posts from people I know hiding amongst the crap of promoted and suggested content. Not much, but it&#x27;s there. It would be a shame to miss something from someone reaching out after a layoff or posting a job position at their company.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you browse the mobile website instead of the app, after 6 or 7 posts it says &quot;LinkedIn is better with the app&quot; and then hits back on your browser either taking you back to the top or to another website. This is a very effective way to get me to close linkedin",
+            "comment": [
+                {
+                    "text": "Twitter&#x2F;X pioneered the space of &quot;I&#x27;d rather close the tab&quot;.",
+                    "comment": [
+                        {
+                            "text": "Before making it all hidden, I probably checked the website a few times a week when it was newsworthy. I haven&#x27;t been to the website since.",
+                            "comment": []
+                        },
+                        {
+                            "text": "X now has this really obnoxious animated finger tapping the button on mobile, and it makes me leave even faster.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "now do instagram",
+                    "comment": [
+                        {
+                            "text": "Instagram is even easier if you stay logged out. Sometimes you&#x27;re just blocked from doing or seeing anything except one page of thumbnails.<p>(instagram is very likely the absolute worst frequently-used site you could choose for your business&#x27;s hosting)",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "linkedin cares a lot about preventing people from changing how people view their website, and they have very effective DOM detection code which watches for manipulation like this. So if you use this extension it&#x27;s very likely that your account will be shadowbanned, meaning you won&#x27;t show up in searches (e.g. if you are a job seeker you&#x27;ll stop getting cold outreach from recruiters), your posts will be less visible or invisible if you have any, and whatever other arbitrary restrictions linkedin&#x27;s algorithm puts on your account which might even include stifling normal communication from your connections. And if you don&#x27;t care about any of those things you might be better off without linkedin in the first place.",
+            "comment": [
+                {
+                    "text": "Do you have any sources for this? (Even anecdotal such as conversations with people in the know)<p>I recently built myself a good tool that blocks all sponsored, promoted and recommended posts, and it&#x27;s been incredible. This information if true would be a genuine concern!",
+                    "comment": [
+                        {
+                            "text": "Plenty of discussion about this on HN over the last six months<p>&lt;<a href=\"https:&#x2F;&#x2F;github.com&#x2F;mdp&#x2F;linkedin-extension-fingerprinting\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mdp&#x2F;linkedin-extension-fingerprinting</a>&gt;<p>&lt;<a href=\"https:&#x2F;&#x2F;browsergate.eu&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;browsergate.eu&#x2F;</a>&gt;",
+                            "comment": [
+                                {
+                                    "text": "What about the shadow ban claim?",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "that has nothing to do with linkein shadowbanning jobseekers.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "If that were true, wouldn&#x27;t shadowbanning a worker, who entrusted the monopoly to be matched with job market opportunities, be arguable grounds for a lawsuit for great economic&#x2F;existential harm?",
+                    "comment": [
+                        {
+                            "text": "Try proving it.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Instead of this I use Leechblock to cut the &#x2F;feed access after 2 minutes, to prevent doomscrolling (no DOM change)",
+                    "comment": []
+                },
+                {
+                    "text": "Please add any disclosures.",
+                    "comment": [
+                        {
+                            "text": "I don&#x27;t work for linkedin and never have. I wrote myself a greasemonkey script with a similar purpose a while ago &amp; learned about this while trying to research if I would be violating linkedin&#x27;s ToS by sharing it. Anecdotally, the amount of recruiter spam I had in my inbox went from one or two per day to almost none while I was using said script.",
+                            "comment": [
+                                {
+                                    "text": "so you were presenting some of your theories as facts in your comment?<p>maybe change the wording so as not to mislead ppl. I used a script like OP for many years and was never search banned from job search.<p>recuriter spam has nothing to do with shadowbanning. it ebbs and flows.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Don&#x27;t threaten me with a good time!",
+                    "comment": []
+                },
+                {
+                    "text": "Flagged for obvious BS with no factual basis.",
+                    "comment": []
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Something I discovered recently: if you stop following everyone you’re connected to, Linkedin’s feed breaks so you get this by default. I can still interact with everyone normally, send messages, etc, but I do not see any Linkedin content, ads, etc. Do not miss it.",
+            "comment": [
+                {
+                    "text": "That used to be the case, and I loved the empty feed. But, i noticed that it started showing me the default feed of all the AI slop people post which linkedin thinks is relevant to my field. The current way that worked for me was to select ‘Chinese - Simplified’ as the language and since I don’t understand it, I am not remotely curious to read the cringe. I now Only see if there is any messages i receive (which aren’t translated). Basically, in and out of the website in 15 seconds if no messages&#x2F;connect request! Works like a charm for now.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Just add this to uBlock origin:<p>```\nlinkedin.com##main#workspace section:has(div[componentkey*=&quot;container-update-list_mainFeed-lazy&quot;])\n```",
+            "comment": [
+                {
+                    "text": "Works like a charm on brave browser filter lists - thanks!",
+                    "comment": []
+                },
+                {
+                    "text": "or via stylus<p>new style for feed -&gt; paste:<p>[data-testid=&quot;mainFeed&quot;]{display:none}<p>in full:<p>&#x2F;* ==UserStyle==<p>@name           www.linkedin.com&#x2F;feed<p>@namespace      github.com&#x2F;openstyles&#x2F;stylus<p>@version        1.0.0<p>@description    A new userstyle<p>@author         Me<p>==&#x2F;UserStyle== *&#x2F;<p>@-moz-document url-prefix(&quot;<a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;feed&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;feed&#x2F;</a>&quot;)<p>{<p><pre><code>    [data-testid=&quot;mainFeed&quot;]{display:none}\n\n}</code></pre>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "My feed is filled with startup&#x2F;VC&#x2F;recruiter people liking vibe-orientated junk economics or junk science more than AI. Would love to see a browser like Orion or UBlock Origin just build this in as a feature.",
+            "comment": [
+                {
+                    "text": "Or, and I know this is novel to the subliterate Wall Street types, just show me my network. I&#x27;ll even give up on chronological feed if they&#x27;ll just show me the people I want to see. I don&#x27;t care what an HR Recruiter for a regional organic pet supply company in western Canada has to say about crypto.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; My feed is filled with startup&#x2F;VC&#x2F;recruiter people liking vibe-orientated junk economics or junk science more than AI.<p>so basically it&#x27;s &#x2F;r&#x2F;linkedinlunatics&#x2F; ?",
+                    "comment": [
+                        {
+                            "text": "or basically anybody who has an opinion about vibecoding but isn&#x27;t actually a programmer<p>The number of times I&#x27;ve heard &quot;SaaS is dead&quot; irl and flustered responses when I asked &quot;what does that mean?&quot; is comically too high.",
+                            "comment": [
+                                {
+                                    "text": "&quot;Claude, build me an implementation of the fidelity.com trading site, make no mistakes&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Exactly, and the rest is people showing LLM-generated games (that look nothing more than SDK samples&#x2F;tutorials) with ridiculous claims",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I didn’t realize the LinkedIn feed was a problem for people. Literally the only thing that makes me use that site is when the safety&#x2F;shelter tier of Maslow’s pyramid is at risk.",
+            "comment": [
+                {
+                    "text": "If your safety&#x2F;shelter tier is at risk, the last thing you need to see is the LinkedIn feed.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Why do people use LinkedIn? I think I had an account for 10 years and all I got was recruiter spam.<p>Coworkers all use it. For what I don’t know. None of them were hired from there.",
+            "comment": [
+                {
+                    "text": "I missed out on the heydey of LinkedIn tech hiring frenzy, because I was just doing my work (on a very small, super-effective team), and didn&#x27;t want to be on sketchy LinkedIn.  Then an SF colleague told me what I had been missing out on, and that other people were job-hopping constantly, and making many times more than I was making.<p>That job market era is past, but now I think of LinkedIn as a serendipity lottery ticket.  Because you&#x27;re on LinkedIn, some founder or hiring manager or legitimate recruiter doing a keyword search stumbles upon you, some past colleague can see you&#x27;re available, etc.<p>(Though the last recruiter I agreed to a call with there sounded possibly delegated to LLM, then said his colleague would be doing the call.  On the recruiting firm&#x27;s Web site, I saw the colleague&#x27;s title was Customer Success, so the recruiter wasn&#x27;t even willing in invest in the call like I was.  Also on their site, they had an infographic example placement success... and the featured example was into what might be the most infamous tech company right now.  I bowed out of that one last week, but I&#x27;m keeping the LinkedIn lottery ticket.)",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; Why do people use LinkedIn?<p>I used it to follow Lumon Industries.<p>But at some point when I turned on 2FA linkedin locked my ~15 year-old account and demands that I upload ID to a 3rd-party for verification, which I&#x27;m not going to do.",
+                    "comment": []
+                },
+                {
+                    "text": "I use it to keep tabs on competitors, finding out what potential prospects are posting, mapping out relations between companies in our focused industries, etc. Basically for new business signals.<p>It’s a great additional channel to find recent info on companies and people. Sites are usually stale, people post a ton of stuff on LinkedIn. We don’t get our clients through linkedin, but it gives our salespeople better angles to attack.<p>We used it for recruiting but it’s not great for that, tons of low quality replies. We never reach out, i personally hate that.",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "It’s nice I can send LinkedIn instead of keeping my resume up to date and redoing it<p>I have gotten jobs through contractions on it, which materially improved my life.<p>And I have old acquaintances that I like to know what they’re up to&#x2F;to keep options open.",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s more or less expected that candidates have one, at least in tech&#x2F;eng jobs I&#x27;ve looked at. For some, the field to enter your profile URL is required in the form.",
+                    "comment": [
+                        {
+                            "text": "Ew. What purpose does that serve?",
+                            "comment": [
+                                {
+                                    "text": "It&#x27;s for the ATS to check out the candidates and scrape attributes to rank them.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "2 out of my last 3 jobs were the result of LinkedIn recruiter spam",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "But then how will I possibly know that someone in my network achieved a new highscore in puzzle solving??",
+            "comment": [
+                {
+                    "text": "Games, on what was (initially) a professional networking site. Late stage of the platform.",
+                    "comment": [
+                        {
+                            "text": "<p><pre><code>  Tony Dingus has finished Zip! Will you be next?</code></pre>",
+                            "comment": [
+                                {
+                                    "text": "Seriously. It is like if The Onion made a linkedin it would just be a direct carbon copy of how the site already is. They probably got a team of data scientists running ml on Zip! metrics.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Heh, maybe if that had been thought of earlier. Meanwhile what I didwas just delete my linkedin account. Not much good could come of it anymore anyway I don&#x27;t think.",
+            "comment": [
+                {
+                    "text": "So many jobs have a LinkedIn page as a required field",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I use News Feed Eradicator (works for Instagram, Facebook, Reddit, HN etc etc) it&#x27;s wonderful and has changed my life! <a href=\"https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;news-feed-eradicator&#x2F;fjcldmjmjhkklehbacihaiopjklihlgg?hl=en\" rel=\"nofollow\">https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;news-feed-eradicato...</a>",
+            "comment": []
+        },
+        {
+            "text": "There&#x27;s another way to get this exact same effect without a chrome extension and requires two steps:<p>1. Change your &quot;Preferred feed view&quot; to &quot;Most recent posts&quot; here:  <a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;mypreferences&#x2F;d&#x2F;settings&#x2F;preferred-view\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;mypreferences&#x2F;d&#x2F;settings&#x2F;preferred-...</a><p>2. Unfollow every connection (N.B., this doesn&#x27;t mean remove connection, just that you won&#x27;t see their posts).<p>If you do this, it wipes your feed clean and will literally display &quot;Something went wrong&quot; where your feed used to be.<p>This has made LinkedIn truly blissful for me, but this only seems to work on the LinkedIn web app on my PC. Doesn&#x27;t work on the mobile web app for some reason...",
+            "comment": [
+                {
+                    "text": "This is what I do, but on the phone, the iOS app at least, it respects the unfollow preferences and displays that &quot;Something went wrong&quot; message.",
+                    "comment": [
+                        {
+                            "text": "I guess I really should download the iOS app when browsing LinkedIn on my phone then! Thanks for the tip.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "My version of a feed blocker was to delete my account. Realized i was getting no value by being there, finally just let it go.",
+            "comment": [
+                {
+                    "text": "I just unfolllowed everyone I’m connected to. It says, “Something went wrong,” and, “we’re having issues loading this page,” in the app; but, I still see suggested posts or some shit on the mobile web. I don’t see anything on the desktop site, however.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is still my preferred way on Safari, no extensions needed. It uses custom style sheets in the Safari &gt; settings menu. <a href=\"https:&#x2F;&#x2F;x.com&#x2F;BlancoTech&#x2F;status&#x2F;2061521432085955039\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;BlancoTech&#x2F;status&#x2F;2061521432085955039</a>",
+            "comment": []
+        },
+        {
+            "text": "I used to waste lots of time scrolling LinkedIn, I don’t really know why as it was never great but sometimes you learned something interesting.<p>Now I find it the opposite of addictive because of how bad it is. It’s just AI slop, both the copy and the pictures, there’s virtually no hope of anything engaging. Maybe it’s just me, it feels like AI has broken their algorithm, there’s nothing at all worth showing. Even the stupid business parables are all worse because they’re just Claudeslop.<p>Anyway what I find most interesting is I recently signed up for twitter for work (to like some posts in a campaign). I hadn’t looked at twitter in years, but found now it’s almost exactly the same as LinkedIn (the “for you”) part, it’s just inane AI engagement farming that is so uninteresting you don’t want to scroll for more.<p>Anyway, that’s dead internet theory, I think they’re both done (either that or the algorithms know me really well and just recognize my unadmitted love of AI slop about tips for getting cheap airfare or something)",
+            "comment": [
+                {
+                    "text": "The best Linkedin feature these days is the intrusive &quot;DOWNLOAD OUR APP&quot; popup on mobile. That makes me close the tab &amp; browser 10&#x2F;10 times.",
+                    "comment": []
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The web, at least on the interface side, is really easy to customize these days. Agents are pretty good at spinning out Chrome extensions.<p>e.g. you can easily reduce the intensity of feed-based UI by removing thumbnails, grayscaling, etc.",
+            "comment": [
+                {
+                    "text": "100%! Being able to tailor this made the website a much more pleasant experience for myself. Planning to experiment with other sites as well",
+                    "comment": []
+                },
+                {
+                    "text": "I spun up an extension to open links in incognito, something that wasn&#x27;t possible with the native desktop webpage that would always refer you back to a linkedin link to redirect.",
+                    "comment": []
+                },
+                {
+                    "text": "Been adding ad-hoc OFX export to more than one bank&#x27;s site using Greasemonkey for exactly this. Scroll the page, suck up the transactions, I no longer need to wait on the bank to do shit properly. I am reasonably sure if someone can bundle all of these pieces up, there&#x27;s a small subscription service in letting people configure the web through a chat window.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is awesome. I love tools like these.<p>Reminds me of DF (Distraction Free) YouTube but for LinkedIn. Tools like these make these platforms usable for me. The feeds are too addictive",
+            "comment": []
+        },
+        {
+            "text": "Why would somebody doomscroll such garbage content? I understand why people get hooked on tiktok or instagram reels but linkedin posts?",
+            "comment": []
+        },
+        {
+            "text": "Things like this are genuinely useful when being mindful of what you consume on the internet, especially the unsolicited &#x27;recommended&#x27; posts",
+            "comment": []
+        },
+        {
+            "text": "I’ll never understand why LinkedIn is making these product choices. They have a legitimate moat, I and basically every other tech worker is  exclusively on LinkedIn. They devalue their product by chasing engagement in service of ads, while allowing things like juicebox to scrape and steal their most valuable asset.<p>This is short term, make it to next quarter thinking. You couldn’t pay me to use their AI product, they should focus on making that actually work, get the slop out of the feed, and be professional and distinct from TikTok, Facebook, instagram etc.",
+            "comment": [
+                {
+                    "text": "Most people genuinely want that, even if they say they don&#x27;t. It&#x27;s the only reason I can think of why low-value posts get so many likes.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Scrolless is another tool I&#x27;ve found helpful for this, by a fellow hn-er: <a href=\"https:&#x2F;&#x2F;festudio.net&#x2F;scrolless&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;festudio.net&#x2F;scrolless&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "I used to maintain a project called LikeBuster back when Facebook started polluting your news feed with people&#x27;s likes in. It was a lesson in how brittle DOM-based filtering was. Makes me miss times when a few well-placed CSS selectors could drastically improve your web experience.<p>Per Cory Doctorow, this is exactly why every website is trying to push you to their app -- so that they have legal grounds to prosecute anyone who tries to find workarounds to the constant enshittification.",
+            "comment": [
+                {
+                    "text": "<a href=\"http:&#x2F;&#x2F;fbpurity.com&#x2F;\" rel=\"nofollow\">http:&#x2F;&#x2F;fbpurity.com&#x2F;</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is great. My LinkedIn feed has been dominated by people regurgitating stuff they read on HN a week before, just in an algorithm friendly click-bait way.",
+            "comment": []
+        },
+        {
+            "text": "Ha, I built a similar one for Facebook (I just use a UserScript though). I mostly just want Marketplace and Buy Nothing Groups for it.",
+            "comment": []
+        },
+        {
+            "text": "I had to mark LinkedIns marketing and notification emails as spam and block their sender since all their opt out toggles are broken",
+            "comment": []
+        },
+        {
+            "text": "My biggest question is why isn&#x27;t there something better than Linked In? I get the network effect but Linked in is crap.",
+            "comment": [
+                {
+                    "text": "To solve the network effect you need something 10x better than what people are jumping ship from. Even if you had a cleaned up version of LinkedIn, it wouldn&#x27;t be so dramatically better that enough people migrate to reach critical mass.",
+                    "comment": []
+                },
+                {
+                    "text": "Because a non-crap product wouldn&#x27;t be worth $26B. What you perceive as crappiness is the sauce that keeps you coming back.",
+                    "comment": []
+                },
+                {
+                    "text": "There absolutely is something better than LinkedIn; it&#x27;s email and phone contact. But everybody expects you to be on LinkedIn.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "LinkedIn, especially LinkedIn, is like everyone is playing soggy biscuit.<p>And you are the biscuit.<p>&gt; <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Soggy_biscuit\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Soggy_biscuit</a>",
+            "comment": []
+        },
+        {
+            "text": "These ublock rules work badly, but OK, if you don&#x27;t want to install an extension:<p>www.linkedin.com##[data-lazy-mount-id]<p>www.linkedin.com##div[data-lazy-mount-id][data-component-type=&quot;LazyColumn&quot;]<p>LinkedIn makes this hard for some reason, and keeps updating how it works. The above is functional but also breaks some stuff.",
+            "comment": [
+                {
+                    "text": "My suspicion is that it&#x27;s by design, to fight scrapers and extensions like this one.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Why not simply using ublock and a custom filter?)",
+            "comment": []
+        },
+        {
+            "text": "I honestly understand the idea but removing the entire feed might be a bit much at least for a job seeker. I&#x27;ve certainly found about interesting companies, fellowships, jobs, etc randomly on the feed so I wouldn&#x27;t want it gone entirely. Granted any sort of &quot;it&#x27;s tailored to who you follow&quot; is kinda BS so basically don&#x27;t think too much when using linkedin might be the best way to use it",
+            "comment": []
+        },
+        {
+            "text": "I recently got what I hope to be my last job ever, and I cannot wait to banish linkedin to the netherrealm forever.  It&#x27;s just so creepy, I don&#x27;t want people to be able to find my face, where I work every day, and whole job and education history when they google my name.",
+            "comment": []
+        },
+        {
+            "text": "this was much needed, thank you.. the feed is a massive distraction",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;ve been experimenting with posting on LinkedIn and realized what the deal is. Basically it&#x27;s a lot less hostile than other social media for people with no pre-existing audience: on Twitter you can post and nobody cares, in HN you can submit and nobody cares, on Substack you can write a personal blog post and google doesn&#x27;t care to show it in search results, on Youtube you make a video and nobody cares, etc. (And let&#x27;s set aside even more difficult stuff like making a podcast and hoping anyone cares)<p>Meanwhile on LinkedIn if you post your thoughts on something, share an article, or mention a project they give you a good push to at least a few dozen people and you may see a like or two from a 3rd degree contact(!) within minutes. And then they aggressively SEO the feed too so now if someone Googles your name your LinkedIn posts will show up",
+            "comment": [
+                {
+                    "text": "What’s the best possible outcome from posting on LinkedIn? I personally think it’s a poor place to “build your brand” - it’s mostly your friends or existing professional acquaintances that see your stuff, and whether you’re looking for a job or trying to do business development, those people are rarely your target market. I think the engagement is better because you have a natural “following” of all your friends &#x2F; colleagues, but it’s meaningless.<p>This is par for the course for Li, I’ve found it seems to be about activity or making you feel like you’re doing something, without actually getting any value and in reality just scrolling social media.<p>YMMV of course, maybe there are real people who’ve had great value from posting?",
+                    "comment": []
+                },
+                {
+                    "text": "It sounds like a modern Twilight Zone premise. There&#x27;s one social network left where any engagement is possible, but it&#x27;s the one where nothing worthwhile is being said.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "just unfollow everyone.\njob done",
+            "comment": []
+        },
+        {
+            "text": "The site itself is slow<p>The site doesn&#x27;t have... an identity. Other than &quot;being fake&quot; with everyone showing off corp-speak to everyone else. Which is a human thing, except that the platform is full of recommendations and spammy notifications<p>Seriously - can *anybody* make a product, even once, that people actually like?",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;d built a small extension for myself to ignore posts that included words like thrilled, excited, and so on.",
+            "comment": []
+        },
+        {
+            "text": "Should block the puzzle games whatever fuck that is on the right too",
+            "comment": []
+        },
+        {
+            "text": "This could be a simple filter in uBlock Origin, no need for another extension.",
+            "comment": [
+                {
+                    "text": "Agreed. I don&#x27;t have adblockers installed atm, so used this as an opportunity to experiment with a smaller extension. Good to know for the future though, thank you!",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;ve been using a simple uBlock Origin filter, and it works OK only. LinkedIn work very hard to stop people scraping, which means they regularly seem to shift the structure of their layout, and descriptors are weird. If this guy did a regularly-updated FF extension, I&#x27;d probably preferentially install that.",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

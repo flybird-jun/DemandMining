@@ -1,0 +1,22 @@
+```json
+{
+  "topic": "Interactive web visualization overlaying modern political boundaries (countries, cities) on top of Earth's tectonic plate reconstruction through geological time (past and future)",
+  "users": [
+    "Geology enthusiasts and amateur earth scientists",
+    "Educators and students in earth sciences and geography",
+    "Data visualization hobbyists and developers",
+    "Paleogeography researchers and science communicators",
+    "Puzzle/game players interested in geospatial visualizations"
+  ],
+  "pain_points": [
+    "Existing paleogeographic visualizations (e.g., GPlates web portal, PALEOMAP, Deep Time Maps) are static images or require heavy desktop GIS software to interact with",
+    "Difficulty in intuitively connecting modern-day locations with their deep-time positions without specialized training",
+    "Most interactive tectonic reconstructions are slow, dated in UI/UX, or behind paywalls (academic licenses)",
+    "Limited accessible tools for showing both past and future plate motion in a single, smooth interface",
+    "Hard to share or embed custom time-based tectonic views in articles, classrooms, or social media"
+  ],
+  "existing_solution": "GPlates desktop application (powerful but steep learning curve), GPlates Web Service / GPlates Desktop tutorials, PALEOMAP static maps, Christopher Scotese's paleogeographic videos, Merdith 2021 model raw data files requiring Python/pyGPlates expertise to render",
+  "opportunity": "A polished, embeddable SaaS platform for interactive paleogeographic visualization targeting educators, science museums, and content creators. Could offer: (1) one-click time-slider UI for past/future tectonic reconstruction with modern overlays, (2) classroom/presentation embed widgets, (3) annotation layers (fossil sites, climate zones, biodiversity hotspots overlaid on past plates), (4) exportable video/animated GIF clips for YouTube/social media, (5) curated educational 'tours' (e.g., 'where was your hometown 200 Mya'), (6) API for researchers to plug in custom rotation models. This Show HN proves demand and feasibility; the gap is a consumer/education-friendly product rather than a research tool.",
+  "score": 72
+}
+```

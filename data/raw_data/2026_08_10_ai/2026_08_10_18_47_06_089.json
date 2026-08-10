@@ -1,0 +1,29 @@
+```json
+{
+  "topic": "Blender MCP（Model Context Protocol）维护者的 GitHub 账号被黑及其对开源生态的影响",
+  "users": [
+    "Blender 用户与 3D 创作者",
+    "MCP（Model Context Protocol）工具的使用者与开发者",
+    "AI 辅助编程/3D 建模的早期采用者",
+    "开源项目维护者",
+    "依赖第三方包的开发者"
+  ],
+  "pain_points": [
+    "对开源供应链安全的担忧：恶意代码可通过被入侵的维护者账号注入到合法包中",
+    "缺乏自动化的依赖安全审计工具，开发者难以快速判断自己是否受影响",
+    "从 GitHub 克隆或更新项目时无有效警告机制，存在执行恶意代码的风险",
+    "MCP 等 AI 工具通常需要执行系统命令，权限范围广，一旦被入侵后果严重",
+    "手动检查 commit、版本差异和可疑行为耗时且容易遗漏",
+    "账号安全防护薄弱（缺乏 2FA、密钥轮换、异常行为告警等）"
+  ],
+  "existing_solution": [
+    "GitHub 的 Dependabot 和安全告警",
+    "npm/pip audit 等包管理器内置安全检查",
+    "Snyk、Socket 等第三方供应链安全扫描工具",
+    "手动审查 commit diff 和 GitHub 账号状态",
+    "Sigstore / GitHub Artifact Attestation 等签名验证方案（采用率低）"
+  ],
+  "opportunity": "构建一个面向 AI 工具链（尤其是 MCP、Claude Desktop 插件、Cursor/VSCode 扩展等）的实时供应链安全监控与沙箱执行平台。该平台可：1) 实时监控关键依赖维护者的账号安全状态（如 GitHub 异常登录、权限变更）；2) 在拉取/更新 MCP 或 AI 插件时自动进行行为沙箱分析，检测可疑的 shell 命令执行或网络外联；3) 提供'受影响范围一键排查'功能，自动扫描用户的本地环境中是否安装了被污染的版本；4) 为开源维护者提供免费的账号加固建议与密钥管理工具。差异化点：聚焦 AI Agent 工具链这一高权限、高风险的细分场景，弥补通用 SCA 工具对 MCP 类工具覆盖不足的痛点。",
+  "score": 78
+}
+```

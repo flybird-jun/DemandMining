@@ -1,0 +1,102 @@
+{
+    "item_id": 49238735,
+    "title": "Turn satellite imagery into a paper globe you fold yourself",
+    "url": "https://foldingglobes.com/",
+    "text": "",
+    "comment": [
+        {
+            "text": "Icosahedron is the classic? I have never ever seen an icosahedron globe in my life, neither real or digital. What in the world happened in the brain or artificial neural network when that title was picked for an icosahedron “globe”?",
+            "comment": [
+                {
+                    "text": "I&#x27;ve seen them in many novelty gift or travel shops in Europe.<p><a href=\"https:&#x2F;&#x2F;www.rimemo.com&#x2F;e&#x2F;wap&#x2F;show.php?classid=5&amp;id=29\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rimemo.com&#x2F;e&#x2F;wap&#x2F;show.php?classid=5&amp;id=29</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Clearly the classic <i>of polyhedral globes</i><p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dymaxion_map\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dymaxion_map</a>",
+                    "comment": [
+                        {
+                            "text": "My personal favorite is Authagraph, when folded they make a really neat looking shape. I bought one years ago at a paper store and it’s still standing.<p><a href=\"https:&#x2F;&#x2F;narukawa-lab.jp&#x2F;archives&#x2F;authagraph-map&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;narukawa-lab.jp&#x2F;archives&#x2F;authagraph-map&#x2F;</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; No pins yet — your globe works fine without them, but a “you are here” makes it a gift.<p>(in exasperation) How does that make it a gift?",
+            "comment": []
+        },
+        {
+            "text": "6.95 or point my LLM at the site and copy the simple idea.",
+            "comment": [
+                {
+                    "text": "Almost every idea is copyable. Digital ideas are even easier to copy.<p>Here&#x27;s the antidote: <a href=\"https:&#x2F;&#x2F;kevinkelly.substack.com&#x2F;p&#x2F;better-than-free\" rel=\"nofollow\">https:&#x2F;&#x2F;kevinkelly.substack.com&#x2F;p&#x2F;better-than-free</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Decades spent building tools to freely copy and fork each other’s code, only to arrive at a future where people pay tokens to do the same thing with added noise. Progress.",
+                    "comment": [
+                        {
+                            "text": "Well you can still freely copy free software.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Definitely not an unethical thought cause this is 100% vibe-coded. <a href=\"https:&#x2F;&#x2F;mapscaping.com&#x2F;podcast&#x2F;i-have-been-making-ai-slop-and-you-should-too&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;mapscaping.com&#x2F;podcast&#x2F;i-have-been-making-ai-slop-an...</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Now that we have foldable phones, is there a (round) digital globe  (like the classic ones) which I can control with an app and for example show me the current world map with &quot;live&quot; weather and all flights from flight radar? If such a globe would exist I would buy one even for a couple of thousand dollars. Just to have all kinds of &quot;live&quot; maps directly in front of me on my desk.",
+            "comment": []
+        },
+        {
+            "text": "Some interesting comments <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49093845\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49093845</a>",
+            "comment": []
+        },
+        {
+            "text": "The icons for the different shapes don’t really make a lot of sense. It’s not really obvious how some of them work and many are quite unlike the actual pattern (which you have to scroll down to see on mobile).<p>Also Cahill–Keyes M, which I’ve never heard of or seen before,  is described as “the classic M”. That’s not really helpful.",
+            "comment": []
+        },
+        {
+            "text": "Do people still buy .. globes?",
+            "comment": [
+                {
+                    "text": "I see them on sale, so probably they do. However, regardless of whether they do or do not, if they have kids they should. Globes communicate so much better than maps.<p>In fact even better is to build one.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is pretty great! To the creator(s) if they’re around in here: if you’ve ever dreamed of a smooth, unified transition between the product’s actual scan .svg and the 3D simulation[1], I have some old code[2] for simulating origami paper folding in three.js that could handle this elegantly. It works by drawing faces based on rotating springs at each edge, anchored at two points each and executed in a (hierarchical) procedure.<p>The repo’s in a messy state of primarily-artificial cleanup atm (fml tbh, btw) but it should be trivial to pull out the parts you’d need for a one-off &amp; one-step sim like this.<p>Apologies if obvious lol — it’s getting harder and harder these days to judge that<p>[1] obviously get why you’re not loading 3D on pageload, so worth pointing out that the same might be possible here with a clever .svg&lt;-&gt;.ts swap.<p>[2]: <a href=\"https:&#x2F;&#x2F;gitlab.com&#x2F;doering-ai&#x2F;apps&#x2F;origami\" rel=\"nofollow\">https:&#x2F;&#x2F;gitlab.com&#x2F;doering-ai&#x2F;apps&#x2F;origami</a>",
+            "comment": []
+        },
+        {
+            "text": "This was up a week ago",
+            "comment": []
+        },
+        {
+            "text": "neat idea. hate the vibecoded website. Not even changing the default colors.",
+            "comment": []
+        },
+        {
+            "text": "Website is a bit scuffed on mobile",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "Good on you for creating something fun, but vibing something up and then trying to charge for it, when anyone else could produce the same product for less, is poor taste.",
+            "comment": [
+                {
+                    "text": "Why is it poor taste? He is not preventing anyone. Neither is he evergreening patents.<p>Many things that are on the market can be made and sold by someone else for less.<p>If you want you can put up a GPL version.",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

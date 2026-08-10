@@ -1,0 +1,549 @@
+{
+    "item_id": 49238561,
+    "title": "What Happened to HackerOne?",
+    "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+    "text": "Table of Contents\nTable of Contents\nSo…what’s going on at HackerOne lately? It might be time for a wellness check.\nIf you are new to the bug bounty space (1-3 years), you might not have any idea what I’m talking about.\nBut as a properly washed-up bug bounty hunter who lived through the golden era of HackerOne, I think it’s time to address the elephant in the room.\nFor some context, I started as a hacker on HackerOne in 2017. When I began working in tech, that hands-on experience was extremely useful for managing a bug bounty program, since I knew what researchers wanted, and how to interact with them.\nAs a result, I have managed multiple large bug bounty programs on HackerOne across various companies from 2018 to 2025 and I’ve been on both sides of the equation.\nWhat I’m about to talk about comes from first-hand experience, both as a researcher and as a bug bounty program manager, and many, many years of direct conversations with HackerOne, both publicly and privately.\nBackground\n#\nTo start, I think it’s important to realize what HackerOne was originally designed to be.\nIn 2011, two ethical hackers, Jobert Abma and Michiel Prins, set out to find security vulnerabilities in 100 of the largest tech companies. They succeeded and found bugs in Google, Facebook, Apple, Microsoft, Twitter, and many others. At this point in time, the landscape for ethical security research was risky, legally dubious, and very scary for security researchers.\nNot only was there significant personal liability, but there had been multiple instances of hackers being criminally charged and sentenced to jail time for finding and reporting security vulnerabilities prior to this. Much of this was due to specific arbitrary lines drawn in the sand which, if crossed, made you a bad actor, but if not crossed, made you a potentially bad actor but technically not one.\nBug Bounty Platforms like HackerOne were designed to directly address this issue. It created a safe mutual space for companies and hackers to connect, and it paved the way for ethical hackers to submit security vulnerabilities to companies, with full consent, and get paid for that work. This was a huge milestone. You no longer had to worry about getting dragged to court (or jail) for finding an IDOR that leaked customer data. Instead, you got a “thank you” and a cash payout for making everyone a little safer.\nThis operating model was the foundation for bug bounty and remained that way for the next 5+ years.\nThe Golden Age of HackerOne and Live Hacking Events\n#\nDuring this period, there was a very strong and explicit focus for the business: how do we make this the best possible product for hackers?\nThe people running the business day-to-day were hackers, hacker-adjacent, and most (if not all) were face-to-face with hackers on a regular basis.\nFrom 2017 to 2020, HackerOne was doing Live Hacking Events (LHEs) every few months. These were exclusive events where the top bug bounty researchers around the world would fly into a location, be given a target, and go absolutely ham finding critical vulnerabilities. LHEs were a huge value prop for programs. During a 1-3 day period, you would get more high and critical security reports than you would have received for the whole year otherwise.\nEvery event had a 1-of-1 custom designed poster with graphics, hacker usernames, stickers and challenge coins. It’s hard to overstate what an incredible and productive period this was for HackerOne and their top programs.\nThese events were exclusive and highly coveted; invites and +1s were practically their own currency. And the environment at these events was surreal. You would be given free flights and hotels around the world, and spend a few days surrounded by the best and most skilled bug bounty hunters in the world. These researchers would regularly find some of the most impactful bugs using their own novel techniques, and all while sharing tips and tricks in one-off conversations that could not be replicated anywhere else.\nPrior to the advent of live hacking events, most security researcher circles were small, isolated, and sharing information publicly was practically unheard of. LHEs created a way for security researchers to connect with each other, and essentially created a whole new community within infosec. Most of my closest friends nowadays are people who I met through the live hacking scene, and I am extremely grateful to HackerOne for that.\nLHEs were not the only area where HackerOne was building and establish a community for security researchers. They created a\nHackerOne Community\nspace to organize meetups, online events, workshops, and CTFs. They created regional clubs, and appointed hackers who lived there as ambassadors to help foster and grow local researcher communities all around the world.\nBut slowly but surely, things began to change. The community groups and events lost momentum and fizzled out. The custom designed silkscreen LHE posters became cheap low-effort laser prints. The people who had dedicated years to creating and running incredible events were laid off or left. The LHE invitation and scoring systems became (even more) exclusive, gamified, and exceedingly calculated.\nSo one by one, the dominoes began to fall.\nThe Profit Problem\n#\nBefore going further, I think it’s important to get into the “why” behind these changes that started happening. Sometime around 2020 or 2021, HackerOne was forced to come face-to-face with a very important question that every business must ask itself at some point: “How do we make money?”\nTo understand how HackerOne even was able to survive as a business, you have to first know that HackerOne was basically running entirely on VC money for the first 10 years of its existence. Between 2014 and 2022, the company did a seed round almost every 2 years, raising a total of $160M. If a company is self-sustaining, there is little-to-no reason to continue raising money unless you have an incredibly high burn-rate, which would be odd for a company with such little infrastructure and technical innovation.\nIf you know anything about VC, you know how this tends to work; they give you money, and in return, you give them indirect control of the business through board seats, advisory positions, and other leverage mechanisms. The VCs gave the money, so the VCs get the power.\nRome did not fall in a day, and neither did HackerOne. The paradigm shift started slowly, and then all at once. The core technology driving the platform began to stagnate. Very little changed within the platform. The UI remained tired and “functional”. The performance remained lacking.\nBut the VCs looked at their playbook and realized that the easiest way to make money was simple: get more customers.\nFirst, the founding CEO was replaced with a corporate CEO. Instead of a 20% cut of bounties paid, they shifted to capacity-based fee structures, annual contracts, and locking customers into multi-year deals.\nAnd then, sales. SALES SALES SALES!! They were fully convinced that sales were the bread and butter of the business. So instead of basing the company around hackers, they leaned into sales.\nMore customers = more annual contracts = more predictable long-term revenue. Once a customer is locked in, they are fed stats and numbers and greased up to keep them happy, but also to keep demands low. When contract renewal comes up, they are given massive (30-60%) discounts in exchange for a multi-year contract in order to keep them locked in and paying.\nAccount Managers would have regular meetings with customers and encourage them to raise bounties to stay competitive and attractive to hackers. They would tell you, “Hackers want to spend time focused on the highest-paying programs”.\nHackerOne was proud of this and encouraged the behavior internally. They gave out rewards,\nfree vacations\n, and encouraged their rapidly growing sales team to sign new customers as much as possible.\nAs this continued, things continued to degrade for everyone involved.\nFor triagers, the best ones (who were hackers themselves) burned out and quit. The pay was too low and the workload was too much.\nFor hackers, the triage experience declined, and they became flooded with excessive amounts of low-quality programs.\nFor customers, the quality of reports went down, the costs went up, and the race to the bottom began.\nAnd for everyone, the platform experience declined and never evolved.\nTypically at this point, market economics would dictate that this is where a competitor takes your business and you must improve to retain market share. But bug bounty is an oligopoly, and there are 3 companies that control almost the entire market.\nSo instead, HackerOne was forced to create a new exclusive opportunity called the “Hacker Success Program” (HSP). This is a dedicated space for top hackers to get direct support from HackerOne for anything bug bounty related. They were assigned to a Hacker Success Manager (HSM) who was employed by HackerOne, and they could leverage that relationship to navigate miscommunications, bad program experiences, low or inaccurate bounty payouts, and much more. They also use this space to offer unique opportunities like H1 challenges for hackers in the HSP group.\nOne thing I want to call out is that while this is a great idea in theory, in practice it created a completely lopsided playing field for new hackers. You have basically zero ways to advocate or work through problems (good luck working with HackerOne support), so the rich get richer and you are given the option to deal with it or get lost unless/until you are a top hacker. Oddly enough, it would be much easier to become a top hacker if you had access to these resources in the first place.\nAnyway, for some hackers, the HSP revolutionized what was previously an impossible brick wall. If you got screwed over by a company who failed to understand the security impact of your report, you could now lean on your HSM to help get a direct line of communication to the company and try to resolve that.\nBut for others, the HSP highlighted one of the core underlying failures that has plagued HackerOne for years: stagnating feature development. Even if you are part of the exclusive HSP group, you\nstill\ndon’t have the ability to do one important thing, which is to invoke change and development within the platform.\nAnd yet, for some reason, HackerOne decided to take a performative approach to this, going as far as to create a dedicated platform feedback channel, but doing absolutely nothing with any of that feedback. I cannot even count how many pieces of individual feedback and suggestions have been posted in there, with positively zero action from HackerOne.\nThe AI Era\n#\nAnd then, around 2021, we all entered a new period of human history: the rise of AI and LLMs.\nBeginning around this time, we all began to witness the huge gains in velocity and the capabilities of LLMs. You could now one-shot features in a fraction of the time, build custom tools, and overall get more done in less time.\nBut this is where HackerOne took a confusing turn. It is truly baffling to me how HackerOne managed to fumble this technology in the worst way possible. They had a 10-year backlog of feature requests, and were handed one of the most powerful software development tools in the last 50 years. But instead of using this to improve the platform and add long-requested features, they decided to move toward creating “their own” AI assistant called Hai. Not only was Hai just a wrapper on top of OpenAI, but it barely had any real unique capabilities to help hackers or programs do what they had been requesting from HackerOne to add to the core platform.\nOn top of this, the driving force behind the company, the hackers and co-founders who started the business, were quietly shoved away into the dungeon of HackerOne. The website has them listed as part of the executive team, but they are puppets in their own business, barely getting to work on the product they built from the ground up.\nThe Enshittification of HackerOne\n#\nFor almost 10 years, Marten Mickos served as CEO of HackerOne. Some hackers loved Marten; others had mixed feelings. Personally, my interactions with him were somewhere between fine and good. But I do believe that he was very passionate about bug bounty and did a lot of good for the company during his time as CEO.\nBut in late 2024, Marten was replaced by Kara Sprague, the former Chief Product Officer at F5. You might be asking yourself, what does a CPO of a networking company know about hacking and bug bounty?\nHonestly, I am not sure. What I will say is that there are\nmixed signals\nonline regarding what happened to BIG-IP during her time as CPO at F5.\nBut that didn’t stop the board from deciding she was the right fit for the future of the company. And this was neither the first nor the last in a series of questionable business decisions made by HackerOne.\nAs AI agents continued to grow and shift into various identities, HackerOne’s identity also began to shift. Slowly but steadily, HackerOne rebranded itself around a newly invented industry category: “CTEM”, or “Continuous Threat Exposure Management”.\nHackerOne quickly began to evolve into a soulless corporation obsessed with numbers, business objectives, and B2B sales. They switched from talking about bug bounty programs, live hacking events, and how they could help you stay secure, to promoting their in-house AI security product and continuous security monitoring tool.\nWait, what? What in-house AI security product?\nYour Reports Are Yours, We Promise\n#\nSometimes, it all starts with a tweet.\nIn February 2026, well-known hacker\nzseano\nnoticed\nthat there was a surge in HackerOne employees leaving the company and asked why that would be happening.\nThis ended up revealing that HackerOne had made ToS updates which made it so that reports submitted on HackerOne could be used to train AI models.\nAs you might expect, this created quite a bit of noise, especially within the HSP chats. One thing I’ve noticed is that the modern day HackerOne only ever lets the founders out of the dungeon for damage control, and this was a perfect time to pull that lever.\nWithin 24 hours, Alex Rice, co-founder, CTO (and CISO…?) of HackerOne emerged from the dungeon to perform damage control. (This was the first time he had ever messaged in the HSP general chat since it was created two years earlier).\nWe do not train, fine-tune, or otherwise improve GenAI or large language models on researcher data. That includes Agentic PTaaS.\nhttps://docs.hackerone.com/en/articles/10908081-hai-security-trust\nAnd when asked to remove Section 3.1 of the ToS, Alex promised that this would be taken care of and made clearer in an upcoming update to the ToS.\nWithin a week, CEO Kara Sprague had been looped in and made a fluffy\nLinkedIn post\nexplaining that\nHackerOne does not train generative AI models, internally or through third-party providers, on researcher submissions or customer confidential data.\nResearcher submissions are not used to train, fine-tune, or otherwise improve generative AI models. This applies across our platform, including capabilities used within our Agentic PTaaS offering and our in-platform AI, Hai.\nAlex Rice even went on to the Critical Thinking Bug Bounty Podcast and did a guest spot to talk about this issue specifically and shut down any concerns about report data being used to train AI models.\nAmazing, that’s settled then. HackerOne doesn’t use researcher data to train AI models.\n…Right?\nJust Kidding They Never Were\n#\nUnfortunately for us, the present-day HackerOne follows a rather impressive PR damage control playbook:\nAddress fears\nEase concerns\nDon’t change anything\nAbout two months after this drama, someone mentioned in the HSP chat that they had noticed a comment from\nhackerone-agent\non one of their reports and wanted to know if this was an AI agent or an actual human.\nThe response from one of the HackerOne product managers was:\nThis is a preliminary review done by AI […] The H1 triage process has a step called “H1 Intake” […] which we’ve automated for certain reports to make sure they reach the “Validation team” faster.\nAnd when asked whether “certain reports” meant certain report types or whether a program could enable it everywhere, they responded:\nWe’re running the analysis on all reports, the AI determines what can be sent directly to the validation team vs what needs to be reviewed by a human from the intake team first. […] The system also learns from behaviour so, if a recommendation is rejected […] it will take these into account with its recommendations as well.\nHang on a second.\nI thought that researcher submissions are not used to train, fine-tune, or otherwise improve generative AI models.\nBut now all reports are being run through an AI system, and the system is using the outcomes of those reports to influence how it handles future reports. So is that technically “fine-tuning”? Technically, no.\nSo how can both of these things be possible?\nWell, when I asked this, I received an incredible copy-paste response of what Alex Rice had said back in February:\nHai does not train, fine-tune, or otherwise improve GenAI or large language models on customer or researcher data:\nhttps://docs.hackerone.com/en/articles/10908081-hai-security-trust\nThey then followed up with an explanation that appeared to contradict this:\nStoring learnings in our DB is something different than training/fine-tuning a model on how to behave. We store the rejection reasons in our DB to cross reference and augment the reasoning the agent does when determining next steps. […] The agent will pick this up from behaviour the customer has done on past reports and use that to memorize and augment the reasoning for new reports.\nSo yes, HackerOne is not building model weights from your report data or “training” on it in the traditional sense.\nBut that is a distinction without any meaningful difference to the researchers whose data is being used. The system is still learning from report data in the practical sense that matters: past reports change future automated behavior.\nCall it memory, retrieval, contextual learning, or whatever you want. For the purpose of deciding whether researcher data is being used to improve the system, the distinction is functionally equivalent.\nAnd as a cherry on top, a few days later, HackerOne published\na blog post\nstating:\nAs AI-assisted submissions have grown, we’ve invested heavily in AI-powered triage and validation on our own platform. Our agentic AI system, Hai, now handles initial classification, deduplication, and validation of incoming reports, working alongside our human security analysts.\nThe Boiling Point\n#\nBy this point, I had lost all faith in HackerOne. I’d been around for so many years and through so many seasons that there was really no point in leaving anything off the table.\nSo I posted a long message in the HSP chat, echoing many of the things I’ve said in this blog.\nWhat happened as a result was actually really surprising: many other top hackers in the HSP agreed, echoed the same concerns, and called for change.\nI figured, surely HackerOne will have to respond to this.\nAnd they did.\nCo-founder Michiel Prins was allowed to leave the HackerOne dungeon to perform damage control with this absolute banger of an AI slop response:\nYou’re right to call this out. Parts of the platform and overall experience have not moved fast enough, and that’s frustrating.\nWe have been prioritizing work that improves outcomes for both customers and researchers. Triage is a clear example. Speed and consistency there have improved materially, and that matters for everyone on the platform. Report Assistant may not be targeted at the caliber hacker in this channel, but it has been a significant enhancement for the largest part of the community - hackers earlier in their career - and this has led to much clearer reports for triage to analyze and accelerate overall throughput.\nAt the same time, there is a bigger shift happening with AI. There is a lot of noise about AI replacing security researchers. We do not believe that. We are investing to make sure researchers become more important, not less. A lot of that work is happening on the customer side of the marketplace.\nThat said, the gap you are pointing to on day-to-day usability and acting on feedback is real. We need to do a better job there, and we need to show that progress more clearly.\nAnd then, per the playbook, they waited for the community to move on, brushed it under the rug, and nothing changed.\nWe Must Calm the Masses\n#\nWell that was true until June, when\nrez0\n(co-host of the Critical Thinking Bug Bounty Podcast) asked about the new “\nHackerOne Continuous Testing\n” product that had just launched:\nThe page (before it was updated) very clearly stated:\nTesting is sharpened using context from HackerOne’s 12+ years of real-world vulnerability data and your prior H1 Bounty findings, so agents know where to focus\nHackerOne immediately tried to run this back and claim that this was actually not true. I find it hard to understand how a company can be so incredibly disconnected from its own values, but only when it’s brought up by hackers who look closely and ask questions.\nAll the behavior over the last few months embodies “oops we didn’t mean to say the quiet part out loud”, and certainly not “we don’t do that”.\nAnd honestly at this point if you have to do this much damage control, you might as well just own it.\nI won’t even begin to break these statements down because there’s so much word soup that it’s mind-numbing.\nAs I write this post, I am exhausted from trying to perform the mental gymnastics required to believe all this.\nActions speak louder than words, and it’s pretty clear at this point what’s going on.\nFeel free to skip ahead, but in an effort to be fair I’ll provide the replies from not one but\ntwo\nHackerOne co-founders (wow a double dungeon release):\nNo change in direction. There is zero training on researcher data.\nThis language isn’t even talking about vulnerability discovery. What happens when you point a “recon agent” at an attack surface?\nNoise.\nThat’s the context being talked about here – Scope. Out of scope. Informative. Ineligible findings. This same contextual feedback loop is available to researchers (and, increasingly, their agents) through our intake agents & full triage process.\nWe continue to need to do much better on accompanying simplified marketing language with technical architecture documentation, and we need to do a better job at reinforcing the defense in depth narrative – there are no silver bullets here. Nowhere in our vision is a 100% AI human-free future.\n- Alex Rice\nand\nSorry for the confusion this paragraph has caused. It was meant to capture how our recon agents find out where to focus and where not to focus based on prior results in a customer’s program (mapping the attack surface), not find new vulnerabilities based on researcher submissions. We have adjusted the paragraph in the\nH1 Continuous Testing page\nand buttoned up our documentation. H1 Continuous Testing is based on the same approach and methodologies as the H1 Agentic Pentest offering announced in January. Here is the\ndocumentation\non how those agentic products reason & use context for security testing workflows.\nBut let’s focus on the underlying concern: is H1 using researcher submissions to then deploy agents and find that vulnerability using their techniques in other customers? No.\nThat is a model that can be a win-win-win for everyone in the long run, but we don’t yet have the foundations in place to provide proper recognition and rewards for researchers in such a model. We’re envisioning a platform where researchers drive the frontier, agents provide the scale, and researchers get proper recognition for their impact. Imagine this: you discover a novel technique to find a vulnerability. We operationalize it across every customer’s attack surface that shows signs of exposure. Customers get protected. You get compensated not just for one report, but proportionally to the impact you generate across the platform. That is fundamentally a better deal for researchers than the current one-bounty-per-report model. And it is also a win for customers as it narrows the exposure window.\nBut the reality is that it’s just a vision right now. We are not there yet. This requires careful work across product, policy and researcher engagement models to build it right. Right now, we are still focused on building foundational agentic capabilities for testing, accelerating validation and triage, prioritization, and remediation. These have to work reliably first before we can layer on a researcher-driven attack library and incentive model that does justice to the contribution. We also owe it to customers not to just dump findings on them without the tooling to act on them.\nThe long term is about partnership, not replacement. We want to build incentive structures that support this vision. It’s unexplored territory, and we want to get it right with you.\n- Michiel Prins\nalong with a\nHackerOne official™ tweet\nto calm the masses:\nConclusion\n#\nToday as I look at HackerOne, it’s hard to even recognize the company that was started back in 2012. The values have shifted, the soul has been gutted, and the core identity has been lost. A sad ending for our hero’s journey.\nSo, where do we go from here?\nWell, I have some final thoughts for each party involved in this twisting tale.\nTo HackerOne:\nIt was nice knowing you. All I can hope is that you can find your true identity again one day. Although I doubt that will ever happen.\nTo the founders:\nI hope you got paid well, that you can exit, and that you go do something cool again.\nTo the hackers:\nKnow your worth. Bug bounty platforms cannot exist without hackers.\nTo the companies:\nYou don’t need HackerOne anymore. The tokens to build your own in-house platform cost less than single year of HackerOne.\nAnd to whoever is fired up:\nThe market is ready for a disruption. The tools are in your hands. Build what HackerOne could have been.\nGodspeed and thanks for reading if you made it this far.",
+    "comment": [
+        {
+            "text": "&gt; To the companies: You don’t need HackerOne anymore. The tokens to build your own in-house platform cost less than single year of HackerOne.<p>You know, the biggest thing that HackerOne delivers is a universal payments system that requires absolutely no efforts from companies. Have you tried to manually pay hackers from around the world? It is a laborious process involving trying to find what providers are compatible and what forms of money go where. It is extremely taxing to handle this. HackerOne provides real, tangible value in not making people think about how precisely to pay a hacker and in what currency. No amount of tokens solve the accounting problem, and it is foolish to imply otherwise.",
+            "comment": [
+                {
+                    "text": "Yep, spot on - this and some level of inbound filtering are the only reason we use an external platform.<p>That said, with the volume of inbound reports coming from LLMs, the signal-to-noise ratio has plummeted, and the time taken to triage has gone through the roof.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; universal payments system that requires absolutely no efforts from companies.<p>Indeed. I use a third party company (not HackerOne) to handle our bug bounty and the primary reason is so they handle all the payment hassles, I don&#x27;t need to be involved. They also handle all the screening for false positives, which in the AI age are exploding. I also don&#x27;t want to deal with that.<p>In general I lean towards building in-house, but this is one area I&#x27;m happy to oursource all the busywork.",
+                    "comment": []
+                },
+                {
+                    "text": "This and the pre-triage are the only reasons we even use a bug bounty platform.<p>If paying out bounties was easy I would do it all via email; but as you said it’s almost impossible to do (unless you are maybe bigcorp and have a team just for that)",
+                    "comment": [
+                        {
+                            "text": "I worked at a big corp and we paid out randoms for a program (not bug bounty). It was an absolute minefield, people would lie to us about where they were located only for us to find out they’re in &lt;insert sanctioned country here&gt; and then legal tells us we have to pay them but we’re not allowed to at the same time.<p>Outsourcing all that mess is a great use of money.",
+                            "comment": [
+                                {
+                                    "text": "Yea we also handled it ourselves the first couple years but it was so painful. Literally the same thing you described happened - as well spending weeks+ how we need to file it as tax when we pay bounty to someone in Pakistan etc.",
+                                    "comment": [
+                                        {
+                                            "text": "Are you in the US? You simply collect a W8 from them that you keep on file and then the payment would be counted as an expense on taxes. We do payout to hundreds o f affiliates every year and this is how we handle it, it&#x27;s really not complicated. The actual payments are done via Wise batch payments which just requires their email address.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "My largest problem with H1 is how braindead scripted&#x2F;AI their triage is.<p>- Starting scenario: no way to contact a company outside of H1 (or some other managed programme)<p>- The company is compromised, their customer support has no idea what this means, they have no security.txt or any other security contact<p>- I have explicitly told H1 to just forward it with no bounty, I don&#x27;t want a bounty, only remediation, I do not care about a bounty or any reward<p>- H1 closes as &quot;not eligible&quot; and tells me to not submit stuff I can&#x27;t prove it&#x27;s my compromise by putting my username on it<p>- Corporate server is still compromised and being used as a proxy to brute force my services",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Interesting. Do you think they are using something like Deel&#x2F;Stripe to handle a lot of this ? i mean to figure out the &quot;paying ppl around the world&quot; complexity ... also local payment methods .. currencies .. compliance .. tax docs etc ?",
+                    "comment": []
+                },
+                {
+                    "text": "Literally just pay them in bitcoin. They&#x27;re hackers, they&#x27;ll be able to deal with it.",
+                    "comment": []
+                },
+                {
+                    "text": "Just pay them in stable coins. That&#x27;s a solved problem.",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s not just the transfer of cash.<p>It&#x27;s <i>also</i> complying with tax and employment laws in the country the hacker is in, to the satisfaction of your legal and finance teams.<p>Sure, in western-style legal systems you can call them a contractor and they can pay their own tax. Just don&#x27;t employ them full time for long enough to trigger &#x27;sham contract&#x27; rules that would make them employees.<p>But your corporate legal team doesn&#x27;t have anyone trained and licensed to give advice on Tajikistan tax and employment law, so they can&#x27;t approve this proposed contract without hiring an outside legal expert. And of course all suppliers, regardless of country, must agree to our anti-slave-labour policy which permits audits of...<p>One might say &quot;skip that nonsense, just send the money&quot; - but the larger the company, the more their in-house infosec becomes a load of uptight squares who love compliance and audit. And the kind of companies that can pay out five-figure bounties tend to be pretty large.",
+                            "comment": [
+                                {
+                                    "text": "Why would you or anyone in your American company care about complying with Tajikistan law?",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "PITA for a large company to handle stable coins etc with accounting, etc",
+                            "comment": [
+                                {
+                                    "text": "Also PITA for people as well, we have a 33% tax on crypto selling here in Italy on profits…",
+                                    "comment": [
+                                        {
+                                            "text": "stablecoins arent crypto in EU anymore, its e-money. No tax on converting to euros.",
+                                            "comment": [
+                                                {
+                                                    "text": "IIRC all cryptocurrency that&#x27;s money is money (so bitcoin, ethereum, etc but not necessarily project-specific tokens) and if you happen to make or lose money on a currency conversion it doesn&#x27;t have tax implications.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "But we are talking here about assets you just receive. Not buy and resell.",
+                                            "comment": [
+                                                {
+                                                    "text": "You can&#x27;t buy bread with stable coins",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "why its fucking high ??",
+                                            "comment": [
+                                                {
+                                                    "text": "Italy has progressive taxes on salary, with marginal rates from 23% to 43%. The latter on income above €50k<p>And if you&#x27;ve got taxes like that on earned income - shouldn&#x27;t people with unearned income pay just as much? If your tax on investment gains is too small, you end up with an economy where the salaried worker renting a house pays more tax than their landlord, who owns ten houses.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "Same in a lot of countries - he said profits - it’s a taxable gain like any other asset or holding.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "I don&#x27;t know. It used to be 26%, like capital gains from shares, securities, etc. but since 1st January 2026 crypto is taxed at 33% unless it&#x27;s euro stablecoins (still 26%).<p>At this point, I think most crypto investors in Italy will just evade taxes altogether.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Im working on a solution to this. If you are interested pls email me at jommi(at)megaeth.com",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Buying stable coins is a mild pain because so many banks think crypto is radioactive.  Then you have to wait for your deposited funds to completely settle before you can withdraw the crypto from your account and send it elsewhere.  Doable, sure.  Easy &amp; convenient, not so much.  I wouldn&#x27;t call it a solved problem in the same way you can hand someone cash, tap to pay with your phone, or pay by scanning a QR Code.",
+                            "comment": [
+                                {
+                                    "text": "Not anymore! Most places allow this very easily now.",
+                                    "comment": [
+                                        {
+                                            "text": "Exactly. Revolut is a bank that allows cryptocurrencies.<p>HN really is living in their own bubble.",
+                                            "comment": [
+                                                {
+                                                    "text": "Revolut does not have a banking license in the US. At the moment they are a front for another bank. Don&#x27;t be gullible and believe blindly what the marketing departments tell you.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "It works in Europe, which is one of the few advantages we have over the US.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "No it doesn&#x27;t. You can gamble with it, but it doesn&#x27;t let you own or send it.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Skip the crypto, cut out the middle man, and just pay the hackers in cocaine directly from the board of director&#x27;s supply.",
+                            "comment": [
+                                {
+                                    "text": "Probably a similar ecological footprint to Bitcoin too...",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "You got downvoted, but sadly we have 2026 and it&#x27;s still not easy to send money to any bank in the world. You can say a lot of bad things about the crypto world, but thats a problem Bitcoin solved two decades ago.",
+                            "comment": [
+                                {
+                                    "text": "bitcoin is neither cheap and stable",
+                                    "comment": [
+                                        {
+                                            "text": "Nor safe. Good luck recalling a wrong crpyto transaction.",
+                                            "comment": [
+                                                {
+                                                    "text": "If the recipient is identifiable they legally have to give the money back and you can press charges if they don&#x27;t.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "Can&#x27;t do that with cash either, yet lots of people are using that.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "it&#x27;s a problem only if you can accidentally 100 000 dollars in cash, most of us can&#x27;t (the amount of paper makes it tricky)",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "&gt; Good luck recalling a wrong crpyto transaction.<p>No better than recalling a wrong bank transfer or Zelle transaction.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Wrong bank transfers can&#x27;t get recalled? I know I disputed a debit card transaction and got my money back the other month",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "In Canada, every bank has Interac e-Transfer, essentially we can easily email or text either other money.  It&#x27;s really wicked, and I&#x27;m always amazed other places like America don&#x27;t have it built into their bank accounts and have to use 3rd-party apps to handle sending money to each other.<p>But anyway, the point is that it tells you every single time you send a transfer that way to be careful, because you can&#x27;t undo a transfer after it&#x27;s been sent.  I&#x27;m assuming it&#x27;s the same for most methods of bank transfer?  I mean, debit transactions are surely a different beast.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Banks can always <i>try</i> to undo a transaction - it&#x27;s just not guaranteed to work. AFAIK, credit&#x2F;debit card reversals are always reversible because if the merchant doesn&#x27;t have the money, it becomes their bank&#x27;s problem to get the money or eat the loss. This works because the merchant is easily identifiable, well known, and has a reputation to uphold (at least to their bank). Other methods of transfer don&#x27;t come with such contractual protection, but can still have best-effort.",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Many solutions nowadays.<p><a href=\"https:&#x2F;&#x2F;www.payoneer.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.payoneer.com&#x2F;</a> is one of them. Of course this one is a bit racist depending on which contry you were born in.",
+                    "comment": [
+                        {
+                            "text": "Race and country of origin are not the same",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I know Joel well and think a lot here is both accurate and well written. I led the Yahoo bug bounty program from 2023-2024 and was involved in it from about 2021. A major event that this glosses over is Covid which also happened right around this time as well. Covid killed travel (and budget) which in turn made it impossible to do the live events. A lot of companies ended up shifting to virtual live events which just never delivered on the same value, scale, or impact.<p>When COVID restrictions were lifted, travel and t&amp;e budgets just never returned. Layoffs started happening and what were lavish, expensive events just couldn’t happen anymore. Hackerone charged for and likely made a lot of money on these events. I think a lot of what is talked about in the article is true but I think Covid is a big part of the why that led to it.",
+            "comment": [
+                {
+                    "text": "&gt; travel and t&amp;e budgets just never returned.<p>It is also worth remembering that the cost of travel itself, and the cost of venues itself has also increased substantially.  As well as associated costs such as catering and insurance.<p>So in-person events have issues from both sides, those attending and those hosting.<p>You also do not mention corporate policies. Under pressure from investors, their employees and sometimes their home-countries, many corporates have also introduced environmental policies.  So if you want the company to pay for your flight, you not only have to justify it financially, but you have to justify it environmentally too.",
+                    "comment": [
+                        {
+                            "text": "Cost of <i>everything</i> has increased massively, but they tell us inflation is 4%.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Sending the sales team on a paid vacation to a tropical paradise while the engineering product flounders is such a perfect representation of corporate rot it sounds like something out of a Mike Judge movie",
+            "comment": [
+                {
+                    "text": "Presidents club is a standard way to reward top performing sales reps across many industries. It doesn&#x27;t indicate anything other than the company is trying to reward and retain their top sales reps. Engineers who find it distasteful should be happy to know engineers typically get way more equity than sales reps.",
+                    "comment": [
+                        {
+                            "text": "<i>Engineers who find it distasteful should be happy to know engineers typically get way more equity than sales reps.</i><p>That isn&#x27;t true. Early sales employees (&#x27;customer success&#x27;, &#x27;technical sales&#x27;, &#x27;growth&#x27;, maybe product roles) get just as much equity as engineers who join at a similar time. The difference is that engineers often join earlier, with the commensurate risk that comes with.<p>Also equity <i>rarely</i> pays out so you&#x27;d need to be comparing the probability of an exit that actually rewards the share class that engineers get, whether or not they&#x27;ve been diluted to nothing, whether there&#x27;s a secondary market to sell on before an exit event, etc. It also depends on whether someone even <i>wants</i> the potential reward equity gives them over the more tangible rewards of money and perks.<p>Comparing this stuff is hard.<p>The point here though, is that the company is rewarding sales people at a time when the product is doing poorly, which <i>implies</i> the leadership team care more about selling a bad product than turning it into a good product. I hope that&#x27;s not the case because it used to be a good platform.",
+                            "comment": [
+                                {
+                                    "text": "Technical sales and customer growth also don’t get the cut of sales that usually the actual sales reps do.<p>In general i think sales reps make more money overall but have a much more stressful job and can get axed whenever they underperform for a quarter etc",
+                                    "comment": [
+                                        {
+                                            "text": "Having done sales before, I can assure you that it&#x27;s <i>differently</i> stressful rather than more stressful. Trying to sign a customer for a substantial booking is stressful, but so is deploying a complex change that you can&#x27;t roll back. There&#x27;s hard things about every role.<p>Engineers can also be axed at any time for performance. They&#x27;re fortunate that most companies are bad at measuring that, but they&#x27;re also subject to things like stack ranking at very bad companies (fire worst 10% every year) so it&#x27;s certainly not better to be in eng rather than sales.<p>Ultimately all roles have aspects of them that suck, so you need to find the one that sucks least for you.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "That is a Silicon Valley thing, around the world you get a regular office salary and that&#x27;s it.",
+                            "comment": [
+                                {
+                                    "text": "First of all it&#x27;s not just SV - all of US sales is like this. Second, if you&#x27;re talking about Europe - base&#x2F;variable comps split may not be 50&#x2F;50 but it&#x27;s often the same OTE structure with some modifications due to local legalese",
+                                    "comment": [
+                                        {
+                                            "text": "I am talking about software developers, not sales.<p>I never seen this on my 30+ years on the job, other than being an early joiner to startups, equity isn&#x27;t a thing.<p>&gt; Engineers who find it distasteful should be happy to know engineers typically get way more equity than sales reps.<p>At very best, some companies might offer some kind of fixed bonus, if you over delivered as part of the KPI&#x2F;OKR&#x2F;whatever goals for the year, or the profits were nice enough that everyone gets a cut.",
+                                            "comment": [
+                                                {
+                                                    "text": "",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "Agree on the equity, afaik it’s due to how eager European countries are to tax illiquid shares on exercise instead of on sale like in US.<p>Even without the equity part i think most engineers should be thankful for not having to hit their kpis to get full paycheck",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "This one looks shocking on the outside indeed! It&#x27;s however a sales HR practice: lower salary and commission, but use the alluring treat that top performers will have a special exclusive trip at the end of the year. Many are crazy for it.<p>It&#x27;s more a reward for a competition-style work mindset.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;m confused at the way they promoted it. Is there any way someone outside the company reading a Twitter post would consider this a positive thing for the product to be told what incentives the sales team get?",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s not aimed at consumers of their product.<p>Someone outside the company who was thinking of joining a B2B sales team, and who likes tropical vacations, might react positively to this post.<p>Or a potential investor might be impressed to see the company has a mature sales pipeline and plenty of revenue to reward its top salespeople.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "if i&#x27;m working for a company i sure hope they&#x27;re sending their sales reps to a tropical paradise, and if they don&#x27;t, i hope i don&#x27;t own any equity.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I reported some exploits on hackerone.<p>Most got dismissed.<p>One of them, a remotely triggerable DoS vector got downgraded in severity. I got a token payment from the company, and 7 years later, it is still not marked as resolved.<p>I doubt my situation is unique.",
+            "comment": [
+                {
+                    "text": "Yeah I reported a j-frog vulnerability to Anthropic. It was downgraded to “informative” and they asked me to prove that I could exfiltrate data. I replied that exfiltrating data is against their program’s safe harbor policy and they just never responded. 2 months later the claude code source code leaked.",
+                    "comment": [
+                        {
+                            "text": "Hacking someone who asks you to hack them is legally safe even if not written in their default policy",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "One of my only bug bounty payouts was a DoS against a site via their customer query engine. I was quite proud of it, and was relieved when they actually paid out a token amount.<p>It took down the entire application for all users and tenants, not just the tenant submitting the poisoned query.<p>I don&#x27;t remember how much I was paid, a token amount for sure, but I was happy with any amount because it was a hobby and any payment was good for the CV.",
+                    "comment": []
+                },
+                {
+                    "text": "Most bounty programs won&#x27;t pay for DoS at all.",
+                    "comment": [
+                        {
+                            "text": "it isn&#x27;t simple request flooding, it is application level resource exhaustion",
+                            "comment": [
+                                {
+                                    "text": "Yeah, I figured that&#x27;s what you meant, and most bounty programs won&#x27;t pay out for stuff like that. <i>Every</i> application has those bugs; on a software pentest, we&#x27;d sev:lo them.",
+                                    "comment": [
+                                        {
+                                            "text": "Some of them can have 1 rpi take down a full 100 node cluster, so sure sev:lo but the cyber insurance often want them fixed anyway. But it will probably take it happening before C-suite decides that 0 revenue is a problem.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I reported a security bug, it was all processed very quickly and I got paid. I doubt my situation is unique.<p>I think it would be the individual companies slowing things down, not the platform.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "<i>Not only was there significant personal liability, but there had been multiple instances of hackers being criminally charged and sentenced to jail time for finding and reporting security vulnerabilities prior to this.</i><p>I don&#x27;t think this is true, although it&#x27;s a very commonly-held belief. Dan Goodin (I think?) wrote an article about this a long time ago, and was only able to come up with a few examples, and none of them fit this fact pattern.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16642155\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16642155</a><p>What is true is that it is much less legally risky to test <i>someone else&#x27;s computer</i> than it was 10-15 years ago. People forget that&#x27;s what you&#x27;re doing when you look for web vulns! The DOJ has had a norm over the past ~many years not to prosecute good-faith vulnerability research, even though strictly speaking it contravenes CFAA directly. But &quot;risky on paper&quot; is the most you could say about doing that kind of testing back in 2010.",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;m.slashdot.org&#x2F;story&#x2F;159162--\" rel=\"nofollow\">https:&#x2F;&#x2F;m.slashdot.org&#x2F;story&#x2F;159162--</a> example circa 2011<p>I can think of 4-5 other situations from around that era (~2012) where people were at least charged and needed a lot of help to navigate the legal proceedings to avoid jail time.<p>In 2010 it was more than risky on paper.<p>2017-2018 is well into the established era and probably even the golden age of bug bounties when a lot of corporate and judicial thinking re: white hat cybersecurity had been shifted.",
+                    "comment": []
+                },
+                {
+                    "text": "Maybe in the US but see eg germany: <a href=\"https:&#x2F;&#x2F;binsec.wiki&#x2F;en&#x2F;pentesting-guidelines&#x2F;pt-legal-framework&#x2F;pt-germany&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;binsec.wiki&#x2F;en&#x2F;pentesting-guidelines&#x2F;pt-legal-framew...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Doubt, I’d argue it’s the opposite given the term “vulnerability research” is being overloaded to include things such as F12 on a school website.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "They got corpo touched?",
+            "comment": []
+        },
+        {
+            "text": "It got the executives it paid for",
+            "comment": []
+        },
+        {
+            "text": "All good things don&#x27;t last forever. A organization or company lasting forever with the same goal&#x2F;mission while using the same methods is a statistical anomaly.",
+            "comment": [
+                {
+                    "text": "What is the corrupting force?",
+                    "comment": [
+                        {
+                            "text": "The joy&#x2F;energy and human element being reduced. Or sometimes it&#x27;s profit greed. Or it could just be due to economic conditions at the time. There are lots of ways for organizations to fall. Pick your poison.",
+                            "comment": []
+                        },
+                        {
+                            "text": "The people who cared leave and are replaced by people who just want a job.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Bureaucracy is a major one, as it tends to dissipate more and more resources to sustain its own infrastructure, neglecting the core mission (J. Pournelle&#x27;s Law).",
+                            "comment": []
+                        },
+                        {
+                            "text": "Usually money.",
+                            "comment": [
+                                {
+                                    "text": "Often preceded by the waning of the passion and self sacrifice that enables things to happen without money.<p>It’s sad when it’s asymmetric - founders lose their idealism and sell out while early employees fail to notice the game has changed.<p>But dreams are rarely enough to keep things going.  And VCs know just what to say to make it seem like the dream and the money can coexist.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Yep.<p>It can be power - see Reddit and Wikipedia mods - but it&#x27;s usually money. And once VC fundraising is involved, it&#x27;s pretty much always money.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Which is another way to say &quot;viability&quot;.",
+                                    "comment": [
+                                        {
+                                            "text": "Not always.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&quot;You can divide our industry into two kinds of people: those who want to go work for a company to make it successful, and those who want to go work for a successful company.&quot; -- Jamie Zawinski",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I am in this space. The reality is that the margins for a Bug Bounty Hunting platform are not good, triage is very expensive specially with all the AI slop that gets submitted now. You can hide it for a long time with VC money, but they need to diversify their product line to continue growing and compete against the AI pentest compagnies (which themselves will also diversify as AI pentest becomes a feature and not the whole product).",
+            "comment": [
+                {
+                    "text": "I agree. They have quality data to build an effective AI pentest product that is good enough, and they already have a good offering to bundle that into and satisfy enterprise demand.<p>Up and coming AI pentest companies need to have an exceptional product to get a chance to stand on their own and penetrate the enterprise market, otherwise their best scenario is an acquisition to get bundled into an established platform.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "money happened. it corrupts all. once there is enough of it going around people lose all senses and just want more.",
+            "comment": [
+                {
+                    "text": "See also, the influx of spooks into various hackerspaces during the Snowden&#x2F;Assange era.  I truly believe there was an effort to subvert these communities, and thats what happened.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Bug bounty programs were overrun with low-effort slop nearly a decade before LLMs were introduced; I can&#x27;t imagine what they&#x27;re like now...",
+            "comment": [
+                {
+                    "text": "You don&#x27;t want to. It&#x27;s exactly as bad as you think. I would say ~90% of reports are false now as opposed to ~40% before LLMs.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I once interviewed there, and it was the weirdest interviews of my life.<p>They literally asked me to prepare on the company mission and values.<p>The first round was about generic stuff where nothing much was asked. And ironically, despite transparency being their core mission, they didn&#x27;t tell me I was rejected until I emailed them about a week later.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Honestly, you could sub the other big Bug Bounty platform for H1 in this post and you’d be still extremely accurate.",
+            "comment": []
+        },
+        {
+            "text": "From the customer point of view: at a fortune500 I dealt a LOT with h1 (it was never H1) in the early days. Then we got a CISO who was mostly a showman. And at some point (which match the changes in leadership at h1 the article describes) the reports became all garbage and leadership (CISO and CTO) would talk about h1 hackathons with &quot;top hackers flown from all over the world&quot;. Such a joke. The end result of those hackatons were 200 &quot;internal host discovery&quot; that were already reported internaly and teams always dismissed as &quot;not worth fixing&quot; and a single attack vector, usually from a brand new acquisition that was still going trhu onboarding. Pretty much never nothing relevant or actionable.",
+            "comment": []
+        },
+        {
+            "text": "I don&#x27;t understand the controversy at the heart of this post. H1 stated they don&#x27;t use reports to train LLMs. Then they revealed they were using LLMs to triage reports based on previous reports. These two facts are not necessarily incompatible. It&#x27;s entirely possible to use an LLM with a db tool installed to triage reports without using the body of the reports as training fodder. The article doesn&#x27;t give any evidence that this was not the case. It sounds to me more like the OP already disliked H1 (for its sales practices and general enshittification) and the LLM issue was a convenient excuse to make a clean break.",
+            "comment": [
+                {
+                    "text": "&gt; I don&#x27;t understand the controversy at the heart of this post.<p>Did you miss this part from the article:<p>&gt; They switched from talking about bug bounty programs, live hacking events, and how they could help you stay secure, to promoting their in-house AI security product and continuous security monitoring tool.<p>notably the in-house AI security product is trained on existing bug bounty reports.<p>&gt; It sounds to me more like the OP already disliked H1 (for its sales practices and general enshittification) and the LLM issue was a convenient excuse to make a clean break.<p>that&#x27;s pretty harsh to say when OP provided some very valid reasons, imho speaking as someone who&#x27;s used HackerOne for over a decade.<p>link to H1&#x27;s &quot;continuous monitoring tool&quot; for the curious: <a href=\"https:&#x2F;&#x2F;www.hackerone.com&#x2F;product&#x2F;h1-continuous-testing\" rel=\"nofollow\">https:&#x2F;&#x2F;www.hackerone.com&#x2F;product&#x2F;h1-continuous-testing</a>",
+                    "comment": []
+                },
+                {
+                    "text": "And also the idea that H1 &quot;training&quot; models based on bug bounty reports is kind of a silly concern; frontier models have commoditized most of what was reported on H1, even at higher quality levels. H1 itself is a nonfactor.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Last time I reported a DoS bug to HackerOne, the company behind the bounty tried incite me to commit a crime against them by DoS&#x27;ing their servers using the hack I had reported in detail!<p>I literally showed them their server taking over a minute to respond to my request. I even showed how the delay increased proportionally to the message size... Clearly doing more processing; classic DoS vulnerability... Doesn&#x27;t leave much to the imagination! But they said they would not pay me anything unless I actually proved that it scaled and caused disruption of their service!<p>It seemed like they were baiting me into incriminating myself for a crime that they wanted me to commit against them. It&#x27;s not even the first time that I&#x27;ve been baited by a software company into committing a crime against themselves. I never took the bait though.",
+            "comment": [
+                {
+                    "text": "To be fair “we will compensate you if you do X” sounds a lot like a contract so you’d probably be just fine in court. (Though likely wise to avoid the chance of a legal headache)",
+                    "comment": [
+                        {
+                            "text": "I don&#x27;t trust the legal system.\nThey could cover up the evidence, get me blocked on HackerOne, claim that my screenshots are AI-generated, hire top lawyers then make the judge to charge me for the lawyers&#x27; bill.<p>The big company always wins. The legal system is pure fiction at this point. What lawyer would stand against the big companies? Permanently destroying all their future career prospects.<p>Erin Brockovich?\nThat&#x27;s a corporate propaganda movie.<p>Reality is more like what happened to Julian Assange or Steven Donziger. And they had support from some powerful groups. If they didn&#x27;t, we wouldn&#x27;t even have heard of them. That would have been my situation. Not worth the $200 bounty.",
+                            "comment": [
+                                {
+                                    "text": "The Steven Donziger story is so insane.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; Co-founder Michiel Prins was allowed to leave the HackerOne dungeon to perform damage control with this absolute banger of an AI slop response: [...]<p>Wow, it&#x27;s like he <i>prompted</i> for the most stereotypically AI response possible. There&#x27;s a tired trope in every sentence going on for four whole paragraphs! I originally quoted it too but thought better and decided to snip it out because I&#x27;m pretty sure it would get my account flagged by HN&#x27;s AI detection algorithm...",
+            "comment": [
+                {
+                    "text": "I wonder if that&#x27;s the golden handcuffed founder equivalent of blinking out SOS in morse code?",
+                    "comment": []
+                },
+                {
+                    "text": "Imagine doing this article as a thorough writeup to provide feedback, rewriting this for like an hour before you post it.<p>And then you get an AI slop response like that in return where you can&#x27;t even tell whether it was just a CEO not giving a damn...or a standard dumb chat bot with a stupid response.<p>I&#x27;m not sure if founders are aware that these are tipping points in customer care where the people that care about your product and ecosystem will leave your company for good, and you&#x27;re irreparably damaging your own reputation.<p>If I were OP I&#x27;d never ever touch anything with a 10ft pole that the founders will build in their lifetime, and I&#x27;d warn everyone I know in the community about it.<p>That&#x27;s the damage they&#x27;re doing with these AI optimizations to themselves.<p>There&#x27;s a reason why everyone starts to hate your company right after your stupid chatbot was introduced.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "human slop<p>tl;dr which begins 3,000 words in: employees were noticed to be leaving and it’s because a “fine tuning from user submissions” ai psychosis of yesteryear, except it’s amusingly happening in 2026 still. Investigation into the veracity of the claims.",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m surprised someone could get upset at AI triaging of bugs which would save everyone time.",
+            "comment": [
+                {
+                    "text": "From what I&#x27;ve seen in the bounty-related subreddits, AI is flooding bug bounty inboxes with low-value or meaningless reports, or straight-up hallucinations when people use smaller models (to turn a profit, you make lots of low-value bug reports and see who pays out).<p>This has a negative effect on humans doing their work with or without LLMs: curl shut down their bounty program, and GitHub just announced they&#x27;re &quot;restructuring&quot; theirs.\nThe author of this post also makes a case that HackerOne hasn&#x27;t been honest about LLM training and use, either to hackers or to their own staff.",
+                    "comment": [
+                        {
+                            "text": "Didn&#x27;t Daniel later report that curl recently started getting mostly high-quality LLM reports on their bounty program? I can imagine that there would definitely be a few &quot;bounty spammers&quot; trying to get hits, but it seems like most of them are doing good work.<p>I&#x27;d say instead that the problem is that a lot of people don&#x27;t care anymore about the quality of the work being done, and LLMs are accelerating it. Bounty programs have shifted from ways for people to report security bugs to ways for people to try to make money.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Doesn&#x27;t that problem benefit from having automatic bug triage that can avoid fast tracking these bad reports?",
+                            "comment": [
+                                {
+                                    "text": "An LLM finds a dubious bug, an LLM turns it into a convincing report, and now the proposed solution is to have an LLM triage it? There are a lot of turtles holding up this approach and the circular logic seems hard to miss.<p>Automated triage can filter obvious spam, which was already fast and easy for humans to do. The hard part is independently reproducing a plausible finding and assessing its actual impact. If LLMs could already do that reliably, then the slop report problem wouldn&#x27;t exist in the first place.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt;If you could build the thing they wanted to build it would fix the slop problem<p>It sounds like a reason to try and build it than a reason to not build it.",
+                                            "comment": [
+                                                {
+                                                    "text": "I tried to build it (kind of). My team is going to use it to alert us to the most critical issues so we can hop on them before waiting for triage. It&#x27;s decent at figuring out criticality but it&#x27;s TERRIBLE at actually doing triage and assessing whether the report is plausibly or implausibly true. Security can be really nuanced, and from my experience so far with the model I&#x27;m using it&#x27;s really bad at being skeptical enough to actually figure out if something is a legit issue with impact or not. I agree though, it would be awesome if we could get AI triage that worked.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "You’re surprised that workers don’t like their work being used to remove the need to pay them for it in the future? Your idea of time saved for the worker is for them to lose their livelihood without compensation",
+                    "comment": []
+                },
+                {
+                    "text": "I can understand coming down on either side of the question of whether these AI reports save or waste time. I cannot understand being surprised or ignorant about the existence or high level beliefs of either side.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m sorry you don&#x27;t know the difference between training, fine tuning, and context. But definitions matter especially in legalese.",
+            "comment": []
+        }
+    ]
+}

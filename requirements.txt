@@ -1,0 +1,12 @@
+# DemandMining 运行依赖
+# pip install -r requirements.txt
+
+# 第三方依赖 (按 src/ 下实际 import 整理)
+beautifulsoup4>=4.15.0   # collector/extract/text_clean.py
+aiohttp>=3.9.1            # collector/api, collector/net
+requests>=2.31.0          # 备用 HTTP 客户端
+openai>=2.53.0            # analyzer/ai_client.py (OpenAI 兼容协议, 可指向自建网关)
+
+# 说明:
+# - Python 3.12 (开发环境当前版本)
+# - 安装时如遇 PEP 668, 加 --break-system-packages 或先建 venv

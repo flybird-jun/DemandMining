@@ -1,0 +1,24 @@
+{
+    "item_id": 49238818,
+    "title": "在 Apple Vision Pro 上运行 Android ARM64 VR APK",
+    "url": "https://github.com/shinyquagsire23/Klepton",
+    "text": "Klepton\n在 Apple Vision Pro 上运行 Android ARM64 VR APK，无需 JIT！\n架构\nklepton-ld\n将 Android\n.so\n库转换为可加载的 Apple\n.dylib\n和\n.framework\n库，然后链接到 Klepton 运行时。Klepton 目前仅专注于 Java-thin 应用程序（无 ART，无 JVM）。\n对于图形，GLES 3.2 被转换为自带的 ANGLE GLES 3.0（使用其 Metal 后端），Vulkan 被转换为 MoltenVK。\n┌─────────────────────────────────────────────────────────────────┐\n│ GUEST (translated Mach-O, instruction bytes mostly unmodified) │\n│ libil2cpp · libunity · libunityopus · libmain · burst · ... │\n└─────────────────────────────────────────────────────────────────┘\n ↕ imports resolved to Klepton runtime in `klepton-ld`\n┌─────────────────────────────────────────────────────────────────┐\n│ libklepton_bionic libc/libm/libdl/pthread/liblog → libSystem │\n│ libklepton_ndk ALooper · ANativeWindow · ASensor · AAsset │ \n│ libklepton_jni synthetic JavaVM / JNIEnv │\n│ libklepton_ovrp ovrp_* reimplementation │\n│ ... │\n└─────────────────────────────────────────────────────────────────┘\n ↕ Frontend platform (`mains`) and OS-specifics\n┌─────────────────────────────────────────────────────────────────┐\n│ MoltenVK (Vulkan → Metal) ANGLE (GLES 3.0) │\n│ Compositor Services · ARKit · GameController · AVAudioEngine │\n└─────────────────────────────────────────────────────────────────┘\n虽然 Android 和 macOS 都保留了 x18，但一些（很多）较老的 Android 应用程序仍然使用 x18，而 macOS 在上下文切换时将 x18 清零。所有 x18 的使用都由\nklepton-ld\n修补，以便改用每个库的 TLS 槽位。\nKlepton 还能够在运行时使用\nmmap\n加载和修补\n.so\n文件，但这仅在允许 JIT 的 macOS 上才真正有用。如果某些应用程序恰好利用了期望 JIT 的脚本运行时（LuaJIT、V8 或其他），它们可能需要 JIT。\n构建\n完整指南请参见\nBUILDING.md\n。简要步骤：\nbrew install pkg-config sdl3 apktool\n#\nhost dependencies\napktool d -f -o beatsaber beatsaber.apk\n#\nyou supply the APK; see BUILDING.md\nmake check\n#\nfull regression sweep\n快速运行脚本：\n./build_run_viewer.sh\n#\nbuild and run macOS Beat Saber frontend\n./build_run_vpro.sh\n#\nbuild and run Vision Pro Beat Saber frontend\n./build_run_slink.sh --shell --view\n#\nmacOS Steam VR Link frontend (WIP)\n状态\nBeat Saber 在 macOS 和 visionOS 上可以运行，但存在一些小的图形问题，Steam VR Link 以及改进通用性/构建工具仍在开发中（WIP）。",
+    "comment": [
+        [
+            "这太不可思议了。尽管 Apple 似乎铁了心要在 Vision Pro 上重蹈他们在 iPad 上的覆辙（&quot;一台婴儿电脑，因为我们的用户都是白痴，我们必须保护他们免受任何理论上的伤害。此外，macOS 以外的任何软件开发都是严格禁止的&quot;），但仍有一个小型折腾社区在认真努力让 iPadOS 变得有用。最近分享的另一个例子是：<p><a href=\"https:&#x2F;&#x2F;www.lispm.net&#x2F;apps&#x2F;uhf-x11&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.lispm.net&#x2F;apps&#x2F;uhf-x11&#x2F;</a>",
+            "Apple 之所以如此，是因为人们铁了心要给 Apple 送钱，尽管 Apple 对用户充满敌意。",
+            "原因有两个：<p>- 普通人在计算机方面是白痴<p>- 开发人员可以通过使用 Apple 的平台从这些白痴身上赚钱"
+        ],
+        [
+            "我确信 Apple 会<i>喜欢</i>这个。",
+            "嗯，他们<i>并非</i>忙于让 SwiftUI 变得好用。"
+        ],
+        [
+            "干得好！\n之前在读 kl_x18.h，darwin 在任何异常返回时都会把 x18 清零，包括定时器中断，所以一个 quest 应用甚至连一个调度窗口都无法在其中保持状态"
+        ],
+        [
+            "我希望能看到 LLM 使用情况的披露",
+            "gitignore 的内容对我来说已经足够了"
+        ]
+    ]
+}

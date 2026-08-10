@@ -1,0 +1,28 @@
+```json
+{
+  "topic": "Tom Stanton's supersonic trebuchet that breaks the sound barrier using only gravity as propulsion",
+  "users": [
+    "Hobbyist engineers / tinkerers",
+    "Maker / DIY community",
+    "Physics & engineering enthusiasts",
+    "Amateur projectile / siege weapon builders",
+    "Content creators tracking viral engineering projects"
+  ],
+  "pain_points": [
+    "Difficulty simulating and validating extreme projectile physics (drag, Mach transition, supersonic stabilization) before expensive field tests",
+    "No off-the-shelf tool to predict whether a trebuchet/catapult design will actually break the sound barrier — lots of trial-and-error",
+    "Lack of standardized, affordable high-speed projectile telemetry (pressure sensors, doppler radar, motion tracking for amateur builds)",
+    "Safety and liability concerns when launching supersonic projectiles near populated areas",
+    "Hard to find reliable CAD/CAE tools optimized for medieval-style siege weapons rather than rockets or firearms",
+    "No good way to compare design iterations of gravity-powered launchers in a structured way"
+  ],
+  "existing_solution": [
+    "Open-source physics simulators (OpenFOAM, MATLAB homemade scripts) — generic, steep learning curve",
+    "Ballistic calculators focused on firearms / artillery, not trebuchets",
+    "YouTube tutorials from creators like Tom Stanton, Mark Rober, r/trebuchet community knowledge",
+    "Custom Arduino/ESP32-based telemetry rigs built from scratch per project"
+  ],
+  "opportunity": "A specialized simulation + telemetry SaaS for amateur gravity-powered and medieval projectile launchers. Think 'Ballistics.io for trebuchets/catapults/slings' — drag-aware trajectory simulation tuned for subsonic→supersonic transitions, paired with cheap high-speed sensor modules (BLE) and shot-by-shot logging. Could also offer a community/leaderboard layer (like Strava for siege weapons) and a marketplace for CAD-tested counterweight/arm kits.",
+  "score": 38
+}
+```

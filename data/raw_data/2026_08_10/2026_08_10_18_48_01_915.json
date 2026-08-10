@@ -1,0 +1,569 @@
+{
+    "item_id": 49236033,
+    "title": "Georgia police officers fired after Flock camera misuse",
+    "url": "https://www.wtoc.com/2026/08/07/savannah-police-department-fires-6-employees-over-flock-safety-system-misuse/",
+    "text": "Share\nAdd Us On Google\nAdd as a preferred source on Google\nSAVANNAH, Ga. (WTOC) - The Savannah Police Department terminated four sworn officers and two civilian employees following an internal investigation into misuse of the department’s Flock Safety License Plate Reader system. All six cases are also under independent criminal investigation by the Georgia Bureau of Investigation.\nThe six employees were placed on administrative leave last week after a proactive review of system activity identified searches that appeared to have been conducted for purposes unrelated to legitimate law enforcement activity.\nSEE:\nSavannah Police investigating 6 employees over alleged misuse of license plate reader system\nSPD started an internal investigation July 27 and referred all six cases to the GBI for independent criminal review.\nWhat the investigation found\nSPD’s administrative investigation determined the employees violated department policies governing the authorized use of law enforcement technology and departmental resources. Investigators found that employees were running searches on personal acquaintances and family members. One officer was found to have given someone from an outside law enforcement agency access to SPD’s Flock Safety system, which they weren’t authorized to do.\nHow the activity was detected\nThe activity was identified through the departments auditing and oversight of the Flock Safety system, including use of the Flock Safety Audit Assist program, which became available in April.\nMORE:\nSavannah mayor, police chief feel ‘betrayed’ after 6 employees placed on leave for Flock camera misuse\nEvery search run through the Flock Safety platform is automatically logged — who ran it, when, and the reason they gave for doing it. SPD said they also have other safeguards in place, including mandatory training, role-based access controls and supervisory oversight.\nOversight changes following investigation\nFollowing the findings, SPD implemented recurring weekly audits conducted by the Office of Professional Standards. Those reviews are designed to ensure compliance with department policy and identify irregular or potentially unauthorized activity.\nWhat comes next\nThe internal investigation is wrapped up — the six employees have been terminated. But the GBI’s criminal investigation is still ongoing, and SPD said it will keep cooperating fully.\nThe names of the fired employees aren’t being released right now. The city and SPD said that’s because of the ongoing GBI criminal investigation and an employee appeals process still underway. They said more information will be made available when it’s legally permissible and won’t interfere with either process.\nCopyright 2026 WTOC. All rights reserved.",
+    "comment": [
+        {
+            "text": "Abuse by police officers and other individuals with access to these systems is <i>the</i> answer to the stupid but common question &quot;why should I worry about surveillance if I have nothing to hide&quot;.",
+            "comment": [
+                {
+                    "text": "I never hear that question from Flock supporters. The question I hear[†] is &quot;why <i>shouldn&#x27;t</i> we be pulling over stolen cars?&quot;. It&#x27;s a much harder one to answer than the straw man questions we set up for these things.<p>(To be clear: I think the current generation of ALPRs is a policy failure and that major changes need to happen inside state law enforcement systems before they can be deployed successfully. But I also think people on HN have a real problem in convincing themselves about the obvious righteousness of their anti-surveillance arguments.)<p>[†] <i>I heard arguments like these because I was deeply involved in getting the cameras disabled in the inner-ring Chicago suburb in which I live, getting the first ACLU CCOPS ordinance in Illinois passed there, and helping draft what are probably the most detailed ALPR police General Orders in any municipality, or at least were at the time. Which is a long and pretentious way of saying I spent a lot of time talking to people who are not Very Online.</i>",
+                    "comment": [
+                        {
+                            "text": "&gt;&gt; Abuse by police officers and other individuals with access to these systems is the answer to the stupid but common question &quot;why should I worry about surveillance if I have nothing to hide&quot;.<p>&gt; I never hear that question from Flock supporters. The question I hear is &quot;why shouldn&#x27;t we be pulling over stolen cars?&quot;<p>These are the same Constitutional question.<p>In order to determine what cars are stolen, <i>all</i> cars must be inspected. If all cars are inspected, there is a reasonable case that the 4th amendment is being violated:<p><pre><code>  The right of the people to be secure in their persons, \n  houses, papers, and effects, against unreasonable searches \n  and seizures, shall not be violated, and no Warrants shall \n  issue, but upon probable cause, supported by Oath or \n  affirmation, and particularly describing the place to be \n  searched, and the persons or things to be seized.[0]\n</code></pre>\n&gt; But I also think people on HN have a real problem in convincing themselves about the obvious righteousness of their anti-surveillance arguments.<p>See above.<p>0 - <a href=\"https:&#x2F;&#x2F;constitution.congress.gov&#x2F;constitution&#x2F;amendment-4&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;constitution.congress.gov&#x2F;constitution&#x2F;amendment-4&#x2F;</a>",
+                            "comment": [
+                                {
+                                    "text": "They&#x27;re not remotely the same Constitutional question. The people asking this aren&#x27;t saying &quot;I&#x27;m fine with being profiled because I&#x27;ve got nothing to hide unlike the people driving stolen cars&quot;. They&#x27;re just as upset about abuses of these systems as you are (though: some of them think these cameras are no more intrusive than cell tower tracking). They just see an upside to the system that privacy advocates refuse to recognize.<p>I get that this sounds like standard-issue message board rhetoric where I&#x27;m Mary Sue&#x27;ing normies to make my points for me, but I don&#x27;t agree with my neighbors about this stuff, and you&#x27;ll probably have to take my word for it that I&#x27;m not making any of this up.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt;&gt;&gt;&gt; Abuse by police officers and other individuals with access to these systems is the answer to the stupid but common question &quot;why should I worry about surveillance if I have nothing to hide&quot;.<p>&gt;&gt;&gt; I never hear that question from Flock supporters. The question I hear is &quot;why shouldn&#x27;t we be pulling over stolen cars?&quot;<p>&gt;&gt; These are the same Constitutional question.<p>&gt; They&#x27;re not remotely the same Constitutional question.<p>They absolutely are the same Constitutional question; surveillance by the State without a warrant supported by probable cause, verified by the judiciary and issued thusly, does not have &quot;an upside&quot; of coincidentally identifying criminality. Remember this portion of the 4th amendment:<p><pre><code>  ... and particularly describing the place to be searched,\n  and the persons or things to be seized.\n</code></pre>\nHow does ubiquitous surveillance used as evidence whenever possible not violate this section of the Constitution, if not others?<p>And how could the question &quot;why shouldn&#x27;t we be pulling over stolen cars?&quot; be answered without &quot;why should I worry about surveillance if I have nothing to hide&quot; being aligned?<p>They are the same Constitutional question - to accept one is to accept the other.",
+                                            "comment": [
+                                                {
+                                                    "text": "Almost no day-to-day policing is done with warrants! The whole premise of the LEADS hotlist is warrantless interdiction of stolen cars.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "&gt; Almost no day-to-day policing is done with warrants!<p>Just because I feel bad for taking advantage of the above statement, here is a snippet from &quot;Warrants in U.S. Law: The Ultimate Guide&quot;:<p><pre><code>  Imagine your home is your castle, and the U.S. Constitution \n  has built a protective wall around it called the Fourth \n  Amendment. This wall protects your right to privacy and \n  security from government intrusion. Now, imagine a police \n  officer wants to enter your castle. They can&#x27;t just knock \n  down the gate; they need a special key. A warrant is that \n  key. It&#x27;s not just any key, though. It&#x27;s a special \n  permission slip, signed by a neutral judge (a magistrate), \n  that says the government has a very good, specific \n  reason—called Probable Cause—to believe that evidence of a \n  crime is inside your home, or that you have committed a \n  crime. This document acts as a crucial check on government \n  power, ensuring that law enforcement can&#x27;t search your \n  property or arrest you on a whim. It&#x27;s a fundamental \n  safeguard that forces the government to justify its actions \n  before it invades your privacy, protecting every citizen \n  from unreasonable searches and seizures.[0]\n</code></pre>\nJudicial warrants are the cornerstone of U.S. criminal law.<p>Policing enforces U.S. criminal law.<p>0 - <a href=\"https:&#x2F;&#x2F;uslawexplained.com&#x2F;warrant_law\" rel=\"nofollow\">https:&#x2F;&#x2F;uslawexplained.com&#x2F;warrant_law</a>",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "&gt; Almost no day-to-day policing is done with warrants!<p>By this logic, there is no need for &quot;day-to-day policing&quot; to have warrants for:<p><pre><code>  - phone taps\n  - SMS messages\n  - GPS history\n  - email\n  - banking information\n  - justified arrests\n  - court approved searches\n</code></pre>\nThe result of the position you advocate is known as a Police State[0].<p>0 - <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Police_state\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Police_state</a>",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "How many cops that we know of are on the hook for abusing flock access? Last I checked was around 50.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "What was your answer then?",
+                            "comment": [
+                                {
+                                    "text": "To spare you the search of his comment history, my memory is that it&#x27;s roughly: the stolen car databases have tons of cars listed that weren&#x27;t actually stolen, or have already been recovered, so you end up pulling over a ton of unsuspecting people just driving around.",
+                                    "comment": [
+                                        {
+                                            "text": "To the actual question people ask, about getting stolen cars off the street, I don&#x27;t have a good answer. It&#x27;s a valid point! The stolen cars pose more of a threat to my neighbors than the police do; in reality, the median adult in my neighborhood doesn&#x27;t believe any of the online rhetoric about how dangerous the police are to begin with.<p>The reason the current generation of ALPR cameras doesn&#x27;t work is the one you gave. Illinois LEADS was never intended for realtime enforcement and isn&#x27;t updated reliably, so we ended up pulling over almost as many innocent motorists as we did stolen cars. To that, add: a plurality of all our camera-driven enforcement actions ended up being failure-to-appeal warrant enforcement, which effectively had our police force doing municipal debt collection for other suburbs, at enormous expense.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "One answer is that ALPRs have much too high an error rate (John Oliver claims it exceeds 30%) to rely on them for dragnet surveillance.<p>Maybe it makes sense to track specific vehicles, with safeguards such as warrants and also checking make&#x2F;model&#x2F;color, but it makes less sense to just give the government a 30-day rolling database of the public&#x27;s movements in total, especially when 30% of those data points are inaccurate and thus not useful as evidence.",
+                                    "comment": [
+                                        {
+                                            "text": "I don&#x27;t know where this stat comes from. It doesn&#x27;t square with our experience of Flock cameras. There is a truly high error rate in the underlying hotlist data the state maintains and the cameras rely on. But, like, cameras randomly flagging the wrong car, I don&#x27;t think we saw that happen even once.",
+                                            "comment": [
+                                                {
+                                                    "text": "Plenty of reports of that",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt;<i>The question I hear is &quot;why shouldn&#x27;t we be pulling over stolen cars?&quot;. It&#x27;s a much harder one to answer than the straw man questions we set up for these things.</i><p>The &quot;why shouldn&#x27;t we be pulling over stolen cars?&quot; question is just a more specific variant of GP&#x27;s &quot;nothing to hide&quot; question. i.e., the only people asking it are those who aren&#x27;t stealing cars, thus have &quot;nothing to hide&quot;.<p>The answer is the same.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I see you make frequent comments on this subject and as time goes on I’m starting to have a harder and harder time following them.<p>I’m starting to think that you’re having a conversation with yourself and your perception of people online,  not actual people and the things that they’re saying.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Maybe for some, but I honestly don&#x27;t find it very persuasive. The misuse of license plate data wouldn&#x27;t make my top ten list of potential powers that law enforcement might abuse. Clearly, abuse of any kind of power should not be tolerated, but potential benefits must also be considered. I think the widespread deployment of cameras at businesses and homes provides strong evidence of their benefits. The idea that a crime happens outdoors and the proper course of action is for police to knock on 100 doors to collect grainy doorbell footage is pretty inefficient, to say the least.",
+                    "comment": [
+                        {
+                            "text": "&gt; The misuse of license plate data wouldn&#x27;t make my top ten list of potential powers that law enforcement might abuse.<p>Are you sure about that?<p>How about if your license plate were stolen without your knowledge, placed on another vehicle of the same make and model, then photographed leaving the scene of a crime?",
+                            "comment": [
+                                {
+                                    "text": "Yes, I find that quite unpersuasive. Should we not allow the analysis of hair found at crime scenes because someone might steal some of my hair and place it there? Someone framing me in this manner is incredibly unlikely, would be disproven by the other broad investigative powers afforded to law enforcement, and, at least in my opinion, is ridiculously less likely than the cameras photographing real criminals. And that doesn&#x27;t even take into account that camera footage is already collected from homes and businesses, just very inefficiently.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; Should we not allow the analysis of hair found at crime scenes because someone might steal some of my hair and place it there?<p>First, I never implied disallowing analysis at a crime scene. What I described is a realistic activity criminals do in order to disguise their identity.<p>Second, &quot;stealing your hair&quot; is a <i>very</i> different thing than stealing license plates off of your vehicle. This should be obvious.<p>&gt; Someone framing me in this manner is incredibly unlikely, would be disproven by the other broad investigative powers afforded to law enforcement, and, at least in my opinion, is ridiculously less likely than the cameras photographing real criminals.<p>The point is that it would be you having to defend yourself for something you did not do. Could you successfully do so? Maybe. It depends on what the crime was and if you could afford a skilled enough lawyer.<p>And therein lies the rub.<p>You would have to drop tens-of-thousands of dollars in defense of your not being one of the &quot;real criminals.&quot; Because the police are not going to sit there and say, &quot;gee wiz, veec_cas_tant could not <i>possibly</i> be a &#x27;real criminal&#x27; because they said they are being framed!&quot;<p>They are going to say, &quot;we can place you at the scene of the crime.&quot;",
+                                            "comment": [
+                                                {
+                                                    "text": "&gt; First, I never implied disallowing analysis at a crime scene<p>You weren&#x27;t implying that video evidence of a car should be off-limits to the police?<p>If stealing hair is too hardcore for a criminal, just use your example and imagine that, instead of having the plate captured on camera, they find it at the scene of a vehicular homicide. Should that license plate be investigated, or should it be off-limits? In this example, as the victim of a stolen license plate, I think I should be quite happy with numerous high-definition cameras that can help prove my case.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "&gt;&gt; First, I never implied disallowing analysis at a crime scene<p>&gt; You weren&#x27;t implying that video evidence of a car should be off-limits to the police?<p>No, I did not.<p>A car is not a crime scene. Neither is &quot;video evidence of a car&quot; a crime scene.<p>&gt; If stealing hair is too hardcore for a criminal ...<p>What I wrote was:<p><pre><code>  Second, &quot;stealing your hair&quot; is a very different thing than \n  stealing license plates off of your vehicle. This should be \n  obvious.\n</code></pre>\nIf you cannot see the difference between someone taking an attachment from a vehicle unbeknownst to you and being in your presence to take hair off of your head, then there is no reality which we share.<p>&gt; ... just use your example and imagine that, instead of having the plate captured on camera, they find it at the scene of a vehicular homicide.<p>Then that would be entirely different than your original assertion, which was:<p><pre><code>  The misuse of license plate data wouldn&#x27;t make my top ten \n  list of potential powers that law enforcement might abuse.\n</code></pre>\nWouldn&#x27;t it?<p>&gt; Should that license plate be investigated, or should it be off-limits?<p>What are you even talking about? <i>You</i> said license plate data &quot;wouldn&#x27;t make my top ten&quot;.<p>When did I raise the question about license plates being investigated or off-limits?",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Must be a misunderstanding here. You said:<p>&gt; How about if your license plate were stolen without your knowledge, placed on another vehicle of the same make and model, then photographed leaving the scene of a crime?<p>&gt; You would have to drop tens-of-thousands of dollars in defense of your not being one of the &quot;real criminals.&quot; Because the police are not going to sit there and say, &quot;gee wiz, veec_cas_tant could not possibly be a &#x27;real criminal&#x27; because they said they are being framed!&quot;<p>But are claiming:<p>&gt; A car is not a crime scene. Neither is &quot;video evidence of a car&quot; a crime scene... When did I raise the question about license plates being investigated or off-limits?<p>It might be easier if you just stated your actual view instead of playing twenty questions, because I have tried to read your posts from multiple angles and can&#x27;t find any way to reconcile them. If you aren&#x27;t arguing against the use of camera footage of cars in police investigations, why bring up the stolen plate scenario, along with the legal costs of defending against it, in the first place?<p>Just to be clear: I would be absolutely fine with law enforcement investigating the appearance of my stolen plates at a crime scene using video footage obtained from private or public cameras. Police using camera footage to investigate a crime scene is not at all a misuse, and I think everybody would be happy that there was footage of the crime.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "There&#x27;s basically 3 ways to get a council to cancel a contract.  1) Persuade them to do it because it&#x27;s the right thing for the community.  This is best done in private.  2) Convince them that the legal liability out weighs the public benefit. This is best done in public.  3) Run for office.<p>If you have the energy you can do all 3 in parallel.<p>Here&#x27;s my attempt at 2: <a href=\"https:&#x2F;&#x2F;rmnoflock.com&#x2F;2026&#x2F;07&#x2F;29&#x2F;rolling-meadows-flock-cameras-used-in-holiday-hills-stalking-case&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;rmnoflock.com&#x2F;2026&#x2F;07&#x2F;29&#x2F;rolling-meadows-flock-camer...</a><p>Does anyone have advice or experience with 2?",
+            "comment": []
+        },
+        {
+            "text": "Flock cameras appear to be one of the few things that can get police officers fired.",
+            "comment": [
+                {
+                    "text": "Silver lining! The cameras are catching criminals.",
+                    "comment": [
+                        {
+                            "text": "To paraphrase Homer: the cause of, and solution to, a problem! In this case police misconduct.<p>It does make me wonder whether electronic evidence of police behavior will materially impact actual behavior over time.  But given that the normal reaction is to deny access to evidence, I doubt it.<p>The people who want to be police officers tend not to be the people everyone else would want to be police officers.",
+                            "comment": [
+                                {
+                                    "text": "&gt; The people who want to be police officers tend not to be the people everyone else would want to be police officers.<p>It&#x27;s tiring for good people when everyone they interact with thinks they&#x27;re the villain.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "In modern American penal code you are ALL felons. EVERYONE. Ok, maybe the guy in a coma. Wait, there is probably some medical fraud statute that makes him a felon if he twitches a thumb.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Right, because you don’t want to let the little guys mess it up for the big guys: <a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;tech-policy&#x2F;2026&#x2F;05&#x2F;fbi-seeks-us-wide-access-to-license-plate-cameras-wants-data-in-near-real-time&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;tech-policy&#x2F;2026&#x2F;05&#x2F;fbi-seeks-us-wid...</a><p>Gotta make a statement with the low level grunts so the citizenry think these systems have accountability.",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Not true, but also not widely reported. Cops are fired all the time for a wide variety of reasons.",
+                    "comment": [
+                        {
+                            "text": "Correct.  They&#x27;re also rapidly rehired in neighboring jurisdictions.  Public sector unions aggressively protect officers ability to migrate to new jurisdictions despite being fired for cause.  Typically they end up working at less prestigious operations, and the chronically-fired ones bounce around until they&#x27;re in the sticks, working as a deputy in a small county.<p>All of these officers will have new jobs lined up by the end of the week.",
+                            "comment": [
+                                {
+                                    "text": "You think unions shouldn&#x27;t be looking out for their members?<p>It&#x27;s not on the unions, it&#x27;s on the people who hired the officers.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; It&#x27;s not on the unions, it&#x27;s on the people who hired the officers.<p>This model you have inside your head, where there are public officials responsible for hiring that can exercise whatever they imagine are the prerogatives of the public at large when making hiring decisions, is fictional.  Public sector unions, for better or worse, have long since obviated such jeopardy and effectively call all shots with regard to who is hired for what.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "even if you purely want to frame it is that: is helping to convince large parts of the public that cops are above the law and can&#x27;t be trusted by covering for the bad apples &quot;looking out for their members&quot;?",
+                                            "comment": [
+                                                {
+                                                    "text": "Yes.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Until they negotiate protections in their next contract.",
+                    "comment": [
+                        {
+                            "text": "Whatever protections your area police have from these kinds of firings are a matter of public record. Have you FOIA&#x27;d your local department to see what they are? You might be surprised.<p>The real teeth behind these disciplinary events, at least in suburban&#x2F;metro areas, are that departments don&#x27;t want to lose the cameras, and know that they will if abuses aren&#x27;t answered.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "FOR NOW. People, police states are about two classes of people: the police, and you.<p>What is remarkable about this story is that something happened to them. Now were they prosecuted for any of a hundred laws they probably broke?<p>No.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It should result in jail time. If I got access to government surveillance program and started using it for personal reasons, I would likely be charged with terrorism.",
+            "comment": []
+        },
+        {
+            "text": "I know there are lots of reasonable concerns about unauthorized access to private information.<p>This is somewhat solved problem in other areas, like banking and government. Not zero, but asymptotically low.<p>I think we need to criminalize misuse more clearly, preferably on a federal level. We need clear justifications for each use of data. And, we should require periodic audits by an independent third party - perhaps funded in the purchase contracts as a line item and held in reserve.<p>This doesn’t solve the problem of legal use - which could be contentious now or in the future. But, this technology isn’t going away and good legislation to control it makes sense.",
+            "comment": []
+        },
+        {
+            "text": "Sounds like flock should be monitoring law enforcement more than civilians…",
+            "comment": []
+        },
+        {
+            "text": "Flock is importing China&#x27;s ubiquitous surveillance in America until every habitable space is captured",
+            "comment": [
+                {
+                    "text": "I get that this comment is meant to warn about the creeping government overreach and a curtailment of free speech, by comparing the US against a society where government surveillance is already commonplace.<p>I wonder if it does a disservice to readers to not make that same comparison against more similar countries instead (UK, Germany, Australia to name a few examples)?",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It&#x27;s not that useful to single out Flock for that purpose. Google Nest and Amazon Alexa are also in that category.",
+                    "comment": [
+                        {
+                            "text": "Maybe Ring too?",
+                            "comment": [
+                                {
+                                    "text": "Most definitely ring. I used to park near one of their offices, for at least 3-5 months they had one of those podium pole camera systems, with a big ring logo on the side, and ring workers occasionally tinkering with it. You know, the kind you see in Home Depot lots.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Certainly! And probably a multitude of other devices and phone apps as well.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "And digital billboards in every space will tell us what to think.\nCan&#x27;t wait for the two to pair up and the billboards to target whoever is seen in the nearest camera. Or are they already doing it?",
+                    "comment": []
+                },
+                {
+                    "text": "China is not responsible for your fuck-us, you own it",
+                    "comment": [
+                        {
+                            "text": "No claim was made that China is responsible. Stay on point.",
+                            "comment": [
+                                {
+                                    "text": "You’re right, it was just completely pointless China baiting.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "We should put up Flock cameras in every police station and make the feeds public. If they’re not doing anything illegal, they should have nothing to hide.",
+            "comment": []
+        },
+        {
+            "text": "nobody saw this coming",
+            "comment": []
+        },
+        {
+            "text": "From reading the article it seems the problem was not surveillance in any form but unauthorized use of police systems. I am not seeing anything new here. For decades police can be investigated for any improper searches of license plates or personal IDs, which can result in criminal referrals.",
+            "comment": [
+                {
+                    "text": "Out of curiosity, what are the non-surveillance uses for a license plate tracking service",
+                    "comment": [
+                        {
+                            "text": "The estimated travel times displayed in major cities along highways are calculated by license plate sampling from what I understand",
+                            "comment": [
+                                {
+                                    "text": "I dont think thats everywhere. CA freeways have speed sensors every mile or two, and from that, along a given route you can estimate time",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "That seems overly complicated when simple speed sensors would do the job.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "So you think that is the unauthorized use that the officers were fired for?",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "This is called a strawman. The article was about misconduct, not technology.",
+                            "comment": [
+                                {
+                                    "text": "It absolutely is not, and you’re not in a debate anyway.",
+                                    "comment": [
+                                        {
+                                            "text": "I just stated I read the article. I was never trying to debate anything. It appears most of these comments have no idea what the article is about.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; For decades police can be investigated for any improper searches of license plates or personal IDs, which can result in criminal referrals.<p>And those same officers, even when it has been found they violated the rights of those they&#x27;re sworn and paid to serve, are all too often shielded from the consequences of their actions and from their victims seeking recourse.  Qualified immunity is legal doctrine which prevents victims from seeking justice in cases where there is no previous precedent for such an action being allowed.  I would expect that license plate readers, mass-surveillance assisted by AI technologies, etc. are sufficiently novel that the case would have to make the U.S. supreme court to survive a motion to dismiss under qualified immunity.<p>So if you believe in there being legal consequences for police officers and other government officials violating the rights of the governed, I would hope to see in your next comments you standing with me and demanding the elimination of the &quot;qualified immunity&quot; doctrine which today goes along way to protect the guilty from the legal recourse sought by the victims of such officers.  This is especially needed in those cases where the officers, bureaucracy, and politicians fail to &quot;act true&quot;, as you might suggest that they can, to prevent injustices with these police systems.<p>For those curious about what &quot;qualified immunity&quot; is in the US, take a look at:<p><a href=\"https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability&#x2F;frequently-asked-questions-about-ending-qualified-immunity&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability...</a><p>and<p><a href=\"https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability&#x2F;why-its-almost-impossible-to-sue-federal-agents&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability...</a><p>All part of the Institute for Justice&#x27;s work on immunity and accountability:<p><a href=\"https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability...</a>",
+                    "comment": [
+                        {
+                            "text": "This isn’t a qualified immunity issue due to intent and criminality. Qualified immunity is only a shield from civil actions involving non-malicious, in terms of ethics, intent.",
+                            "comment": [
+                                {
+                                    "text": "The first sentence is correct insofar as the criminal proceedings are concerned, but assuming that the targets of the searches have had their rights violated they could very well be denied their ability to sue for restitution under Qualified Immunity.<p>The second sentence is just wrong.  Qualified immunity is a shield from civil actions without regard to if the violation was&#x2F;was not malicious or with&#x2F;without intent.<p>This is from one of the IJ pages I linked:<p>&quot;Does qualified immunity apply when government workers intentionally violate the law?<p>Yes. Qualified immunity applies even when officials intentionally or recklessly violate the law. The primary consideration in a qualified immunity analysis is whether there is an earlier court case specifically stating that the particular actions of an official are unconstitutional. So, for example, the Ninth Circuit U.S Court of Appeals held that police accused of stealing $225,000 while executing a search warrant were entitled to qualified immunity because that court had &#x27;never addressed whether the theft of property covered by the terms of a search warrant…violates the Fourth Amendment.&#x27; It did not matter &#x27;that virtually every human society teaches that theft generally is morally wrong.&#x27;&quot;<p>-- (<a href=\"https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability&#x2F;frequently-asked-questions-about-ending-qualified-immunity&#x2F;#faq-question-1688414611964\" rel=\"nofollow\">https:&#x2F;&#x2F;ij.org&#x2F;issues&#x2F;project-on-immunity-and-accountability...</a>)<p>Or more directly from the summary of the Ninth Circuit Court of Appeals opinion:<p>&quot;The panel held that at the time of the incident, there was no clearly established law holding that officers violate the Fourth or Fourteenth Amendment when they steal property seized pursuant to a warrant. For that reason, the City Officers were entitled to qualified immunity.&quot;<p><a href=\"https:&#x2F;&#x2F;cdn.ca9.uscourts.gov&#x2F;datastore&#x2F;opinions&#x2F;2019&#x2F;09&#x2F;04&#x2F;17-16756.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;cdn.ca9.uscourts.gov&#x2F;datastore&#x2F;opinions&#x2F;2019&#x2F;09&#x2F;04&#x2F;1...</a><p>Theft requires criminality and intent and is arguably malicious.  Yet, the court held that they couldn&#x27;t even be sued on the basis of qualified immunity being applicable... that&#x27;s not saying that the victims sued and lost... but that the suit was never heard on those grounds.<p>At least the court went on to say that the police should have known theft was morally wrong:<p>&quot;The panel held that although the City Officers ought to have recognized that the alleged theft was morally wrong, they did not have clear notice that it violated the Fourth Amendment.  The panel further held that the Fourth Circuit’s unpublished decision in Mom’s Inc. v. Willman, 109 F. App’x 629, 636–37 (4th Cir. 2004)—the only case law that the time of the incident holding that the theft of property pursuant to a warrant violates the Fourth Amendment—did not put the &#x27;constitutional question beyond debate.&#x27;&quot;<p>Because the question was not previously answered, the officers received the de facto protection of qualified immunity and not having to face the civil suit, criminality&#x2F;intent&#x2F;maliciousness notwithstanding.",
+                                    "comment": [
+                                        {
+                                            "text": "What immunity applies here? The officers were fired and remain subjects of an active ongoing criminal investigation, according to the article.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; weren’t authorized<p>this is easily solved with current technology, if they had an incentive to do so.<p>besides firing folks that get caught, flock themselves should be brought to court.",
+            "comment": [
+                {
+                    "text": "This feels like a weird comment on an article about how they monitored usage, identified misuse, and terminated the people involved.<p>There&#x27;s surely plenty of entities that need better controls around usage of technology &#x2F; records &#x2F; etc, but this is an example of somebody having an incentive and then following through.",
+                    "comment": [
+                        {
+                            "text": "it&#x27;s also possible that we&#x27;re only seeing a few select departments fire their officers. there are no laws around this as far as I&#x27;m aware so enforcement is purely departmental policy. how many sheriff&#x27;s offices and police departments do these audits and how many of them act on abuses?<p>you should need a warrant to monitor the products of mass surveillance and it should be as narrowly targeted towards a suspect as possible. or just not have any of the mass CCTV placements everywhere in the first place",
+                            "comment": [
+                                {
+                                    "text": "I think we may be agreeing?<p>I&#x27;m in favor of pushing for police departments (and really any governmental body with access to any kind of data) to have regulations around access to that data, access controls to restrict illegitimate access, and monitoring to detect improper access by people who do have legitimate access but don&#x27;t follow the proper regulations.<p>I think you&#x27;re correct that we don&#x27;t tend to see the instances where improper usage occurs, tautologically because those entities aren&#x27;t doing their homework on the above.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "its good PR for these systems that they are very keen to roll out, i would say theres a vested interest in stories like these from the exact agencies deploying them",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;m getting <a href=\"https:&#x2F;&#x2F;xkcd.com&#x2F;810&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xkcd.com&#x2F;810&#x2F;</a> vibes.<p>If government entities get good PR for rolling out strong policies, practices, and tooling for the data they have, and that makes more of them very keen to do so... mission accomplished?",
+                                    "comment": [
+                                        {
+                                            "text": "Thats a very idealistic and optimistic outlook",
+                                            "comment": [
+                                                {
+                                                    "text": "Is it?<p>Cards on the table, I am an optimist. But this feels pretty realistic: it&#x27;s basically a corollary to the idea that public outrage about bad policies, bad practices, or bad tooling is problematic for these government entities. They want to avoid it. There&#x27;s plenty of examples of this, even honing to just the US. Increasingly there&#x27;s even examples of this specifically in the US, for police departments, for usage of Flock.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Systems should be built so abuse isn’t allowed in the first place, in addition to monitoring for compliance.",
+                            "comment": [
+                                {
+                                    "text": "There always ends up being a real world to digital interface and it always has the potential for abuse, and thus always requires some level of monitoring and validation.<p>The department in this article appears to be doing just that:<p>&gt; Every search run through the Flock Safety platform is automatically logged — who ran it, when, and the reason they gave for doing it. SPD said they also have other safeguards in place, including mandatory training, role-based access controls and supervisory oversight.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Ah but you see flock doesn&#x27;t own the data so they&#x27;re not responsible for misuse of it and other such legal deflections.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "there is super easy solution here, anyone caught misusing the data goes to prison for life without ability for parole. mandatory sentence, no exception and no pardons.",
+            "comment": []
+        },
+        {
+            "text": "...andd they are now working for ICE HSI for higher pay.",
+            "comment": [
+                {
+                    "text": "&quot;The names of the fired employees aren’t being released right now.&quot; Somehow even after being fired there is no accountability.",
+                    "comment": [
+                        {
+                            "text": "Re-read that last sentence.",
+                            "comment": [
+                                {
+                                    "text": "I guess you mean the “right now”<p>Good move by them, wait until nobody is paying attention anymore and they’re on to the next gig.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "My town&#x27;s covered with them already, without much warning in the local news, at least none I saw. And they&#x27;re about to add 50% more all over the county. Planning on going to the zoning meeting Tuesday to speak against them. Also had a handful of yard signs printed up and put them at major intersections around town warning about the expansion, pointing people to the zoning meeting.<p>Very much not okay with this surveillance state bullshit.",
+            "comment": [
+                {
+                    "text": "I don&#x27;t believe a legal solution is possible. We need a three-tiered response to Flock&#x27;s surveillance state business strategy, depending on what level of meddling each citizen is comfortable with.<p>1. Protest via yard signs and awareness (what you&#x27;re doing)<p>2. Impermanent vandalism. I like the idea of hanging copies of the fourth amendment over the lenses<p>3. Permanent vandalism. I think we need bounties on camera destruction and public legal funds to assist in defense, bail, etc.<p>The police as a class&#x2F;caste are not interested in the fundamental principles that America was founded on. Individual officers may be interested in civil freedom and privacy but as an entity they only ever march in the direction of total surveillance and domination of the citizenry.",
+                    "comment": [
+                        {
+                            "text": "Absolutely not. Horrible advice. You give the rest of us peaceful majority a bad name. Protest legally. Your post glows.",
+                            "comment": [
+                                {
+                                    "text": "Who&#x27;s more effective at protesting, USA or France?<p>And, which country routinely sets a bunch of shit on fire when they need to?<p>That&#x27;s right.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "In what possible way would the broader public destroying Flock cameras on sight and allying with one another to defend those caught doing it benefit intelligence agencies?",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "America started with an illegal protest.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Genuinely effective protests are rarely entirely legal.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "You&#x27;ll never gain traction with your post on social internet forums like this despite the reality and truth of it. You&#x27;ll be downvoted to quiet and eliminate your opinion.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I would encourage you to add arrows to your signs&#x2F; stickers pointing out the cameras. More impactful when people see (and are unconsensually  recorded by) the device first hand.<p>Good work!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Please compare the number of officers doing such a thing to the number who did not. Also compare it to the number of incidents where the cameras helped capture criminals and pursue other illegal activities.<p>I&#x27;m betting that the number of officers who used it this way compared to the value it provides is minute to almost nil.<p>It would be interesting to find the number of Meta employees or Google employees who do similar activities.",
+            "comment": [
+                {
+                    "text": "&gt; Please compare the number of officers doing such a thing to the number who did not.<p>Please compare the number of people who committed burglary at a location to the number who did not.<p>The act of violating laws has nothing to do with the number of those whom do not. Furthermore:<p><pre><code>  SPD’s administrative investigation determined the employees \n  violated department policies governing the authorized use \n  of law enforcement technology and departmental resources. \n  Investigators found that employees were running searches on \n  personal acquaintances and family members. One officer was \n  found to have given someone from an outside law enforcement \n  agency access to SPD’s Flock Safety system, which they \n  weren’t authorized to do.[0]\n</code></pre>\n&gt; Also compare it to the number of incidents where the cameras helped capture criminals and pursue other illegal activities.<p>Non sequitur and irrelevant to the abuse documented.<p>&gt; I&#x27;m betting that the number of officers who used it this way compared to the value it provides is minute to almost nil.<p>This is a variant of the &quot;if you have nothing to hide, you have nothing to fear&quot; fallacy. Or a nihilistic perspective of &quot;the ends justify the means.&quot;<p>&gt; It would be interesting to find the number of Meta employees or Google employees who do similar activities.<p>Again, non sequitur, irrelevant, and an assertion which can only be interpreted as a quintessential strawman[1].<p>0 - <a href=\"https:&#x2F;&#x2F;www.wtoc.com&#x2F;2026&#x2F;08&#x2F;07&#x2F;savannah-police-department-fires-6-employees-over-flock-safety-system-misuse&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.wtoc.com&#x2F;2026&#x2F;08&#x2F;07&#x2F;savannah-police-department-f...</a><p>1 - <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Straw_man\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Straw_man</a>",
+                    "comment": [
+                        {
+                            "text": "This isn&#x27;t an answer to the question. Why do you (apparently) refuse to answer the question?",
+                            "comment": [
+                                {
+                                    "text": "&gt; This isn&#x27;t an answer to the question. Why do you (apparently) refuse to answer the question?<p>Assuming the question you are referencing is:<p><pre><code>  Please compare the number of officers doing such a thing to \n  the number who did not.\n</code></pre>\nI addressed same as being irrelevant as well as a strawman[0] argument.<p>0 - <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Straw_man\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Straw_man</a>",
+                                    "comment": [
+                                        {
+                                            "text": "Typical liberal non-response.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "If the answer is more than 1, that is too much. Cops shouldn&#x27;t have access to surveillance cameras or data at all.",
+                    "comment": [
+                        {
+                            "text": "Yep. Reminds me of Blackstone&#x27;s ratio... It&#x27;s not a simple cost-benefit situation, it&#x27;s wrong on principle.<p>The challenge is to find ways to catch criminals without trampling all over individual rights. This isn&#x27;t that solution. It&#x27;s too readily abused.",
+                            "comment": [
+                                {
+                                    "text": "This isn&#x27;t an answer to the question. Why do you (apparently) refuse to answer the question?",
+                                    "comment": [
+                                        {
+                                            "text": "It would be more effective for you to answer the question yourself rather than copy&#x2F;paste this across like 5 comments.",
+                                            "comment": [
+                                                {
+                                                    "text": "Typical liberal non-response.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "This isn&#x27;t an answer to the question. Why do you (apparently) refuse to answer the question?",
+                            "comment": [
+                                {
+                                    "text": "What question? I don&#x27;t see any question marks.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "This is not an answer to the question.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Meta and Google employees can&#x27;t legally kill me or deprive me of my freedom. So they are completely irrelevant as a comparison.",
+                    "comment": [
+                        {
+                            "text": "So you are refusing to answer the question?",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "If you think the average Google employee has as much access to PII or sensitive information as a cop, you&#x27;re deeply mistaken.",
+                    "comment": [
+                        {
+                            "text": "If you think some Google employees doesn&#x27;t have MORE access than a cop, you are WILDLY mistaken.",
+                            "comment": [
+                                {
+                                    "text": "&gt; If you think some Google employees doesn&#x27;t have MORE access than a cop, you are WILDLY mistaken.<p>This is a conspiratorial position at best. If you can cite from a reputable source similar abuse attributed to those organizations, then do so. Otherwise, the position you are championing lacks both fact and reason.<p>Additionally, as others in this thread have made clear, both Google and Meta are <i>not</i> police departments authorized to inflict lethal force.<p>So there&#x27;s that.",
+                                    "comment": [
+                                        {
+                                            "text": "Please have everyone cite their sources and I will cite mine. So far no one has and no one ever does.<p>That Google and Meta employees are not law enforcement completely misses the point I&#x27;m making but I never expect people on liberal social media sites to see that",
+                                            "comment": [
+                                                {
+                                                    "text": "Lol, brother, you started this comment chain. You&#x27;re trying to assert a position, but insisting others do the homework on providing data for said position. If said data is so strong as you believe it to be, just post the fucking numbers and shut everyone up.<p>Also, not everyone has the same values system. Your post implies that you value minimizing criminality over civil liberties, which, fine, everyone has their own value system. But, other people clearly use different weights in their values, and view this as an unacceptable trade off.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "[flagged]",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "&gt; Please have everyone cite their sources and I will cite mine.<p>I did not ask &quot;everyone.&quot; I asked <i>you</i> to do so.<p>&gt; That Google and Meta employees are not law enforcement completely misses the point I&#x27;m making but I never expect people on liberal social media sites to see that<p>You wrote, and I quote:<p><pre><code>  If you think some Google employees doesn&#x27;t have MORE access \n  than a cop, you are WILDLY mistaken.\n</code></pre>\nThat you chose to invoke the trope &quot;people on liberal social media sites&quot; speaks not to a sound position so much as an intrinsic bias evident to all.<p>I wish you well in your path in life.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "[flagged]",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "Brother you started the comment thread and every assertion about numbers was by you to begin with lmao",
+                                                    "comment": [
+                                                        {
+                                                            "text": "[flagged]",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Do you have any, like, evidence or something? There are enough other past and current Google employees here that know just how much you can&#x27;t just go into log files and databases to look at PII without filling out forms that will get you fired if you&#x27;re snooping on your ex-girlfriend. People have been fired over this, at both Google and Meta.",
+                                    "comment": [
+                                        {
+                                            "text": "So you are stating people at Google and Meta ARE snooping! Yet where are articles and posts right here about this? Where are the &quot;Oh woe is us!&quot; articles claiming we&#x27;re all going to die?",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

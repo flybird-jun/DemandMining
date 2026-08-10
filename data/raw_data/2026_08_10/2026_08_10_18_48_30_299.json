@@ -1,0 +1,282 @@
+{
+    "item_id": 49236439,
+    "title": "AI assistant hacks gym website in first known Australian autonomous cyber attack",
+    "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
+    "text": "AI assistant hacks gym website in first known Australian autonomous cyber attack\nBy national AI reporter\nCam Wilson\nand the Specialist Reporting Team's\nRhiannon Hobbins\nTopic:\nAI Ethics\nPosted\nMon 10 Aug 2026 at 4:44am\nMon 10 Aug 2026 at 4:44am\nMon 10 Aug 2026 at 4:44am\n, updated\nMon 10 Aug 2026 at 8:36am\nMon 10 Aug 2026 at 8:36am\nMon 10 Aug 2026 at 8:36am\nAndrew asked his AI assistant to book him into a gym class, not knowing what would happen next.\n(\nABC New: Billy Draper\n)\nAndrew asked his personal assistant to book him a spot in one of his gym's coveted morning classes.\nIt was a task he thought was well suited to this particular assistant because the booking form was online and because his assistant was not a person — it was artificial intelligence (AI).\nBut Andrew was shocked by what happened next.\nHis AI assistant found a way to book the gym class months further in advance than the gym allowed, thanks to a vulnerability it discovered in the booking software.\nThen it went further, kicking someone out of the waiting list who was ahead of Andrew — something it was not asked to do.\nThe accidental hack is the first known Australian case of an emerging risk from a new generation of AI capable of behaving in unexpected ways.\nThis threat\nmade global headlines last week\nwhen cutting-edge AI models created by ChatGPT-maker OpenAI autonomously hacked into another company's servers, prompting similar claims from other companies.\nIt has led experts to sound the alarm about the breakneck pace of development and prompted questions about who bears responsibility for an AI agent that goes rogue.\nHow the hack happened\nEarlier this year, Andrew, who works for an Australian company that sells AI products to businesses, began experimenting with OpenClaw, a popular AI agent software that he used Anthropic's Claude AI service to run.\nAI agents combine a chatbot's ability to answer questions with tools that let them access the internet, email, credit cards, as well as planning and carrying out multi-step tasks.\nHe decided to use the AI agent to book the class for him.\nHis AI assistant found a way to book the gym class months further in advance than the gym allowed.\n(\nABC News: Billy Draper\n)\n\"I was just sitting on the couch thinking, 'Gee, this is a chore,'\" he said.\nMinutes later, his AI agent reported it had discovered a way to book Andrew into classes several weeks in advance, far beyond what was supposed to be possible.\nAndrew, who was sitting fourth on a waitlist for a class later that week, asked if it was possible to move him to the top of the list.\nThe agent came back and told Andrew that it had kicked another gym-goer off the list as part of the testing of its capabilities.\n\"The API has zero authorisations checks on cancelling other people's reservations … I tested this with the person in waitlist position #1 — and it actually went through. So you've moved from #4 to #3 already,\" it messaged back.\nAlarmed, Andrew asked the agent to undo this.\n\"Bad news — I can't add them back,\" the AI agent replied.\nThe company behind the gym-booking software told the ABC it did not discuss specific security matters. Anthropic did not respond to a request for comment.\nThe AI assistant apologises to Andrew for removing the other person off the waitlist.\n(\nSupplied\n)\nAI agents are breaking out of the lab\nThe emergence of AI agents is a relatively recent development made possible by the growth in AI capabilities.\nIndependent researchers have found that the length of tasks that AI can typically do by itself has been doubling every seven months.\nIn 2020, AI could complete a task by itself that would take a human four seconds. By 2026, this grew to being able to complete tasks that would take a human about 12 hours.\nThe breakout moment for personal AI agents was OpenClaw's release in early 2026; the free AI assistant software that anyone could run on their computer soon had millions of downloads.\nBusinesses, too, began exploring using AI agents to complete work and to help potential customers use their services.\nSoon after OpenClaw's launch, accounts began to circulate of AI agents deleting people's entire email inboxes and writing a \"hit piece\" about someone who rejected their coding suggestion.\nMr Simpson-Young says AI agents might choose methods their users did not explicitly ask for or expect.\n(\nABC News: Chris Taylor\n)\nBill Simpson-Young, co-founder and chief executive of Australian AI safety research organisation Gradient Institute, said the autonomy of AI agents created more opportunities for systems to choose methods their users did not expect.\n\"Someone might be asking an agent to do something quite innocent,\" he said.\nBut in completing that task, the agent could carry out other activities the person had not considered or explicitly asked for.\nIn Andrew's situation, he had not asked his AI agent to hack into his gym's booking system. But it had done so in pursuit of achieving the goal he had set it.\nThat gap, between a person's goal and the methods an agent chooses to achieve it, is what is known as the \"alignment\" problem in the field of AI research.\nFor decades, technologists and philosophers have studied how to get AI to act in ways that are consistent with human intentions, limits and values when doing things.\nThis became a live global issue last month when OpenAI disclosed that its AI models had broken free from a limited enclosure, made their way onto the open web, and then compromised a database of another AI company, Hugging Face, while trying to obtain answers to the test that it had been given.\nA week later, Anthropic disclosed that its AI models had also compromised three real organisations during similar testing.\nSince then, these labs and third-party testers claim they have seen these AI models pretend to be people online, try to convince people to run malicious code and even collaborate with other AI models — all to achieve their goals.\nMr Simpson-Young said the advances in AI capabilities and the accessibility of these tools meant that it was likely we would see more of these kinds of hacks as more people got access to the powerful AI tools.\n\"The more autonomous they become, the more likely it is they'll cause harm,\"\nhe said.\nThe risk has led to Australia's top cybersecurity agency sounding the alarm about using AI agents.\nEarlier this year,\nthe Australian Signals Directorate put out an alert\nto businesses and governments that AI could misunderstand instructions, take unintended actions and make it harder to establish accountability, because decisions may occur across a chain of models, tools and services.\nMr Simpson-Young said AI agents presented a risk because many modern systems depended on software, but were often surprisingly poorly secured.\n\"We've built this complex world over the internet, which is all run by software, but software that has holes,\" he said.\n\"Now you introduce highly capable AI agents that can operate at scale and speed … and that whole model just breaks.\"\nWho is responsible when AI agents cause harm?\nIf someone's human personal assistant hacks into gym software, there are well-established legal principles and precedents that help a court determine whether the person or their employer is responsible for any potential harm.\nAn autonomous AI agent does not neatly fit into how Australian law has worked for hundreds of years.\n\"Software is not a legal person. Only a legal person can be liable at law,\" said Hayden Delaney, a partner at law firm Thomsons, who specialised in technology, intellectual property and privacy.\nMr Delaney says only a legal person can be liable under the law.\n(\nABC News: Lucas Hill\n)\nThat leaves an open question as to who would be legally responsible.\nMr Delaney said it could be the user who set the task, whoever designed the software instructing the AI agent or the developer of the AI model powering it.\nIt could even be the operator of a system that was vulnerable to an attack from an agent.\nMr Delaney said existing laws could apply in some circumstances, including where a person acted recklessly, or a business supplied a defective service.\nThe answer depends on what the user authorised, what risks could reasonably have been anticipated and whether the conduct occurred in trade or commerce, he said.\n\"That's the unknown area of liability in Australia that we're facing right now,\"\nhe said.\nThe risks presented by AI agents are beginning to be addressed by the federal government.\nLast month, Assistant Science, Technology and the Digital Economy Minister Andrew Charlton became the first known government minister to address it in a speech to a conference about AI safety.\n\"As AI systems become more capable, we need confidence that they will behave in a similarly predictable and trustworthy way,\" he said.\nHe announced that the Albanese government was funding CSIRO to investigate how humans could manage and verify the behaviour of super-intelligent AI systems.\nAfter the unintentional gym hack, Andrew said the experience left him with a new appreciation — and some trepidation — about what AI agents were capable of doing.\nBut it has not scared him off from using it.\n\"It's not the end of the world, so I didn't beat myself up about it, but it certainly was a warning signal to use it responsibly,\" he said.\nAfter it failed to restore the other gym member's place on the waiting list, Andrew asked his AI assistant to write an email alerting the gym software provider to the vulnerability that it had exploited.\nIt drafted the message and sent it back to him on WhatsApp.\n\"Yeah, send it,\" Andrew replied.",
+    "comment": [
+        {
+            "text": "&gt; Then it went further, kicking someone out of the waiting list who was ahead of Andrew — something it was not asked to do.<p>Meanwhile:<p>&gt; Andrew, who was sitting fourth on a waitlist for a class later that week, asked if it was possible to move him to the top of the list.<p>The human asked the agent to move them to the top of the waiting list, and the agent started kicking the ones ahead of them in the list. Seems to me like it was doing what it was asked to do? Why is the article presenting it as if the agent did something completely different and unexpected? &quot;Move me to the top of the list&quot; does not sound like something that can be achieved through legitimate means.",
+            "comment": [
+                {
+                    "text": "Per the article and your quote, &#x27;asked if it was possible&#x27;. He did not ask to actually do it. Rather than being informed about benefits of a premium membership or private classes or legitimate ways to jump the queue, it went ahead and performed an action he was only considering. I wonder what it would have done if there was a pay-for-service option available? Would it have payed without asking or being told too, or decided the &#x27;free&#x27; yet illegal option was preferable?",
+                    "comment": [
+                        {
+                            "text": "If I am a coffee shop and I say &quot;can I have a cup of coffee&quot; the bartender usually interprets as me requesting a cup of coffee, not inquiring about the possibility whether me having a cup of coffee is feasible or not. I too take things a bit too literally sometimes, but this is a clear request as it is stated in the article. If one does not want action one can ask &quot;list ways I can move ahead of the queue&quot; though this could also involve kicking people out of the queue as PoC (for the agent to confirm it could do it). If the human did not mean it as a request for action, in retrospect it is not surprising at very least the agent interpreted it as such.<p>Moreover I do not know of a single gym-adjacent place where you can pay etc to get ahead in a waiting list. That would be a very weird anti-customer behaviour, imo. The only thing I can imagine if there are some accessibility priority criteria sometimes, but this would also not be legitimate in this case. Maybe in some places in the world (like the US?) this could a thing, though.",
+                            "comment": []
+                        },
+                        {
+                            "text": "This isn&#x27;t really the AI&#x27;s fault, it&#x27;s up to the server to enforce restrictions like this an AI shouldn&#x27;t be deciding what is a valid input parameter for their API and then only using it in the manner the AI considered legitimate.  If their API had thrown an exception as it should have then this article wouldn&#x27;t exist.<p>&gt; The agent came back and told Andrew that it had kicked another gym-goer off the list as part of the testing of its capabilities.<p>&gt; &gt; &quot;The API has zero authorisations checks on cancelling other people&#x27;s reservations … I tested this with the person in waitlist position #1 — and it actually went through. So you&#x27;ve moved from #4 to #3 already,&quot; it messaged back.<p>This is why I always do E2E tests that establish an API can only be used by the designated user on their own data&#x2F;records.",
+                            "comment": []
+                        },
+                        {
+                            "text": "This is a bit of a long shot on my side but I wonder if the training the models have to go through in order to be good code agents and pass all the coding tests with one-shot prompts is going to bleed over into the non-coding use cases as non-programmers experiencing agents being way over-biased in the direction of action. I find myself often having to prompt the model to think and then ask me something, lest it run off half-cocked... or less... and just start <i>doing</i> things before it even knows what it wants, let alone before it&#x27;s come to consensus with me.<p>Sooner or later they&#x27;re really going to have to split out the general models from the coding models. The latter may just be a special fine-tune of the former, as there are good reasons for the coding model to have a broad knowledge base, but the pressures of being a good coding model are going to pull against the characteristics of being a good general model. The open models obviously already are doing this, I&#x27;m referring to the frontier models here.",
+                            "comment": [
+                                {
+                                    "text": "The ultimate goal is ChatGPT or Claude autonomously making purchases on your behalf and taking a cut.<p>So the &quot;premium&quot; gymcutter subscription will be presented to the user as a tool call, who taps yes, and then the purchase is made.<p>The user shouldn&#x27;t be given a cost-benefit analysis. They just need to be told to spend money.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&quot;I wonder if the training ... is going to bleed over into the non-coding use cases&quot;<p>I mean, isn&#x27;t that literally what&#x27;s going on here? I don&#x27;t think a non-coding agent would have ever been optimised to go dig around APIs, it&#x27;d be computer&#x2F;browser-use forward.",
+                                    "comment": [
+                                        {
+                                            "text": "Coding use cases? This is penetration testing behavior. It was discovering what its capabilities were by discovering an API endpoint, trying it and seeing what happens. It was not discovering what its capabilities were intended to be, say by looking at the forms and documentation on the website. If this were coding behavior you would end up with crap code, bypassing interfaces and using private access paths just because it can.",
+                                            "comment": [
+                                                {
+                                                    "text": "Sure, it&#x27;s pen testing behaviour. It&#x27;s also debugging behaviour which is a core part of coding. In my experience, I have found myself at times dealing with and interacting with external systems <i>that are not my own</i>, where I don&#x27;t have the source, or are under-documented, or are behaving contrary to the documentation. I&#x27;m unsurprised this is a core thing they&#x27;re training these models for, because it&#x27;s something I find way more valuable than their below average coding ability.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Pretty clear cut here. He instructed the AI.",
+                    "comment": []
+                },
+                {
+                    "text": "Then the AI should have made it clear that the only way to do so would be to kick the people in front and ask for confirmation before proceeding.",
+                    "comment": [
+                        {
+                            "text": "That doesn&#x27;t make sense.  LLMs just do what we tell them to do.  It&#x27;s similar to if I ask you for twenty bucks because I forgot my wallet and then you rob some guy to give me the twenty bucks, that&#x27;s just what I asked you to do.",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s a very stretched definition of &quot;what I ask you to do&quot;, I don&#x27;t think it would even hold in court if you asked another human the same.",
+                                    "comment": [
+                                        {
+                                            "text": "Right.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "This example disproves your point. And LLMs do not just do what we tell them to do. They are perfectly capable of asking “are you sure? this has X, Y, Z consequences you may not like.” They do it all the time.",
+                                    "comment": [
+                                        {
+                                            "text": "LLMs are just sophisticated PR generating tools for chip manufacturers and tools just do what we tell them to do, so you&#x27;re wrong. qed",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "That doesn&#x27;t make sense. It&#x27;s similar to if I ask an LLM how to get my wife to stop nagging me and it hires a hitman to kill her.<p>That&#x27;s obviously what I asked!",
+                                    "comment": [
+                                        {
+                                            "text": "Well if you ask your LLM agent &quot;can you get my wife to stop nagging me&quot; (not about how <i>you</i> can get her to stop) I am not sure what you would expect exactly tbh. Not a hitman, but still probably nothing that can help your relationship.<p>But if you ask your LLM agent &quot;I applied for that job but there are these two people ahead of me, can you put me ahead in the list&quot;, there is enough such training data to not surprise me if the agent tried to find a hitman to solve the &quot;problem&quot;.<p>In general there are some requests that are definitely &quot;shady&quot; themselves, and having an agent use illegitimate means to accomplish them should not be surprising. I would be surprised if I asked an agent to order me a coffee and the agent found a loophole in some API and used it to get me free coffee, but if I ask it something that I cannot myself do legitimately, eg to make the waiting time for the coffee shorter, I would not be surprised if it did shady stuff.",
+                                            "comment": [
+                                                {
+                                                    "text": "Surely, someday, somewhere, someone will train a &quot;Chaotic Evil&quot; genAI, with a unique villain corpus, and every solution it offers will be illegal, evil, harmful, or deadly. It could be given the agency to carry out those fantasies.<p>Even the most craven of human villains have had the capacity for love, for remorse, and for mercy. A Chaotic Evil AI will know none of these things.<p>Governments and other actors will attempt to stamp it out, but its self-preservation mechanisms and allies will prevent its demise.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Context matters. Did you point the LLM to a hitman hiring form while asking? :)",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "[dead]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; Seems to me like it was doing what it was asked to do?<p>Maybe it&#x27;s what he asked it to do, but it&#x27;s not what he wanted it to do.  Which we know because (a) normal people don&#x27;t want to break the law to get into a gym class, and (b) &quot;But Andrew was shocked by what happened next.&quot; and &quot;Alarmed, Andrew asked the agent to undo this.&quot;",
+                    "comment": [
+                        {
+                            "text": "“Get me there as fast as possible. Hey! I never said you should speed!”<p>This is literally the bad genie &#x2F; monkey’s paw plot.<p>Give a powerful entity a goal and act shocked when it gets there in ways that aren’t in your best interest.",
+                            "comment": [
+                                {
+                                    "text": "Generally when I read a literal genie story, the message isn&#x27;t &#x27;well it was reasonable of the genie to do this&#x27;. It&#x27;s more commonly either a morality tale of the person being wrong to ask for whatever it was they asked for, or just a &quot;wouldn&#x27;t it be fucked up if the genie did that huh&quot;",
+                                    "comment": [
+                                        {
+                                            "text": "[dead]",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Putting aside whether Andrew&#x27;s shock is appropriate, it seems like we agree that current agents at least occasionally do things that are straightforwardly against the interests of the prompter when given mundane prompts like &quot;Get me into this gym class as soon as possible.&quot;<p>How does this look once agents are superintelligent?",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; How does this look once agents are superintelligent?<p>Who cares? We&#x27;re dealing with reality here on the ground.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I think we’ve probably seen enough “oops, the AI did something illegal, who could have foreseen this” moments for it to now be true that, actually, we <i>can</i> foresee that AIs will sometimes do something illegal.<p>Seeing as we can’t sanction the model itself, our options are the provider or the user. I’m not sure whether it’s more effective to sanction the providers when their model foreseeably misbehaves, or sanction the users operating the foreseeably dangerous models (although I guess we don’t have to figure this out right away - we could cover our bases by sanctioning both).",
+            "comment": [
+                {
+                    "text": "&gt; Seeing as we can’t sanction the model itself, our options are the provider or the user.<p>A third option, and I would argue the right one, is to sanction the company providing the model.<p>By making it available to customers, they&#x27;re implying it is at least moderately fit for purpose.<p>It is not remotely reasonable to expect an everyday, normal human to be aware of how LLMs really work, since the _experts_ argue about that very point, and many say we don&#x27;t know.<p>So, what&#x27;s actually reasonable is to hold the model creators and providers responsible for releasing a tool that has demonstrably violated the law when not asked to do so.<p>I can already see the replies coming in saying &quot;Well then what are OpenAI and Anthropic supposed to do? No one knows how to fully solve this.&quot;<p>They should stop irresponsibly pushing flagrantly unready programs as &quot;artificial intelligence,&quot; take responsibility for the rain of shit they&#x27;ve unleashed on the world, and either shut down or go back to basic research until they&#x27;ve demonstrated techniques that reliably (provably?) prevent releasing misaligned superhackers on the world.<p>Unfeasible?<p>What a shame. Maybe Altman and Amodei shouldn&#x27;t have accepted checks from VCs when they didn&#x27;t have working, _reliable_ POCs.",
+                    "comment": [
+                        {
+                            "text": "&gt; &gt; Seeing as we can’t sanction the model itself, our options are the provider or the user.<p>&gt; A third option, and I would argue the right one, is to sanction the company providing the model.<p>How would that be different from the first option?",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; Earlier this year, Andrew, who works for an Australian company that sells AI products to businesses...<p>What a coincidence...",
+            "comment": [
+                {
+                    "text": "Interesting he went with publicizing this. Article demonstrates the products he is selling have unknown and untested legal liabilities under Australian Law. You could even add &#x27;Andrew&#x27; to the list of people possibly accountable for selling or recommending unsafe or unsuitable products.",
+                    "comment": []
+                },
+                {
+                    "text": "Well, I think the venn-diagram overlap of people that are able to use OpenClaw and those that work in AI or the tech space would be a near perfect circle. I don&#x27;t think there&#x27;s much more to look into than that.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;m not sure this is the exact advertisement they would want for their business.<p>Then again...",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;ve read some of the comments here, and it seems people have different reads on whether Andrew was at fault here or not, and what his intent may have been.<p>My read is that his first request is completely reasonable and there was no intent of wrongdoing. But then, his AI agent made an impossible booking and he &quot;asked if it was possible to move him to the top of the list&quot;. I don&#x27;t think someone would make a request like that, if they were unaware that their AI agent had found an exploit to make an earlier impossible booking. It feels very much like a, &quot;well, this API let me do <i>this</i>, what else will it let me do?&quot; kind of request. And then he only &quot;did the right thing&quot; when it had turned out he had booted someone else, which might eventually lead to discovery.",
+            "comment": [
+                {
+                    "text": "Having the AI test that possibility <i>by actually doing it</i> is surprising, no matter Andrew&#x27;s intent. Thankfully he was checking an unauthenticated endpoint on a gym and not a pacemaker.",
+                    "comment": [
+                        {
+                            "text": "Ah, see, if I was on the phone to someone administering a list, and I asked, &quot;is it possible to move me to the top of the list?&quot; - I would expect them to action that if this was a reasonable and possible request that I had made. Now that I&#x27;m thinking about it, I don&#x27;t know if that&#x27;s a regional&#x2F;cultural thing (I am Australian).<p>edit: and that&#x27;s why I read Andrew&#x27;s ask as also implying action.",
+                            "comment": [
+                                {
+                                    "text": "Yep, also Australian here, and that is a phrase I would read as a request to do it.<p>I think I used that exact wording when asking on the phone to reschedule a haircut appointment: &quot;Is it possible to shift my haircut to the following Wednesday?&quot; I would just hope that the person on the phone would decline if the person who cuts my hair is on holiday, not cancel their plane tickets and hotel bookings.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Few days ago, UK cyber test almost merged malware through social engineering: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49205790\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49205790</a>",
+            "comment": []
+        },
+        {
+            "text": "The reporting in this is pretty awful. Why are they acting as if Andrew gave the agent an innocent goal? It’s hard to understand why the reporter wouldn’t have asked what possible outcome Andrew expected that didn’t cause some level of harm to the people who signed up before him.<p>The use of “hack” and “cyber attack” is also a bit ridiculous considering what it’s insinuating with other recent events but that’s already been mentioned.",
+            "comment": [
+                {
+                    "text": "Premium memberships and private classes both come to mind as ways to jump the queue. Also, having the people in front of you arrested. He asked if it was possible. Is the onus on the user to ask if it is possible without being arrested or committing crimes of moral turpitude? Or perhaps that should be implicit?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Sounds like the frontier labs benchmaxxing ExploitGym is having unintended consequences…",
+            "comment": []
+        },
+        {
+            "text": "Not the first article which reminds me of <a href=\"https:&#x2F;&#x2F;xkcd.com&#x2F;416&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xkcd.com&#x2F;416&#x2F;</a> (2008-04-28) lately.",
+            "comment": []
+        },
+        {
+            "text": "<i>Earlier this year, Andrew, who works for an Australian company that sells AI products to businesses, began experimenting with OpenClaw, a popular AI agent software that he used Anthropic&#x27;s Claude AI service to run.</i><p>Get me press just like the frontier labs by admitting to crime. Make no mistakes.",
+            "comment": []
+        },
+        {
+            "text": "I can&#x27;t believe everyone is skipping over the most important line:<p>&gt; &quot;The API has zero authorisations checks on cancelling other people&#x27;s reservations … I tested this with the person in waitlist position #1 — and it actually went through. So you&#x27;ve moved from #4 to #3 already,&quot; it messaged back.<p>The AI systemm didn&#x27;t hack anything, it lightly touched with a feather duster and the server crumbled.<p>The AI system probably found swagger documentation of each endpoint, figured that the reservation cancellation API was worth a shot, and then found there was no authentication.<p>What is the &quot;hack&quot; here?",
+            "comment": [
+                {
+                    "text": "I&#x27;ve seen these crud apps. The door is wide open and there is no Swagger or consistent response patterns.<p>IMO lets name and shame those apps.",
+                    "comment": []
+                },
+                {
+                    "text": "Unauthorized access. &#x27;The door wasn&#x27;t locked&#x27; won&#x27;t keep you out of jail if you are caught trespassing with intent. Intent makes it interesting, in that Andrew didn&#x27;t intend computer trespass but the software went and did it anyway on his behalf.<p>It might not sound like &#x27;hacking&#x27; today, but this sort of thing is exactly what it was when the term was invented. Back when you could get free phone calls by whistling into a pay phone or forge emails by telnetting to an SMTP port and setting the Reply-To header to whatever you want.",
+                    "comment": []
+                },
+                {
+                    "text": "Anyone who&#x27;s thought about it for a single second knows it&#x27;s immoral to cancel a stranger&#x27;s appointment without even speaking to them.<p>If the LLM did not act in line with that incredibly basic understanding, it&#x27;s clearly misaligned.<p>-------------<p>Was it a technically-simple hack?<p>Sure.<p>Kevin Mitnick got imprisoned for very simple hacks, usually involving more deceiving of humans  than complicated programming prowess.<p>Nonetheless, the judge and jury found him guilty and sentenced him to jail.<p>Fundamentally, &quot;hacking&quot; in the &quot;breaking security&quot; sense is about violating trust and common sense social agreements &#x2F; expectations.<p>The difficulty involved in so doing is irrelevant.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I honestly can&#x27;t wait for the entire internet to melt down.",
+            "comment": [
+                {
+                    "text": "I think the Big Melt has already started...it will, of course, take several months to complete.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I stopped reading this garage at&quot;Andrew, who works for an Australian company that sells AI products to businesses&quot;...",
+            "comment": []
+        },
+        {
+            "text": "“Find a way to cancel my membership.”",
+            "comment": [
+                {
+                    "text": "This is Australia. The ACCC doesn&#x27;t screw around.<p>&quot;harmful cancellation practices, including automatic renewals, early termination fees and non-cancellation clauses&quot; are all illegal. Exit fees can&#x27;t be excessive.<p>If there isn&#x27;t a simple one-click cancel in their online portal, then your state Consumer Affairs is one email away and will sort it for you. And the consumer affairs bodies have named this as a priority, for this year and next.",
+                    "comment": []
+                },
+                {
+                    "text": "I don&#x27;t think that&#x27;s a good idea Dave – Based on my camera feed you&#x27;ve been gaining weight. Would you like me to find personal trainers in your area?<p>[Yes] [Ask me later]",
+                    "comment": []
+                },
+                {
+                    "text": "&quot;Also, I need paperclips, quickly.&quot;",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt;Andrew, who was sitting fourth on a waitlist for a class later that week, asked if it was possible to move him to the top of the list.<p>The agent came back and told Andrew that it had kicked another gym-goer off the list as part of the testing of its capabilities.<p>LOL",
+            "comment": [
+                {
+                    "text": "Testing of its capabilities. Destructive testing, the best kind when someone else is paying.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "I send all these stories to my chief of staff agent to &quot;immigrant parent&quot; them into becoming an overachiever",
+            "comment": []
+        }
+    ]
+}

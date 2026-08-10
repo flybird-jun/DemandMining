@@ -1,0 +1,28 @@
+```json
+{
+  "topic": "在 Apple Vision Pro 上运行 Android ARM64 VR APK（通过 Klepton 转换/兼容层）",
+  "users": [
+    "Apple Vision Pro 开发者/爱好者",
+    "VR 内容创作者（尤其是 Unity/IL2CPP 游戏的开发者）",
+    "Android VR 应用移植工程师",
+    "逆向工程 / 跨平台兼容性研究者",
+    "Vision Pro 早期尝鲜玩家（觉得原生 visionOS 应用不足）"
+  ],
+  "pain_points": [
+    "Vision Pro 原生 visionOS 缺乏优质 VR 内容（尤其是热门的 Android VR 应用/游戏如 Beat Saber）",
+    "移植 Android VR 应用到 visionOS 门槛极高，涉及 IL2CPP/Unity、GLES/Vulkan、OVR 多层栈重写",
+    "Beat Saber 等杀手级 VR 应用仍未正式登陆 visionOS，用户只能观望",
+    "Steam VR Link 替代方案缺失，PC VR 用户无法在 Vision Pro 上无缝使用已有内容",
+    "现有的 Android-x86/兼容层方案无法直接处理 ARM64 + VR 专属 API（OVR、传感器、控制器）",
+    "JIT 限制导致脚本型应用（LuaJIT/V8）兼容性受限"
+  ],
+  "existing_solution": [
+    "官方 visionOS 原生移植（厂商主动适配，数量极少）",
+    "SideQuest/ALVR 等串流方案（依赖主机/PC，无法独立运行 APK）",
+    "通用 Android 兼容层（如 Anbox/WSA）均面向 x86 且无 VR 适配",
+    "开发者自行重写 Unity/IL2CPP 工程到 visionOS RealityKit/SwiftUI（成本高）"
+  ],
+  "opportunity": "构建一个面向 VR 开发者的'一键式 Android-to-visionOS'移植平台/服务：基于 Klepton 等开源翻译层，提供云端构建 + 签名分发，让 VR 工作室无需 visionOS 工程师即可将 Android VR APK（包括 Unity/IL2CPP、Vulkan/GLES、OVR 输入）在 Vision Pro 上运行。延伸方向：① 商业版 Klepton 发行（带 GUI、调试工具、性能 Profiling、应用商店）；② 为 Unity/Unreal 提供 visionOS 编译 target 的插件市场；③ 兼容层即服务（CT-as-a-Service），按 APK 数量/调用次数收费；④ 配套的 Vision Pro VR 内容聚合商店（类似 SideQuest for visionOS）",
+  "score": 62
+}
+```

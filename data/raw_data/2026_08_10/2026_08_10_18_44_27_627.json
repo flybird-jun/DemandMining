@@ -1,0 +1,419 @@
+{
+    "item_id": 49235378,
+    "title": "The Hacker's Renaissance (2025)",
+    "url": "https://phrack.org/issues/72/19#article",
+    "text": "[\nNews\n]\n [\nIssues\n]\n [\nAuthors\n]\n [\nArchives\n]\n [\nContact\n]\n [\nSearch\n]\n[ Close ]\nEnter something in the search box to see results\n.:: The Hacker's Renaissance - A Manifesto Reborn ::.\nIssues\n: \n[\n1\n]\n[\n2\n]\n[\n3\n]\n[\n4\n]\n[\n5\n]\n[\n6\n]\n[\n7\n]\n[\n8\n]\n[\n9\n]\n[\n10\n]\n[\n11\n]\n[\n12\n]\n[\n13\n]\n[\n14\n]\n[\n15\n]\n[\n16\n]\n[\n17\n]\n[\n18\n]\n[\n19\n]\n[\n20\n]\n[\n21\n]\n[\n22\n]\n[\n23\n]\n[\n24\n]\n[\n25\n]\n[\n26\n]\n[\n27\n]\n[\n28\n]\n[\n29\n]\n[\n30\n]\n[\n31\n]\n[\n32\n]\n[\n33\n]\n[\n34\n]\n[\n35\n]\n[\n36\n]\n[\n37\n]\n[\n38\n]\n[\n39\n]\n[\n40\n]\n[\n41\n]\n[\n42\n]\n[\n43\n]\n[\n44\n]\n[\n45\n]\n[\n46\n]\n[\n47\n]\n[\n48\n]\n[\n49\n]\n[\n50\n]\n[\n51\n]\n[\n52\n]\n[\n53\n]\n[\n54\n]\n[\n55\n]\n[\n56\n]\n[\n57\n]\n[\n58\n]\n[\n59\n]\n[\n60\n]\n[\n61\n]\n[\n62\n]\n[\n63\n]\n[\n64\n]\n[\n65\n]\n[\n66\n]\n[\n67\n]\n[\n68\n]\n[\n69\n]\n[\n70\n]\n[\n71\n]\n[\n72\n]\nGet tar.gz\nCurrent issue\n: #\n72\n|\nRelease date\n:\n2025-08-19\n|\nEditor\n:\nPhrack Staff\nIntroduction\nPhrack Staff\nPhrack Prophile on Gera\nPhrack Staff\nLinenoise\nPhrack Staff\nLoopback\nPhrack Staff\nThe Art of PHP - My CTF Journey and Untold Stories!\nOrange Tsai\nGuarding the PHP Temple\nmr_me\nAPT Down - The North Korea Files\nSaber, cyb0rg\nA learning approach on exploiting CVE-2020-9273\ndukpt\nMapping IOKit Methods Exposed to User Space on macOS\nKarol Mazurek\nPopping an alert from a sandboxed WebAssembly module\nThomas Rinsma\nDesync the Planet - Rsync RCE\nSimon, Pedro, Jasiel\nQuantum ROP\nYoav Shifman, Yahav Rahom\nRevisiting Similarities of Android Apps\nJakob Bleier, Martina Lindorfer\nMoney for Nothing, Chips for Free\nPeter Honeyman\nE0 - Selective Symbolic Instrumentation\nJex Amro\nRoadside to Everyone\nJon Gaines\nA CPU Backdoor\nuty\nThe Feed Is Ours\ntgr\nThe Hacker's Renaissance - A Manifesto Reborn\nTMZ\nTitle\n: The Hacker's Renaissance - A Manifesto Reborn\nAuthor\n: TMZ\n|=-----------------------------------------------------------------------=|\n|=-----------=[ The Hacker's Renaissance: A Manifesto Reborn ]=----------=|\n|=-----------------------------------------------------------------------=|\n|=-----------------------------=[ TMZ ]=---------------------------------=|\n|=-----------------------------------------------------------------------=|\n\n A Memory of Sparks\n\nIn 1986, The Hacker's Manifesto emerged from a dial tone, striking the\nscene like lightning. It was an act of defiance, a declaration of identity,\na poetic snapshot of a subculture forming in the shadows of mainframes and\nTTYs. It reflected the days of stolen long-distance codes, BBSes, and the\nbelief that knowledge should be free.\n\nNow, in 2025 — 40 years since Phrack first bounced across telephone wires\nand underground forums — we look back not to wax nostalgic, but to\nunderstand how the hacker spirit has evolved, splintered, and, in many\nways, sold its soul.\n\nThis is not a eulogy. It is a reckoning. We need to face what's really\nhappened.\n\n\"We exist without skin color, without nationality, without religious\nbias... and you call us criminals.\" — The Hacker's Manifesto, 1986\n\n From Curiosity to Commodity\n\nThen: We were the kids who saw the blinking cursor not as a barrier, but as\nan invitation. We typed characters into the voids and got back secrets. Our\ngoal was not destruction, it was understanding — to understand the systems\nbetter than those who built them. The thrill of \"getting in\" was matched\nonly by the beauty of making something out of nothing.\n\nNow: Hacking is a job title. Curiosity has been commodified. A thousand\n\"Bug Bounty Platforms\" are trying to monetize your desire for\nunderstanding, to turn it into CVEs and T-shirts. CTFs have become\nresume-building exercises. Reverse engineers wear corporate badges.\nDeveloped by government employees rather than openly in the community,\nexploits get embargoed, not shared.\n\nThe paradise of the underground has been paved over by venture capital and\ncompliance frameworks, steamrolling everything we used to stand for.\n\n We Were Hackers, Not Consumers\n\nThen: We were the creators in a world of closed systems. If the machine\ndidn't do what we wanted, we opened it. We wrote shellcode by hand. We used\nopcode charts like musicians used sheet music. We owned the stack.\n\nNow: The stack owns us. We run opaque blobs inside containers on someone\nelse's infrastructure. Modern \"security research\" means fuzzing v8 apps in\nKubernetes or staring into the abyss of vendor APIs.\n\nMany call themselves hackers without ever having debugged a segfault or\nread an RFC.\n\n The Underground Is Dead—Long Live the Underground\n\nThen: Phrack was the Rosetta Stone. 2600 was gospel. IRC was sacred ground.\nZines were copied, not monetized. We earned respect by contributing tools,\nideas, or code, never by chasing clout.\n\nNow: We scroll past 40-tweet threads explaining how sudo works. Seriously?\nWe get TikToks on hacking by people in hoodies set to trap music, a\ncaricature at best. \"Influencer\" and \"hacker\" now share the same business\ncard.\n\nYet, somewhere the spirit persists. Hidden away in encrypted Matrix rooms,\ndeep inside dead drop Git repositories and onion forums, the real work\ncontinues. The underground never died — it just moved to quieter places.\n\n The Corporatization of Dissent\n\nThen: We were anarchists with a cause. When we hacked, it was to challenge\ncontrol, not enforce it. We saw the abuse of power, and we exposed it — not\nfor bug bounties, but for truth.\n\nNow: The same corporations that used to call us criminals now sponsor\n\"cybersecurity summits.\" We speak at cons funded by defense contractors.\nNation-state APTs get romanticized. Zero-day brokers operate with impunity.\n\nThe hacker ethos was never about permission. Now even our rebellion needs\napproval.\n\n The Spirit Remains\n\nI know I sound bitter, but here's the thing: it was never really about the\ntech or getting into systems. It was about *freedom*. Freedom to think, to\nquestion, to build and break without limits. That spark is hard to find\nnow, but it still lives in the rarest of places:\n\n- In the sysadmin quietly running their own mailserver.\n- In the student soldering a WiFi module to an 80s calculator.\n- In the researcher publishing their PoC without a brand campaign.\n- In the collective that forks closed-source hardware just to see what's\n inside.\n\nThe manifesto lives on — not in blog posts, but in the act of refusing to\nconform.\n\n Call to the Next Generation\n\nWe do not gatekeep, but we warn.\n\nDo not mistake certifications for competence. Do not confuse platforms with\ncommunity. Do not accept that \"responsible disclosure\" means asking\npermission to be curious.\n\nRead the classics. Study the protocol. Run your own infrastructure. Know\nwhat came before you.\n\nAbove all: ask questions, and never wait for answers to be approved.\n\n The 41st Byte\n\nThis is not a return to the past, it is a declaration of continuity.\n\nFor 40 years, Phrack has stood as a monument, not to nostalgia but to\nresistance, to knowledge, and to the hacker spirit that refuses to die. Let\nthis not be the end of an era, but the beginning of the next.\n\nHack the planet. Again.\n\nWritten in honor of Loyd Blankenship (\"The Mentor\"), in celebration of 40\nyears of Phrack. By one of the curious, still connected.\n[\nNews\n]\n [\nIssues\n]\n [\nAuthors\n]\n [\nArchives\n]\n [\nContact\n]\n© Copyleft 1985-2026, Phrack Magazine.",
+    "comment": [
+        {
+            "text": "I am still surprised that this made it into the zine. Maybe it wasn&#x27;t as obvious &quot;back then&quot;, but my god that is so clearly - and badly - written with AI.",
+            "comment": []
+        },
+        {
+            "text": "I feel like the irony of a post complaining about the death of hacker culture written entirely by ChatGPT pretty well summarizes where we&#x27;re at.",
+            "comment": [
+                {
+                    "text": "Human effort has hit an all time low.",
+                    "comment": [
+                        {
+                            "text": "There is nothing left for LLM firms to steal, it is a self-correcting problem. =3",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Amen.",
+                    "comment": [
+                        {
+                            "text": "[flagged]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I think it captures the original motivation and thrill of exploration beautifully. Who doesn’t remember as a kid seeing a blinking cursor and the feeling there was an entire universe to be discovered?<p>I’m 100% on board with the message of getting back to exploration for its own sake, and that conformity gets in the way of that.",
+            "comment": []
+        },
+        {
+            "text": "These sorts of manifesto essays have never resonated with me. To me it never was—- and never has been—- about freedom. It’s about curiosity and knowledge. The essay seems to glorify the bad-old-days of fighting for freedom against corporate control (AT&amp;T, IBM, Microsoft, etc.) as somehow the good-old-days. As far as my technological life goes, we’ve won—- MS, IBM, AT&amp;T are irrelevant.",
+            "comment": [
+                {
+                    "text": "&gt; <i>MS, IBM, AT&amp;T are irrelevant.</i><p>In which parallel universe?<p>Also, in addition to the old corpos, we got a whole guard of new corpos now...",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "From the article<p><i>&gt; Then: Phrack was the Rosetta Stone. 2600 was gospel. IRC was sacred ground.\nZines were copied, not monetized. We earned respect by contributing tools,\nideas, or code, never by chasing clout.</i><p>2600: The Hacker Quarterly is definitely not quite what it was decades ago, but I was still so giddy when my first article got published there that I dereferenced a null pointer on purpose.",
+            "comment": [
+                {
+                    "text": "There&#x27;s an interesting point hidden here. A lot of people claim that 2600 is obsolete because it is still in print as opposed to going full digital like a lot of places did.<p>30 years ago, a lot of us thought that the internet and digital would bring freedom. We would no longer have to rely on the good mercy of book stores or newsstands willing to stock the magazines, or convince reluctant editors to print articles. We could just put it online where it would live forever.<p>It turns out that when something is online, it is <i>much</i> easier to ban or censor. Remember when the drama about Kevin Spacey came out, and all the streaming services removed his movies and TV shows? What about when a news story is posted and gets a bit of heat, so the editor goes in to edit it to remove the offending bits to appease the mob? Or deletes an article because they had bad blood with the writer?<p>If you have a physical DVD of a movie, no streaming service can block it. And if you have the print version of the newspaper or the magazine, then the editor can&#x27;t just break into your house and cut the article out of the issue. I mean I guess they could, but that is a LOT harder than just clicking a button in a CMS.",
+                    "comment": []
+                },
+                {
+                    "text": "Nobody back then would have ever said IRC was “sacred ground.” What does that even mean?<p>And I read 2600 and also occasionally submitted, but it certainly wasn’t treated as gospel. Also of course there was clout chasing — most of the scene was teenagers trying to impress each other!",
+                    "comment": [
+                        {
+                            "text": "&gt; What does that even mean?<p>This article is the perfect exemplification of that Good Will Hunting quote: &quot;So if I asked you about art you’d probably give me the skinny on every art book ever written. Michelangelo? You know a lot about him. Life’s work, political aspirations, him and the pope, sexual orientation, the whole works, right? But I bet you can’t tell me what it smells like in the Sistine Chapel. You’ve never actually stood there and looked up at that beautiful ceiling. Seen that.&quot;<p>This article is clearly written by an LLM, so it figures that it uses bad analogies and silly tropes. It&#x27;s the average of badly written stuff on the subject, and there was <i>a lot</i> of badly written stuff about this subject back in the day.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Agreed. IRC was for trading shell accounts.... uhhh.... I mean it was strictly to be used for sharing information that was both legal and educational.<p>Yeah that&#x27;s it.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "In ancient days, I printed out the original and hung it on the wall by my computer.<p>This one I&#x27;d regret wasting space in my trash.",
+            "comment": [
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "what hits harder, the fact that this was written by an LLM or inspecting the monospace font and finding cloudflare analytics javascript",
+            "comment": []
+        },
+        {
+            "text": "This resonates. I have just got back to hacking an old flip-dot display after sitting on the shelf for years.<p><a href=\"https:&#x2F;&#x2F;www.bobek.cz&#x2F;buse&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bobek.cz&#x2F;buse&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "this doesnt really reflect the vibe old school hackers give. &quot;solder a wifi module to a calculator&quot; sounds like a cartoon-inspired project.<p>Why not reference call spoofing (i forgot the name) where they were able to call for no charge because they were able to spoof a real call. that&#x27;s the kind of hacker vibe i want continued.",
+            "comment": [
+                {
+                    "text": "The word &quot;hacker&quot; comes from MIT students who would cut up circuit boards with a hacksaw and connect the pieces together in different ways. Soldering a WiFi module to a calculator is very oldschool hacker.<p>The word you&#x27;re looking for is phreaking. I must admit, since the title of TFA&#x27;s website is only two letters away, it&#x27;s funny you forgot it.",
+                    "comment": [
+                        {
+                            "text": "For me, I still tend to use the older definition of “hacker” (not necessarily someone exploiting systems which feels more like a “cracker” to me), but someone  who has an innate curiosity about the world around them, and finds interesting ways to solve problems or create new things.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Ironically, the guy who soldered a Wi-Fi module to a calculator did so to gain access to AI slop with it  <a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2024&#x2F;09&#x2F;secret-calculator-hack-brings-chatgpt-to-the-ti-84-enabling-easy-cheating&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2024&#x2F;09&#x2F;secre...</a>",
+                            "comment": [
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "That is not something that should be encouraged. Hacking together projects like a wifi calculator is fun, harmless and builds knowledge. Hacking a phoneline can land a kid in jail. Attacking public infra is not something that should be treated lightly.",
+                    "comment": [
+                        {
+                            "text": "This is exactly the kind of sanitized hacking this article is talking about.",
+                            "comment": [
+                                {
+                                    "text": "Many of the most prolific and successful offensive hackers, the people that actually made their way into switches and onto hardened SunOS servers, were the least capable technologists. The archetype is Kevin Mitnick, who wasn&#x27;t a coder and barely understood the cookbook tools he used. The field benefited enormously from its sanitization, and the 80&#x27;s and 90&#x27;s reputation could use some scuffing up.",
+                                    "comment": [
+                                        {
+                                            "text": "He did have a great memory and skill for social engineering.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Hang on, ethics does not disappear just because you&#x27;re a hacker (I know there are multiple usages of hacker).<p>Back then, if you were a phreaker, you basically got a few free phone calls. And learned a lot about the telephone system. I think for all intents and purposes you were a rounding error and really weren&#x27;t doing any major harm (i.e. lowering slightly the profit of huge hulking corporations that were quite well). If you were a classic MIT hacker, you never even entertained criminal activities in the first place. I guess the 2600 culture and the Hacker manifesto is more descendant of phreakers and early internet hackers in the &quot;break into computers&quot; sense. But even then, as it says, &quot;their crime was curiosity&quot;, and the purpose still was never to steal stuff. That&#x27;s what criminals do. If you break things as you learn, you have the responsibility for your breakage. If you harm people that can be real harm. There&#x27;s a difference between unsanitized (and harmless) and plainly an asshole. You gotta learn the difference.<p>Honestly I think this point is really important to drive today, because if we had script kiddies a few decades ago, today we can have Uber-Script-Kiddies, probably you can get a hold of some jailbroken LLM model and break serious things without technical knowledge or good intentions. Don&#x27;t do it, kids.<p>But overall I don&#x27;t see how it&#x27;s worthwhile to actually do this kind of hacking today, specially the more attacking kind. I think there is today so many more resources for learning things non-destructively (although I&#x27;m sure there always were some).<p>The hacker mythos in my opinion is due to the mythos that are always built around power. There were the mythos of warriors, of sorcerers, etc., there was the shadowy ninja, and so many others -- they usually wielded some special skill, power or ability. In the case of hackers, they wielded special control and knowledge of computers to do their bidding. I think this kind of myth would happen regardless of intentions -- to break or to defend. It draws our attention and imagination I guess. Kind of like being a magician in an era dominated by communicating machines.<p>Naturally, the distinction between wielding those powers for good reasons and bad ones would emerge. That&#x27;s the black hat and grey&#x2F;white hats. Side note I think the black=bad, white=good association is just a kind of bad one, and nonetheless extremely overused at this point, but I digress. The thing is, what you do have consequences. If the only consequence is you learning stuff, maybe some minor nuisance to a megacorp (like downloading a e-book you don&#x27;t plan on buying for &lt;legitimate reasons&gt;), then I think that&#x27;s the good ole&#x27; hacker spirit.<p>I think the observation and a little bit of daredevil spirit is useful because almost every experiment we do IRL tends to carry at least a little bit of risk. We need to manage this risk wisely. For example, if you&#x27;re messing with electronics you can run the risk of electrocuting yourself or destroying your device. The right spirit is not don&#x27;t do it, but learn to do it safely enough, and at an acceptable risk to your device. If you wanted to play with radio transmissions, you run the risk of disrupting communications from emergency services and medical devices. Again, it&#x27;s not &quot;don&#x27;t do it&quot;, but &quot;know what you&#x27;re doing&quot;. If you&#x27;re playing with computers, (and you were skilled enough; which most of us (thankfully?) aren&#x27;t) you can basically unleash a minor disaster. The answer is as always not &quot;don&#x27;t do it&quot;, but &quot;know what you&#x27;re doing and what you&#x27;re playing with&quot;. Also of course for entrepreneurship as well, it&#x27;s not &quot;don&#x27;t do it, never make anything&quot;. Everything carries risks. The important thing is to study well enough the risks of what you&#x27;re doing until you can be reasonably sure (in proportion to the risk) the benefits outweigh the risks. Have integrity. Else yea, don&#x27;t do it. Don&#x27;t shove a gazillion ads into my eyeballs until I almost lose my mind, thank you very much.<p>Hackers are all part of society. That&#x27;s what Hacking the Planet means in spirit. Use the magic sand to save the world. Wield the beauty of the baud... the mastery of the switch. Or Just learn and have some harmless fun, make someone smile, that might be better than any software or widget you could ever make.",
+                                    "comment": [
+                                        {
+                                            "text": "[dead]",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Because phreaking in the traditional sense hasn&#x27;t worked for decades?",
+                    "comment": []
+                },
+                {
+                    "text": "Blue box and phreaking.",
+                    "comment": []
+                },
+                {
+                    "text": "It was written by ChatGPT which would avoid examples that are explicitly illegal, and would stop short of advocating things that contravene ToS agreements.<p>Sad.<p>Who is in charge of this shit now?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Here is an exercise, find one character usage that the original didn&#x27;t have and that this new one is littered with...",
+            "comment": [
+                {
+                    "text": "The original phrack was (i&#x27;m assuming) 7-bit ascii, so obviously it wouldn&#x27;t have used characters that aren&#x27;t ascii...",
+                    "comment": [
+                        {
+                            "text": "The text written in LLMish for that Phrack intro uses ASCII characters for everything, including quotes and ellipsis. There&#x27;s <i>one</i> non-ASCII Unicode codepoint that made it through and it&#x27;s the telltale sign of LLMish. They also use a monospaced font and ASCII art (well at least ASCII aligned titles) to make it look old-school cool.<p>Honestly I don&#x27;t understand how anyone can defend this LLMish garbage.",
+                            "comment": [
+                                {
+                                    "text": "i&#x27;m not really defending it per se, i just think the way you phrased your argument was silly.<p>in general though, i think it does get tiresome when people attack a piece solely based on the use of LLM editing instead of its merits (or lack thereof). That is ultimately an ad hominem. The reason to dislike LLM writing is because typically its vapid, not due to the LLM in and of itself.",
+                                    "comment": [
+                                        {
+                                            "text": "I think one reason is also the style? Like you can not like the LLM style and that&#x27;s a perfectly valid to reason to not like it.<p>Attacking the use of LLMs might just be shorthand for the style or the long-winded vacuousness that people don&#x27;t like.<p>I agree that if someone used an LLM and the result is _good_, I&#x27;m not sure I would care. But that generally doesn&#x27;t happen yet, so one is a proxy for the other.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Emmm...dash?",
+                    "comment": []
+                },
+                {
+                    "text": "Some of us use em-dashes habitually, and did so before LLMs.  Call it <i>le ponctuation juste</i>.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; We used opcode charts like musicians used sheet music.<p>Maybe like musicians use chord charts? In this analogy, sheet music plays a better role as the program.",
+            "comment": []
+        },
+        {
+            "text": "You whiny cunt-cocks. The hacker spririt is a way of thinking: \nWhere one sees nothing, hackers see that nothing and raise i an injection of new functionality. The hacker puts in the work in order to see and achieve this goal, because a hacker can.<p>There ar eno white hat or black hats, that was some dumb cunt US politician who labeled what I dare say is one of the most profoundly technically capable folks in the world. The truth is more a long the lines of everyone being their own shade of unique gray<p>Hackers are the light of knowledge and persistence; how to inject that cool, new, unforeseen at production, functionality in code, hw, people, biles.. model trains.<p>Glad to see their technicaly excellence are a world above the majority of the public still in Phrack Magazine. A Magazine that once saw fit to Prophile me, they told me had been sturring up sum wavez peiple had taken notice of, but of course, few things mad me as happy as my time in AB: Ac1db1tch3z.<p>Learning and hacks just sky-rocketted from there despite some time spent service just and very public &quot;rm -fr &#x2F;*  to posers, leechers and worse.<p>The time my peers saw fit to cool thinks I knew in much cooler ways, and in packs of things even wolves would run from. Thank you, b1tch3z, phracksters, and #darknet leeches I could rm -fr whenever i felt a bit bored or blue.<p>The Greatest trick the Devil ever pulled was convincing the world he did not exist, like some sorta japanese ghost or something.<p>Stop arguing about penii minimalism and get back to nthe important  bits: Hacking.<p>... let us hope the days of blueboard&#x27;s bugtraq are coming back  with the announcement.<p>PS: Rip dankam. I would hoped you could beta tested my root kit another few months!:) Smart guy, worthy of the title, unlike kids wo bitch and moans about who is best.<p>HACKERS SIMPLY GO  OUT AND SHOW WHO&#x27;S BES BY DOING, USING ACTION, now this kindergarten my dad &gt; your dad shit.<p>-y",
+            "comment": []
+        },
+        {
+            "text": "The original &quot;manifesto&quot; was a deeply cringe zine article written about a group of people who would go on to run IT security practices at the major I-banks.<p>This update applies a fresh layer of vaseline to the camera lens: &quot;creators in a world of closed systems&quot;, &quot;anarchists with a cause&quot;. &quot;Our goal was not destruction.&quot; Who are you calling &quot;we&quot;? I was there. It was for the most part a bunch of people trading scripts and running them in the hopes of possibly shutting people&#x27;s phones off or stealing mail spools.<p>I&#x27;m not high-horsing or condemning 90s hackers. They were teenagers fucking around doing what teenagers do (though: I cough a bit when I read Blankenship writing about how we all &quot;existed without skin color&quot; and not &quot;judging people for what they looked like&quot;).<p>What&#x27;s insidious about this piece is how they use hagiography to cover for a pure gatekeeping argument. Bug bounties commoditizing vulnerability development to produce CVEs! Why, I never: the audacity to pay teenagers in Indonesia to document vulnerabilities when our forebears had to surreptitiously trade source trees on EFNet to participate in the scene.<p>This piece was written about 6 months before LLMs upended vulnerability research. What LLMs are going to do to the scene is a can of worms, so let&#x27;s just put a pin in that, and judge it by the standards of August 2025, which by the standards of 1994 were a golden age of hacking, both in opportunity and in the intellectual depth of the field and the possibilities for engaging meaningfully with computer science.",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m a professional hacker, and I love what I do, but this is one of the most cringe articles I have ever read. You shouldn&#x27;t idolize the activities that you do and elevate them to a quasi-religious practice. Can you imagine a plumber or an airline pilot writing a manifesto like this? This happens with a lot of professions, but particularly in tech and ESPECIALLY in the offensive disciplines of cybersecurity. It makes for some of the most insufferable people you can ever interact with. They put all the eggs of their identity into one basket and it makes them overly self-important on that one topic, prideful, snobbish, and insecure. My advice to other hackers: pick up at least one or two other hobbies. Realize that it&#x27;s not what you do that matters, but how you do all things, and most importantly how you engage with people.",
+            "comment": [
+                {
+                    "text": "Or buy a T-shirt that says.. WWND - and ask yourself.. What would Neo do? &#x2F;s",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Hacker culture is still alive at NetBSD community",
+            "comment": [
+                {
+                    "text": "I was about to say, it is still these but pushed tot he outer regions. There are still many Linux distros that have this spirit but they are usually used by maybe a few thousand people at best.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Man everyone says every article&#x2F;blog post that is on HN is written by an LLM. Almost every single post.. I actually didn&#x27;t get strong AI vibes from this one but maybe I just am bad at recognizing. Sure it&#x27;s a bit cringy but I think that&#x27;s kinda the point? idk...i like the idea of keeping the culture of exploration of technology just for the sake of it (not to monetize everything) alive.",
+            "comment": [
+                {
+                    "text": "You&#x27;re bad at recognizing it, sorry to say. You might still like the content or even the style, which is fine. But know that it was mostly written by a machine, not a human.",
+                    "comment": [
+                        {
+                            "text": "An em dash does not make the fact that it is written by LLM. Its use alone signals a command of style and precision.\nNearly every Newspaper article is written by an LLM, if we follow this logic.",
+                            "comment": [
+                                {
+                                    "text": "&gt; An em dash does not make the fact that it is written by LLM.<p>Agreed. 100%<p>&gt; Its use alone signals a command of style and precision.<p>Bollocks — utter bollicks — popplecock evon.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This sounds like ChatGPT.",
+            "comment": [
+                {
+                    "text": "&gt;this is not a eulogy, it&#x27;s a reckoning<p>100%",
+                    "comment": []
+                },
+                {
+                    "text": "is that why it&#x27;s impossible for me to read? my brain has read so much llm output that i can only skim it now.",
+                    "comment": []
+                },
+                {
+                    "text": "Uh, should have used Claude. Gpt is embarassing.<p>You won’t get my point so I have to lay it bare: That doesn’t matter. Content counts and not the methods to create it.",
+                    "comment": [
+                        {
+                            "text": "You’re right. The content sucks, because it was created with an LLM.",
+                            "comment": [
+                                {
+                                    "text": "No. It doesn’t matter whether it was created by an LLM or an Indian - as long as it is good. The methods are not important.<p>Skin color of the creator is not important. Even if their ethnic background is visible through the use of one specific word a lot and slang or dialect, it doesn’t matter. Similarly it doesn’t matter whether it was made with an LLM.<p>Argue with the content, not the methods or risk being boring and uninteresting and generally easy to dismiss",
+                                    "comment": [
+                                        {
+                                            "text": "It matters if an article was written by an expert or someone that only has surface knowledge about the topic. It matters if it’s written by someone talented with words or by someone that has to churn 10 articles a day for a content farm.<p>So clearly not all sources are equal, and that applies to LLM too.<p>If you spend 4h of your time writing an article on something you care about it’s likely to be interesting. If the extent of the effort you are willing to put in the topic is 10 seconds of your time to ask ChatGPT to « write an article about phrack », then just don’t bother. We can all ask our own GPTs to do it for us whenever we want.<p>In theory someone could iterate for 4h with ChatGPT to get to the exact words they wanted to say without having written a line of it, but unfortunately for those folks, 99% of the content generated in that way will be nice sounding emptiness, and people don’t want to read 100 pieces of BS just to find 1 good one. There is too much content online and not enough time to read it all, we gotta filter somehow, and LLM sounding prose is one of the best filter available today.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "&gt; Argue with the content<p>I am. It sounds like it was written by an LLM. That&#x27;s synonymous with uninteresting and derivative.<p>BTW, likening not wanting to read LLM output to racism is possibly one of the funniest things I&#x27;ve ever seen on this website. Thank you.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "when i say &#x27;written by an llm&#x27; i am skipping a step. it assumes the reader knows that llm style and diction is bad. but of course there are many reasons why it is so bad.<p>for example, i would describe this article as grandiose, overdramatic and excessively ornate. ironically those styles show a lack of humanity.<p>it has vanishingly little substance. take &quot;a poetic snapshot of a subculture forming in the shadows&quot;. this is meaningless!<p>it&#x27;s generic, everything about the article is stating the mean belief. where is the controversy, where is the drama that would justify these massive sentences?<p>you can also notice that everything about an llm text has this repulsive corporate optimism, a desperation to deliver a redeeming conclusion.<p>so this article says, the hero meets the challenge in the journey, &quot;We used opcode charts like musicians used sheet music. We owned the stack.&quot; oh no. we reached the bottom. but! watch out! because, we will be <i>redeemed</i>, &quot;That spark is hard to find now, but it still lives in the rarest of places&quot;. how about this: no it fucking doesn&#x27;t, the spark is dead, bled out and buried in a block of concrete. end of article.<p>i studied humanities but i hope that readers of any subject would react the same way.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Hey juleiie, do you retract the death threat you made against me, or do you still stand by it?",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "What is striking to me now that we are three years into the LLM revolution is ... there is no foundational software that has resulted. I keep asking where the good software is now that the miracle of LLM programming has entered the firmament.<p>Companies were always huge piles of proprietary custom code. Slowly what would emerge from those would occasionally be foundational software like ERPs, better databases, better message queues.<p>What I suspect will happen now is that everyone will simply construct their own distinct stacks of code, or just pile onto the existing proprietary ones inside companies. The &quot;export&quot; of code for general use will functionally disappear.<p>It&#x27;s all throwaway, to be wastefully recomputed&#x2F;rerendered by armies of H100s and only apathetically checked for utility.<p>I could be proven wrong, I&#x27;ll know if Linux starts to miraculously close functionality and usability gaps with Windows&#x2F;OSX, which would be the most visible example of LLM acceleration of development, but it so far has not.",
+            "comment": []
+        },
+        {
+            "text": "(2025)<p>Related discussion then: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44945660\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44945660</a>",
+            "comment": []
+        },
+        {
+            "text": "The Hacker Spirit was largely subsidized on the (relatively) high salaries afforded to engineers*.<p>What happens when that well dries up?<p>Plus the relative freedom available to said hackers in the past, that is now being choked by the very same tools they&#x27;ve built.<p>We like to think of ourselves as capable systems designers, coming up with complex reliable&#x2F;durable&#x2F;highly-available&#x2F;distributed systems to be proud of. But we can&#x27;t stop and think about the only system that really matters in the end.<p>* Not saying it was 100% the case, nothing ever is, but you can&#x27;t deny that a large part of historic and modern hacker culture grew from well off places who could afford it. Sure, sure &quot;necessity is the mother of all invention&quot; and all that, but that breeds a different kind of innovation.",
+            "comment": [
+                {
+                    "text": "The hacker culture in Latin America was largely driven by frustration with the subpar hardware&#x2F;software options available to the general public, and the financial inaccessibility of better options. So I wouldn&#x27;t say that financial stability is a prerequisite for hacker culture to thrive.",
+                    "comment": [
+                        {
+                            "text": "That&#x27;s the main reason why most embedded devices and Android phone hackers (or more recently, ROM developers) are from Russia, Brazil or India. It&#x27;s more of trying to squeeze more performance from a cheaper option... and having the time to do it. Once you&#x27;re happy enough (not even perfectly!) with your product and you don&#x27;t have the time to try to improve it yourself, you just won&#x27;t.<p>The hacker culture in the West is more related to creating a thing, and doing everything yourself from scratch on bare metal components - often for the fun and challenge, rather than necessity.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I see it the other way. Applying the skills to a job is much more lucrative, so most do that instead.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": ":( the renaissance: age of slop",
+            "comment": []
+        },
+        {
+            "text": "Read the original instead of this AI slop:<p>Another one got caught today, it&#x27;s all over the papers.  &quot;Teenager Arrested in Computer Crime Scandal&quot;, &quot;Hacker Arrested after Bank Tampering&quot;... Damn kids.  They&#x27;re all alike.<p>But did you, in your three-piece psychology and 1950&#x27;s technobrain, ever take a look behind the eyes of the hacker?  Did you ever wonder what made him tick, what forces shaped him, what may have molded him?  I am a hacker, enter my world... Mine is a world that begins with school... I&#x27;m smarter than most of the other kids, this crap they teach us bores me... Damn underachiever.  They&#x27;re all alike.<p>I&#x27;m in junior high or high school.  I&#x27;ve listened to teachers explain for the fifteenth time how to reduce a fraction.  I understand it.  &quot;No, Ms. Smith, I didn&#x27;t show my work.  I did it in my head...&quot; Damn kid.  Probably copied it.  They&#x27;re all alike.<p>I made a discovery today.  I found a computer.  Wait a second, this is cool.  It does what I want it to.  If it makes a mistake, it&#x27;s because I\nscrewed it up.  Not because it doesn&#x27;t like me... Or feels threatened by me...\nOr thinks I&#x27;m a smart ass...\nOr doesn&#x27;t like teaching and shouldn&#x27;t be here...\nDamn kid.  All he does is play games.  They&#x27;re all alike.<p>And then it happened... a door opened to a world... rushing through\nthe phone line like heroin through an addict&#x27;s veins, an electronic pulse is\nsent out, a refuge from the day-to-day incompetencies is sought... a board is\nfound.\n&quot;This is it... this is where I belong...&quot; I know everyone here... even if I&#x27;ve never met them, never talked to them, may never hear from them again... I know you all... Damn kid.  Tying up the phone line again.  They&#x27;re all alike...<p>You bet your ass we&#x27;re all alike... we&#x27;ve been spoon-fed baby food at school when we hungered for steak... the bits of meat that you did let slip\nthrough were pre-chewed and tasteless.  We&#x27;ve been dominated by sadists, or ignored by the apathetic.  The few that had something to teach found us willing pupils, but those few are like drops of water in the desert.<p>This is our world now... the world of the electron and the switch, the beauty of the baud.  We make use of a service already existing without paying\nfor what could be dirt-cheap if it wasn&#x27;t run by profiteering gluttons, and you call us criminals.  We explore... and you call us criminals.  We seek\nafter knowledge... and you call us criminals.  We exist without skin color, without nationality, without religious bias... and you call us criminals.\nYou build atomic bombs, you wage wars, you murder, cheat, and lie to us and try to make us believe it&#x27;s for our own good, yet we&#x27;re the criminals.<p>Yes, I am a criminal.  My crime is that of curiosity.  My crime is that of judging people by what they say and think, not what they look like. My crime is that of outsmarting you, something that you will never forgive me for.<p>I am a hacker, and this is my manifesto.  You may stop this individual, but you can&#x27;t stop us all... after all, we&#x27;re all alike.",
+            "comment": []
+        },
+        {
+            "text": "Everything we love about human creativity is being destroyed by AI models and when some of us point it out, we&#x27;re getting downvoted by an army of AI kool-aid drinkers. It&#x27;s plain insane.<p>You downvoters really cannot see what&#x27;s wrong with a Phrack article written in an insufferable LLMish tone that reads just like a 2026 LinkedIn feed?<p>You are lost.",
+            "comment": [
+                {
+                    "text": "Human creativity only dies with the entirety of the human race. As bleak as things may look the simplest thing to do is just not use AI if it bothers you. Focus all your efforts on some great tech based on risc-v. If one does that it would develop an amazing skill set.<p>I work with tech and the phase of my current development doesn’t leverage AI.<p>Once I know exactly my needs I will likely start to adopt AI to fill in the details of my plan.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "&gt;Yet, somewhere the spirit persists. Hidden away in encrypted Matrix rooms,\ndeep inside dead drop Git repositories and onion forums, the real work\ncontinues. The underground never died — it just moved to quieter places.<p>You wish. True hackers wrote HAKMEM <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;HAKMEM\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;HAKMEM</a>, wrote ZMachine\ninterpreters in PostScript, wrote compilers for the Subleq machine with memory indirection\nand ran GNU&#x2F;Linux on it. You pale against Lisp hackers who almost ate Discrete Math books\nfor breakfast.<p>The PC &quot;hacking&quot; was nothing more than a bunch of kids playing with really underopowered toys.<p>There&#x27;s more hacking spirit in Fabrice Bellard and Common Lisp&#x2F;Scheme books than the whole PC hacking&#x2F;cracking and phreakign scene.<p>This is a genuine hacking act:<p><a href=\"https:&#x2F;&#x2F;bellard.org&#x2F;dvbt&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;bellard.org&#x2F;dvbt&#x2F;</a><p>This too:<p><a href=\"http:&#x2F;&#x2F;www.erikyyy.de&#x2F;tempest&#x2F;\" rel=\"nofollow\">http:&#x2F;&#x2F;www.erikyyy.de&#x2F;tempest&#x2F;</a><p>The same with Emacs hackers repurposing the editor for <i>anything</i>. IRC, Email, ZMachine interpreter, music and video player interfaces, web browsers, equation solvers, controlling aiports in Germany as an ATC messaging router (and I am NOT kidding about the last one)...<p>This might be the craziest achievement from a GNU product <i>ever</i>. Repurpossing a text editor to manage a civil infraestructure:<p><a href=\"https:&#x2F;&#x2F;www.emacswiki.org&#x2F;emacs&#x2F;EmacsStories\" rel=\"nofollow\">https:&#x2F;&#x2F;www.emacswiki.org&#x2F;emacs&#x2F;EmacsStories</a>",
+            "comment": [
+                {
+                    "text": "That’s a pretty sweet gate! How long you been keeping it?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": [
+                {
+                    "text": "&gt;  The &quot;hacker spirit&quot; doesn&#x27;t require being a Luddite<p>Just to be pedantic, the Luddites weren&#x27;t anti-technology, they were fighting against a means of production that they could never hope to own and which was ruining their livelihoods.",
+                    "comment": [
+                        {
+                            "text": "Why engage with the substance of my comment when you can be pedantic am I right?",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;d accept that challenge, but I can&#x27;t now because it&#x27;s been edited out.  For what it&#x27;s worth, I remember somewhat agreeing with it.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I love that Luddism(?) is coming back into mainstream discussion. Growing up I had the pop culture understanding of what a Luddite is. Wasn&#x27;t until the last few months that I really understood, thanks in part to comments like this.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; doesn&#x27;t require being a Luddite and rejecting LLMs merely because they&#x27;re new and corporate.<p>I&#x27;d say the opposite is true. Taking that new and corporate thing and making it into something that works for you as a tool for hacking is exactly what the hacker spirit is about.<p>&gt; I run an &quot;abliterated&quot;&#x2F;uncensored local model on a spare PC downstairs.<p>Exactly like that.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; LLMs are here to stay. The &quot;hacker spirit&quot; doesn&#x27;t require being a Luddite and rejecting LLMs ...<p>You&#x27;ve got it all wrong. I pay three AI subscriptions and I use LLMs every day, for various tasks.<p>I know models are here to stay (not just LLM ones). At least 12 computers at home (well counting the Pis and NUCs as computers) and at all times at least half of those turned on. And more VMs than that (and agents running into those VMs).<p>I&#x27;m all but a luddite but this doesn&#x27;t mean I don&#x27;t find itprofoundly lame when such a venerable institution as <i>Phrack</i> can&#x27;t even bother to write one page of text without using a LLM.<p>Also they use a monospaced font and there&#x27;s <i>ONE</i> fucking non-ASCII character in the entire prose that appears several times: the em-dash from LLMish.<p>Now I wrote (and typeset) books: I can tell you about various types of dashes and spacing characters (in both english and french). I&#x27;m not saying we shouldn&#x27;t be using em-dashes. But when you use a monospace font to look old-school cool using ASCII art, then maybe you could have removed that one LLMish artefact and use, I dunno, two minus signs like in the good old days?<p>They didn&#x27;t even bother to replaced these em-dashes.<p>Here&#x27;s what Gemini (on purpose) has to say about the text:<p>There is exactly 1 unique non-ASCII character in the provided text (see what I&#x27;m doing here? I&#x27;m using a LLM):<p><i>The Em Dash (—): Used throughout the text (e.g., &quot;2025 — 40 years&quot;, &quot;Dead—Long Live&quot;, &quot;criminals.&quot; — The&quot;).<p>All other characters—including the quotes (&quot;, &#x27;), ellipsis (...), and formatting symbols (|, =, -)—are standard ASCII characters.&quot;</i><p>Why, just why? Why are ellipsis ASCII ... ? Did they replace the Unicode ellipsis codepoint with three ASCII dots? They forgot to replace the em-dash?",
+                    "comment": [
+                        {
+                            "text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;newsguidelines.html\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;newsguidelines.html</a><p>&gt;Please don&#x27;t complain about tangential annoyances—e.g. article or website formats, name collisions, or back-button breakage. They&#x27;re too common to be interesting.<p>I can&#x27;t think of any comment less interesting and more tangential these days than yet another screed about LLMs using em dashes or particular speech patterns.  Seriously who fucking cares",
+                            "comment": [
+                                {
+                                    "text": "The other thing is who really knows if it was human or LLM.\nI think I have been accused of writing like an LLM.",
+                                    "comment": [
+                                        {
+                                            "text": "With em dashes in particular, a human would have to go to explicit effort to use a non-ascii character. I like a good em-dash myself, but I just use a hyphen because I&#x27;m not going to go to the effort of using a character that&#x27;s not on my keyboard in a blog post or comment. Using em dashes, especially in an otherwise monospace retro-computing theme, is a sure sign of llm output.",
+                                            "comment": [
+                                                {
+                                                    "text": "I have a keyboard macro set up so typing “—-&lt;space&gt;” yields “—”. I set this up like a decade ago and it’s just habit now.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "That evidence is laughable.<p>I learned about em-dashes from one of clients who used them. She used Microsoft Word it took a chord key sequence but was in her skill set. I think it was shift-option hyphen.<p>I think using em-dashes to detect LLMs reveals the divide between computer science and liberal arts.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "This is hardly a tangential annoyance to be annoyed by low effort slop.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Would love some abliterated model suggestions.",
+                    "comment": [
+                        {
+                            "text": "Plus 1",
+                            "comment": []
+                        },
+                        {
+                            "text": "Honestly just go on huggingface and try one that&#x27;ll fit into your vram.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

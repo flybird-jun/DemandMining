@@ -1,0 +1,30 @@
+```json
+{
+  "topic": "Project Oberon 系统从 RISC-5 到 RISC-V 的迁移，利用 OP2 编译器将整个操作系统/编译器/语言生态移植到现代硬件（包括 RISC-V VM 和未来 ESP32 微控制器）",
+  "users": [
+    "操作系统和编译器研究者/爱好者",
+    "复古计算和系统软件历史爱好者",
+    "嵌入式/微控制器开发者（ESP32-P4 等无 MMU 平台）",
+    "教学场景中希望理解完整系统设计的教师/学生",
+    "RISC-V 生态系统开发者",
+    "Oberon 语言社区成员"
+  ],
+  "pain_points": [
+    "Project Oberon 原 RISC-5 架构/FPGA 板（Xilinx Spartan-3, 1MB SRAM）硬件已过时难获取，且不属于主流生态",
+    "Wirth 自带 OR 编译器强绑定 RISC-5，迁移到其他架构需要维护新编译器后端",
+    "Oberon-07 与 Oberon 90 不兼容，导致在不同语言方言/编译器之间难以复用代码（System 3 vs Project Oberon）",
+    "在资源受限但无 MMU 的微控制器（ESP32-P4）上缺少一个文档极其完备、简洁可教学/可审计的完整 OS + 编译器 + 语言栈",
+    "rv32emu 等通用 RISC-V 模拟器缺少针对教学/特定内存映射（如 Wirth 1:1 内存映射）的精简版本",
+    "现有发行版本仅提供 Linux x64 / Windows x86 二进制，跨平台构建（macOS）支持不完整"
+  ],
+  "existing_solution": [
+    "官方 projectoberon.net：仅支持 Spartan-3 FPGA + 自研 RISC-5 硬件",
+    "Wirth 的 OR 编译器：仅针对 RISC-5/Oberon-07",
+    "OP2 编译器（ETH 遗产）：已为 SPARC/MIPS/i386/ARMv7/RV32 生成代码，但需要自行迁移",
+    "rv32emu：通用 RV32 模拟器，需修改才能复现 Wirth 机器内存映射",
+    "System 3 到 Raspberry Pi 的迁移：使用 OP2 编译器，但是 Oberon System 3 而非 Project Oberon"
+  ],
+  "opportunity": "中等偏低。核心受众是 OS/编译器教学与极客社区，规模小，Wirth 的官方 FPGA 版本本身免费且文档极好，已基本满足研究/学习需求。可能的微机会：(1) 把该 RISC-V 版做成 ESP32-P4 等廉价开发板的即用镜像 + 烧录工具 + 教学课程包，面向大学嵌入式/操作系统课程；(2) 提供商用级跨平台 VM（macOS、WSL）和 IDE 集成（VS Code 调试 RISC-V Oberon）。但这两类需求都较窄，更可能是个人项目/学术贡献而非可持续商业产品。",
+  "score": 12
+}
+```

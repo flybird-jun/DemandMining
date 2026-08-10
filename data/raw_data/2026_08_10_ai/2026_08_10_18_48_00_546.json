@@ -1,0 +1,26 @@
+```json
+{
+  "topic": "汇编指令耻辱厅——寻找单条x86/ARM/RISC-V指令在现代CPU上能达到的最长执行时间（性能下限研究）",
+  "users": [
+    "底层系统程序员/内核开发者",
+    "CPU架构师与微码逆向工程师",
+    "硬件安全研究员/漏洞猎人",
+    "固件/BIOS工程师",
+    "操作系统性能工程师",
+    "PCIe/SoC硬件设计者",
+    "低层性能调优爱好者（"hardware nerds"）"
+  ],
+  "pain_points": [
+    "缺乏系统化的工具来发现并测量CPU指令在MMIO、MSR、I/O端口等"边角"位置的极端延迟",
+    "PCIe互联/根联合体中的死区寄存器难以枚举和定位（mmiotic类工具需求）",
+    "MSR扫描（nightshyft类工具）缺乏现成的延迟分析框架，特别是对未记录寄存器",
+    "微码辅助路径（如FP非规格化、split-lock、rendezvous）触发条件分散，缺乏统一文档",
+    "难以量化"非发布事务"和互联争用对单条指令延迟的影响",
+    "跨平台（x86/ARM/RISC-V）延迟基线缺失，无法做架构对比",
+    "SMM、AMX等特权/扩展状态的延迟异常难以复现和诊断"
+  ],
+  "existing_solution": "Christopher Domas的独立研究项目 + 分散的GitHub工具（mmiotic、nightshyft、rakefield等各自独立），博客文章，以及Latney Memes等社区文化产物。无集成化平台。",
+  "opportunity": "构建一个'CPU延迟探索平台'——集成化的延迟扫描/测量/可视化工具套件：\n\n1. **latency.lol / Hall-of-Shame-as-a-Service**：托管式延迟排行榜，支持用户提交测量结果并自动化复现验证，类似OpenBenchmarking但聚焦最坏情况。\n\n2. **MMIO/MSR延迟地图生成器**：自动化扫描工具，给定PCIe设备/SoC，输出热力图，标记'死区寄存器'和未记录MSR（当前mmiotic/nightshyft是独立小工具）。\n\n3. **微码辅助路径触发器库**：针对编译器/JIT/仿真器开发者，提供'什么会让我的代码慢成狗'的反向参考手册——查询式API，如'我对非规格化FP做fadd会怎样？'。\n\n4. **PCIe互联争用压力测试框架**：复现'hammer cores饿死fxrstor64'这类场景的商业版，用于硬件QA、SoC验证、嵌入式系统选型。\n\n5. **教育/认证产品**：内核/驱动开发者培训课程，讲解微架构陷阱（split-lock、CLFLUSH、fence饥饿等），这是真实痛点——很多工程师不知道movnti+mfence会慢成那样。\n\n最有前景的是#1+#2的组合：把耻辱厅做成SaaS，让硬件安全研究者和内核开发者付费使用自动化扫描基础设施（目前需要自己搭测试机和写脚本）。",
+  "score": 62
+}
+```

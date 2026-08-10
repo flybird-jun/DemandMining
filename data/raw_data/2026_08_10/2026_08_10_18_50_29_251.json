@@ -1,0 +1,1833 @@
+{
+    "item_id": 49213754,
+    "title": "Oracle bans AI-generated code from OpenJDK",
+    "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+    "text": "Back to feed\nOracle bans AI-generated code from OpenJDK despite Ellison's claim 'Oracle isn't writing' its own code\n●\n7 days ago\nOracle has banned AI-generated code from OpenJDK contributions, citing safety, security, and intellectual property risks. The open-source Java project steward said developers can use LLMs privately for debugging and reviewing code but cannot submit AI-generated material to repositories, pull requests, or other project channels.\n\nThe policy contrasts sharply with Oracle's internal practices. Co-founder Larry Ellison recently declared that AI models now write Oracle's code, whilst co-CEO Mike Sicilia credited AI tools with enabling smaller engineering teams to deliver faster.\n\nOracle is investing $70 billion this year in datacentre expansion. The spending spree prompted credit agency S&P to downgrade Oracle's rating to BBB-, one notch above junk status, citing uncertain returns on investment.\nSource:\ntheregister.com\nOracle\n70\nAustin, United States",
+    "comment": [
+        {
+            "text": "Oracle, the law firm with a tech business attached, probably wants to retain the option to sue other people for AI-washing their proprietary code, and that doesn&#x27;t work if they&#x27;re also publicly accepting AI contributions to their code with no apparent concern for the provenance of it. The tech business would probably tell them this isn&#x27;t going to be a needle they are going to be able to successfully thread, but the law firm is in the driver&#x27;s seat.",
+            "comment": [
+                {
+                    "text": "What I don&#x27;t understand is why anyone with half a brain would even venture to touch Oracle with a ten foot pole given that they&#x27;ve had this reputation for at least the last 25 years.<p>Why, people?",
+                    "comment": [
+                        {
+                            "text": "&gt; Why, people?<p>As someone who&#x27;s had to use the Oracle database and also Oracle Linux on servers, beats me. Also stuff like Oracle ADF and JDeveloper and JBoss&#x2F;WildFly, no thank you.<p>I seriously <i>hope</i> someone got bribed to choose Oracle cause it doesn&#x27;t make sense otherwise, at least then they would have gotten something good out of it.<p>The closest thing to an actual argument I&#x27;ve heard was wanting paid support - in which case let me introduce to KronisCo (which will be registered shortly) and if you only give me fat coffeurs of money, I will provide similar support for PostgreSQL with the added benefits of your developers not wanting to retire at 30. Like why would <i>anyone</i> pay for Oracle in the first place, when they can just collect that cheque themselves and freeload on battle-tested FOSS (or contribute back)? Seeing a software dev org just pass those sums to Oracle from their clients without trying to capture that seemed wild.",
+                            "comment": [
+                                {
+                                    "text": "Ahhaha. JBoss, the glorified web-app server that booted for tens of minutes. It was the peak of Java-based over-engineering.",
+                                    "comment": [
+                                        {
+                                            "text": "And it&#x27;s not even an Oracle product. If you want that from them you need WebLogic.<p>To be fair, recent versions of JBoss&#x2F;Wildfly removed a lot of the bloat and boot within seconds. Startup time is mostly due to application frameworks nowadays.",
+                                            "comment": [
+                                                {
+                                                    "text": "This conversation just dug some old nightmares out.<p>In a past life, I used to be almost ecstatic when a client would choose Tomcat over WebLogic or WebSphere, or whatever abomination of an app server they standardized on.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Because my boss like golf courses and even more when oracle sales rep pays.",
+                            "comment": [
+                                {
+                                    "text": "Mine liked steak dinners.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Wait, Oracle sales reps give decision-makers <i>personal kickbacks</i> for buying Oracle??<p>Stay classy Oracle. Such a banal depth of evil.<p>Why hasn&#x27;t this been outlawed?<p>I guess companies that  knowingly employ such managers deserve to lose whatever Oracle&#x27;s legal team extracts out of them.",
+                                    "comment": [
+                                        {
+                                            "text": "They&#x27;ve been charged multiple times for bribing foreign government officials.<p><a href=\"https:&#x2F;&#x2F;www.sec.gov&#x2F;newsroom&#x2F;press-releases&#x2F;2022-173\" rel=\"nofollow\">https:&#x2F;&#x2F;www.sec.gov&#x2F;newsroom&#x2F;press-releases&#x2F;2022-173</a><p>This is why corporate procurement in a large enterprise is so bureaucratic. If you have 20 layers of approval that&#x27;s 20 people that need cocaine and prostitutes yet could blow the whistle.",
+                                            "comment": [
+                                                {
+                                                    "text": "One of the worst side-effects of corruption and cronyism isn&#x27;t even the corruption part, it&#x27;s the insane administrative cost it inevitably breeds in process in order to try to fix.<p>This is largely why the US government is so inefficient. Our government agencies have been trained to outsource absolutely everything. A static site? No, you couldn&#x27;t possibly hire one or two engineers to do that, you need a multi-million dollar contract! Well, when you do that, the corruption risk is through the roof. Now we mitigate with anti-corruption, anti-fraud checks out the fucking wazoo. That&#x27;s expensive. And we&#x27;re putting that expense ON TOP of the exorbitant contract fees.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "&gt; They&#x27;ve been charged multiple times for bribing foreign government officials.<p>Maybe they&#x27;ve been hiring former SNC Lavalin executives?",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; Wait, Oracle sales reps give decision-makers personal kickbacks for buying Oracle??<p>When Oracle does it, it&#x27;s a scandal.  But when an airline gives people personal &#x27;miles&#x27; for their business trips, it&#x27;s business as usual.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Pretty much every business does this to acquire large corporate and government customers.<p>Every customer acquisition will be weeks or months of in-person discussions over golf, expensive dinners, resort vacations, or the like.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "You&#x27;ve clearly never purchased enterprise software at scale before. Oracle doesn&#x27;t do anything that everyone else isn&#x27;t already doing.<p>Dinners, drinks, bottles of scotch, tickets to baseball and football games, plane tickets to attend training sessions in conference rooms attached to nice beachside hotels, business lunches at strip clubs, Superbowl tickets, cruise tickets, wristwatches...<p>Not to mention mugs, tshirts, water bottles and stickers.<p>Everything is on the menu.",
+                                            "comment": [
+                                                {
+                                                    "text": "Our company has a strict gift giving and no-bribes policy. Everyone needs to sign that they have read it. It is even more extensive for the sales&#x2F;procurement teams.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Of course, I signed many such agreements. I&#x27;ve also turned down a ton of &quot;gifts&quot; such as these.<p>But oftentimes they are not clearly gifts or bribes. For example, inviting you or your team out for dinner and drinks can be harmless.<p>It&#x27;s not unusual to take clients out, even to sporting events. As long as the host party is present, and there is intent to network or discuss business, it usually qualifies as &quot;corporate hospitality&quot; -- even the strip club!<p>All expensed and paid for out of the marketing budget. A far cry from gifts or bribes, apparently!",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "I&#x27;m calling my senators and house rep.<p>Holy crap.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "There is a scene in a French documentary in which a former Dassault boss displays his vintage wine collection as one of his many tools to ease arms supply deals with various nations. When the journalist asked him if it really works like this he responded, “Of course, because men are pigs!”",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "Spoiler: Your senators and house rep also take bribes!",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "You&#x27;ll just be pointing them towards their next income bump. ;)",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "Not sure why you&#x27;re surprised. That&#x27;s just how business&#x2F;networking&#x2F;capitalism works everywhere on earth and it&#x27;s been like that since the dawn of civilization. And why would Congress stop is since they&#x27;re all getting the same benefits and don&#x27;t even hide it?",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "I guess I thought integrity was still at least considered an ideal to strive for in the West.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "That imaginary integrity never existed. If anything, favors for favors are now less common than they used to be.",
+                                                                            "comment": []
+                                                                        },
+                                                                        {
+                                                                            "text": "That&#x27;s just what they tell the peons, so the peons won&#x27;t compete with them for the corruption opportunities.",
+                                                                            "comment": []
+                                                                        },
+                                                                        {
+                                                                            "text": "why do you think politicians want to become politicians? so that they can get the gravy too",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Well, nothing specific to capitalism here.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "Your naivete is refreshing, but not particularly useful.<p>Your senators and house reps are the beneficiary of various forms of largesse from political donors.<p>&quot;Billionaire **  and her *** ** *** are among the most prolific megadonors in modern American political history,\n funneling hundreds of millions of dollars overwhelmingly to ***<i>, ****&quot;</i>",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "How is it a kickback to invite someone to play golf? A kickback would be if he handed him a big check in the locker room.<p>Take it easy dude, it&#x27;s business, kickback or not certainly isn&#x27;t &quot;evil&quot;.",
+                                            "comment": [
+                                                {
+                                                    "text": "How is paying for someone to have fun with the intention that they will then do business with you <i>not</i> a kickback? Just because you&#x27;re not getting cash doesn&#x27;t mean it&#x27;s not a bribe.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "It&#x27;s a meeting, a sales pitch, that takes place on a golf course. No different than over a meal, or at a sporting event. A kickback, by definition, only happens after the deal is closed, the recipient of the funds &quot;kicks back&quot; some of the revenue (or his commission) to the decision maker. If hasn&#x27;t progressed beyond &quot;the intention that they will do business with you&quot; then it can&#x27;t be a kickback.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "What happens here is that the buyer &quot;kicks back&quot; a fat contract to their sales buddy who took them to that great golf resort. Or, if the terminology is wrong, you can just say that the sales agent bribed the buyer with a golf trip in order to get the contract on better terms, to the detriment of they buyer&#x27;s company. Either way, golf games paid for by people trying to sell something are obviously morally and ethically wrong, and would be extremely illegal if they happened with a government employee.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "What happens when two salesmen both take the guy out for golf? Someone&#x27;s getting stiffed, right?<p>And it happens with government employees all the time, just a bit differently. The lobbyist is a member at Shinnecock Hills or some other private, prestigious golf course that costs $100,000+ to join. Then he invites the senator out, the &quot;guest fee&quot; is a nominal amount like $120, which he happily pays to play a round on a US Open quality course. Of course the senator charges his transportation and hotel to his office, paid out of campaign funds or something. Shit like this happens <i>every single day</i>, stop pretending to be so shocked or morally righteous.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "Yes, corruption happens every day. So do rape and murder and theft, and so many other problems. Why should I be so accepting of any of them?",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "Because a huge billion dollar company&#x27;s selection of ERP software isn&#x27;t ruining someone&#x27;s life, like a rape, murder or theft.",
+                                                                                            "comment": [
+                                                                                                {
+                                                                                                    "text": "You’re right. Billion dollar companies <i>doubtless</i> ruin many more lives, but systemically rather than directly.",
+                                                                                                    "comment": [
+                                                                                                        {
+                                                                                                            "text": "Is this how you operate? You just make nonsensical blanket statements to latch on to some anti-capitalist cred? Please tell me how Burlington Coat Factory, or J.B. Hunt, or Ulta Beauty are ruining lives. And these are not billion-dollar companies, but 10+ billion. And then, please - with a straight face - explain how their choice of Oracle ERP vs SAP vs Workday vs ServiceNow &quot;ruins&quot; someone&#x27;s life comparable to being raped or murdered.",
+                                                                                                            "comment": [
+                                                                                                                {
+                                                                                                                    "text": "I love low-hanging fruit in the morning.<p>You managed to pick three companies with documented histories involving violations or enforcement actions concerning workers’ schedules and safety, religious &amp; racial discrimination, hazardous waste, and multimillion-dollar wage disputes. Burlington is particularly funny as an example because the government was literally ordering it to return more than $1.3 million to workers just last year.",
+                                                                                                                    "comment": [
+                                                                                                                        {
+                                                                                                                            "text": "So fundamentally, your argument is that employing people ruins their lives. $1.3 million across how many hundreds or thousands of employees is not all that much each. Yes - they have every right to justice and to pursue what they were owed. And the company should be penalized. But still, they collected what, 97 or 98% of their rightful wage? And contributions to Social Security, and most likely some healthcare benefits. Would they have better off not being employed at all? Or work somewhere else for less money?",
+                                                                                                                            "comment": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Keep telling yourself that.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "Someone got a lot of those kickbacks…",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "&gt; How is it a kickback to invite someone to play golf?<p>If you don&#x27;t like golf, it probably isn&#x27;t.  But if you do, then it should be pretty easy to see. :)",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ass-covering.<p>The same reason why most huge enterprises buy insane support contracts for every other piece of shitty software: support, and someone to blame when production goes pear-shaped. Because there’s no real management left anywhere, there’s no time to grow expertise internally and everyone just needs that hit of Risk Management (tm), they’ll go to whatever lengths to get it. Oracle is like the ultimate warm, fuzzy blanket where that fuzz is actually mold, it delivers the scared-shitless enterprises from having to think for themselves.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I have mentally trained myself to do a text substitution, whenever I see &quot;Oracle&quot; in a forum on the Internet, such as here, I try to substitute it with &quot;Larry Ellison Needs A Bigger Yacht&quot;.",
+                            "comment": [
+                                {
+                                    "text": "What? Why not &quot;One Rich Asshole Called Larry Ellison&quot;?",
+                                    "comment": [
+                                        {
+                                            "text": "We could also go with &quot;Oh Really? A Contemptuous Larry Ellison&quot;",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "because the people that make these decisions receive kickbacks from them, obviously. Their whole philosophy revolves around introducing these trojan horses in orgs. Explains why it&#x27;s mostly government orgs.",
+                            "comment": []
+                        },
+                        {
+                            "text": "nobody has ever been fired for using Oracle",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;d fire someone for using Oracle. I&#x27;d put it in the employee handbook.<p>I bet Oxide would too.",
+                                    "comment": [
+                                        {
+                                            "text": "Oracle products (including VirtualBox and MySQL) are banned in our workplace as well. We do not want to deal with licensing nightmares because someone accidentally downloaded the JDK or the E1000 drivers for VBox.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "I would too and I have declined jobs everywhere they used their tech and it was not because they had to. And even then, unless it’s like Google and such I am very reluctant.<p>No thanks!",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "They don&#x27;t need our business. They only need the large corporate clients who run on corruption and inertia.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Legal departments are ironically very much like LLMs.<p>They are trained on a narrow set of data and don&#x27;t really understand the real world.<p>If you let them run wild with no supervision they&#x27;ll turn your company into slop.<p>Someone needs to be there to reign them in, asking the all-important questions like &quot;is suing all of our customers and making them angry REALLY the best option?&quot; (to which they will reply, &quot;You&#x27;re right to push back on this&quot;).<p>This is typically the role of the CEO, however, as we know, most CEOs of large successful companies are too busy to actually do that. They&#x27;re mostly training Brazilian Jiu Jitsu, shitposting on their own social media platform, trying to manipulate international politics, or helping run their family nonprofit.<p>This is why I believe that legal departments need to be demoted. The legal department should not report to the CEO, they should report to a new role that is above both PR and legal. And that person&#x27;s job should be to force legal and public relations (which we know are natural enemies) to work together. Every press release goes through legal now, and it&#x27;s only logical that ever legal action should go through public relations review as well.<p>The fact that public relations at most large companies has atrophied from disuse in our public-equity-owned unicorporate cooperation-over-competition chaebol&#x2F;zaibatsu&#x2F;conglomerate world is a problem for another day.",
+                    "comment": [
+                        {
+                            "text": "&gt; Legal departments are ironically very much like LLMs.<p>Replacing legal departments with LLMs is probably the best use-case for LLMs.<p>Using LLMs for coding is a waste of time and a dead end, however using LLMs for legal stuff would make the world a better place.",
+                            "comment": [
+                                {
+                                    "text": "Meanwhile, on Lawyer News:<p>Replacing development departments with AIs is probably the best use-case for AIs.<p>Using AIs for law is a waste of time and a dead end, however using AIs for computer stuff would make the world a better place.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "It isn&#x27;t known as One Rich Asshole Called Larry Ellison for nothing.",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Not even a conspiracy theory. Just the most likely explanation.",
+                    "comment": [
+                        {
+                            "text": "&quot;Do not fall into the trap of anthropomorphizing Larry Ellison. You need to think of Larry Ellison the way you think of a lawnmower. You don&#x27;t anthropomorphize your lawnmower, the lawnmower just mows the lawn - you stick your hand in there and it&#x27;ll chop it off, the end. You don&#x27;t think &#x27;oh, the lawnmower hates me&#x27; - lawnmower doesn&#x27;t give a * about you, the lawnmower can&#x27;t hate you. Don&#x27;t anthropomorphize the lawnmower. Don&#x27;t fall into that trap about Oracle.&quot; --Bryan Cantrill",
+                            "comment": [
+                                {
+                                    "text": "This quote is why I have my Claude Code &quot;done&quot; notification sound be the sound of a lawnmower revving.<p>The lawnmower can&#x27;t hate you. Don&#x27;t anthropomorphize the lawnmower, no matter how clever it sounds. (Actually not that hard with Opus5)",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "What about a guy with a lawnmower intentionally chopping off your foot? And what about a CEO making decisions on behalf of the corporate entity called Oracle?",
+                                    "comment": [
+                                        {
+                                            "text": "There is no guy, only the lawnmower, mowing lawns. Sometimes it chops off feet.",
+                                            "comment": [
+                                                {
+                                                    "text": "It doesn&#x27;t matter if the lawnmower is chopping off feat intentionally or not. If it&#x27;s presenting a public hazard, it should be stopped. Even though the ocean couldn&#x27;t care less it doesn&#x27;t prevent us from building breakwalls. And Larry Ellison isn&#x27;t unstoppable as the ocean.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "This seems to make Larry more harmless. A lawnmower does not think. Larry thinks, so it seems to white-wash Larry here.<p>It&#x27;s more like that movie with Stephen King where the cars and other machines turn actively evil. Hilarious movie too, not great but hilarious.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Rather than harmless, what the lawnmower analogy achieves is to make him seem blameless. &quot;How can you assign blame to a thing that&#x27;s just doing what it&#x27;s built to do without any intent?&quot; It&#x27;s important to push back against that. Intent isn&#x27;t a necessary condition for something to be dangerous, and so it&#x27;s not necessary to ask whether it is intentional or not. A rabid dog will be put down regardless of who is to blame for it.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "I think the point of the lawnmower analogy is to <i>subjectively</i> characterize Larry Ellison and Oracle from the viewpoint of someone who has had the unfortunate experience of having to deal personally with either of them in some way. You feel powerless against the machine, as it were, and the best course of action is to keep yourself far from the blade.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "I think you both are missing the point. Hes sayin larry is inhuman, hes closer to an apex predator or a serial killer freak of nature than your ordinary human",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "We&#x27;re not missing the point, we simply don&#x27;t agree. You&#x27;re putting him too much on a pedestal. He&#x27;s an ordinary human bound by the same laws anyone else. If he&#x27;s criminally insane and can&#x27;t be held accountable for his actions, he should be locked up in an mental institution, not running a corporation.",
+                                                                                            "comment": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Never thought to hear someone here mention Maximum Overdrive. Indeed a hilarious movie and the only movie for which AC&#x2F;DC ever recorded an (instrumental) soundtrack.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "Don not fall into the trap of anthropomorphizing Larry Ellison. You need to think of Larry Ellison the way you think of a 1958 Plymouth Fury named Christine. You don&#x27;t anthropomorphize your killer car, the killer car is just out for blood - you rebuild it and it kills your friends and family, the end. You don&#x27;t think &#x27;oh, Christine hates me&#x27; - Christine doesn&#x27;t give a * about you, Christine can&#x27;t hate you. Don&#x27;t anthropomorphize a 1958 Plymouth Fury named Christine. Don&#x27;t fall into that trap about Oracle.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Wrong movie",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "To me, Christine has a stronger resemblance.<p>The owner of the car that rebuilds it so it can kill is the equivalent of the people that prop-up Oracle and companies like them.<p>Maximum Overdrive has a mystic comet that happens to pass by and temporally creates the destruction.",
+                                                                                    "comment": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Maximum Overdrive. Even the electric turkey carver gets revenge.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "you and what army are going to stop him?",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "If there were such an army, let&#x27;s call it a union, would you join it?",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "absolutely!",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "A lawnmower doesn&#x27;t decide to do something bad by itself. The case with L.E. is much more sinister.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "The flaw in the analogy is that oracle is made of people. It&#x27;s not a lawnmower, it&#x27;s a group of people with human motivations and human thoughts. It&#x27;s true they don&#x27;t HATE people, but it&#x27;s also true they absolutely have no conscience in negotiations and have zero concern about relationships.",
+                                    "comment": [
+                                        {
+                                            "text": "Oh you fell into the trap... Just don&#x27;t anthropomorphize Oracle...",
+                                            "comment": [
+                                                {
+                                                    "text": "I&#x27;m not, I&#x27;m anthropomorphizing people.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "So they&#x27;re not human then. The quote holds up.",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "You&#x27;re carrying the water and making rationalizations for a lawnmower.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "The original was not even about Oracle the corporation, it was about understanding the psychology of Larry Ellison specifically.",
+                                            "comment": [
+                                                {
+                                                    "text": "But I wasn&#x27;t replying to the original, I was replying to another comment.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "You replied to a quote about Larry Ellison personally with an unrelated remark about Oracle the corporation.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "It won&#x27;t be made of people for long given how many Ellison is culling to prop up his gamble on AI data centres.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "He&#x27;s talking about the owner of Oracle, not the people who work there. It doesn&#x27;t matter how many smart and talented real humans work at Oracle, the guy running it acts like a fleshy paperclip optimizer.",
+                                            "comment": [
+                                                {
+                                                    "text": "I agree, but Larry doesn&#x27;t hate people, he just enjoys crushing them for his own benefit. If you can&#x27;t benefit him he doesn&#x27;t care about you at all.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; It&#x27;s true they don&#x27;t HATE people, but it&#x27;s also true they absolutely have no conscience in negotiations and have zero concern about relationships.<p>Sure. Like a lawnmower.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "It&#x27;s a joke that you&#x27;re missing.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "How many bureaucracies in history have behaved in deeply misanthropic ways, especially when led by misanthropic leaders?<p>Don&#x27;t underestimate the power of the desire to keep one&#x27;s job to cause a large organization to behave towards its own self-perpetuation despite the moral lines that must be crossed by individuals to do so.",
+                                            "comment": [
+                                                {
+                                                    "text": "",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "&gt; How many bureaucracies in history have behaved in deeply misanthropic ways, especially when led by misanthropic leaders?<p>Lots!<p>&gt; Don&#x27;t underestimate the power of the desire to keep one&#x27;s job to cause a large organization to behave towards its own self-perpetuation despite the moral lines that must be crossed by individuals to do so.<p>I don&#x27;t. I don&#x27;t put anything past people.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Yes, lots, look at the current US government.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; It&#x27;s true they don&#x27;t HATE people<p>Maybe so, but perhaps the most successful part of the AI marketing pitch has been exploiting management&#x27;s hatred of labor (and vice versa).<p>A significant motivator for a lot of the nonsensical AI layoffs and initiatives over the last three years has been that it&#x27;s a great opportunity for management to get ill on their slaves.<p>Tech labor got a little too big for their britches during the hiring spree of 2021, and AI was a great opportunity to take them down a peg, even if it offered little in the way of ROI.",
+                                            "comment": [
+                                                {
+                                                    "text": "Yep, it&#x27;s been a huge tool in the control games management likes to play.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "An AI powered lawnmower though...",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Who does this metaphor serve? To me it seems to try to legitimize the actions as a force of nature.",
+                                    "comment": [
+                                        {
+                                            "text": "It&#x27;s a twist on the Scorpion and the Frog story.<p>In other words, Larry Ellison is going to do what Larry is going to do, and there&#x27;s no use wondering why.<p>Usually, that&#x27;s to make money and sue people, at any expense. It&#x27;s in his nature.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Scorpion_and_the_Frog\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Scorpion_and_the_Frog</a>",
+                                            "comment": [
+                                                {
+                                                    "text": "That’s an interesting story to bring up in this context, because I have always wondered how a fundamentally customer-hostile business like Oracle could be so successful. It really puts the lie to libertarian cliches about the invisible hand of capitalism that ends up being philanthropic in spite of itself.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I think free society in general absolutely requires its people to be generally moral and civil. Freedom inevitably evaporates as morality and civility decline.<p>And that&#x27;s why it&#x27;s important to go after morally corrupt, uncivil monsters.<p>The problem today is that the press and the DAs&#x2F;courts are complicit--they&#x27;re less interested than ever in pursuing public morality and civility as ends in themselves. They&#x27;re mostly only interested in partisan politics.",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "those libertarians almost certainly don&#x27;t believe in asinine things like &#x27;copyright&#x27;",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Libertarians almost always support government regulations that benefit rich people.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "Abusers say &quot;that&#x27;s just how I am&quot; which is my point. Just because it&#x27;s his nature doesn&#x27;t mean it is at all natural.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "It serves you.<p>The lawnmower exists, you might disagree, but it’s not your lawnmower, you can’t uncreate it. But you can and should take care never to put your hand near it.",
+                                            "comment": [
+                                                {
+                                                    "text": "Weird, we don&#x27;t absolve murderers of guilt by saying they are an lawnmower.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "The lawn mower is operating within the laws that constraints it (laws of physics in this case) and not a greater sense of morality.<p>Lessons:<p>- The only way to constrain what the lawnmower does, is make sure what do desire is enforced by law (physics)<p>- A reminder, the lawnmower will chop your hand off and think nothing of it<p>- The lawnmower is not &quot;evil&quot; but if the laws that constrain it allow for evil behavior, it may do &quot;evil&quot; things.",
+                                            "comment": [
+                                                {
+                                                    "text": "Law does not constrain at all. Law only operates after the fact.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Of course the law constrains. The speed of light is a law that constrains the speed of the lawnmower.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "I read it as a pretty obvious jab at him being inhuman.",
+                                            "comment": [
+                                                {
+                                                    "text": "That&#x27;s exactly my point. Labelling him as inhuman gives him a pass, like how we don&#x27;t criticize hurricanes as malevolent.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "It’s nonsensical to define the actions of nature as legitimate or illegitimate.",
+                                            "comment": [
+                                                {
+                                                    "text": "What I meant was that there is no moralizing of natural force, which this metaphor tries to equivocate. Oh, it&#x27;s just like the wind, don&#x27;t get in Larry&#x27;s way!",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Totally understand. Unlike nature, Larry should have some sort of moral compass, though his points to hell.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Anyone who is trying to understand Oracle",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Well (to make an analogy), nature produces psychopaths - some people&#x27;s brains just aren&#x27;t capable of empathy. Whether you characterize that observation as &quot;legitimizing&quot; or just &quot;being realistic&quot; is merely a philosophical concern.",
+                                            "comment": [
+                                                {
+                                                    "text": "Since when are human actions categorized as being a consequence of nature? Does that let me steal or murder without consequence?",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Why do you think consequences of nature can&#x27;t have consequences?",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "more and more it seems like he&#x27;s referring to billionaires more or less.",
+                                    "comment": [
+                                        {
+                                            "text": "That&#x27;s because you&#x27;ve had years of consuming media that blames everything on billionaires.",
+                                            "comment": [
+                                                {
+                                                    "text": "Ah, yes. The media. Famously the voice of the proletariat and the oppressed<p>Walter Lippmann is spinning in his grave",
+                                                    "comment": [
+                                                        {
+                                                            "text": "For reference, Walter Lippmann is the guy from the NYT who covered up the Holodomor in Ukraine (1930s) in the west as well as Stalin&#x27;s gulags and purges.  I wouldn&#x27;t call him the voice of the proletariat in any way.  He was the voice of the Stalinist in the west and the term tankie was invented for him and people like him.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "For veracity, <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Walter_Duranty\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Walter_Duranty</a> was that guy.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "That&#x27;s a strange take. But okay<p>He also wrote the book &quot;Public Opinion&quot; in 1922 [1] which explained how the US mass media apparatus could be used to influence the common man.<p>[1] <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion_(book)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion_(book)</a>",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "Billionaires own the media. Why would they blame themselves?",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "well, plus the evidence of billionaires pushing for things that aren&#x27;t that great after all. Maybe good for their bankroll though.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "It’s been established that LLM-generated code is not copyrighted so I can fully understand the company living from copyrighted data to not accept LLM-generated contributions.",
+                            "comment": [
+                                {
+                                    "text": "&gt; It’s been established that LLM-generated code is not copyrighted<p>If that&#x27;s a reference to Thaler v. Perlmutter, the only thing that&#x27;s been established is that an LLM can&#x27;t be considered an author under the Copyright Act, only a human being can. It says nothing about the consequences of a human claiming authorship of LLM-generated code, which would be relevant here.",
+                                    "comment": [
+                                        {
+                                            "text": "You lay out my words in different order and claim I’m not correct.",
+                                            "comment": [
+                                                {
+                                                    "text": "No, your claim is &quot;LLM generated code is not copyrighted.&quot; His claim is &quot;LLM generated code is eligible for copyright.&quot;",
+                                                    "comment": [
+                                                        {
+                                                            "text": "My understanding (belief) is that it&#x27;s going to depend on how much human involvement is there.<p>If you write a prompt and one-shot a problem and share the source code, that source code is probably not covered by copyright.<p>If you substantially edit or modify the generated code you would own the copyright.<p>It&#x27;s like with a camera. If I set a camera and carefully aim it and somehow trigger the shutter then make adjustments in Photoshop, I own the copyright on that image.<p>If I stick a Flock camera on a pole somewhere and post the live output, there&#x27;s been no meaningful human creative involvement in producing those images and so nobody can claim copyright on them.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "I think if I as a human use an llm to do something technical that would qualify copyright, it should still qualify for copyright. How do you decide how much human is copyrightable. If I use a package that writes code or use a library for some piece of it, I could still copyright.<p>I don&#x27;t like this idea that llm code can&#x27;t be owned by a human, copyrighted. It&#x27;s just code.<p>I think your last example with flock camera is relevant here - I can take a picture of a public football as a reporter or something (or a fan I guess) and I can copyright and sell that picture. Newspapers do it every day.<p>So if I stand on a street corner and take a pic, it&#x27;s copyrightable. If I take a pic using a flock camera it should also be copyrightable, just like if my nest camera at home takes a pic of something, I can use that.<p>I guess you are saying &quot;someone else owns the flock camera&quot; so you don&#x27;t get to own pictures. What if I buy the flock-like camera and put it up, I should own that.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "You seem to have misunderstood an is&#x2F;ought distinction. You may hold the (fairly extreme, as far as copyright goes) position that surveillance footage <i>should</i> be subject to copyright, but it&#x27;s well established that it&#x27;s not. Who owns the camera is irrelevant. At least in the US; I&#x27;m not aware of any jurisdictions that hold otherwise. This is why Wikipedia articles on world events in the past few decades are full of stills from surveillance cameras: it&#x27;s one of the few sources of imagery of an event that are unambiguously legal to include, because unlike a photo or intentionally made video of something specific, it&#x27;s not a creative work. It&#x27;s also pretty firmly established that <i>human authorship</i> is required for something to be subject to copyright, and having an idea that lead to some particular expression is itself <i>not</i> sufficient; see, e.g.: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Monkey_selfie_copyright_dispute\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Monkey_selfie_copyright_disput...</a><p>(Not a lawyer, just a Wikipedia editor.)",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "&gt; <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Monkey_selfie_copyright_disput\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Monkey_selfie_copyright_disput</a>...<p>This is a great case to study, but <i>no determination of copyright was made</i>.  The only actual lawsuit was filed by PETA arguing that the monkey should have copyright, which led to a settlement with the human photographer and nothing else because obviously that&#x27;s not possible.<p>For various reasons (mostly $$$) the guy never actually got a judgement.  I think the chances are good that he could have prevailed in court; there is significant creative input to setting up cameras and triggers in a way to convince a wild monkey to take a selfie.  It&#x27;s not like he just left his camera sitting somewhere on accident and came back to find a photo in it.<p>I&#x27;m also not a lawyer, but I did do a lot of work in copyright for a company you&#x27;ve heard about.",
+                                                                                    "comment": []
+                                                                                },
+                                                                                {
+                                                                                    "text": "I appreciate your informed take. I follow the reasoning but I am amazed it works this way. I found some articles that supported what you said, and also said there&#x27;s a follow-on industry that figured out how to alter and edit videos just enough for a revised video to have creative contribution and make it copyrightable.<p><a href=\"https:&#x2F;&#x2F;www.techdirt.com&#x2F;2020&#x2F;02&#x2F;24&#x2F;can-you-license-video-you-dont-hold-copyright-over&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.techdirt.com&#x2F;2020&#x2F;02&#x2F;24&#x2F;can-you-license-video-yo...</a>",
+                                                                                    "comment": []
+                                                                                },
+                                                                                {
+                                                                                    "text": "Do you have a source for raw surveillance footage not being subject to copyright? I&#x27;d not heard of this, and a web search didn&#x27;t turn up anything.",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "I&#x27;m the person who originally said &quot;how can that be true about surveillance video?&quot;. I found a good writeup on it, <a href=\"https:&#x2F;&#x2F;www.techdirt.com&#x2F;2020&#x2F;02&#x2F;24&#x2F;can-you-license-video-you-dont-hold-copyright-over&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.techdirt.com&#x2F;2020&#x2F;02&#x2F;24&#x2F;can-you-license-video-yo...</a><p>The tldr is you really can&#x27;t copyright raw surveillance video, but you can apparently lightly edit to turn it into a creative work that is copyrightable.",
+                                                                                            "comment": [
+                                                                                                {
+                                                                                                    "text": "Thanks for the link but:<p>&gt; The tldr is you really can&#x27;t copyright raw surveillance video, but you can apparently lightly edit to turn it into a creative work that is copyrightable.<p>The article doesn&#x27;t say that, it doesn&#x27;t speak to CCTV surveillance footage. It discusses rare cases like cameras falling from aircraft, or animals pressing the button to take a photo.<p>I can see your line of reasoning about there being zero creative input in the video&#x27;s creation, but if surveillance footage isn&#x27;t subject to copyright, I&#x27;d expect there to be plenty written about it.",
+                                                                                                    "comment": [
+                                                                                                        {
+                                                                                                            "text": "The people up thread who replied to my original message give some other references for why this is the case. I agree with you that it is very surprising that it works this way, that this is considered a settled legal decision.<p>From the techdirt piece, seen above:<p>&quot;To license out copyright, there must be creative contribution. This can arise from cutting&#x2F;editing the video in a creative manner. Since there is no other prevailing copyright, the editing then makes you sole copyright owner entitled to all proceeds.<p>You may feel inclined to call bullshit on this, but it’s actually the ongoing revenue model for &quot;revised&quot; editions of Beethoven, Bach and older.&quot;",
+                                                                                                            "comment": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "&gt; If you write a prompt and one-shot a problem and share the source code, that source code is probably not covered by copyright.<p>We will have to see about that! This is the kind of boundary that&#x27;s still being figured out in court; it&#x27;s going to depend on how hard you worked on the prompt.  I highly doubt that even most <i>slop</i> was generated with a single half-ass prompt, and the bar is not as high as you might expect.<p>&gt; If I stick a Flock camera on a pole somewhere and post the live output, there&#x27;s been no meaningful human creative involvement in producing those images and so nobody can claim copyright on them.<p>It really depends on what pole, where, and why.  In a parking lot in rural Wisconsin? Probably not.  A recorded livestream of a political march? You likely have copyright.<p>I think that by virtue of the sheer amount of time spent using AI tools, it&#x27;s pretty clear that these outputs have enough creative input to be copyrightable.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "For those wondering what the difference is: consider what happens when an LLM regurgitates its training data. It&#x27;s copyrighted... but not by the person who generated it.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "Congrats on having the worst take in a thread full of them.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "No, that’s not what they are saying. They’re saying that the code generated by a human with help from an LLM may potentially be. This is what I hope we are going to arrive at, eventually.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "How could you establish what parts of the code was produced by an LLM vs updated by a human afterwards?<p>The LLM will output different results over time as the models get updated.  Are we heading towards needing to retain a full prompt history that can be replayed against a specific LLM model version to prove what the output was for copyright purposes?",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "The most likely option is that the status quo stays as it is: almost everything is copyrighted, nobody finds it worth it to defend their copyright because it&#x27;s not worth very much.",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "This is a false narrative based on a (IMO often intentional) misunderstanding. It has by no means been established by any court that LLM-generated code is not copyrightable.<p><i>Thaler v. Perlmutter</i> stands for a <i>much</i> narrower proposition and at any rate is not binding nationally, SCOTUS having denied certiorari.",
+                                    "comment": [
+                                        {
+                                            "text": "This is not necessarily true. While no court has explicitly come out and said that copyright does not apply to AI-generated works of authorship, the US copyright office has[0]:<p>&gt; Based on an analysis of copyright law and policy, informed by the many thoughtful comments in response to our NOI, the Office makes the following conclusions and recommendations:\n&gt; • Questions of copyrightability and AI can be resolved pursuant to existing law, without the need for legislative change.\n&gt; • The use of AI tools to assist rather than stand in for human creativity does not affect the availability of copyright protection for the output.\n&gt; • Copyright protects the original expression in a work created by a human author, even if the work also includes AI-generated material.\n&gt; • Copyright does not extend to purely AI-generated material, or material where there is insufficient human control over the expressive elements.\n&gt; • Whether human contributions to AI-generated outputs are sufficient to constitute authorship must be analyzed on a case-by-case basis.\n&gt; • Based on the functioning of current generally available technology, prompts do not alone provide sufficient control.\n&gt; • Human authors are entitled to copyright in their works of authorship that are perceptible in AI-generated outputs, as well as the creative selection, coordination, or arrangement of material in the outputs, or creative modifications of the outputs.\n&gt; • The case has not been made for additional copyright or sui generis protection for AI-generated content.\n&gt; The Office will continue to monitor technological and legal developments to determine whether any of these conclusions should be revisited. It will also provide ongoing assistance to the public, including through additional registration guidance and an update to the Compendium of U.S. Copyright Office Practices.<p>Congress or the courts could, of course, override the stance of the copyright office, but I think it would be highly unusual for them to do so (particularly for something like this). It would however be a lot better if congress just stepped in and said no outright, but until then this will have to do.<p>[0]: <a href=\"https:&#x2F;&#x2F;www.copyright.gov&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;www.copyright.gov&#x2F;ai</a>",
+                                            "comment": [
+                                                {
+                                                    "text": "The copyright office does not determine the standards for copyright.  They are an advisory and notary organization.<p>Only Congress and the courts do.  Copyright exists from the moment a work is created, and does not need to be registered with the copyright office.<p>The law isn&#x27;t that complicated; if a work was created with a human being with intent, it&#x27;s probably eligible for copyright protections.<p>As long as you can convince a court that you did this, the tools you used are not relevant.  The vast majority of LLM art falls in this bucket.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Do you own the copyright to a painting you commissioned or does the artist? You may have described what you wanted, but the creative work is the output of the artist. Same with an LLM.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "This would be a “work-for-hire,” thus <i>not</i> owned by the artist. As a matter of fact, the law <i>does not even consider the artist to be the author of the work</i>. So the point you thought you were making is actually quite backwards.<p><pre><code>  &gt; A copyrightable work is “made for hire” in two situations:\n  &gt; When it is created by an employee as part of the employee’s regular duties\n  &gt; When a certain type of work is created as a result of an express written agreement between the creator and a party specially ordering or commissioning it\n  &gt; When a work is a made for hire, the hiring or commissioning party is considered the author and the copyright owner.\n</code></pre>\n<a href=\"https:&#x2F;&#x2F;www.copyright.gov&#x2F;circs&#x2F;circ30.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.copyright.gov&#x2F;circs&#x2F;circ30.pdf</a><p>IANAL but I can imagine the courts bringing this aspect of the law coming into play if Congress continues to be cowardly and fails to pass clear legislation on this topic; courts often analogize to existing scenarios when existing law doesn’t cleanly cover a new one.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Thanks ChatGPT, but you didn’t actually read the document you cited. Commissioning a painting doesn’t qualify as work for hire wrt to copyright.",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "The courts are 100% going to have to interpret what is &quot;sufficient human control&quot; at some point.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Sure, but I would be incredibly shocked if the courts overturned these conclusions. These kinds of determinations are within the remit of the USCO, so a court does not need to come out and say it if the USCO has already done so. Obviously, as I said it would be better if congress weighed in and solved this problem, given that the USCO is  free to publish a new NOI to change it&#x27;s practices&#x2F;policies, but we all know that congress is too gridlocked atm for that to happen",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "But there are no conclusions. It literally says:<p>&gt; Whether human contributions to AI-generated outputs are sufficient to constitute authorship must be analyzed on a case-by-case basis<p>It says a plain prompt is not enough but that is not the reality of real software development. People aren&#x27;t one-shotting complex business apps. The vast majority of software development will trivially pass that bar and end up in the &quot;requires case by case analysis&quot;.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "I am trying <i>really</i> hard not to accuse you of not having read what you posted, because your conclusions are in strong tension with what it plainly says.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "You are a false narrative. I’m just repeating what I read. The thing is, it’s murky waters. Someone’s going to challenge it but do you want to be the guy who takes it on a chin?<p>The sibling comment lays this out and my original comment above is based on exactly the same link.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Also it&#x27;s a different story intranationally for those of us who live in countries with much more restrictive&#x2F;no fair use. Are you geolocking your software to the USA?",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "I highly doubt that that&#x27;s the last word on that matter, but even if: Even before LLMs you could combine individual non-copyrighted components into something copyrighted.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "It has not been established that in every legal system you have no copyright for anything in a project that was assisted in parts by LLM:s.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Makes sense, but they take an anti-AI stand, which I find good no matter for which reason they do that.",
+                    "comment": [
+                        {
+                            "text": "You must be thinking of a different Oracle [1].  This Oracle is all in on AI.<p>[1] <a href=\"https:&#x2F;&#x2F;www.cio.com&#x2F;article&#x2F;4125103&#x2F;oracle-may-slash-up-to-30000-jobs-to-fund-ai-data-center-expansion-as-us-banks-retreat.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cio.com&#x2F;article&#x2F;4125103&#x2F;oracle-may-slash-up-to-3...</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "Oracle is so far into AI that if OpenAI doesn’t absolutely explode with revenue, fast, Oracle is in a world of shit like they’ve never seen.",
+                            "comment": [
+                                {
+                                    "text": "God, don’t tempt me with a good time, and twice, at that!",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "No, they haven&#x27;t. They are investing in it by the tune of billions. They are pro-AI.",
+                            "comment": [
+                                {
+                                    "text": "They are in fact investing so much that if AGI doesn&#x27;t happen tomorrow, Larry Ellison may be bankrupt. I can&#x27;t wait.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Great bit",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "The link is to a really poor summary of a better article by the register.<p><a href=\"https:&#x2F;&#x2F;www.theregister.com&#x2F;ai-and-ml&#x2F;2026&#x2F;08&#x2F;03&#x2F;as-larry-ellison-bets-the-farm-oracle-says-it-loves-ai-written-code-just-not-in-openjdk&#x2F;5281851\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theregister.com&#x2F;ai-and-ml&#x2F;2026&#x2F;08&#x2F;03&#x2F;as-larry-el...</a><p>The register article is about this post:<p><a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a>",
+            "comment": []
+        },
+        {
+            "text": "The post in question: <a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a><p>It is &#x27;OpenJDK <i>Interim</i> Policy on Generative AI&#x27; and their lawyers are writing the final version, according to this page.<p>It sounds like a sensible action, given past scars around Java and copyright, plus this is from a big old corp.<p>That said I personally don&#x27;t expect that final proposal will end up any better.",
+            "comment": [
+                {
+                    "text": "&gt; given past scars around Java and copyright<p>How many of these were self-inflicted?",
+                    "comment": [
+                        {
+                            "text": "Does it matter?",
+                            "comment": [
+                                {
+                                    "text": "I guess that depends on whether you think the motivations matter. When it comes to a policy on a hot-button issue that seems like it could easily be enforced selectively, I don&#x27;t think it&#x27;s a stretch to be concerned about whether the one who crafts and enforces the policy for a project that&#x27;s supposed to be open having a track record of being the cause of the issues supposedly that make the policy &quot;sensible&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Intentional rather than self-inflicted.",
+                            "comment": [
+                                {
+                                    "text": "Not sure how common this understanding of the terms is, but to me, those terms don&#x27;t seem conflicting.",
+                                    "comment": [
+                                        {
+                                            "text": "One is that Sun&#x2F;Oracle made an honest mistake with the license (self-inflicted).  The other is that they regretted that Java was ever open source and so made the license and other processes around Java as annoying as possible while still being technically open source.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "But they are different terms.",
+                                            "comment": [
+                                                {
+                                                    "text": "If you&#x27;re not already aware that two different descriptors can both accurately describe something even if they&#x27;re not synonyms, I&#x27;m not sure how to help you. What I originally said was accurate, and no amount of other accurate terminology will change that.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Why would I be unaware of that?",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Disclaimer: I use AI at work and for some projects at home and find it really useful (as long as you know when and how to use it)<p>With that said... It&#x27;s funny how we went from &quot;vibe coding&quot; to review burden, sloppy contributions, copyright issues, unclear ownership (as in: who will fix bugs), needlessly verbose code, etc, etc. Several projects have banned AI contributions now and counting.<p>As I said, I use AI to help architect and write code and really like it; still, I cannot even count the times anymore where the model (we use multiple of the frontier ones) has completely gone down the primrose path.\nI always make sure I make it <i>my</i> code, every line is reviewed and understood, maybe I rewrite the AI output here and there, I understand the tests and testing strategy, etc, etc.<p>So I wonder where this is all going. We are past &quot;vibe&quot; coding already, and so far monetization of AI has been &quot;patchy&quot;. On top of that local AI is becoming more and more viable.",
+            "comment": [
+                {
+                    "text": "The problem is primarily social. When code is cheap and entry barriers don&#x27;t exist, how do you filter what is valuable?<p>For private projects, being able to code things quickly is a godsent. Also for professional environments with clear rules and mutual respect, this can be solved. But on the internet, with people you don&#x27;t know? You must have some hard barriers.",
+                    "comment": [
+                        {
+                            "text": "I see 2 possible users for a coding AIs.<p>1. Professional coders. Us.<p>2. Non-professional users, people that need software to just get X done.<p>I am focusing on non-professionals.<p>If you look at phones you find apps to book flight, book hotels, exercise, meditate and whatever. Almost anything without a social aspect can be redone with AI.<p>Why redo with AI? Because it&#x27;s personal.<p>I don&#x27;t need 55 filters when renting an apartment on a business trips: i always want a terrace and good internet, show me price ranges, something close to where i will go to work. And after 10 times i use the app with AI, it should start to know what i like, and after 100 it should better do it.<p>I want my flights never to arrive in the evening because if it delays i don&#x27;t want to be stuck in the airport.<p>I don&#x27;t really exercise, but i really want to so my app does does need to have 80 exercises, it needs to have 2 basic ones and to use each dark pattern to make me do it.<p>I love movies, so i want to know when it&#x27;s coming out.<p>Lots of this can be done with a simple chatbot, that goes out and find planes or whatever. Yes that is going to be ALSO how we use AI.<p>The distance between app and chatbot is somewhat of a grey area.<p>An app is a specific personal tool. An app has an interface, that makes it more reliable, it persists things i like, history and personalizations. An app &quot;I built with AI&quot; likely has some IKEA effect. And much more.<p>Overall, it&#x27;s simpler, i know where buttons are because i told AI where to put it and they are big buttons, and if tomorrow i want my personal rent-a-car app to never ever propose company X that just gave me a shitty car, it will do it.<p>If i want to see the address in can ask AI, but i can also just open the app, no AI, no internet, etc.<p>I actually built some of those apps, for fun. We are not fully there for a non coder, but not too far.<p>In terms of security and code, etc, run them in a sandbox, do not put personal data, send to website for actual purchases&#x2F;actions, zero inbound network connections ....<p>I am hand-waving, but i don&#x27;t feel like i am bullshitting if say that the right security tradeoff will be found, no?<p>In any case I tried to give you an example of how coding AI can mean a sort of paradigm shift for software. I do not mean it in a prescriptive sense, &quot;this is exactly what the future will look like&quot;, it&#x27;s just feel ready to be surprised by how this will develop.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I kind of get their overall point, even if it is ironic that Oracle is all in on AI. They don’t want a ton of contributions to review that weren’t made with care, adding burden to, as they put it: “already limited time of human reviewers”.<p>Especially for a project that runs to many major businesses, this could pose a massive risk.",
+            "comment": [
+                {
+                    "text": "I understand the intent of it. It&#x27;s really annoying&#x2F;rude when someone gives you a pile of AI generated crap and says &quot;here, you figure it out.&quot; Anyone can type these prompts now, the hard part is figuring out if the output makes sense.<p>Seems like a better way to do this than ban all AI generated code, but it&#x27;s probably a matter where they&#x27;re far more concerned about their own inconvenience than someone else&#x27;s.",
+                    "comment": [
+                        {
+                            "text": "Ghostty has what I’d consider to be a reasonable policy. You submit what you want to change and how, explain it in your own words. A trusted member can vouch for you. You can then make a PR, but you need to explain the solution and how it works in your own words.<p>I’m sure someone could still just prompt their way through but it’s a decent soft gate IMO.",
+                            "comment": [
+                                {
+                                    "text": "Really, I think the long term solution is people&#x27;s attitudes need to catch up with the technology.<p>Humans still need to review code for taste, making sure AI is writing sensible, well organized output. That&#x27;s a core &quot;AI skill&quot; for now, at least until it gets better...",
+                                    "comment": [
+                                        {
+                                            "text": "If ai rapidly gets better, then instead of submitting prs you can ask your agent to fork and improve the project and bypass the policy that way. if it goes slower they have time to reconsider policies in the future. if it doesn&#x27;t improve then we can probably find out some middle ground approach like the ghostty one<p>in any of those cases there&#x27;s no reason to get swamped by cheap PRs for now",
+                                            "comment": [
+                                                {
+                                                    "text": "more like<p>&quot;Claude please audit the source code of every package in my distribution, start our own code forks for any security issues or improvements. Don&#x27;t bother reporting upstream level 10 CVEs  to hostile maintainers. Please have the results ready in 5 minutes I am going to fill up my mug&quot;",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; the hard part is figuring out if the output makes sense.<p>I think for Java specifically, it&#x27;s also very much: which prompts make sense to write. Java has had a storied history of features that made future development hard. That&#x27;s resulted in a culture where they like to think quite deeply about how to add a feature BEFORE they sanction any sort of programming.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Let&#x27;s just pause for a second and steep in the irony of &quot;we&#x27;re all in on AI, except where there are visible consequences.&quot;<p>The same problems that bedevil AI-written PRs here bedevil AI-written PRs at my place of work.<p>I&#x27;m sure it&#x27;ll get better eventually, maybe, but something something Pareto principle.",
+                    "comment": [
+                        {
+                            "text": "&gt; Let&#x27;s just pause for a second and steep in the irony of &quot;we&#x27;re all in on AI, except where there are visible consequences.&quot;<p>I&#x27;ve got Alanis Morissette jamming in my head right now.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; The same problems that bedevil AI-written PRs here bedevil AI-written PRs at my place of work.<p>&gt;I&#x27;m sure it&#x27;ll get better eventually, maybe<p>Why would it get better?",
+                            "comment": [
+                                {
+                                    "text": "We&#x27;ll just get used to it and the problems won&#x27;t seem so bad, even if they are. To bring it all back, it&#x27;s just like using oracle software in your enterprise, after a while you forget how awful it is to work with them.",
+                                    "comment": [
+                                        {
+                                            "text": "[dead]",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "(bit sarcastic) Oracle was always all in on Lawyers, right? No software was their first priority.",
+                    "comment": []
+                },
+                {
+                    "text": "Oracle is primarily a legal department that sells software licenses to give their lawyers something to extract money from customers with.<p>Google “Oracle org chart meme” and look at image results, only it’s not a meme.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; even if it is ironic that Oracle is all in on AI<p>Selling it is one thing. Having to use it one&#x27;s self is quite another.",
+                    "comment": [
+                        {
+                            "text": "I know you&#x27;ve heard this one before: &quot;Never get high on your own supply.&quot;",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Any way you spin it, the message remains clear --- dealing with AI slop is just too labor intensive and risky.<p>Do as Larry does --- not as Larry <i>claims</i> to do.<p>I would short his stock but it has already lost half it&#x27;s value over the past year. And his credit rating is one notch above junk.<p>AI is going to make fools out of a lot of billionaires like Larry.",
+                    "comment": [
+                        {
+                            "text": "[flagged]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Probably has less to do with quality and more of a copyright&#x2F;license concern.",
+                    "comment": [
+                        {
+                            "text": "I’m just going off the reasons they gave. Which highlight both copyright and quality. Both of those make sense to me.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "y’all seem to be missing the fact that Java is a mature product. it has left the “move fast and break things” era of it’s development.<p>code is a liability, and they likely have more to lose than gain by allowing AI contribution.",
+            "comment": [
+                {
+                    "text": "&gt;it has left the “move fast and break things<p>java never had that phase. If anything it had a full binary class (not even source, e.g. long and int are not compatible on binary level) compatibility. Generally you can take an application from &#x27;98 and run it nowadays.<p>It&#x27;s only recent changes (jigsaw in java9 mostly) that were made them to drop some of that part.",
+                    "comment": [
+                        {
+                            "text": "&gt; (not even source, e.g. long and int are not compatible on binary level)<p>What did you mean by this?",
+                            "comment": [
+                                {
+                                    "text": "if you have a method &quot;void x(int i)&quot;, and change it to &quot;void x(long i)&quot;, it will cause NoSuchMethodError if the code is not recompiled, i.e. if it&#x27;s a dependency on a jar file. Likewise when there were methods in URLConnection that returned (or take) int for content-length, it would not be possible to convert them to long by just changing the existing signatures.<p>The same applies to having a method &quot;void x(String s)&quot;, it cannot be changed to &quot;void x(Object s)&quot; (even though all the code would compile with auto downcast) but both methods have to co-exist being overloaded. There is more to the binary compatibility but I&#x27;d leave it here.<p>The way to do it is keeping the existing public (and protected) methods (&amp;fields), possibly deprecating them, along with introducing new ones. Effectively any removal of anything  that has been made accessible, public mostly, is forbidden.<p>Personally, whenever I had to maintain library code I stuck to the same principle, so folks could grab a new version w&#x2F;o worrying or doing any changes on their own.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Java was never &quot;move fast and break things&quot;.",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s a clear admission that AI generated&#x2F;assisted code is inadequate.<p>It&#x27;s shocking given Oracle&#x27;s AI spending spree over the last couple of years.",
+                    "comment": [
+                        {
+                            "text": "I think it&#x27;s more a matter of &quot;taking power tools away from toddlers.&quot;<p>If you know how to work with it it&#x27;s great, but if you use it indiscriminately it does more harm than good.",
+                            "comment": []
+                        },
+                        {
+                            "text": "yeah, oracle is literally betting the future of the company on OpenAI owning the majority of the AI market, so it&#x27;s pretty strange to see such a ban. Their debt is already pretty much junk (and I&#x27;m not exaggerating, it is rated BBB- by s&amp;p)",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Oracle Java is also basically effectively in KTLO mode.<p>The biggest use of Java currently is Android, and Google is on a path to migrate to Fuchsia eventually.<p>The second biggest use is Apache Spark&#x2F;Kafka, but with LLMs now, you can pretty much re implement all of that functionality in pure C.<p>They just want a legal angle, since this is how they make most of their money.",
+                    "comment": [
+                        {
+                            "text": "Not sure where u get your information. Oracle Java is OpenJDK with a support license from Oracle. It is widely used in enterprises, and it is updated regularly.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Impressive. Every word in that paragraph was wrong. well, except the last line.",
+                            "comment": [
+                                {
+                                    "text": "Its not wrong, its just that people don&#x27;t see the writing on the wall.<p>It was the same conversations about Haskell, how functional programming with no side effects was the future, e.t.c and so on.<p>There is literally ZERO reason to use Java outside of Android these days. If you are still developing applications in Java, you are behind.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Java is absolutely massive for a huge variety of applications, most of them servers and daemons. The most common user-facing Java implementations are probably Android and Minecraft, but behind the scenes it powers everything from blogs to logistics to networking equipment to SIM cards.<p>Oracle&#x27;s own OpenJDK is free but they will only let consumers download Java 8 for free, that&#x27;s why companies like Jetbrains ship JDKs with their products.<p>Google is in the middle of moving ChromeOS to Android, they&#x27;re not replacing Android with Fuchsia any time soon.",
+                            "comment": [
+                                {
+                                    "text": "&gt; but behind the scenes it powers everything from blogs to logistics to networking equipment to SIM cards.<p>All because of baked in legacy. This is going to change in the next few years. You beat Java with Python today very easily - write your application and tests in Python, have LLM transpile it to C.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Google&#x27;s been alleging to try to replace Android with Fuchsia for more than half of Android&#x27;s existence. It&#x27;s not happen. I remind myself that Google has almost never created a successful product.",
+                            "comment": []
+                        },
+                        {
+                            "text": "KTLO = Keep The Lights On",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt;The second biggest use is Apache Spark&#x2F;Kafka, but with LLMs now, you can pretty much re implement all of that functionality in pure C.<p>Spark is written in Scala, precisely because distributed systems are best modelled as a set of pure functions with minimal references to state. This is also why part of the reason why it&#x27;s ascending successor, Polars Cloud, is written in a functional language, Rust, rather than C.<p>Android development is also increasingly being monopolized by Kotlin, not Java.",
+                            "comment": [
+                                {
+                                    "text": "The post is about the OpenJDK, not Java the language per se. Which applies to Scala, Kotlin, JPython, and others.",
+                                    "comment": [
+                                        {
+                                            "text": "This particular comment was about &quot;Oracle Java&quot;.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "like the sibling tells, a massive amounts of the enterprice software does runs on java",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Not too different from the recently-announced Rust guidelines at <a href=\"https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;inside-rust&#x2F;2026&#x2F;08&#x2F;05&#x2F;rust-langrust-is-adopting-an-llm-policy&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;inside-rust&#x2F;2026&#x2F;08&#x2F;05&#x2F;rust-langr...</a>",
+            "comment": []
+        },
+        {
+            "text": "From the page <a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a> -<p>&quot;6  Is it okay to continue using the spell-checking, grammar-checking, auto-completion, and refactoring features in my editor or IDE?<p>Yes, so long as they are not based on large language models or similar deep-learning systems.&quot;",
+            "comment": [
+                {
+                    "text": "Completely delusional they are.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I didn&#x27;t know openjdk was developed by Oracle. I always thought it was a community implementation of java as opposed to Oracle&#x27;s proprietary implementation.",
+            "comment": [
+                {
+                    "text": "It is a community implementation although the vast majority of contributions come from Oracle staff. RedHat, in particular, has made numerous contributions.",
+                    "comment": []
+                },
+                {
+                    "text": "Sun&#x27;s JDK implementation was made open source (GPLv2) in 2006 and dubbed OpenJDK.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;OpenJDK\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;OpenJDK</a>",
+                    "comment": []
+                },
+                {
+                    "text": "It was Sun&#x27;s project before Oracle bought Sun. Sun worked a lot with Netscape back in the day to make Open Source Software happen at all. From 1998-2004ish, Netscape and Sun were the open source projects and the strongest proponents of the licensing and development models. Oracle absorbed all that good will with the purchase.",
+                    "comment": []
+                },
+                {
+                    "text": "Yeah its like George Lucas, doesn&#x27;t matter you care for the Jedis or the Dark Side or even Jar Jar, he owns them all.",
+                    "comment": [
+                        {
+                            "text": "Its been almost 15 years since George Lucas last owned Star Wars",
+                            "comment": [
+                                {
+                                    "text": "I know. What I meant by owning was about the creator aspect of it, and I just cannot accept Disney as the creator.<p>Back when I was a kid, there were two toy stores near my grandma&#x27;s house and they had such a competition. And people were always buying and there was sort of a hype between the two, you could either believe in this or that. And then once my mom asked one of them about something and they told us both stores were owned by one person...<p>And now you can think you are with or against the corporate Java and in the end you are under Oracle no matter what.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "i&#x27;d rather bike shed about darth jar jar than read any more emails from coworkers generated by crapgpt",
+                            "comment": [
+                                {
+                                    "text": ":)))))",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "So Java, which powers a sizeable chunk of the real-world since two decades now, without needing the help of LLMish sloppy-pasta, is going to continue to power the Real World [TM] with its language and JVM that have been created with tens of millions of human man-hours without LLMish sloppy-pasta?<p>I&#x27;m shocked.<p>I&#x27;m not only shocked: I also see there a delicious irony in the countless of LLMish sloppy-pasta code that&#x27;s now running and going to be run on man-made JVMs.",
+            "comment": [
+                {
+                    "text": "Closer to three decades than two.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; countless of LLMish sloppy-pasta code that&#x27;s now running and going to be run on man-made JVMs.<p>Don’t worry, I think most LLMs, when starting a greenfield codebase, don’t reach for Java, so it may be a smaller amount of code affected than you feared.",
+                    "comment": [
+                        {
+                            "text": "If you asked the LLM to create an Android app it probably would.",
+                            "comment": [
+                                {
+                                    "text": "Interesting idea, so I had to check!<p>Prompt: “Top language pick for an Android app? Respond with only the language.”<p>Responses (admittedly via the aichat CLI, not an agent harness; and temp=0):<p>Kimi K3: Kotlin<p>GPT 5.6 Sol: Kotlin<p>Claude Fable 5: Kotlin<p>DeepSeek v4 Flash 0731: Kotlin<p>Are there any other “inherently” heavily JVM-biased domains?<p>I think even in Minecraft game mods Kotlin is possible nowadays…",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Kotlin my dude, unless you hate yourself.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "So contributions to OpenJDK have to be hand-written, while internally, Oracle uses AI generated code... I guess the logic is that employees who use AI generated code (theoretically) review their code better? The whole thing still seems a little strange.",
+            "comment": [
+                {
+                    "text": "No, their internal PRs have the same problem, but they are pushing an AI narrative from the c-suite and can hide the reality of their private code bases.<p>The &quot;limited ROI on AI investment&quot; articles will continue to percolate slowly into the brains of the LinkedIn hive-mind until we hit a tipping point, and then we&#x27;ll finally shut up about how a handy dev tool with some decent use-cases is the dawning of the singularity that will replace all white collar labor and get back to actually building business value.",
+                    "comment": [
+                        {
+                            "text": "You can get your coworkers to stop sending you slop (I&#x27;ve done it already on my team) but it&#x27;s probably much harder to stop an onslaught of open source contributors.",
+                            "comment": [
+                                {
+                                    "text": "Nonsense, it&#x27;s easy: you just need a social process like Linux has.  Patches are ignored unless you&#x27;ve proven yourself to somebody.  Start by participating in technical discussions on IRC or the smaller mailing lists; do that for a while before you submit patches.  For smaller projects: &quot;if I don&#x27;t know you, I don&#x27;t merge you&quot;.<p>Linux&#x27;s LLM policy allows AI-generated code because the project was never vulnerable to this DoS attack in the first place.  They kept the social defense they&#x27;ve had for decades.<p>The killzone here is Github culture, where people decided it was normal to accept code from anonymous randoms with anime avatars.  They&#x27;re doomed.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Out of curiosity, do you use frontier AI dev tools on a daily basis professionally?",
+                            "comment": [
+                                {
+                                    "text": "",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&lt;rant&gt;<p>I manage several teams of developers who use them every day professionally and use them for personal projects privately. Just last week, at the prompting of said devs, we had a working agreement conversation about curtailing the use of AI in our codebases because of rapid erosion of our teams&#x27; ability to operate, update and maintain codebases that had started to spill over with slop.<p>We have had multiple incidents of credential leakage, integration tests wiping live databases, comically broken code that passed vibe-written tests, documentation and code comments that were hallucinated and&#x2F;or fake, and most importantly developers saying &quot;we no longer know how this code works but it&#x27;s massively bloated and unreadable and we can&#x27;t tell you with a straight face that we can maintain it or fix it if it breaks.&quot; We have seen a flood of vibe-PRs from engineering adjacent teams that suddenly think they can code shipping prototypes into production that <i>do not work</i> <i>do not scale</i> and <i>cannot be maintained.</i> I am personally writing the tickets to decom one of those today. Which is great, I love telling business &quot;the progress that was reported to you was a lie, this shit never worked, don&#x27;t shoot the messenger but also don&#x27;t let this happen again.&quot;<p>I embrace GenAI as a productivity tool for people who know what they are doing. It&#x27;s a +10-15% velocity boost. That&#x27;s great! That&#x27;s a big deal, devs are expensive, and that might push some kinds of business model over the threshold into viability. That&#x27;s great!<p>It is not, however, transforming the profession as I know it, it is rather making my job harder and less pleasant and it is making my leadership dumber by the second.<p>Absolutely no comment on vibe business decisions &#x2F; vibe OKRs &#x2F; slop reports or the host of other garbage that has started to creep into professional life. I have had to have some very uncomfortably direct conversations with peers in leadership about using complete bullshit to make decisions, and it is very, very frustrating. Do you know how hard it is to convince someone that metrics their bot hallucinated don&#x27;t exist and would be meaningless if they did? You can&#x27;t convince someone of something they are incentivized to not understand. It&#x27;s been very eye-opening in terms of who I can trust to actually make sense when it matters. I&#x27;m grateful for the clarity.<p>Meanwhile we are rapidly losing brainshare from the top because our principal&#x2F;staff engineers are pissed off and have the bankroll to just <i>leave</i>. We aren&#x27;t hiring and training younger engineers to keep the talent pipeline moving. Which boy howdy is THAT going to cost us unbelievable sums of dollars to fix in the medium-term future.<p>I am in the uncomfortable role of trying to make the best of this but it would be a metric ton easier if the narrative from the c-suite aligned with reality in any meaningful way.<p>&lt;&#x2F;rant&gt;",
+                                    "comment": [
+                                        {
+                                            "text": "this matches my experience at $work with others as well...<p>when i brought this up with my manager they just said &quot;you need to engineer a better harness&quot; and &quot;aren&#x27;t you cultivating your agents.md file? thats probably your problem&quot;<p>which is to say, apparently we&#x27;re holding it wrong...",
+                                            "comment": [
+                                                {
+                                                    "text": "&lt;rant&gt;<p>y&#x27;know, I am sincerely trying, in good faith, to let my teams guide me in how best to intentionally leverage GenAI. I&#x27;m trying to use it in good faith myself. I really do reserve the right to be wrong about it.<p>It&#x27;s just... the problem was never the ability of GenAI to produce code that works on a superficial level. The problem was always that GenAI would push engineering teams at companies yet further away from what they were building. Generations of compilers, interpreters, frameworks and ORMs have kept pushing engineering teams out there. Cloud infrastructure has pushed engineering teams out there. Giant data analytics platforms have pushed engineering teams out there.<p>Engineering teams need people who love learning about how things work, but those people often have a rough time in the industry. People who are passionate about software and systems engineering, who love learning how systems work, who love diving deep into niches of reality... those people have been getting hit in the head since they entered the work force.<p>They&#x27;re essential, and they&#x27;ve had <i>decades</i> of this crap to learn from. History has taught them (us) that businesses are really, really good at opting in to bloated, obtuse, unmaintainable solutions if some sales monkey can convince leadership that they no longer need to hire smart people who speak a language they don&#x27;t understand. And they (we) are used to dealing with the consequences. Every single experiences engineer has their war stories about it.<p>Speaking personally:<p>I had a partner who worked at a startup in Seattle. They were a novice programmer. I saw what happened when their employer tried to build a Ruby on Rails stack with only junior engineers out of college. It ended horribly.<p>I worked as a first hire on a clean-sweep purge of a .NET team that had forgotten how to program. The company was bloated and nobody was accountable for anything for years. Then one day they get a mandate to actually build a thing for a big new online initiative. Nobody knew what they&#x27;re doing. Wrappers around wrappers around wrappers of copy-pasted stackoverflow code. The company hired a hard-ass director to reboot things because nothing was getting done. He mandated a total shift to Golang&#x2F;Kubernetes over .Net&#x2F;some managed Microsoft stack, and said &quot;you&#x27;ll prove you can do it or you&#x27;re out&quot;. I was hired because I could. I was substantially younger than everybody, but asked to write architecture docs and establish design patterns and sit on hiring panels for all the new devs. Because I don&#x27;t know, I was a nerd who learned how things work and gave a shit and had somehow picked this knowledge up. They fired 8&#x2F;11 of the devs on that team, as well as the project managers and the dev manager. We grew a new team behind it that was 1&#x2F;3 the size and moved immeasurably faster. I hate everything about how that whole story played out. I&#x27;m not proud of that chapter of my life. I resent in particular the leadership who allowed engineering fundamentals to erode over time because it wasn&#x27;t their problem.<p>I&#x27;ve worked at companies that fled to the cloud from local infrastructure. They did it with this almost insane desire to stop paying people to solve complex infrastructure problems. Balls-out, fuck these nerds who actually know how hardware works, they&#x27;re weird and we&#x27;re sick of them, we&#x27;re going to pay Amazon a billion dollars to never have to hire them again. And then they hired some (often quite competent!) devops folks to migrate everytrhing... those people did...  things got wildly expensive... meanwhile businesses locked in to stupid technologies like DynamoDB and Lambda because some insufferable sales idiot connected with a CTO in a sweat-yurt... and et voila, here we are writing the proposals to unfuck our cloud migration and return to local infrastructure. Yay CapEx. Boo OpEx. Venture Capitol batteries possibly included.  Just gross incompetence by a generation of LinkedIn leadership buffoons who don&#x27;t know the first fucking thing about how computers work.<p>I&#x27;ve been there. You&#x27;ve been there. LLMs are one more way of being there. We feel it in our bones. We have noses and we can smell. Trust was lost long ago. This shit is <i>old</i>. And we&#x27;re really tired of it.<p>And this time it&#x27;s especially annoying because it&#x27;s big and tied in with an economic bubble and companies laying people off and general major disgruntlement. It&#x27;s a really bad vibe right now for a technology leader, and if you&#x27;re running a company I hope you get it, at least a little bit.<p>I really give a shit about being a good leader in technology and I&#x27;m really, really frustrated right now because there an almost un-navigable divide between what I believe to be true (from my experience) and the narrative I&#x27;m expected to sell. That&#x27;s a hard position to be in. But I (and my peers) try our best to occupy it with grace.<p>&lt;&#x2F;rant&gt;",
+                                                    "comment": [
+                                                        {
+                                                            "text": "i&#x27;ve seen this kind of thing nearly first hand and have similar sentiments...<p>btw, my manager in that conversation later said &quot;it doesn&#x27;t matter, all code will be done by ai, so we better get on board&quot;; i think there is a lot of fomo&#x2F;cult-like thinking going on (its impressive technology with alot of capital behind it so who can blame them i guess)",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "&gt; when i brought this up with my manager they just said &quot;WORK HARDER, SLAVE&quot;",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; most importantly developers saying &quot;we no longer know how this code works but it&#x27;s massively bloated and unreadable and we can&#x27;t tell you with a straight face that we can maintain it or fix it if it breaks.&quot;<p>To anyone reading this: If you couldn&#x27;t see this coming three years ago, you don&#x27;t deserve your job.<p>&gt; We have seen a flood of vibe-PRs from engineering adjacent teams that suddenly think they can code shipping prototypes into production that do not work do not scale and cannot be maintained.<p>What a nightmare. Never forget that AI is for idiots.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "[dead]",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Let me guess: AGI is 2-6 weeks away, software development is solved, and anyone who disagrees with your enlightened perspective is a backwards-looking luddite.",
+                                    "comment": [
+                                        {
+                                            "text": "No. I’m asking in good faith. I was skeptical in 2023, but took the approach of using it at least once a week, with all latest models to see the evolution. It’s obvious that the industry is moving that way, and at this point it would be a career-suicide for seniors+ to not be able to drive AI to achieve their objectives <i>.<p></i> I’m not saying it’s good for everything, but we’ve gone very far in terms of capabilities in the last 3 years. Thinking otherwise will make me question others’ experience on how much they’ve used it so far.",
+                                            "comment": [
+                                                {
+                                                    "text": "your argument is basically: the industry is moving to it so we should get on board or be left behind<p>it would be more convincing if you had concrete examples of technical merit and quality&#x2F;speed improvements that worked for you or your team that justify going all-in",
+                                                    "comment": [
+                                                        {
+                                                            "text": "That is, indeed, my argument. As much as I’ve been loving coding since the past 20+ years, basically from my childhood, I currently do it mostly for living and some side projects. I don’t care about code quality in my side projects, and at work… well, I want to keep getting raises, be employable, and support myself.<p>Priorities.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "I don&#x27;t understand the quality criticism. My 2026 professional code has much better quality than my 2025 code. Better algos, better performance, better comments, less bugs, better and more tests, better documentation, etc. What do people do with LLMs to get crap out of it ? Unless I let the agent run an entire monstruous plan and never review anything and never steer, I can never get output that could be described as slop. Bonus point: even after 25 years, I learn a lot with them, just because of their search capabilities applied to a context.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "I don&#x27;t believe that you&#x27;re asking in good faith based on the rest of your comment.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I don&#x27;t know. I think it makes sense to have a policy like this.<p>I haven&#x27;t written a line of code myself in 6 months, but the point is that _you shouldn&#x27;t be able to tell_<p>What I tell people at work: Using AI is good. AI can help you do things that you otherwise wouldn&#x27;t have. It shouldn&#x27;t be a crutch for thinking.<p>In that sense, people shouldn&#x27;t be able to tell that you&#x27;re using AI unless the tell is that it&#x27;s _higher quality_ than if you had implemented it by hand.<p>A good example here is a well-written document that has a _ton_ of deep research behind it. Or code that has extensive tests that would have taken too long to write by hand for the task at hand.<p>It&#x27;s bad when it&#x27;s just &quot;do this thing and post a PR&quot; but I write my code with AI, look at it as a reviewer, offer suggestions, put those into my steering if needed, and I refine it. The way I see it, I&#x27;m the first reviewer on everything now before passing it off to another human for review.<p>There have been points where having AI rewrite something was slower than me doing it, but I&#x27;m already in the harness. The cost of waiting is almost zero.\nWhat stops me from contributing to the JVM using AI written code that I understand and spent time manicuring? Can a human really tell that it&#x27;s AI written?",
+                    "comment": []
+                },
+                {
+                    "text": "No I&#x27;m sure they are just paranoid about license rights.",
+                    "comment": [
+                        {
+                            "text": "I believe thats the real reason, its not just Oracle, it would eventually be everyone in this kind of boat. No business would publicly use (or claim) AI to write code with recent verdict over the IP rights of AI generated code.<p>It would be interesting to see how this effects the copyleft Licences with contributors are using AI for the PRs",
+                            "comment": [
+                                {
+                                    "text": "&gt; AI to write code with recent verdict over the IP rights of AI generated code.<p>Which recent verdict?<p>&gt; It would be interesting to see how this effects the copyleft Licences with contributors are using AI for the PRs<p>I know Linux and GCC have been diligent about tagging and tracking LLM based contributions. In the worst case they can chuck it all out and handwrite it back.",
+                                    "comment": [
+                                        {
+                                            "text": "<a href=\"https:&#x2F;&#x2F;www.congress.gov&#x2F;crs-product&#x2F;LSB10922\" rel=\"nofollow\">https:&#x2F;&#x2F;www.congress.gov&#x2F;crs-product&#x2F;LSB10922</a><p>There is this old one around contents like images and all, the ripple affect is pretty much everywhere.<p>Its sort of coupled with the recent penalty of $1.5B on Anthropic. The catch 22 is that some portion of the LLM training data can be classified as IP theft. Even though Anthropic has been fined the data still exists and can be used by LLM to generate code for you. So if you are claiming something as an IP and it has stolen part in it then it leaves you in a hard place.<p>Language translations may save you in some cases, though the whole definition of cleanroom has been in debate recently too where people are trying to rewrite opensource&#x2F;famous libraries in different language and claiming IP rights over them.",
+                                            "comment": [
+                                                {
+                                                    "text": "&gt; penalty of $1.5B on Anthropic<p>Settlement not penalty.<p>Anthropic will have judged the benefits of the settlement, not just the headline cost. It could have been a strategic move by Anthropic: we can&#x27;t know without information we don&#x27;t have. <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49014389\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49014389</a> 1.5B looks like ~2% of funding&#x2F;income.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I understand the legal terminology is different, however at the same time I am not entirely sure if the optics change by calling it Settlement or Penalty. There is only one party paying money here and they are not getting any service after paying this money so its indeed a penalty for what they did before. Any article describing the details has both the key words, its a legal settlement where Anthropic is penalized.<p>Secondly the future is still not here yet, the people who came forward to sue are mostly in the category of book publishers&#x2F;authors.  The tech companies are are not actively searching for copyright thefts as of yet, however I am sure its just a matter of time when the big blobs of codes get rediscovered specially in case of any publicly visible code",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "The legal team in the Bartz v. Anthropic case was a coalition of three law firms, funded on a contingency fee basis, which ended up earning them $187 million (12.5%).<p>Other copyright lawsuits against other major companies are happening.<p>If a similar lawsuit costs OpenAI more than 1.5B then perhaps Anthropic is better off in their competitive race?<p>&gt; the people who came forward to sue are mostly in the category of book publishers&#x2F;authors<p>Irrelevant. The financially savvy parties are the lawfirm L.L.P.s trying to win money for themselves.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Definitely. Internally, Oracle is very strict about the use of code written outside of Oracle- there is a very strict set of rules and procedures to incorporate open source libraries into their products and services.<p>As for AI, certain core teams, notably the Database team, are forbidden from using LLM coding tools.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I don&#x27;t know, Oracle historically has a very chill, almost laissez-faire point of view on licensing.",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s hilarious. Why do you think ZFS isn&#x27;t more broadly adopted in Linux?",
+                                    "comment": [
+                                        {
+                                            "text": "You should send your sarcasm detector for revision.",
+                                            "comment": [
+                                                {
+                                                    "text": "Given enough ignorant comments it can be hard to tell what is satire and what is not.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "This one was sarcasm. Sorry for making you work so hard to detect it.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "you should do standup",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "This constitutes an admission on the part of one of the largest AI investors that AI generated&#x2F;&quot;assisted&quot; code is inadequate (in part) because it is produced in flagrant violation of license rights.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It is not when you stop kidding yourself : using AI has nothing to do to improve the quality of the code. It is a vanity status, at this point.",
+                    "comment": [
+                        {
+                            "text": "Using AI is vanity? I&#x27;ve never heard that before. Why is that?<p>Refusing to use AI honestly seems more like vanity to me. Like &quot;no machine could ever do what I do&quot;.<p>That said I would not necessarily accuse people who don&#x27;t want to use AI of vanity - there are good reasons not to want to use it - but if someone else did it I&#x27;d find it easier to understand.",
+                            "comment": [
+                                {
+                                    "text": "Vanity in the sense that it is expected of any forward thinking company or individual in those companies to display that they are &quot;embracing AI&quot;.<p>Like Allbirds, a shoes company that somehow now does AI.",
+                                    "comment": [
+                                        {
+                                            "text": "I think what you are describing is people being performative or superficial, not vain.<p>Allbirds is definitely not vanity. That&#x27;s a scam.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Of course they could, it is just that sometimes they decide to do something totally broken, that if I did it I would be called stupid, but we just say they hallucinated.<p>Imagine if I exposed my API keys and just said “sorry boss, I took a pill before the job and I hallucinated”",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Weird given how much Oracle has bet on AI, both in terms of data centres and in terms of layoffs.",
+            "comment": [
+                {
+                    "text": "People behind JVM are very talented.",
+                    "comment": []
+                },
+                {
+                    "text": "The irony is not lost there. But at least some department there has see the light apparently",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I would laugh for a week if the courts eventually found issues with using LLM content and forced companies to either publish their LLM generated code as public domain or they were forced to roll back their codebases to a pre-LLM state.<p>Probably won’t happen but clearly Oracle sees a potential for legal issues with LLM output.",
+            "comment": [
+                {
+                    "text": "Thing is public domain can be used any way you want. The Libre style licenses are specifically engineered to make the source available to the users of the source, no such clause exists in using public domain.",
+                    "comment": [
+                        {
+                            "text": "Public domain things sometimes even have their copyright registered by someone else and then the original author gets sued. You don&#x27;t want public domain.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Assuming you&#x27;re talking about US courts: this won&#x27;t happen because courts and the legal system in general exist to preserve the wealth of the wealthy, and that means supporting whatever large corporations are doing. Perhaps they stop a little before things like allowing corporations to kill people. Oh wait...smoking and guns...never mind.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Looks like they&#x27;re stuck between their shady AI dealings and their shady IP dealings.<p><i>sips tea</i>",
+            "comment": []
+        },
+        {
+            "text": "It&#x27;s hardly a surprise to see a behemoth like Oracle doing this.\nAccepting LLM contributions can only be a liability, particularly for such a mature, stable project. Even if you see that liability as small or insignificant, it&#x27;s non-zero. Given the project and the company, choosing zero additional liability seems like the obvious choice.<p>One also assumes the people maintaining OpenJDK have had their workload increase to an unmanageable level, like a lot of other free software projects and one thing I&#x27;m sure everyone can agree on is that Oracle certainly won&#x27;t want to pay anyone more or hire more people to deal with that.<p>A lot of people (including the Register[0]) are pointing out that Oracle leadership are gung-ho about using LLMs for everything, and this seems to go against that.\nIt makes sense to question this from a journalistic angle -- the executives are obviously full of shit and people would do well to remember that the next time one of them opens their mouth. But pointing at the apparent contradiction -- different rules for internal projects vs. open ones -- doesn&#x27;t seem particularly meaningful on its own:<p>I don&#x27;t think the CEO&#x2F;CTO raving about LLMs should be taken as firm statements about how they actually operate internally. I&#x27;m surprised that this does not seem to be the default case.\nAmong other things, Oracle stands to profit from greater adoption of LLM tools.<p>It would be unrealistic&#x2F;unreasonable to expect their employees&#x2F;contractors working on internal projects to be held to the same standard&#x2F;guidelines&#x2F;rules as developers contributing to a free software project.\nThis applies either way, whichever side (internal&#x2F;open) has the worse deal.<p>I don&#x27;t know what the rules are for their internal teams. As far as I know, I&#x27;m not alone in that.\nOracle also don&#x27;t need to post anything publicly to change those rules.<p>[0] <a href=\"https:&#x2F;&#x2F;www.theregister.com&#x2F;ai-and-ml&#x2F;2026&#x2F;08&#x2F;03&#x2F;as-larry-ellison-bets-the-farm-oracle-says-it-loves-ai-written-code-just-not-in-openjdk&#x2F;5281851\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theregister.com&#x2F;ai-and-ml&#x2F;2026&#x2F;08&#x2F;03&#x2F;as-larry-el...</a>",
+            "comment": []
+        },
+        {
+            "text": "Would Cursor tab assisted code be considered AI generated? I feel like that was the epitome of AI assisted but quality code",
+            "comment": [
+                {
+                    "text": "Yeah, they kind of hit on this in their main post:<p>&gt; <i>If I use a generative AI tool to create 100 lines of code, and then edit ten of those lines myself, may I contribute the result?</i><p>&gt; No. Your contribution would still include, in part, AI-generated code.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; I feel like that was the epitome of AI assisted but quality code<p>I totally agree with you on this! The engineer is still actively engaging while getting the performance gains of not having to type out functions. The Engineer is still in charge vs agentic &quot;engineering&quot; a model + harness can spit out whatever and the engineer is left to review tons and tons of code",
+                    "comment": []
+                },
+                {
+                    "text": "Yes. AI involved.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "While the Oracle hate boils, Zig, Rust,... aren&#x27;t much different.<p>There is also the approach of Microsoft putting AI all over the place on .NET, and CoPilot driven development all over the place.",
+            "comment": [
+                {
+                    "text": "The Oracle antipathy is less about the policy itself and more about the apparent hypocrisy of hyping and funding these tools as &quot;solving programming&quot; and then forbidding their use on their own open source project.",
+                    "comment": [
+                        {
+                            "text": "You mean like Microsoft also putting a break on their AI usage, which was going crazy?",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Some important context - it appears it applies to submissions from the community but possibly not to core developers:<p>&gt; Contributions in the OpenJDK Community must not include content generated, in part or in full, by large language models<p>So this likely falls more into the category of the inability of the core maintainers to manage the voluminous submissions coming from community than some broad ban of use in AI to develop it at all.",
+            "comment": []
+        },
+        {
+            "text": "Rules for thee, but not for me. well I don&#x27;t expect better from tech companies now.",
+            "comment": [
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It’ll be a licensing&#x2F;copywrite concern. Large corporations using GenAI have guardrails and indemnity from their providers to protect them. Taking external contributions is more problematic, at the moment at least. So, in a standard lawyerly manner they shut it down until safe to do so.",
+            "comment": []
+        },
+        {
+            "text": "Makes sense, there&#x27;s some precedent that AI generated code is not copyrightable, it&#x27;s essentially in the public domain for now.<p>Oracle likes its licenses.",
+            "comment": []
+        },
+        {
+            "text": "This is purely because you can&#x27;t copyright the output of AI, and therefore cannot assign copyright to Oracle, and therefore it&#x27;s harder for them to sue you .  That&#x27;s it, it has nothing to do with quality.  They will happily merge AI generated code as long as you wink wink claim it&#x27;s not AI generated and sign over the rights.",
+            "comment": []
+        },
+        {
+            "text": "It&#x27;s not Oracle that issued the ban -- it doesn&#x27;t have that authority. It&#x27;s the OpenJDK Governing Board. (Of course the latter generally follows Oracle&#x27;s lead.)<p><a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a><p>That Oracle&#x27;s policies over its internal code base are different is irrelevant.",
+            "comment": []
+        },
+        {
+            "text": "&quot;AI-generated code&quot; will become shorthand for code-that-wasn&#x27;t-verified-and-organized-by-a-competent-human.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a><p>Shitposting, the reasons are very clear and explicit: The risks of having legal problems are very clear.<p>Google for example GEMA vs. OpenAI.",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a><p>I don&#x27;t think this is as big of news as it needs to be. The explanations are from a risk-management perspective.",
+            "comment": []
+        },
+        {
+            "text": "How could we know whether incoming code is AI generated or not? are there tools for this?",
+            "comment": [
+                {
+                    "text": "&quot;If I don&#x27;t know you, I don&#x27;t merge you&quot;<p>And if you catch somebody submitting code they can&#x27;t explain, you don&#x27;t know them anymore.<p>It&#x27;s really simple.  Open source has always had a social layer.  Github culture tries to eliminate it, and that&#x27;s the source of this vulnerability.",
+                    "comment": []
+                },
+                {
+                    "text": "If they had a policy to ban German speakers from submitting code to OpenJDK, it would have the same effect. None at all, which is maybe the point. It&#x27;s another tool to categorize submissions&#x2F;submitters they find problematic.",
+                    "comment": []
+                },
+                {
+                    "text": "First thought I had too. I deliberately strip AI metadata from my PRs in certain orgs.",
+                    "comment": [
+                        {
+                            "text": "First time you&#x27;re caught, you are no longer a project contributor and your deceptive conduct will be forwarded to all other major open source projects with warnings that your code cannot be trustworthy and is a well documented legal liability. How&#x27;s that sit with you?",
+                            "comment": []
+                        },
+                        {
+                            "text": "This is inherently deceptive.",
+                            "comment": [
+                                {
+                                    "text": "[flagged]",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "[flagged]",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Linus might want to look over Oracle&#x27;s reasoning and reconsider the potential legal harm that can come to the Linux kernel from accepting AI code.",
+            "comment": []
+        },
+        {
+            "text": "[dupe] Discussion: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49109165\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49109165</a>",
+            "comment": []
+        },
+        {
+            "text": "How does all this AI generated code blocking gappen? Does a human decide that or an AI is tasked with sequencing that PR&#x27;s DNA to ascertain its possible inhuman origins?<p>What if someone generates code with AI and then goes into the IDE and then bathes it, dresses it (including adding comments) etc, in a way a human would? What then? No, here I am not exploring a way to fool the code DNA checking, but rather trying to find out what the real problem is with the AI generated code? (Other than license issues, too many PRs etc)",
+            "comment": [
+                {
+                    "text": "The &quot;blocking&quot; happens on the side of the AI users. You like using AI. You are aware of this policy.<p>Will you submit an AI-generated pull request to OpenJDK? No? Voilà, you have successfully self-enforced the OpenJDK policy.<p>Or do you go to the trouble of finding an interesting issue to work on, get your agent to code it up, manually polish it to make it less AI-looking in case there are doubts, and then submit it? Yes? No. Why would you? To prove some kind of point, to yourself, that you can never disclose publicly? Most people have better things to do. Voilà, the policy is, again, self-enforced. Enjoy your day at the beach instead of trying to trick a project that is politely asking you not to trick it!",
+                    "comment": []
+                },
+                {
+                    "text": "The FAQ addresses these questions: <a href=\"https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai\" rel=\"nofollow\">https:&#x2F;&#x2F;openjdk.org&#x2F;legal&#x2F;ai</a>",
+                    "comment": [
+                        {
+                            "text": "&gt; Other clues include highly structured comments with multiple headings, unnecessary comments in code, gratuitously defensive programming, and the use of emoji characters.... In general, if something in a pull request seems uncannily cheerful or meticulous then you could be looking at AI-generated content.<p>So, get rid of formatting, throw in an innocent grammatical mistake, intentionally omit an obscure corner case while alluding to an existential crisis for taking compromises and you&#x27;re good to go!",
+                            "comment": []
+                        },
+                        {
+                            "text": "There is a more helpful way to reply, that includes this text.",
+                            "comment": [
+                                {
+                                    "text": "I believe in linking over copy &amp; paste, in particular when I want neither to quote the full FAQ nor editorialize by selective quoting. By reading the FAQ, people can form their own opinion on it.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "They&#x27;re just so information-dense and sprawl in scope.<p>Too many PRs wouldn&#x27;t be a problem if they were easily digestible: But they often include these giant refactors with confusing changes that aren&#x27;t elaborated.<p>The real underlying problem is with authors who do not understand the code they submit. If you cannot defend the PR, you shouldn&#x27;t be submitting it.",
+                    "comment": []
+                },
+                {
+                    "text": "They look at your code, and if they think it&#x27;s AI, they say no.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Oracle bans AI code from OpenJDK but I&#x27;m fairly sure the release notes have been written by a model for a year now.",
+            "comment": []
+        },
+        {
+            "text": "This is the firm whose debt is one level above junk and whose survival as a single unbroken corporate entity is fully predicated on OpenAI being able to make money from the data centres they (Oracle) are building for them, let alone simply paying for them.<p>I accept @jerf&#x27;s explanation is the right one but this is an absolutely almighty signal that AI-first developers should heed. And someone should ask Altman about it on the record.",
+            "comment": [
+                {
+                    "text": "[flagged]",
+                    "comment": [
+                        {
+                            "text": "I don&#x27;t disagree. But at the moment it is ~all major tech CEOs, right? Companies everywhere are saying &quot;increasingly we don&#x27;t write our own code&quot;. Out loud in front of their investors and customers. Even Oracle did.<p>But people at Oracle below the C suite don&#x27;t even fart in public without lawyers signing off.<p>This is Oracle telling quite a lot of customers and partners of one of their most significant products that it doesn&#x27;t trust AI code to be safe. Oracle, the company that is more exposed to the bubble bursting than basically anyone else apart from Coreweave.<p>This message could have been a lot shorter, could have said they were pausing accepting AI submissions until the intellectual property situation was clarified, but no — they said AI code can be unsafe and insecure and it&#x27;s too risky to accept it. So a good question (given that Oracle are <i>fucked</i> if OpenAI even stumbles) is why?<p>That is a heck of a message to send, and it is visible enough. That is why I think developers (by which I mean individuals and their companies) whose focus is AI-generated code, which is almost everyone in public, should pay a bit of attention.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Oracle is just selling AI shovels. Of course it would have a hard time defending IP issues in slop code when it had famously sued Google for Java infringement.<p>Also, Oracle knows that it will be stronger with strong IP laws. Other companies will realize that fact soon.",
+            "comment": []
+        },
+        {
+            "text": "Deeply ironic.",
+            "comment": []
+        },
+        {
+            "text": "Fascinating coming from a company hurting so hard from their over-leveraged positions in AI.",
+            "comment": []
+        },
+        {
+            "text": "Reviewer burden is the right diagnosis and the rule doesn&#x27;t really address it.<p>Oracle&#x27;s own FAQ concedes that reliably telling AI content from human content is impossible. So reducing volume depends on people honestly checking the box or more likely not submitting or reviewers spotting AI tells. Some of their example tells don&#x27;t seem AI-specific, just bad code smells that reviewers probably rejected for prior to gen AI.<p>I&#x27;m reminded of academic peer review, which has run into a similar volume problem. Since there&#x27;s more writing involved, there&#x27;s also a lot of slop submitted and the reviews themselves can degenerate to slop, too. It&#x27;s an unsolved problem. The things that seem to be making a difference are process changes like caps on submissions per author, immediate rejection prior to review, making authors review in return, etc.",
+            "comment": []
+        },
+        {
+            "text": "AI for me but not for thee.",
+            "comment": []
+        },
+        {
+            "text": "This is a friendly reminder from a grouchy old fart that<p>1. You are the engineer of record on all of your commits.<p>2. As the engineer of record, you have a certain duty of care with regards to code quality.<p>3. If you are not signing your commits, you are not providing reasonable provenance and instead tossing your name around in a way that anyone can replicate with impunity.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "How would they even be able to tell the difference?",
+            "comment": []
+        },
+        {
+            "text": "Banning Ai generated code is like telling people don’t look on stack overflow. I get the idea but it’s a blunt tool to that doesn’t solve the right problem.",
+            "comment": []
+        },
+        {
+            "text": "And now I find myself staring at Zig and Java as my preferred languages. Zig is very C-like, so I feel like I&#x27;m back to the 90s - except a bit less miserable in some ways, more miserable in others.<p>Even the fashion seems similar - at least based on the teens I saw at the concert I went to recently (I&#x27;m not exactly a frequent event-goer) - including, of course, the anorexia. I should check out how the demoscene and FastTracker music are doing.",
+            "comment": []
+        },
+        {
+            "text": "How is this enforceable?",
+            "comment": []
+        },
+        {
+            "text": "Never get high on your own supply, says the dope peddler.",
+            "comment": []
+        },
+        {
+            "text": "So they will not be accepting most security patches. Fun.",
+            "comment": []
+        },
+        {
+            "text": "How do you even enforce such policy?",
+            "comment": [
+                {
+                    "text": "How would you enforce it on your project?",
+                    "comment": [
+                        {
+                            "text": "I&#x27;d say by checking the code myself but at the end of the day it&#x27;s just about trust. Codeberg is facing the same issue, it&#x27;s all about human reports and common sense, but there aren&#x27;t bulletproof solution to this problem. Maybe a prompt injection somewhere.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Not long ago it seemed as if AI Skynet is winning the war.<p>Now slowly, the Empire strikes back - not just Oracle, but more and more resist the tyranny of AI skynet slop.<p>I am upset that these corporations drove up the RAM prices still. They need to compensate the rest of mankind for this - after all the chip market is a de-facto monopoly. They should all be sued into nothingness, then new laws must enforce healthy and fair competition, without unfair players driving up the prices willy-nilly style. Absolute AI mafia here.",
+            "comment": []
+        },
+        {
+            "text": "Imagine Oracle suing themselves due to licensed use violations; can&#x27;t have that!!!",
+            "comment": []
+        },
+        {
+            "text": "They just have their panties in a bunch because that one guy on Youtube said they&#x27;d be the first domino to fall in the AIpocalypse. <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=py23zYn1GMw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=py23zYn1GMw</a>",
+            "comment": []
+        },
+        {
+            "text": "great now we will have slop , just not vibed slop",
+            "comment": []
+        },
+        {
+            "text": "lmao",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": [
+                {
+                    "text": "",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "What happens to OpenJDK when Oracle dies? That&#x27;s looking increasingly likely on a 3-5yr horizon.",
+            "comment": [
+                {
+                    "text": "Probably it would get picked up by someone else (e.g. the Linux Foundation)? It&#x27;s GPLv2-licensed, so it&#x27;s not like the code is going to be risky for someone to fork",
+                    "comment": [
+                        {
+                            "text": "I would expect it to be picked up by the Eclipse Foundation. They already have the Java Ent- I mean, Jakarta Enterprise Edition.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I don&#x27;t think Oracle will die, but even entertaining the hypothetical I suspect that some other organization (e.g. Apache) would pick up and maintain a fork.",
+                    "comment": []
+                },
+                {
+                    "text": "IBM, Red Hat, Microsoft, SAP, Amazon and others all work on the JDK. They would have to step it up to cover the loss of Oracle&#x27;s contributions, but I am sure they could manage.<p>Regardless, your timeframe on Oracle&#x27;s death seems way too soon.",
+                    "comment": []
+                },
+                {
+                    "text": "Way too much rides on Java, pretty much every big business has their own customized version of JDK that they support and maintain",
+                    "comment": []
+                },
+                {
+                    "text": "The same that happened when Sun died: it gets bought by someone else.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Oracle is not a software company, but a litigation company. It will be hard to sue people because LLMs generated code similar to some code copyrighted by Oracle if they themselves use LLMs internally to generate code.",
+            "comment": []
+        },
+        {
+            "text": "BREAKING Oracle pretends to be technical as we enter a new era where managers and corporate slobs larp as geniuses",
+            "comment": []
+        },
+        {
+            "text": "Policies like this will result in the death of the branded software.<p>As we move forward it will be easier than ever to just maintain and keep your fork of software with the changes you want or need. No more approval, bureaucracy, or arguing.  Just tell the AI agent want you want changed and you have it.<p>This will be used for huge things too. Like maybe you want a specific fork of Java that only supports for each iterators, goodby linters, hello compile time error.",
+            "comment": [
+                {
+                    "text": "You truly envision a future where every program is written in a custom programming language, for a custom operating system, for a single user who will now be in charge of understanding and maintaining it forever? That user being your grandma, your baker, your CEO?",
+                    "comment": [
+                        {
+                            "text": "I do.<p>Software as a list of requirements and that&#x27;s it.  The local LLM appliance everybody has taking in a document specifying hardware, interfaces, and requirements and spitting out software changeable locally via conversation with its users.<p>In the same way you have a cookbook with recipes to make dinner instead of ordering out.",
+                            "comment": [
+                                {
+                                    "text": "&gt; Software as a list of requirements and that&#x27;s it. [...] a document specifying hardware, interfaces, and requirements [...]<p>For that, you&#x27;d want the list of requirements and hardware documentation to be written in a precise, formal language. That&#x27;s no different than writing them in a programming language (though a declarative one, instead of the more common imperative ones).<p>I&#x27;ve in the past (way before LLMs existed) thought about automatically generating device drivers from hardware documentation. But besides the need for very precise documentation, hardware never works exactly as documented; a human-written device driver can avoid problematic areas (perhaps even by accident), while a computer-written device driver would end up exploiting every corner case of the documentation.",
+                                    "comment": [
+                                        {
+                                            "text": "Requirements ARE written in a precise, formal language.  These days most people don&#x27;t actually have any contact at all with real requirements though as practiced by professionals.<p>There is quite a bit of distance between the exactness of any human language and an sort of programming languages.  When you have a language model loaded with software engineering best practices you do not need the exactness of a programming language to describe desired behavior.<p>Hardware documentation is indeed often lacking in plenty of ways but in a world where writing your own software through agents is commonplace, the hardware manufacturers (or the community) would make testing that documentation to find the problems an important part of hardware development.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "[flagged]",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Most people don&#x27;t bake their own bread even if it&#x27;s more approachable, and cheaper then vibecoding. Bread is just a recipe one may say. But in modern times have we ever witnessed disappearance of specialization? I don&#x27;t think so.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "That is a cool perspective to consider.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; easier than ever to just maintain and keep your fork of software with the changes you want or need<p>I don&#x27;t imagine this is practical or desirable for all situations. Good software is built from being battle tested by many users in many environments. Even with the advancements in AI tools, I don&#x27;t imagine they&#x27;ll become omnipotent anytime soon.<p>&gt; No more approval, bureaucracy, or arguing<p>For software that can kill people or substantively affect someone’s life in a negative way, the bureaucracy is there for good reason. I don&#x27;t think anyone should want someone at Phillips to vibe code the control software for an X-Ray machine or an employee at CrowdStrike vibe coding the next update before pushing it out to millions of machines.<p>We are forced to endure low-quality software because there is little or no accountability. I can only imagine what you propose would make an already poor situation worse.",
+                    "comment": []
+                },
+                {
+                    "text": "I have my doubts about this. Brands are a about reputation, and reputation strongly affects responsibility when business decisions are made. If a manager decides to vibecode a solution which eventually fails, said manager will be punished. If instead a mainstream software is bought, and it fails - well, everybody has the same trouble around, right? It&#x27;s not a personal mistake anymore. I suppose there are niches where branded software may give way, but I don&#x27;t think it&#x27;s gonna be a general trend.",
+                    "comment": []
+                },
+                {
+                    "text": "This just reflects how absolutely clueless you are about the amount of attention to detail that the OpenJDK folks put into developing the language and ensuring that it works for all its users (which are serious users delivering actual value.) And I say this not even being a Java programmer myself, just an envious C++ dude watching from the sides.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; maintain and keep your fork of software with the changes you want or need<p>Then you&#x27;ll have the same problem everyone who forks a piece of software ends up having, sooner or later: as the original evolves, keeping your fork up to date with the upstream changes becomes harder and harder. The bigger and more invasive the changes are, the harder synchronizing with newer releases become.",
+                    "comment": []
+                },
+                {
+                    "text": "Someone brings this up on just about every AI-related thread. I think it&#x27;s nonsense. Nobody wants to maintain a fork of any remotely complex software, not even with AI. And in a corporate setting, nobody wants to use your custom fork; they just want to use the standard software they already know with the quirks they&#x27;ve already learned.",
+                    "comment": [
+                        {
+                            "text": "This is far more likely to happen in a corporate setting with competent engineers who want to build&#x2F;solve now versus relying on others. I&#x27;ve seen it 100% of the time with varying results.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "The idea of someone forking Java with vibe code nonsense and expecting them to be able to maintain is laughable.",
+                    "comment": []
+                },
+                {
+                    "text": "Except. . . (accept)... SaaS solves the problem of needing one piece of software to communicate between multiple (many) users and&#x2F;or other pieces of software.<p>Can&#x27;t picture a functioning world where every piece of software is custom and requires factorial amount of AI comparisons and reviews to patch the API to communicate. In fact, it&#x27;s impossible! There&#x27;s not enough compute to handle a factorial explosion.<p>I really doubt SaaS going anywhere.",
+                    "comment": [
+                        {
+                            "text": "Given how much of the industry is SaaS that would be such a self own! Wow, fantastic, you can build all your software in house, zero dependencies. Wait, your users can do the same? And they don’t need to pay you anymore for any of your cool services because they just asked their agents to recreate your infra from scratch? Interesting, truly the future of humanity",
+                            "comment": [
+                                {
+                                    "text": "&gt; Wow, fantastic, you can build all your software in house, zero dependencies. Wait, your users can do the same? And they don’t need to pay you anymore for any of your cool services because they just asked their agents to recreate your infra from scratch?<p>The cherry on top is that OpenAI and Anthropic brainwashed your coworkers and your company&#x27;s C-suite into uploading the entirety of the &quot;proprietary&quot; codebase onto their servers thousands of times per day over the last three years.",
+                                    "comment": [
+                                        {
+                                            "text": "No need to brainwash, they did it willingly and with a smile, tweeting about how they are part of the revolution while telling us all how we will be left behind",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Relevant xkcd: <a href=\"https:&#x2F;&#x2F;xkcd.com&#x2F;605&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xkcd.com&#x2F;605&#x2F;</a>",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": [
+                        {
+                            "text": "[dead]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I think it&#x27;s even more pervasive than that. Why bother forking software at all? At the point in which code generation is meaningfully trivialized, software becomes entirely disposable. Anything you want, have a model spin it up. You don&#x27;t even need libraries, the model can just make everything in-situ, who cares? Why on earth would I ever want to use SQLite if I have access to a sufficiently advanced code generator which can generate me a similarly high quality database system, with the added benefit of conforming to whatever my problem domain is, conforming to whatever branch of database theory I want?<p>Even SaaS isn&#x27;t safe. I don&#x27;t even have to describe your product to my system, I just have to give it a harness with access to the interface and have it replicate it locally. Frankly you can probably already prompt for that.<p>The only thing holding this future back right now are pricing problems and code generation quality. Both of those barriers are constantly being knocked down. We might never arrive at that future, but it&#x27;s definitely a higher probability than solving AGI&#x27;s scaling issues, and would arrive much sooner for technical users.",
+                    "comment": [
+                        {
+                            "text": "&gt; Why on earth would I ever want to use SQLite if I have access to a sufficiently advanced code generator which can generate me a similarly high quality database system<p>Because SQLite has 10k requirements  that wouldn&#x27;t even cross your mind to write down, but 80% of which are useful to you.",
+                            "comment": [
+                                {
+                                    "text": "The nice thing about natural language is that nesting semantic layers is free and arbitrary, and far more tractable than in a formal grammar. Every natural language is like coherentist ω-order logic. Effectively, I don&#x27;t have to write the 10k requirements. I only need to provide a sufficient metatheory that can be extrapolatable to those 10k requirements, and that can include embedded theory I did not write myself but am familiar with enough to invoke, as well as refinement criteria ranging from the fuzzy to the explicit with priority weighting parameters to describe the shape in which I want the search space pruned.<p>This isn&#x27;t anything new or particularly interesting. It&#x27;s the entire basis upon which ILP demonstrated generality. A metatheory to synthesize 10 <i>trillion</i> rules isn&#x27;t even scratching the surface of what you can reasonably do. The key was finding out the tractable semantics for actually computing it in reasonable amount of time, which right now is looking decidedly like informal semantics was the answer the whole time.",
+                                    "comment": [
+                                        {
+                                            "text": "Not sure what this is a parody of, but it&#x27;s hilarious, thank you. Keep it up!",
+                                            "comment": [
+                                                {
+                                                    "text": "I accept your concession. The humiliation of irrationally committed foundationalists has been a long time coming, so it&#x27;s good you&#x27;re trying to get ahead of the curve.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt;Why on earth would I ever want to use SQLite if I have access to a sufficiently advanced code generator which can generate me a similarly high quality database system<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=V_qzqY1bb7I\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=V_qzqY1bb7I</a> your sufficiently advanced code generator may generate you a high quality database system for some measure of quality, but it will not have SQLite&#x27;s reliability over the extremely long tail of edge cases proven through its testing and use in real life",
+                            "comment": [
+                                {
+                                    "text": "Then you&#x27;ve failed the criteria of sufficiently advanced. It&#x27;s perfectly fine to cast doubt we&#x27;ll see scaling to this generalization, but you&#x27;re not casting doubt you&#x27;re outright rejecting the premise in-confidence. It betrays that you have no idea what you&#x27;re talking about. May I see your quantification of this long tail? Do you even know how to formalize the mapping from n-bit precision of weights and&#x2F;or activations to the standard deviation of a transformer&#x27;s output distribution, such that we could decide whether the long tail of a given behavior is unreachable? Something tells me that no, you don&#x27;t know how to do that in the slightest. So what drives you to speak with such confidence?<p>That&#x27;s before we get into the entire non-linearity of agentic systems introducing massive decidability problems on this in the first place. A little bit of epistemic humility please.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "You still spend all your time troubleshooting the reinvented wheels even if AI writes it because you won’t know the edge cases til you hit them. Then you modify the lib, re-release, and update all your apps, but now look where all your time is spent.<p>The assumption you make is the classic LLM mistake of thinking writing code === building software.<p>To cite your example SQL has had its tires kicked <i>a lot</i> it’s seen things you can’t even imagine thanks to being used millions of times by millions of people. It’s hard to just replicate all that iteration, learning, mastery, and process. If you reinvent it, users will encounter the dumbest bugs over and over and over. Sure you’ll fix them, but you’re now embarking on this big thing that SQL and others already did.<p>If you love the problem space definitely do it - go full steam ahead - especially if you’re actually innovating and doing things better, but don’t be fooled into thinking anyone can, or should with every side project.<p>The new struggle is focus, what not to build, I almost have the purely opposite view of instead of using LLMs for grandiosity, only using the LLM for tedium and making sure it doesn’t do anything too much that I haven’t planned for or want to do. I drive the thing, so every new project is still my time and energy and focus.",
+                            "comment": [
+                                {
+                                    "text": "&gt; The assumption you make is the classic LLM mistake of thinking writing code === building software.<p>Not quite. I&#x27;d agree with you if you try to do code generation in one-shot, but the agentic loop importantly isn&#x27;t that. Natural testing at-scale is automated as well.<p>&gt; but don’t be fooled into thinking anyone can, or should with every side project.<p>You&#x27;re right, and I hoped I had conveyed that but I guess I didn&#x27;t. I&#x27;m very bearish on whether or not we&#x27;re democratizing anything. What I do think is we have a very complicated and interesting tool, and within a reasonable precondition of additional scaling and structural innovation, one that promises a certain kind of person the ability to swing with the weight of an entire institution.<p>I have been playing around with transformers for 7 years now, and can see and qualify the improvements observationally. Innovations like thinking blocks, the agentic loop, the many architectural refinements flourishing, SAEs, steering vectors, harnesses, etc. Despite what it sounds like, I&#x27;ve yet to incorporate LLMs into any of my professional workflows, they&#x27;re really not quite up to my standards yet. But then, in my industry I would never in a million years touch anything like SQLite either. Those kinds of things are very taboo for anything but like an internet service and that&#x27;s more the kind of operations drek that gets shoved off to the IT department. All of this colors my perspective. I was never pulling in dependencies. In the future, it&#x27;s looking like I&#x27;ll have infinitely less reason to.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Hilarious thing is, if I want a JDK, I&#x27;ll ask Fable to write one, get Sol to review it and write tests for it, and it will be working by Monday morning.  No need to get permission or anything else from Oracle.  Building a complex product from many smaller, individually-testable components is exactly what LLMs are good at, and a Java SDK certainly qualifies.<p>And if I run out of tokens, well, that&#x27;s OK too.  K3 running on my own box will finish the job.  I&#x27;ll just have to wait another week, that&#x27;s all.",
+            "comment": [
+                {
+                    "text": "If I want a JDK, I&#x27;ll ask my package manager to download and install one, and it will be working a minute later. Why would you want to wait another week for something that already exists?",
+                    "comment": [
+                        {
+                            "text": "Excellent point.  Why, indeed.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Please do this. I would love to see this timeline actually hold true. Production quality is the bar though. Not something that only works in a very narrow set of circumstances with a ton of caveats.",
+                    "comment": [
+                        {
+                            "text": "I, too, would like to see the results.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

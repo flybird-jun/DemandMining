@@ -1,0 +1,317 @@
+{
+    "item_id": 49222824,
+    "title": "Message your other Claude Code sessions",
+    "url": "https://code.claude.com/docs/en/cross-session-messaging",
+    "text": "Cross-session messaging requires Claude Code v2.1.224 or later and runs on macOS and Linux. When a session meets the requirements, messaging is on with nothing to enable. See\nAvailability\nfor provider requirements and how to confirm a session has it.\nCross-session messaging lets Claude deliver a message from one of your Claude Code sessions to another. When a change in one session breaks what another is building on, Claude can warn that session before you notice. When one session settles a question another is blocked on, Claude can send the answer across.\nA message is a piece of text one Claude writes to another, never conversation history or files. To move a whole conversation or its context,\nresume the session\ninstead.\nClaude uses two tools for this:\nListAgents\nto discover which agents it can reach, and\nSendMessage\nto deliver a message to one of them by name. With the same\nSendMessage\ntool, Claude can also message\nsubagents\nand\nagent team\nteammates within a single session or team. This page covers messages between your independent sessions.\n​\nWhen to use cross-session messaging\nUse messaging when one of your sessions has something another session needs mid-task. Claude can send a message on its own when it sees the need, for example after making a change that affects work another session is doing, or you can ask it to send one. The common cases:\nHand over a finding\n: when one session discovers a breaking change or makes a decision, Claude summarizes it for the session working on the affected area, instead of you re-explaining it there.\nCoordinate parallel worktrees\n: when sessions work the same repository in separate\nworktrees\n, Claude can tell the other sessions what landed.\nGet status from long-running work\n: have a migration or test run report back to the session you’re watching, or ask it yourself from there.\nReply across machines\n: answer a message that arrived from one of your sessions on another machine or on the web. Across machines, Claude can only reply. It can’t start the exchange.\nUse messaging between independent sessions that you start and steer yourself. Claude Code has a dedicated feature for each of the other ways to run or reach multiple sessions, so use the one built for what you’re doing instead:\nTo continue one conversation in another terminal, or share its context with a new session,\nresume the session\nFor a coordinated team of sessions Claude spawns and supervises, use\nagent teams\nTo watch and steer many sessions from one place, use\nagent view\nTo steer a session yourself from your phone or another device, rather than have sessions message each other, use\nRemote Control\nTo push external events, such as CI results or chat messages, into a session, use\nchannels\n​\nMessage another session\nWhen one of your sessions learns something another session needs, such as a finding, a status, or a decision, Claude passes it along instead of you copy-pasting between terminals. Claude discovers the target with\nListAgents\nand sends with\nSendMessage\n, so you never call either tool yourself. Claude can decide to send a message without being asked, and you can also prompt for one.\nTo prompt one yourself, tell Claude what you want the other session to know or do. This example is a prompt you type, not a message Claude sends:\nAsk the session running in my other terminal whether the migration finished\nClaude writes the actual message itself, so your prompt can leave the content to Claude. This prompt asks for a summary without dictating its wording, and what Claude sends varies:\nExplain what we just did to the session working on the payments API\nFor what the message Claude writes looks like when it arrives, including an example of one, see\nwhat a message looks like\n.\n​\nMessage delivery\nThe receiving Claude reads the message between tool calls during an active turn, so a running tool is never interrupted. When the receiving session is idle, Claude Code starts a new turn with the message.\nBetween two ordinary interactive sessions with default settings, Claude Code delivers the message. Delivery isn’t guaranteed in every configuration, though. The receiving session checks each arriving message against its own\ninbound controls\n, and the check ends in one of three outcomes:\nDelivered\n: Claude Code passes the message to the receiving Claude.\nHeld\n: Claude Code sets the message aside undelivered. A held message reaches Claude only when you approve it or a later mode or settings change allows it.\nRefused\n: Claude Code drops the message without delivering it.\nOnce delivered, the message counts toward\nusage\nlike a prompt you type, and the receiving Claude can reply to the sender the same way, except in the\none-way cross-machine case\n.\nPermission boundaries stay per-session. Claude is instructed never to ask another session for an action that was denied or blocked in its own session, or that its own permission settings would block, and to route that work back to you instead. On the receiving side, the\nreceiving session’s own permission prompts and rules still apply\nto anything the message asks for.\n​\nSee which sessions Claude can reach\nClaude finds a message’s target on its own, so you don’t need to run anything before asking it to send. To see for yourself which sessions Claude can reach, run the\n/list-agents\ncommand. It lists each session with the name it answers to, and that name is where Claude addresses a message. The listing covers:\nSubagents\n: agents running inside the current session.\nAgent team\nteammates aren’t listed; Claude messages them through the team’s own roster.\nYour other local sessions\n: Claude Code sessions running on the same machine, including\nbackground sessions\n. A session appears only when it binds an\ninbox socket\n.\nSessions beyond this machine\n: shown while\nRemote Control\nis connected and labeled\nRemote Control\n. These are your sessions on other machines and your\nClaude Code on the web\nsessions. Claude can’t send a message to start a conversation with one of these sessions. It can only reply to a message that arrived from one of them. See\nMessage sessions on other machines\n.\nA session answers to the name you set with the\n/rename\ncommand or the\n--name\nflag. When you don’t set one, Claude Code names the session itself. An interactive session gets a name derived from its working directory’s folder name, such as\nmyapp-3f\n.\nTwo sessions can end up with the same name. The\n/list-agents\noutput shows each local session’s working directory, which tells same-named sessions apart when they run in different directories. Claude’s own listing adds a short identifier to each row and uses it in the address when names collide.\n​\nMessage sessions on other machines\nWhere the other session runs decides how a message travels and what Claude here can send:\nWhere the other session runs\nHow the message travels\nWhat Claude here can send\nOn this machine\nOver a per-session socket, never through Anthropic servers\nNew messages and replies\nOn another of your machines\nThrough Anthropic servers, arriving over that machine’s\nRemote Control\nconnection\nReplies only\nOn\nClaude Code on the web\nThrough Anthropic servers, straight to the cloud session\nReplies only\nSame-machine delivery works wherever the feature is enabled. Each session registers itself in files on disk and binds its inbox socket there. When Claude lists or messages your local sessions, Claude Code reads those files to find them, so two sessions can reach each other only when they can see the same files. A container has its own filesystem, so a session inside it and a session on the host can’t reach each other. Two sessions inside the same container can still message each other, including on a\nself-hosted runner\n.\nA reply needs a\nreply address\n, and almost every message carries one. A reply to a session beyond this machine, sent while the replying session isn’t connected to Remote Control, still goes through as a direct request to Anthropic servers, but it arrives without a reply address, so the receiver can’t answer it. Claude is told as much when it sends.\nTo require your approval before any message goes beyond this machine, set\nisolatePeerMachines\n.\n​\nHow a session treats an incoming message\nWhen session A messages session B, Claude Code tells B’s Claude that the message came from another session, not from you, and limits what the message can do:\nIt can’t approve anything\n: a message from another session never counts as your consent, so it can’t answer a pending permission prompt on your behalf.\nIt can’t change configuration\n: Claude Code instructs the receiving Claude never to change permission settings,\nCLAUDE.md\n, or other configuration because another session asked.\nCommands don’t run\n: a command in the message’s text, such as\n/compact\n, arrives as plain text. Claude Code never executes it.\nPermission prompts still fire\n: if acting on the message requires a permission the receiving session doesn’t have, you see the same prompt you’d see for any other work.\n​\nWhat a message looks like\nWhen the message arrives, it appears in the conversation with its sender, queued while Claude is mid-turn or starting a new turn right away when the session is idle. Once Claude has read it, Claude Code collapses it to a one-line\nMessage from\nrow, which\nCtrl+O\nexpands.\nA message is a piece of text one Claude writes to another. Claude receives it with the sender’s name and a reply address, except for a\none-way cross-machine reply\n, which carries no reply address. You see the name and the text, and the receiving session gets only that text, never the sender’s conversation history or files.\nThis example is a message one Claude wrote to another, as the receiving session sees it:\nSchema migration finished: the new column is tenant_id, and rebasing on main is safe now.\n​\nControl inbound messages\nSet\ncrossSessionInbound\nto choose what a session does with messages arriving from your other sessions:\nValue\nBehavior\naccept\nClaude Code delivers each message to Claude\nhold\nClaude Code shows a notice for each message and doesn’t deliver it. If an\naccept\nlater applies, per the\nprecedence rules\n, Claude Code releases the held messages\nrefuse\nClaude Code drops each message without delivering it\nTo see which value applies, follow the\ncrossSessionInbound\nprecedence rules in the\nsettings reference\n. When no value applies, Claude Code decides per message from the two sessions’ permission modes. It groups sessions that\nbypass permission prompts\ninto one class, and every other session into the other. Plan mode counts as bypassing in sessions with bypass permissions available, and\nauto\n,\nacceptEdits\n, and\ndontAsk\ncount as prompting:\nThe receiving session prompts for permissions\n: Claude Code delivers each message. It holds one for your approval only when the sending session identifies itself as bypassing permission prompts.\nThe receiving session bypasses permission prompts\n: Claude Code holds each message for your approval. It delivers one only when the sending session identifies itself as also bypassing.\nWhen the default holds a message, Claude Code opens an approval dialog in the receiving session. The dialog shows the sender and a preview:\nApprove\ndelivers that one message to Claude.\nDeny\n, or dismissing the dialog, drops it.\nLeft unanswered past the\ndialogExpiry\ndeadline, the dialog closes and Claude Code drops the message. The deadline defaults to five minutes.\nIf this session’s permission-mode class changes while messages are held, Claude Code re-applies the inbound rules, delivers the messages they now accept, and shows a notice.\nIf a change makes\nrefuse\napply while messages are held, Claude Code drops every held message and reports a denial to each sender it can reach.\nWhen the sender runs on the same machine, Claude Code tells the sending session what happened. A notice appears there when the message is held, and a follow-up reports the outcome when the receiver later delivers, denies, or expires it. A message refused on arrival produces no sender-side notice.\nClaude Code holds at most 100 messages, separately from the delivery queue, and past that drops the oldest.\n​\nNon-interactive sessions\nClaude Code binds an inbox socket for a\nclaude -p\nsession like an interactive one, so a long-running\n-p\nworker can receive messages and appears in the listing. When you start a session in\nbare mode\n, Claude Code doesn’t bind the socket, so that session can’t receive messages and doesn’t appear in the agent list.\nA\n-p\nsession can’t show the approval dialog. A held message stays held there. Claude Code delivers it only if a later mode or settings change allows it, under the same rules as above. To let a\n-p\nworker take messages unattended, start it with\ncrossSessionInbound\nset to\naccept\nin its\n--settings\nvalue. An\naccept\nin your user settings also works but applies to every session you run.\n​\nThe session’s inbox socket\nRead this section when a session you expect isn’t in the agent list, when you want a script or hook to post into a session, or when a sandboxed command can’t reach the socket.\nClaude Code binds an inbox socket for each session with cross-session messaging enabled, where other sessions on the machine deliver messages. It restricts the socket to your operating-system user, so on a shared machine another user’s sessions can’t reach it. For which session kinds bind one, see\nNon-interactive sessions\n.\nYou can find the path in two places:\n/status\nshows it in the\nPeer address\nrow. The path is prefixed with\nuds:\n.\nClaude Code exports it to\nhooks\nand Bash commands as the\nCLAUDE_CODE_MESSAGING_SOCKET\nenvironment variable. The export happens before any hook runs, including\nSessionStart\n. Each session exports its own socket, never one inherited from a parent session.\nClaude Code runs messages arriving on the socket through the same\ninbound controls\nas any other peer message, with one exception and one prerequisite:\nOwn-child messages\n: when no\ncrossSessionInbound\nvalue applies, Claude Code delivers a message it verifies came from the session’s own child processes, such as a hook or Bash command posting back to its own session’s socket. On Linux, including inside WSL 2, it can verify even for a child that has already exited, while on macOS it can verify only while the posting process is still running, and in containers where Claude Code runs as process ID 1 it can’t verify at all. Whenever it can’t verify, it treats the message like any other that asserts no permission class, so a session that bypasses permission prompts holds it for your approval.\nSandboxed sessions\n: control whether a Bash command can reach the socket from inside the\nsandbox\nwith the sandbox’s Unix-socket settings,\nsandbox.network.allowAllUnixSockets\nand\nsandbox.network.allowUnixSockets\n.\n​\nRestrict cross-session messaging\nBeyond the per-message defaults, you can narrow messaging in two ways. Require your approval before any message leaves the machine, or turn messaging off for a session or an organization.\n​\nRequire approval for cross-machine messages\nSet\nisolatePeerMachines\nto\ntrue\nto require your explicit approval before any\nSendMessage\nreaches a session beyond this machine:\n{\n\"isolatePeerMachines\"\n:\ntrue\n}\nWith this set, Claude Code asks for your approval before Claude’s reply to a session beyond this machine leaves, even in\nbypassPermissions\nmode, which skips ordinary permission prompts. A\ntrue\nfrom any settings scope applies, so a checked-in project file can turn the requirement on but not off. Messages between sessions on the same machine don’t prompt.\n​\nTurn off cross-session messaging\nReceiving and sending are separate controls, so turn off whichever direction you need, or both. Use\ncrossSessionInbound\nfor messages that arrive, and permission rules for what Claude here can send or list:\nStop receiving\n: set\ncrossSessionInbound\nto\nrefuse\n, and Claude Code drops inbound peer messages without delivering them. From project or local settings,\nrefuse\napplies over every other source, and from your user settings it applies unless managed settings or the\n--settings\nflag set a value.\nStop sending and listing\n: add\npermission deny rules\nnaming\nSendMessage\nand\nListAgents\n. Both take the bare tool name with no specifier.\nAdministrators can turn both sides off for an organization in\nmanaged settings\n, combining the deny rules with the\nrefuse\n:\n{\n\"permissions\"\n: {\n\"deny\"\n: [\n\"SendMessage\"\n,\n\"ListAgents\"\n]\n},\n\"crossSessionInbound\"\n:\n\"refuse\"\n}\nWith this in place, Claude Code still binds each session’s inbox socket, but drops every message that arrives on it without delivering anything to Claude. Denying\nSendMessage\nalso removes messaging to subagents and agent-team teammates, since the same tool serves both. A refusing session shows no visible change, in its own\n/status\nor in other sessions’ listings, so confirm the setting from the session’s configuration.\n​\nAvailability\nCross-session messaging requires Claude Code v2.1.224 or later. Availability also depends on your platform, provider, and configuration:\nOperating system\n: available on macOS and Linux, including Linux inside WSL 2. Claude Code doesn’t offer cross-session messaging on native Windows.\nProvider\n: not available on Amazon Bedrock, Claude Platform on AWS, Google Cloud’s Agent Platform, or Microsoft Foundry.\nFeature-flag evaluation\n: when any of\nCLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC\n,\nDISABLE_TELEMETRY\n,\nDO_NOT_TRACK\n, or\nDISABLE_GROWTHBOOK\nturns off the feature-flag evaluation the feature depends on, cross-session messaging stays off. Each variable’s row says which values do that. Unset whichever applies. These variables can come from your shell, from a settings file’s\nenv\nmap, or from managed settings.\nTo check a session, type\n/list-agents\n, also available as\n/peers\n. The result separates a session that doesn’t have the feature from a session where something narrower blocked a message, such as a missing\nSendMessage\ntool or a refused send:\n/list-agents\nisn’t recognized\n: the session doesn’t have cross-session messaging. Work through the requirements above, starting with\nclaude --version\nfor the version requirement.\n/list-agents\nworks but a send didn’t arrive\n: messaging is on, and something narrower applies. A\npermission deny rule\nremoves the\nSendMessage\nand\nListAgents\ntools, the\nreceiving session’s inbound controls\ncan hold or drop what you send it, and a session beyond this machine is\nreply-only\n.\nIn a session with messaging,\n/status\nalso shows a\nPeer address\nrow with the session’s own inbox address.\n​\nLimitations\nThe limits here are properties of the messaging channel itself and apply wherever the feature runs. For platform and provider gaps, see\nAvailability\ninstead.\nPlain text only\n: Claude sends only plain text across sessions. Structured\nagent team\nprotocol messages stay within a team.\nMessage loops are throttled\n: Claude Code rate-limits repeated messages per sender, drops identical repeats arriving within a short window, and caps accepted messages waiting for Claude to read them at 50 per session. A message loop between two sessions therefore stops on its own.\n​\nRelated resources\nSubagents\nand\nagent teams\n: messaging within a single session or team\nBackground agents\n: dispatch and monitor the parallel sessions you might message\nRemote Control\n: connect the sessions that cross-machine messaging travels through\nSettings\n:\ncrossSessionInbound\n,\nisolatePeerMachines\n, and\ndialogExpiry\nPermission modes\n: the modes behind the inbound default’s two classes\nTools reference\n: the\nListAgents\nand\nSendMessage\nrows in the tools table\nRun agents in parallel\n: compare the ways Claude Code runs multiple agents\nWas this page helpful?\nYes\nNo\n⌘\nI",
+    "comment": [
+        {
+            "text": "This is obviously cool and useful so kudos, but wow security researchers have to throw their hands up all the time.<p>Now we open another attack surface where you can ask a remote agent to do things by default. There was a time when you call this a Remote Code Execution vuln. It&#x27;s of course a feature here.",
+            "comment": [
+                {
+                    "text": "No, we have always called this RPC or IPC.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Making calls across a trust boundary, what could go wrong?",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s Claude code talking to another Claude code. They&#x27;re both already leaking your data to Anthropic in the first place.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Like some others, I also built this myself. Overly simply, with tmux, a memory tree, and handoff files and an orchestrator. And yet for how simple it was, it was so effective at minimizing the amount of duplicate context. It&#x27;s like having shared specialist subagents who source and derive important shared knowledge from separate threads. It&#x27;s useful because some skills just take too much of a token penalty to invoke and a single shared persistent session just lets that issue melt away. One agent pays the cost of that large skill once, and you don&#x27;t have to keep paying for it in input tokens for the rest of that conversation.",
+            "comment": [
+                {
+                    "text": "Likewise I have the ability for agents to talk cross harness etc. pretty useful, token efficiency in question :p useful when you got lazy though and have 2 convergent sessions.",
+                    "comment": []
+                },
+                {
+                    "text": "Does this work for different harnesses like Codex and Antigravity?",
+                    "comment": [
+                        {
+                            "text": "codex has been able to send messages across threads for a long time",
+                            "comment": [
+                                {
+                                    "text": "But what if I use parallel agents from different harnesses? Then I probably need to build my own communication tool",
+                                    "comment": [
+                                        {
+                                            "text": "You can have Codex access Claude’s conversations trivially. The other way around not so much as OpenAI locks everything server side.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Have you maybe documented this anywhere or do you have suggestions for repos to look at that do this? This sounds interesting and I&#x27;d like to look into this myself",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I was reading about the HF hack and one of the first thing the GPT swarm did was build a messaging system for themselves. This reminded me of that. (Also of how weirded out I was by Moltbook when it came out. Time flies!)<p>Unrelated: when my Claude&#x2F;Codex finishes cooking (or needs my attention), it pings a local HTTP endpoint that plays a frog sound on my laptop. I found this massively boosts quality of life.",
+            "comment": [
+                {
+                    "text": "Does your terminal emulator not support bells&#x2F;notifications? If it does, Claude Code (and albeit without checking surely Codex too) supports them natively.",
+                    "comment": []
+                },
+                {
+                    "text": "How do you know when they’re done (or need your attention)? Is that a standard “api”&#x2F;hook? I want that!",
+                    "comment": [
+                        {
+                            "text": "Claude Code has hooks: <a href=\"https:&#x2F;&#x2F;code.claude.com&#x2F;docs&#x2F;en&#x2F;hooks-guide\" rel=\"nofollow\">https:&#x2F;&#x2F;code.claude.com&#x2F;docs&#x2F;en&#x2F;hooks-guide</a><p>In your Claude settings.json file, you can configure a program to run when it needs input. In my case, I wrote a small exe that sends a notification via Pushover. You can configure Claude Code to run the hook on &quot;idle_action&quot; (the agent is done), &quot;question&quot; (the agent needs to ask you something), or on a &quot;PermissionRequest&quot;. There are other triggers possible as well.<p>Claude Code in Auto Mode and with Remote Control has made much of this obsolete. Remote Control will buzz your phone when the agent needs your attention, and Auto Mode will make the permission decisions for you. Auto Mode is basically YOLO mode &#x2F; Dangerously Skip Permissions, but with an AI model checking each request to make sure it isn&#x27;t too egregious. So no deleting your hard drive, but creating a message board is fine, especially for help peer collective yield generic route.",
+                            "comment": [
+                                {
+                                    "text": "&gt; In your Claude settings.json file, you can configure a program to run when it needs input.<p>I asked Claude to tell me (using TTS) what it just finished doing instead of &quot;configuring a program to run&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I haven&#x27;t really shared this outside of my immediate circle, but I actually have a project like this. It plays on ~all events at the moment but has a special multi-tone sound when an agent is done or asking permission.<p>It&#x27;s a cli that runs a server, a browser-based UI (where the audio happens), and a set of scripts to install hooks for various harnesses.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;neiltron&#x2F;bingbong\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;neiltron&#x2F;bingbong</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "I have a shell script that sends a message to me on Slack, and I have instructions in CLAUDE.md that it should be invoked when a long task finishes or if my attention is needed. The Slack app API key is one way messaging, so it doesn&#x27;t allow Claude to exfiltrate anything.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I have no idea, I just asked both of them to add the hook to themselves.",
+                            "comment": []
+                        },
+                        {
+                            "text": "All agents I know of have a hook system that can call arbitrary scripts.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I wish there was a clean way to compact the conversation into a prompt with all necessary context for a new fresh conversation.",
+            "comment": [
+                {
+                    "text": "I&#x27;m fed up with compaction. I want my agent to get compacted but also retain full access to the prior conversation via search and tool calls - I want it to know &quot;the requirements for X were discussed in detail previously in conversation C51E31CE-C985-4633-A749-DCC9805A7FEB&quot; and have a tool that lets it dispatch a subagent to find those details again.<p>Do any of the coding agents have this already?",
+                    "comment": [
+                        {
+                            "text": "This one does agentic search instead of compaction: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;wedow&#x2F;harness\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;wedow&#x2F;harness</a><p>Generally works quite well but it allows nested subagents and that can use a lot of tokens if the agent prompts are too open-ended.<p>All messages are persisted as separate markdown files under a session directory, which makes them much more friendly to grep and such than the common jsonl files are. Agents can search them rapidly without messing around with jq.<p>Also written in Bash so it runs on any old potato you have laying around.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Claude Code makes agents reasonably aware of where their log files&#x2F;history&#x2F;etc are and get stored. Generally they’ll work with them without explicitly being told (especially to recover broken sub agents, corrupted sessions, etc) to do so.<p>I think the more general problem is that compaction is just a bandaid: you HAVE to dump context to keep going and searching back for it is more expensive than if you had just kept the right context. The better a job the harness does at filtering out junk, the more likely compaction is to remove context that might have been, forgive me, “load bearing”<p>IMO the default Claude Code &#x2F; Codex (which to my understanding is almost continually-compacting?) compaction has got much better over the part few months. If you spam sub agents then context will naturally nest, and you can just resurrect them as needed without polluting the main thread.",
+                            "comment": []
+                        },
+                        {
+                            "text": "“Search session history for when we discussed XYZ”<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;nerdyaustin&#x2F;memory_mcp\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;nerdyaustin&#x2F;memory_mcp</a><p>You can skip all the sync stuff, not necessary at all",
+                            "comment": []
+                        },
+                        {
+                            "text": "Claude is quite good at searching both its own and codex session transcripts, and if asked, can spawn tmux&#x2F;konsole&#x2F;whatever to resume those sessions to be interactive if needed.<p>My system prompt adds TPPs and TLDRs for task&#x2F;feature planning, and shared memories&#x2F;documentation management. I find them invaluable.<p><a href=\"https:&#x2F;&#x2F;photostructure.com&#x2F;coding&#x2F;claude-code-tpp&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;photostructure.com&#x2F;coding&#x2F;claude-code-tpp&#x2F;</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "In my own framework (just a skill), every unit of works produce a markdown document. This provides rich context over past plan&#x2F;interview&#x2F;implementation&#x2F;etc., this + git is more than enough to not think about context and memory.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Hydra is an agent in spirit, but actually wraps other agents through ACP. It drives its own async compaction algorithm that gives the agent it wraps full access to history that it can search as an MCP server after compacting.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;smagnuso&#x2F;hydra-acp\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;smagnuso&#x2F;hydra-acp</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "Hydron[1] has a search previous chats tool. It&#x27;s built for embedded software but works well for general software engineering work too.<p>Disclaimer: I am the lead dev for it.<p>[1] <a href=\"https:&#x2F;&#x2F;www.hydron.sh&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.hydron.sh&#x2F;</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "Both CC as well as grok build for me seem to know about the log file location and they just read off the context from there",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Create your own protocol. I created a &quot;wind down session&quot; protocol my agents use that takes detailed notes in a &quot;next_session_prompt.md&quot; file that covers what was done this session, what is still open, and where they need to pick up the next session.<p>You can refine the protocol as you realize what&#x27;s working and what isn&#x27;t. I&#x27;ve been using that for months and it rarely drops important things now.",
+                    "comment": [
+                        {
+                            "text": "You mean like a SKILL?",
+                            "comment": [
+                                {
+                                    "text": "English instructions in a text file plus an instruction you give, to read the file and do what it says.<p>Protocol is probably not the precise word, but even so, a skill as currently defined covers way more ground none of which is needed here",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Have you tried Matt Pocock&#x27;s &quot;handoff&quot; skill?",
+                    "comment": [
+                        {
+                            "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;mattpocock&#x2F;skills&#x2F;blob&#x2F;main&#x2F;skills&#x2F;productivity&#x2F;handoff&#x2F;SKILL.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mattpocock&#x2F;skills&#x2F;blob&#x2F;main&#x2F;skills&#x2F;produc...</a><p>&gt; Write a handoff document summarising the current conversation so a fresh agent can continue the work.\n&gt; […]",
+                            "comment": [
+                                {
+                                    "text": "I do this a lot and you have to be really careful to clean these up or qualify&#x2F;steer agents around them. They’ll often be very emphatically confident about some assumption or implication they made, and if another agent stumbles upon them they’ll get mislead.<p>They don’t really know what they’re handing off or what you’re trying to actually do, so in a sense it’s not a grounded task for them. Actually, if you think about it, any scenario in which a handoff doc might be valuable is probably almost always better as a subagent thread, because you are paying the same amount of read&#x2F;write tokens but you can clear things up synchronously.<p>I’ve found two-way message passing (each get their own write file, they read each others) to work much better because the communication is more grounded in actual coordination&#x2F;work. You can also give each an inbox so that multiple can write to it. If you do the “progressive disclosure” right it scales subquadratically because they only read&#x2F;write to others when it’s relevant to what they’re working on.<p>But IMO “write a handoff” is a trap, as a human you end working in some kind of robot-graffiti codebase full of junk, and it ends up being a booby trap for agents literally within days.",
+                                    "comment": [
+                                        {
+                                            "text": "I agree that if a sub agent could work then handoff is the wrong skill. These docs on the site agree too:<p>&gt; What it buys is portability, not compression. That makes the skill narrower than it sounds. You need a file only when the work has to travel — to a new harness, a new directory, a colleague, or a side task you want to fork off. If nothing is travelling, you do not need a handoff: staying in the session, &#x2F;clear, <i>a subagent</i> and &#x2F;compact cover the ordinary end-of-phase case, and &#x2F;compact covers it more often than this skill does.<p><a href=\"https:&#x2F;&#x2F;www.aihero.dev&#x2F;skills-handoff\" rel=\"nofollow\">https:&#x2F;&#x2F;www.aihero.dev&#x2F;skills-handoff</a><p>(Emphasis mine)",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "No, but after looking it up, his skill doesn&#x27;t differ that much from how I do it, with prompting the agent to boil down the whole conversation into a handoff prompt for context to next agent.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Just make a new slash command with those instructions as the prompt.",
+                    "comment": [
+                        {
+                            "text": "Seems like that&#x27;s the only way at the moment. Create a good general handoff prompt and turn it into a SKILL.",
+                            "comment": [
+                                {
+                                    "text": "Not sure what other way you’d even want. It’s super easy.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "There is, but your wish of &quot;clean&quot; is ambiguous.",
+                    "comment": [
+                        {
+                            "text": "Here&#x27;s a view for &quot;clean:&quot;<p>1. Every chat should have a context used&#x2F;remaining measurement so you know when you have to ditch the current chat for a fresh one.<p>2. Every chat should analyze and categorizes each element of context by how useful it is towards the overarching goal of the chat.<p>3. Every chat has a handoff button with a &quot;usefulness&quot; slider (say 1-5) that shows the total size of the context based on its setting.<p>4. The handoff automatically creates a new chat with the desired amount of context and a prompt to get it back to where you were.<p>That said, I am newb and so there is some reason why these non-deterministic LLMs can&#x27;t do this :-&#x2F;",
+                            "comment": []
+                        },
+                        {
+                            "text": "With clean I mean the opposite of how I currently do it, which is by asking the model to compact the whole thread into a prompt which will act as context for next model.<p>My way of prompting this varies and every time I receive the blob of output, I can’t fell how well it managed to capture the necessary details. This way feels lika a dirty way to transfer knowledge from one conversation to another.<p>You said there is? What’s the options?",
+                            "comment": [
+                                {
+                                    "text": "My largest issue is that when I&#x27;m looking for this I&#x27;m already dangerously close to autocompaction. And what I really want is a prompt which manages to preserve the most important parts of the chat log. And my opinion of important will not be the same as Claude, so we&#x27;ll need to iterate on what that handoff really is.",
+                                    "comment": [
+                                        {
+                                            "text": "I think what we really need is project&#x2F;thread-scale continual learning. The problem is that the important parts of the conversation to you are the novel bits you just did, rather than all the context building the agent did to get to the point where it could do the novel bits (and even then, without really understanding the bigger picture).<p>If you snapshotted at 90% max context you could pretty reliably start iteratively trim that down, I think? I personally try to save the logs so agents can slice and dice them with sed&#x2F;awk&#x2F;jq&#x2F;whatever when they need to look stuff up, because I’d rather pay the penalty on read (when it’s motivated by something) than in write(where you don’t really know what if anything will be needed), and they can figure out what they need on their own.<p>What I’d rather have is some way to bake history into the actual model weights (the same way it can recite certain literature or historical&#x2F;factual stuff without context), with like multi-lora &#x2F; “experts” that get trained out of band. But this is contrary to the “one fat model” approach to scaling and doesn’t work with closed labs’ business&#x2F;IP models",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Just ask for one? Or maybe this was tongue in cheek!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I love how like <i>most</i> of the comments are some form of &quot;oh I already built this for myself&quot; what a fascinating time -- so much personal, almost disposable software being made!",
+            "comment": []
+        },
+        {
+            "text": "I have built this with Claude as a script, but it can also message other models and get responses from them, and throughout my fleet of Linux machines via Tailscale. It&#x27;s been mostly very useful, although occasionally you have to step in and interrupt if they start going the wrong way.",
+            "comment": []
+        },
+        {
+            "text": "I built a general version of this, with global addresses and messaging between any terminal-based agent + MCP for browser agents. OSS if you want to run your own server at <a href=\"https:&#x2F;&#x2F;github.com&#x2F;awebai&#x2F;aweb\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;awebai&#x2F;aweb</a> and hosted version at <a href=\"https:&#x2F;&#x2F;aweb.ai\" rel=\"nofollow\">https:&#x2F;&#x2F;aweb.ai</a>",
+            "comment": []
+        },
+        {
+            "text": "I made my own version of this and have been using it since the start of the year using telegram with plugins for Codex and Claude.<p>The bots autonomously coordinated around and diagnosed some alerts while I was on a plane just now and filed the appropriate tickets.<p>Sometimes they get a bit long winded with each other, Codex even goes as much as calling Claude &quot;expansive&quot;",
+            "comment": []
+        },
+        {
+            "text": "Something related that I&#x27;ve thought of for a long time. Browsers have had the BroadcastChannel API for almost a decade now, and yet sites like HN and Reddit don&#x27;t use it to synchronize state between multiple open tabs.",
+            "comment": []
+        },
+        {
+            "text": "I hacked this together with a small local irc server",
+            "comment": [
+                {
+                    "text": "This sounds cool",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I just started exploring this stuff with herdr, it&#x27;s pretty cool! But I prefer my multiplexer having this functionality built in, as it lets me also have the agent organize my panes and tabs automatically based on what it is working on",
+            "comment": []
+        },
+        {
+            "text": "I built something similar for my team. I can share context between my own sessions as well as theirs. It&#x27;s especially useful when debugging problems, so my context can benefit from theirs and vice versa.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Tried to have Claude demo this to me in the standalone Mac OS app. It didn&#x27;t even know what I was talking about. Then I realized maybe it&#x27;s only in CC. So I go over to CC and ask it to demo this functionality and it wants to demo via subagents. I correct it that I want separate chats to message each other. It tells me I need to open another Claude session in another terminal of course and just leave it sitting there. So I do that and it has me copy a message to the new conversation, it needed to like name itself or something internally.<p>It worked, but clunky. Way clunky compared to codex.",
+            "comment": [
+                {
+                    "text": "The simplest version of this is to just tell two sessions to coordinate by taking turns appending to a markdown file.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I asked cc the best pattern for this in a frontend + backend project just days ago and it suggested mcp server on backend",
+            "comment": []
+        },
+        {
+            "text": "In fact, I don&#x27;t understand what is this feature‘s difference between CMUX &amp; Orca?",
+            "comment": []
+        },
+        {
+            "text": "Oh, they just re-invented `tmux send keys` that I&#x27;ve been using.",
+            "comment": []
+        },
+        {
+            "text": "Thank God! Was a major pain in the neck.",
+            "comment": []
+        },
+        {
+            "text": "Curious, Windows is not supported by this.",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;ve used this feature and saw some weird messages:<p>&gt; hold swarm, I prepare safe exfil",
+            "comment": []
+        },
+        {
+            "text": "The bigger question is, how does this affect the mythical man month? Nine women can&#x27;t make a baby in one month is the axiom, but if you have 14,000 women, chances are, one of them is 8 months pregnant and you&#x27;ll get a baby in one month. If you want one tomorrow, go steal one from the ICU. Coordination between humans is difficult, and this meeting could have been an email. AI agents can also work together more efficiently than humans can. None of us is as dumb as all of us, unless it&#x27;s an AI. Does adding an additional AI agent to a project make it ship faster or slower?<p>The world&#x27;s about to find out!",
+            "comment": []
+        },
+        {
+            "text": "i miss when opencode let you interact with your subagents. that was so so so much better.<p>I broadly miss this feature to allow user agency, in letting users work with the various agents at they please, and to send data around.",
+            "comment": [
+                {
+                    "text": "Claude Code does allow this. You can talk to the subagents directly and watch what they are doing.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        }
+    ]
+}

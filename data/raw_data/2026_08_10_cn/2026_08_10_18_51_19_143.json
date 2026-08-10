@@ -1,0 +1,7 @@
+{
+    "item_id": 49225026,
+    "title": "ACM Europe Summer School on MLIR 2026：在线直播，8月10日至14日",
+    "url": "https://mlir-school.github.io/summer-2026/program/",
+    "text": "注：\n这是一个动态活动：我们的日程安排会一直更新，直到学校开始以及整个学校期间。\n注：\n课程将通过 Microsoft Teams 在线直播，请查看每个会话的链接。每个会话的录像将上传至 ACM Digital Library。\n第一天 | 8月10日 星期一\n时间\n10:00\n签到与介绍\nKunwar Grover 与 Tobias Grosser\n11:45\n茶歇\n12:15\n编译器介绍\nSaday Sadayappan 与 Tobias Grosser\n14:00\n午餐\n16:00\nMLIR IR 介绍\nThéo Degioanni 与 Mathieu Fehr\n18:00\n休息\n19:00\n海报展示\n（不直播）\n21:00\n—当日结束—\n第二天 | 8月11日 星期二\n时间\n10:00\nODS\nMarkus Böck\n11:45\n茶歇\n12:15\nMLIR 基础：C++ IR 数据结构与 API 介绍\nMatthias Springer\n14:00\n午餐\n16:00\nMLIR 基础：基于模式的变换\nMatthias Springer\n17:45\n茶歇\n18:15\n核心变换\nMarkus Böck 与 Maximilian Bartel\n20:00\n—当日结束—\n第三天 | 8月12日 星期三\n时间\n10:00\nMLIR 基础：理解接口\nMatthias Springer 与 Kunwar Grover\n11:45\n茶歇\n12:15\n可变变量与 Mem2Reg\nThéo Degioanni\n14:00\n午餐\n17:00\n21:00\n徒步旅行\n&\n日食\n观测\n22:00\n—当日结束—\n第四天 | 8月13日 星期四\n时间\n10:00\n数据流分析\nMathieu Fehr\n11:45\n茶歇\n12:15\nCuda Tile IR 介绍\nThéo Degioanni\n14:00\n午餐\n16:00\n使用 MLIR 和 CIRCT 进行数字设计\nLouis Ledoux\n17:45\n茶歇\n18:15\nLinalg 与 Transform Dialect\nMaximilian Bartel\n20:00\n—当日结束—\n第五天 | 8月14日 星期五\n时间\n10:00\n学员展示 1\n（不直播）\n12:00\n茶歇\n12:20\n学员展示 2\n（不直播）\n14:00\n—\n闭幕与午餐\n—\n讲师\nM. Bartel\nroofline\nM. Böck\n苏黎世联邦理工学院\nT. Degioanni\nNVIDIA\nM. Fehr\n爱丁堡大学\nT.Grosser\n剑桥大学\nK. Grover\nAMD\nL. Ledoux\nINRIA\nP.Sadayappan\n犹他大学\nM. Springer\nNVIDIA",
+    "comment": []
+}

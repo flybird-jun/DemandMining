@@ -1,0 +1,399 @@
+{
+    "item_id": 49234393,
+    "title": "Plug-In Solar Panels Starting to Sprout in U.S. Backyards",
+    "url": "https://www.nytimes.com/2026/07/31/business/energy-environment/plug-in-balcony-solar.html",
+    "text": "",
+    "comment": [
+        {
+            "text": "The thing we should be incentivizing people to use here are batteries, in the exact same configuration. We do not in many places, need more solar power generation, but we need devices that slurp down power at 2pm and dump it out in the three hours after sundown. Utilities should be paying anyone who dumps power to the grid at peak post-sundown demand hours, so that it is a no-brainer to install such a thing.",
+            "comment": [
+                {
+                    "text": "A suggestion I liked was to time-shift water heaters as a thermal battery. Water heaters are a significant sink (~20%) of household energy. They are already installed and well insulated, you just want to over-heat them during cheap noon solar to off-set the heat losses over the day.",
+                    "comment": [
+                        {
+                            "text": "this seems like it makes sense. how do you keep the dispensed water from being too hot? is there such a mechanism?",
+                            "comment": [
+                                {
+                                    "text": "When we bought our house we had a heat pump water heater installed. The nominal tank water temperature is 80°C, and it mixes it to the desired temperature on output. It can also circulate water in a heat exchanger to keep your bath water from going luke-warm while you&#x27;re in the bath.<p>We don&#x27;t have solar but we do have a solar energy plan from our power company, so power during solar hours is charged at 0.5x rate in trade for the solar during the duck curve hours being 2x. So we have the hot water heater set to only heat during the solar hours and A&#x2F;C set to shut off during duck curve hours.<p>This has resulted in our electricity costs for our house being lower than the combined electricity+gas costs for the apartment we lived in before (which was much smaller).",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "There are mixing valves which combine the too-hot water with cold tap water to produce hot water at a safe temperature.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Mixing valve.  Lets me use my water heater like it&#x27;s 20 gallons larger than it actually is.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; It is increasingly common practice around the world to regulate the storage water temperature to above 60 °C (140 °F), and to circulate or distribute water at a temperature less than 50 °C (122 °F). Water above these temperatures can cause scald injuries. Many countries, states, or municipalities now require that the temperature of all bath water in newly built and extensively refurbished domestic properties be controlled to a maximum of 48 °C (118 °F). Installing thermostatic mixing valves can ensure that water is delivered at the required temperature, thereby reducing the risk of scalding accidents; it also reduces hot water consumption from a supply that is maintained at a higher temperature.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thermostatic_mixing_valve\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thermostatic_mixing_valve</a><p>I see these a lot in commercial domestic hot water systems, a lot of them use steam or boiler loop water to heat the domestic hot water.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;m getting a battery soon so I can get paid £1&#x2F;kWh to dump power at specific times with axle energy <a href=\"https:&#x2F;&#x2F;vpp.axle.energy&#x2F;landing\" rel=\"nofollow\">https:&#x2F;&#x2F;vpp.axle.energy&#x2F;landing</a>",
+                    "comment": [
+                        {
+                            "text": "Don&#x27;t expect that to last. £1 per kWh = £1000 per MWh. Even when things went <i>crazy</i> as sanctions kicked in and Russia were attempting Blitzkrieg in Ukraine the wholesale prices never hit £1000 per MWh.<p>They say £1&#x2F;kWh is a Beta price, that makes sense as a way to burn investor money to get people interested. Their real price is TBD. Would you take 25p per kWh with a £5 per month guarantee ? That could be at least in the ballpark of working.",
+                            "comment": [
+                                {
+                                    "text": "Well it&#x27;s just a bonus on top, I&#x27;m not counting on it. Storing solar and backup is the primary reason for the battery. On June 24 at 19:00, agile octopus prices were about £0.85&#x2F;kWh, there isn&#x27;t a single simple price for electricity.",
+                                    "comment": [
+                                        {
+                                            "text": "It&#x27;s true that there isn&#x27;t a &quot;single simple price&quot; but the only way you&#x27;re getting more for your power than a wholesaler can sell it for is that they&#x27;re paying far more than it&#x27;s worth. Stability services aren&#x27;t free, but we&#x27;re not talking about a 10% premium here, closer to 10x",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Be careful with these kind of long term sell back agreements.<p>In the USA lots of early adopters of solar did so under net metering agreements where excess electricity is sold back at full price.  After a number of years it was costing the utility companies too much money. So they updated the terms such that residents with solar buy electricity at retail prices (~$0.25) but sell it back at wholesale (~$0.04).",
+                            "comment": [
+                                {
+                                    "text": "Yes, I think the key thing here to to not guarantee that pricing like they did in California over decades. Yes, the benefit will eventually be reduced. But that is considered success is it not?",
+                                    "comment": [
+                                        {
+                                            "text": "&gt;But that is considered success is it not?<p>Not if you took out a $50k loan for an early gen solar system and it now only saves $30 a month.",
+                                            "comment": [
+                                                {
+                                                    "text": "well, California currently is guaranteeing that benefit to nem 1 people for twenty years. I would much rather penalize those people than make everyone else pay a subsidy to them, as we are currently doing. They should bare the risk of their investment and get paid market rate.<p>My issue today is .. I cannot be paid market rate for giving back to the grid, even in hours when California needs the power.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; batteries<p>Not exclusively. A few power companies (like SRP) innovated here with TOU plans that have variable costs throughout the day. You can save huge amounts of monthly spend by moving energy intensive work to off-peak hours and by “priming” things ahead of peak hours, like over-cooling your house ahead of the peak window.<p>The most costly part of an infrastructure build out is supporting peak-of-peak - that capacity exists year round to service the demand generated by peak mid-day usage during a heatwave in July.<p>If you can “lop off” that peak - it dramatically reduces the infra build out cost.<p>Peak-of-peak tends to correspond with sunny days: mid-day in summer. I could see battery-less solar being a useful tool there.",
+                    "comment": []
+                },
+                {
+                    "text": "related tangent: install costs of batteries and solar in California are insane. I recently had battery and solar installed, and labor and permitting were 60% the cost of the system. Systems without either of those markedly bring down the cost.",
+                    "comment": []
+                },
+                {
+                    "text": "At least in the US, no, for one simple reason: grids in the US rarely to never have an excess amount of renewable generation capacity.<p>In my area natural gas is a consistent 40-60% of generated power, with solar rarely reaching more than about 30-35% at high noon in the summer.<p>Right now (as in at this very minute, high noon) in CA ~70% of the power being generated is renewable. That&#x27;s 30% that could be solar, and isn&#x27;t.<p>When there&#x27;s excess renewable generation capacity (or about to be), sure, let&#x27;s talk about installations for storing it.<p>In the meantime utilities are deploying battery systems for virtual grid inertia, to avoid having to use &quot;peaker&quot; plants, reliability when transmission lines go down, and for transmission line maintenance.",
+                    "comment": [
+                        {
+                            "text": "That might have to do with existing deal structures to maintain a non-renewable base load. Something like, if cloud cover&#x2F;wind suddenly changes, we want to ensure there is already X% of natural gas running so there is a less sudden surge. There is a lot behind the scenes planning to try and ensure grid robustness.<p>California is certainly curtailing a lot of energy. EIA report[0] said 3.4 TWh in 2024, which was a 29% increase over 2023. If I am reading this[1] chart correctly, the 2024 California demand was ~275TWh.<p>CASIO also has pages dedicated to curtailment with much of the data available[2].<p>[0] <a href=\"https:&#x2F;&#x2F;www.eia.gov&#x2F;todayinenergy&#x2F;detail.php?id=65364\" rel=\"nofollow\">https:&#x2F;&#x2F;www.eia.gov&#x2F;todayinenergy&#x2F;detail.php?id=65364</a><p>[1] PDF <a href=\"https:&#x2F;&#x2F;www.energy.ca.gov&#x2F;sites&#x2F;default&#x2F;files&#x2F;2024-11&#x2F;2024_California_Energy_Demand_Preliminary_Annual_Consumption_and_Sales_Forecast_Results_ada.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.energy.ca.gov&#x2F;sites&#x2F;default&#x2F;files&#x2F;2024-11&#x2F;2024_C...</a><p>[2] <a href=\"https:&#x2F;&#x2F;www.caiso.com&#x2F;about&#x2F;our-business&#x2F;managing-the-evolving-grid\" rel=\"nofollow\">https:&#x2F;&#x2F;www.caiso.com&#x2F;about&#x2F;our-business&#x2F;managing-the-evolvi...</a>",
+                            "comment": [
+                                {
+                                    "text": "Standby generation -- &quot;spinning reserve&quot; -- doesn&#x27;t count as generated energy, because it&#x27;s not. Until you&#x27;re at that point you still can reduce natural gas consumption with more renewable.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "California has huge amounts of excess renewable generation nearly every day, especially in spring and fall. Last April the grid operator curtailed 1.47 million MW&#x2F;hrs of renewables, or about 2 GW per day. That&#x27;s excess power the grid did not accept due to no demand. (source: <a href=\"https:&#x2F;&#x2F;www.caiso.com&#x2F;documents&#x2F;key-statistics-jul-2026.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.caiso.com&#x2F;documents&#x2F;key-statistics-jul-2026.pdf</a>)<p>In my mind the ideal solution is in addition to daily BESS time-shifting is seasonal time-shifting: long term storage of April excess for use in July.",
+                            "comment": [
+                                {
+                                    "text": "I think you had me until you mentioned long term storage. How do you store significant amounts of energy across seasons? I&#x27;m just not aware of anything other than pumped hydro power that has anywhere near the cap as capacity to do such a thing.",
+                                    "comment": [
+                                        {
+                                            "text": "Green hydrogen. Generate hydrogen from water during excess times and convert back later on.",
+                                            "comment": [
+                                                {
+                                                    "text": "Is is actively done at scale? I suspect not given the amounts of batteries being installed.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "No because there’s lower hanging fruit. We’re still burning dinosaurs on windy days and in summer, seasonal storage is a long way down the list.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Generators don&#x27;t ramp up&#x2F;down immediately. Especially when peak power usage is 4-5pm, people getting off work, but also closer to sunset. That&#x27;s a lot of power that needs to be generated immediately for stability.<p>More solar (without batteries) makes that worse.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Duck_curve\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Duck_curve</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;07&#x2F;31&#x2F;business&#x2F;energy-environment&#x2F;plug-in-balcony-solar.html?unlocked_article_code=1.4FA.ACo7.zK5plO5Qzn-O&amp;smid=url-share\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;07&#x2F;31&#x2F;business&#x2F;energy-environme...</a>",
+            "comment": []
+        },
+        {
+            "text": "This is going to be made legal in the UK on the 27th August. Max 800w inspired by Germany. I&#x27;ll definitely get some panels and see how they go.",
+            "comment": [
+                {
+                    "text": "To be precise (Germany): 800W inverter, 2kWp solar panels (maximum 4 panels). This allows you to get the 800W during long periods of daylight (e.g. east&#x2F;west configuration). You only need to add the installation to a public database and plug in the inverter.\nBefore it was more complex (special plug needed, only 600W, need allowance from grid operator) and still we have ~1.5 GW installed plug-in solar plants. It&#x27;s almost always a no-brainer, RoI is typically 3-4 years while the lifespan is 20 years.<p>Edit: My state had a subsidy of 300€ when I bought mine, so the RoI was instant ;-)",
+                    "comment": []
+                },
+                {
+                    "text": "They&#x27;re a no brainer especially if Lidl can nock them out for around £200 in the centre aisle.<p>Unfortunately for me my back garden has too much shade for panels and I don&#x27;t think I could get away with them in the front.<p>So that leaves a roof top install and I think once you have scaffold that you might as well have a traditional install.",
+                    "comment": [
+                        {
+                            "text": "Yeah I&#x27;m going to wait for lidl to do them, that&#x27;s the plan anyway. Anything you can buy now is ~£600 (ecoflow is the brand I&#x27;ve seen). Hoping some others take the plunge first to provide some guidance.<p>Wish plugin batteries were part of it.",
+                            "comment": [
+                                {
+                                    "text": "I think plugin batteries are coming too.<p>Right now (well 27th August) you can plug your inverter into a battery but you can&#x27;t connect the battery to a ring main you have to connect devices directly to it.<p>That is under assessment though so there&#x27;s a good chance they could copy the way Germany does it, just like they&#x27;re doing with the panels.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I have a two panel system, and the panels are about 430 watts each. Given the current ToD rates for electric, it will take years to pay back.<p>Microinverter: 400\nPanels (used): 250 for both\nCables: 50<p>I also picked up two LiFePo4 batteries and two Kasa smart plugs and time shifted my computing infrastructure&#x27;s electricity usage. That made much more of a difference in my bill, since a few hundred watts moved to .09&#x2F;kwh. If the bms was smarter i could charge the batteries with solar, but alas i can&#x27;t cap the recharge current.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Which are the high quality chinese brands of plug-in panels?",
+            "comment": [
+                {
+                    "text": "I&#x27;ve seen Ecoflow mentioned on YouTube but I don&#x27;t know how reliable that is.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The biggest obstacle to solar in the US: utility companies.<p>Ask anyone who has had a system installed. Your system can be totally compliant with national and state electrical code, installed by a competent installer using staff who are licensed electricians, get a stamp of approval from your own&#x27;s inspectors - and the utility will refuse to connect it and insist you meet an <i>additional</i> set of their own conditions.<p>And there&#x27;s nothing you can do about it. No appeals, no review process, nothing.<p>It&#x27;s not even consistent, with utilities seeming to just obstruct for the sake of obstructing. Over and over I&#x27;ve of systems going in, the utility comes out (eventually) to inspect, refuses to connect. They&#x27;re called back out, nothing has changed, and the system gets approved.<p>This is legislatures getting tired of all that power company bullshit, and bypassing them. As balcony solar rules hit state legislatures, expect some really absurd scare campaigns by power companies, and lots of lobbying.<p>Power companies see every solar panel they don&#x27;t own as a threat to the profits they make on their fossil fuel power plants.",
+            "comment": [
+                {
+                    "text": "&gt; Ask anyone who has had a system installed. Your system can be totally compliant with national and state electrical code, installed by a competent installer using staff who are licensed electricians, get a stamp of approval from your own&#x27;s inspectors - and the utility will refuse to connect it and insist you meet an additional set of their own conditions.<p>Well, I am someone who had a system installed… I have a 14000 KwH per year system, and two 13 KwH batteries. It did take a while to get it inspected, which was annoying, although I was able to use it while I waited (I just couldn’t sent power to the power company until after), but they approved it the first time without any additional requirements.<p>What makes you so sure everyone has the experience you are talking about?",
+                    "comment": [
+                        {
+                            "text": "Same. I self-installed a 5.5kw solar system, fully permitted, in the Denver metro. The utility company (Xcel) had an easy online portal for submitting plans, a quick back and forth on system labeling - they wanted placards instead of stickers.<p>That took all of two weeks. To get their permission to operate, including having the city inspect my work and send the all clear to them.",
+                            "comment": [
+                                {
+                                    "text": "Did you work with a company for plans and permitting? Been thinking about doing this and I&#x27;m also in CO",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "It should be noted that if you are willing to forego selling excess solar power back to the grid you can bypass the need for inspection or approval from your utility.<p>Put some (or all) of your circuits on a transfer switch or generator interlock and connect your solar system to that.<p>Then legally your system is the same as a backup generator install. It should have permitting and inspection requirements similar to those of adding a circuit. That will just a city permit and a city inspection.",
+                    "comment": []
+                },
+                {
+                    "text": "A single counter example: In East Bay CA. I designed and built my 9kw solar roof installation myself. No electricians at all. The process was very easy and working with my city and power company was simple, with no blockers at all. 4 years running. On a yearly basis, we make over double what we use. It boggles my mind how solar isn&#x27;t on every house in the country.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; Ask anyone who has had a system installed.<p>This didn&#x27;t happen to me or anyone else I know with rooftop solar in multiple states, and I&#x27;ve never heard of it. What citations do you have?",
+                    "comment": []
+                },
+                {
+                    "text": "You could do what I did and set up a zero net export system and just not tell the utility.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Anyone have good suggestions for stands for 2-4 panels?",
+            "comment": [
+                {
+                    "text": "One thing I&#x27;ve read is that if you can dual sided panels mounted on a frame over white gravel and really boost secondary feed as much as 20 to 30%.<p>If they&#x27;re mounted on a roof then obviously you can&#x27;t benefit from that so it would be cheaper to go with single sided panels.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Let&#x27;s just point out that it isn&#x27;t about the line workers, it is about raising prices on consumers.<p>They&#x27;ll replace the line worker at the drop of a hat, and fight tooth and nail to grow profits, that&#x27;s just how corporations work.",
+            "comment": []
+        },
+        {
+            "text": "This is in my opinion a bad solution to the problem of expensive energy or renewable transition. Having individuals start managing their power via plugin solar and plugin batteries creates a gap between the people who can afford it and those who cant. The people who cant afford it end up paying more for electricity.<p>A better solution is to do this on a local or federal government level and build the required amount of power.",
+            "comment": [
+                {
+                    "text": "Energy is expensive due because demand exceeds supply. Individuals generating their own energy are increasing supply.<p>This is different from net metering at retail rates, which arguably does move costs from richer ratepayers to poorer ones.",
+                    "comment": [
+                        {
+                            "text": "The grid is made up of many different energy generating parts. Some are cheap to gen energy like solar others are expensive but consistent like gas. Utiliy companies sell the power to cover the costs of maintaining all these core parts of the grid. Personal solar decreases revenue because you have people generating energy and either using it or selling it back to the grid this is money that is taken away from grid maintenance. But when there is a low amount of solar they will all want to draw from the grid.<p>This puts extra burden on government&#x2F;poor electricity buyers who cant afford solar to now cover the cost of the grid.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Except California where it is expensive due to pg&amp;e and corruption.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I dont understand it. If most grid capacity is already installed, the people who don&#x27;t build their own little island with solar and batteries end up being shrinking demand against a pool of fixed supply. Meaning their bills probably decrease.<p>There is the hiccup of universal distribution which needs regular maintenance, and is separate from electrical supply. But if this is remediated by charging solar owners base fees&#x2F;connection fees, or if grid maintenance is only minority portion of electric utility bills (in the US it&#x27;s about 40% with electricity production being 60%), the direction should still be poorer people proportionally benefitting.",
+                    "comment": [
+                        {
+                            "text": "The power capacity is already built out. They shrink the demand(and revenue) of that built out capacity. But then when renewable power is bad they pop back onto the grid to spike demand.<p>The get to enjoy the best of all worlds free energy when its good and the safety of the grid while the grid gets the worst of all worlds a non paying household that will spike demand at the worst time.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "You basically kill any momentum of that happening <i>in any reasonable timeframe</i> the minute you said government.<p>In Australia there’s a ridiculous amount of household solar &amp; now battery being installed. Despite all the attempts by companies&#x2F;governments to do something, they just keep getting in the way of themselves.<p>I’m glad the option exists for people to go their own, that of course puts the bar at the individuals finances.",
+                    "comment": []
+                },
+                {
+                    "text": "Plugin solar is really cheap though.  It&#x27;s possible the price of an 800W kit drops to $200.  That&#x27;s really not a lot for something that could pay for itself in a year and keep saving you money for years to come.<p>Then there&#x27;s the prospect of the price dropping even lower in the next few years.  Imagine 800w kits for $100.  How can you ignore something like that?",
+                    "comment": []
+                },
+                {
+                    "text": "If demand decreases then that can cause energy to become cheaper.",
+                    "comment": [
+                        {
+                            "text": "if demand drops to 0 you still need to pay money to run a power grid and the energy gen capacity.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "How would this make it more expensive for people who can&#x27;t?",
+                    "comment": [
+                        {
+                            "text": "Aah.<p>Certainly over here in UK and Europe most people are using solar to reduce their usage of the grid but they&#x27;re nowhere near going self-reliant, so they&#x27;re still using the grid (and paying towards it).",
+                            "comment": []
+                        },
+                        {
+                            "text": "Because distribution prices are spread throughout the users. This is the case for policies that allow the rich to be completely off grid which is not the case here in the US (most cap off around 1500W).",
+                            "comment": [
+                                {
+                                    "text": "Aah.\nCertainly over here in UK and Europe most people are using solar to reduce their usage of the grid but they&#x27;re nowhere near going self-reliant, so they&#x27;re still using the grid (and paying towards it).",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This is absolutely insane. This is the most inefficient way imaginable to deploy solar power.<p>We could deploy 100x the capacity $&#x2F;Wh with utility-scale farms. Unfortunately we are just completely failing on basic coordination problems like this in the west, every man for himself.",
+            "comment": [
+                {
+                    "text": "It is inefficient in the grand scheme of things yes. But it is very efficient on the level of the individual home owner, especially if they do not own the building so cannot install solar. It is a good way to cheaply reduce the cost of electricity.<p>Yes, installing the solar power globally, and getting a globally connected grid would be more efficient in terms of solar panels&#x2F;kW(h). But alas, that also requires a lot more infrastructure.<p>In the mean time this can reduce the energy bill for many people. Especially, if tied to a battery. It is not intended to provide independence, for that you need a lot more capacity.",
+                    "comment": [
+                        {
+                            "text": "These people are already connected to a grid. We already have the infrastructure.",
+                            "comment": [
+                                {
+                                    "text": "AFAICT, the Continental US does not have a fully connected grid. This allows electricity providers to charge wildly different rates depending on the state&#x2F;region. It also requires each net to individually ensure capacity and uptime.<p>Having a connected grid is a requirement for being able to transfer energy from places with significant amount of renewable energy (solar, wind, hydro) to others. Even if this comes with large losses in transfer it is still a net positive. Especially if you factor in the resulting stability.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "People buying panels with their own money doesn&#x27;t take away dollars from utility solar.",
+                    "comment": [
+                        {
+                            "text": "It absolutely does. Money (or what it represents) is finite.",
+                            "comment": [
+                                {
+                                    "text": "Does $1 on home solar take away $1 from utility solar? Probably not. Does it take away more than $0.00? Definitely.<p>Who knows if it takes away an amount that actually matters - however in the short term at least it absolutely makes things better for the individual installing them, which is good.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Nothing about this prevents utility solar",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "There was a carport fire in my building back in the 90&#x27;s. The firefighters got all set up to turn their hoses on it but did not actually start using water to fight the fire until the utility guy from the city arrived to de-energize the supply from a nearby vault.<p>How does that safety protocol work when the electrical connections and supplies are distributed around the house and may be inaccessible due to fire?",
+            "comment": [
+                {
+                    "text": "In Germany, where this kind of plug-in solar panels is very common (1.5 GW installed power) it is mandatory that the inverter powers itself down as soon as the grid is offline&#x2F;disconnected. It has to be so fast that you can savely touch the plug after unplugging it.\nI guess it&#x27;s standard everywhere.",
+                    "comment": [
+                        {
+                            "text": "Actually the rule is that your solar system must stop feeding power to the utility if the utility is down. You are allowed to run in isolated mode if your system supports that. Yes, even in Germany.",
+                            "comment": [
+                                {
+                                    "text": "Every way I can think it through, isolated mode means your house is disconnected from the utility when you lose power, which requires more equipment than can be contained in a plug in solar panel.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Thanks for the answer instead of a downvote.",
+                            "comment": [
+                                {
+                                    "text": "The ones I’ve seen tested cut off in half a cycle, even with multiple ones on the same circuit.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "<i>companies that sell plug-in systems argue that safety risks are minimal or nonexistent. Mr. Scherer of Craftstrom said his company’s systems would not shock electrical workers because they shut off automatically within one second of a power disruption or grid outage.</i><p><i>Mr. Boyce of UL Solutions said his company would certify panels only if they did not pose a risk to consumers or utility workers.\n</i>",
+                    "comment": []
+                },
+                {
+                    "text": "I imagine the solar panel will detect when the circuit it is plugged in to is de-energised and stop supplying supplemental power to it.",
+                    "comment": [
+                        {
+                            "text": "This is exactly how our rooftop solar works. The inverter only supplies ac power if it can sync to the grid frequency meaning that the system disconnects without a live grid connection. Even if I had a battery, this would still be a requirement under local regulations.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Maybe the fact that these panels are legal around the world and soon will be legal in a number of US states should be a sign to you that this is not a relevant concern.",
+                    "comment": []
+                },
+                {
+                    "text": "The device looks for an existing signal from the grid, and if it doesn&#x27;t find it, it stops feeding power. It even waits for 3-5 minutes before trying again plus some random jitter to avoid thundering herd. It&#x27;s been a standard in Europe for a while and now finally in the US. This of course depends on the utility and state as not all of them have adopted it but it&#x27;s quickly becoming the standard everywhere.<p>IEEE 1547 (interconnection behavior), UL 1741 (inverter product safety), UL 3700 (plug-in solar). (also there are newer revisions you need of some standards like UL 1741)",
+                    "comment": [
+                        {
+                            "text": "Also, utility line workers always treat everything as live until they isolate it and confirm it’s not live (or do the work live in some cases).",
+                            "comment": [
+                                {
+                                    "text": "I once chatted with some line workers working nearby, and I asked them what they did about residential solar. They said they didn’t particularly care about anti-islanding: if they needed to, they would deliberately short all the customer wires to ground, and if anything hadn’t turned off, then breakers would trip.",
+                                    "comment": [
+                                        {
+                                            "text": "They even do that to large transmission lines. First shutdown&#x2F;isolate, then connect to ground or short circuit. If anyone then accidentally turns something back on it will fail immediately.<p>A few years ago a transmission line in the Netherlands was energized while it shouldn&#x27;t be, during maintenance work, which resulted in the whole line starting to smoke, sag and spark: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;nyjCrP38ICc\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;nyjCrP38ICc</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Balcony_solar_power\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Balcony_solar_power</a><p><pre><code>  In the United States, Underwriters Laboratories developed the UL 3700 standard specifically for plug-in solar devices, establishing safety specifications for microinverters and connection systems used in these applications.[2] UL-certified plug-in inverters are designed to automatically shut down during grid outages, preventing backfeed that could endanger electrical workers.[7]\n</code></pre>\nSo that is the standard failure mode, but do <i>customers</i> understand how it works?<p>If I had a balcony solar panel, I&#x27;d definitely expect it to be providing <i>backup power</i> when we need it the most. I&#x27;d expect it to charge a storage battery, not backfeed into the grid.<p>Surface area means a lot for solar panels. An EV with a solar panel on top is laughable. I own a solar backpack that couldn&#x27;t charge its power bank within 3 weeks of daily full sun. A &quot;balcony solar panel&quot; may not keep your smartphone charged.",
+                            "comment": [
+                                {
+                                    "text": "Consumers in Germany generally understand that this is a cost-savings device, not a backup supply of electricity. You tell your neighbors and friends to get it because of the energy bill savings.<p>They are not as weak as the toy panels you are describing, but they are regulated to 800W max anyways.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "The stated purpose for balcony solar is to reduce your power bill. Nowhere does it state it&#x27;s for backup power. And whether it helps at all depends entirely on your own situation. <i>If</i> it turns out that you can generate, say, 420w for 8 hours, that&#x27;s 3.3kW, which is a decent amount of power, probably 1&#x2F;4 to 1&#x2F;8 the total draw of many homes. That means 1&#x2F;4 to 1&#x2F;8 off your energy bill once it pays for the solar panel.<p>If you want to convert a solar panel into backup energy, there are many ways to do that, but no solar panel+microinverter are safe to just plug into your home. Whether it&#x27;s a transfer switch, a &quot;solar generator&quot;, or a grid-forming microinverter system, they all require you to be physically disconnected from the grid to continue generating power, or to have things plugged into an explicit &quot;backup load&quot; circuit which doesn&#x27;t come from the grid.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

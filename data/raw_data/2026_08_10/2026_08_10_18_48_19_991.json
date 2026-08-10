@@ -1,0 +1,183 @@
+{
+    "item_id": 49203105,
+    "title": "Welcoming the Nepalese Government to Have I Been Pwned",
+    "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
+    "text": "",
+    "comment": [
+        {
+            "text": "This is good news considering the current state of government run IT services in Nepal (that the page to schedule a passport renewal appointment requires you change your local timezone or override TZ to Asia&#x2F;Kathmandu should tell you the state of some of these services).<p>In having to interact with Nepali government websites I&#x27;ve noticed things like endpoints not even doing basic input sanitization, letting your run arbitrary queries on biometric data. Asking around the tech industry on how to report this it seems like this is a common occurrence. Someone even found a vulnerability that was apparently purposefully unpatched to most likely aid in corruption.",
+            "comment": [
+                {
+                    "text": "That&#x27;s the case for most countries in Asia and Africa, from my travel experience. I would spot vulnerabilities that leak extremely sensitive data all the time, just by using the services normally and legally. You immediately see that the verification is broken without even having to investigate. I don&#x27;t investigate or report them, as it might lead to problems.",
+                    "comment": []
+                },
+                {
+                    "text": "One of the good things about these attacks is that it publicizes failings and gives data to good actors inside the government to drive reform.  Surely other operators (Intel services of China, India, Pakistan, etc...; criminal syndicates) have been inside these systems for years so it&#x27;s nice for the cybersecurity agency to have tools to make it clear where they&#x27;re exposed.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m surprised they can get past the CF captcha, I still can&#x27;t. Ever since the beginning: <a href=\"https:&#x2F;&#x2F;imgur.com&#x2F;a&#x2F;AzNSreV\" rel=\"nofollow\">https:&#x2F;&#x2F;imgur.com&#x2F;a&#x2F;AzNSreV</a>",
+            "comment": [
+                {
+                    "text": "It provides me relief that I am not the only one suffering from Clownfair bot protection running amok.\nCondolences to you.",
+                    "comment": [
+                        {
+                            "text": "I moved my code off Cloudflare just because I got frustrated on other people&#x27;s websites. Being the change I want to see, I guess?",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;ve started email the customer support of pages that have overzealous CF settings saying that it&#x27;s a pain and that if they want to keep me as a customer they need to fix it.<p>Most give a canned response of &quot;we can&#x27;t do anything&quot;  ̄\\_(ツ)_&#x2F; ̄ but some small sites do something. GitLab has the most annoying CF bouncer and I moved my company off them once I got the we can&#x27;t do anything about it response.",
+                    "comment": [
+                        {
+                            "text": "Humble quite frequently locks me out with theirs and all support ever does is “have you updated your browser and restarted your router?” - it’s clear the agent has no idea what a cloudflare is and it’s not in their list of acceptable escalation reasons",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "The secret is to never click on the check box. Click anywhere else. \nI haven&#x27;t been stuck at the captcha in ages due to that.",
+                    "comment": [
+                        {
+                            "text": "Sounds Cargo cultish <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cargo_cult#As_a_metaphor\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Cargo_cult#As_a_metaphor</a><p>I have always clicked the check box and never been stuck. Two opposing anecdotes means nothing, there must be more to it.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Someone said services like Twitter, FB or Instagram are walled gardens. Cloudflare said &quot;Hold my beer&quot;.<p>I am annoyed by bots, but I am even more annoyed by the internet being less open and less accessible every day.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "First thought was: ouch, government data got leaked and added to the database.",
+            "comment": []
+        },
+        {
+            "text": "Please make it possible to change email addresses, so I don&#x27;t have to create a new account and verify all domains again. Thank you for the great free service.",
+            "comment": []
+        },
+        {
+            "text": "Is this the new government after the old one was violently overthrown last year?",
+            "comment": [
+                {
+                    "text": "I know of no other governments of Nepal.",
+                    "comment": []
+                },
+                {
+                    "text": "Yes, this is the new government elected in March of this year after the old one was overthrown in September of last year.",
+                    "comment": []
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Seems like an almost irresponsibly misleading headline.",
+            "comment": [
+                {
+                    "text": "Are you reading it as if the Nepalese government had a data breach? Given the positive connotation of &#x27;welcoming&#x27;, I read it differently but I can see the confusion indeed",
+                    "comment": [
+                        {
+                            "text": "I also read the title as a sardonic welcome (negative connotation). I was surprised to find out it was just a tiny puff piece of self-promotion.<p>Being “welcomed” to HIBP sounds a lot like being “welcomed” to the Bronx by a mugging.<p>I admit I do not follow HIBP and was unaware of this kind of outreach they do.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I misread it as sarcastic. But that&#x27;s on me. I don&#x27;t think it&#x27;s a misleading title after reading the article",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;www.troyhunt.com&#x2F;tag&#x2F;government&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.troyhunt.com&#x2F;tag&#x2F;government&#x2F;</a><p>It&#x27;s a pattern that is used for new welcomes.",
+                    "comment": []
+                },
+                {
+                    "text": "Well Troy Hunt makes money off the back of your data being leaked so I expect nothing less.",
+                    "comment": [
+                        {
+                            "text": "I&#x27;m pretty certain that my data would be leaked regardless of him, so as far as objectionable businesses go, his is pretty low on my list of ones to be upset about",
+                            "comment": []
+                        },
+                        {
+                            "text": "In some sense companies that don&#x27;t protect your data make money off the back of your data being leaked (in the sense that they saved money by not spending it on security)",
+                            "comment": []
+                        },
+                        {
+                            "text": "And police officers make a living off of crime; ambulance personnel wouldn&#x27;t get paid if nobody got sick or injured. What&#x27;s the point of that observation?",
+                            "comment": [
+                                {
+                                    "text": "Police officers help for free.<p>If they find during an investigation  that you&#x27;re avictim of a crime they WILL tell you where they found the data and what was exactly in it.<p>Troy? He&#x27;ll basically resell you your own stolen data, because that&#x27;s the only way to know if the password leaked was 20 years or 1 month old, and to what services exactly. If you&#x27;re leaked in infostealer dump, you&#x27;d learn from the police what was associated with your email in this dump, so you know to snort if it was only empty password store from your Firefox, or financial data exposing you to ruin.<p>Troy? Oh, he can tell you that too, but for a price. He&#x27;ll sell you your personal data back.<p>(I&#x27;ve looked far and wide and there doesn&#x27;t seem to be ANY way to list as much as the domains of the email&#x2F;password dumps without paying for access to the API)",
+                                    "comment": [
+                                        {
+                                            "text": "You seem to have wildly different experiences with police than most",
+                                            "comment": [
+                                                {
+                                                    "text": "I&#x27;m talking specifically about this specific kind of crime, don&#x27;t generalise my statement.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Touchy touchy.<p>You’d have to be a celebrity to get a call from any police force I’ve ever seen, for even this type of crime.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "OK, I have no idea what are you on about, your vague generalisations attempt to throw the entire effort of this branch on me, so I&#x27;ll just pass, it&#x27;s not worth any more of my time.<p>Also because of the other reason.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "[dead]",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Viva Nepal !!!",
+            "comment": []
+        },
+        {
+            "text": "Ouch",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "I do like the idea behind Have I Been Pwned, and honestly if a government took it over that might be nice if we had some guarantees. It feels like something that ought to be a public service with super duper special oversight to avoid it being used by law enforcement(since sending any information is necessarily bad)",
+            "comment": [
+                {
+                    "text": "Most people don&#x27;t trust their government enough to run a service like this. For example, my government lets bridges collapse[0], and it can barely keep the roads paved. The fact that any government service works at all is nothing short of a miracle to me.<p>[0] <a href=\"https:&#x2F;&#x2F;www.ntsb.gov&#x2F;news&#x2F;press-releases&#x2F;Pages&#x2F;NR20240221.aspx\" rel=\"nofollow\">https:&#x2F;&#x2F;www.ntsb.gov&#x2F;news&#x2F;press-releases&#x2F;Pages&#x2F;NR20240221.as...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; if a government took it over that might be nice<p>&gt; to avoid it being used by law enforcement<p>What?",
+                    "comment": []
+                },
+                {
+                    "text": "Ehhhh, which government? Why would you want to build 200+ separate services for this? Would the US government report to a french citizen? Would we have two separate services from France&#x2F;US?<p>I agree public services are great but let governments focus on more critical services.",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

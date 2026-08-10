@@ -1,0 +1,74 @@
+{
+    "item_id": 49221679,
+    "title": "Voyager 1 FDS Computer Emulator",
+    "url": "https://zaneham.github.io/voyager-fds-emulator/",
+    "text": "◈ FDS Assembly\n▶ RUN\n⏭ STEP\n⟲ RESET\nLoad Example...\nCountdown from 10\nAdd Two Numbers\nMultiply (Repeated Add)\nMemory Banking Demo\n◈ Registers\nRA (Accumulator)\n0000\nRB (Auxiliary)\n0000\nPC (Program Counter)\n000\nCycles\n0\nZERO\nOVFL\nCARRY\nBANK\n◈ Memory\n000:\n0000 0000 0000 0000\n◈ Output\n◈ DMA Channels\nMDS\nDSS\nISS\nPRA\n◈ Instructions\nMLD\nLoad mem→RA\nMRD\nStore RA→mem\nADD\nRA + mem\nSUB\nRA - mem\nAND\nRA & mem\nJMP\nJump\nSKZ\nSkip if zero\nSKP\nSkip if +\nWAT\nHalt\nDW\nDefine word",
+    "comment": [
+        {
+            "text": "The author has also published a Setun-70 emulator (a Soviet ternary computer rather than a binary one):<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;Zaneham&#x2F;setun70-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Zaneham&#x2F;setun70-emulator</a>",
+            "comment": []
+        },
+        {
+            "text": "I was just looking at this yesterday. Apparently Voyager 1 architecture, ISA, etc are well known but Voyager 2 is still denied via FOIA on grounds of copyright.",
+            "comment": [
+                {
+                    "text": "Would they be different? They launched 16 days apart. I always assumed they were mostly the same core hardware. hm... rereading the wikipedia pages now...",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Are the distance and signal delay numbers supposed to be accurate?  NASA&#x27;s page has them substantially different.  Nice work, however!<p><a href=\"https:&#x2F;&#x2F;science.nasa.gov&#x2F;mission&#x2F;voyager&#x2F;where-are-voyager-1-and-voyager-2-now&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;science.nasa.gov&#x2F;mission&#x2F;voyager&#x2F;where-are-voyager-1...</a>",
+            "comment": []
+        },
+        {
+            "text": "Next add realistic signal delay so you have to wait a day to get the result",
+            "comment": []
+        },
+        {
+            "text": "Is it possible to hook this up to some kind of satellite space simulator to control a virtual voyager?",
+            "comment": []
+        },
+        {
+            "text": "it would be amazing to include a few example programs!",
+            "comment": [
+                {
+                    "text": "Click the &quot;Load Example&quot; drop-down menu in the bottom-right corner.",
+                    "comment": []
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Wow. Only 10 instruction set? Looks like father of RISC cpu design",
+            "comment": [
+                {
+                    "text": "This was common back then. The PDP-8 had eight primary instructions, although one of them was multi-purpose. This helped keep the hardware simple when we didn&#x27;t have ICs.<p>RISC isn&#x27;t about having a small ISA but about a regular, orthogonal instruction set.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "- stupid question: what is the program about? what are we trying to achieve?",
+            "comment": [
+                {
+                    "text": "It emulates the computer that runs Voyager 1.<p>I&#x27;m not sure I understand the question.",
+                    "comment": [
+                        {
+                            "text": "but how did you get access to the actual program that NASA has running on it?",
+                            "comment": [
+                                {
+                                    "text": "It&#x27;s not my project but presumably someone has a copy.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "item_id": 49220313,
+    "title": "Europe's free satellite service just made it easier to track wildfires",
+    "url": "https://arstechnica.com/gadgets/2026/08/europes-free-satellite-service-just-made-it-easier-to-track-wildfires/",
+    "text": "",
+    "comment": [
+        {
+            "text": "Do any European space agencies make live weather imagery available at high resolution? I&#x27;m looking for a direct link to JPEGs that update regularly, to use with a cron script to use as desktop wallpaper.<p>I can easily do this for North America using imagery here, for example: <a href=\"https:&#x2F;&#x2F;www.star.nesdis.noaa.gov&#x2F;GOES&#x2F;conus.php?sat=G16\" rel=\"nofollow\">https:&#x2F;&#x2F;www.star.nesdis.noaa.gov&#x2F;GOES&#x2F;conus.php?sat=G16</a> (bonus, imagery is Public Domain).<p>This direct link provides an updated image every five minutes, with even higher resolution available if you like: <a href=\"https:&#x2F;&#x2F;cdn.star.nesdis.noaa.gov&#x2F;GOES19&#x2F;ABI&#x2F;CONUS&#x2F;GEOCOLOR&#x2F;20262201401_GOES19-ABI-CONUS-GEOCOLOR-5000x3000.jpg\" rel=\"nofollow\">https:&#x2F;&#x2F;cdn.star.nesdis.noaa.gov&#x2F;GOES19&#x2F;ABI&#x2F;CONUS&#x2F;GEOCOLOR&#x2F;2...</a><p>Every time I revisit this idea and look for western Europe, I find nothing. Or, very low resolution, or some clunky, proprietary &quot;viewer&quot; forced on users. Is there really nothing similar for Europe?",
+            "comment": [
+                {
+                    "text": "You can receive a lot of weather satellites with self-build equipment utilizing the tool &quot;SatDump&quot;. But: the good old times of 137MHz analog satellite pictures are over. We talking about digital high-rate X-Band stuff (~8GHz) that requires auto-tracked dishes here.<p>Sentiel-2 data can be pulled for free from the Copernicus service. It&#x27;s a LEO sat and you often get a picture every 2 days of the same region.<p>DWD (German Meteo Service) offers a metric ton of data on their FTP Server as public data.",
+                    "comment": []
+                },
+                {
+                    "text": "I use the Eumetsat FCI (Flexible Combined Imager) full disc images  on board of geostationary satellite MTG centered at 0 degree longitude. A single image (distributed as netcdf file) is pretty large in fact much larger than my screen resolution.\nIf you are interested, the Julia code for downloading and creating the PNG image is here:<p><a href=\"https:&#x2F;&#x2F;codeberg.org&#x2F;Alexander-Barth&#x2F;FCI-MTG-0\" rel=\"nofollow\">https:&#x2F;&#x2F;codeberg.org&#x2F;Alexander-Barth&#x2F;FCI-MTG-0</a><p>While doing that, I learned that it is not so trivial to produce a true colour RGB image from these FCI [1]. I think there is also a WMS server for rendered images but I don&#x27;t have the link on my phone.<p>[1] <a href=\"https:&#x2F;&#x2F;doi.org&#x2F;10.1175&#x2F;BAMS-D-15-00154.1\" rel=\"nofollow\">https:&#x2F;&#x2F;doi.org&#x2F;10.1175&#x2F;BAMS-D-15-00154.1</a>",
+                    "comment": []
+                },
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;highsight.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;highsight.dev&#x2F;</a> should work for that!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "In case someone wants NASA firms wildfire 7 day vector tiles : <a href=\"http:&#x2F;&#x2F;serveur.cartes.app&#x2F;pmtiles&#x2F;MODIS_C6_1_Global_7d.pmtiles\" rel=\"nofollow\">http:&#x2F;&#x2F;serveur.cartes.app&#x2F;pmtiles&#x2F;MODIS_C6_1_Global_7d.pmtil...</a>",
+            "comment": []
+        },
+        {
+            "text": "An other intesting use for this data is OSNIT about war, like recent conflicts it&#x27;s used to confirm hits on specific places and sort validation for state-media reports",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "There&#x27;s also a good automatic tracker: firewatch.1338.nl&#x2F; it&#x27;s in Dutch but it doesn&#x27;t really matter. It just puts detected fires on a map.",
+            "comment": []
+        },
+        {
+            "text": "&gt; Now Copernicus Browser has also added a straightforward “wildfires” visualization layer for Sentinel-2 imagery that went live on August 4.<p>I feel like an idiot, I can&#x27;t figure out how to enable it. Currently I use <a href=\"https:&#x2F;&#x2F;www.firemap.live&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.firemap.live&#x2F;</a> for tracking local wildfires (which isn&#x27;t something I ever needed to track, prior to this year)",
+            "comment": [
+                {
+                    "text": "On the left Panel, change Configuration: Default to Wildfires and press the green arrow. You can then select various fire-related layers.",
+                    "comment": [
+                        {
+                            "text": "Ah, I didn&#x27;t realize that dropdown was scrollable! (I should find the browser setting to force scroll bars back on again...)",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It also shows certain industrial areas like steel plants as &quot;on fire&quot;.",
+                    "comment": [
+                        {
+                            "text": "That&#x27;s good though, it means it works and it&#x27;s sensitive. I like such false positives as a good indicator.<p>In Eastern Ukraine i also see sat trackers detect a lot, which is obviously mostly not wildfires.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It&#x27;s also a warzone visualization tool unintentionally.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;ll be forever grateful to the Copernicus project as I among many others use it to track high altitude snow banks before heading out to high alpine runs&#x2F;hikes. It&#x27;s such a great tool for our own safety and it&#x27;s incredible that such value is provided for free.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

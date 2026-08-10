@@ -1,0 +1,1308 @@
+{
+    "item_id": 49231154,
+    "title": "Mea Culpa – Dark Hours",
+    "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+    "text": "Initial thread about original Gruber post: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49214863\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49214863</a><p>Gruber&#x27;s retraction: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166</a>",
+    "comment": [
+        {
+            "text": "On the previous HN posts I got this impression:<p>The developer&#x27;s astrology app containing tarot reading features was rejected from Apple&#x27;s App Store that prohibits astrology apps.<p>He then replaced the app&#x27;s content with a clone of, if not the identical open source astronomy app &quot;Dark Hours&quot;, copying even the name. The original is here: <a href=\"https:&#x2F;&#x2F;darkhours.app\" rel=\"nofollow\">https:&#x2F;&#x2F;darkhours.app</a><p>The developer was then in contact with John Gruber, who wrote an article claiming Apple&#x27;s reviewers confuse a nice, scientific astronomy app with astrology. The developer reviewed the article before publication.<p>It then turned out that the developer forgot to mention that originally he did upload an astrology app for review. Gruber felt duped, and noted that it&#x27;s unclear whether an updated build containing the new astronomy app was ever submitted to Apple for review: <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a><p>Now the developer seems to claim that he merely accidentally cloned that open source app when working with Claude.<p>I am not buying it.",
+            "comment": [
+                {
+                    "text": "<i>&gt; I am not buying it.</i><p>Coincidentally:<p>Just in the last few weeks, D&#x27;addario, one of largest guitar string manufacturers, posted on Instagram what is clearly an AI-song to advertise its new line of guitar strings.<p>After being called out on it being AI, they posted a mobile-recording of the song recreated in a DAW, but it didn&#x27;t even match the timing or the notes played.<p>After being called on it AGAIN, they blamed it on LANDR and Apple Mastering &quot;changing the notes&quot;, but those only do &quot;AI knob tweaking&quot;, they&#x27;re not generative-ai audio synthesis. LANDR itself replied.<p>After being called on it AGAIN, they finally caved and said one of their workers used Suno without their knowledge.<p>After someone contacted the worker, he said he was pretty clear in his communication with D&#x27;addario that he had used Suno.<p>EDIT: The worker claimed it was &quot;his first time using AI&quot; and &quot;he didn&#x27;t know&quot;, but after someone did some digging in his Instagram profile, there&#x27;s a few Suno songs and a lot of AI posters and avatars.<p>This sort of ass-covering is getting crazy with AI...",
+                    "comment": [
+                        {
+                            "text": "Reminds me of politicians and public figures saying they got &quot;hacked&quot; after doing&#x2F;posting something stupid and getting backlash for it. I guess &quot;AI did it&quot; is the new iteration on that.",
+                            "comment": [
+                                {
+                                    "text": "Sir Norman Fry Compilation - <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=REpNTi-9oRQ\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=REpNTi-9oRQ</a>",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "And kids. I recently happened to see a pic on a kid&#x27;s phone of him holding 5 vapes and a tin of snus, when challenged on it he said it was an AI-generated fake.",
+                                    "comment": [
+                                        {
+                                            "text": "same for guns, they say it’s airsoft",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "At this rate politicians will be able to say “AI hacked me” soon",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I think of it as a new version of &quot;my brain made me do it&quot;<p><a href=\"https:&#x2F;&#x2F;www.scientificamerican.com&#x2F;article&#x2F;my-brain-made-me-do-it-is-becoming-a-more-common-criminal-defense&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.scientificamerican.com&#x2F;article&#x2F;my-brain-made-me-...</a>",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Appears to have replaced &quot;fake news&quot; as the go-to response",
+                                    "comment": [
+                                        {
+                                            "text": "&quot;The dog ate my homework&quot;<p>Just blame the next thing down the chain that can&#x27;t defend itself, so you don&#x27;t have to take responsibility.",
+                                            "comment": [
+                                                {
+                                                    "text": "Crazy but my dog once ate half my homework.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "My mother was a teacher, and she once had to go to school and tell her students our dog ate their homework.",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "Did you submit the other half? Which definitely would prove &quot;dog ate my homework&quot;",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "&quot;If you put even half as much effort into homework, as you put into faking dog bite marks, ...&quot;",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "So true. “AI slop” is the new “Fake news”",
+                                            "comment": [
+                                                {
+                                                    "text": "But there is copious amounts of AI slip on YouTube",
+                                                    "comment": [
+                                                        {
+                                                            "text": "freudian slop?",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "slip, slop, slap front and back[1]<p>EDIT: although I have to say the &quot;front and back&quot; actually came from another campaign[2]<p>[1] <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Slip-Slop-Slap\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Slip-Slop-Slap</a><p>[2] <a href=\"https:&#x2F;&#x2F;music.youtube.com&#x2F;watch?v=3-EJvs_glCc&amp;list=PLAe0IYRiN7ZqaZL6VuW6SpEw5odUSjmAh\" rel=\"nofollow\">https:&#x2F;&#x2F;music.youtube.com&#x2F;watch?v=3-EJvs_glCc&amp;list=PLAe0IYRi...</a>",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "I thought that was an Xzibit song",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "The issue is fake news is real and has somehow been co-opted by the perpetrators to attack any claim&#x2F;media group that is critical of them or their actions. If you fact check these people they just scream “fake news” until their followers chant it with them.<p>Huh I guess it is comparable to “it was AI” lol",
+                                            "comment": [
+                                                {
+                                                    "text": "This comment has gone up and down like nothing I’ve ever commented before. Legitimately fascinating to watch. It’s gone from -1 back to 1 several times today.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "You&#x27;re calling it ass covering but I kinda see it as buck-passing too. Seems like D&#x27;addario didn&#x27;t want to hold the buck so they kept passing it down until it made its way back to the worker who did it.<p>Seems to me like that worker&#x27;s ass wasn&#x27;t covered at all and now everyone&#x27;s all up in his shit on his socials, and the layers of management get to wash their hands, even though it&#x27;s the management and executive that are pushing AI at all costs.",
+                            "comment": [
+                                {
+                                    "text": "Going forward, I suspect one of the main employment opportunities left for humans in the AI era is &quot;scapegoat&quot;. Corporations don&#x27;t want to take any responsibility for anything. AI <i>can&#x27;t</i> be responsible. So there&#x27;s a market opportunity for a person who is willing to take a job where their main value-add is to receive the blame when something goes sideways.<p>What a sad dystopia we are creating.",
+                                    "comment": [
+                                        {
+                                            "text": "Every staff member with a ChatGPT account gets a complimentary promotion to CISO...",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Time for Benjamin Malaussène to strike again!",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Not sure if I agree.<p>Until people started getting technical, they weren’t really passing the bucket to anyone. It was only partially with the LANDR lie, and then with the final accusation that they really “passed the bucket”.<p>Blocking commenters, having employees and endorsers mock customers, all that was 100% Daddario.<p>In fact a lot of people commended them for not throwing employees under the bus before it happened.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "The solution is clear: yes we use AI, and we&#x27;re okay with it.<p>There&#x27;s no way Claude&#x2F;AI recreated another persons app exactly, with the same name and branding, without being told to do so in some way. I just don&#x27;t believe it.<p>And him not using it and calling out AI is just him covering his ass",
+                            "comment": [
+                                {
+                                    "text": "&gt; There&#x27;s no way Claude&#x2F;AI recreated another persons app exactly, with the same name and branding, without being told to do so in some way.<p>If you give a description of the app you want, and it matches another persons  Open Source app. Then why wouldn&#x27;t Claude do what it does every other time and pull from it&#x27;s corpus of knowledge?<p>Now I would expect the human-in-the-chain to verify what is going on and ultimately they are responsible for any output they lay claim to.<p>In this case, AI assisted or not, it is a dick move. TFA claims they are backing out of this space completely - which is the correct thing to do.<p>But as with all &quot;my punch simply slipped!&quot; apologies their reputation is tarnished and they will need to demonstrate they are better in future - not simply say so.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; Then why wouldn&#x27;t Claude do what it does every other time and pull from it&#x27;s corpus of knowledge?<p>I dont know why, but I do know know that it doesn&#x27;t.  I know because I&#x27;ve tried similar things when playing around with AI to see what it could do. &quot;Make an app similar to X app [link to repo]&quot;<p>Depending on how its feeling, it may just read the readme or it may go through the codebase. But I&#x27;ve never gotten line by line code copying.<p>&gt; I would expect the human-in-the-chain to verify what is going on<p>I agree with this, to the extent of your second point<p>&gt; they are responsible for any output they lay claim to.<p>How far does the rabbit hole go for verifying what is going on? If the LLM did indeed copy an entire codebase at its own behest, what reason would the author have to verify that it wasn&#x27;t copied, given that every other time they&#x27;ve used an LLM to code it never copied an entire codebase?",
+                                            "comment": [
+                                                {
+                                                    "text": "A bit outdated, but IME never copies things verbatim because of limitations in context. Even when you want it to be a verbatim copy, like in a migration, it struggles a bit to remember everything exactly from memory and always has to cross-reference.<p>Might be better in newer models though.<p>But for a real &quot;copy&quot; it would default to calling `cp` in bash.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "<i>&gt; The solution is clear: yes we use AI, and we&#x27;re okay with it.</i><p>Except that some portion of D&#x27;addario&#x27;s customers--presumably those that actually buy their guitar strings to create music via real guitars--aren&#x27;t okay with it.",
+                                    "comment": [
+                                        {
+                                            "text": "Yeah, I think that case is absolutely wild, because ostensibly the point of the recorded music was to showcase the strings.",
+                                            "comment": [
+                                                {
+                                                    "text": "Its telling that instead of showcasing the quality of their strings, they used an LLM to generate the sounds their strings should make.<p>Shows how much trust they have in their own product.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "Wouldn&#x27;t this be basically fraudulent advertising?",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Maybe they prompted &quot;make it sound like the guitars have D&#x27;addario strings&quot;",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "AFAIK, a lot of commercials, particularly for cars, haven’t really shot the physical product in decades and instead used CGI. I think Ikea also makes heavy use of renderings. It’s all kind of insane. OTOH, a hundred years ago ads all used illustrations… I guess you’d have to show that the real strings don’t sound or behave as shown in the video, however it was created.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "In this case there&#x27;s a difference between CGI and generative AI. However they came up with arrangement of pixels on the screen, the product is still portrayed accurately.<p>Now, unless the company in question got their new strings into Sona training data, I wager that the generated output has little casual connection with the product being advertised. If I found out IKEA&#x27;s newest product looks nothing like on the commercial, because the ad was using generative AI and hallucinated something approximating the product, I&#x27;d be looking at it as fraudulent too.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "IMO in D&#x27;addario&#x27;s case, the analogy would be like using CGI and illustrations to illustrate a painting.<p>Also, I think when judged by the court of public opinion, the overwhelming answer was &quot;yes, it&#x27;s fraudulent&quot;, or at least &quot;misleading and useless&quot; as most people even complained that the song sounds like an overproduced mess where any string would sound the same.",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "I don&#x27;t understand why you&#x27;re getting downvoted, but you&#x27;re correct. That&#x27;s the reason for the complaints and the company has already taken an anti-AI stance precisely for this reason.",
+                                            "comment": [
+                                                {
+                                                    "text": "It’s not worth getting upset at one or two people downvoting. This is a large forum. There will always be some of that. Plus we have no clue why they did it, it could be valid",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I&#x27;m not upset, that&#x27;s not the important part of my message.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "&gt; There&#x27;s no way Claude&#x2F;AI recreated another persons app exactly<p>Entropy doesn&#x27;t need to be set to zero for legally significant duplication",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "The already embattled Fender CEO said the other day that he plans for Fender to be at the &quot;forefront&quot; of AI, and that covering others&#x27; songs was &quot;analogue AI&quot;.<p>The simple truth of the matter is that contempt for your customers is now normal. I expect this from Fender, now; they are utterly without soul.<p>But D&#x27;Addario are really one of the most analogue companies ever and they are still family-owned; they should have understood the magnitude of this problem right at the beginning and just apologised.<p>At least one of my three guitars will likely continue to have their PB strings, probably, because they still sound the best on my cheap Weissenborn clone.<p>But it is very disappointing and it leaves a bad taste. Perhaps I will revisit Rotosounds (wound in a factory very near where I grew up) for my PBs. The UK also has Newtone strings so I really have no reason to continue to support D&#x27;Addario (though the low-tension Aloha set I really like for the Weissenborn copy that lets me have a 15 on the high D is always backordered).",
+                            "comment": [
+                                {
+                                    "text": "&gt; The already embattled Fender CEO said the other day that he plans for Fender to be at the &quot;forefront&quot; of AI, and that covering others&#x27; songs was &quot;analogue AI&quot;.\n&gt;The simple truth of the matter is that contempt for your customers is now normal. I expect this from Fender, now; they are utterly without soul.<p>I think to some degree this is going to be inevitable for a while. No matter what people think about the ethics of AI or AI use, the fact of the matter is it exists, and it is shaking up and going to shake up a lot of the world. I personally think &quot;AI&quot; isn&#x27;t really a product anymore than &quot;The Internet&quot; is a product. It&#x27;s infrastructure in the same way the internet is, or to quote &quot;Halt and Catch Fire&quot;, it&#x27;s &quot;the thing that gets us to The Thing&quot;.<p>The problem is no one really knows what The Thing looks like, so everyone is throwing anything they can think of at the wall and hoping to see what sticks. And they&#x27;re dong this because they remember Sears and they remember Blockbuster. No one wants to be the next company that was positioned perfectly to integrate the new technology into their business model and missed the boat completely for short sightedness or lack of speed. &quot;$foo but with AI&quot; is the current generation&#x27;s &quot;$foo but on the internet&quot;, and everyone is scrambling hard to not be the next company that someone writes a &quot;whatever happened to them&quot; youtube video about.<p>Incidentally, this &quot;AI as infrastructure&quot; view I have is also why I really think governments should be getting into the space of building and distributing training data sets and models. Not only because it could reduce the overall amount of bot scraping and traffic if everyone who wants to build could go to a known good and clean source of training data, but also because nominal usage fees could help manage the copyright concerns. I&#x27;ve pitched it before in more detail, but I imagine something akin to radio broadcast royalty licenses, where people whose copyrighted works are part of the government training sets are paid out &quot;royalties&quot; from the pool of money brought in from licensing the training sets.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; I think to some degree this is going to be inevitable for a while. No matter what people think about the ethics of AI or AI use, the fact of the matter is it exists, and it is shaking up and going to shake up a lot of the world. I personally think &quot;AI&quot; isn&#x27;t really a product anymore than &quot;The Internet&quot; is a product. It&#x27;s infrastructure in the same way the internet is, or to quote &quot;Halt and Catch Fire&quot;, it&#x27;s &quot;the thing that gets us to The Thing&quot;.<p>True. But the way it is approached is an exceptionally valuable yardstick for judging people&#x27;s intent.<p>There is no way that &quot;being at the forefront of AI&quot; is a strategy that gets Fender anywhere except towards unthinking inward investment. Even in the narrow context of NAM captures and the like, it is clumsily antithetical to their audience to say this.<p>But writing off the one thing that actually sells guitars in the 21st century (covers bands!) as &quot;analogue AI&quot; is the most extraordinarily tone-deaf, rude, dismissive thing that someone who runs a musical instrument company could ever say.",
+                                            "comment": [
+                                                {
+                                                    "text": "<i>&gt; writing off the one thing that actually sells guitars in the 21st century (covers bands!) ...</i><p>I&#x27;m not so sure about that. Guitar bands playing original music is huge where I am right now, shoegaze &#x2F; nugaze &#x2F; grunge &#x2F; dreampop is where the zeitgeist is here. As a middle-aged guy who was a teen during grunge, it&#x27;s heartening to see the 20 year olds now buying Jaguar guitars (and a bunch of pedals) and new bands emerging each week. Everyone is nerding out over their obscure Bandcamp purchases, and it&#x27;s definitely a thing that you need to write your own original material. The occasional cover is okay, but there&#x27;s a definite &quot;ick&quot; to being a cover band.<p>&quot;Analogue AI&quot; as a description of playing a cover is harsh, but I can also see some of that label sticking. You didn&#x27;t write the music or the lyrics, you&#x27;re taking the credit and money for someone else&#x27;s work. That seems to be some of the anti-AI attitude around here.<p>But you&#x27;re right that &quot;the forefront of AI&quot; is not going to appeal to that audience, at all.<p>(Personally I&#x27;m pro-AI - not Suno stuff, but I think it will eventually find a place in the same way that synthesizers &amp; sampling &amp; DAWs did, all of which were regarded as cheating at the time they came out. I remember the grunge albums with &quot;AAD&quot; Analog &#x2F; Analog &#x2F; Digital printed on the CD sleeve just as Pro Tools was emerging.)",
+                                                    "comment": [
+                                                        {
+                                                            "text": "&gt; I&#x27;m not so sure about that.<p>Pretty sure that, as a first approximation, essentially all bands are covers bands. At a first approximation, all electric guitarists only play along to other people&#x27;s songs in their bedrooms! The proportion who ever play for anyone else is tiny.<p>It&#x27;s just mindblowing to be that rude about the core market, especially for the luxury guitars they want to be known for.<p>&gt; I remember the grunge albums with &quot;AAD&quot; Analog &#x2F; Analog &#x2F; Digital printed on the CD sleeve just as Pro Tools was emerging.)<p>I&#x27;m not sure digital recording is a fair comparison. Though at any rate, the first digitally recorded album (Ry Cooder&#x27;s <i>Bop Till You Drop</i> from 1979) sounds so sonically dead that its artist has essentially disowned it.<p>It is, coincidentally, essentially a covers album. Ruined by its production; <i>The Very Thing That Makes You Rich (Makes Me Poor)</i> could have sounded immense and it does not.",
+                                                            "comment": []
+                                                        },
+                                                        {
+                                                            "text": "I dunno.<p>Fender USA and Squier Jaguars and lots of pedals are for ppl in original bands.<p>But the money is in Custom Shop Gibson, Fender and PRS, which are for ppl in the older generations playing mostly in 70s cover bands, or just hanging it in the wall to occasionally play Smoke on the Water. TheGearPage has become a very influential force in the industry almost like HN has.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Okay, that&#x27;s a point - there&#x27;s less money in the Squier Jaguars even if they sell more of them. I know I personally can&#x27;t decide on a Squier Jaguar or Vintera, when I know what I really wanted is a Fender Cobain Jaguar. There&#x27;s more money in the doctors &amp; lawyers accumulating expensive gear that they rarely ever get to play.<p>That said - the few people I know in the &quot;rich kid buying gear&quot; segment are <i>deep</i> into AI, and wouldn&#x27;t blink twice at using it to generate music for their events. Much of <i>their</i> audience wouldn&#x27;t necessarily care. The equipment they have is more to show off &quot;here is this expensive thing you can&#x27;t afford, I have it, I don&#x27;t even use it&quot;.<p>So maybe there&#x27;s lots of diverse markets and I really don&#x27;t know how it will play out :)",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "That&#x27;s a good point. Interestingly, the person working for D&#x27;addario who made the video is in a self declared &quot;east coast&#x27;s best cover band&quot;, and most of the artwork is AI-based, plus a few background songs in the bands Instagram have shown to be AI.<p>Dunno how the lawyers and doctors think about AI music, though.",
+                                                                            "comment": []
+                                                                        },
+                                                                        {
+                                                                            "text": "I would probably get a Harley Benton JA or MS and do any necessary work.<p>But then I&#x27;m a weirdo; the only guitars that really float my boat the moment are the Duesenberg lap steels and that Eastwood fretless cello guitar...",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "The new Harley Benton Jazzmaster-style is crazy good and the distressed&#x2F;relic looks amazing IMO.",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "They make really good instruments. I don&#x27;t really play ordinary electric guitar anymore — I&#x27;ll never be good enough at it whereas I am a good lap steel player — but if I wanted a guitar for a bit of recording I would not really hesitate.<p>The original Harley Benton&#x2F;ABM Slider lap steel was outstanding and I was stupid not to get one.",
+                                                                                            "comment": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "In the late 2010s, the order (literally) from investors was to &quot;hire as many devs as you can&quot;. The order now is to position the company somehow as being AI-centric or AI-powered.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "&gt; it is shaking up and going to shake up a lot of the world.<p>The problem is that this is only happening because the powerful are forcing it on us. This is exactly why the backlash against it has gotten so big. Had companies not jumped on the AI bandwagon and forced it down veryone&#x27;s throats (sometimes putting your job on the line if you refused) the backlash probably would be non-existent. The AI boosters&#x2F;pro-AI people will of course continue to claim that nobody is forcing you to use AI (I literally had this told to me on a different forum like 4 days ago, it was honestly ridiculous how delusional this particular booster was...)",
+                                            "comment": [
+                                                {
+                                                    "text": "&gt; The problem is that this is only happening because the powerful are forcing it on us.<p>Look, I won&#x27;t deny that like the dot-com bubble and the &quot;cloud&quot; hype of years before that there isn&#x27;t overhyping and forcing going on. But this feels to me a lot like someone in the mid 90&#x27;s looking at this &quot;internet&quot; thing and thinking it&#x27;s all a fad being pushed on us by computer nerds. I&#x27;m not saying every company and every attempt to stuff &quot;AI&quot; into everything is going to be some revolution that will stick with us forever, but neither were a lot of early online providers. But like I said, AI is infrastructure, and people are going to figure out how to build things on top of it that will become integrated and standard parts of our lives, just like computers, the internet and the cloud are all today.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "I know lots of people who voluntarily use AI regularly without being forced to - a lot more than either people who are anti-AI or people who are forced to use it for work.<p>That&#x27;s probably a function of the people I&#x27;m around more than anything else. It is also the case that AI is being pushed on people, sometimes forcefully. But the category of people who use it because they want to is very large.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Jeeeeezus. It&#x27;s lies all the way down. Did we ever arrive at a true statement from them or is that where they left it?<p>The irony is how unnecessary it was. They could&#x27;ve just said, yeah you&#x27;re right, we used AI. This is a level of lying you reserve for covering up a murder or something. Maybe they&#x27;re just worried (and they&#x27;re right to be worried) that it&#x27;s easier to make music with AI than with their strings.",
+                            "comment": [
+                                {
+                                    "text": "Lie and doubling down. And a lot of employees and endorsers fighting people in the comments, and calling people names. Not a good look.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; The worker claimed it was &quot;his first time using AI&quot; and &quot;he didn&#x27;t know&quot;<p>This is not the defense they think it is.. If your mechanic rotates your tires and improperly torques the lug bolts &quot;it was my first time using a torque wrench&quot; isn&#x27;t excusable. It&#x27;s good to experiment and learn new things. It&#x27;s not good to throw your little self-study project out into the world with your employer&#x27;s name behind it and present it as production worthy material.",
+                            "comment": [
+                                {
+                                    "text": "Before last year, I might&#x27;ve thought it was okay to throw out silly things as <i>advertisements</i>.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Do we know if it was the worker who presented it as such? Everyone has to learn and if they are learning on the job its up to their employer to ensure that the work product is reviewed or overseen by someone with adequate experience.",
+                                    "comment": [
+                                        {
+                                            "text": "In this case, the author exchanged messages with someone, and he indeed claimed as such, according to the screenshots.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Oh...",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "People online post timelapses for their AI generated artwork, that are also AI generated.",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;ve been thinking about this. Almost every way we have to tell human from AI apart can be adopted and automated by AI. It&#x27;s sort of a corollary of &quot;every metric can be gamed&quot;.<p>It&#x27;s disheartening for those of us who intrinsically value human authorship.",
+                                    "comment": [
+                                        {
+                                            "text": "Maybe all “content” will just end up devalued and some prestige will move to more physical, local things like live performances, growing your own tomatoes and giving good massages. Nobody will care about showing off their tomatoes online and all that matters is sharing them with real people…",
+                                            "comment": [
+                                                {
+                                                    "text": "I hope so. I&#x27;ve got no issue with AI, but &quot;influencers&quot; are broadly a net negative on the world. Anything that reduces the amount of power&#x2F;status&#x2F;attention they get is a plus for me.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Well, we don&#x27;t have Star Trek holograms yet, so you can trust what you can see performed in person.<p>(Good luck getting close enough to actually tell if the live performance is real or faked, though, for anything other than small, local or super niche bands...)",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "It&#x27;s an easy &quot;out&quot; for those without the self-respect to admit when they do wrong.<p>It&#x27;s like &quot;The computer did it&quot; from the 80&#x27;s and 90&#x27;s. Blame the tool for the operator usage.<p>It&#x27;s pathetic.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Think about all of the cases that don&#x27;t come out. Everyone hates AI, yet everyone is using AI.<p>I refuse to believe nearly 100% of game developers aren&#x27;t using AI, but how many put the tag of shame on the Steam store page?<p>It&#x27;s a very strange situation.",
+                            "comment": [
+                                {
+                                    "text": "&gt;I refuse to believe nearly 100% of game developers aren&#x27;t using AI<p>Do you refuse to believe nearly 100% of written content isn&#x27;t made by AI? Was your comment?<p>I struggle to imagine thinking that no one does things themselves, for fun. What a nihilistic view.",
+                                    "comment": [
+                                        {
+                                            "text": "I don’t believe they are saying that 100% of the entire game or content is ai, they are saying that they believe that a huge percentage of titles have used AI for at least one part of the game, however small.<p>I can absolutely believe it, and I think it’s fine. If you have AI code up the logic for something boring but necessary (the setting screen ui, for one example. Don’t argue against this one example, that isn’t the point) it will leave a developer to work on the parts of games that actually make a difference to the experience.<p>Frankly, it would be silly not to use ai for some things. The trouble is that if it’s a binary “used ai” flag, there is no way to distinguish a one shot Claude slop game from someone who uses AI for internationalization",
+                                            "comment": [
+                                                {
+                                                    "text": "&gt; Don’t argue against this one example, that isn’t the point<p>What is the point then? The best games have all of their elements working together in service of their intended experience.<p>&gt; someone who uses AI for internationalization<p>Do you think this would be an ok use of AI for a game? Did you not see the outrage over Hollow Knight: Silksong&#x27;s translation last year? How every time a game is discovered to have used AI for translation there is an immediate backlash?",
+                                                    "comment": [
+                                                        {
+                                                            "text": "The point is that some parts of games truly don&#x27;t impact the experience.<p>Name a game whose settings screen added to the gameplay in any meaningful way. Hell, name a game from memory that didn&#x27;t have the same settings screen with minor styling variations as every other game you played. What exactly am I missing out on by having a resolution dropdown that was hand coded? Does a bespoke &quot;ultra&quot; graphics slider bring the characters to life in a way that AI just can&#x27;t? Besides, using AI isn&#x27;t mutually exclusive with all of the elements working together. My point is that AI, wielded properly, makes that easier to achieve. If you don&#x27;t have to spend a month hand coding sliders for a settings screen, you can get on with making the actual game. Do you also rail against game engines which provide all of this stuff in a generic way?<p>I do think that using AI to help with internationalization is fine, as long as you QA it just like any code or content that is created by man or machine. It&#x27;s a tool, and you have to know how and when to use any tool. You can get plenty of good translation out of an AI if you are using it properly.<p>Also worth noting that Silksong was verified to have a human translation team, and they never clarified if AI was used. It&#x27;s entirely possible that today&#x27;s SOTA AI would have done a much better job. The problem with your argument about translation is you and I have no idea how many games have been machine translated well, and never saw an issue. Because of the way gamers are (frequently unhinged about minor things. Prone to groupthink. Extremely vocal. Absolute in opinions like &quot;There is no acceptable use for AI in gaming&quot;), you just can&#x27;t stick your neck out and say, &quot;We used AI for our localizations, then had native speakers QA it, and not one had issues.&quot; You risk becoming a lightning rod for puritans because you wanted to give Romanians a chance to play a game in their own language.<p>Even if you disagree on using AI for these things, I can keep coming up with ways that AI can make a game better. That&#x27;s why I told you not to argue against specific examples. Maybe a game designer told an AI to review the code and find performance improvement opportunities. Would you be upset if the game was half the size, and could run higher frame-rates with the exact same content? Is that still an unacceptable us of AI, or would you rather that the man hours that could otherwise go to things that humans are better at get spent on optimizations. I personally would rather have a game with better performance from an AI and more human created side quests, than a game with better performance and fewer side quests because they ran out of budget hiring people to dig into compiler settings.<p>So yeah, I think it is completely reasonable to use AI in gaming or any domain of programming. I&#x27;ve been around long enough to remember human teams turning out absolute steaming piles of garbage. The issue isn&#x27;t AI, the issue is people turning out steaming piles of garbage. AI just makes that easier, but by no means does it make it inherent to use.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "&gt; Name a game whose settings screen added to the gameplay in any meaningful way<p>Most of these are going to be smaller indie games that already don&#x27;t have many settings to set. Off the top of my head, I&#x27;d probably say Ultrakill takes the cake with its opening screen. Based on the description of the expectations, my guess is you&#x27;re mostly basing your expectations off of large AAA games with multiple pages of settings? Fair enough that they should mostly be implementing &quot;standards&quot; correctly, and theming and character take a back seat.<p>It sounds like your overall point mostly relates not to settings screens, but things that &quot;don&#x27;t meaningfully affect gameplay&quot;. I think that&#x27;s a much better argument than the one your example point led me to understand.<p>As a final note, it&#x27;s worth reiterating that Steam does not require disclosure for AI-gen code. That settings menu example you were mentioning would be fine, as long as it used art assets generated by a human.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "&gt; Name a game whose settings screen added to the gameplay in any meaningful way. Hell, name a game from memory that didn&#x27;t have the same settings screen with minor styling variations as every other game you played.<p>This mentality is exactly why most modern AAA games are so generic and uninteresting. Great games are more than just their gameplay; they&#x27;re complete, coherent experiences assembled by people who care about every part of them, not just the parts they deem to be &quot;the important ones&quot;. Someone who doesn&#x27;t care at all what their game&#x27;s settings menu looks like probably doesn&#x27;t truly care about any other part of the game, either - it suggests their primary concern is not the quality of the game, but how quickly and cheaply it can be made.<p>Games having menus and HUD interfaces that fit the rest of their aesthetic was once the standard, before the current trend of minimalism took over. Why do you think that is? Was it just because the developers of yesteryear were all idiots wasting time and budget on things that didn&#x27;t matter instead of maximizing shareholder value? Or was it because they were focused on making a high quality, coherent game first, and making it &quot;efficiently&quot; second?<p>&gt; Do you also rail against game engines which provide all of this stuff in a generic way?<p>Yes, every other game being made in Unreal Engine nowadays is one of the biggest contributing factors to them all feeling so samey (and running badly). Developers who don&#x27;t care about the quality of the game and just want to get it out the door with the minimum effort possible gravitate towards Unreal Engine, because it&#x27;s made for them, and this is reflected in the end product.<p>&gt; I can keep coming up with ways that AI can make a game better.<p>No, you can come up with ways that AI can make the game easier and cheaper to make at the cost of craftsmanship. It&#x27;s not the same thing. Adding more side quests won&#x27;t make the game better if they&#x27;re not made by people who care about the game as a whole and all its little details. Whatever improvements or optimizations your AI can come up with, a skilled human developer could come up with, too, the difference being that the human demands a living wage in exchange for his work, and that&#x27;s just <i>awful</i>, isn&#x27;t it? It&#x27;s simply not possible for the entirety of the game to be crafted with care without going over budget (let&#x27;s ignore all the past examples of games that did exactly this, with much smaller budgets, before unappealing ultra realistic graphics became the standard).",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; I struggle to imagine thinking that no one does things themselves, for fun. What a nihilistic view.<p>Come on.  There are shades here.<p>I guarantee that even your best programmers are using AI to run down certain classes of  bugs--especially in corporate environments.  Asking the AI to help you unwind some screwy source control merge or to remember some obscure set of flags is a damn good usage of AI, for example.  Nobody thinks twice of using a search engine for this so AI is a no-brainer.<p>The issue is when people use the AI for all the code.  I have to tell AI all the time &quot;That code is there because X and you mangling it is a problem.&quot; or &quot;You violated Y.  Explain to me why you did that anyway and don&#x27;t do it again.&quot;<p>The problem is that to do that <i>you have to know the code and you don&#x27;t know the code if you didn&#x27;t write it.</i>",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Steam doesn’t need a AI disclosure label for things that are not player-facing IIRC.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "[flagged]",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "What bothers me about the D&#x27;Addario thing is that it never crossed the mind of that employee or the company what they&#x27;re doing was wrong.<p>Their customers are musicians. They want to hear what the strings sound like in a demo. What they did was not just dishonest, it&#x27;s contrary to literally everything their customers do.<p>Whoever did it has no sense and shouldn&#x27;t be working in that business. Full stop.<p>I say this as a D&#x27;Addario customer of 20+ years that will never buy their strings again.",
+                            "comment": [
+                                {
+                                    "text": "Marketing has become so disconnected from reality that such things have been normalized and trivialized.<p>For example: since a few years now, it became extremely common for apps and games to be advertised with fake screenshots, fake gameplay, and fake interactions.<p>AI just put all that on turbo mode.<p>A marketing manager coming from apps&#x2F;games (or other industry where this is common) joining D&#x27;addario will just push for AI music to be used because &quot;that&#x27;s how things are done&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "[dead]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; It then turned out that the developer forgot to mention that originally he did upload an astrology app for review. Gruber felt duped, and noted that it&#x27;s unclear whether an updated build containing the new astronomy app was ever submitted to Apple for review<p>I think it’s shaping up like he didn’t “forget” to mention it. This looks like an intentional play for attention. It worked very well. Too well, in fact, which drew enough eyes on to the situation to start noticing the cracks in his story.<p>A key part of the Gruber retraction article is that Apple rejected <i>a different app</i> named Asterly. He then copied the Dark Hours app, <i>including the name</i>, from someone else and tried to imply that was the app at the center of the controversy.<p>If he had actually written his own astronomy app and swapped it into the story he may have gotten away with it. Doing the wholesale copying of someone else’s work, including the name of the project and stripping the license in the process, is what got him caught.<p>App Store rejection stories are always popular. I see at least one post a month on Hacker News from an app developer trying to get attention because their app was rejected and it usually receives moderate social media attention. I think this person saw an opportunity to ride that anger for some personal publicity and went for it. He flew too close to the sun and got too much attention, though, so his mistruths were revealed. Now he’s trying some CYA techniques because the original ruse backfired.",
+                    "comment": [
+                        {
+                            "text": "[flagged]",
+                            "comment": [
+                                {
+                                    "text": "This has nothing to do with Gruber fans or not. Your take just isn&#x27;t as smart as you thought it is. Highly regarded newspapers, tv programs or books have updates &#x2F; retractions all the time as even with the best fact checking it&#x27;s possible that something slips through.",
+                                    "comment": [
+                                        {
+                                            "text": "[flagged]",
+                                            "comment": [
+                                                {
+                                                    "text": "I&#x27;ve only changed &quot;redactions&quot; into &quot;updates &#x2F; retractions&quot; as that was a typo.<p>Please take a look at <a href=\"https:&#x2F;&#x2F;www.nytimes.com&#x2F;international&#x2F;section&#x2F;corrections\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nytimes.com&#x2F;international&#x2F;section&#x2F;corrections</a> for a small selection of what slips through fact checking on a well established and reputable newspaper.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I don&#x27;t doubt that massive organizations make a lot of errors.<p>I don&#x27;t think it makes your point, tho.  The question is error per volume.<p>I seriously doubt Gruber does the same amount of fact checking as a serious publication. And that was my point above.<p>But I could be wrong - if you actually know I&#x27;d love the answer.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "If your question is if a single person running a private blog has the same fact checking resources as a big news corporation, the answer is no but I&#x27;m not sure why you&#x27;d need me to tell you that.<p>As mentioned in Gruber&#x27;s retraction (<a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a>) it&#x27;s the first time he had to retract something in 24 years. It doesn&#x27;t really make sense to compare the two in any case as the stakes and resources are very different.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "No, my question is whether the per-story fact checking is equal, or much less.<p>I suspect it&#x27;s much less.  Do you know otherwise?",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "&gt; my question is whether the per-story fact checking is equal, or much less.<p>How could a one man operation have the fact checking machinery of some big paper, eg the NYT? Of course it’s less.<p>Keep in mind that he usually posts multiple times per weekday.",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "No.  You misunderstand my question.  Again.<p>I want to know if the human effort, per story, is the same as other publications.  Does Gruber make a real fact checking effort, or does he merely trust his gut?",
+                                                                                            "comment": [
+                                                                                                {
+                                                                                                    "text": "The retraction post from Gruber details ways in which he tried to fact-check this, including confirming that his understanding was correct with Mr. Godier and even running a draft of the post by him to make sure he&#x27;d stated the &quot;facts&quot; that Godier presented him correctly.<p>I&#x27;m not really sure what you&#x27;re implicitly expecting him to have done &quot;better&quot; here. Ask Godier for a signed affidavit? Not publish this until he could get a statement from Apple to get their side of the story? (Which is to say, not publish it at all because the chances of Apple giving <i>anyone</i> &quot;their side&quot; of something like this is essentially zero.)",
+                                                                                                    "comment": [
+                                                                                                        {
+                                                                                                            "text": "&gt; The retraction post from Gruber details ways in which he tried to fact-check this<p>Yes it does.  To fact check this story - he asked the source (twice) if he was lying.<p>&gt; I&#x27;m not really sure what you&#x27;re implicitly expecting him to have done &quot;better&quot; here.<p>He could have asked for the full text of the rejection letter, which would have revealed the name switch.  For starters.<p>Other journalists make a much stronger effort to avoid these kinds of errors.",
+                                                                                                            "comment": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "text": "I don&#x27;t know, maybe google a few things? The most obvious search terms for me, turned up the pre-existence of the legitimate astronomy app, not to mention the trademarked name collision with a horror video game.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49217212\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49217212</a><p>Perhaps engage critical thinking? Apply the CRAAP Test? Seek some independent confirmation of facts, rather than just being a mouthpiece for some hysterical acquaintance? If I had a Bitcoin for every time I heard some gamer was &quot;banned for no reason!!1&quot;<p>Apple could&#x27;ve denied the app just for clashing with the name of an existing game... a game that involved demons tossing fortune-telling cards around",
+                                                                                                            "comment": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "text": "I make a real fact-checking effort. In this case, the developer (Godier) sent me a video of the app in action. It’s a real app. He couldn’t send me a TestFlight to run (he said) because TestFlight submissions are taking a week or longer to get approved.<p>Obviously what I did wasn’t enough, but trust me, I try.",
+                                                                                                    "comment": [
+                                                                                                        {
+                                                                                                            "text": "Fair enough.<p>Did you ask him for the full rejection letter?  That&#x27;s the issue I raised below.  I&#x27;m wondering if he forged the app name.<p>It seems like the situation still remains a little ambiguous - and forging the name on that letter would be definitive proof.<p>On the other hand, if you didn&#x27;t ask for it - why not?  It seems like the very least amount of verification you could have done.<p>Did it simply not occur to you that a source might lie?",
+                                                                                                            "comment": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": "&gt; The question is error per volume<p>&gt; my question is whether the per-story fact checking is equal, or much less<p>Which is it?",
+                                                                                    "comment": [
+                                                                                        {
+                                                                                            "text": "My dear friend, both questions are asking about the same ratio, just using different language.",
+                                                                                            "comment": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "How is this Gruber&#x27;s fault? What level of verification do you expect of a tech blog discussing the experience of another tech blogger?",
+                                    "comment": [
+                                        {
+                                            "text": "When you spread disinformation you should bear the cost of it.<p>Gruber has a massive audience.  He should try harder.",
+                                            "comment": [
+                                                {
+                                                    "text": "The embarrassment <i>is</i> the cost.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Agreed.  Which is why I raise the point.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "This is a very strange take. We got a full-throated retraction. Error correction is a hallmark of trustworthiness.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; We got a full-throated retraction.<p>Not really.  When he says &quot;I was misled&quot; he&#x27;s passing the blame.  Other statements are equally defensive.<p>Notice how the retractions of larger publications do not make similar claims.  They state the error and move on.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "[flagged]",
+                            "comment": [
+                                {
+                                    "text": "[flagged]",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Also note that Goodier&#x27;s post that kicked off Gruber&#x27;s post <i>now</i> says it had a section about &quot;an astronomy app I am working on that began as an astrology app,&quot; [1] but the older version of the article clearly implied that the author was baffled as to why Apple would ever think it related to Tarot cards. [2]<p>1. <a href=\"https:&#x2F;&#x2F;blog.terrygodier.com&#x2F;2026&#x2F;08&#x2F;07&#x2F;browsers-have-standards-the-app.html\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.terrygodier.com&#x2F;2026&#x2F;08&#x2F;07&#x2F;browsers-have-standa...</a><p>2. <a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260807141155&#x2F;https:&#x2F;&#x2F;blog.terrygodier.com&#x2F;2026&#x2F;08&#x2F;07&#x2F;browsers-have-standards-the-app.html\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260807141155&#x2F;https:&#x2F;&#x2F;blog.terr...</a>",
+                    "comment": [
+                        {
+                            "text": "At this rate we will need Gruber to do a retraction retraction in order to be more aggressive about the bs he fell into.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "OP or dang should change the link to the DF retraction. While the app’s author has apparently produced some quality products, this puts a big asterisk next to that reputation.",
+                    "comment": [
+                        {
+                            "text": "That was already submitted and discussed [0], there&#x27;s a reason I submitted this response by the author.<p>[0] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Maybe our attention is being farmed? I have a friend who does astrology readings for a living and was curious why the app store doesn&#x27;t allow astrology apps, a quick search revealed astrology apps exist on the app store so that&#x27;s a red herring.",
+                    "comment": [
+                        {
+                            "text": "In app categories that bring a lot of low-effort submissions and clones, Apple requires new submissions to bring something new to the table.<p>Before these requirements the app store was filling up with thousands of flashlight apps, todo lists, and other simple apps that people would build (or clone) to get something into the app store.",
+                            "comment": [
+                                {
+                                    "text": "Make me sad that my original flashlight app (pre App Store) might not be accepted if I tried to publish it. It is an artifact of history I guess, so maybe that could be an exception.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If you read the related articles you&#x27;d see the App Store has decided there are <i>enough</i> of these types of apps and they don&#x27;t accept any more unless they&#x27;re noticeably different",
+                            "comment": []
+                        },
+                        {
+                            "text": "They simply do not allow new astrology apps. They consider the market segment saturated.",
+                            "comment": [
+                                {
+                                    "text": "Oh but mine will be tron&#x2F;blade runner themed, the market needs more diversity, the insensative clauds!",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "That&#x27;s interesting. I had originally posted a &quot;this dude is classy&quot; comment, and may repost, but I&#x27;d like to find out more, beforehand.<p>Are there any links to this stuff that you can share?<p><i>[UPDATED] Ah. I see this post has it[0].</i><p>[0] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49231394\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49231394</a>",
+                    "comment": [
+                        {
+                            "text": "I did not look into the details myself, but here are the links to the previous post:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166</a>",
+                            "comment": [
+                                {
+                                    "text": "I know that not everyone is thrilled with Gruber, but I think this is classy (from his article):<p><i>&gt; To the best of my recollection, this is the first post I’ve retracted in the 24 years I’ve been writing Daring Fireball. I hope it’s the last. I was misled, both overtly and through omissions, in several ways, but what I publish is my responsibility, and I apologize for the error.</i>",
+                                    "comment": [
+                                        {
+                                            "text": "Gruner is a true fan and tends to be overly positive about Apple but I don&#x27;t doubt his integrity for a second. In cases when his reporting is overly favorable to Apple in my eyes, I do believe that he truly believes what he says.",
+                                            "comment": [
+                                                {
+                                                    "text": "It was interesting that his first retraction was due to a post being critical of Apple. Not that there hasn&#x27;t been other critical posts, but he&#x27;s very positive about the brand.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Gruber himself has written a number of posts critical of Apple, some of them scathingly so.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Yeah, any time I see someone accuse Gruber of being universally positive about Apple I think they can&#x27;t have been reading his work very often.<p>Something Is Rotten in the State of Cupertino: <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2025&#x2F;03&#x2F;something_is_rotten_in_the_state_of_cupertino\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2025&#x2F;03&#x2F;something_is_rotten_in_th...</a><p>Apple subsequently stopped providing Apple execs for his annual live podcast recording at WWDC. They don&#x27;t confirm it was because of that piece (unsurprisingly) but it seems very likely it was.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "I came across a theory which seems more likely to me: Gruber lost access to Apple execs after he posted the following regarding Tim Cook and other tech CEOs congratulating Trump on winning the election in 2024:<p>“I wonder how much Cook dithered over that cheerful-looking exclamation mark. I hope he regrets it. … I wonder how much it stings to be reminded that all the money in the world cannot buy dignity. I wonder too, what taste Cheetos-dusted 78-year-old testicles leave in one’s mouth. Whatever the flavor, I hope it lingers.”<p>From the very end of this: <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2024&#x2F;11&#x2F;i_wonder\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2024&#x2F;11&#x2F;i_wonder</a>",
+                                                                            "comment": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "Anyone that has been in the Apple ecosystem, for any length of time, has been insanely pissed off at them -usually, multiple times.<p>They are a pretty arrogant megacorp, and tend to make decisions that primarily benefit themselves.<p>But I generally have a positive relationship with them.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "I fully agree. That’s how you own a mistake.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I’ve noticed that when a developer cries foul over an Apple App Store rejection, it often seems to be a red flag that there is something fishy about that developer. Gruber, not to his credit, often does not give Apple the  benefit of the doubt on these matters. imho he bears some responsibility if he feels duped.",
+                    "comment": [
+                        {
+                            "text": "...and I&#x27;ve noticed that&#x27;s not always the case. What&#x27;s the value of such a bland whitewashing comment?",
+                            "comment": [
+                                {
+                                    "text": "Sure, glad to clarify. The value is to point out something that I’ve noticed a lot of people miss as conversations about App Store rejections tend to take a knee-jerk negative attitude toward Apple. Considering the opposite possibility would clear up a lot of false conceptions and raise the quality of discussions.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I think it’s entirely possible for someone to clone an app with Claude without realising they’ve done it, if they don’t do your due diligence on it. I.e., if they don’t make any effort to dig into and really understand what they’ve built.<p>But I also think this is an extreme example of a much more general problem of provenance.<p>There are a lot of people vibe-coding apps who lack the “basic” skills needed to do this due diligence at even the coarsest level that we arguably see here (not making any comment either way on this specific author).<p>Does that get them off the hook? I don’t think so. They’ve created a thing and they are naturally responsible for whether or not that thing involves theft or appropriation of IP from other sources.<p>It’s an “ignorance is not an excuse” kind of thing.<p>This scales all the way up to agentic development in large organisations, but it also becomes much more granular and subtle, which is perhaps where it becomes more interesting - and certainly a lot more challenging. Where has that chunk of code come from? How do you know where it’s come from? Is there even a feasible way of finding out?",
+                    "comment": []
+                },
+                {
+                    "text": "&gt;The original is here: <a href=\"https:&#x2F;&#x2F;darkhours.app\" rel=\"nofollow\">https:&#x2F;&#x2F;darkhours.app</a><p>Ooof that is a terrible dark mode theme.",
+                    "comment": [
+                        {
+                            "text": "I think &quot;night vision&quot; is different from dark mode. It&#x27;s meant to prevent your eyes from adjusting to the light - so you can still see the stars - rather than just being easy to look at.",
+                            "comment": [
+                                {
+                                    "text": "Just to add, photoreceptors in the eyes consist of rods and three types of cones. Rods are what do the majority of the work for night vision and are nearly blind to long wavelengths of light (red).",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "It&#x27;s so that you don&#x27;t lose your dark adaptation.  See: <a href=\"https:&#x2F;&#x2F;www.nps.gov&#x2F;articles&#x2F;dark-adaptation-of-the-human-eye-and-the-value-of-red-flashlights.htm\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nps.gov&#x2F;articles&#x2F;dark-adaptation-of-the-human-ey...</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; Apple&#x27;s App Store that prohibits astrology apps<p>That&#x27;s curious. What legitimate-sounding reason could Apple have to reject astrology on their platform? Isn&#x27;t this exactly the kind of discrimination against fields of endeavour that would make a slam-dunk case for any antitrust enforcement?",
+                    "comment": [
+                        {
+                            "text": "Only new submissions seem to be banned because Apple says there are too many. Clearly there are loads if you search the App Store. Gruber quotes and I re-quote:<p>&gt; Certain kinds of apps, such as dating, flashlight, sound effects, wallpaper, simple timers, and fortune telling, are well established on the App Store and we will not accept new submissions unless they offer a meaningfully different or improved experience. We may remove these apps from the App Store going forward if they are not updated, improved, or do not attract customers. Other kinds of apps, such as drinking games, Kama Sutra, fart, and burp apps, are mediocre, low-quality, or low-effort and do not add value to the App Store.",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;m gonna go out on a limb here, but something tells me they don&#x27;t defer to a panel of astrology app power users when deciding whether an app is a novel astrology app or not.<p>Also I&#x27;m not sure if I should be insulted when they insist that The Kama Sutra is &quot;low effort&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "A few years ago there were horoscope apps with a 3-day free trial, then pay per week subscriptions, that had tens of thousands of suspicious 5 star reviews.<p>Some of them even made it into the top 20 grossing apps on the store.<p>All the reviews with text would complain about accidentally subscribing.<p>Apple was earning a 30% commission on those subscriptions.",
+                            "comment": []
+                        },
+                        {
+                            "text": "They don’t prohibit them.<p>There are categories of app that already have 100 trillion low effort copy-paste slop apps.<p>In those categories, Apple applies a more stringent “must demonstrate some real differentiation” criteria. They also prune those categories of existing apps more aggressively.<p>It’s fair to wonder what counts, and how uniformly they apply it, but the motivation is not, “no astrology apps.”<p>This guy pumped out slop for a high-slop category. It got rejected. That’s where it started.<p>All the bullshit and lies from everyone snowballed from that.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; Isn&#x27;t this exactly the kind of discrimination against fields of endeavour that would make a slam-dunk case for any antitrust enforcement?<p>No.",
+                            "comment": []
+                        },
+                        {
+                            "text": "The same reason apple could reasonably block people from selling anything with an easily falsifiable claim: misleading consumers is bad, and apps that are misleading aren’t allowed. That already exists.<p>Telling people you can tell them their future based on the stars is demonstrably misleading lol.",
+                            "comment": []
+                        },
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I’m struggling to see how this wasn’t intentional by Godier, but I can’t understand what he was hoping to get out of it. Surely the truth would have come out eventually. Was one day of fame worth it?",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Maybe it’s not a developer at all, and a couple of open claws doing random app things…",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "And blames it on &quot;AI usage&quot;.",
+                    "comment": []
+                },
+                {
+                    "text": "Oh I recall this story now <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49214863\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49214863</a><p>I, too, feel entirely duped. What the heck dude. Uploading an astrology app that later pivoted to astronomy and having that be rejected for astrology is a way different problem from just having the latter rejected for astrology.<p>Thanks for drawing the chain. Infuriating.",
+                    "comment": [
+                        {
+                            "text": "If I understand the story correctly, it&#x27;s even worse than &quot;pivoted to astronomy&quot;. He used Claude to &quot;accidentally&quot; (doubtful) copy an existing astronomy app, bugs and all. It&#x27;s like a pile of dishonesty upon dishonesty.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Phantom Obligation, the post that Gruber says brought Godier to his attention, seems pretty AI-generated: <a href=\"https:&#x2F;&#x2F;www.terrygodier.com&#x2F;phantom-obligation\" rel=\"nofollow\">https:&#x2F;&#x2F;www.terrygodier.com&#x2F;phantom-obligation</a>",
+                    "comment": []
+                },
+                {
+                    "text": "We are personally responsible for what our agents do. I don’t know why someone thinks “oops Claude did it” is a valid excuse.",
+                    "comment": []
+                },
+                {
+                    "text": "afaik apple store doesn&#x27;t prohibit astrology apps. You just can&#x27;t have cookie cutter astrology apps. I believe dating apps have the same rule.",
+                    "comment": []
+                },
+                {
+                    "text": "Grubby.",
+                    "comment": []
+                },
+                {
+                    "text": "And Gruber, being Gruber, says that this guy&#x27;s RSS reader is so good that it would prevent people from switching to Android. Sure.",
+                    "comment": [
+                        {
+                            "text": "&gt; David Pierce, at The Verge, put it on a very short list of iOS-exclusive indie apps that keep him from switching to Android.<p>You are misattributing a quote.",
+                            "comment": [
+                                {
+                                    "text": "That quote that you posted is from Gruber. Gruber <i>chose</i> to include that in his blog post to say that this app is so good that it keeps people, including Pierce, from switching to Android. I was obviously fully aware that he paraphrased somebody else to include as evidence to support his claim. Pierce, on the other hand, was speaking only for himself.",
+                                    "comment": [
+                                        {
+                                            "text": "Choosing to include a properly attributed quote in a blog post is very different to saying something yourself.",
+                                            "comment": [
+                                                {
+                                                    "text": "Once more, Gruber is the one who claimed that the app kept people from switching to Android by paraphrasing (not quoting) Pierce. Pierce spoke only for himself. You are trying to pick a nit that doesn&#x27;t exist.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Something went seriously wrong there, and I&#x27;m not sure it&#x27;s just Claude copying an existing project bug-for-bug. For more context, see also this post from Gruber at Daring Fireball:<p><a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a>",
+            "comment": [
+                {
+                    "text": "Yeah... If you even say to Claude I want to make an app like github.com&#x2F;user&#x2F;repo it&#x27;s not gonna just clone it and do some touch ups. Anything can happen of course, but my spidey sense says generally AI won&#x27;t fork a project unasked (just because of the implied maintenance burden of applying future patches from upstream if nothing else)",
+                    "comment": [
+                        {
+                            "text": "Yeah - the whole Claude did it thing here reads to me like blaming a grammar issue on an LLM. Yes they have their issues but this isn&#x27;t one of them - they&#x27;re not deterministic they aren&#x27;t going to make the exact same bug as a project you never heard of unless it&#x27;s a specific technical shortcoming&#x2F;training data gap&#x2F;skill issue of the model. If you say &quot;I want something exactly like xyz in every way&quot; though then sure - but you&#x27;re claiming you never asked for that? Not passing the sniff test here",
+                            "comment": []
+                        },
+                        {
+                            "text": "I have tried this with Codex, and if you ask it to implement a project based on an algorithm or design in a given repo, it always puts an attribution link saying that part of it was adapted from that repo. Unfortunately I think we’re being duped here.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Also, Claude has the habit of finding and fixing bugs without being asked - for example, in code that an earlier version of itself wrote.  So while you can never be sure, there&#x27;s a non-zero chance that even if it had copied the original code it would have found and fixed the accidental trap.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I have had Claude and Codex look at third party repositories on several occasions as reference material for something I wanted to make my own version of, and not once have they ever cloned it unless I told them to. Sometimes I would notice they would just keep reading the repo through a ton of API calls so I&#x27;d just stop them and clone it for them and tell them to look there. And not once was the output anywhere near that close to the original, plus they usually added attribution info if the results were even (unscientific estimate) 50-60% similar.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Yeah, the big bad AI made you plagiarize a whole project down to the name, and lie to everyone about the review process.  Not buying any of it.",
+            "comment": [
+                {
+                    "text": "&gt; down to the name<p>And an identical bug, per the Bluesky convo Gruber linked.<p><a href=\"https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mmmeh.bsky.social&#x2F;post&#x2F;3mslc3b3u4c2l\" rel=\"nofollow\">https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mmmeh.bsky.social&#x2F;post&#x2F;3mslc3b3u4c2...</a>",
+                    "comment": [
+                        {
+                            "text": "The &#x27;original&#x27; app made heavy use of Claude also, according to its dev in that thread.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "For skeptics, just months ago in the midst of the AI hype it was common to ask if AIs were simply copying the input apps they were trained on, and would regurgitate them.<p>I find this plausible. I&#x27;d like to see the prompt and chat transcript.",
+                    "comment": [
+                        {
+                            "text": "A good way to accomplish this is to ask the AI to give you some good names for the project. It tends to regurgitate those, and a quick search of existing apps will flush it out.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "And it’s even more stupid because he just could have asked Claude to build it from scratch. I mean, it’s not\nRocket science and all of the resources needed are in the public domain. It would be done in 3 days. 4 hours if you want to ship hot garbage.",
+                    "comment": [
+                        {
+                            "text": "<i>&gt; 4 hours if you want to ship hot garbage.</i><p>That seems to be the thing everyone is into, these days.",
+                            "comment": [
+                                {
+                                    "text": "Yeah, hot garbage is trending these days, unfortunately.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&quot;The dog plagiarized my homework&quot;",
+                    "comment": []
+                },
+                {
+                    "text": "Why not?<p>There have been quite a few copyright cases alleging this behavior that LLMs are not substantially transformative[1]. Note that  cases have largely been ruled in the favor of the AI companies, with courts ruling that model output is “substantially transformative” of training material (although what is currently legally permissible may not be what we feel is socially permissible or ethical). The the fact that these allegations continue to be made, and the fact that AI companies seem to be trying to cover their asses by disallowing prompts which would be likely to create content highly similar to that of copyrighted training material [2] might be enough to at least warrant some consideration that Godier is being honest here.<p>Not that this would absolve Godier (quite the opposite in my mind- low effort ai workflows produce slop, and he chose this intentionally), but perhaps some of the onerousness here also falls on the AI companies pillaging of work.<p>[1] <a href=\"https:&#x2F;&#x2F;copyrightalliance.org&#x2F;ai-copyright-lawsuit-developments-2025&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;copyrightalliance.org&#x2F;ai-copyright-lawsuit-developme...</a>\nE.g. <a href=\"https:&#x2F;&#x2F;nytco-assets.nytimes.com&#x2F;2023&#x2F;12&#x2F;NYT_Complaint_Dec2023.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;nytco-assets.nytimes.com&#x2F;2023&#x2F;12&#x2F;NYT_Complaint_Dec20...</a><p>[2] <a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;ai&#x2F;2026&#x2F;07&#x2F;chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;ai&#x2F;2026&#x2F;07&#x2F;chatgpt-stops-cloning-fam...</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Fun and useful PR jargon to describe what this post smells like: a “limited hangout”.<p>(a damage-control strategy where an organization or individual admits to a portion of a secret or scandal after a cover story fails, while still hiding the most damaging key facts.)",
+            "comment": [
+                {
+                    "text": "It’s really pitiful, because I was ready to leave a comment saying how actual apologies and taking responsibility have gotten rather rare (mostly because they leave the publishing party with lasting feelings of cringe&#x2F;shame&#x2F;other consequences), wanting to applaud <i>at least</i> that among this mess; but then reading on I got the same impression.<p>An LLM&#x2F;agent harness generally doesn’t just claim another project wholesale, including specific bugs, as the base of your idea, unless you ask it to.",
+                    "comment": []
+                },
+                {
+                    "text": "Interesting! I had never heard that phrase before. The words are non-intuitive, but that&#x27;s exactly what&#x27;s happening: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Limited_hangout\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Limited_hangout</a><p>Now that you&#x27;ve introduced the phrase I can see it in a lot of recent scandals.<p>Peter Attia, a popular health and longevity podcaster who was revealed to have substantial ties to Jeffrey Epstein used this exact trick recently. When the Epstein e-mails were released it was discovered that he continued to consort with Epstein after all of the revelations. Even worse, he talked to Epstein about the fallout from the accusations and continued to cozy up to him. He was trying to run a very expensive concierge medical clinic and relied on Epstein&#x27;s connections to get more clients, so he wanted to continue keeping that relationship warm.<p>When the e-mails came out he issued a public non-apology that implied he had no idea about any of Epstein&#x27;s activities. It was plausible enough if you never saw the actual e-mails and thought Epstein was just another contact in his network, but the actual e-mails revealed that he was continuing to converse with Epstein after the revelations, including about the revelations!<p>So &quot;limited hangout&quot; is precisely what he and his PR team tried to execute. It seems to have worked on a limited set of his fan base who still try to downplay his Epstein connections to this day. The e-mails are easy to find, though.",
+                    "comment": [
+                        {
+                            "text": "&gt; [...] a “limited hangout”.<p>&gt;&gt; The words are non-intuitive<p>Yeah.<p>&quot;Incomplete mea culpa&quot;, &quot;Incomplete admission&quot;, &quot;Incomplete penance&quot;, &quot;Incomplete contrition&quot;, &quot;Incomplete remorse&quot;, actually say &quot;the thing&quot; instead of using a new random phrase.<p>I like &quot;incomplete contrition&quot; or &quot;gas light remorse&quot;.",
+                            "comment": [
+                                {
+                                    "text": "&gt; actually say &quot;the thing&quot; instead of using a new random phrase<p>Apparently the phrase is very old, pre-dating the internet. It came out of the CIA.<p>In this context hangout is a clipped form of &quot;letting it all hang out&quot;<p>So it&#x27;s saying you&#x27;re putting on the appearance of letting it all hang out, but the information revealed is limited.",
+                                    "comment": [
+                                        {
+                                            "text": "I think in this case, the existence of pedigree isn&#x27;t a strong enough argument to keep around an uncommon, and uncommonly unintuitive, phrase.<p>&quot;Gaslight confession&quot; or &quot;gaslight apology&quot; are much clearer. By directly addressing the intent to deceive, they are both accurate, and can help discourage the practice.<p>(&quot;Gaslight&quot; is also unintuitive upon first encounter, but has a widely established meaning at this point.)",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "I think it&#x27;s based on the phrase hung out to dry. This is a limited hangout where you may still be damp.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I suppose it could be that if one’s intent is to mislead, then obfuscating the name of a technique specifically meant for that purpose is a feature, not a bug.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It&#x27;s not much of a mea culpa when there&#x27;s not even a mention, let alone an apology, for misleading John Gruber.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49228166</a>",
+            "comment": []
+        },
+        {
+            "text": "I’d love to see the other repo, and the prompts that led to both.<p>Did Godier copy the other guy’s repo, name and all, and try to pass it off as his own work? That seems like the obvious conclusion, albeit brazen to the point of insanity.<p>Did <i>Claude</i> copy the repo, in response to a prompt? If Claude copies a Claude vibe-coded project, can any plagiarism really be said to have taken place?<p>Or is this just what Claude is statistically likely to spit out if you prompt it to build an astronomy app and leave it to it?",
+            "comment": [
+                {
+                    "text": "This is the Bluesky thread that Gruber linked where the original author calls out the copy: <a href=\"https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mmmeh.bsky.social&#x2F;post&#x2F;3mslc3b3u4c2l\" rel=\"nofollow\">https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mmmeh.bsky.social&#x2F;post&#x2F;3mslc3b3u4c2...</a><p>You can trace back to the original repo from that thread. The key points are that the copy had<p>1. The same name. One was &quot;Dark Hours&quot; and the other was &quot;DarkHours&quot;.<p>2. The same highly specific bug. I didn&#x27;t investigate closely but from the description the bug sounds too unique to have been identically created in a fresh Claude-style duplication.<p>The duplicated name is the most damning part to me. I&#x27;ve never tried to copy a project with Claude, but I can&#x27;t imagine the sequence of events that would lead to Claude copying the name of a repo but going to lengths to disguise other things like stripping the license. This all seems highly intentional, like someone thought it would never be noticed.",
+                    "comment": [
+                        {
+                            "text": "I’ve seen the original repo, I mean Godier’s.<p>A name clash is the <i>least</i> damning evidence in my opinion. Last year my previous employer asked us for suggestions for naming an AI agent. Everyone produced pretty much the same list, because everyone just asked ChatGPT.<p>Except me. I <i>had also</i> asked ChatGPT, but I bothered to google the suggestions and found there were already like half a dozen AI agents for every suggestion.<p>(they ultimately launched what was by then the 7th or 8th AI-related product with essentially the same name)<p>Creativity in naming doesn’t seem to be their strongest suit.",
+                            "comment": [
+                                {
+                                    "text": "&gt; they ultimately launched what was by then the 7th or 8th AI-related product with essentially the same name<p>let me guess, they called it &quot;Copliot&quot;",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "If the copying was deliberate then why admit to the similarity? He should have just blocked the guy and continued as if nothing was wrong. Admitting the plagiarisation lead to a worse outcome every time.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I cannot fathom so thoroughly torching your own reputation (a quite positive one at that) in such a short period of time",
+            "comment": [
+                {
+                    "text": "Maybe it was worth it, Terry&#x27;s RSS reader is number 1 on the paid news app chart.<p><a href=\"https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;current-rss-feed-reader&#x2F;id6758530974\">https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;current-rss-feed-reader&#x2F;id6758...</a>",
+                    "comment": [
+                        {
+                            "text": "Understandable, it&#x27;s a great app, though a bit expensive.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "He did the right thing. The very idea of Claude copying an existing project to answer one of my prompts or a whole project in Claude Code is a nightmare scenario.<p>I have all but given up using the multiple trillion weight models in favor of smaller open weight models that have hopefully abstracted away copyrightable details. Right now deepseek-v4-flash-0731 seems usually perfect for my needs.<p>I saw Cees de Groot post about LLM vibe coded projects containing all sorts of licensed material, and I think he is correct.<p>Perhaps another good reason to just use the AGPL for new projects? I decided to use the AGPL for may latest fun project <a href=\"https:&#x2F;&#x2F;github.com&#x2F;mark-watson&#x2F;racket-coding-agent\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mark-watson&#x2F;racket-coding-agent</a> (personal AI coding harness written for my own use in Racket Scheme). Everything I do is open source or open content books, so I am happy to have everything I do to be used by humans and also for AI training, however: it is scary to by mistake be in the position of not acknowledging other work when appropriate.",
+            "comment": []
+        },
+        {
+            "text": "&gt; I was careless in relying on AI [...] That’s on me<p>This was a beautiful ending",
+            "comment": [
+                {
+                    "text": "&quot;that&#x27;s on me&quot; just sounds like Claude is doing the talking",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This reads similar to a politician saying &quot;I was hacked!&quot; when embarrassing texts leak.",
+            "comment": []
+        },
+        {
+            "text": "I wish we lived in a society where bullshitting your way through a Mea Culpa would have consequences, but sadly I suspect someone is going to &quot;punish&quot; this one by giving them a top job or funding some equally bullshit startup.",
+            "comment": [
+                {
+                    "text": "Certainly, this isn&#x27;t going to be career-ending, as it should. No, someone with just as few morals as OP will say to themselves, &quot;just the kind of person I was looking for!&quot;, and the failing up begins.",
+                    "comment": [
+                        {
+                            "text": "&gt; Certainly, this isn&#x27;t going to be career-ending, as it should.<p>Maybe it’s not career-ending, but it’s definitely career-hurting. Being welcomed and mentioned by popular indie devs, bloggers, and power users is a way of breaking onto the scene. If those people now actively distrust you, maybe your current app(s) can continue to thrive for a while, but whatever you release next won’t get much traction from those same circles. Ben Surtees is another dev who scorched their name, by sneakily selling their app which required a bunch of permissions (and thus trust).",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This is awful. I went on a deep dive on Terrys site after that post. Full of sage advice, decent rss ideas, the astronomy page and the website, the options, colors all look fantastic. Not a good day for Terry.",
+            "comment": [
+                {
+                    "text": "<i>Full of sage advice, decent rss ideas, the astronomy page and the website, the options, colors all look fantastic.</i><p>And how much of that is original with the blog author? Previously, one might have just given them the benefit of the doubt, as it should be. But now it swings the other way, and I&#x27;ll assume that the author not only doesn&#x27;t have an original thought in their head, they&#x27;ll lie to cover their ass, too.",
+                    "comment": []
+                },
+                {
+                    "text": "I don&#x27;t know, bloggers who publish teases in their feed frustrate me.<p><a href=\"https:&#x2F;&#x2F;blog.terrygodier.com&#x2F;2026&#x2F;05&#x2F;24&#x2F;ive-been-a-little-distant.html\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.terrygodier.com&#x2F;2026&#x2F;05&#x2F;24&#x2F;ive-been-a-little-di...</a>",
+                    "comment": [
+                        {
+                            "text": "He does a lot of microblogging it seems. Which is good. He is decentralizing twitter the simplest way possible!",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "So the thing that drove this person to Gruber et al&#x27;s notice is an RSS Reader that doesn&#x27;t count how many new items are pending? It&#x27;s the kind of thing that can get you significant mindshare among the last few people who use RSS readers and have disproportionate impact on the discourse apparently",
+            "comment": [
+                {
+                    "text": "This whole affair seriously undermines Terry&#x27;s credibility, however it needs to be said that his take on how RSS readers should work is genuinely new and -- to some audiences -- interesting.<p>It&#x27;s as if real people are not all good or all bad, but can do good things, and bad things too.",
+                    "comment": [
+                        {
+                            "text": "Do you utilize RSS? I&#x27;ve been trying to find a good RSS reader that incorporates some of the ideas his advocates, but I prefer Linux. Right now I&#x27;m using Thunderbird for it, but I&#x27;d love a good recommendation!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I don’t particularly buy the author’s story here, but “doesn’t count how many new items are pending” is a <i>feature</i> for me. I don’t want my RSS reader to feel like yet another list of tasks I’ve to get through.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The thing that stands out to me with all of this is how little accountability there is left within the field.<p>Published a rip-off? &quot;Sorry, Claude must have done this&quot;.<p>Published a shitty&#x2F;wrong&#x2F;insensitive&#x2F;&lt;insert other adjectives here&gt; post somewhere? &quot;Sorry, the AI wrote it&quot;<p>Regardless of how we view LLMs as a whole, if you produce content with AI and publish it, you personally own every line of what you published. &quot;Claude did it&quot; cannot ever be a valid excuse.",
+            "comment": [
+                {
+                    "text": "&gt; &quot;Claude did it&quot; cannot ever be a valid excuse.<p>I think this an incredibly important point. As soon as we devolve reposnsiblity to computer progams, society cedes control to the algorithm vendors.<p>Jeff Geerling was called out today for his clickbaity video entitled &quot;Intel just matched Apple Silicon. Seriously.&quot;. Jeff&#x27;s personal response was &quot;I had three YouTube titles, this one got about 2x the watch time as the other two, so I let YT pick it.&quot;<p>Another commenter replied: &quot;You are trying to launder responsibility for a clickbait title to a computer program.&quot; I think this exactly nailed the problem.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49223079\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49223079</a>",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s funny, I saw that YT video in my feed and instantly was turned off from ever wanting to click on it. I know there is a write up about it, so I&#x27;d rather read than watch. Esp knowing what I know now.",
+                            "comment": []
+                        },
+                        {
+                            "text": "What a funny thread. Probably not a great first impression for potential viewers",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I think it&#x27;s time to bring back the IBM classic.<p>&gt; A computer can never be held accountable. Therefore a computer must never make a management decision",
+                    "comment": [
+                        {
+                            "text": "I think we&#x27;re at the point where people are making the opposite conclusion from the premise: Let&#x27;s let the computer make the decision because then we can&#x27;t be held accountable.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "My favorite is when they&#x27;re clearly caught out so they move on to trying to minimise the use and optionally passively aggressively turn it back on you.<p><i>&quot;I was genuinely only using Claude to make my writing clearer&#x2F;redraft&#x2F;to organize my thoughts because I can&#x27;t write as well as you can&quot;</i><p>The new one for me this week was someone claiming they write exactly like Claude does.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49212416\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49212416</a>",
+                    "comment": [
+                        {
+                            "text": "There are enough grammatical oddities (e.g. &quot;reads off&quot;, &quot;my not-the-proudest&quot;) in the linked excerpt that I&#x27;m honestly inclined to believe them.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "This is just finally bringing the magical &quot;the computer did it&quot; to the masses!<p>When companies like Amazon accept, warehouse, bill for and ship unsafe Chinese trash, well, at every step it was just a computer. Google, X and others will happily show state funded scam advertisements from fake accounts and there is no one accountable, because it&#x27;s just the computer handling those.<p>Now with AI, everyone can claim this magical legal immunity for themselves.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; how little accountability there is left within the field.<p>I don&#x27;t think it&#x27;s limited to the tech field: it&#x27;s stronger here, due to the proximity with the tech giants who are enabling Trump&#x27;s bullshit, but he and all that goes on around him are the real center of it.<p>More broadly, it&#x27;s been on the rise for a number of years now, due to the Republican Party doing its level best to eliminate accountability for anything their people do wrong—like, for instance, cozying up to Epstein and his ilk.<p>They&#x27;ve been promoting a <i>culture</i> of unaccountability, trying to destroy the very idea that we have obligations to each other...as opposed to the masses having obligations to do whatever our leaders tell us.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "&gt; While I had genuinely never seen DarkHours.app before yesterday, I was careless in relying on AI to generate the project without doing the work to understand whether it closely resembled an existing project. That’s on me, and I am responsible for what I published.<p>Super-convincingly phrased, but after skimming how this unfolded without knowing the author, it could just as well be the inference result of<p><pre><code>  Write a convincing apology and defence regarding this blog post &lt;url&gt; &#x2F; bsky thread &lt;url&gt; \n\n  I was totally caught off guard and making an honest, altruistic effort here!</code></pre>",
+            "comment": []
+        },
+        {
+            "text": "This current story is likely just the latest lie.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Wow, this is a genuinely crazy situation. I also have doubts that Claude can be prompted to wholesale copy an open source project like this, so I&#x27;m really curious to see receipts from Terry (session history, commits)",
+            "comment": []
+        },
+        {
+            "text": "I posted this post to HN after seeing someone else link it in a recent thread, and I&#x27;ll repeat what I said there:<p>I find this synopsis very hard to believe, seems he&#x27;s shifting blame onto an LLM instead of taking responsibility for his actions. He said he&#x27;d significantly alter the feature set, so why didn&#x27;t that happen? That&#x27;s a single prompt to Claude. He more than likely just told the LLM to clone the repo and ship it as is, not actually working on it in any capacity. In that case it wasn&#x27;t the AI &quot;reproducing&quot; a bug as there was no reproduction in the first place.",
+            "comment": []
+        },
+        {
+            "text": "&gt; web app I had launched using Claude was strikingly similar to his open source project, even reproducing a bug he had later fixed,<p>How? How do I prompt to get a literal copy of another app? When Claude&#x2F;Gemini builds anything for me I have a thousand ideas for functionality improvements and UI&#x2F;UX changes. How do you just stop at v1 of what Claude gives you?",
+            "comment": []
+        },
+        {
+            "text": "The bigger issue here is that he mislead (I think lied to, personally) John Gruber to the point that Gruber had to issue his first retraction in 25 years: <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a>",
+            "comment": [
+                {
+                    "text": "Gruber himself has misled his readers without a retraction for many years, but this one he gets to blame on someone else, so it&#x27;s no skin off his back.",
+                    "comment": [
+                        {
+                            "text": "What are your favorite examples of him misleading his readers?",
+                            "comment": [
+                                {
+                                    "text": "Bane gives multiple examples in this thread: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=9345312\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=9345312</a>.<p>I mostly ignore Gruber&#x27;s slop, but I have seen cases where he got technical details of Android multitasking wrong, which is nuts because it is both well documented and open source.",
+                                    "comment": [
+                                        {
+                                            "text": "How do you remember comments from over a decade ago?",
+                                            "comment": [
+                                                {
+                                                    "text": "Search. I don&#x27;t actually remember that particular comment, but I know I&#x27;ve seen such comments before.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Setting aside everything except the stated intention behind the author&#x27;s post -- ie. to make right something that he could only conclude was wrong after a little education  -- what if agentic dev was removed from the equation and he made a similar app anyway?<p>I understand that using agentic led to specific glitchy things like the recreation of an exact same bug arising from the exact same code which may -- very likely, actually, in cases where one of a narrow set of best practices (or dogma) are (blindly) followed -- or may not happen if you&#x27;re building similar apps. A lot of people have a lot of the same ideas and the few from that set who actually pursue their goal will likely end up with similar products built with and operate using fairly similar patterns. What then?<p>What if it&#x27;s an improvement on the original? Like a vast improvement?<p>Does a Pepsi or Burger King tell Coca Cola or McDonalds &quot;You got it dawg ...&quot;, disrobe, hand over all their assets and find some place to die alone?",
+            "comment": []
+        },
+        {
+            "text": "&gt; Going forward, I won’t be using AI in this way to create any more web stuff, and I do not use it to anything close to this extent on iOS software.<p>&#x27;comon now, let&#x27;s not throw out the baby with the bath water.<p>That&#x27;s a bit of an scorched earth extreme response imho.",
+            "comment": []
+        },
+        {
+            "text": "Even with all these revelations, there’s still something so weird about this whole story. To go from crafting such a strong, principled app as Current to conjuring an AI-slop-fueled false narrative around an astrology app is such a wild swing in respectability.",
+            "comment": [
+                {
+                    "text": "Current was just a vibe-coded thing that blew up about a month before people started to become inured to the Claude Code look. The essay was intriguing but the app wasn’t like it. The app is essentially a standard RSS clone reader with water-themed names for folders, feeds, etc.<p>(I paid for Current to try it when it came out.)",
+                    "comment": [
+                        {
+                            "text": "That’d make sense, I don’t actually have any personal experience with Current so I was just going off the essay&#x2F;site. But of course AI is quite good at making inordinately convincing versions of those.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m confused as to why Apple rejects astrology apps. They accept Bible and Koran apps...",
+            "comment": []
+        },
+        {
+            "text": "It&#x27;s fine to build these apps that are clones of other&#x27;s in my opinion but don&#x27;t start publishing it for fame or fortune. Be humble, the computer did pretty much all of the work for you.",
+            "comment": []
+        },
+        {
+            "text": "&gt; I won’t be using AI in this way to create any more web stuff, and I do not use it to anything close to this extent on iOS software. I do ask questions, debug issues, things like that, but I do not create apps with Claude for iOS.<p>I’m worried this is another lie. “Current,” Terry’s other app, is very obviously built by AI. Its interface carries all the tells (and slop-induced UI bugs) that you’d run into if an app was primarily built through vibe coding. I won’t get into the merits of whether the app works or is useful. I bought it and immediately requested a refund after I noticed all the AI tells.",
+            "comment": [
+                {
+                    "text": "What tells?",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; I bought it and immediately requested a refund<p>Same. I tried on macOS and it was so buggy it was unusable. Basic shortcuts advertised on the website and app didn’t work at all. I also didn’t like the look and the limited options for streams, but I never even tried them in full because the bugs were frustrating, I was questioning if the app had had any testing at all.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you needed another reason to hate low effort vibe coding…<p>“It became clear to me that the web app I had launched using Claude was strikingly similar to his open source project, even reproducing a bug he had later fixed.”<p>At what point do we confront the reality that premier AI models are blatant copyright violation machines through and through?",
+            "comment": [
+                {
+                    "text": "When we have evidence that that&#x27;s what actually happened and it&#x27;s not the known-deceitful author trying to cover their own arse again?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "So Claude spit out similar code in response to similar prompts? Did Claude also suggest the same name twice?",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "&gt; I’d like to give credit where credit is due.<p>... but I&#x27;m not going to insert a link to his project - <a href=\"https:&#x2F;&#x2F;github.com&#x2F;mbeher2200&#x2F;DarkHours\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mbeher2200&#x2F;DarkHours</a>",
+            "comment": [
+                {
+                    "text": "he redirected the domain darkhours.io to darkhours.app. seems pretty fair",
+                    "comment": [
+                        {
+                            "text": "&gt; seems pretty fair<p>Until 1st August 2027 when the domain will expire (I doubt Terry will keep paying for the domain) leaving those users who memorised the .io version stranded.<p>You&#x27;ll note they only redirected it, they didn&#x27;t offer to transfer the domain.",
+                            "comment": [
+                                {
+                                    "text": "And they&#x27;re using a temporary redirect (HTTP 302) so browsers won&#x27;t automatically redirect users when this happens.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; Going forward, I won’t be using AI in this way to create any more web stuff, and I do not use it to anything close to this extent on iOS software<p>That&#x27;s a terrible lesson.<p>It&#x27;s an open source app. Tell you agent to fork it an contribute to it if you have any ideas that might improve it.<p>You don&#x27;t want to build castles anymore if you don&#x27;t own the whole sandbox?",
+            "comment": []
+        },
+        {
+            "text": "Dude, Daring Fireball’s post really shed a light on this matter. Your post here seems like you’re hiding a lot more.",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "&quot;I know where my code came from — but where did all you zombie&#x27;s code come from?&quot;\n<i>-- Temporal Code Agent</i><p>(from All You Zombies, by Robert A. Heineken, 2026, ebook)",
+            "comment": []
+        },
+        {
+            "text": "Claude did it! XD",
+            "comment": []
+        },
+        {
+            "text": "Since the other app is also heavily vibe-coded, it wouldn&#x27;t make sense to kill your own, so I guess in reality this is questionable?<p>&gt; While I had genuinely never seen DarkHours.app before yesterday<p>If only there were a way to share your own commits resulting from your own Claude sessions to verify whether it&#x27;s true...",
+            "comment": [
+                {
+                    "text": "Well if the other app was vibe coded I guess technically there was no copyright to it at all, ironic to talk about stealing in that case. I don&#x27;t care about either party here so don&#x27;t construe this comment as defending the author but I find the situation amusing with the current copyright laws.",
+                    "comment": [
+                        {
+                            "text": "Nobody mentioned copyrights or stealing in this thread.",
+                            "comment": [
+                                {
+                                    "text": "Haha, excellent downvote, thanks. I stand corrected, one other person mentioned the word &quot;copyright&quot; in the time between me searching the discussion for that term, and then writing and posting.<p>There is some copyright discussion on one of the other submissions on this topic.",
+                                    "comment": [
+                                        {
+                                            "text": "Yes not in this thread but in the other submissions lots of people said the author was &quot;stealing&quot; the code but turns out the MIT original wasn&#x27;t even eligible to be under that license as it has no copyright.",
+                                            "comment": [
+                                                {
+                                                    "text": "",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "The author&#x27;s alleged misdeeds aside, even before AI, there were lots of small projects that were similar to one another.<p>I don&#x27;t think that&#x27;s a bad thing, or that it&#x27;s necessarily plagiarism - unless the LLM spews out the other project&#x27;s code from its training...<p>I&#x27;m happy to see multiple takes on the same idea. There are lots of tiny aesthetic and functional decisions that make apps different from one another. Now that implementation is cheaper we should celebrate that.",
+            "comment": []
+        },
+        {
+            "text": "Thank you for your integrity.",
+            "comment": []
+        },
+        {
+            "text": "You accidentally and completely unknowingly came up with an app with the same name that does the same thing down to having the same bug?<p>Nah.<p>This is marketing spam.<p>Get this shit outta here.",
+            "comment": []
+        },
+        {
+            "text": "It is simply amazing that the &quot;the AI ate my homework&quot; routine works on anyone. Like, a single person out there actually falls for this hilarious nonsense?<p>The AI eating his homework wasn&#x27;t even the worst of it, and this whole debacle is just a series of poor decisions and deceptions. Bizarre. Yet there are comments in here praising his &quot;attitude&quot;. Can I interest you fine folks in the Brooklyn Bridge? I&#x27;m selling it for 40% off, today only. Message me.",
+            "comment": [
+                {
+                    "text": "&gt; Bizarre.<p>This is easily the most casually bizarre HN saga that I&#x27;ve experienced...",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Can&#x27;t, you don&#x27;t list an email address on your profile.<p>He fucked up and is owning up to it. Sure we all wish it never happened in the first place, but since he did, we prefer he confess rather than double down and go on offense or something else. The AI didn&#x27;t &quot;eat his homework&quot;. He&#x27;s not a student, this wasn&#x27;t a homework assignment.",
+                    "comment": [
+                        {
+                            "text": "&gt; He fucked up and is owning up to it<p>No? He doubled down hard and proceeded to insult all the readers&#x27; intelligence. Just in case it&#x27;s not clear: no one believes that Claude accidentally created that bug-to-bug ripoff app.<p>Read the link and the previous one: <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": [
+                {
+                    "text": "Isn&#x27;t this post him showing remorse? There&#x27;s really no reason to burn the guy at the stake.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "is there evidence that this person is real ?",
+                    "comment": [
+                        {
+                            "text": "Github activity from 12 years ago should be an indicator: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;tgodier?tab=overview&amp;from=2014-12-01&amp;to=2014-12-31\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tgodier?tab=overview&amp;from=2014-12-01&amp;to=2...</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Terry Godier is a liar and a thief. That&#x27;s all there is to it.",
+            "comment": []
+        },
+        {
+            "text": "Great breakdown",
+            "comment": []
+        },
+        {
+            "text": "I will say this: The first time App Store rejects your app, you feel enraged.<p><i>&quot;These mfs are fuckin with my money, and when you fuck with my money, you fuck with my emotions!&quot;</i><p>So I write a <i>damning</i> blog post that will <i>end</i> Apple!!!<p>It&#x27;s rejected again.<p><i>&quot;Yeah probably because they read my damning blog post, they&#x27;re targeting me now!&quot;</i><p>Submit it again, following their stupid advice to target the right platform.<p>&quot;Rejected again?!! It&#x27;s probably <i>The Jews</i> doing this. It has to be. Who else would try to stop my amazing app from reaching the world???&quot;<p>Submit it again.<p>Approved.<p>&quot;...&quot;<p>&quot;...Oh. Oh yeah, it didn&#x27;t work on iPad before that config change, I see. Hm. Yes you were right actually.&quot;",
+            "comment": []
+        },
+        {
+            "text": "Kudos to the author for taking responsibility and doing the ethical thing here.",
+            "comment": [
+                {
+                    "text": "Ha, keep reading. <a href=\"https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_rejection_of_the_week\" rel=\"nofollow\">https:&#x2F;&#x2F;daringfireball.net&#x2F;2026&#x2F;08&#x2F;retraction_app_store_reje...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "…eventually, after the alternatives failed.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;ll give him credit for taking responsibility, but I have to admit that Claude had nothing to do with the issue.  You could have taken somebody else&#x27;s project with a few uses of curl and git.  There may be many things wrong with Claude or even AI in general, but this isn&#x27;t one of them.",
+            "comment": [
+                {
+                    "text": "He didn&#x27;t really take responsibility?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I love the attitude. Period. And I also understand his personal decision to not use it to create mobile apps, as mentioned. But, I would not follow the same route. There are several open source projects, and just because models were trained with their code, it shouldn’t stop me of creating something similar&#x2F;better, with my “taste” (from another post this week) in mind. We are all different. We should have different options. I fully support open-source, but I support way more the creativity and idea from individuals that can generate something new.",
+            "comment": [
+                {
+                    "text": "That would be true with or without AI. That isn&#x27;t what happened here.<p>Open source isn&#x27;t just code, it&#x27;s an idea, a public square, and a community.<p>Fork a repo and customize to your heart&#x27;s content? Go for it!<p>Fork a repo, change nothing substantial, and publish it with a nearly identical name in the app store and on a nearly identical domain? At the very least, that&#x27;s in poor taste.",
+                    "comment": []
+                },
+                {
+                    "text": "The dude had claude copy a repo bug for bug. Where is the &quot;taste&quot; and &quot;creativity&quot; in that?<p>&gt; I fully support open-source, but I support way more the creativity and idea from individuals that can generate something new.<p>None of that happened here...",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

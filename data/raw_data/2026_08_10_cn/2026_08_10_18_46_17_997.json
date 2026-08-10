@@ -1,0 +1,39 @@
+{
+    "item_id": 49221679,
+    "title": "旅行者1号 FDS 计算机模拟器",
+    "url": "https://zaneham.github.io/voyager-fds-emulator/",
+    "text": "◈ FDS 汇编\n▶ 运行\n⏭ 单步\n⟲ 重置\n加载示例...\n从10倒数\n两数相加\n乘法（重复相加）\n内存分页演示\n◈ 寄存器\nRA（累加器）\n0000\nRB（辅助寄存器）\n0000\nPC（程序计数器）\n000\n周期数\n0\nZERO（零标志）\nOVFL（溢出）\nCARRY（进位）\nBANK（分页）\n◈ 内存\n000:\n0000 0000 0000 0000\n◈ 输出\n� DMA 通道\nMDS\nDSS\nISS\nPRA\n◈ 指令\nMLD\n加载内存→RA\nMRD\n存储 RA→内存\nADD\nRA + 内存\nSUB\nRA - 内存\nAND\nRA & 内存\nJMP\n跳转\nSKZ\n为零则跳过\nSKP\n为正则跳过\nWAT\n停机\nDW\n定义字",
+    "comment": [
+        [
+            "作者还发布了一个 Setun-70 模拟器（一台苏联的三进制计算机，而不是二进制的）：<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;Zaneham&#x2F;setun70-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Zaneham&#x2F;setun70-emulator</a>"
+        ],
+        [
+            "我昨天刚在看这个。显然旅行者1号的架构、ISA等是众所周知的，但旅行者2号由于版权原因仍被美国信息自由法（FOIA）拒绝公开。",
+            "它们会有不同吗？它们相隔16天发射。我一直以为它们的核心硬件基本相同。嗯……现在重新看看维基百科上的页面……"
+        ],
+        [
+            "距离和信号延迟的数字应该是准确的吗？NASA 的页面上的数字差别很大。不过做得很好！<p><a href=\"https:&#x2F;&#x2F;science.nasa.gov&#x2F;mission&#x2F;voyager&#x2F;where-are-voyager-1-and-voyager-2-now&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;science.nasa.gov&#x2F;mission&#x2F;voyager&#x2F;where-are-voyager-1...</a>"
+        ],
+        [
+            "接下来加上真实的信号延迟，这样你必须等待一天才能得到结果"
+        ],
+        [
+            "有没有可能把它连接到某种卫星空间模拟器上来控制一个虚拟的旅行者号？"
+        ],
+        [
+            "如果能包含一些示例程序就太棒了！",
+            "点击右下角的「加载示例」下拉菜单。",
+            "[已删除]"
+        ],
+        [
+            "哇。只有10条指令集？看起来像是 RISC CPU 设计之父",
+            "那时候这种情况很常见。PDP-8 只有八条主要指令，尽管其中一条是多用途的。这在我们没有集成电路的时候有助于保持硬件简单。<p>RISC 的关键不在于指令集小，而在于指令集规整、正交。"
+        ],
+        [
+            "- 愚蠢的问题：这个程序是关于什么的？我们想要实现什么？",
+            "它模拟运行旅行者1号的计算机。<p>我不确定我是否理解这个问题。",
+            "但你是怎么获得 NASA 在它上面运行的真实程序的？",
+            "这不是我的项目，但可能有人有副本。"
+        ]
+    ]
+}

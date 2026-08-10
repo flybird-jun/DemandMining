@@ -1,0 +1,153 @@
+{
+    "item_id": 49235347,
+    "title": "Show HN: Alphabet Soup, a multiplayer game, build the longest word to win",
+    "url": "https://alphabetsoup.club",
+    "text": "I&#x27;ve been working on a simple multiplayer word game called Alphabet Soup.<p>It&#x27;s a bit like NYT Spelling Bee, except it&#x27;s multiplayer and only your best (longest) word counts toward your score. So, instead of trying to find as many words as possible, the game is more about finding one unusually good word.<p>You can play with friends in a private match, or, you can join a public Arena match to play against other players who are online. If no one else is around, you&#x27;ll be matched with a bot.<p>The game works well with just 2 players, but, also works with bigger groups since the game isn&#x27;t turn-based.<p>Would love to hear any thoughts or questions :)",
+    "comment": [
+        {
+            "text": "Very interesting concept! I was a bit confused with the rules though so if there was a 3-4 point list of instructions in the beginning it would be helpful.",
+            "comment": []
+        },
+        {
+            "text": "Nice job. But wouldn&#x27;t accept tnetennba [1]. :)<p>Seriously though reminds me of the game &quot;Countdown&quot; in the series IT Crowd where they compete to find the longest word in a random assortment of vowels and consonants.<p>[1] - <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=g9ixvD0_CmM\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=g9ixvD0_CmM</a>",
+            "comment": []
+        },
+        {
+            "text": "This is a lot of fun! I&#x27;m pleased that I was able to defeat &quot;hitler1488&quot;, but you may want to add some content filtering for the name choosing step.",
+            "comment": [
+                {
+                    "text": "Good idea. And thanks for checking it out!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This seems like a fun way to practice English vocabulary. One thing confused me, though — I thought the goal was to make the longest word using all of the given letters, but it looks like you can also compete with words that don’t use every letter. Is that intentional?",
+            "comment": [
+                {
+                    "text": "Yes, it&#x27;s intentional to allow words that don&#x27;t use all the letters. It can be very tricky to think of a panagram every time (word that has all 7 letters used at least once). Hence, we don&#x27;t require every submission to be a panagram. I&#x27;ll work on making the instructions clearer!<p>There is a bit of an interesting related sharp edge here. Sometimes the longest word for a given set of letters actually does NOT use all the letters! I&#x27;ve thought of a number of approaches to address this tension, but, opted to keep scoring dead simple in the end. I may experiment in the future on this topic though.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;d also like to expand it to work with other alphabetic languages too.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Sorry folks, something broke! Looking into it and will post here with updates.<p>UPDATE #2: Seeing full recovery now (Aug 9, 10 PM PST).<p>UPDATE #1: Looks like Railway is having problems - <a href=\"https:&#x2F;&#x2F;status.railway.com&#x2F;incident&#x2F;RL8FRJE6\" rel=\"nofollow\">https:&#x2F;&#x2F;status.railway.com&#x2F;incident&#x2F;RL8FRJE6</a>",
+            "comment": []
+        },
+        {
+            "text": "Nice!<p>Needs a chat space to say &quot;gg&quot; at the end. It could even be just a button that does <i>just</i> that, if you&#x27;re worried about unmoderated chat. Competitive games feel unfinished without it!<p>I was in second place for the first three rounds and then swept to the front on the last round.",
+            "comment": [
+                {
+                    "text": "OP will probably want to replay events to make it seem real time when there aren&#x27;t enough people to pair with. So a real time chat might not work.",
+                    "comment": []
+                },
+                {
+                    "text": "Adding chat is a good idea, thanks for the input. Thanks for checking it out!",
+                    "comment": [
+                        {
+                            "text": "As well recommend but make it limited chat.<p>A way to salute and say well done does make the experience more fun.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Idea: it would be more interesting&#x2F;competitive if you could immediately see others&#x27; submissions, and if those words were then &quot;taken&quot; and can&#x27;t be reused.<p>Currently you&#x27;re just kind of twiddling your thumbs after you submit and run out of ideas.<p>It was also not immediately obvious to me that you can submit multiple words, so I was wasting time entering and deleting attempts before finally submitting the best one.<p>Finally, instead of fixed timers between rounds, you might want to have a &quot;Ready!&quot; or &quot;Go!&quot; button.",
+            "comment": [
+                {
+                    "text": "Really great points, thanks for commenting.<p>One nuance: if you show others&#x27; submissions right away, the game turns into a &quot;race&quot; where speed matters a lot more. That could be fun too (a different game mode?). I might think about showing something like &quot;Opponent X found A _ _ _ _&quot; or &quot;Opponent X found a 5 letter word&quot;.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Fun game. Would be nice if there was a single player mode that simply prints the letters and at the end shows the longest word that was missed. That way you can play it offline and place a phone in the center of the table and people can play around it with pen and paper or by just thinking of the word and everyone announces at the end.",
+            "comment": [
+                {
+                    "text": "Thanks for checking it out! A single-player&#x2F;offline mode does sound fun too. I do think I will end up adding support for a number of variations and modes.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Super fun, thanks for sharing! Might be handy to explain the rules up top (can&#x27;t seem to see them):<p>- Proper nouns allowed<p>- Can reuse letters<p>- Longest word possible might not  use all the letters",
+            "comment": [
+                {
+                    "text": "Thanks for playing! Yeah you&#x27;re right, rules need to be spelled out a bit better.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Nice. I didn&#x27;t know you could reuse the same letter! How are you handling the multiplayer framework?",
+            "comment": [
+                {
+                    "text": "I&#x27;m using Phoenix LiveView + PubSub to keep everyone&#x27;s browser in sync.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Awesome game. This round was quite funny since the other person got an antonym.<p>Me asexually +18 38\n lessee +12 31\nNoah slays +10 30",
+            "comment": []
+        },
+        {
+            "text": "This is great! No need to require a button click in between rounds IMO. Just start the timer.",
+            "comment": []
+        },
+        {
+            "text": "I like it!<p>UX feedback: I don’t understand when a round ends. Surprised by it each time.",
+            "comment": [
+                {
+                    "text": "There&#x27;s a timer at the top! Perhaps a warning SFX and and some animation is in order. Thanks for the feedback.",
+                    "comment": [
+                        {
+                            "text": "Something stops my r pound way before the timer concludes.",
+                            "comment": [
+                                {
+                                    "text": "Could it be that your device&#x27;s clock is skewed?",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "A word got denied with the error &quot;Word was already used&quot;. I had in fact not used it already, neither had any of the others. That caused me to lose the game, very unsatisfying.\n(nice game otherwise)",
+            "comment": [
+                {
+                    "text": "I think I know what went wrong. Right now, even unscored words are not allowed to be reused. Will post a quick fix. Thanks for the precise bug report!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m the horrible kind of person to go off and use an AI-assisted cheat that can be pasted into the console.  Very fun game, nonetheless!",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Gentle and fun. Reminds me of isketch back in the days of flash.<p>I look forward to playing this with my mother.",
+            "comment": [
+                {
+                    "text": "Thanks for checking it out!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

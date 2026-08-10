@@ -1,0 +1,402 @@
+{
+    "item_id": 49214770,
+    "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+    "url": "https://ancientlibrary.net/",
+    "text": "A complete parsing reader for the classical canon. Click any word in any text for its lemma, morphology, and full dictionary entry — Lewis & Short for Latin, Liddell-Scott-Jones for Greek.\n1060 works · 293 Latin · 767 Greek · 140 authors ·\nbrowse the full A–Z index\nLatin\nEpic\nThe great narrative poems of Rome.\n23 works\nLyric & Elegy\nCatullus, Horace, and the Roman elegists.\n42 works\nTragedy\nSeneca’s tragedies.\n10 works\nComedy\nPlautus and Terence.\n26 works\nHistory\nCaesar, Livy, Sallust, Tacitus.\n16 works\nBiography\nLives of the Caesars and famous men.\n68 works\nOratory & Rhetoric\nCicero and the art of Roman speech.\n48 works\nPhilosophy\nCicero, Seneca, Lucretius.\n22 works\nLetters\nCicero, Pliny, Seneca.\n8 works\nDidactic & Technical\nTeaching in verse and prose.\n5 works\nMyth, Hymn & Religion\nOvid’s calendar and mythological verse.\n12 works\nSatire & Fable\nHorace, Juvenal, Persius, Phaedrus.\n6 works\nProse Fiction\nThe Roman novel.\n4 works\nScience & Medicine\nPliny’s encyclopedia and Roman science.\n2 works\nGrammar & Reference\nGellius’ learned miscellany.\n1 work\nGreek\nEpic\nHomer, Hesiod, and their heirs.\n45 works\nLyric & Elegy\nPindar, Sappho’s heirs, and the Anthology.\n26 works\nTragedy\nAeschylus, Sophocles, Euripides.\n34 works\nComedy\nAristophanes and Menander.\n11 works\nHistory\nHerodotus, Thucydides, and their successors.\n47 works\nGeography & Travel\nStrabo and Pausanias.\n2 works\nBiography\nPlutarch’s Lives and more.\n146 works\nOratory & Rhetoric\nThe Attic orators and the Second Sophistic.\n247 works\nPhilosophy\nPlato, Aristotle, and the Stoics.\n53 works\nDidactic & Technical\nManuals and treatises.\n12 works\nMyth, Hymn & Religion\nApollodorus’ library of myth.\n2 works\nSatire & Fable\nLucian of Samosata.\n71 works\nProse Fiction\nThe Greek novel.\n7 works\nScience & Medicine\nHippocrates, Galen, Euclid, Ptolemy.\n26 works\nGrammar & Reference\nAncient lexica.\n2 works\nBiblical Texts\nThe Greek New Testament.\n27 works\nEarly Christian Writings\nThe Fathers of the Church.\n9 works",
+    "comment": [
+        {
+            "text": "I checked out the page on Caesar&#x27;s The Gallic War and looked at its famous opening line &quot;Gallia est omnis diuisa in partes tres , quarum unam incolunt Belgae , aliam Aquitani , tertiam qui ipsorum lingua Celtae , nostra Galli appellantur&quot;.<p>Apart from the UI around the word parsing pop-up being kind of buggy (it doesn&#x27;t close readily, the scroll position seems to get saved differently depending on the word), I&#x27;m pretty sure there&#x27;s an analytical error in that sentence.<p>The word &quot;nostra&quot; is glossed as Nom Plur Neut; that is, the possessive adjective &quot;noster&quot;, &quot;ours&quot;, in its nominative plural neuter form. &quot;Nostra&quot;, with a short final -a, is indeed the nominative plural neuter form of that possessive adjective. However in that sentence, the word is being used as an ablative singular feminine, with a <i>long</i> final -â (which is unmarked because the text as they present it doesn&#x27;t seem to mark vowel length at all).<p>archive.org has this (<a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;caesarscommentar07caes&#x2F;page&#x2F;n11&#x2F;mode&#x2F;2up\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;caesarscommentar07caes&#x2F;page&#x2F;n11&#x2F;...</a>) 1918 out-of-copyright literal word-by-word translation of the text, which <i>does</i> mark vowel length, and you can see that the translator words the last clause as &quot;the third, (those) who in (the) language of themselves are called Celtae, in ours, Gauls&quot;. nostrâ is modifying an implied linguâ there, which is a singular feminine noun in the ablative case, so nostrâ has to inflect to agree with it - nostrâ [linguâ] translates to &quot;in ours [our language]&quot;.<p>My Latin is self-taught and mediocre at best, but even I was able to spot that error. And The Gallic War is a very famous text that is routinely taught fairly early on in traditional Latin education - a lot of students of Latin over the centuries have read that exact line of Caesar&#x27;s. The fact that the LatinCy neural language model for Latin, which the site claims performed the analysis, screwed this up doesn&#x27;t leave me very confident about the quality of the grammatical analysis in more difficult corners of Latin grammar.",
+            "comment": [
+                {
+                    "text": "&gt; the text as they present it doesn&#x27;t seem to mark vowel length at all<p>I think most Latin text out there won&#x27;t use diacritics at all. I only studied it for 3 years back in high school leading to the AP exam and I don&#x27;t think I was ever taught about them or saw them once. This video <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=D3bmLi1bKI0\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=D3bmLi1bKI0</a> and wiki page <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Apex_%28diacritic%29\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Apex_%28diacritic%29</a> were interesting. I&#x27;d bet part of the reason is just a side-effect of teaching Latin as a dead language where you never speak it &#x2F; pronunciation doesn&#x27;t matter. I remember very little of the language, I believe also in part because of that.",
+                    "comment": [
+                        {
+                            "text": "You are correct: Latin vowel length is usually only indicated in educational material, dictionaries, etc.<p>&gt; just a side-effect of teaching Latin as a dead language where you never speak it &#x2F; pronunciation doesn&#x27;t matter. I remember very little of the language, I believe also in part because of that.<p>You&#x27;re not the only person to have had this insight.  Modern pedagogy often emphasizes using ancient languages spoken aloud, conversationally.  We read Latin aloud in class, and our textbook had Latin dialogues to act out in class.  We used the reconstructed classical pronunciation.  We were graded on our pronunciation.  Mostly as a token though and our teacher allowed some leeway, because it is after all a dead language.  (I found it hard to drop some of the church Latin &quot;ch&quot; for &quot;k&quot;.)<p>With the exception of the Aeneid, all the epic poetry of antiquity was originally oral poetry later written down, and it is obviously meant to be read aloud.  The Iliad, Odyssey, Gilgamesh, Mahabharata, the Chinese Classic of Poetry.  All were meant to be read aloud in performance, and probably they were set to song.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Congrats on self learning Latin. That takes hard work. I adore reading texts on ancient texts that go into possible alternative interpretations. One of my favourite classes in university was on a work of Plato where the professor knew both the Greek, Latin and Arab versions of the text and could get carried away philologically, even philophillically, on how we could alternatively interpret sentences. Reading about deconstructing the origins of say the Bible. Those are scientific works of marvel to me.",
+                    "comment": []
+                },
+                {
+                    "text": "I host a parallel translation of the original book on Peano’s Axioms.  If you have comments on either the Latin or English translation, they’d be very welcome!<p>(My 2 years of high school Latin from a Latin-Mass priest is helpful, but insufficient.)<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;mdnahas&#x2F;Peano_Book&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mdnahas&#x2F;Peano_Book&#x2F;</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Interesting project. I would love if you could switch fonts to something like New Athena Unicode.<p>I built something similar to this by cloning the Diogenes repo and getting Claude to re-implement it in Python (it’s a very old battle tested Perl code base, so a great reference implementation) and using the TLG database for the Greek and Latin texts. You can take this even further by integrating it with the Barrington Atlas (there are scans on Anna’s Archive) for looking up ancient place names, so you have dictionary + map lookups. If you’ve read any of the Landmark series books you’d known what I mean.<p>Also better if you can generate chapter by chapter critical apparatus on difficult grammar and Anki decks. It’s an annoying part of learning these languages to have to stop and look up words, I like spending a few days learning vocab before reading and it makes it so much more pleasant than having to stop and look things up the whole time.<p>Obviously all this stuff is copyright so it can never be shared, but I don’t care it’s for my own personal use. I also bought like 6 hours worth of Ionnis Strattakis’ recordings where he reads a bunch of Ancient Greek in reconstructed Attic pronunciation and fine-tuned a text to speech model (styletts2) with full accent markings and breathings. It’s extremely natural sounding. My long term goal is to have a personal tutor that I can speak Attic to and basically have lessons with everyday (speech to text -&gt; llm-&gt; text to speech). All the pieces are there to actually do this.<p>LLMs have been an absolute game changer for me who is a hobby classicist but also knows how to build software. They are so amazingly good at Attic Greek and Latin, it’s like having the best teachers in the word at your fingertips for some really niche topics that it wouldn’t be possible with otherwise. Also extremely good at managing, building, cleaning up, deduplicating Anki decks.",
+            "comment": [
+                {
+                    "text": "&gt; LLMs have been an absolute game changer for me who is a hobby classicist but also knows how to build software.<p>Definitely! I myself have been having a lot of fun[0] recently using LLMs to enrich one of my favorite beginner Latin readers[1] with audio forced-alignment, POS tagging, morphology, definitions, and other niceties that learners might appreciate.<p>[0]: <a href=\"https:&#x2F;&#x2F;hercules.hookbangsplat.com\" rel=\"nofollow\">https:&#x2F;&#x2F;hercules.hookbangsplat.com</a><p>[1]: <a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;p1fablesoforbili00godl&#x2F;mode&#x2F;2up\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;p1fablesoforbili00godl&#x2F;mode&#x2F;2up</a>",
+                    "comment": [
+                        {
+                            "text": "Here&#x27;s a companion website with similar features: <a href=\"https:&#x2F;&#x2F;latinlanguage.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;latinlanguage.org&#x2F;</a> for an upcoming book: <a href=\"https:&#x2F;&#x2F;www.amazon.com&#x2F;Latin-Tamer-Mastering-Language-Rome&#x2F;dp&#x2F;1567927912\" rel=\"nofollow\">https:&#x2F;&#x2F;www.amazon.com&#x2F;Latin-Tamer-Mastering-Language-Rome&#x2F;d...</a>",
+                            "comment": [
+                                {
+                                    "text": "Nice! I love all the Latin audio, although most of it is well above my level. I&#x27;m always pleased to hear well-pronounced Latin with elision and prodelision. Do you know how the audio is licensed? I&#x27;d love to have my own copy, and am trying to organize a CC-BY-SA archive of spoken word Latin.",
+                                    "comment": [
+                                        {
+                                            "text": "You could ask the author &quot;wardfarnsworth at gmail.com&quot;. I have been in touch with him before about his chess website <a href=\"https:&#x2F;&#x2F;www.chesstactics.org\" rel=\"nofollow\">https:&#x2F;&#x2F;www.chesstactics.org</a> based on his book &quot;Predator at the Chess board&quot;. He was quite responsive.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Kinda font-related, it&#x27;s throwing me off how every V in the Latin texts show as U. I don&#x27;t like how they modernized the spellings in school, but if you&#x27;re not doing that, aren&#x27;t they all V?<p>Also most of the word popups use different spellings, like &quot;iam&quot; becomes &quot;jam&quot;.",
+                    "comment": [
+                        {
+                            "text": "Using either spaces or miniscule letters, is anachronistic for both classical Latin and Greek.  They only had a single case in antiquity and didn&#x27;t usually mark word boundaries.<p>For example:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;File:Trajan_inscription_duotone.jpg\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;File:Trajan_inscription_duoton...</a> (Latin as typically carved in stone)<p><a href=\"https:&#x2F;&#x2F;commons.wikimedia.org&#x2F;wiki&#x2F;File:Herculanean_Rolls_-_Papyrus_157-152.png\" rel=\"nofollow\">https:&#x2F;&#x2F;commons.wikimedia.org&#x2F;wiki&#x2F;File:Herculanean_Rolls_-_...</a> (Greek as typically written on papyrus)",
+                            "comment": [
+                                {
+                                    "text": "Sort of.  Romans didn&#x27;t <i>handwrite</i> like that.  See <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Roman_cursive\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Roman_cursive</a> .  Note that the &quot;u&quot; character in both ancient and late ancient Roman cursive is more like the modern &quot;u&quot;.<p>(Source: not an expert in any way)",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "A web interface to classical texts is going to be anachronistic.<p>If its purpose is pedagogical, it should include macrons, spaces, punctuation, case -- the works. Making every word clickable but leaving the reader to guess at vowel length seems like leaving the job half done.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I would love to learn more &#x2F; collab (for personal use) if there&#x27;s a way to connect with you. I&#x27;m on proton mail if you want to reach out, henrystafford77.",
+                    "comment": []
+                },
+                {
+                    "text": "My favourite ancient greek font is Theano",
+                    "comment": [
+                        {
+                            "text": "I’m going to check that out. My personal favorite is the variant of New Athena Unicode they use in the Cultura Classica books (it’s like Lingua Latina per se Illustrata but for Attic). They made some modifications on some of the characters, noticeably sigma. I might get Claude to clone that font for me so I can use it in my projects.",
+                            "comment": [
+                                {
+                                    "text": "it this font. Theano Modern. It has certain limitations so I had to use a more canonical one for Obsidian<p><a href=\"https:&#x2F;&#x2F;ancientgreek.eu&#x2F;audiobooks&#x2F;epictetus-enchiridion.html\" rel=\"nofollow\">https:&#x2F;&#x2F;ancientgreek.eu&#x2F;audiobooks&#x2F;epictetus-enchiridion.htm...</a>",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m always surprised to see that a large enough portion of the HN community are interested in classics that posts like this make it to the front page. Who are you all? What are you doing here?<p>My undergrad was in classics and viticulture, then did grad school in atmospheric science, which led me to tech and hackernews.<p>How did you get here?",
+            "comment": [
+                {
+                    "text": "I read quite a lot as a kid.  Fiction and non-fiction.  I&#x27;m intensely curious, and the &quot;why&quot; and the &quot;how&quot; of things leads you into new subjects.  It doesn&#x27;t hurt that history is also filled with stories as compelling as most fiction.  Much of the old stuff also holds up quite well.  Meditations by Aurelius is amazing.  Also, Confessions by Augustine of Hippo.<p>I have many interests but botany became a big one, and the scientific naming scheme is mostly Latin and Greek, which leads to some interesting word history.  &quot;Sativa&quot; means anything &quot;cultivated&quot; (example, &quot;Avena sativa&quot; is &quot;cultivated oats&quot; and &quot;Crocus sativa&quot; is &quot;cultivated saffron&quot;).  &quot;Nemo&quot; means &quot;no one&quot; (so the &quot;Search for Nemo&quot; is the search for no one, haha), the root word for &quot;service&quot; means &quot;slave&quot;.  There are many more interesting associations.<p>I find the deepest and most awe-inspiring truths within physics (out of which biology and chemistry are arguably sort of abstractions in terms of order of complexity).  Behind this is a long awkward history of curious people fumbling for answers in the dark.  I am an odd nut, but it is connecting in a comforting way the way I can see others have asked the same burning questions of the &quot;how&quot; and the &quot;why&quot; of things, and the myriad subjects it has lead them to.<p>As John Muir once said: &quot;When we try to pick out anything by itself, we find it hitched to everything else in the universe.&quot;",
+                    "comment": []
+                },
+                {
+                    "text": "I was interested in astronomy as a six-year-old, which led me to Greek myths, which led me to Greek poetry, all of that in translation, as well as Gene Wolfe’s Latro books as they came out.<p>I was learning to program at the same time, following along A K Dewdney’s Computer Recreations column. I went into college to learn pre-med but always found myself more interested in the humanities, like my survey of Greek literature, which was supposed to accelerate my prerequisites. Also hung out with friends in the engineering labs on Sun Sparcstations playing netrek and MUDs, which did for me.<p>Anyway, I pivoted and started taking computer courses, like artificial intelligence, reading from Russell and Norvig, Clocksin and Mellisa, and Paul Graham.<p>I learned Greek while consulting for companies across the country, programming network performance tests, to have something to do in the hotels.<p>Fast forward to 2008, 2009, and I see that the Lispy Hackers and Painters guy had a new website. I started an account but lost it. Or did they reset it after disuse? Anyway, that’s me.<p>Oh, I did take Latin in Catholic high school, but did not really use any of it for reading, just vocabulary, but it did help with the old-style grammar-first Greek texts I learned from.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;m a recently retired software nerd who got into reading 19th century literature. I was greatly inspired by characters in these novels, most of whom had the advantages of a classical education, and I lamented how poor my own was. One day I idly wondered how hard it would be to learn a bit of Latin (as I was constantly having to look up Latin references) and once I discovered LLPSI[0] I was hooked.<p>[0]: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lingua_Latina_per_se_illustrata\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lingua_Latina_per_se_illustrat...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "I was always interested in human linguistics, including but not limited to understanding the classical languages of the Western tradition. In high school I taught myself some Latin from Wheelock&#x27;s, and I&#x27;ve dabbled in trying to learn Greek from time to time as well. Someday I hope to also learn Sanskrit and complete the classical Indo-European trifecta.<p>At one point I was seriously considering attempting an academic linguist career. Fortunately, I was also interested in computers; and as I often tell people who ask me about it, computer programming pays much better (and I&#x27;m glad I didn&#x27;t pursue a humanities academic path for other reasons). Still, it&#x27;s an interest I try to keep up with when I can.",
+                    "comment": []
+                },
+                {
+                    "text": "In some countries classics are still widely taught in middle school&#x2F;high school (as in about 10% of the population taking up Latin). Where I was brought up (Flanders) I&#x27;d guess over 50% of people with an advanced degree took up Latin, maybe 5-10% Greek. In certain circles not taking up Latin and&#x2F;or Greek means you were either not smart enough to do so or you were uncultured. So anyone &quot;cultured&quot; with a CS&#x2F;engineering degree took up Latin.",
+                    "comment": []
+                },
+                {
+                    "text": "Just a general curiosity and desire to understand our world and our history. What first got me into the classics is the fact that they have influenced much of what has come after, and I figured it would be interesting to go back to the root so to speak.",
+                    "comment": []
+                },
+                {
+                    "text": "I think the answer is that the past is as relevant as the future. If people here know both computer programming and classical history, I think that means they have a more rounded view of the world. (The problem in my part of the world, unfortunately is that classical education has often been class based.)<p>The thing that strikes me from ancient texts is not the obvious differences from our day, but the similarities.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;d think there&#x27;s a strong correlation. It&#x27;s a kind of nerd stuff. Greek mythology, classics, train schedules and types, all the space probes and all the NASA stuff, Haskell etc etc. It&#x27;s all very similar.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I became more interested in Latin when learning to sing the Carmina Burana, after already knowing some German and Spanish. I haven&#x27;t learned much beyond that, but still fascinated by it as with all languages.",
+                    "comment": []
+                },
+                {
+                    "text": "I grew up with an awareness of Greek and Latin as part of western heritage education.<p>A lot of role playing games, especially from Square Enix,leverage a lot of Latin and classical education.",
+                    "comment": []
+                },
+                {
+                    "text": "Philosophy and CS double major here, love reading old books. Read a lot of theology and ancient literature. Homeschooling my kids, part of the curriculum is learning Latin.",
+                    "comment": []
+                },
+                {
+                    "text": "Practicing Roman Catholic family with liberal arts education",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "Latin in school from 6th grade onward. And a classical education with many holes and gaps that I am continually filling in.",
+                    "comment": []
+                },
+                {
+                    "text": "Why are you always surprised, especially if it keeps happening?",
+                    "comment": []
+                },
+                {
+                    "text": "All language fascinates me, whether that be natural or formal.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is a nice idea (prettier Perseus) but it really falls down on the substance, which is the morphological tagging. At least in what I read this morning (the beginning of book 13 of the Odyssey) it had no answer or was wrong on maybe 40% of what I checked? I’m sure the overall rate is much better than that but you’re only checking the hard words, usually. Perseus had them all right, for what it’s worth.<p>So kind of the classic 2026 application: a nice-looking app that has 60% of the functionality of something that already exists, in a way that’s 30% broken.",
+            "comment": [
+                {
+                    "text": "It follows that their tagging AI didn’t also learn by … at least taking the Perseus judgment into account?<p>I assume the well marked ‘interlinear’ koinē NT texts online are coming from antecedent bible scholarship and the needs of eg ye olde Protestant bible colleges, and are nearly infallible (theological niceties aren’t likely to intrude! - but maybe I’m wrong)<p>But NT is included in the corpus above, so I wonder if one could conveniently automate a test of their high handedness.  I can’t figure out how to recover their tags etc. Maybe I’m wrong about NT stuff online   <a href=\"https:&#x2F;&#x2F;biblehub.com&#x2F;interlinear&#x2F;romans&#x2F;1.htm\" rel=\"nofollow\">https:&#x2F;&#x2F;biblehub.com&#x2F;interlinear&#x2F;romans&#x2F;1.htm</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Neat! Similar to my graduate thesis, NoDictionaries: <a href=\"https:&#x2F;&#x2F;nodictionaries.com&#x2F;cato&#x2F;de-agri-cultura&#x2F;156\" rel=\"nofollow\">https:&#x2F;&#x2F;nodictionaries.com&#x2F;cato&#x2F;de-agri-cultura&#x2F;156</a>",
+            "comment": [
+                {
+                    "text": "Nice.<p>May I point out that in &quot;Crudam si edes, in acetum intinguito&quot;, that &quot;edes&quot; is more likely to be the future of edere&#x2F;esse &quot;to eat&quot;? (Just guessing by context.)",
+                    "comment": [
+                        {
+                            "text": "Fixed!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I remember encountering NoDictionaries years ago, and love it. Thank you for building it!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Suggestion:  For the pop-up text, <i>bold</i> the meaning of the word so it pops out a bit better.  Due to the formatting of word definitions, you have to go hunting for it in many cases.",
+            "comment": [
+                {
+                    "text": "Also sometimes you have to expand the entry to get to the meaning at all",
+                    "comment": [
+                        {
+                            "text": "And it&#x27;s not immediately obvious how to close a pop-up again.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "And make it faster to load!<p>If these 2 are fixed I’d use it daily",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Clicking out to close a dictionary popup only works if you click empty space within the layout center. This is annoying. On a wide monitor, most empty space is on the sides (where clicking doesn&#x27;t close).<p>It seems some books are missing chapter markings. Revelation, for instance. The verses are numbered, and you can notice when chapters change, but one can be lost when searching for a specific chapter.<p>Dictionary entries are cool, but I would want the <i>in context meaning</i> at least highlighted, so I don&#x27;t have to read the full entry and do that myself.<p>Overall, nice idea but it seems like a very barebones implementation that needs a tremendous amount of polishing to be useful.",
+            "comment": []
+        },
+        {
+            "text": "This is very close to a problem I have also been working on. I built Kevilex for Ancient Greek readers: <a href=\"https:&#x2F;&#x2F;kevilex.com\" rel=\"nofollow\">https:&#x2F;&#x2F;kevilex.com</a><p>It also provides one-click definitions and grammar analysis. The main difference from this project is that it remembers your vocabulary across texts. You can mark words as new, learning, or known. It then recommends texts based on the vocabulary you already know.<p>It also includes flashcard review, sentence explanations, text import, and an Old English library.",
+            "comment": []
+        },
+        {
+            "text": "Love this.<p>The way the Greek is displayed isn&#x27;t very helpful, though. Specifically, any vowel with a grave accent displays the accent as a separate letter, which makes it very distracting to read. I don&#x27;t think it&#x27;s a problem with the encoding, as I can copy the inline text and it displays just fine - though with some weird spaces before commas or periods:<p>ΕΝ ΑΡΧΗ ἦν ὁ λόγος , καὶ ὁ λόγος ἦν πρὸς τὸν θεόν , καὶ θεὸς ἦν ὁ λόγος .",
+            "comment": [
+                {
+                    "text": "I recognise that quote. :) But am I right in noticing a lack of breathings? Unless the tilde indicates it. I&#x27;m not sure of the difference between the acutes and graves here. I am used to seeing only one kind of accent on ancient Greek vowels.",
+                    "comment": [
+                        {
+                            "text": "The breathing marks are clear in the Ancient Library texts (e.g. St John&#x27;s Gospel), but difficult to make out on Hacker News.<p>A propos of breathing marks, iota subscripts, and the three different accent marks of Classical Greek, when I learned it at school we had to remember the breathing marks and iota subscripts, and would lose marks if we omitted them, but we didn&#x27;t need to learn the accents.   Modern Greek now has only (acute) accents, which you need to know to stress the correct vowels, exactly where the accents were in the equivalent Classical Greek words.",
+                            "comment": []
+                        },
+                        {
+                            "text": "There are in fact rough breathing marks there on the articles, stacked under the inverted breve accents.  Which is an alternate form of tilde.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Could vary by text? I see breathing marks in Homer.",
+                            "comment": [
+                                {
+                                    "text": "Modern editions usually use modernized spellings.  There are no breathing marks in the oldest manuscripts; they are a classical innovation (circa 400 BC) several centuries after Homer was first written down (600 BC or earlier).  Though most of Homer as we receive it today is through medieval manuscript copies, and copyists often &quot;corrected&quot; the spellings just like we do today.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I generated a read-along version of Athenaze read by a real native language Greek speaker and I met some of the problems that this web has: the vast amount of vocabulary makes managing a dictionary rather complicated.<p>For tbos version, I gather that a bilingual presentation would be more than necessary: keep Ancient Greek text on a side and display a scholar translation into a selection of switcheable languages",
+            "comment": []
+        },
+        {
+            "text": "Does this have some use case that the Perseus Digital Library doesn&#x27;t already serve?",
+            "comment": [
+                {
+                    "text": "I was wondering the same thing —Perseus has been around since _1987_ &amp; seems to have more features? I guess this is a bit more attractively laid out…",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        },
+                        {
+                            "text": "Note that Perseus considers itself end-of-life; there is an analogous project that&#x27;s supposed to have succeeded it, but I don&#x27;t remember what project that is.",
+                            "comment": [
+                                {
+                                    "text": "It&#x27;s called Scaife[1] and it&#x27;s borderline unusable. Slows to an absolute crawl on my ~2020 machine within a few minutes, and the viewing experience is very uncomfortable. I&#x27;d be really surprised if people preferred it to Perseus.<p>[1]: <a href=\"https:&#x2F;&#x2F;scaife.perseus.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;scaife.perseus.org&#x2F;</a>",
+                                    "comment": [
+                                        {
+                                            "text": "Given your opinions on this, may I ask for your feedback on <a href=\"https:&#x2F;&#x2F;SourceLibrary.org\" rel=\"nofollow\">https:&#x2F;&#x2F;SourceLibrary.org</a>? I’d greatly appreciate it.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Agreed. Scaife supporters are delusional.<p>What should actually be done, and what OP should do, is take the Perseus website and make it so it doesn&#x27;t 503 all the time (it is incredibly unreliable).<p>Then, FOIA the State of California for the pay-to-play data which the UC Irvine-based TLG hoarders are withholding from the public (it is a publicly funded project...) so that the corpus can be meaningfully extended and built upon.<p>The 1990&#x27;s tier html vibe of Perseus is to its great advantage.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Yeah, it&#x27;s awful. I can&#x27;t believe how much of a downgrade it is from the old Perseus Hopper.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Is it not just Perseus with a wrapper?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I tried to find a way to read the entire translation of a given work but I found only being able to highlight a word to see it&#x27;s meaning, not the entire translation. Maybe I missed how to get that from this site? Or is there a site that provides translations of such ancient works?",
+            "comment": []
+        },
+        {
+            "text": "An interesting project. Ancient languages   have always fascinated me, but the effort required to read even a single page of Greek or Latin can be a serious obstacle\nIt&#x27;s nice to see tools that simplify this process. I might even want to give it another try",
+            "comment": [
+                {
+                    "text": "Online tools to simplify this process like Perseus have existed for at least 15 years, and you could view original texts side by side with English for comparison, and original words have all their cross-references hyperlinked etc. All maintained by academics committed to rigorous and nuanced approaches to translation.<p>Ancient Library is some vibecoded alternative that the LLM translation it uses will be incorrect.  Color me unimpressed.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Cool! Enclitic -que should _not_ be broken off as a separate word, though.",
+            "comment": [
+                {
+                    "text": "That plus the spaces between punctuation makes it clear it&#x27;s done for tokenization, but nothing puts it back together again.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;ancientlibrary.net&#x2F;claudian-carminum-minorum-corpusculum&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;ancientlibrary.net&#x2F;claudian-carminum-minorum-corpusc...</a><p>I don&#x27;t get a definition for &#x27;fulgere&#x27;, third word first entence, just a reference to &#x27;fulgo&#x27;.  I can guess what it means though from the more common &#x27;fulgur&#x27;, maybe something adjacent to flashing or lightning, but translations seem a bit sketchy.",
+            "comment": [
+                {
+                    "text": "William Whitaker&#x27;s Words [1] is the best resource I&#x27;ve ever come across for this. &#x27;Fulgere&#x27; is &#x27;to shine&#x27; [2].<p>[1] <a href=\"https:&#x2F;&#x2F;latin-words.com\" rel=\"nofollow\">https:&#x2F;&#x2F;latin-words.com</a><p>[2] <a href=\"https:&#x2F;&#x2F;latin-words.com&#x2F;word&#x2F;latin&#x2F;fulgere\" rel=\"nofollow\">https:&#x2F;&#x2F;latin-words.com&#x2F;word&#x2F;latin&#x2F;fulgere</a>",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "That&#x27;s actually ok. In virtually all Latin dictionaries verbs are listed in the first singular person of the present indicative (e.g. you would find &quot;sum&quot; and not &quot;esse&quot;). It&#x27;s just showing you the dictionary entry.",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s not really very useful in this particular case, as you can&#x27;t actually navigate the &quot;dictionary&quot; any other way than finding the base word form somewhere in the text you&#x27;re looking at.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I love this. I try to read different works of philosophy by getting chatgpt live to narrate it paragraph by paragraph to fully digest it. But newest works it refuses to do that unfortunately. It would be quite amazing to do a second pass on the original Latin works in the same way as well.",
+            "comment": []
+        },
+        {
+            "text": "Is there anything like this for Egyptian and Cuneiform texts?",
+            "comment": []
+        },
+        {
+            "text": "Could stand to have a better Greek font, but this is great stuff. Thanks for sharing.",
+            "comment": []
+        },
+        {
+            "text": "I built myself such a simple lexicon for technical stuff (concurrency vocab - invariant, genetics, stuff like that) - can only recom the practice as vocabulary is clearly a big step difference",
+            "comment": []
+        },
+        {
+            "text": "it would be nice to sort by date or date range as well",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "The Greek font is terrible—it’s using the Modern Greek “acute” accent which looks weird, and commas aren’t supposed to have spaced before them. It’s cool that Perseus did the work that makes this possible though. More info about what edition we’re looking at would be nice too.",
+            "comment": []
+        },
+        {
+            "text": "Vowel lengths on the main text would be great.",
+            "comment": []
+        },
+        {
+            "text": "I like it. Can you make the formatting on parsed words easier to read?",
+            "comment": [
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Wow, I used to spend forever looking up words in Latin books.",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m a bit out of energy at present but I&#x27;ll try to put together a comment.<p>From the point of view of a learner it&#x27;s unfortunate that macrons (diacritical marks for long vowels) have not been added to the text, and that &#x27;u&#x27;s have not been altered to &#x27;v&#x27;s where appropriate.<p>The word-by-word treatment of translation makes this broadly a part of the category of interlinear texts. For comparison here&#x27;s one of the early pages of Max Müller&#x27;s 1864 Sanskrit-to-English interlinear of the <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hitopadesha\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hitopadesha</a> : <a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;firstbookofhitop00ml&#x2F;page&#x2F;2&#x2F;mode&#x2F;1up\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;firstbookofhitop00ml&#x2F;page&#x2F;2&#x2F;mode...</a> . This is part of a revival of interlinear texts, as a resource for language learners, which traces back to John Locke but really caught on in the English-speaking world in the early nineteenth century thanks to James Hamilton. It&#x27;s unusual for &quot;traditional&quot; interlinears in having one row which gives a(n explicit) morphological gloss of each word in the original (the &quot;<i>da, 3 sg. Pres. Par</i>&quot; and so on) in the same column as the original word, an English translation of the word, and (in this case) a transliteration. But morphological glosses are a standard feature of modern &quot;interlinear morphemic glosses&quot; <a href=\"https:&#x2F;&#x2F;www.christianlehmann.eu&#x2F;ling&#x2F;ling_meth&#x2F;ling_description&#x2F;grammaticography&#x2F;gloss&#x2F;index.php\" rel=\"nofollow\">https:&#x2F;&#x2F;www.christianlehmann.eu&#x2F;ling&#x2F;ling_meth&#x2F;ling_descript...</a> made by and for linguists who want to analyse and compare languages, rather than learn them. Linguists&#x27; adoption of modern IMGs seems to have taken off in the 1960s (though some use has been made of interlinears for &quot;serious&quot; linguistic purposes since at least the 1890s beginnings of the Linguistic Survey of India <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Linguistic_Survey_of_India\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Linguistic_Survey_of_India</a> ).<p><a href=\"https:&#x2F;&#x2F;theamericanscholar.org&#x2F;the-new-old-way-of-learning-languages&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;theamericanscholar.org&#x2F;the-new-old-way-of-learning-l...</a> is a very incomplete history of interlinears (the French are especially shortchanged) but probably still the best thing out there in English. See also <a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;interlinear\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;interlinear</a> . (I have to release some things about the history of interlinears myself but I&#x27;m years late at this point.)<p><a href=\"https:&#x2F;&#x2F;shop.hyplern.com\" rel=\"nofollow\">https:&#x2F;&#x2F;shop.hyplern.com</a> (might as well add an affiliate link! <a href=\"https:&#x2F;&#x2F;invi.tt&#x2F;N5VZXP7g\" rel=\"nofollow\">https:&#x2F;&#x2F;invi.tt&#x2F;N5VZXP7g</a> ) and <a href=\"https:&#x2F;&#x2F;interlinearbooks.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;interlinearbooks.com&#x2F;</a> are two publishers offering modern interlinears aimed at language learners. The polished but expensive Legentibus service <a href=\"https:&#x2F;&#x2F;legentibus.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;legentibus.com&#x2F;</a> offers some interlinears too.<p>Guess who Vincent F. Hopper <a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;chaucerscanterbu0000chau_k0e4\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;chaucerscanterbu0000chau_k0e4</a> was for a time married to!",
+            "comment": []
+        },
+        {
+            "text": "I looked at the Latin.  It would be nicer if they used the authors’ real names in the table of contents instead of the mangled and garbled leftovers.  And spelling Iulius with a “J”, how dare they!  But the actual texts themselves seem to be given flawlessly.  No artificial distinctions between “u” and “v” for instance.  Much appreciated.",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        }
+    ]
+}

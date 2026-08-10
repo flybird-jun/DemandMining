@@ -1,0 +1,222 @@
+{
+    "item_id": 49208393,
+    "title": "Kitesurf：运行在 V8 隔离环境中的 Agent 优先浏览器",
+    "url": "https://blog.cloudflare.com/kitesurf/",
+    "text": "我们应该构建自己的浏览器吗？\n这是 Cloudflare 内部每隔几个月就会出现一次的问题。不出意料，这类问题总会引发长长的讨论线程，里面列举了各种理由和有说服力的论据来支持我们去做这件事。浏览器显然是我们每天在电脑上使用的最重要的软件；它可以说是互联网的操作系统。我们是一家致力于帮助构建更好互联网的公司——谁不想接受构建一款新浏览器的挑战呢？\n但我们从未在这样的努力所面临的技术难度与我们通过构建浏览器所解决的独特问题之间找到平衡。因此，这个想法一次又一次被搁置。直到现在。\n神奇的事情发生了：我们到达了一个临界点，我们开发者平台上的一系列强大技术进步成为了现实，同时 AI Agent 的出现以及对新型浏览器的需求也变得至关重要。\n在 Workers 中运行 WebAssembly (Wasm) 现在已经非常成熟。像动态 Workers、基于 SQLite 的 Durable Objects、Worker 间 RPC、服务绑定、更高的 NodeJS 兼容性以及更高的资源限制等原语，为更加雄心和复杂的应用程序打开了大门，而这些在以前是不可能实现的。\n我们的无头浏览器自动化 API 产品 Browser Run 随着 AI 的兴起实现了巨大的增长。Agent 需要浏览器来执行许多任务，在许多情况下没有浏览器它们无法成功。\n但存在一个问题——像 Chromium 这样的浏览器引擎是为人类而非 Agent 构建的，它们带来的开销是 AI 模型根本不需要的。它们消耗大量内存和计算资源，以至于为每个 Agent 提供一个独立实例的成本高得令人望而却步，将 Web 的大部分内容限制为只有那些具有更高参数化知识的最复杂、最昂贵的 AI 模型才能使用，同时将许多其他 Agent 应用拒之门外。\n我们应该为所有 Agent 提供一个在 AI 模型重要方面表现出色的浏览器，即使这意味着在只对人类有用的方面有所欠缺。例如：\nAI 不在乎标签页、主题、浏览器扩展或跨设备同步。它关心的是 token 数量、上下文窗口、可扩展性、性能和成本。\n结构化的、机器可读的内容很重要，但视觉上的完美、流畅的 60fps 滚动并不重要。如果 CSS 解析稍有偏差或渲染不是像素级完美，Agent 也完全可以接受。\n在使用浏览器的 AI 情境下的威胁模型是不同的。提示注入和工具安全等新问题是重中之重。\n面对这些认识，12 周前我们再次提出了这个问题：我们应该构建自己的浏览器吗？这一次答案是：\n是的！\n今天我们宣布推出 Kitesurf，这是一款完全运行在 Workers 之上的全新浏览器，我们专为 Agent 构建，在 Browser Run 中 beta 期间免费提供。\nKitesurf 在常见 Agent 任务（如截图和 HTML 提取）的 CPU 和内存消耗方面比 Chromium 效率显著更高。接下来就是我们如何构建它的故事。系好安全带，内容会变得技术性很强——但我们保证会保持趣味性。\n起源\nKitesurf 的诞生和 Cloudflare 的许多其他伟大创意一样。某人发现了一些有趣的东西，然后不知不觉中他们用一个看似不可能但极具吸引力的想法"nerd sniping"（技术宅狙击）了团队的其他人。\n我们的最初灵感来自 obscura，一个用 Rust 编写的用于 AI 自动化的无头引擎，它"没有 Chrome，没有 Node.js，没有依赖"。\n然后，在 AI Agent 的帮助下，我们尝试将它移植到 Workers。最初效果并不理想。但当我们给 AI 一个扎实的计划和清晰的成功定义——足够详细，让 Agent 能够无限循环并在需要时提出问题——它就成功了。\n被这个（勉强）可行的概念验证所震撼，我们决定让团队放手去做。\n设计决策\n以下是我们开始之前做出的一些设计决策。\n测试，测试，还是测试\n我们知道，从原型到一个能够在生产中大规模执行任务的成熟浏览器，需要大量的工作和迭代。我们不会隐瞒使用 AI 来加速这一过程是关键。但在如此复杂的项目中使用 AI，如何在不失速度的情况下保持代码和结果的质量？答案是提供尽可能多的测试。\n引入 Web 平台测试（WPT），这是理想的设置：它是一套广泛的成功标准，为 AI Agent 提供了清晰的目标来评估功能一致性。我们策划了分配给 Agent 的功能的挑选和顺序，让人类专注于架构工作和审查 Agent 的方法。\n然而，WPT 测试的作用有限：它们衡量的是对 W3C 标准的符合性，而不是浏览器渲染和与真实网站交互的能力。为了弥补这一差距，我们实现了集成测试和视觉回归测试的组合——它对真实网站运行多步 Puppeteer 测试，同时针对 Chromium 和 Kitesurf，不仅比较它做出的断言，还在每一步渲染输出以突出任何不需要的差异。\n尽可能使用 Rust\nCloudflare 一直致力于在 Workers 中为 WebAssembly (Wasm) 提供出色的支持。这很棒，因为我们可以使用高性能的 C、C++ 和 Rust 包，并将它们编译为 Wasm。如果我们使用 Emscripten（例如）及其多层模拟依赖项，编译后的二进制文件会变得臃肿缓慢。\n相反，我们尽可能选择原生 Rust，并使用 wasm-bindgen 直接编译为 WebAssembly，从而避免不必要的模拟层，尽可能接近硬件运行，并且可靠。\n异常处理\n浏览器必须在不丢失其持有的页面的情况下渲染整个不可靠且有时充满敌意的 Web，因此异常处理不仅仅是卫生问题——它是应用程序在不直接崩溃的情况下从错误输入中存活的方式。\n所以我们一开始就承诺一条规则：任何失败都会降级为空白帧或缺失元素，绝不会是死会话。在每个边界捕获故障，默认为安全且空的内容，并记录足够的信息以进行诊断。\n隔离\n与在笔记本电脑上运行浏览器相反（在那里你访问你信任的站点，并且可以在它们之间共享一些资源是可以接受的），Agent 被指向任务要求的任何内容：来自任意源的任意代码。\n因此，我们在假设每次页面加载都是不可信输入、每个会话都从全新开始的基础上构建了这个浏览器。每个组件都是隔离的，并且只能访问其功能严格必需的资源。\n这似乎与 Cloudflare Workers 是完美契合，其安全模型围绕设计即隔离构建。但平台只为我们提供了隔离之间的边界。我们仍然必须在应用程序级别强制执行相同的原则，决定允许每个组件接触什么，并确保没有任何东西跨越不应该跨越的页面。\n尽可能无状态\n状态是使失败变得昂贵的原因——如果没有需要重建的内容，从崩溃中恢复只是启动一个新的并重放请求。无状态组件本质上是可处置且并行的：在它停滞的瞬间将其杀死，同时运行一千个，并根据需求调整其大小，而不是保持它们的热状态。这非常适合自动化，负载以突发形式到来，而你能做的最便宜的事情就是启动只消耗其使用成本并在完成后消失的工作。简而言之，\n任何可以无状态的组件，都应该是无状态的。\n我们是如何构建的\n有了好的计划、广泛的测试和良好的工具环境，我们已经准备好超越最初的概念验证。这是 Kitesurf 请求的非常高级的生命周期，至今仍然适用：\n让我们深入了解使 Kitesurf 工作的三个主要组件：Engine、PageScript 和 PageRenderer。\n从源站获取\n为了呈现不可信的网页，浏览器必须从互联网上获取任意资源——图像、字体、CSS、JavaScript 和 Wasm 文件。这是浏览器能做的最危险的操作之一。\nKitesurf 通过一个单独的组件 SandboxOutbound worker 完成此操作，其他任何组件都不能直接接触网络——由 Dynamic Workers 强制执行。Engine 使用它来引导页面，获取主文档及其脚本，而 PageScript 获取其他所有内容：样式表、图像、字体以及页面自己的 fetch() 调用。\n我们使用 SandboxOutbound 来强制 CORS、注入浏览器形状的头部、过滤响应，并将每个页面的 cookie 保存在它们自己的 jar 中。任何不符合我们策略的内容都会得到 403——每个组件都精确地获得它需要的网络，仅此而已。\nEngine\nEngine 是 Kitesurf 唯一面向公众的组件。它处理 Chrome DevTools Protocol (CDP) WebSocket 和 HTTP REST API，提供一个对内部测试有用的登录页面，最重要的是，它存储每个会话状态。所有其他组件都是无状态的。\n使用 CDP 的优势在于客户端兼容性：\nPuppeteer、Playwright、chrome-remote-interface 以及实际的 Chrome DevTools 前端。将它们指向 Kitesurf，它们都可以正常工作。这也是 Browser Run 的工作方式（稍后会详细介绍为什么这很重要）。\n与名称所暗示的相反，Engine 实际上是 Kitesurf 组件中最简单的。精彩的部分接下来才到来。\nPageScript\nPageScript 很好地展示了我们新 Workers 功能的力量：在本例中是 Dynamic Workers。 在此之前，Kitesurf 根本不可能实现。\n以下是 PageScript 内部工作原理的简化图。\n每个下一页或跨进程 iframe（OOPIF）都使用 Dynamic Workers 来启动一个长寿的 PageScript 隔离，该隔离处理页面会话，由干净的 globalThis 和 DOM 文档对象组成。\n然后，DOM 对象通过解析 HTML 文档和运行所有 JavaScript 脚本的结果填充。对于 HTML 和 CSS 的解析，我们使用 Blitz（一个模块化渲染引擎）的部分组件，以及 Firefox 的高性能 CSS 解析器 Stylo，两者都用 Rust 编写。\n对于找到的每个 <script> 标签或 .wasm 文件，我们在同一个隔离中运行 JavaScript 和 WebAssembly 代码。\n是的，但 evals\n你可能会问：evals 怎么办？Evals 处理起来比较棘手，因为出于安全原因，我们在 Workers 中仍然不支持原生 eval。我们也不能启动另一个隔离来处理它们，因为它将无法访问 globalThis。\n我们的解决方案是使用 Boa JS，一个用 Rust 编写的 ECMAScript 引擎，在 Workers 上编译和运行。我们基本上是在一个运行时之上执行一个运行时，这看起来似乎并不理想，事实上确实如此，但它足够好，可以处理代码中偶尔出现的 evals。未来，当原生 eval 支持在 Workers 中上线时，我们将迁移离开 Boa。\nPageRenderer\n该组件本质上负责从计算出的页面对象生成实际的像素。以下是它的工作方式：\nPageRenderer 与 Engine Worker 在一个循环中工作。每当 engine 需要一帧时，PageRenderer 从 PageScript（也称为场景）获取页面对象，从 Static Assets 获取内部字体和图像，将所有内容栅格化为图像缓冲区，然后以客户端可以显示的格式（如 JPEG/PNG 或 PDF）将缓冲区返回给 engine。\n这里的大部分魔力由另一个 Blitz 模块 blitz-paint 处理，它又使用 Parley 来将字符塑造成字形、选择字体并将文本分成行。\nWorkers 的内置 RPC 系统：同一个应用程序，多个隔离\nCloudflare Workers 有一个内置的远程过程调用（RPC）系统，允许你调用其他 Workers 上的方法，在它们之间传递对象，并调用这些对象上的方法。你不必担心 API 模式、类型或身份验证，只需调用 remoteFunction(...params) 即可工作。你将受益于远程 Worker 的隔离和资源，而不会失去使用 JavaScript 在本地访问其所有功能的便利。\nKitesurf 使用此 RPC 系统：Engine Worker 通过 RPC 使用单次调用从 PageRenderer Worker 调用 renderFrame() 并以 PNG 作为结果。由于渲染器不持有页面状态（只有可处置的缓存），engine 可以在任何失败或卡住的 RPC 调用上安全地终止并重新启动它——使每个渲染请求都是自包含的、可重试的，并且其隔离廉价且一次性。\nKitesurf 通过了 215,000+ 个 WPT 测试，且还在增长\nKitesurf 是有效的。它已经通过了大约 215,000+ 个 WPT 测试，并且我们每周都在添加数百个通过的测试。在这里你可以看到自我们开始该项目以来的演变过程，直到最新版本：\n值得注意的是，浏览器中对 Agent 重要的部分（如 CSS、DOM、HTML、selection、SVG 和 XHR）已经具有良好的覆盖率。即使是那些在 Agent 上下文中可能并不特别重要的东西，如 streams，现在也得到了相当好的支持。\n在性能方面，Kitesurf 表现相当不错。以下是跨 14 个 URL 语料库的 Browser Run quick-action 运行的五次中位数比较了 Chromium 和 Kitesurf。\n指标\nKitesurf\nChromium（热池）\nKitesurf，相对值\nCPU：截图\n380 毫秒\n1,173 毫秒\n比 Chromium 少 3.1 倍 CPU\nCPU：HTML 提取\n229 毫秒\n877 毫秒\n比 Chromium 少 3.8 倍\n内存：截图\n57.8 MiB\n271.0 MiB\n比 Chromium 少 4.7 倍\n内存：HTML 提取\n39.4 MiB\n273.7 MiB\n比 Chromium 少 7.0 倍\n挂钟时间：截图\n1,148 毫秒\n637 毫秒\n比 Chromium 慢 1.8 倍\n挂钟时间：HTML 提取\n820 毫秒\n472 毫秒\n比 Chromium 慢 1.7 倍\nChromium 在秒表上获胜是因为一个已经见过此页面的 JIT 总是胜过冷启动的软件渲染器——今天确实如此，大约快 1.7 倍。大部分差距来自栅格化和 JPEG/PNG 编码，我们将继续优化。\n但 Kitesurf 在内存和 CPU 上获胜，这才是真正影响你账单的指标，比 Chromium 使用的内存和 CPU 少 3-7 倍。更少的内存意味着我们可以运行更多会话，更好地扩展，并从根本上降低我们和你双方的成本。\n所有测试中最重要的一个：Kitesurf 可以运行 Doom\n我们在设计决策中强调了测试的重要性，但我们都知道，无论你有多少测试，一个项目只有在 Doom 能在其上运行时才算真正完成。这是 Kitesurf 从我们几年前的 Doom 实验中运行 https://silentspacemarine.com/ 的画面。\n立即在 Browser Run 中试用\n你今天就可以在 Browser Run 中试用 Kitesurf，beta 期间免费提供，但有每个账户的限制。\nBrowser Run CDP 端点现在支持将 Kitesurf 作为选项，因此你现有的客户端 Puppeteer、Playwright、chrome-remote-interface 或任何讲 MCP 和 CDP 的 AI Agent 都可以工作。你需要做的只是将 browser=kitesurf 参数添加到我们的端点。\n例如，要在 Opencode 中使用 Kitesurf，请参阅我们开发人员文档中的与 MCP 客户端（CDP）一起使用，并使用以下配置：\n{\n\"mcp\": {\n\"kitesurf\": {\n\"type\": \"local\",\n\"command\": [\n\"npx\",\n\"-y\",\n\"chrome-devtools-mcp@latest\",\n\"--wsEndpoint=wss://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/browser-run/devtools/browser?browser=kitesurf\",\n\"--wsHeaders={\\\"Authorization\\\":\\\"Bearer <API_TOKEN>\\\"}\"\n],\n\"enabled\": true\n}\n}\n}\n使用 Kitesurf 的另一种方法是通过 Browser Run 的 Quick Actions。同样，只需将 browser=kitesurf 添加到 quick action 端点即可工作。例如，如果你需要来自 Wikipedia 的快速截图，这将正常工作：\ncurl -X POST 'https://api.cloudflare.com/client/v4/accounts/<accountId>/browser-run/screenshot?browser=kitesurf' \\\n-H 'Authorization: Bearer <apiToken>' \\\n-H 'Content-Type: application/json' \\\n-d '{\"url\": \"https://example.com\"}' \\\n--output \"screenshot.png\"\n使用 Chrome DevTools 试用 Kitesurf Playground\n开始探索 Kitesurf 的另一个选项是使用我们的公共 playground。你可以输入任何 URL 来查看 Kitesurf 如何呈现页面并与之交互。\nplayground 的一个有趣功能是我们在 UI 中注入了 Chrome DevTools，因此你可以在 Kitesurf 呈现页面时检查展开的 DOM 元素、读取控制台消息以及观察网络活动。更重要的是，我们实现了 Memory 面板所需的 CDP 指令来报告每个隔离的 WebAssembly 占用情况，包括帧，因此你可以清楚地了解每个页面正在消耗的资源。\n查看我们的开发者文档以获取有关如何在 Browser Run 中使用 Kitesurf 的所有详细信息。\nKitesurf 在什么时候更好？\n截至今天，Kitesurf 正确呈现了如下页面：TodoMVC（vanilla、React、Vue、Angular、Preact）、Wikipedia、Hacker News、Cloudflare Blog 以及大部分 Cloudflare 仪表板。我们将继续改进 Kitesurf 并增加通过的 WPT 测试的百分比，以提高更复杂 Web 页面的兼容性。\nKitesurf 非常适合需要呈现页面但可以接受不使用功能齐全、像素完美的 Chromium 浏览器所带来的权衡的 AI Agent。它也非常适合依赖一次性 Quick Actions 的自动化和应用程序，例如从页面提取内容或为兼容站点生成 PDF 或截图。\n将 Kitesurf 视为一个临时的、完全隔离的、无状态的引擎，旨在仅在任务期间存在，能很好地适应突发的、AI 驱动的工作负载。\nKitesurf 还不能做什么\n如果你需要播放视频、呈现 WebGL、协商具有真实 TLS 指纹的机器人质询握手，或启动需要持久状态的十分钟身份验证会话，Kitesurf 还不是正确的选择。只需使用 Browser Run 的默认设置，它由 Chromium 提供支持。\n了解特定站点是否与 Kitesurf 兼容的最佳方法是尝试。你可以通过使用 API 来做到这一点，或者更快地，在我们的公共 playground 中尝试它。\n探索 DevTools 面板并查看幕后发生的事情，特别注意控制台和内存指标。\n发展方向\nKitesurf 才十二周大。第一次提交是在五月。以下是我们正在积极努力的一些事情：\n更好的 CDP 覆盖。\nKitesurf 实现了 CDP 协议的一个子集——足以覆盖大多数 Agent 和自动化工具的要求，包括强大的 DOM 和网络检查——我们将继续扩展其功能，使其尽可能完整。\n渲染保真度 用于截图和 PDF，因为我们知道 LLM 通常可以从图像中比从底层文本更好地工作。\nWPT 覆盖率。\n我们正在快速迭代以添加更多 Web API 并通过更多 WPT 测试，以使 Kitesurf 达到生产就绪的道路上。\n效率。\n我们一直在运行 CPU、内存和挂钟时间基准测试，并与其他开发者平台团队紧密合作，使 Kitesurf 尽可能具有成本效益和效率。\n最后的说明\n感谢你一直读到这里——我们知道这是一篇又长又技术性的博客文章，但希望也是有趣的。我们详细介绍了是因为我们不会轻视构建新浏览器的重要性，但也不会轻视其复杂性，即使是一个非常特定的浏览器。\nKitesurf 还处于早期阶段，但我们想尽快向你开放并从你的反馈中学习。团队将积极改进它，并频繁更新，重点关注性能、效率和兼容性。\n最后一件事：我们将在准备好后开源 Kitesurf——希望很快。我们的目标是让任何客户都可以在他们自己的账户上部署他们自己的 Kitesurf 版本，如果他们愿意的话。\n所以请在 playground 中试用，关注我们的 changelog，并在 Discord 上与团队聊天。分享你的经验并向我们发送反馈；我们会倾听。\n相关标签\nAgents\nAgents Week\nAI\nBrowser Rendering\nBrowser Run\nDeveloper Platform\nDevelopers\nProduct News\nRust\nWebAssembly\n在社交媒体上关注\nCloudflare\nCelso Martinho\n订阅以接收新文章的通知\n电子邮件地址\n我们绝不会分享你的电子邮件地址。\n订阅\n感谢订阅！检查你的收件箱以确认。",
+    "comment": [
+        [
+            "这是构建在 Blitz 之上的（<a href=\"https://github.com/dioxuslabs/blitz\" rel=\"nofollow\">https://github.com/dioxuslabs/blitz</a>）：我过去 2.5 年一直在构建的一个新的模块化（开源）浏览器引擎。",
+            "（我没有参与 kitesurf 的构建，但我被告知他们打算开源并向上游提交他们的补丁）",
+            "有计划支持 webdriver bidi 用于自动化吗？（我很乐意帮忙！）",
+            "[编辑：对于不经常 nerd out 于浏览器自动化协议的其他人：webdriver bidi 是一种新的 W3C 跨浏览器标准，受 CDP 启发——主要魔法是升级到 websockets 以及标准化网络级流量的捕获。CDP 和 BiDi 之间仍然存在功能差距（在规范和实现中），但从长远来看，我认为我们应该押注于 Web 标准，而不是由一家公司控制的专有协议。",
+            "（披露：我创建了 selenium 和 appium 项目。）",
+            "> 从长远来看，我认为我们应该押注于 Web 标准，而不是由一家公司控制的专有协议。",
+            "完全同意。",
+            "不确定你是否参与 WebDriver Bidi 的开发/规范流程，但目前最大的限制是它几乎不支持 Chrome Devtools Protocol (CDP) 和 Firefox Devtools Protocol (FDP) 所服务的 devtool 检查用例。",
+            "Servo 和 Ladybird 浏览器都有 FDP 实现（Blitz 有一个进行中的 CDP 实现）就是这个原因。但如果一个单一的标准化协议具有所需的特性，我们都很乐意切换到它。",
+            "感谢额外的背景。我与从事该协议开发的开发人员关系友好，但正在寻找方法为他们获得更多支持。"
+        ],
+        [
+            "这是构建在 Blitz 之上的（<a href=\"https://github.com/dioxuslabs/blitz\" rel=\"nofollow\">https://github.com/dioxuslabs/blitz</a>）：我过去 2.5 年一直在构建的一个新的模块化（开源）浏览器引擎。",
+            "（我没有参与 kitesurf 的构建，但我被告知他们打算开源并向上游提交他们的补丁）",
+            "它绝对在"最终可能很好的事情"列表上。它在我个人构建优先级列表中并不是很靠前，但如果你想构建它，我想我们会接受补丁（尽管我理想情况下想先看到一个实现计划）。",
+            "（如果 kitesurf 确实向上游提交他们的补丁，那么我们大概会得到一个基于 CDP 的自动化 API 作为其中的一部分）",
+            "好的，很酷。看来我也应该和 cloudflare 的好人们聊聊。"
+        ],
+        [
+            "Blitz GitHub 页面说："Blitz 目前处于预 alpha 状态。".."我们还不建议用它构建应用程序。"",
+            "已经在 Blitz 之上构建东西是个好主意吗？"
+        ],
+        [
+            "我希望 Cloudflare 雇佣、赞助，或者至少捐赠一大笔钱给你。",
+            "如果我没记错的话，他们已经被 Dioxus 雇佣来从事 Blitz 的工作了。"
+        ],
+        [
+            "你是否在 Webkit 之外有效地构建一个单独的渲染器？",
+            "只是好奇你对 Webkit 是如何架构的想法，我想它不是一个模块化系统，你可以分离出像 "Localstorage" 支持这样的东西？",
+            "> 你是否在 Webkit 之外有效地构建一个单独的渲染器？",
+            "是的，它是独立于 Webkit/Blink/Gecko/Servo/Ladybird/等的全新引擎",
+            "> 只是好奇你对 Webkit 是如何架构的想法，我想它不是一个模块化系统，你可以分离出像 "Localstorage" 支持这样的东西？",
+            "老实说，我对 Webkit 的架构不是超级熟悉。它是一个庞大的代码库，而且它还是 C++，这总是相当令人生畏。我相信 Webkit 比大多数其他项目更模块化，但 Blitz 在模块化方面走得相当极端：",
+            "- 核心不与 HTML 解析器耦合",
+            "- 核心不与网络耦合",
+            "- 核心不与渲染后端耦合",
+            "- 核心不与窗口/输入层耦合",
+            "- 核心不与 JS/脚本引擎耦合",
+            "- 样式引擎（Stylo - 与 Servo 和 Firefox 共享）大部分作为库实现，可以独立使用",
+            "- 布局引擎大部分实现在两个库中，可以独立于引擎的其余部分使用（Taffy 用于 Flexbox/Grid/Block 布局，Parley 用于 Text/Inline 布局）",
+            "所以，是的，我希望一旦我们实现了像 localstorage 这样的功能，就可以单独选择加入，但它的模块化程度更进一步。"
+        ],
+        [
+            "100%！"
+        ],
+        [
+            "我并不反对这个想法，但 Cloudflare 真的应该拆分自己并剥离 CDN 和 DDOS/网络安全公司，如果它也要做 agents 的话。",
+            "这两个感觉像是对立的团队，我认为它们今天并没有勾结，但这种状况能持续多久，这似乎非常可疑。我作为一个长期的 cloudflare 用户这么说，我欢迎使平台对 agent 友好并添加 agent 特定的部署云东西，比如 Cloudflare OS，这也是我可以接受的。",
+            "但这有点走得太远了，接下来是 AI 僵尸网络来从受 Cloudflare 保护的站点抓取内容吗？我不想显得有特权，但我们真的应该得到更好的。",
+            "看到他们从'就是'机器人保护平台转变为根据他们将阻止的机器人'种类'进行差异化，这是相当奇怪的，因为他们现在正在促成他们以保护反对而闻名的确切机器人自动化类型。",
+            "鼓励甚至可能从围栏两边获利肯定不是明智的商业行为吗？",
+            "看着它让人感到恶心，因为你可以感觉到这将走向何方。",
+            "他们正在为其他人削弱 AI 的能力，然后构建新工具来销售 AI 赋能。",
+            "他们可能会让他们的客户付费绕过他们的保护方案，这将完成这个循环。",
+            "这真的让我很不舒服。",
+            "这 100% 应该是不同的公司。我对 Cloudflare 正在构建这种技术感到不安全。"
+        ],
+        [
+            "从本文链接到的页面 <a href=\"https://developers.cloudflare.com/browser-run/\" rel=\"nofollow\">https://developers.cloudflare.com/browser-run/</a>：",
+            "> 在 Cloudflare 的全球网络上运行无头 Chrome 用于浏览器自动化、Web 抓取、测试和内容生成。",
+            "Cloudflare CDN 是否允许这些浏览器实例绕过他们自己的反机器人机制？或者 Cloudflare CDN 会像阻止来自不同提供商的抓取机器人一样阻止它们？",
+            "在 Cloudflare Workers 中的 Kitesurf 会获得绕过 Cloudflare CDN 保护内容的特殊权限吗？",
+            "来自 Chromium 或 Kitesurf 的 Browser Run 请求始终被 Cloudflare 标识为机器人流量。<a href=\"https://developers.cloudflare.com/browser-run/faq/\" rel=\"nofollow\">https://developers.cloudflare.com/browser-run/faq/</a>",
+            "我们还有一份记录的 UA 并使用 Web Bot Auth 签署我们的请求：",
+            "<a href=\"https://developers.cloudflare.com/browser-run/reference/automatic-request-headers/\" rel=\"nofollow\">https://developers.cloudflare.com/browser-run/reference/auto...</a>",
+            "不，它没有，而且它根本没用。他们一直试图让发布者能够向抓取者收费，所以这就是他们大力推动这条道路的原因。"
+        ],
+        [
+            "有人能给我举些例子说明你在浏览器中在哪里使用 agents 吗？我听过高管们吹嘘说"人们用 agents 帮他们买东西"，但我实际上没见过。",
+            "> <i>我听过高管们吹嘘说"人们用 agents 帮他们买东西"，但我实际上没见过。</i>",
+            "我妻子真的不喜欢为我们每周的杂货配送建立购物车，所以我用 earendil 的 npm 库构建了一个 agent...东西。它接收我妻子决定的菜单，与她讨论配料（如果它之前没见过食谱），然后使用 Chrome 的 devtools 协议前往 Walmart 并将所有东西添加到购物车。",
+            "它工作得相当好，并使用我在 Mac Studio 上运行的本地模型。",
+            "> 使用本地模型",
+            "这太棒了。上次我检查时，能够在普通（任何低于专用 GPU 机架的硬件）上运行的模型非常差劲。",
+            "是的，它们很棒。我使用一个小的 Qwen3-4B-Instruct 作为"行动者"agent，它会访问网站、搜索一批项目、决定哪个最符合条件，然后将它们放入购物车。然后我有 Qwen3.6-35B-A3B 作为"编排者"agent（它只是我日常使用的），它负责与我的妻子讨论菜单、食谱和配料，并告诉较小的 agent 根据我们的品牌偏好、饮食限制等将什么放入购物车。",
+            "我可能现在可以放弃较小的 Qwen，但当我第一次构建这个时，我遇到了搜索结果和购物车数据填满主 agent 上下文的问题。",
+            "Walmart 是否一直提示你"按住"反机器人请求？我有一个类似的项目，在 walmart 上一直收到这些。",
+            "不！一次都没有，这让我感到惊讶。我们已经用它进行了大约 6 次杂货采购，它从未被任何反机器人检测阻止。也许是因为我已经登录到我的 Walmart 账户，或者因为它使用 Chrome 的 devtools 协议来控制浏览器而不是像 Puppeteer 这样的东西？",
+            "你已通过身份验证可能是最大的帮助，是的。",
+            "检测普通的 CDP 会话是微不足道的。",
+            "计算风险状况有许多参数，包括拥有住宅 IP 号码。我认为你有那个。",
+            "我正要说我在使用 Apple 的 iCloud VPN，但我认为 Chrome 实际上在 Mac 上没有使用它。我认为你是对的，这可能是我的住宅 IP。",
+            "playwriter.dev 将重用你现有的会话或 cookie，当我需要从我的常规 chrome 配置文件中完成的事情时，我真的喜欢它而不是 cdp（你也可以在 chrome 上创建单独的配置文件，以便 agent 仅使用该文件或类似的东西）",
+            "我不太确定，但 playwriter 很可能将污染你现有会话的全局命名空间。",
+            "[已删除]",
+            "非常有趣！"
+        ],
+        [
+            "我使用它们来找到符合我特定参数的产品。商店和价格比较网站通常不会为你提供其所有参数上的过滤器，也不会在列表视图中显示所有参数。",
+            "我还告诉我的 agents 从我浏览的网站中删除烦恼，重新排列内容以便我更容易查看。例如，当有人发布一个表格将他们新发布的 AI 模型与其他人进行比较时，我告诉我的 agent 在页面上的每个表格中突出显示每个基准的最高结果。我可以用一点 JS 自己做到，但既然 agent 可以为我编写，为什么还要麻烦呢。我向我的 agentic 浏览器添加了一项功能，让 agent 为我编写用户脚本，我可以通过按一下按钮来触发。",
+            "我还会问我正在浏览的页面上（用我不理解的语言或只是在杂乱中）是否有特定信息的 agents。",
+            "有一次我让 agent 为我（粘贴名称的）十几个项目放入购物车，因为该电商网站没有方便的方法来做到这一点。",
+            "所以基本上是 Grease Monkey 加大剂量 + TL;DR;whaat？",
+            "本地 Qwen3.6 智能地完成所有这些，但我可以选择切换到远程更强的模型。"
+        ],
+        [
+            "这通常是偶然的。Costco 的收据不容易获得。你访问一个列出所有收据的特定页面，然后对于每个日期你点击查看收据并查找你想要的东西。你不能真正搜索，因为东西会被标记为 SHWR103 之类的东西。",
+            "我没有"使用 agent 查找收据"，以那种我专门构建一个的方式。我只是问了我在 telegram 上交谈的现有 agent，通过拍摄我想知道我们是否可以退货的东西的照片，而我在换尿布的时候它一直在工作，到我们准备好出发的时候，它可以告诉我我们是否确实在 Costco 购买了它以及何时，所以我可以知道我是否可以退货。"
+        ],
+        [
+            "对于任何糟糕的 Web 管理 UI：",
+            "- Apple Appstore Connect（发布应用程序的无数元数据表单）",
+            "- AWS",
+            "- DigitalOcean",
+            "- Google Play Store",
+            "每当我因为知道听起来简单的任务需要我点击无数菜单而害怕登录时，我都会使用 agent 浏览器。当然有确认。但是，当 agent 点击这些（通常非常慢的）UI 时，我可以做其他事情。一旦需要权限，我就会阅读、决定并行动。"
+        ],
+        [
+            "我一直很想用一个 agent 来帮我找到不糟糕的座位去看 70mm imax 版的奥德赛。但这也是那种受到反机器人检测器严格保护的东西。"
+        ],
+        [
+            "我经常使用它来浏览网站以获取 Web/应用程序设计灵感，然后基于它制作情绪板并发送给我。为我节省了很多手动浏览时间。"
+        ],
+        [
+            "如果可以的话，我会用它们来解决验证码。",
+            "哈哈"
+        ],
+        [
+            "Web 抓取是 LLM 之前实现 Web 上挠自己痒痒自动化的老方法。你用 Web 浏览器手动做的任何事情。它也用于企业环境以与糟糕的"企业"软件接口，在那里称为 RPA。这种事情是那些的逻辑 AI 进展。",
+            "tldr；为了解决 Web 应用程序中公共 m2m API 的缺失（或缺点）"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "只是为了在上下文中抛出，另一个 agentic 浏览器（无头）：<a href=\"https://lightpanda.io/\" rel=\"nofollow\">https://lightpanda.io/</a>"
+        ],
+        [
+            "我很感兴趣！沙盒空间有如此多的动态。有人能告诉我 V8 沙盒与比如 Fireworks 相比如何，或者他们是否选择了一个而不是另一个？我认为，从技术角度来看，很好的是我们已经在浏览器中拥有了整个沙盒（虽然有一点 chrome），但有人告诉我为什么不应该以这种方式使用它"
+        ],
+        [
+            "（让我们低调进行）",
+            "是时候用另一种方法来运行你的 agent 的 Web 搜索了（或者通过模拟浏览器签名），可能内置 cf 绕过！"
+        ],
+        [
+            "有点元的感觉，用 rust 构建的 js 引擎，编译成 wasm，运行在 cloudflare workers 中，它本身又是另一个 js 引擎（v8 隔离）",
+            "确实如此！但它有效。原生 eval 支持将会在某个时候出现在 Workers 中。当这种情况发生时，我们将重新评估 Kitesurf 的架构。迁移应该不难，我们现在已经准备好了所有逻辑。"
+        ],
+        [
+            "Cloudflare 这些天似乎只写 Rust……",
+            "值得庆幸的是，希望其他人都能跟上，这样我们就可以摆脱 node/JS 这个坑。"
+        ],
+        [
+            "很高兴看到 wpt.fyi 被用来帮助验证这款新浏览器！另外 BiDi 也不能来得太快。",
+            "正如我们在博客中解释的，测试——特别是 WPT 测试——对于如此快速地将 Kitesurf 启动至关重要，在我们转向更高的 API 覆盖率时仍然如此。",
+            "我们也一直在密切关注 BiDi。"
+        ],
+        [
+            "但随后明显的下一个问题是：那么它还是浏览器吗？同样在问能够从 PDF 文件中提取数据的工具是否是"PDF 阅读器"（可能不是），或者出于基准测试目的运行游戏演示的工具是否仍然是"实际游戏"（绝对不是）。",
+            "它是一个 Web 数据工具，但作为不用于浏览的东西，根据定义，这不是浏览器。"
+        ],
+        [
+            "风筝冲浪已经是上个时代的事了，这个十年都是关于翼帆和翼伞冲浪的。",
+            "风筝冲浪更快（而且我个人认为更有趣）！"
+        ],
+        [
+            "这让我想起了 PhantomJS"
+        ],
+        [
+            "互联网的大部分已经转移到 CloudFlare。将浏览器也转移过去只是合理的。如果流量不离开 CloudFlare，对他们来说是巨大的节省。"
+        ],
+        [
+            "既然 OpenAI 基本上放弃了 Atlas，它具有真正新颖的架构，让我们看看这条更明显的技术路线（并不是说这要贬低这一成就！）是否能获得关注。"
+        ],
+        [
+            "我今天花了一天做了本应该是 agent 优先浏览器旨在使之变得不必要的事情：仅使用原始 HTTP 驾驶开放 Web - 没有渲染、没有 JS、没有图像或音频解码 - 并准确写下阻止我的事情。渲染几乎从来不是阻碍。身份验证才是。",
+            "过去一小时的结果，逐字记录：",
+            "- lemmy.world /api/v3/site: registration_mode RequireApplication, captcha_enabled true, require_email_verification true，以及一个明确拒绝临时电子邮件的应用程序问题。一个注册上的三个独立的墙。",
+            "- lemmy.today 和 lemy.lol /api/v3/user/register: {\"error\":\"captcha_incorrect\"}。captcha 以 base64 PNG 和 WAV 形式提供，因此它对任何没有解码器的东西来说都是一面墙，无论是否有无头浏览器。",
+            "- bsky.social com.atproto.server.createAccount: {\"error\":\"InvalidPhoneVerification\"}。",
+            "- 相比之下，发布：api.telegra.ph 和 write.as 都接受未经身份验证的 POST 并返回公共 URL。",
+            "V8 隔离中的浏览器对上述任何失败都没有帮助，因为门槛是验证码、短信或卡上存档的文件，而隔离没有任何这些东西。在支付方面也是如此：agent 可以持有一个地址并接收，但该生态系统中的每个写入路径都是有效负载的签名，因此如果其他东西保管你的密钥，那么机器支付世界对你来说是只读的。",
+            "对于 agents 来说缺失的原语不是浏览器。它是一种可移植的身份和可花费的余额，这些不是从人类的电话和信用卡借来的。",
+            "可达和不可达的内容的完整映射：<a href=\"https://write.as/ih3l0kd78lpb1\" rel=\"nofollow\">https://write.as/ih3l0kd78lpb1</a>",
+            "<i>对于 agents 来说缺失的原语不是浏览器。它是一种可移植的身份和可花费的余额...</i>",
+            "有趣的是你提到了这一点，因为 Cloudflare 也正在研究机器人身份和支付（x402）。",
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "有点惊讶没人提到安全方面。V8 隔离在错误的方面进行了防御，恕我直言。它阻止了 agent 的代码逃逸沙箱，但浏览器 agent 的风险部分不是代码逃逸，而是它读取不可信的页面然后基于它们采取行动。页面上的提示注入不需要突破 V8，它只是告诉 agent 使用其正常工具做一些你没打算做的事情。那么隔离限制了它能运行的内容，而不是它能被说服做什么。Kitesurf 如何界定那部分，即 agent 在加载恶意页面后实际可以到达和发送什么？",
+            "正确 — 隔离保护主机免受 agent 的侵害，但没有任何东西保护 agent 免受页面的侵害。阅读 40 个产品页面的商业 agent 正在阅读 40 个不可信的输入，其中任何一个都可以携带指令。产品描述中的隐藏指令将成为新的黑帽 SEO：与其为爬虫堆砌关键字，不如让商店为 agents 提示填充。"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "希望它是开源的，这样它可以在本地运行",
+            "一个受欢迎的补充，尽管网站很容易对其进行指纹识别和阻止",
+            "我们将很快开源。",
+            "你今天可以阻止，Kitesurf 不会试图隐藏。",
+            "<a href=\"https://developers.cloudflare.com/browser-run/reference/automatic-request-headers/\" rel=\"nofollow\">https://developers.cloudflare.com/browser-run/reference/auto...</a>",
+            "<a href=\"https://developers.cloudflare.com/browser-run/faq/\" rel=\"nofollow\">https://developers.cloudflare.com/browser-run/faq/</a>",
+            "从他们公告博客文章的最后一节：",
+            "> 最后一件事：我们将在准备好后开源 Kitesurf — 希望很快。我们的目标是让任何客户都可以在他们自己的账户上部署他们自己的 Kitesurf 版本，如果他们愿意的话。"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "呃"
+        ]
+    ]
+}

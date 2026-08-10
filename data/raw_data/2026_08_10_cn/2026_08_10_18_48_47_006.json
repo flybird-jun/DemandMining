@@ -1,0 +1,224 @@
+{
+    "item_id": 49208458,
+    "title": "Show HN：textlog – 一个安静的、纯文本的微博平台，开源，无 JavaScript",
+    "url": "https://textlog.cc/about",
+    "text": "关于\n一个让你的思绪更宁静的地方。\ntextlog 是一个简单的社交文字日志：写下简短的笔记，关注用户和话题标签，加入对话，而无需把每一个想法都变成一场表演。\n笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。\n设计上小巧简约\ntextlog 以文字为核心：笔记、用户、话题标签和对话。它有意保持小巧、直接且易于关注。这里没有提高参与度的小把戏，也没有经营粉丝的压力。\n你的个人资料和笔记是公开的。加入是免费的，你可以随时下载或删除你的账户数据。如果你愿意，你也可以\n捐赠\n来支持这项服务。\n做一个好邻居\n分享你有权分享的内容，尊重他人，不要将该服务用于骚扰、辱骂、垃圾信息、冒充身份或任何违法活动。我们可能会审核或移除危及社区或服务安全的内容。\n接下来做什么？\n加入社区\n或\n浏览笔记",
+    "comment": [
+        [
+            "我喜欢这个项目。简洁、开源、界面美观。",
+            "Claude 的界面",
+            "实际上是 gpt 5.6 sol，功劳该归于谁就归于谁",
+            "[已删]"
+        ],
+        [
+            "我喜欢这个项目。简洁、开源、界面美观。",
+            "谢谢！"
+        ],
+        [
+            "我喜欢这个项目。简洁、开源、界面美观。",
+            "同意。一个有文档化的数据导出或稳定的 feed 将会很好地补充这种极简界面：它能让一个安静的服务保持有意为之的简洁，同时不会让用户的归档数据陷入困境。",
+            "惊喜的是他们已经有下载功能了！<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit</a><p><pre><code>  下载你的数据\n  将你的账户、笔记、连接和活动导出为 JSON 文件。\n</code></pre><p>顺便说一下 Natalia，你也可以自己写评论！事实上那样会让你保持合规，我们这里是人与人之间的交流"
+        ],
+        [
+            "我喜欢这个项目。简洁、开源、界面美观。",
+            "同意。一个有文档化的数据导出或稳定的 feed 将会很好地补充这种极简界面：它能让一个安静的服务保持有意为之的简洁，同时不会让用户的归档数据陷入困境。",
+            "已经实现了[0]，还有一个 API[1] 可以基于它构建东西！而且都是开源的[2]，所以如果我们遗漏了什么，我们可以自行添加。<p>[0]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit</a><p>[1]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;api\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;api</a><p>[2]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog</a>"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "嗨，很抱歉你不喜欢这个限制 :( 这是为了分享你想要的简短想法，而不是大型对话，恕我直言有更好的地方适合那样做。",
+            "在我看来，字符限制是 Twitter 变得如此糟糕的主要原因。它鼓励使用绝对的措辞（限定词会占用字符！）它阻碍任何程度的细微差别。<p>我使用 Mastodon，它的限制是 500 个字符，但即便如此有时也不够。",
+            "简短的反义词是冗长。<p><a href=\"https:&#x2F;&#x2F;tuhat.net&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;tuhat.net&#x2F;about</a><p>同样是开源的。"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "嗨，很抱歉你不喜欢这个限制 :( 这是为了分享你想要的简短想法，而不是大型对话，恕我直言有更好的地方适合那样做。",
+            "在我看来，字符限制是 Twitter 变得如此糟糕的主要原因。它鼓励使用绝对的措辞（限定词会占用字符！）它阻碍任何程度的细微差别。<p>我使用 Mastodon，它的限制是 500 个字符，但即便如此有时也不够。",
+            "为什么要用任何一个？为什么强迫自己去遵守某些第三方某处施加的任意限制？为了什么？",
+            "否则你就是在和自己进行在线对话。"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "嗨，很抱歉你不喜欢这个限制 :( 这是为了分享你想要的简短想法，而不是大型对话，恕我直言有更好的地方适合那样做。",
+            "在我看来，字符限制是 Twitter 变得如此糟糕的主要原因。它鼓励使用绝对的措辞（限定词会占用字符！）它阻碍任何程度的细微差别。<p>我使用 Mastodon，它的限制是 500 个字符，但即便如此有时也不够。",
+            "你说的\"变糟\"是什么意思？它在 2006 年以 140 个字符的限制起步，并保持了超过 10 年。所以恰恰相反：当字符限制增加时，它变得更糟。不过无论怎样，我认为这并不是字符限制造成的。",
+            "在增加字符限制之前它就已经糟糕很久了。<p>说一些糟糕/有毒的东西可以很简洁地完成。给出有细微差别的回应则根本不可能。所以人们用玩笑/讽刺/反向有毒的内容来回应。然后这个循环不断继续。"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "嗨，很抱歉你不喜欢这个限制 :( 这是为了分享你想要的简短想法，而不是大型对话，恕我直言有更好的地方适合那样做。",
+            "嗯，你可以考虑奖励已知的高质量用户更长的字数限制，比如翻倍。其他人可以付费；)",
+            "那就是平台劣化（enshittification）的开始。很快就会有蓝色徽章出现在个人资料旁边了。",
+            "哈哈 是的，平台劣化是我想避免的事情，所以需要做出一些艰难的决定，这些决定不会让每个人都满意。尽管如此，这是开源的[0]，所以我们可以展开讨论（理想情况下伴随一个 PR）并不断演进它。<p>[0]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog</a>"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "嗨，很抱歉你不喜欢这个限制 :( 这是为了分享你想要的简短想法，而不是大型对话，恕我直言有更好的地方适合那样做。",
+            "嗯，你可以考虑奖励已知的高质量用户更长的字数限制，比如翻倍。其他人可以付费；)",
+            "哈哈，是的，好主意。也可以像其他人想要的那样自定义主题。这里有很多机会。:P"
+        ],
+        [
+            "让我想起了 org-social（<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>）<p>> 笔记限制在 280 个字符以内。这个限制让它们书写和阅读都很快，一次只为容纳一个想法。<p>不了，谢谢。",
+            "[已标记]"
+        ],
+        [
+            "是啊！我一直说 twitter 在加入图片/多媒体之前更好！",
+            "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20070123220857&#x2F;http:&#x2F;&#x2F;twitter.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20070123220857&#x2F;http:&#x2F;&#x2F;twitter.co...</a><p>给那些从未有机会看到它的人。"
+        ],
+        [
+            "是啊！我一直说 twitter 在加入图片/多媒体之前更好！",
+            "老网络的气息！"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "我喜欢更短的字符限制这个想法，因为它引导用户进入一种特定的交互模式：短想法/更新，而不是冗长的独白。这是在表明与这个平台的交互不需要花费你太多时间或注意力。我不知道关于页面与这有什么关系，但你总得在某个地方划定界限。<p>话虽如此，除了 HN 之外，我不算是一个社交媒体用户。",
+            "供参考：你刚刚评论了 404 个字符。仅你的第一段就有 346 个字符。<p>我对关于页面的评论是，它需要超过 280 个字符来传达这个应用是关于什么的——甚至标题+介绍就超出了限制。<p>如果真的相信 280 个字符足以传达一个想法，那么关于页面应该遵循这一理念。",
+            "我在考虑提高到 500。是否在意去开一个 issue[0]，这样我们可以有一个可以跟踪的讨论？<p>[0]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues</a>",
+            "老实说，我并不太在意。这个项目看起来很有趣，我祝它一切顺利，但我自己并不在微博客平台上发帖。<p>我只是想作为一个读者提供一点反馈——并指出几乎每一个提交给 HN 的 twitter&#x2F;bluesky 内容中，他们都在使用绕过 280&#x2F;300 字符限制的方法。<p>唱唱反调——500 也显得有点随意 ;) 如果我自己要做这样一个平台，我会选择一个对存储/缓冲有意义的 2 的幂。也许是 1KiB，包括所有元数据等。你可以舒适地容纳一个和你的关于页面一样大的帖子，以及所有相关的元数据——即使序列化为 JSON 或其他格式。我会从那里开始，反向推算出具有真正技术目的的大小。"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "我在考虑提高到 500。是否在意去开一个 issue[0]，这样我们可以有一个可以跟踪的讨论？<p>[0]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues</a>",
+            "把它做成一个设置，让人们自己决定。"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "它需要短——已经有一个运行良好的限制了——为什么要再多费口舌？",
+            "对谁来说运行良好的限制？<p>几乎每一个提交给 HN 的 twitter&#x2F;x 帖子都有人把他们的帖子标注为\"X 之 Y\"系列，使用图片代替文字，或使用专业账户的帖子。<p>你可以自己看看：<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com</a>\n我刚刚看了 30 个，每一个都远远超过 280 个字符。",
+            "它对微博客用户很有效。",
+            "但显然 twitter&#x2F;x、Bluesky 等上的微博客用户并不如此，他们使用我提到的那些模式。",
+            "那些人按定义不是微博客作者。一个明确<i>为了</i>微博而设计的平台不去迎合他们的长博需求是可以的。"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "它需要短——已经有一个运行良好的限制了——为什么要再多费口舌？",
+            "对谁来说运行良好的限制？<p>几乎每一个提交给 HN 的 twitter&#x2F;x 帖子都有人把他们的帖子标注为\"X 之 Y\"系列，使用图片代替文字，或使用专业账户的帖子。<p>你可以自己看看：<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com</a>\n我刚刚看了 30 个，每一个都远远超过 280 个字符。",
+            "对谁来说运行良好的限制？<p>几乎每一个提交给 HN 的 twitter&#x2F;x 帖子都有人把他们的帖子标注为\"X 之 Y\"系列，使用图片代替文字，或使用专业账户的帖子。<p>你可以自己看看：<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com</a>\n我刚刚看了 30 个，每一个都远远超过 280 个字符。",
+            "它对微博客用户很有效。",
+            "但显然 twitter&#x2F;x、Bluesky 等上的微博客用户并不如此，他们使用我提到的那些模式。",
+            "那些人按定义不是微博客作者。一个明确<i>为了</i>微博而设计的平台不去迎合他们的长博需求是可以的。",
+            "按定义不是？<p>\"微博客，例如在 Twitter 上……\" <a href=\"https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;microblog\" rel=\"nofollow\">https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;microblo...</a><p>\"一些流行的社交网络，如 X（前 Twitter）、Threads、Tumblr、Mastodon 和 Bluesky，可以被视为微博客的集合。\" <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microblogging\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microblogging</a>"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "它需要短——已经有一个运行良好的限制了——为什么要再多费口舌？",
+            "我认为这恰恰不是无谓的争论，它字面上就是一个核心功能和约束。"
+        ],
+        [
+            "280 个字符的限制似乎很随意，因为你甚至无法让关于页面保持在那个限制内：<a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>如果你打算将其限制为短帖，也许短帖的长度就是要限制的长度，而不是模仿每个 twitter 克隆版的 2 倍短信长度？<p>除此之外，它看起来确实很干净整洁——我只是不认为 280 字符能带来任何东西，除了导致人们像 X 1&#x2F;3 那样分页发帖。",
+            "你可以 fork 然后做任何你想做的事，不是吗？",
+            "当然，但我并不那么在意。这是个 Show HN，所以我只是在给出反馈。"
+        ],
+        [
+            "我真的很喜欢这种方法。我想知道渲染是否需要如此复杂。你能把它构建为一个 SSG 模板吗？",
+            "嗨，谢谢！渲染页面有很多细微差别，我认为服务器端 React 是最好的选择——而且这也是一项我熟悉的技术，可能也会鼓励贡献。",
+            "如果我指导 Claude 利用你的设计并构建一个非常简单的 Hugo 模板供我个人使用，你介意吗？",
+            "为什么不呢，试试吧 :)"
+        ],
+        [
+            "我最近在我的个人网站上开了一个栏目，用于绝对极简和简单的微博客，我可以通过 Ctrl-F 搜索：<a href=\"https:&#x2F;&#x2F;knlb.dev&#x2F;scribbles&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;knlb.dev&#x2F;scribbles&#x2F;</a> —— 我可能应该试试这个。",
+            "嘿，不错！如果你想试试，我们有一个 API[0]，你可以从中获取你的用户 feed！<p>[0]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;api\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;api</a>"
+        ],
+        [
+            "我为类似的目标构建了一些东西，让某人可以轻松开始他们的博客。但它是一个静态网站，克隆仓库，调整 config.ts，用 markdown 写文章，在任何地方托管：<a href=\"https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;</a>",
+            "> 构建高质量网站的最简单方法。<p>构建（生成）步骤应该能够在浏览器运行时中执行/内部执行（使用标准化的 API，而不是针对 NodeJS 人员发明的专有 API 硬编码）。<p>另见 &lt;<a href=\"https:&#x2F;&#x2F;crussell.ichi.city&#x2F;pager.app.htm\" rel=\"nofollow\">https:&#x2F;&#x2F;crussell.ichi.city&#x2F;pager.app.htm</a>&gt;",
+            "这意味着使用完全不同的架构，我认为使用 Astro 有很多好处。我喜欢你减少环境特定依赖的潜在目标，但这里使用的依赖是经过仔细挑选的，因为它们确实提供了好处。"
+        ],
+        [
+            "我为类似的目标构建了一些东西，让某人可以轻松开始他们的博客。但它是一个静态网站，克隆仓库，调整 config.ts，用 markdown 写文章，在任何地方托管：<a href=\"https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;</a>",
+            "请不要大规模使用 !important <a href=\"https:&#x2F;&#x2F;github.com&#x2F;BryanHogan&#x2F;astro-starter-template&#x2F;commit&#x2F;aa8831b5a2ee1d386c4e5514bcba068a4246edc1\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;BryanHogan&#x2F;astro-starter-template&#x2F;commit&#x2F;...</a>",
+            "这是 !important 最合理的唯一用例，因为它是一个实用类，只有在需要时才使用。另一种解决方案是让其他 CSS 不那么具体，例如在 markdown.css 文件中使用 `where`，但那样会更混乱。"
+        ],
+        [
+            "它也快得惊人。做得好。但它是纯文本的吗？或者你支持/将支持图片和视频吗？",
+            "谢谢！纯文本。内联图片/其他内容可以通过构建浏览器扩展的人来支持。我想保持核心无干扰。"
+        ],
+        [
+            "已注册，将使用它。不过很难看出它实际上能存在多久，因为人们很痛苦，它一定会被毁掉。"
+        ],
+        [
+            "这真的很酷！<p>让我最印象深刻的是，与许多其他微型/极简博客平台不同，textlog 将单独的笔记（而不是博客）作为主要单位。我觉得这种选择通常在心理上让用户更容易快速发布内容，而不会陷入管理自己博客品牌和身份的困境。后者没有问题，但它是有代价的。<p>而且我真的很喜欢视觉设计：非常干净和极简，但也令人愉快。"
+        ],
+        [
+            "使用 quad9 dns 时访问该站点有困难。使用 cloudflare dns 时站点运行良好。"
+        ],
+        [
+            "我是一个认证的暗黑模式厌恶者，所以从那个角度来看，对我来说这是一个排除因素：似乎没有办法更改主题。",
+            "它会获取你的系统主题，所以你不可能是暗黑模式厌恶者，因为你已经在你的操作系统上使用它了 :P 我不想用用户设置把它复杂化，但如果需要可以添加。",
+            "也许 OP 把系统的\"暗黑主题\"自定义得特别亮了。"
+        ],
+        [
+            "我是一个认证的暗黑模式厌恶者，所以从那个角度来看，对我来说这是一个排除因素：似乎没有办法更改主题。",
+            "你的用户代理不支持用户样式表吗？"
+        ],
+        [
+            "我做了一个类似的东西<p>源码：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;est&#x2F;gitweets\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;est&#x2F;gitweets</a><p>演示：<a href=\"https:&#x2F;&#x2F;f.est.im&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;f.est.im&#x2F;</a><p>该网站和数据作为 git 仓库是自包含的。<p>一个 git 提交就是一篇帖子。Blob 是图片。<p>评论存储在 git notes 中。"
+        ],
+        [
+            "喜欢这种克制。对我来说感觉像是一个反社交的社交俱乐部。"
+        ],
+        [
+            "那真的很不错！我真的很喜欢这个网站的界面，它平静而舒缓。"
+        ],
+        [
+            "有趣的方法。我认为\"单独的笔记而不是博客\"的想法是一个重要的 UX 决策。许多工具之所以失败，是因为它们在用户拥有值得分享的东西之前就要求用户承诺一个身份。"
+        ],
+        [
+            "我遇到一个奇怪的场景。全程要求我使用魔法链接 :( 我点击该链接后又是同一个屏幕，要求使用魔法链接（说旧的已过期）。可能是我们的 mimecast 在阻止什么？",
+            "嗯，也许你的客户端急切地访问了魔法链接，当你手动访问它时，它已经被使用了？",
+            "我用我的 gmail 登录可以，但公司邮箱不行。mimecast 做了错误的事情"
+        ],
+        [
+            "另见 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt</a><p><a href=\"https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt</a>",
+            "我想邀请你阅读这篇文章：<a href=\"https:&#x2F;&#x2F;en.andros.dev&#x2F;blog&#x2F;ba142044&#x2F;twtxt-vs-org-social-the-evolution-of-an-idea&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;en.andros.dev&#x2F;blog&#x2F;ba142044&#x2F;twtxt-vs-org-social-the-...</a>\n你怎么看？",
+            "有趣！我最大的反应是我不用 Emacs。Emacs 是必需的吗？你说得对，Org 增加了功能，但它也缩小了会尝试这个的人群。",
+            "这不是必需的。我几乎总是使用 iOS。"
+        ],
+        [
+            "另见 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt</a><p><a href=\"https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt</a>",
+            "我认为 twtxt 真的很酷。我在网站上有一个，但我不用它，可惜了"
+        ],
+        [
+            "让我想起 <a href=\"https:&#x2F;&#x2F;bearblog.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;bearblog.dev&#x2F;</a>",
+            "<a href=\"https:&#x2F;&#x2F;prose.sh\" rel=\"nofollow\">https:&#x2F;&#x2F;prose.sh</a> 一个用于管理博客的 ssh 应用",
+            "（那是他们的服务，他们的大部分评论只是在为他们的服务做推广）"
+        ],
+        [
+            "应该做同样的事但针对 4chan。"
+        ],
+        [
+            "是什么让它\"安静\"？",
+            "没有点赞，没有 karma 点，没有不必要的通知，没有 JS 的\"X 条新帖子\"弹窗，没有参与度把戏，没有游戏化。只是分享想法和回复他人。"
+        ],
+        [
+            "感谢分享"
+        ],
+        [
+            "twitter 重生<p>:thumbs-up:"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已删]"
+        ],
+        [
+            "[已删]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已删]"
+        ]
+    ]
+}

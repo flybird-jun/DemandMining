@@ -1,0 +1,33 @@
+```json
+{
+  "topic": "Triton：为 QEMU 虚拟机提供 Windows DirectX 11 GPU 加速的开源驱动方案",
+  "users": [
+    "macOS 用户希望虚拟化运行 Windows 游戏/应用并获得原生级图形性能",
+    "QEMU/KVM 用户需要 Windows 客户机的 GPU passthrough 替代方案",
+    "游戏玩家希望在 Apple Silicon Mac 上流畅运行 Windows 游戏（无需 Boot Camp）",
+    "开发者和折腾者需要跨平台虚拟化图形加速解决方案",
+    "UTM 用户期待更好的 Windows VM 图形体验"
+  ],
+  "pain_points": [
+    "现有 GPU passthrough 方案需要独占整块 GPU，且仅限 Linux 宿主机 + Windows 客户机",
+    "macOS 上运行 Windows VM 时图形性能极差（尤其 Apple Silicon Mac 完全无 GPU 加速方案）",
+    "Wine + DXVK 在 macOS 上不稳定，MoltenVK 兼容性问题多",
+    "VirtualBox 的 DX 支持兼容性差，很多游戏无法运行",
+    "手工替换 d3d11.dll 的方案触发反作弊检测，无法用于竞技游戏",
+    "桌面合成器（DWM）体验差，无法获得流畅的 Windows 桌面",
+    "UTM 等 macOS 虚拟化方案此前只能提供有限的图形加速",
+    "构建过程极其复杂，需要从多个分支、多种架构手动编译"
+  ],
+  "existing_solution": [
+    "GPU passthrough（独占 GPU，限制大，仅限 Linux）",
+    "VirtualBox 的 DirectX 实现（兼容性差、许可证不兼容）",
+    "手工注入 d3d11.dll/dxgi.dll（反作弊检测、每应用配置）",
+    "Wine + DXVK + MoltenVK（macOS 上不稳定）",
+    "DXMT（原生 D3D11→Metal 翻译，但缺少共享纹理/栅栏支持）",
+    "D3DMetal（Apple 游戏移植工具包，许可证限制、需 Rosetta）",
+    "UTM 现有的有限图形加速"
+  ],
+  "opportunity": "存在多个潜在创业机会：1) 基于 Triton/UTM 的商业版 macOS 虚拟化产品（对标 Parallels/VMware Fusion，提供 Windows-on-Mac 游戏级图形性能）；2) 简化的构建/分发工具，解决当前极复杂的多分支交叉编译流程；3) Apple Silicon Mac 的云游戏/云 Windows 服务（基于 Triton 后端提供远程 Windows 游戏流）；4) 企业级跨平台虚拟化图形加速中间件（支持 CAD/设计软件在 Mac 上流畅运行 Windows 版本）；5) 针对游戏反作弊兼容的虚拟化兼容层服务",
+  "score": 72
+}
+```

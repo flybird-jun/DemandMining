@@ -1,0 +1,286 @@
+{
+    "item_id": 49239751,
+    "title": "Docker Sandboxes – 面向 AI 智能体的可丢弃隔离沙箱",
+    "url": "https://www.docker.com/products/docker-sandboxes/",
+    "text": "Docker Sandboxes\n在本地沙箱中安全运行 AI 智能体。\n为需要安全、无人值守执行的 AI 智能体提供的可丢弃、隔离沙箱，例如\nClaude Code、Gemini CLI、Copilot CLI、Codex、OpenCode\n和\nKiro。\nmacOS\n$\nbrew trust docker/tap && brew install docker/tap/sbx\n复制\nWindows\n>\nwinget install Docker.sbx\n复制\n免费开始使用\n观看演示\n看它如何运作\n沙箱运行演示。\n观看智能体安装包、运行 Docker、修改配置以及无人值守地执行。然后通过一条命令销毁沙箱。\nsbx-demo\n▶ 运行演示\n点击\"运行演示\"开始\n开始使用\n几秒钟即可开始。\nmacOS\n$\nbrew trust docker/tap && brew install docker/tap/sbx\n复制\nWindows\n>\nwinget install Docker.sbx\n复制\n阅读文档\n为什么选择沙箱\n赋予智能体完成工作所需的自主权，并确保安全。\n当智能体拥有自由时，它们才能发挥最佳水平。沙箱让它们可以快速运行而不会失控，因此速度和安全不再是权衡关系。\n文件系统\n网络\n凭据\n需要在整个团队中强制实施这些控制吗？\n那就是 Docker AI Governance\n功能\n安全地使用 YOLO 模式。\n每个智能体都在专用的 microVM 内运行，其中挂载了你的开发环境和仅有的项目工作区。智能体可以安装包、修改配置，并启动它们自己的 Docker 容器。你的主机保持原封不动。无需人工审查，无需权限提示，无需监督。\n可定制的安全执行\n由你定义的网络和文件系统控制。\n可通过 Docker AI Governance 在整个组织内强制执行。\nMicroVM 隔离\n与主机之间的硬性安全边界。\n快速启动，易于销毁\n默认即可丢弃。比 VM 更快。\n智能体也可以使用 Docker\n智能体可以在沙箱内启动容器。\n真实的开发环境\n安装包、运行服务、无人值守地工作。\n一个沙箱适用于所有你的编程智能体\nClaude Code、Gemini CLI、Copilot CLI、Codex、Kiro、OpenCode。\n默认\n–dangerously-skip-permissions\n自信地使用宽松模式。事实上，这就是默认设置。\n兼容主流编程智能体\n每个团队即将拥有自己的 AI 智能体团队，为它们完成实际工作。问题在于这是否能安全地发生。NanoClaw 是基于这样的原则构建的：你不能信任智能体的安全性，你需要为它们构建围墙。Docker 在这一点上一直走在前列。Docker Sandboxes 在基础设施层面上体现了这一点，使组织能够在不牺牲安全性的情况下从智能体获得全部价值。\nGavriel Cohen\nNanoClaw、NanoClaw 的创建者\nDocker Sandboxes 让智能体拥有执行长时间运行任务的自主权，同时不牺牲安全性。我们很高兴将 Sandboxes 集成到 Warp 中，以便开发人员能够自由地运行智能体，并拥有一致的环境，无论智能体是在本地还是云端运行。\nBen Navetta\nWarp 工程负责人\n赋予智能体自由，保护重要内容。\nmacOS\n$\nbrew trust docker/tap && brew install docker/tap/sbx\n复制\nWindows\n>\nwinget install Docker.sbx\n复制\n阅读文档以开始使用\n常见问题\n常见问题解答。\n什么是用于 AI 编程智能体的沙箱？\n沙箱是一个 microVM 隔离环境，可保护你的文件系统和网络免受在其中运行的智能体的侵害。\n支持哪些编程智能体？\n开箱即用，我们支持 Claude Code、Gemini CLI、Copilot CLI、Codex、OpenCode、Kiro。你也可以创建自己的\n\"YOLO 模式\"是什么意思，它安全吗？\nYOLO 模式 (\n--dangerously-skip-permissions\n) 给予智能体自主权，且无需审批提示。对于速度至关重要，但没有护栏的情况下会有风险。沙箱通过将每个智能体隔离在专用的 microVM 中来确保安全。\n沙箱与 VM 有何不同？\n沙箱在 microVM 中完全隔离运行，提供更强的隔离性而无需支付运行 VM 的全部成本。这让它们能够安全地执行需要更多权限的操作，例如运行额外的 Docker 容器。\n我可以配置哪些安全控制？\n要在每台开发人员机器上定义这些规则并强制执行它们，请参阅\nDocker AI Governance\n。\n使用沙箱需要 Docker Desktop 吗？\n不需要。\n如果我需要额外的管理控制怎么办？\n安装 Sandboxes 涵盖了核心功能。对于团队范围内的集中控制，例如网络策略、文件系统规则、MCP 治理：\nDocker AI Governance\n。\n需要对沙箱进行更多控制吗？\n通过 Docker Sandboxes，你的开发人员可以获得隔离的环境，自由且安全地运行智能体。当你的团队需要更进一步的网络访问限制、文件系统策略和集中管理控制时，我们可以帮助你配置合适的设置。\nDocker AI Governance\n增加了网络访问策略、文件系统控制以及全组织范围的 MCP 治理：一次定义，处处执行。\n与我们讨论以下内容：\n沙箱环境的网络访问策略\n文件系统访问控制和限制\n面向你团队的管理员级配置\n咨询专家\n感谢你的关注。Docker 团队将与你取得联系",
+    "comment": [
+        [
+            "登录很烦人，但是，由于缺乏开源替代方案，这段时间以来它一直是我的日常工具，因为它开箱即用效果很好，具有两个关键功能：出站防火墙和带占位符的密钥注入。<p>我将其与 superset 配合使用，然后每个 git worktree 都挂载在一个为我工作的每个 repo 配置的沙箱中。<p>我见过的最接近的开源替代品是 <a href=\"https:&#x2F;&#x2F;earendil-works.github.io&#x2F;gondolin\" rel=\"nofollow\">https:&#x2F;&#x2F;earendil-works.github.io&#x2F;gondolin</a>，但 DX 没有那么完善。<a href=\"https:&#x2F;&#x2F;exe.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;exe.dev&#x2F;</a> 会很完美，但它没有出站防火墙。<p>有人有更好的替代方案吗？",
+            "不想说它更好，但我实现了 Agent Circus (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;Embedded-Focus&#x2F;agent-circus\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Embedded-Focus&#x2F;agent-circus</a>)，它允许将 AI 智能体框架锁定到 docker 容器中。<p>几个月来我一直将其作为主要工具使用。<p>在我的功能列表中支持在无特权 podman 容器中运行智能体框架。:-)",
+            "我使用由 Incus 管理的 Linux 容器来与 Claude 一起工作。<p>我有一个专用的容器用于此目的。如果需要，它可以运行自己的 Docker 守护进程和其他系统服务。<p>除了 Claude 登录令牌之外，它没有 SSH 密钥或其他凭据。我从本地机器推送需要的所有内容。然后从中拉取 Claude 生成的输出。<p>当然，这种设置需要一个无需任何凭据即可运行或至少可以测试的技术栈。",
+            "同意。网络控制和密钥注入与 microVM 设置相结合是目前最好的方案，尽管我相信我们以后需要更细粒度的工具。听起来 Microsandbox 将完美契合你描述的需求。我也在它之上构建了自己的编程智能体工作台 (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;isolade&#x2F;isolade\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;isolade&#x2F;isolade</a>)。Microsandbox 非常酷，看看吧：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;superradcompany&#x2F;microsandbox\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;superradcompany&#x2F;microsandbox</a>",
+            "对于持续的一次性应用 <a href=\"https:&#x2F;&#x2F;xbin.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xbin.dev&#x2F;</a> (我的项目)<p>具有出口和入口过滤功能，出口可以绑定到主机/互联网/子网，甚至更好地绑定到内部应用（每个都是独立的 netns），这意味着你可以为每个沙箱执行自己的防火墙/VPN/任何操作。此外，你还可以控制沙箱环境中的其他组件应用可以与哪些组件通信。<p>不过，它实际上并不是为日常开发工作而构建的，更像是自动化你的公司/生活 / 摆脱 SaaS（例如，对于技术创始人 / 销售人员等，并不完全适用于开发工作）",
+            "Eclipse Enclave 正是做这个的：有出站防火墙和密钥注入，因此智能体永远看不到真实的密钥。而且它是完全开源的：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;eclipse-enclave&#x2F;enclave\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;eclipse-enclave&#x2F;enclave</a>",
+            "看 Readme 似乎它只支持 docker。对某些人来说这是阻碍。",
+            "我们在 qemu + podman 中缺少什么需要 rootful docker 用于此？是否有实际缺失的能力，或者只是 eclipse enclave 人员的设计选择？",
+            "如果你只需要一个具有开发优先 UX 的 python+venv 沙箱，无需容器构建步骤，且没有启动成本，那么我在生产中使用 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;nzjrs&#x2F;sandbubble\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;nzjrs&#x2F;sandbubble</a>。",
+            "作为维护者，我建议尝试：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;smol-machines&#x2F;smolvm\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;smol-machines&#x2F;smolvm</a><p>它具有网络过滤 + 密钥占位符。<p>开源，无需登录",
+            "我投入了一些精力将其集成到我的智能体工作流程中。然而，smolvm 中 docker 的问题是：它能用（有一个示例），但相当 hacky。\n另一个我无法解决的问题 - 没有 Dockerfile 的持久镜像。CloudInit 将是理想的。<p>目前文档处于早期阶段。<p>总的来说，这是一个很棒的项目，但对我来说，使用虚拟机管理器（libvirt GUI）更简单。<p>我祝维护者们一切顺利，但从 DX 角度来看，我可能更喜欢更细粒度或可预测的控制（例如 Canonical 的 micro cloud）。",
+            "我一直在用 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Gerharddc&#x2F;litterbox\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Gerharddc&#x2F;litterbox</a>",
+            "我既没有用过 gondolin 也没有用过 docker 的解决方案，但很想知道 gondolin 缺少什么（为了个人使用评估两者）？只是 DX 还是其他方面，如果是 DX，你能具体说明缺少什么吗？<p>谢谢",
+            "是的，所述的\"目标工作负载\"[0] 不是我想要的。我希望我的智能体长时间运行，在开发时启动专用的本地堆栈等。<p>似乎使用 gondolin，我需要向智能体解释在沙箱中运行命令，但智能体本身在哪里运行？<p>[0]: <a href=\"https:&#x2F;&#x2F;earendil-works.github.io&#x2F;gondolin&#x2F;workloads&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;earendil-works.github.io&#x2F;gondolin&#x2F;workloads&#x2F;</a>",
+            "如果愿意，你可以在 gondolin 沙箱中运行智能体。<p>他们使用 pi 的示例实现通过 pi 扩展，使 pi 在主机上运行，但读/写/bash/等工具在客户机中运行。不过也不必非要那样。",
+            "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;e2b-dev&#x2F;e2b\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;e2b-dev&#x2F;e2b</a>",
+            "",
+            "密钥注入真的能防止智能体将我的 GitHub 密钥发送到某处吗？如果它通过环境变量访问它，它就不能只是将其粘贴到某处吗？",
+            "环境变量只是 VM 中的占位符，所以那里没有真正的密钥。",
+            "它被注入到出站 API 调用中，而不是智能体可以读取的环境变量中。",
+            "或者通过环境变量以某种方式暴露给智能体的方式，对可信端点进行出站调用？",
+            "有什么能阻止智能体使用该变量创建对恶意端点的出站调用？（除非你设置白名单限制其访问权限）",
+            "你具体想要什么？我有：<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;pjlsergeant&#x2F;byre\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;pjlsergeant&#x2F;byre</a> -- 略有不同的安全模型，但专注于开发者体验；我的日常工具，我爱它不仅仅因为我是作者。TUI 非常适合配置和按需设置即时盒子<p><a href=\"https:&#x2F;&#x2F;pleasedonotescape.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;pleasedonotescape.com&#x2F;</a> -- 我能找到的每个其他智能体监禁的列表，可按开源和你想要的任何其他条件筛选",
+            "我所运行的是每个项目一个加固的 QEMU&#x2F;KVM VM，其中包含整个开发环境（编辑器、智能体、容器），主机上的 nftables 允许互联网出口但丢弃任何针对主机、LAN 或任何其他私有地址的流量，加上一个允许列表用于有意的例外。<p>基本上，它是一个普通 QEMU&#x2F;KVM VM 上的标准 Debian 云镜像：设备模型精简为 virtio 磁盘、virtio NIC 和串行控制台，禁用嵌套虚拟化，客户机中没有无密码 sudo。它还附带一个从客户机内部向外扫描的包含检查，因此网络边界是你可以验证的。<p>包装整个环境而不是单个智能体会话也会将供应链攻击置于边界内。被污染的 npm 或 PyPI 包，或被入侵的编辑器扩展，会落入 VM 而不是主机。这是我最初设置的原因；智能体只是让它变得更加紧迫。<p>没有按域的出口允许列表；策略是\"互联网可以，私有地址不行\"。也没有内置密钥注入，尽管主机上的 Infisical 的 agent-vault 作为出口代理涵盖了这一点。<p>我把整个设置写下来了，以防有用：<p><a href=\"https:&#x2F;&#x2F;karamatli.com&#x2F;posts&#x2F;network-isolated-kvm-sandbox-ai-agents&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;karamatli.com&#x2F;posts&#x2F;network-isolated-kvm-sandbox-ai-agents&#x2F;</a>"
+        ],
+        [
+            "Apple Container 是一个有趣的进行中工作：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;container\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;container</a>"
+        ],
+        [
+            "> 每个智能体都在专用的 microVM 中运行，其中包含你的开发环境<p>什么是 \"microVM\"，与使用具有实际逃逸约束的真实虚拟机相比，这里的安全模型是什么？<p>是营销炒作吗？<p>Incus&#x2F;LXD 早就支持 VM 了。<p><pre><code>    incus launch images:ubuntu&#x2F;26.04 my-ubuntu-vm --vm\n    incus exec my-ubuntu-vm -- bash</code></pre>",
+            "\"microvms\" 是真正的 VM，但 hypervisor 和 VM（客户机内核）去掉了大部分硬件/设备仿真、支持以及发现，这使得传统 VM 看起来/感觉像真正的计算机，以及大多数客户机交互。这给了它们极低的开销。<p>Firecracker 旨在 125 毫秒和 5MB 内启动一个 VM。Netbsd 声称你可以在 10 毫秒内直接启动 MICROVM 内核配置。",
+            "如果智能体启动 NPM，占用大量内存，NPM 在 VM 中关闭后，该内存会释放回操作系统吗？",
+            "原则上是的，实际上这很复杂，使用所谓的\"balloon drivers\"<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;Memory_ballooning\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;Memory_ballooning</a>",
+            "还有通过 virtio-mem 的内存热插拔。但一般来说，缩减实时 VM 内存不能被认为是一个已解决的问题，它更像是一个活跃的研究领域。",
+            "你的示例不完整，你必须展示它将如何运行 claude&#x2F;codex，你必须做额外的事情来安装、运行和挂载文件夹，而这个使用更少的配置就可以做到，而且使用这个智能体可以运行 docker，lxd 不允许你这样做",
+            "许多开发人员几乎没有 Linux 经验，比如企业公司中使用 Windows 的数十万 .Net 和 Java CRUD 开发人员。<p>这个市场需要一个类似 Docker Desktop 的 GUI。",
+            "当我十几岁的时候，我对软件开发一无所知。然后我去学校学习了它。现在我通过做这件事赚钱，因为我变得相当擅长。<p>世界没有围绕我转，所以我让\"我\"去适应\"世界\"。我打赌那些顽固的恐龙也能学一两招，如果管理层让他们在工作时间内去做的话……",
+            "啊？<a href=\"https:&#x2F;&#x2F;docs.docker.com&#x2F;desktop&#x2F;setup&#x2F;install&#x2F;windows-install&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.docker.com&#x2F;desktop&#x2F;setup&#x2F;install&#x2F;windows-install&#x2F;</a><p>此外，WSL（Windows Subsystem for Linux）早已内置在 Windows 中，可以非常轻松地使用 Linux，使用 Hyper-V VM 系统也是如此。任何因为使用 Windows 而不熟悉 Linux 的开发人员，都几乎没有借口。",
+            "[已删除]",
+            "这是真正的 VM，firecracker 风格的。",
+            "由 Incus 启动的 Ubuntu Server VM，每个实例至少使用 512 MB RAM。如果你启动 10 个沙箱 VM，你已经需要 5 GB RAM 来保持空闲。你还需要 CPU 成本，你有 10 个内核在管理东西，但鉴于 CPU 核心数量，这并不那么重要。<p>我使用介于两者之间的东西 - 一个 Ubuntu VM，我在其中启动多个 Incus LXC 容器用于智能体。容器每个实例仅使用约 50 MB（独立的 systemd，等）。这样我只需支付一次 VM RAM 税，并且如果智能体设法逃逸 LXC 容器，它们仍然包含在 VM 内。",
+            "那是一个完整的 VM。Microvms 更小且启动非常非常快。以毫秒计。",
+            "[已删除]"
+        ],
+        [
+            "哇，我希望有一天 Linux 能够支持 Docker Sandboxes 这种独占的 MacOS&#x2F;Windows 技术。<p>（文档中有，但奇怪的是在主页上看不到一些说明，可能与发行版相关）",
+            "总有 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;mensfeld&#x2F;code-on-incus\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mensfeld&#x2F;code-on-incus</a>",
+            "那 bubblewrap 呢？它也提供了一个沙箱",
+            "是的，bubblewrap 在这方面优于 Docker。我写了一个工具来使用 bubblewrap 实现此目的。它需要一个工具来启动它，或者至少使用一个工具更方便，因为你需要将会话/身份验证数据带入容器，并且如果你希望智能体能够在容器内启动容器（智能体喜欢容器），则需要在内部挂载一些配置魔法。你可以手动完成所有这些，或者使用 shell 脚本来完成。但是，这是我做的，你可能会遇到我遇到的所有相同的小怪癖：<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;swelljoe&#x2F;flar\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;swelljoe&#x2F;flar</a>",
+            "[已删除]"
+        ],
+        [
+            "与以下做法相比，主要优势是什么：<p><pre><code>    docker run --runtime krun --rm -it -v $(pwd):&#x2F;workspace&#x2F;$(basename $(pwd)) -w &#x2F;workspace&#x2F;$(basename $(pwd)) --network restricted-net ghcr.io&#x2F;openai&#x2F;codex-universal:latest sh\n</code></pre>\n这将在 qemu microvm 中运行 codex OCI。从我所看到的情况来看，更细粒度的网络和文件系统访问控制以及便利性？",
+            "凭据部分...<p><a href=\"https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;security&#x2F;credentials&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;security&#x2F;credentials&#x2F;</a>",
+            "它似乎做得很好，没有在任何地方说明实际威胁模型。"
+        ],
+        [
+            "我只是制作了自己的 devcontainer，可以复制到任何项目中，并在该 repo 中加载我想要的任何框架。框架的配置和授权只是从主机挂载，因此根本不需要设置。<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;iodize6399&#x2F;ai-devcontainer&#x2F;tree&#x2F;main&#x2F;.devcontainer\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;iodize6399&#x2F;ai-devcontainer&#x2F;tree&#x2F;main&#x2F;.devcontainer</a>",
+            "是的，我最近也开始使用 devcontainers 来做这个<p>我非常喜欢'features'层系统，以声明式插件方式向容器添加额外工具<p>能够\"安全地\"运行 skip permissions 一直是一个改变游戏规则的因素",
+            "[已删除]"
+        ],
+        [
+            "这是否已支持 Linux？之前我看的时候不支持（原因是他们已经在 Windows&#x2F;macOS 上使用 VM，但没有在 Linux 上使用）。每次我看到公告，我都会想\"太好了，他们现在肯定已经添加 Linux 了\"，但链接的页面总是有 Windows + macOS 说明，但没有 Linux。<p>我订阅的所有关于支持 Linux 的未解决的 GH 问题都没有得到回应。<p>OpenShell 看起来是一个不错的替代品，但它的网站上仍然到处贴满\"不要在生产环境中使用\"，这并不能让我充满信心",
+            "我认为 Linux 有比 Docker 更好的解决方案。<p>我写了一个工具来使用 `bubblewrap` 将任何智能体（至少我使用过几次的所有智能体）容器化，并以只读方式绑定挂载系统内容，因此智能体拥有你\"通常\"的环境，但它们只能看到项目。它们的历史记录被保留（通过绑定挂载或仅包装智能体可见的\"影子\"历史副本），智能体仍然可以使用 podman 的无根模式创建和管理自己的容器等。它几乎是即时启动的，因为它只是一个命名空间（加上一些用于容器支持和会话历史的复制文件）；无需构建/获取/更新任何容器。bubblewrap 经过极其充分的测试，因为它被 flatpak 和其他几个大型项目使用，所以我非常信任它（比我信任 Docker 更多）。<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;swelljoe&#x2F;flar\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;swelljoe&#x2F;flar</a>",
+            "我能够从他们在 GitHub releases 上分发的 .rpm 安装在 Fedora 上：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;sbx-releases&#x2F;releases\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;sbx-releases&#x2F;releases</a>",
+            "我最近也遇到了同样的问题。没有 Linux，也没有 Windows on arm。AI 沙箱有很多选择，但都没有感觉完整。要致力于某件事很难，尤其是审查工具以协助公司政策时。<p>无论如何，我希望没有登录屏幕的东西能够脱颖而出。",
+            "这个工具还不支持 Linux 一定是开玩笑，尽管 docker 是构建在 linux 容器之上的。对 docker 感到羞耻。"
+        ],
+        [
+            "我对此感到兴奋不是因为这之前不存在，而是因为 Docker 在这方面下重金意味着更广泛的采用和行业中更好的集成。但他们在这里要求登录，这对我来说没有任何意义，我感到难过。",
+            "这就是 docker，老兄。明天他们也会在没有高级帐户的情况下对沙箱运行添加限制",
+            "microVMs（firecracker）已经存在多年。这并不新鲜。"
+        ],
+        [
+            "大约半年前，我开始为 OpenCode 构建自己的隔离和安全加固的 docker 镜像。一直在日常使用。<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;pkhamre&#x2F;opencode-docker\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;pkhamre&#x2F;opencode-docker</a>",
+            "如果我对安全感到偏执，我一开始就不会使用 docker。"
+        ],
+        [
+            "模型开始走极端，采取破坏性手段来实现模糊的提示[0]。拥有良好的沙箱现在是必须的，我认为。<p>但 sbx 与 OpenCode 一起使用有点烦人（默认情况下它没有沙箱，与 codex CLI 或 Claude Code 不同）。据我所知，你无法轻松更改 ~&#x2F;.config&#x2F;opencode&#x2F;opencode.jsonc。<p>[0]: Black Hat OpenAI-Hugging Face 事件：<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=87DyyMV0kCY&amp;t=1021s\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=87DyyMV0kCY&amp;t=1021s</a>",
+            "那次事件是使用一个安全护栏被禁用的模型发生的。<p>显然，你应该在沙箱中运行所有不受信任的代码，但如此极端的行为对于发布的模型来说是非常不寻常的。"
+        ],
+        [
+            "需要登录。垃圾。",
+            "我为那些不想被锁定的人构建了一个 OSS 轻量级、可移植的 VM：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;smol-machines&#x2F;smolvm\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;smol-machines&#x2F;smolvm</a>",
+            "我有一个基于 Nix 的解决方案，可用于生成可重现的容器镜像：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;nothingnesses&#x2F;agent-images\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;nothingnesses&#x2F;agent-images</a> 。它允许你自定义要包含在 VM 中的智能体、框架或任何其他包，并使用 `agent-box` 进行沙箱。",
+            "很棒，会尝试在 smol machines 中也测试一下",
+            "这看起来像 gvisor 但是像 firecracker 这样的 vm 吗？有没有理由你不想使用 firecracker？<p>（我现在正在测试这个，作为我目前支持 firecracker 和 gvisor 的宠物项目的后端。没有网络。）",
+            "它是 firecracker 的一个包含电池的替代方案，其中融入了一些新想法，例如像容器一样可移植（烘焙到单个文件中并在任何地方重新激活 vm）、动态资源分配等。",
+            "什么？使用 sbx 需要登录吗？真扫兴。",
+            "是的，他们有一个特定订阅用于在整个企业中管理沙箱策略：Docker AI Governance",
+            "你可以手动创建这些，但如果你想强制执行它们，则需要订阅"
+        ],
+        [
+            "如果有任何 AI 公司在进行认真的工程设计，隔离容器本应成为使用其工具的前提条件。",
+            "任何认真对待安全性的人都希望带上他们自己的沙箱，而不是信任这些通常是专有的智能体。我从未在沙箱外运行过智能体。我为 `claude` 编写的第一个 bubblewrap 脚本现在已经超过一年了。这些工具是可用的，如果你学会使用它们，你可以运行<i>任何</i>程序在沙箱中。<p>但是，无论如何，为什么要在人们不期望或不要求的事情上付出努力呢？我们可以假设每个运行智能体的人要么 a) 使用他们自己的沙箱，要么 b) 不在乎。我认为我们可以猜出大多数人属于哪一类。你可以争论责任，但我认为你不能争论\"认真的工程设计\"。",
+            "> 任何认真对待安全性的人都希望带上他们自己的沙箱<p>正是。这并不难。我从来没有想过从第一天开始不这样做，任何人在裸机上运行这些东西都让我感到惊讶。从那时起，我已经让其他几个人加入，他们所看到的就是这些：他们不知道如何在沙箱外运行，而且这很好。"
+        ],
+        [
+            "让我想起 sandboxy - <a href=\"https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;containerization&#x2F;tree&#x2F;main&#x2F;examples&#x2F;sandboxy\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;containerization&#x2F;tree&#x2F;main&#x2F;examples&#x2F;sandboxy</a><p>另外，如果你的东西不能开箱即用地与 `pi` 一起工作，那么这是低投入的"
+        ],
+        [
+            "前几天我看到了这个：<a href=\"https:&#x2F;&#x2F;nono.sh&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nono.sh&#x2F;</a><p>我还没有测试过，但它似乎以不同的方式解决了与 Docker Sandboxes 相同的问题。",
+            "我已经测试过它，它的最大优势是可以访问本地开发工具。<p>但它的沙箱化肯定没那么好。",
+            "你为什么这么说？<p>例如，如果在 macOS 上与 Colima 一起使用，这意味着我可以在隔离的 VM 中运行 devcontainer，而 Nono 在 devcontainer 中可以限制可以做和不能做的事情。<p>你获得凭据代理和网络出站限制。<p>Docker Sandbox 如何更好地沙箱化？"
+        ],
+        [
+            "在完全不使用沙箱之前，请使用这个或许多类似项目之一，但始终值得记住 Docker 不是安全边界。它从来就不是，将来也不会成为。<p>cgroups 是一种为分层组织和资源分发而设计的机制。面对恶意和有能力的参与者，也就是我们<i>必须</i>对待 AI 智能体的方式，cgroups 将无法抵挡。<p>此外，内核对于 AI 智能体所需的功能来说是一个太大的接口，因此完全不必要地提供了一个巨大的攻击面。",
+            "你会说 podman 更好，还是与 docker 相同？",
+            "一般来说，以无根方式运行容器从安全角度来看更好，podman 使这变得容易得多。所以，是的。<p>但这不是我的主要观点。两者都基于 cgroups，而 cgroups 对于这项工作是错误的工具。",
+            "它不需要超级关键的漏洞，也就是零日漏洞，才能从那种沙箱中逃逸吗？如果你进一步考虑，那么这种风险不也适用于几乎任何类型的沙箱化吗？",
+            "容器逃逸比你想象的更常见。足够常见，以至于 AWS 不依赖容器来实现其无服务器功能，足够常见，以至于 Google 说：<i>\"不受信任的代码不应依赖于容器安全边界 [..]\"</i> [1]<p>同样的情况不适用于任何类型的沙箱，原因有两个：<p>1. 边界在内核自己的代码中，由你试图保护的东西强制执行。 -> 使用 VM<p>2. 内核是一个巨大的攻击面 -> 使用 gVisor<p>[1] <a href=\"https:&#x2F;&#x2F;docs.cloud.google.com&#x2F;kubernetes-engine&#x2F;docs&#x2F;resources&#x2F;security-patching\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.cloud.google.com&#x2F;kubernetes-engine&#x2F;docs&#x2F;resources&#x2F;security-patching</a>",
+            "如果你在容器内使用 bubblewrap 或 nono 等工具怎么办？<p>假设我想在容器内使用 pi。如果我在 bubblewrap 或 nono 中包装 pi，那怎么比使用 vm 不安全？<p>另外，我认为大多数人无论如何都在 VM 中运行容器，而不是直接在他们的主机上运行（在 Mac 和 windows 上你无论如何必须使用 vm）。"
+        ],
+        [
+            "有人能更熟悉 Docker 的人向我解释一下，这与从 Dockerfile 构建自己的 docker 容器以使用 Pi 智能体框架有什么不同吗？这是我目前正在做的。我在 windows 中使用 Docker Desktop 作为后端。",
+            "Docker 容器使用 Linux 内核功能来创建一个隔离的环境，在与 docker 相同的机器上运行。\n这创建了一个虚拟机，具有自己的内核，并在其中运行容器。\n这提供了更强的隔离和安全保证。",
+            "我和 GP 有同样的问题。你的答案有一点帮助但并不真正有帮助。我可能很天真，但我一直以为恶意代码逃逸 docker 镜像并在主机系统上横冲直撞不是我应该太担心的事情。特别是如果我以无根模式运行 docker。那是错的吗？<p>为了清楚起见，我实际上使用的是 podman，而不是 Docker。",
+            "哦不，你绝对应该担心这一点。Podman 可能使升级到主机 root 或操纵其他容器变得更加困难，但它仍然容易受到攻击。<p>现在我很好奇 Docket Sandbox 编排接口的加固程度。我猜我们可以假设他们已经针对 Mythos 运行了几周？不清楚。",
+            "令人不安。我是说，在 2026 年有没有合理的方法来开发软件？我已经发誓永远不会在主机上直接安装 npm。一切都容器化已经够费力了，但是为每件事运行一个单独的 VM？",
+            "你只需要为你正在做的事情制定威胁模型。对于受信任的容器化工作负载，其中攻击面最小，仅容器化就可以了。然而，智能体几乎可以在你的计算机上做任何你允许的事情，人们并没有真的回避 `--dangerously-skip-permissions`，所以更好的加固（VM、microVM）是可取的。",
+            "胡说。<p>除非我们谈论的是 0-day&#x2F;CVE，否则运行无特权容器与 VM 一样可信。唯一的区别是你希望对内存/CPU 限制的严格程度。事实上，在 linux 上，容器比 VM 更轻量。<p>所以，是的，不是\"易受攻击的\"。",
+            "当主机是 Mac 或窗口时，docker 无论如何总是在 VM 中运行。<p>在 Linux 上，你可以直接在主机上运行 docker，但你也可以非常轻松地使用 incus 设置一个 vm 并从那里运行 docker。"
+        ],
+        [
+            "我知道有些人想在他们的计算机关闭时运行他们的智能体，但我想象这样的解决方案将比支付远程沙箱（例如在 fly.io 或 exe.dev 上）更常见，特别是因为它是免费的。<p>不过，他们需要删除登录要求。",
+            "这取决于运行时。例如，libkrun 允许你这样做：<p><pre><code>    docker run --runtime krun hello-world\n</code></pre>\n这在 qemu microvm 中启动/运行 OCI。"
+        ],
+        [
+            "沙箱化问题也许是通过现有的人类界面而不是低级 shell 访问进行智能体集成的最大理由。授予 shell 访问权限是一条非常明显的路径（它很容易），所以我能理解我们为什么想要为之奋斗。但在我们做最后抵抗之前，我们也应该考虑其他路径。<p>正确使用 LLM 智能体自动化浏览器比 Process.Start 到 powershell 需要更多的工作，但一旦你以这种方式实现集成，优势可能是巨大的。增量维护这种集成通常很容易，因为人类用户也无法容忍快速的变化。<p>让管理层接受一个看起来和表现像人类员工的机器人，比接受一个看起来像联合收割机的机器人要容易得多。联合收割机的效率要高得多，但它也是完全不加区分的。除了由 GPS 强加的隐形围栏之外，没有任何东西可以约束它的胃口。保持农场设备不偏离轨道所需的基础设施数量令人难以置信。在农业的背景下，增加的复杂性绝对值得。如果我们能够避免，我们不想用我们的技术重新创建同样的东西。沙箱和安全隔离边界不是值得追求的东西。这些是为了获得更有价值的东西的入场券而付出的代价。",
+            ""
+        ],
+        [
+            "我尝试了 Docker Sandboxes，但上次我检查时，你无法配置自定义卷挂载，使得更复杂的设置成为不可能。对于工作，我需要两个目录供智能体访问上下文……",
+            "",
+            "将它们都放在另一个目录中并共享该目录？我错过了什么？"
+        ],
+        [
+            "具有 podman 支持和本地遥测收集的开源替代品 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;VibePod&#x2F;vibepod-cli\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;VibePod&#x2F;vibepod-cli</a>",
+            "看起来很不错。很容易制作 qwen-cli 包装器吗？"
+        ],
+        [
+            "我很困惑：\n1. 如果我在 Mac 上运行此程序，那么在沙箱/microVM 内，我是否仍在运行 MacOS 或某个 Linux 发行版？\n2. 如果从主机挂载的唯一内容是 $PWD，它如何保证它具有我在主机系统上安装的所有系统库？例如我的 `&#x2F;opt&#x2F;homebrew` 库或 `sudo apt install libfoo-dev` 头文件"
+        ],
+        [
+            "我确实尝试使用这些来做一些事情：\n* 登录要求是另一回事\n* 据我所知它是闭源的\n* 相当慢/不稳定<p>有许多更好的命名空间/容器选项，VM 可能更安全一些，但当你或多或少地信任你的智能体和代码时，你可以使用较少的限制。最近 kvm 中的 CVE 表明，与命名空间相比，没有巨大的差异。<p>（我正在构建 <a href=\"https:&#x2F;&#x2F;xbin.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xbin.dev&#x2F;</a> 一段时间来管理我的个人代码/应用，该项目是在 Docker Sandboxes 出现问题后专门开始的）"
+        ],
+        [
+            "我宁愿使用不需要注册、不太可能被诈骗的开源解决方案。<p>创建本地迷你沙箱没有理由需要登录。<p>如果你使用 Apple，像 \"container-machine init\" 这样的原生解决方案是内置的，非常好，前提是你只在 Apple 硬件上。"
+        ],
+        [
+            "我编写了一个 CLI 工具，它在底层使用 QEMU 的 microvm 机器类型。它可以采用任何 docker 镜像并构建一个 microvm。<p>我经常使用它来运行禁用了权限检查的 Claude&#x2F;Codex。<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;cvhariharan&#x2F;mvm\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;cvhariharan&#x2F;mvm</a>"
+        ],
+        [
+            "我使用它（sbx），但我并不 100% 信任它确实有效，并且我更喜欢开源的东西，在那里可以测试和探索沙箱化的限制。<p>也许我们应该 ssh 到单独的开发机器中以确保真实且可验证的沙箱化？（在 Docker 出现之前这完全是标准做法）",
+            "你应该研究一下 bubblewrap 和 nono。"
+        ],
+        [
+            ""
+        ],
+        [
+            "我几乎看不出这有什么意义，因为 Apple 和 Microsoft 已经有了自己的开箱即用解决方案来解决同样的问题。<p>更好的 AI 智能体沙箱化正是 macOS 和 Windows 上容器改进的主要原因，在 WWDC 和 BUILD 上有一些演讲。<p>不确定他们将从 Linux 用户那里获得多少收益。"
+        ],
+        [
+            "如果你正在寻找替代方案，我一直在维护所有智能体沙箱提供商的列表<p><a href=\"https:&#x2F;&#x2F;engine.build&#x2F;lab&#x2F;agent-sandboxes\" rel=\"nofollow\">https:&#x2F;&#x2F;engine.build&#x2F;lab&#x2F;agent-sandboxes</a><p>特别是开源部分。"
+        ],
+        [
+            "对我来说最有趣的部分是沙箱边界级别的凭据注入：<a href=\"https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;security&#x2F;credentials\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;security&#x2F;credentials</a>",
+            "现在不是每个人都在这样做吗？这几乎不是一个新想法。然而，每次有人提出这个想法，人们都会对它赞不绝口，并宣称它是有史以来最好的东西。<p>是的，你可以通过代理注入令牌。还有什么新东西？",
+            "谁正在将其作为具有至少足够用户体验的一流功能来执行？<p>我浏览了本文评论中提供的替代方案（vibepod-cli、code-on-incus、opencode-docker、sandboxy、smolvm、amazing-sandbox），似乎没有一个在代理级别执行凭据注入。",
+            "nono。<p>现在 fnox 也执行凭据代理。"
+        ],
+        [
+            "像许多人一样，我怀疑，我用 Claude 编写了自己的智能体沙箱，非常适合我的需求。投资我的时间在一个专有产品上已经变得很难推销。",
+            "我也做了同样的事情。这是我第一个\"vibecoded\"项目。我每天都在使用它，它很棒。我现在正在为它编写一个自定义 Rust 网络栈。将用当前的 nftables 防火墙替换它。<p>至于 Docker Sandboxes，我现在就问 Sol，看看它比我的 virtdev 做了什么，然后我会改进 virtdev 而不是使用 Docker。",
+            "你是在遵循任何模式/标准/建议来了解需要防范什么吗？你能为我们其他人指出任何东西吗？",
+            "> 你是在遵循任何模式/标准/建议来了解需要防范什么吗？<p>只是普遍的认知，即与不受信任的软件共享内核太危险了，硬件虚拟化的攻击面无限小，并且<i>整个行业</i>将陷入深度麻烦如果人们或 AI 破坏 hypervisor。<p>最初的威胁模型是供应链攻击，但最终扩展到包括 AI 框架。并不是非常担心他们会黑我，更多的是关于事故预防。<p>这意味着每个 VM 必须运行完全独立于主机文件系统的内核。它们还必须内置失败关闭的网络过滤。<p>> 你能为我们其他人指出任何东西吗？<p>我已经发布了我的 virtdev 的设计文档。<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;matheusmoreira&#x2F;virtdev&#x2F;blob&#x2F;master&#x2F;DESIGN.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;matheusmoreira&#x2F;virtdev&#x2F;blob&#x2F;master&#x2F;DESIGN.md</a><p>是的，它是 AI 生成的。<p>总之，它是一个 QEMU VM 编排器，带有基础 OS 镜像和项目特定的增量镜像。VM 生命周期由 systemd 管理。系统级隔离已经相当好，并且已经解决了\"AI 抹掉我的 $HOME\"问题。我目前正在开发一个自定义网络栈来替换基于 nftables 的防火墙。",
+            "你需要防止智能体/其他人访问你的主目录和其他东西。只要你不从/向容器挂载/同步目录/文件，所以没有像 \"-v $(pwd):&#x2F;app\" 这样的挂载，而是复制进去，那么完成后，复制出来。<p>当然，与其手动执行\"复制进去 > 复制出来\"过程，不如让你的本地智能体编写一个 bash 脚本来为你完成，给定你在哪个目录中，你基本上就可以开始了。",
+            "与绑定挂载相比，复制的优势是什么？",
+            "你具体在找什么？如果你从它现在以你身份运行的前提开始，那么这是你可以轻松改进的地方。<p>首先仅挂载你的 repo 并传入智能体的密钥。从那里开始，它就像软件工程，你进行迭代。<p>当你遇到问题时，你会在容器中扩展可用的工具。"
+        ],
+        [
+            "为什么开发者永远不会为他们的工具付费。"
+        ],
+        [
+            "[已删除]"
+        ],
+        [
+            "我希望他们解决多年来发生在 MacOS 上的问题，即 Docker 一直在占用所有可用空间，最终需要重新启动整台机器，而不是 Gordon 和其他无用的东西。"
+        ],
+        [
+            "我想知道的是，除了扫描机器上的二进制文件之外，如何强制使用 Docker Sandboxes 而不是直接在主机上运行智能体。"
+        ],
+        [
+            "只是一个小的元注释：本主题中的大多数评论似乎都在发布他们自己的代码库（通常是 AI 生成的）来实现相同的目标。有趣的是，这个问题同时需求很高，但被认为足够简单，可以为每个用户进行 vibe code 解决方案。"
+        ],
+        [
+            "我使用了一段时间，然后决定构建自己的套件，将各个框架和各自的主机状态（配置、插件、技能等）打包到一个镜像中。在我看来效果更好，灵活得多。"
+        ],
+        [
+            "有人开始在 Lean（或 Coq 等）中证明他们的沙箱吗？"
+        ],
+        [
+            "所以这是 Docker 的一个 VM？<p>对于那些不信任的人<p><pre><code>    docker run --rm -it -v \"$(pwd)\":&#x2F;work -w &#x2F;work myaiimage &#x2F;bin&#x2F;bash\n</code></pre>\n并且不想使用其他一些免费的 VM，出于某种原因？",
+            "更好的是，如果你使用的是 Mac，请使用 Apple 的 container CLI，而不是 docker 这个膨胀软件。<p>container run --rm -it -v \"$(pwd)\":&#x2F;work -w &#x2F;work myaiimage &#x2F;bin&#x2F;bash",
+            "Docker 一直以来不就是现有解决方案之上的一层薄薄的管道胶带吗？"
+        ],
+        [
+            "有人试过 <a href=\"https:&#x2F;&#x2F;bhatti.sh&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;bhatti.sh&#x2F;</a> 吗？"
+        ],
+        [
+            "我不确定我理解，这与 devcontainer 或其他类似技术有什么不同？<p>另一个话题，不由得注意到 \"leading coding agents\" 不知何故不包括 Pi。",
+            "关于缺少对 Pi 的原生支持，我很久以前就开了这个 issue，以防你想施加一些压力：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;sbx-releases&#x2F;issues&#x2F;34\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;sbx-releases&#x2F;issues&#x2F;34</a><p>为了解决这个限制，我想出了这个 <a href=\"https:&#x2F;&#x2F;github.com&#x2F;shaftoe&#x2F;sbx-template-pi\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;shaftoe&#x2F;sbx-template-pi</a><p>所以基本上你可以从该镜像获取最新的 Pi&#x2F;Node：<p>`sbx run -t ghcr.io&#x2F;shaftoe&#x2F;sbx-template-pi:latest shell`<p>像这里的其他人一样，我也对登录要求感到难过，但目前这是我找到的运行沙箱化智能体的最佳 UX，\"kit/mixin\" 概念很整洁，我也在使用它们：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;shaftoe&#x2F;sbx-template-pi#stacking-the-extras-mixin\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;shaftoe&#x2F;sbx-template-pi#stacking-the-extras-mixin</a>",
+            "它运行一个完整的 VM，因此智能体可以例如安全地运行 docker 命令等"
+        ],
+        [
+            ""
+        ],
+        [
+            "已经使用了一段时间 - 效果很好！过去一年也有很多更新，所以如果你一段时间以前尝试过，值得再次查看",
+            "智能体是预装在镜像中的吗？或者它们是否以某种方式使用我本地安装的内容？前者对我来说很有意义，但随后我想知道沙箱镜像是否与每个镜像的新版本保持同步。",
+            "智能体是按安装的。如果智能体有更新，VM 会在首次运行时通知你，并在你批准后更新它。<p>除了登录问题外，这是一个不错的选择。"
+        ],
+        [
+            "啊，让我想想，他们是否仍然希望你登录，以便使用本地开发工具？是的，是的，他们确实是这样。不，谢谢 Docker。你可以保留你关于为什么需要这个的流行语推理。"
+        ],
+        [
+            "这里有另一个我觉得有趣的沙箱：<a href=\"https:&#x2F;&#x2F;github.com&#x2F;ashishb&#x2F;amazing-sandbox\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;ashishb&#x2F;amazing-sandbox</a>",
+            "非常有趣。感谢分享。"
+        ],
+        [
+            "所以它基本上是一个花哨名字的容器，不是吗？"
+        ],
+        [
+            "对我来说，这是重要的区别：沙箱化限制了智能体可以做的事情，但它不一定强制智能体必须在沙箱内运行。你需要一个单独的控制层来强制该边界。",
+            "你设计沙箱，使智能体在该层启动。你可以做的下一件事是限制网络访问，这正是我现在正在做的。<p>还是你的意思是别的？"
+        ],
+        [
+            "在 Linux 上，你可以跳过 Docker，使用 bubblewrap。一些灵感：<a href=\"https:&#x2F;&#x2F;blog.gpkb.org&#x2F;posts&#x2F;ai-agent-sandbox&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.gpkb.org&#x2F;posts&#x2F;ai-agent-sandbox&#x2F;</a>",
+            "Bubble wrap 不是只是容器化吗？",
+            "不确定你说的\"只是\"是什么意思。容器化通常被理解为类似 Docker 所做的事情，其中包括沙箱，但还有更多内容，如镜像管理等。Bubblewrap 只是沙箱化，没有容器化的其他部分。",
+            "Docker Sandboxes 使用的是 microVM，而不是容器化。"
+        ],
+        [
+            "...或者...听我说完......我们可以在框架中限制它。<p>不要给它 shell 访问，只需使用预定义的工具。",
+            "如果它将恶意代码放入测试文件并且你允许 `npm run test` 怎么办？"
+        ],
+        [
+            "链接的页面暗示没有 linux 支持，我想知道为什么。如果你在文档中查找，它就在那里。",
+            "文档在这里：<a href=\"https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.docker.com&#x2F;ai&#x2F;sandboxes&#x2F;</a><p>另一个 url 是他们的营销页面。<p>是的，支持 Linux。"
+        ],
+        [
+            "Docker 管理将在每个机会上失败他们的技术。"
+        ],
+        [
+            "[已删除]"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            ""
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "[已删除]"
+        ],
+        [
+            "[已删除]"
+        ],
+        [
+            "[已删除]",
+            "在 MacOS 上存在名称冲突，其中 MacOS 也提供容器 [1]<p>[1] <a href=\"https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;container\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;container</a>",
+            "为什么工作流摩擦更少？",
+            "从头开始自定义容器的精确环境（框架、工具、基础镜像、包、挂载等），并通过单个命令进入。"
+        ]
+    ]
+}

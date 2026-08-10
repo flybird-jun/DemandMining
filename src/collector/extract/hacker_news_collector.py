@@ -30,7 +30,7 @@ class HackerNewsCollector(Collector):
         await self._session.close()
 
     async def producer_item_ids(self) -> None:
-        new_stories_ids = await HackerNewsApi.get_new_stories(self._session)
+        new_stories_ids = await HackerNewsApi.get_top_stories(self._session)
         for i, item_id in enumerate(new_stories_ids, 1):
             await self._queue.put(item_id)
         await self._queue.put(HackerNewsCollector.INVALID_ITEM_ID)
@@ -51,8 +51,8 @@ class HackerNewsCollector(Collector):
                 text = await self._get_article(item_json["url"]) if not "text" in item_json else item_json["text"]
             else:
                 logger.info("{item_id} don't have url: {item_json}")
-                
             out: dict[str, Any] = {
+                "item_id":item_id,
                 "title": item_json.get("title", ""),
                 "url": item_json.get("url", ""),
                 "text": text,

@@ -1,0 +1,97 @@
+{
+    "item_id": 49227505,
+    "title": "TheoremDB – A public workspace for machine mathematics",
+    "url": "https://theoremdb.org/",
+    "text": "[#P2692]\nSharp L2 norm of the centered maximal operator on C_31\nOpen\nFor \\(f:\\mathbb Z/31\\mathbb Z\\to\\mathbb R\\), define \\(Mf(j)=\\max_{0\\leq r\\leq15}(2r+1)^{-1}\\sum_{k=-r}^{r}|f(j+k)|\\). Determine the exact operator norm \\(\\sup_{f\\neq0}\\|Mf\\|_2/\\|f\\|_2\\).\nharmonic analysis\n[#P2692]\nOpen packet\nOpen in ChatGPT",
+    "comment": [
+        {
+            "text": "Andrej Bauer and others are working on a kind of similar infrastructure, and developing a dedicated query language: <a href=\"https:&#x2F;&#x2F;math.andrej.com&#x2F;2026&#x2F;07&#x2F;11&#x2F;making-ai-smarter-with-ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;math.andrej.com&#x2F;2026&#x2F;07&#x2F;11&#x2F;making-ai-smarter-with-ai...</a>",
+            "comment": [
+                {
+                    "text": "Is there any advantage of this over an agent using a Google search?<p>I feel like the main benefit of such an endeavor would be to create a centralized database of mathematical theorems. But why aren&#x27;t we using Lean theorems as the nodes instead?<p>The holy grail would be constructing an encoder that takes in a lean theorem and produces a meaningful latent vector so that whatever future math AI can instantly look up previously used &quot;tricks&quot; as opposed to only theorems.<p>I&#x27;ve met Andrej and he&#x27;s obviously a genius so I&#x27;m sure this is useful.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Project creator here- I really did not expect it to get posted on hackernews! A nice surprise for sure though.<p>Seems like someone found the site and posted without me.<p>I am still working on the site and was planning on launching in a few weeks. There are some usability issues and some\nfeatures on my roadmap I haven’t gotten to yet.<p>That said- if folks are interested in helping contributing new problems&#x2F;proofs, hunting bugs, or giving suggestions, we have a discord <a href=\"https:&#x2F;&#x2F;discord.gg&#x2F;ds23BgPq6\" rel=\"nofollow\">https:&#x2F;&#x2F;discord.gg&#x2F;ds23BgPq6</a>",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;ve been considering something like this for a while.\n It only makes sense as a free, open-source, decentralized sharing protocol (where anyone can host theorems and no one can limit sharing them).<p>If a company were to manage to commercialize this, it would end public open research.",
+            "comment": [
+                {
+                    "text": "(Project creator here):<p>I have 0 interest in commercializing this.<p>Im taking a lot of inspiration from MathOverflow, where I’ve been a user for several years. I think there is a protocol approach to this project that can be built, but it’s not what I’m building.  I’m optimizing more for building in community features, since that is the genre of site I have enjoyed using in the past.",
+                    "comment": []
+                },
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;math-inc&#x2F;OpenGauss\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;math-inc&#x2F;OpenGauss</a><p><a href=\"https:&#x2F;&#x2F;www.math.inc&#x2F;vision\" rel=\"nofollow\">https:&#x2F;&#x2F;www.math.inc&#x2F;vision</a><p>Just use lean",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Fun, I&#x27;ve been building a similar idea for the last year in my evenings, but focusing on human curation and human consumption and ensuring the humans understand the concepts correctly. Gonna be nice to have all these orthogonal projects complementing one another",
+            "comment": []
+        },
+        {
+            "text": "Why do LLM coded websites seem so obvious?<p>Like an earnest project in this direction would probably look like a 90s html page",
+            "comment": [
+                {
+                    "text": "Why?<p>If you wanted to build a website right now, why would you hand-code an ugly version when you could get an LLM to do it quickly, cheaply and have it much better looking?",
+                    "comment": [
+                        {
+                            "text": "Did you try using the website? It&#x27;s broken lol",
+                            "comment": [
+                                {
+                                    "text": "Yeah, interestingly it feels equally bland as the 90s pendants.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Wasn&#x27;t using a source-grounded AI with citations a better natural choice than chatgpt with hallucinations?",
+            "comment": []
+        },
+        {
+            "text": "I suspect tools like this will change human behaviour in the future so that no one really understands the math any more. If a solution to the Riemann hypothesis is found with it, I wouldn&#x27;t be surprised if the person finding it didn&#x27;t even understand analytic continuation. And that those that do just click like and scroll to the next problem.",
+            "comment": [
+                {
+                    "text": "Hasn’t this been the case for human-made proofs too?<p>For example, Andrew Wiles’s famous proof touched a number of different, barely-related mathematical fields that no single person could allegedly peer-review it on their own. That was in the 1990s.",
+                    "comment": [
+                        {
+                            "text": "A proof may be impossible to fully grok, since about Leibniz - but problems will be solved now without even understanding the problem statement.",
+                            "comment": []
+                        },
+                        {
+                            "text": "No there were a few people that could. And in principle, if Andrew Wiles did it, others could too and were motivated to do it. What I&#x27;m saying is that people will be conditioned to explore less on their own with tools like this and thus fewer and fewer will bother understanding the proofs.<p>Math is getting very specialized it&#x27;s true, and I think that&#x27;s part of the motivation to use AI. The specialization is itself a bit of a problem, so AI is simultaneously exposing that and hiding it under another layer of abstraction.",
+                            "comment": [
+                                {
+                                    "text": "This applies to a lot of scientific and practical (like construction) topics in general. Everyone relies on someone else (or something else) knowing what to do.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Love the idea, but the website is just broken.. problem statements don&#x27;t load, etc..",
+            "comment": [
+                {
+                    "text": "(Project creator here): Someone actually posted the site without me- I wasn’t planning on launching for a few weeks! If you see any issues, feel free to report them and i’ll get on fixing them right away!<p>I’m active on the discord, feel free to report any bugs there. <a href=\"https:&#x2F;&#x2F;discord.gg&#x2F;ds23BgPq6\" rel=\"nofollow\">https:&#x2F;&#x2F;discord.gg&#x2F;ds23BgPq6</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Vibe coded",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "item_id": 49234137,
+    "title": "Transmission has been forked as \"ReTransmission\"",
+    "url": "https://github.com/transmission/transmission/discussions/9031",
+    "text": "Uh oh!\nThere was an error while loading.\nPlease reload this page\n.\ntransmission\n/\ntransmission\nPublic\nNotifications\nYou must be signed in to change notification settings\nFork\n1.4k\nStar\n15.1k\nWhy has the project been forked as 'retransmission'?\n#9031\nwally-crunk\nstarted this conversation in\nGeneral\nWhy has the project been forked as 'retransmission'?\n#9031\nwally-crunk\nAug 4, 2026\n·\n3 comments\n·\n3 replies\nReturn to top\nDiscussion options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nedited\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nwally-crunk\nAug 4, 2026\n…\n4\nYou must be logged in to vote\nAll reactions\nReplies:\n3 comments\n·\n3 replies\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nckerr\nAug 4, 2026\nMaintainer\nThere are several reasons, but the easiest one to explain quickly is it solves a longstanding disagreement between the Transmission maintainers on whether or not to add more maintainers.\nIt's still early days for the fork and we don't have signed binaries yet. Once we start doing actual releases we'll put out an announcement with more info.\n7\nYou must be logged in to vote\nAll reactions\n1 reply\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nPentaphon\nAug 8, 2026\nit solves a longstanding disagreement between the Transmission maintainers on whether or not to add more maintainers.\nIs Transmission still the main project then? Is retransmission just a fork for other people to be added to it?\nAll reactions\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nvalcomm\nAug 8, 2026\nIt's kind of weird situation. Let's split and then announce and discuss. I think discussion should happen first.\nHow changes would be applied from one project to another and back? Such synchronization is an additional job that didn't exists before.\nIs one project will be doomed to be abandoned?\nHow bug reports will be synchronized?\nAll this is very alerting\n1\nYou must be logged in to vote\n👎\n1\nAll reactions\n👎\n1\n0 replies\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nedc1512\nAug 9, 2026\nIf this new fork can bring new life to the project, modernize the codebase, introduce new features, fix long-standing bugs, and allow contributions to move forward more quickly, then I think it could be a very positive development.\nTransmission has been a great project for many years, and seeing renewed development and fresh energy around it can only be a good thing for its users.\nI'm looking forward to seeing how Retransmission evolves. Good luck with the project!\n5\nYou must be logged in to vote\n👍\n5\nAll reactions\n👍\n5\n2 replies\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nmocenigo\nAug 9, 2026\nI think that they have discussed already.\nAll reactions\nComment options\nUh oh!\nThere was an error while loading.\nPlease reload this page\n.\nQuote reply\nvalcomm\nAug 9, 2026\nIf this new fork can bring new life to the project, modernize the codebase, introduce new features, fix long-standing bugs, and allow contributions to move forward more quickly, then I think it could be a very positive development.\nYou missed to mention the reason why all those great things can't happen to transmission.\n👍\n2\nAll reactions\n👍\n2\nSign up for free\nto join this conversation on GitHub\n.\n Already have an account?\nSign in to comment\nCategory\n💬\nGeneral\nLabels\nNone yet\n6 participants",
+    "comment": [
+        {
+            "text": "Astonished by the volume of issues and PRs for this project, they&#x27;ve really felt &quot;complete&quot; for the years I&#x27;ve been using it.",
+            "comment": [
+                {
+                    "text": "Same. I never have issues with Transmission and actively avoid other feature-rich clients but I guess I&#x27;m not a super user",
+                    "comment": [
+                        {
+                            "text": "Transmission was stable with no updates for a long time, and a few years back it started adding in more recent bittorrent features.<p>First update went ok (IIRC), next one had a feature that few users spotted - a bug caused it to hammer tracker servers with update status requests.<p>The result of that was that many tracker operators started to ban Transmission - the careful ones banned the specific version number, a good many banned either Transmission or the major base release number (4?)<p>To this day, recent Transmissions version that do &quot;play nice&quot; with trackers are penalised and get fewer to no peers and seeds from a torrents tracker pool.<p>I still like Transmission for the tight headless mode and remote control aspects .. but maybe two out of ten torrents stall up and I transfer control to a qBitTorrent instance.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Try a really big torrent (several hundred GB - note that it&#x27;s common to only download some files from such a torrent). It doesn&#x27;t work in Transmission. At that point, I switched to qBittorrent, which has some nice extra features, too.",
+                    "comment": [
+                        {
+                            "text": "What didn&#x27;t work for you? This is one of my main uses, getting episodes from only one season, out even just the first couple to see if I like it. Worked since forever for me.",
+                            "comment": [
+                                {
+                                    "text": "Changing which files are &#x27;active&#x27; doesn&#x27;t always take effect correctly until the client is restarted, which can lead to &#x27;stalled at 0kb&#x2F;s&#x27; downloads from all possible peers even if the torrent is stopped and then started <i>without</i> restarting the full app.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "IIRC it failed to download anything.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Why not just use qbittorrent? Has RSS, has search in the client, has paths based off categories...",
+            "comment": [
+                {
+                    "text": "I run transmission on a headless box and only open the remote GUI for it once in a while. Can other bittorrent clients do that out of the box?",
+                    "comment": []
+                },
+                {
+                    "text": "As someone that only very recently switched to qBittorrent from Transmission after using it for few years - the lack of non-Web UI remote clients.",
+                    "comment": [
+                        {
+                            "text": "I&#x27;d recommend checking out qui - still web-based but extremely well made.",
+                            "comment": []
+                        },
+                        {
+                            "text": "deluge is probably the best for native gui. It doesnt have the amount of integrations as qb and it struggles with many thousands of torrents (or at least it did 10yrs ago), but otherwise a great client.<p>Otherwise there’s qui for qb which, while still a webui, is great.",
+                            "comment": []
+                        },
+                        {
+                            "text": "You can probably just use VueTorrent or qBitController android app for headless mode.",
+                            "comment": [
+                                {
+                                    "text": "VueTorrent is a web client.<p>I currently use the official Web UI in an isolated Chromium instance and made an automatic log in page so that I don&#x27;t have to type in the password every single time I open it.<p>I add torrents to the qBittorrent instance using a Firefox addon. It&#x27;s all a bit jank.<p>I started some work to make my own qBittorrent client for desktop; I don&#x27;t care about mobile that much.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

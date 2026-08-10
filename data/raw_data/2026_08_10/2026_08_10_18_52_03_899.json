@@ -1,0 +1,33 @@
+{
+    "item_id": 49235583,
+    "title": "Ask HN: Recommended Merchant of Record and Affliate Setup",
+    "url": "",
+    "text": "",
+    "comment": [
+        {
+            "text": "I&#x27;m the founder, so take this with a grain of salt, but depending on _what_ you&#x27;re selling, <a href=\"https:&#x2F;&#x2F;moonbase.sh\" rel=\"nofollow\">https:&#x2F;&#x2F;moonbase.sh</a> may be an option.\nWe built it for selling software specifically, primarily downloadable&#x2F;installable software, and was annoyed by the difficulties of onboarding affiliates. So revenue sharing is built in, and handled in any way you see fit. Feel free to book a demo if you think this may be a good fit for you.",
+            "comment": []
+        },
+        {
+            "text": "For MOR, Stripe has its own (recently launched) Managed Payments system: <a href=\"https:&#x2F;&#x2F;docs.stripe.com&#x2F;payments&#x2F;managed-payments\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.stripe.com&#x2F;payments&#x2F;managed-payments</a>",
+            "comment": [
+                {
+                    "text": "Thank you. They were originally my first thought, and the one that was acquired was acquired by them.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        }
+    ]
+}

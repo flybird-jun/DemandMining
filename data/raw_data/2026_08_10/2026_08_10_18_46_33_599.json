@@ -1,0 +1,783 @@
+{
+    "item_id": 49221668,
+    "title": "_for-sale DNS records",
+    "url": "https://specification.website/spec/foundations/for-sale-dns/",
+    "text": "What it is\n_for-sale\nis a reserved DNS leaf node name, defined by RFC 10023 (Informational, July 2026) and registered with IANA. A\nTXT\nrecord published at\n_for-sale.example.com\nsignals that\nexample.com\n, although registered and resolving normally, is available for purchase.\n_for-sale IN TXT \"v=FORSALE1;furi=https://example.com/for-sale\"\nThe record carries a mandatory version tag followed by at most one\ntag=value\npair:\nTag\nMeaning\nExample\nftxt=\nFree human-readable text\nftxt=Eligibility criteria apply.\nfuri=\nContact or information URI\nfuri=mailto:hq@example.com\nfval=\nAsking price, currency + amount\nfval=EUR2500.00\nfcod=\nProprietary code, by prior agreement\nfcod=XX-aHR0cHM...\nThe wrong belief to clear first is that this is a way of\nparking\na domain. It is close to the opposite. Parking replaces the site with a sales page, which costs you every visitor the domain still has.\n_for-sale\nsits beside a live site in DNS and says nothing to a browser: the homepage keeps serving, the mail keeps flowing, and the record can be added and removed at will. RFC 10023 makes the point explicitly — the convention is designed to work while the domain is still in active use.\nIt is also not the same thing as registration data. WHOIS and RDAP answer “is this name registered?”; a registered name may still be purchasable, and an unregistered one may not be worth having. That gap is the whole reason the convention exists, and it is why brokers and automated availability services are the intended audience rather than people.\nWhy it matters\nThe signal a domain owner most wants to send is the one there has never been a channel for. If you are willing to sell, the interested buyer has no way to learn that short of a cold email to a WHOIS contact that privacy redaction has probably removed. Enquiries that would have been welcome never arrive, and the ones that do arrive are indistinguishable from spam.\nPutting the signal in DNS rather than on the page is what makes it useful to the parties who can act on it. A broker or an availability service checking a name resolves it anyway; one extra lookup tells them what a rendered page could not, because nothing on a working homepage says “the domain under this is negotiable”. It is externally checkable, costs one record, and carries no risk to the site itself — a browser never sees it.\nHow to implement\nPublish a single\nTXT\nrecord at the\n_for-sale\nleaf of the zone you are selling, and only while you mean it.\n; Free text\n_for-sale IN TXT \"v=FORSALE1;ftxt=Serious offers only\"\n; A URI to negotiate through — https, mailto and tel are the usable schemes\n_for-sale IN TXT \"v=FORSALE1;furi=https://example.com/fs?d=eHl6\"\n; An asking price: uppercase currency code, then the amount\n_for-sale IN TXT \"v=FORSALE1;fval=USD12500\"\nRules worth getting right the first time:\nThe version tag is mandatory\nand case-sensitive: every record starts\nv=FORSALE1;\n. It exists so a processor can tell a real\n_for-sale\nrecord from an unrelated\nTXT\nrecord that a DNS wildcard happened to expand into that name.\nOne tag-value pair per record.\nTo publish a price\nand\na contact URI, publish two records in the same RRset and let the processor pick what it understands. This is not SPF; the pairs do not concatenate.\nOne character-string per record\n, 255 octets maximum, so nothing has to be reassembled during parsing.\nKeep the TTL at 3600 seconds or less.\nA stale record advertising a price you have withdrawn, or a domain you already sold, is worse than no record.\nPlace it at a leaf.\n_for-sale.example.com\nis valid at any level of the tree, but\nxyz._for-sale.example.com\nis not, and records under\n.arpa\nmust be ignored — an offer to sell address space is out of scope.\nRemove it when the domain is no longer for sale.\nThe convention has no “not for sale” value; absence is the only way to say no.\nSign the zone with\nDNSSEC\nif you can. An unsigned\nTXT\nrecord asserting your domain is for sale, at a price, with a contact URI, is a comfortable thing for someone else to forge.\nThis site does not ship a\n_for-sale\nrecord: specification.website is not for sale.\nCommon mistakes\nCramming several pairs into one record.\n\"v=FORSALE1;fval=EUR2500;furi=https://…\"\nlooks reasonable and is not what the format defines. Use one pair per record, multiple records per RRset.\nPublishing it aspirationally.\nThe indicator is only for domains actually available. It is not a marketing banner, and a record that exists to lure enquiries is an abuse the RFC calls out by name.\nAssuming it obliges anyone.\nPublishing the record does not commit the holder to sell, and an advertised\nfval=\nprice is indicative — the RFC tells processors to display a disclaimer and never to treat it as a purchase commitment.\nExpecting a wildcard to cover a whole zone.\n_for-sale.*.example.com\nis not a valid wildcard. There is no way to put every domain under a TLD up for sale with one record.\nTrusting the content.\nIf you are on the reading side,\nftxt=\nis attacker-controlled text and\nfuri=\nis an attacker-controlled URI. Sanitise before display — the RFC’s own example content is\n<script>...</script>\n— and never auto-navigate a user to a\nfuri=\ntarget without an explicit confirmation step.\nVerification\ndig\n+short\nTXT\n_for-sale.example.com\nThe answer begins with\nv=FORSALE1;\nand contains at most one\ntag=value\npair per string.\nThe TTL is 3600 or lower:\ndig TXT _for-sale.example.com | grep _for-sale\n.\nIf the zone is signed,\ndig +dnssec TXT _for-sale.example.com\nreturns a validating\nRRSIG\n.\nThe record resolves at all. During a redemption or\npendingDelete\nperiod, or when DNSSEC validation is bogus, the name will not resolve and the signal silently disappears.\nRelated topics\nDNSSEC\nDNS CAA records\nDNS for AI Discovery (DNS-AID)\nWell-known URIs\nSources & further reading\nRFC 10023 — The \"_for-sale\" Underscored and Globally Scoped DNS Node Name\n— IETF\nRFC 8552 — Scoped Interpretation of DNS Resource Records through Underscored Node Names\n— IETF\nIANA — Underscored and Globally Scoped DNS Node Names registry\n— IANA",
+    "comment": [
+        {
+            "text": "Something I&#x27;ve wondered... if you publicly say that a domain is for sale and someone has a trademark for it would you automatically lose in arbitration?<p>Around 1998 I registered a domain. Sony registered a trademark with the same name a few years after that. Someone on a Gmail account asked if he could buy it - I later found out he worked for Sony. I told him no - it&#x27;s for a game I&#x27;ve been working on. I went on a vacation for a month and when I got back there was a fedex package filled with documents from Sony saying I&#x27;m violating their trademark and they&#x27;ll take the domain.<p>I got a lawyer and he told me that I shouldn&#x27;t offer it for sale as that would show the arbitration board that I don&#x27;t need the domain. But he also told me that in order to fight the trademark it would probably cost a couple of hundred thousand dollars. So I could keep the domain but not use it for commerce...<p>In the end I ended up selling it to Sony but through my lawyer - I never stated it was for sale. But this was early on for domains and I wonder what the process is like now.",
+            "comment": [
+                {
+                    "text": "Reminded me of a Planet Money podcast episode with the milk.com owner, who also had early internet years domains. Fun listen if people are interested. [0]<p>[0] <a href=\"https:&#x2F;&#x2F;www.npr.org&#x2F;2025&#x2F;09&#x2F;03&#x2F;nx-s1-5526903&#x2F;domain-name-value-milk-dot-com\" rel=\"nofollow\">https:&#x2F;&#x2F;www.npr.org&#x2F;2025&#x2F;09&#x2F;03&#x2F;nx-s1-5526903&#x2F;domain-name-val...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Sony got my domain registrar to transfer my domain to them without a single email or notice to me whatsoever. I had been using it since the late 90s or early 2000s when you still had to apply and renew via paper forms, and they said (according to the reply from my registrar when I asked why it had been transferred) that I was squatting it... for a service they didn&#x27;t release until the 2010s.<p>Sony have always been Disney-esque in their legal aggression. They don&#x27;t care if they&#x27;re right, they have teams of lawyers and they&#x27;re quite happy to sic them on any tiny thing because they know you can&#x27;t fight back even if you wanted to.",
+                    "comment": []
+                },
+                {
+                    "text": "Never be intimidated by a trademark. Especially, if your domain is older than the trademark. Even if it isn&#x27;t, there are many trademark classes.",
+                    "comment": [
+                        {
+                            "text": "Easier said than done, you don’t get lawyers fees back for winning a frivolous lawsuit, but you are required to pay them if you want to win. It’s entirely feasible for a company to force your hand in this way.",
+                            "comment": [
+                                {
+                                    "text": "Most lawyers<p>1. First don&#x27;t really care, since they get the money from their client<p>2. Think you will give in if they write a threatening letter.<p>I am not a lawyer but most lawyers have had a bad experience with me. (I have worked in regulatory and have written patents that were granted. So I am not a total NOOB). Many communications ended with &quot;we don&#x27;t want to pursue this further...&quot;",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; you don’t get lawyers fees back for winning a frivolous lawsuit<p>Not automatically, but you <i>can</i> attempt to get them back through the court.",
+                                    "comment": [
+                                        {
+                                            "text": "It depends on the country.<p>In the US, you normally don&#x27;t recover costs even if you win; sometimes you can get an exception, especially if your opponent behaved in a particularly egregious manner.<p>In most of the rest of the English-speaking world, the normal rule is the loser pays a significant percentage of the winner&#x27;s costs. I know here in Australia, the default is the loser pays (on average) 50–75% of the winner&#x27;s costs (&quot;standard costs&quot;)–the variation is because the judge sends the case to an auditor who reviews the winner&#x27;s legal bill against the rule book, and so the exact percentage depends on factors like which tasks the winner&#x27;s lawyer charged them for, their hourly rate, what the auditor viewed as reasonable given the complexity of the case, etc. Convince the judge the loser behaved egregiously, and then you get indemnity costs, which are closer to 85-100%.<p>This has pros and cons. For the &quot;little guy&quot;, it makes lawsuits much more survivable if you are confident you are going to win; it makes you much more inclined to just fold if you think there is a significant risk you&#x27;ll lose.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Using California as an example, only case where this typically applies would be if you specifically have bound contract with a provision specifying winner is awarded legal fees. Trademark lawsuits are by and large not contract disputes so it would generally be not applicable.<p>You might be able to recover court costs via further legal action, but they tend to be minuscule in comparison to lawyer fees, and recovering them will cost you additional lawyers fees.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; Especially, if your domain is older than the trademark.<p>My understanding is that trademarks are about the term being recognised &quot;in common&quot;, while a ® is once you pay money to your govt&#x27;s department for the fancy paper. Hence, if you registered &lt;cool name&gt;.com and sold said cool named game, you <i>already</i> have a trademark simply because you&#x27;re the author. (Of course, money for lawyers and proving things in court isn&#x27;t free, but you have legal grounds to stand on nonetheless.)",
+                            "comment": [
+                                {
+                                    "text": "You write about creating a precedent by using a trade term in commerce, and in common law this has some meaning, but it is still very different.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I tried to register a domain like acme.stream through Cloudflare Registrar and it asked me to affirm I had Acme Widgets Corp.&#x27;s permission [edit: I might be wrong about this part, since I&#x27;m in a totally different niche, but the pop-up freaked me out]. I went with a different domain.",
+                    "comment": [
+                        {
+                            "text": "This is a required TMCH assertion for certain TLDs.",
+                            "comment": [
+                                {
+                                    "text": "TMCH = Trademark Clearinghouse",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "This has been my understanding. I was told by lawyer in in th 90&#x27;s that it would be described as squatting in court.",
+                    "comment": [
+                        {
+                            "text": "Be a big company.<p>Look for interesting sounding domain names that are owned but not being used by individuals.<p>Create a product with the same name.<p>Sue the person with the domain name and take it from them.<p>Win, because you&#x27;re big.",
+                            "comment": [
+                                {
+                                    "text": "Fortunately my DNS entry starts in 1996 and would be covered by the first clause. BigCos claims would need to predate 1996 for my domain to be seized.",
+                                    "comment": [
+                                        {
+                                            "text": "Yeah but you still have to hire attorneys so for some people they will just settle and take any offer",
+                                            "comment": [
+                                                {
+                                                    "text": "Why do you need to hire attorneys? Is that a legal requirement?",
+                                                    "comment": [
+                                                        {
+                                                            "text": "[dead]",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "<a href=\"https:&#x2F;&#x2F;nissan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nissan.com&#x2F;</a><p>Archive.org it to see little man beating big corporation",
+                                    "comment": [
+                                        {
+                                            "text": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20040403145823&#x2F;http:&#x2F;&#x2F;www.nissan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20040403145823&#x2F;http:&#x2F;&#x2F;www.nissan...</a> at least this one says<p>&gt; In compliance with a ruling issued by the United States District Court in Los Angeles on November 14, 2002, in the lawsuit of Nissan Motor Co., Ltd. v. Nissan Computer Corporation, this web site has been converted to non-commercial use.<p>And then this <a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20050701005403&#x2F;http:&#x2F;&#x2F;www.nissan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20050701005403&#x2F;http:&#x2F;&#x2F;www.nissan...</a> says:<p>&gt; Nissan Motor is suing Nissan Computer (named after its founder and current President, Mr. Uzi Nissan) for Trademark Infringement, Trademark Dilution and CyberSquatting, seeking 10 Million Dollars in damages<p>Besides this also indicate not so &quot;little man&quot;.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Remember the Mike Rowe Software incident<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MikeRoweSoft.com\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MikeRoweSoft.com</a>",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "I was going to say that at least Nissan own z.com, but it seems like my info is out of date: they sold in in 2014 for $6.8M. <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;GMO_Internet#Z.com\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;GMO_Internet#Z.com</a>",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Wow, he passed away. I can’t believe it’s been a while too.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Are you allowed to share how much (roughly) you sold it for?",
+                    "comment": [
+                        {
+                            "text": "Not too much... $30K plus all legal fees I had paid.",
+                            "comment": [
+                                {
+                                    "text": "$30k? I was in a similar situation and sold for $2k... I should have held out!",
+                                    "comment": [
+                                        {
+                                            "text": "I once got $6k out of a domain that I was using.<p>It was a very good name and I think I had a solid case for keeping it, but I was not prepared to fight for it.<p>Anyway, you got $2k.  That&#x27;s way better than paying for lawyers and losing it anyway, isn&#x27;t it?",
+                                            "comment": [
+                                                {
+                                                    "text": "It would be a pretty crappy lawyer if you had the domain since BEFORE they applied for a trademark and you still lost your domain to them.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nissan_Motors_v._Nissan_Computer\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nissan_Motors_v._Nissan_Comput...</a>",
+                                                    "comment": [
+                                                        {
+                                                            "text": "In my case, I don&#x27;t see it as a domain that I lost.  I sold it.<p>Trademarks are interesting.  They don&#x27;t need to be registered in order to be protected (although they can be registered), and they aren&#x27;t usually absolute (even if they are registered).<p>So, like:  There&#x27;s a bunch of different entities named &quot;First Federal Bank&quot; in the US, and that can be OK as long as they each operate in their own distinct areas.  It definitely becomes problematic when the First Federal Bank that normally operates in&#x2F;around Tuscaloosa tries to open a branch across the street from the First Federal Bank that is centered on Littlefield, Texas, but outside of conflict:  It can be fine.<p>A common name can also sometimes be used in distinctly-different lines of business or products.  That&#x27;s OK, too.  Like Dove (the soap), and Dove (the candy bar).  They&#x27;re both trademarks -- they&#x27;re even both registered.  But they&#x27;re distinct-enough products that it works:  It&#x27;s difficult to confuse a Dove candy bar with a Dove soap bar.<p>And there&#x27;s also the concept of well-known marks, like:  Everyone knows what a Pepsi is.  There&#x27;s no chance that Pepsi would avoid seeking action against anyone else using that name for any purpose, and because Pepsi is so well-known there&#x27;s very close to zero chance that a court would tolerate it either.<p>A person can certainly start a company named Pepsi Shafting that makes drive shafts, but they won&#x27;t be able to keep that name for very long.  The cease-and-desist letter would appear approximately instantly and none of the threats it contained would be empty.<p>---<p>Anyway, back to my case:  At the time when I registered the domain, I was operating a one-man hands-on services company and I wasn&#x27;t selling anything tangible.<p>Meanwhile, the other party had a sleepy little business selling very specialized goods online.  They weren&#x27;t offering services at all.  It was just a little post-bubble online shop like so many others.<p>I discovered them as I did my diligence before I registered the domain.  I was aware that we weren&#x27;t doing the same things at all.  Like Dove and Dove, this was fine.<p>The other company subsequently branched out and got pretty darned big.  I don&#x27;t know if they ran into some VC money or what, but I&#x27;m completely confident that you&#x27;ve heard of them.  Since you&#x27;re on HN, there&#x27;s a good chance you&#x27;ve even bought stuff from them at some point.<p>Hell, there&#x27;s pretty profound chance that the founder will be reading this comment.  :)<p>These days, it would probably be pass muster in court as a well-known brand, like Pepsi certainly is.  But way back then (over 20 years ago now), it would not have.<p>So while I do have reasonable certainty that I could have kept my domain if I wanted to, it just wasn&#x27;t worth that much to me.  In fact, it turns out that was worth exactly $6,000.00 to me.<p>The nissan.com case is certainly compelling.  It was included in my research.<p>It sure would be funny if my domain were added to the roster of similar incidents after a protracted court battle, but meh.  I regret nothing, and I appreciate the excellent work that the new owner has been doing in advocating for consumer rights.<p>It&#x27;s literally all good.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "30k is nice! \nI once got $1000 for dubstepradio.com\nDon’t regret selling it for that much at all.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "[flagged]",
+                                    "comment": [
+                                        {
+                                            "text": "Is this an ad?",
+                                            "comment": [
+                                                {
+                                                    "text": "Yes. For some reason OpenAI is now spamming HN.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "could you share which domain ???",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Hah. Just now I was reading about how Sony hated Michael Jackson because he owned half of the music licenses, and some say Sony might be been involved in his demise. My point being, maybe Sony is not a nice company.",
+                    "comment": [
+                        {
+                            "text": "[flagged]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt;But this was early on for domains and I wonder what the process is like now.<p>UDRP:<p><a href=\"https:&#x2F;&#x2F;www.icann.org&#x2F;en&#x2F;contracted-parties&#x2F;consensus-policies&#x2F;uniform-domain-name-dispute-resolution-policy&#x2F;uniform-domain-name-dispute-resolution-policy-01-01-2020-en\" rel=\"nofollow\">https:&#x2F;&#x2F;www.icann.org&#x2F;en&#x2F;contracted-parties&#x2F;consensus-polici...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "A reply said this, but it&#x27;s dead:<p>&gt;If you&#x27;re offering it for sale, you&#x27;re clearly not using it for commerce. [...]<p>&gt;if you&#x27;re selling a domain and someone has a trademark for it, you should have to hand it over. Hell, I&#x27;d argue that should apply even without a trademark [...]<p>I disagree, but they made a point and did so clearly.<p>Why that person felt someone else&#x27;s chosen commercial use of a domain should trump anyone&#x27;s non-commercial (or less commercial) use, I don&#x27;t know.<p>All business assets are for sale at the right price, right? Even whilst living by the business at a particular domain, I&#x27;d have sold that domain for £200k, probably a lot less. Same as for any business asset, even (especially?) those in commercial use.",
+                    "comment": [
+                        {
+                            "text": "I agree with you about assets being for sale (if someone wrote a big enough check I&#x27;d sell my house right now) and commercial <i>not</i> trumping non commercial, but there was, at least for a while, a reasonable argument for opposing &quot;domain squatting&quot; under the theory that domain names were a limited resource and society as a whole benefits from those resources being used more optimally.<p>It&#x27;s like concert tickets or any other limited resource that is transferable, &quot;society&quot; generally wants most people to have access to them but if they&#x27;re too cheap then it&#x27;s easy for one rich person to just buy them all.<p>Anyways, domain names are perhaps less limited these days (and google&#x2F;claude kind of remove user&#x27;s direct interaction anyways) if the usage of non-dotcoms are anything to go by. Also it&#x27;s super hard to distinguish personal private use vs squatting.",
+                            "comment": [
+                                {
+                                    "text": "A lot of us still consider domain squatters to be trolls. Use it or lose it.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "What was the domain?",
+                    "comment": []
+                },
+                {
+                    "text": "Not sure about the legal theory behind domains and intent to sell, but fact-wise my defense would be that I consider all of my assets to be for sale, the only difference is the price, so they would have to prove that my &#x27;intent to sell&#x27; was significant enough. At the very least price would have needed to be discussed.",
+                    "comment": []
+                },
+                {
+                    "text": "full disclaimer, I have worked on <a href=\"https:&#x2F;&#x2F;udrp.tools\" rel=\"nofollow\">https:&#x2F;&#x2F;udrp.tools</a> for something like a decade now as the developer. We&#x27;re working on an AI chatbot to help answer these types of questions based on our dataset and other data sources (actual wipo guidelines, udrpperspectives.org). The short answer is no, the answer our AI gave with citations&#x2F;explanation is below if youre curious:<p>Does publicly listing a domain for sale mean you&#x27;d automatically lose a UDRP arbitration if someone has a trademark for it?<p>No. A public sale listing is not an automatic loss. Here&#x27;s how panels actually decide these cases.<p>The controlling rule<p>Bad faith based on a sale offer requires that the domain was registered primarily for the purpose of selling to the trademark owner (or a competitor) for more than out-of-pocket costs. Two things must be true at once: (1) the primary purpose of registration was to sell, and (2) the target was that specific trademark holder. A generic public listing on Sedo or Afternic doesn&#x27;t automatically satisfy either requirement. (WIPO Overview 3.1; UDRP Perspectives 3.5)<p>What panels actually look at<p>No single factor decides it. Panels weigh all of these:<p>How distinctive is the trademark? A coined word like KODAK is treated very differently from a generic term like CLOUD.<p>Did the registrant plausibly know about the mark when registering? Famous marks raise this inference; obscure marks don&#x27;t.<p>Was the offer directed at the trademark owner specifically, or listed publicly for any buyer?<p>Does the asking price only make sense if the trademark owner is the buyer, or is it consistent with general market prices?<p>Does the registrant hold a broader portfolio of generic&#x2F;descriptive domains, or a collection of brand-matching ones?<p>Was the domain registered after the mark became well-known, or before?<p>Is there a credible non-trademark reason to want the domain?<p>Things that do NOT automatically mean bad faith<p>Listing a domain publicly for sale (UDRP Perspectives 3.5)<p>Asking a high price (UDRP Perspectives 3.5; WIPO Overview 3.1.1)<p>Even reaching out to the trademark owner directly — panels look at whether multiple parties were approached and whether the registration was brand-specific (UDRP Perspectives 3.5)<p>Wanting to profit — legitimate domain investing is a recognized lawful activity under UDRP (UDRP Perspectives 2.6)<p>When the calculus shifts against you<p>The harder cases are where the domain is identical to a highly distinctive coined brand, there&#x27;s no plausible use for the domain other than trading on the trademark, and the asking price is only realistic for the trademark owner itself. In those cases panels have found bad faith even without a direct approach to the owner. A notable example is the three-member panel majority in WIPO case D2022-1570, which found that the asking price implied the complainant was the only conceivable buyer — though a dissent disagreed, illustrating that even these edge cases are not automatic.<p>Bottom line<p>The outcome depends on: how famous and distinctive the mark is, whether you had it in your sights at registration, whether there&#x27;s a credible independent reason to want the domain, and who you&#x27;re actually marketing it to. Generic terms with multiple plausible buyers, listed publicly, have repeatedly survived UDRP challenges. (UDRP Perspectives 3.5) Coined-brand matches with sky-high asking prices and no other credible use have not.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        },
+                        {
+                            "text": "I noticed the UDRP rules had changed last year, the main change is of course related to WHOIS respecting privacy now. Looking that up:<p>&quot;The registrar must provide the full Registration Data to the UDRP provider within two business days after the registrar is notified that a UDRP complaint exists.   The registrar must also lock the domain.&quot;",
+                            "comment": []
+                        },
+                        {
+                            "text": "I&#x27;m nitpicking: it&#x27;s disclosure not disclaimer.",
+                            "comment": []
+                        },
+                        {
+                            "text": "[dead]",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; I shouldn&#x27;t offer it for sale as that would show the arbitration board that I don&#x27;t need the domain. [...] So I could keep the domain but not use it for commerce...<p>If you&#x27;re offering it for sale, you&#x27;re clearly not using it for commerce. I&#x27;m sure if you finished you game and offered it for sale on that domain, you&#x27;d be fine. You&#x27;re actually using it and in a non-infringing way.<p>So yes, if you&#x27;re selling a domain and someone has a trademark for it, you should have to hand it over. Hell, I&#x27;d argue that should apply even without a trademark, but alas...",
+                    "comment": []
+                },
+                {
+                    "text": "A bit tangential but I imagine some of the smart folks here might have interesting opinions on this.\nThere are a few sites popping up that let you do something interesting with content at a given url by changing the domain name slightly.<p>The best example is changing the g in github.com to u.<p>That results in uithub.com making the data there LLM friendly.\nIs that considered infringement?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "RFC: <a href=\"https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc10023.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc10023.html</a>",
+            "comment": [
+                {
+                    "text": "Thank you, for a moment I wondered why a specification was being written by AI.",
+                    "comment": [
+                        {
+                            "text": "This website has been trying to gain a veneer of legitimacy for months now. Half of its contents aren&#x27;t even published by any real standards body, it&#x27;s just AI-centric &quot;best practices&quot; for the current generation of hyperscaler models.",
+                            "comment": [
+                                {
+                                    "text": "That’s not true at all. Do you know who Joost de Valk is? Because it’s wild for you to say that, truly. That man has probably been building websites for longer than you have been alive.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Joost_de_Valk\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Joost_de_Valk</a>",
+                                    "comment": [
+                                        {
+                                            "text": "&gt; trying to gain a veneer of legitimacy<p>&gt; SEO<p>For me, these terms are synonymous.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "He has apparently been involved in web technologies since… after i got involved with web technologies. I made my first website in 2003.<p>Which naturally makes me an authority on the matter. I may have been in middle school but i guess sheer years of involvement are all that counts, right?<p>EDIT: more to the point, briefly.<p>Whatever his past successes (or failures), this is <i>decidedly</i> a website which tries to pass itself off as something it is not. If you want to collate information to have a centralized guide, you can do that, just don&#x27;t name it deceptively.<p>A <i>specification</i> is a very concrete thing, including in the world of web standards, and someone who&#x27;s been involved with Wordpress of all things for over two decades should know better than to try and launder the term.<p>His contributions to Wordpress do not inspire confidence. While WP SEO was no doubt popular (the numbers seem to back it up), SEO had always been a very handwavy thing, and the industry was always full of people willing to profit off that.<p>To be clear, while I am not accusing de Valk of being such a profiteer, I am staunchly of the opinion that success in the SEO space is not a strong predictor of that person&#x27;s expertise in any other area of web technology.<p>To wit, on his past: he appears, per Wikipedia, to have been involved with a site at css3.info. A skim of his author page (&#x2F;author&#x2F;admin&#x2F;) shows that this site had a similar goal, if narrower scope, to the site linked in the HN post we&#x27;re currently discussing. It was a bad idea then, and it was a bad idea now, and I write this with the knowledge that at least one other contributor to css3[dot]info claims to have been a member of the W3C&#x27;s CSS3 WG.<p>And finally, on his Wikipedia page: this is an... unusual page.<p>- While there&#x27;s strong off-wiki evidence that he has a presence outside of Wordpress (notably, as a VC), his wiki page focuses almost exclusively on his SEO plugin and the company he built around it.<p>- By biographical article standards, the article is strange. It focuses much more on a single product than the life of the person being documented, and the vast majority of the article is unequivocally positive. Neither of these are <i>outright indicators</i> of any malfeasance, but are both unusual.<p>- The principal source for information outside of his career is a Business Insider interview with him which is, again, <i>outstandingly</i> flattering (though nominally informative). The article in effect follows his own description of his life without framing it as such. This is, at a minimum, sloppy writing for Wikipedia.<p>My overall impression of him, having myself hosted and developed a handful of WP sites in the technology&#x27;s heyday in the late 2000s&#x2F;early 2010s: this guy is a marketer with an above-average-for-marketers technology background. I maintain that his website (both website[dot]specification and, to a lesser extent, css3[dot]info) are both <i>at a minimum</i> deeply misguided in their naming and description. My personal take is that, in `specification`&#x27;s case, this is a marketing attempt (effectively, an SEO hijacking attempt); it looks legitimate and approachable to web developers relying heavily on agents (and so too does it seem legitimate to agents), and frankly organizations like the W3C just don&#x27;t have the same kind of presence as they did when HTML5 and CSS3 were new and very, very hot, so newer developers may not know to look for the W3C&#x27;s drafts.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "He made... a Wordpress SEO plugin? Is that supposed to make him an authority on web standards? If anything, this just gives more credence to the idea that it&#x27;s just the usual SEO-optimized slop.<p>Actually, it gets better: He originally submitted the website to HN himself[0], and his post was flagged&#x2F;removed, likely due to being AI generated and indistinguishable from a lot of the AI spam that clogs up &#x2F;newest.<p>[0] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48323406\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48323406</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I discovered this because someone was nice enough to create a website which lists these things, which are very relevant, and has an RSS feed. The post states defined RFC&#x27;s, I wouldn&#x27;t have seen it if I didn&#x27;t subscribe, and it looks like others are interested too. So over seeing bullshit &quot;AI blah&quot; comments, just move on, no one cares mate.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "They need Georgism for DNS names. You set your own price for your domain. But you have to pay 2-5% of that price annually to keep it.<p>That way, squatters are incentived to sell it to someone who&#x27;s going to use it.",
+            "comment": [
+                {
+                    "text": "Sounds like a great way to have larger competitors with more capital bid for your site to take down your domain that your users were using. Rather than Land Value Tax a better analogy might be a Vacant Property Tax which only targets squatting.",
+                    "comment": [
+                        {
+                            "text": "The problem with that is the squatters would just turn it into a low quality blog or something along those lines.",
+                            "comment": [
+                                {
+                                    "text": "My personal website is a &quot;low quality blog&quot; but I definitely feel that it shouldn&#x27;t be up for grabs because I don&#x27;t want to pay thousands of dollars a year.",
+                                    "comment": [
+                                        {
+                                            "text": "A &quot;vacant plot&quot; in this context might be example.ccTLD not being associated with a sufficiently large share of Example Ltd taxable income declared in CC, or some 3rd country maintaining suitable double-taxation treaties with CC.\n(While in the same interval not having their registry lock in forfeiture of voluntary ownership transfers, in order to qualify for some appropriately scoped &quot;currently no commercial intent &#x2F; obviously not a squatter&quot; exemption.)<p>That way you would be forced to keep it personal.. or suffer reduced sale price, as the new owner would need to backpay the minimums you were exempt from, or take on some risk merely leasing from you until the lock eventually expires - as you remain the true owner and all the payments and paperwork must cross your desk.",
+                                            "comment": [
+                                                {
+                                                    "text": "There are no common policies for ccTLDs. Each country does whatever.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "You’ve just described registry premium domains. The .com registry operator is bound by a bunch of pricing restrictions but that’s not true for most other registry operators. And so, registry premium pricing was invented to defeat domain investors by making desirable domains more expensive. Want to register chat.now? That’s $5,000&#x2F;year. Ai.now is $20k&#x2F;year.",
+                    "comment": []
+                },
+                {
+                    "text": "Pay 2-5% to who? That&#x27;s the problem for me - usually this means just another way to expand government. If you would just distribute it equally to all relevant citizens, with none of it going to the government, then I might get on board.",
+                    "comment": [
+                        {
+                            "text": "&gt; If you would just distribute it equally to all relevant citizens<p>Ironically, this approach would give power to an entity that decides who is relevant and who becomes a citizen, which is the government.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Harberger_Tax\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Harberger_Tax</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; Remove it when the domain is no longer for sale. The convention has no “not for sale” value; absence is the only way to say no.<p>Since most domains that are for sale don&#x27;t currently have such a record, it would be wrong to assume they are not for sale. Therefore, absence of such a record does not explicitly mean &quot;not for sale.&quot; It&#x27;s no different from a house: a &quot;for sale&quot; sign in the front yard means it&#x27;s for sale, but lack of a sign doesn&#x27;t mean it&#x27;s not for sale; it could mean the owner doesn&#x27;t wish to advertise that way, or at all.",
+            "comment": [
+                {
+                    "text": "..so? It’s better than what we have now",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It’s interesting that domains apparently are still such a big business, despite how browsers have been deemphasizing URLs and domain names, and given the prevalence of apps.",
+            "comment": [
+                {
+                    "text": "Domain names are a mess in my opinion. Even though we have over a thousand TLDs only a very small handful are considered for commerce or even thought to be valid.<p>I have a domain name with the TLD of &quot;today&quot;. Many people think my email is [email]@[domain].today.com. It&#x27;s not just the common person&#x27;s fault but also software engineers &#x2F; product managers who still have a very  restrictive view of what a TLD is (under 3 three letters is the primary restriction I hit).<p>Since I don&#x27;t believe we&#x27;ll ever convince people that domains longer than 3 letters &#x2F; full words are TLDs, I think the solution is every human being gets 10 domain names at marketprice then every domain ownership above that gets graduated ownership costs; the first year is market, second year is $100, third year is $500, fourth year is $1,000, and so on until the 10th year where it levels out at $10k per year.<p>The idea of it being if you want to hold onto a lot of domains you need to pay for it or make the domains economically viable. With what is essentially infinite space, we shouldn&#x27;t be allowing domains to be like finite real world real estate to be speculated on.",
+                    "comment": [
+                        {
+                            "text": "&gt; I have a domain name with the TLD of &quot;today&quot;.<p>I don&#x27;t like the pollution of the global namespace.  If someone thinks, there should be a domain named today, fine, but don&#x27;t put it in the global namespace by creating a new TLD.  DNS is a hierarchical structure, there is no reason domains should all be only 4 segments long.  Arguable &#x27;com.&#x27; should have really been &#x27;com.us.&#x27;, but that&#x27;s history.",
+                            "comment": [
+                                {
+                                    "text": "The gTLD scam actually decreased global namespace pollution. You used to register .com .org and .net so nobody else could claim the same name as you (nobody cared about other TLDs). Now with the proliferation of TLDs you can just pick a name and there&#x27;s a good chance it&#x27;s available under at least one TLD.",
+                                    "comment": [
+                                        {
+                                            "text": "&gt;  there&#x27;s a good chance it&#x27;s available under at least one TLD.<p>So more similar names unsorted in random locations in the tree.  Aka. more pollution.  We seem to have a different idea of the concept of pollution.",
+                                            "comment": [
+                                                {
+                                                    "text": "Namespace pollution is when all the good names are squatted.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "From a technical perspective I agree, but from a practicality perspective .com is way too full already, and if not for the alternative TLDs that crop up (.tech, .dev, etc) I would never have been able to get a personal site that&#x27;s memorable and short.",
+                                    "comment": [
+                                        {
+                                            "text": "But you could have the same with &#x27;tech.com.&#x27; or &#x27;tech.us.&#x27;?",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "i also have a solution<p>1. People who can&#x27;t understand how tld works, learn it. Changing the world to accomodate ignorance is not my preferred direction.<p>2. We don&#x27;t link the concept of domain names to economically viable for an US citizen, since that is not a fair for probably a few billion other people.<p>I think this solves none of the current problems with domain names, but at least it does not add any new ones.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Habituation is difficult to overcome. If domain names had been freeform from the start, we wouldn’t have this particular issue.<p>Domain names are still a finite space, given that a full domain name can be at most 253 characters, and each domain label at most 63 characters. “Requiring” a .com&#x2F;.org&#x2F;.net&#x2F;.CC at the end isn’t really that much of a restriction.<p>By the way, madamelic.com appears to be available.",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s a fair point. I knew I was going to popped for the comment about it being an infinite space, haha, because it definitely isn&#x27;t but domain names don&#x27;t necessarily have the physical constraints land does. There&#x27;s no such thing, necessarily, as a domain name that is &quot;in the boonies&quot; or no way to create more domain space.<p>&gt; By the way, madamelic.com appears to be available.<p>Hmmm! I may have to grab this one. The one I really want is madeline.com (it&#x27;s owned by the family who made Madeline the book) but I am doubtful I will ever get that one without loads of money or ever, hah.<p>I am hesitant to say the domain because of spammers but it is the [shortened version of that name].today.",
+                                    "comment": [
+                                        {
+                                            "text": "My family name was already taken as a domain 25 years ago, but well, you can’t expect to be able to own any but the most rare names. However, the space is large enough that you can invent a name that is available, and it’s fine.<p>I’m more annoyed by products&#x2F;companies choosing names that are just common words.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "&gt; If domain names had been freeform from the start...<p>I&#x27;d argue that they&#x27;re not freeform now. You need to pay ICANN something like 250k USD to <i>consider</i> your application for a new TLD, plus I <i>think</i> you need to convince them that you actually can operate the infrastructure required to reliably serve queries and subdomain registrations for that TLD.<p>I do agree that we have <i>_way_</i> more TLDs now than the five or ten we had back in the 1990s, but the barrier to creating a new one is so large that I&#x27;d not describe them as &quot;freeform&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "The concept that the only purpose for anything, whether it&#x27;s a domain, a pair of shoes, a plot of land filled with trees, is economic growth or investment is a perverse sickness.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt;I have a domain name with the TLD of &quot;today&quot;. Many people think my email is [email]@[domain].today.com<p>Skill Issue",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Imagine if AOL keywords had stuck around.<p>Edit: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=37416005\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=37416005</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Yeah cause we really had to improve domain squatters lives.<p>In my opinion domain squatting should be banned instead.",
+            "comment": [
+                {
+                    "text": "Like a lot of things, society would probably benefit if we had caps on how much a single entity could own.",
+                    "comment": [
+                        {
+                            "text": "Or maybe just a heavy tax on arbitrage.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;m wondering if this can be used to hunt down squatters and take domains from them, for example, if they have the domain marked as for sale in DNS, while also renewing the domain. If a renewal happens while someone has a domain listed for sale, they should give up all rights to that domain and it should go back on the open market for a sane price.",
+                    "comment": []
+                },
+                {
+                    "text": "I totally agree with you! It&#x27;s so hard to get a good domain name these days. It&#x27;s annoying that people take advantage of that to line their own pockets.",
+                    "comment": []
+                },
+                {
+                    "text": "Do you have any domains that you purchased with the intention to use and haven&#x27;t been able to use them yet?",
+                    "comment": [
+                        {
+                            "text": "news.ycombinator.today",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "And what is the definition of a domain squatter?",
+                    "comment": [
+                        {
+                            "text": "Renting a domain for the the sole sake of selling the ability to rent it to someone else or even worse: Renting it at a higher price to someone else and pocketing that extra money every year without providing any additional service. Bonus points if you also track recent companies that have been created and immediately buy also the related domains and social media handles and extort the founders of the new companies.",
+                            "comment": []
+                        },
+                        {
+                            "text": "With real-property squatting is using what someone else owns (land) w&#x2F;o permission. Domains are only rented. If you rent land but don&#x27;t use it the way someone else would it&#x27;s not squatting. So, renting a domain  that someone else wants and not using it in the way they think it should be used isn&#x27;t squatting, correct?<p>I agree it&#x27;s a problem when I want a domain and it looks unused to me. I don&#x27;t think it&#x27;s really squatting.<p>I think it&#x27;s also a jerk move to control resources just to extract w&#x2F;o developing those resources. But that also happens with real-property.<p>All that to say: &quot;squatting&quot; on a domain is a &quot;hard problem&quot;.",
+                            "comment": [
+                                {
+                                    "text": "It&#x27;s usually pretty obvious though because the website is an ad for the domain itself.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Maybe domain hoarding should be illegal. 1 domain per person, 1 per registered business. That would make the world a better place but I am dreaming.",
+                    "comment": [
+                        {
+                            "text": "Only if you also make it illegal for the registrar and registry to cancel it.<p>You also mandate KYC on everything. No more WHOIS privacy - if you have a domain name, the whole internet knows your home address.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This would have been great for a 2-letter .st domain I had been wanting for years (which appeared to be parked and just redirecting towards ticketmaster or something, with no contact info available). I was bummed about it for a long time, as the .st nic had a sale on 2-letter domains which made me want to pull the trigger, but it got scooped up a day or two prior apparently.  I lucked out this year and saw they let it lapse! (I did have a yearly calendar reminder telling me to run whois :)",
+            "comment": []
+        },
+        {
+            "text": "Hi, author of RFC 10023 here.<p>I appreciate the interesting discussion!<p>If you’d like to get a better understanding of the concept, have a look here:\n<a href=\"https:&#x2F;&#x2F;rfc10023.nl\" rel=\"nofollow\">https:&#x2F;&#x2F;rfc10023.nl</a><p>The biggest use case today, at SIDN (the registry for the .nl ccTLD), is described here:\n<a href=\"https:&#x2F;&#x2F;github.com&#x2F;SIDN&#x2F;ForSale-RFC10023&#x2F;blob&#x2F;main&#x2F;examples&#x2F;use-cases.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SIDN&#x2F;ForSale-RFC10023&#x2F;blob&#x2F;main&#x2F;examples&#x2F;...</a>",
+            "comment": []
+        },
+        {
+            "text": "This was first done by SIDN I believe, the company that orchestrates the .nl domains. They however, do not implement most of the spec.<p>When searching their online whois[1], they&#x27;ll tell you if a domain is for sale and link to the for sale page. They don&#x27;t use any of the info you put in the DNS though. The URL comes from their internal system. You need to register it separately. They also don&#x27;t use the price, txt or anything else you put in the DNS.<p>All they use is the &quot;fcod&quot;, to look up the url in their own system. They had a different syntax for this before, but this functionality has existed for some years.<p>[1] <a href=\"https:&#x2F;&#x2F;www.sidn.nl&#x2F;whois\" rel=\"nofollow\">https:&#x2F;&#x2F;www.sidn.nl&#x2F;whois</a>",
+            "comment": []
+        },
+        {
+            "text": "&gt; If you are willing to sell, the interested buyer has no way to learn that short of a cold email to a WHOIS contact that privacy redaction has probably removed.<p>Has everybody forgotten about well-known email alias addresses? Inquiries about the hostname itself would be (among other things) exactly what `hostmaster@domain` was intended as a point-of-contact for. No need for a working WHOIS service, let alone a non-privacy-redacted WHOIS record.",
+            "comment": [
+                {
+                    "text": "I&#x27;ve recently bought many domains (1000+ over the last year). A few of them (the more valuable ones) all had TXT records for `@` (the root) that had for-sale info. This new record is just a TXT record anyway, proving the point that the interested buyer can quite easily learn of a domain for sale with existing mechanisms.<p>Also, for domains that are just &quot;parked&quot;, not in current use, obviously the parking page can just have a for-sale banner. This is exceedingly common.<p>&gt; Enquiries that would have been welcome never arrive, and the ones that do arrive are indistinguishable from spam.<p>Laughable misrepresentation.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I kept my domain name through WIPO domain arbitration.  This was over 2 decades ago.  Having a trademark owner challenge your right to own a domain name is just  how things work.  A trademark owner has to defend the trademark, otherwise the trademark can be lost.",
+            "comment": []
+        },
+        {
+            "text": "And the actual standard initiative was posted already a few days ago:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49133970\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49133970</a>",
+            "comment": []
+        },
+        {
+            "text": "I noticed few commenters mention something like a rule: If you say your domain is for sale, they will take it from you because..... And was wondering, few years back, twitter was sold to mr Elon. I will just say it like this: Did they lose all their trademarks and rights to all domains, if someone register twitter.cc or twitter.it or similar, because twitter is for sale and they did not need the trademark for business anymore?",
+            "comment": [
+                {
+                    "text": "The concern is if you own a domain that you don’t own the trademark for.<p>Twitter owned both the domain and all trademarks so it’s a non issue.<p>Basically in fairly limited circumstances you can have your domain taken off you if someone else holds a matching trademark. Saying you are selling it can go some way to demonstrating you are not holding it in good faith.",
+                    "comment": [
+                        {
+                            "text": "I had registered trademark, and when you register one they ask you what are you doing. I was selling clothes, shoes, fashion stuff. I wanted to get the domain with that name, and it was already taken by someone who sells industrial manufacturing machines. Heavy equipment. They also had registered trademark with the exact same name. The idea is that you as a customer won&#x27;t be confused who is selling something when you enter a shop and see that name.<p>I now get what you&#x27;re saying, but then this can be turned against everyday people. Imagine you have a domain that is your personal blog, vacation photos, stuff like that. No ads, nothing to sell there. Then you receive a message &quot;We from Microsoft&#x2F;Sony&#x2F;IBM&#x2F;Amazon are willing to give you 10Mil for this domain, because we have plans for it, if you won&#x27;t use it for something bigger ofc&quot;\nAnd then show your reply in court saying &quot;He want to sell it&quot;. Even if you run a successful business, they can troll you and say &quot;We offer 1bil - you and your family will not have to work for the rest of your life&quot;, and then say &quot;His business is fake, he is selling the domain&quot;.  \nI don&#x27;t know if this is possible but if it is, then the whole system is wrong I guess.",
+                            "comment": [
+                                {
+                                    "text": "Being willing to sell isn’t the only test, otherwise domain squatting would be very difficult. You can generally accept these offers without much risk if done via a lawyer (I’m sure a lawyer isn’t strictly necessary but beyond 5 figures is likely worth it!)",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Nice! I just implemented it for my portfolio [0], and I&#x27;m waiting for the DNS zones to update! Thank you!<p>[0]: <a href=\"https:&#x2F;&#x2F;namegarage.com\" rel=\"nofollow\">https:&#x2F;&#x2F;namegarage.com</a>",
+            "comment": [
+                {
+                    "text": "Were you able to sell any domains before? Especially with those prices, considering their quality? Or is this just a placeholder site made with ai with made-up numbers?",
+                    "comment": [
+                        {
+                            "text": "Yes, of course. You think I&#x27;m subsidizing the renewals without a return on my investment? My prices are low compared to the 3 popular appraising services. I won&#x27;t consider GoDaddy, as I&#x27;ve always been able to sell my domains well over their appraisals, but I use their pricing as a signal in my blended price as well. I didn&#x27;t come up with any of these prices - it&#x27;s all an algo based on credible appraising services: GoDaddy, Atom, Appraise.net, Dynadot. EstiBot is a joke - sometimes it values domains I&#x27;ve sold thousands of times at an appraisal value for less than the renewal cost.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I am bit puzzled, read through the RFC itself (<a href=\"https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;doc&#x2F;rfc10023&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;doc&#x2F;rfc10023&#x2F;</a>) but could not find who is going to use it and why?",
+            "comment": []
+        },
+        {
+            "text": "(Not quoting the article directly due to HN&#x27;s auto AI filters)<p>In &quot;Common mistakes&quot; this article first says not to add this record if you&#x27;re not actually planning to sell the domain, then says that the record doesn&#x27;t oblige anyone to do anything, that feels quite weird to me.",
+            "comment": [
+                {
+                    "text": "This probably means that meeting the minimum price does not <i>guarantee</i> that you would be able to buy it due to other (probably opaque) criteria. For example, the seller might not want to sell to <i>you&#x2F;your company</i> in particular, but is open to other people&#x2F;companies.",
+                    "comment": [
+                        {
+                            "text": "Sounds good to me.<p>I have a particularly valuable domain name that would be perfect for a museum that later opened with the same name.<p>I&#x27;d love to sell or even give it to the museum, but all my offers have been ignored. I don&#x27;t blame them, since everything on the Internet is a scam these days.<p>But I won&#x27;t just put it for sale to the highest bidder.  Then it&#x27;ll end up with a squatter. I&#x27;d rather sit on it.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I can have something for sale without an obligation to sell it (depending on offer terms, including price).",
+                    "comment": []
+                },
+                {
+                    "text": "Interesting, a binding bid might be more useful than this proposed no-op slop.<p>TLDs like .online actually have a registrar-based dynamic pricing system based on internal rules, like domain size, presence in word lists, plurality, etc... And their distribution of available to taken names is quite good. It&#x27;s different, which is already good, no one needs yet another TLD with the uncreative allocation system of copying the .com, we need variety, and I feel a binding DNS based offer system might make for a aftermarket-based continuation of the successful .online experiment.<p>But if the offer is not binding, then it&#x27;s just an advertisement, no consideration, no contract, unlikely to amount to anything materially different than a &#x27;domain for sale&#x27; HTML pages. In fact, if the HTML page has a buy now button, it&#x27;s effectively an offer that can be accepted just by clicking the buttons and inputting cc info, so it&#x27;s even better than a non binding DNS record.<p>Also, let&#x27;s stop using TXT for everyone, why is everyone such a pussy about actually using record types? Do we really need every tool to be compliant out of the box? What&#x27;s wrong with forcing vendors that want to be compliant to actually write like 20 lines of code and formally implementing support for the feature?",
+                    "comment": [
+                        {
+                            "text": "&gt; why is everyone such a p**** about<p>We can do a lot better than using non-inclusive language like this. There are better ways to express the underlying concept.",
+                            "comment": [
+                                {
+                                    "text": "I can&#x27;t seem to be able to edit out the swipe.<p>- such a pussy about actually using record types<p>+ not bold enough to use actual record types<p>And I know it&#x27;s not the core of the issue, but I meant &quot;using TXT records for everything&quot; not &quot;for everyone&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "From the RFC <i>The &quot;_for-sale&quot; leaf node name can be placed at any level of the DNS, except in the .arpa infrastructure TLD.</i><p>There used to be a number of sites that would let users create {username}.some.subdomain.apex.tld.  Perhaps this is not a thing any more <i>I honestly don&#x27;t know</i>.  If it is still a thing and someone registers the username &quot;_for-sale&quot; they could cause some confusion.<p>Why allow any level of DNS?  If you are selling a domain that should include the entire domain and thus the _for-sale should only be valid at the apex unless the goal is to cause legal problems for some big providers.",
+            "comment": [
+                {
+                    "text": "Initial underscore is a reserved namespace for this reason.",
+                    "comment": [
+                        {
+                            "text": "Is that universally true on all sites that allow a user to create a sub-domain?",
+                            "comment": [
+                                {
+                                    "text": "It certainly <i>should</i> be. Filtering user-registrable names that will end up in host names or URL paths is table stakes. You want to block names like www, admin, root, robots.txt, .well-known, _*, and so forth.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "DNS allows any character you want, including underscores. Host names in URLs cannot contain underscores. Therefore any service that create subdomains for user would reject underscores, which is why they&#x27;re considered de-facto reserved for special uses in DNS. I don&#x27;t think the reserved nature is codified in any RFC.",
+                                    "comment": [
+                                        {
+                                            "text": "Testing [1]  <i>Works in Firefox, Helium and Curl but I do not have Chrome or Safari to test with.</i><p>[1] - <a href=\"https:&#x2F;&#x2F;_test.nochan.net&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;_test.nochan.net&#x2F;</a>",
+                                            "comment": [
+                                                {
+                                                    "text": "This only works because it’s a wildcard certificate. Since 2019, TLS certificates must not be issued for names containing underscores &lt;<a href=\"https:&#x2F;&#x2F;cabforum.org&#x2F;2018&#x2F;11&#x2F;12&#x2F;ballot-sc012-sunset-of-underscores-in-dnsnames&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;cabforum.org&#x2F;2018&#x2F;11&#x2F;12&#x2F;ballot-sc012-sunset-of-under...</a>&gt;.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Interesting, however that goes back to my original question about platforms allowing users to create a sub-domain, as they almost always use a wildcard certificate for this purpose. [1]<p>I suppose the saving grace is that they can only create the _for-sale and not any of the attributes specific to the intent to sell and hopefully that is enough to prevent any shenanigans.<p>[1] - <a href=\"https:&#x2F;&#x2F;youstareintoconanssoul.ytmnd.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;youstareintoconanssoul.ytmnd.com&#x2F;</a>",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "<a href=\"https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;info&#x2F;rfc8552&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;info&#x2F;rfc8552&#x2F;</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Country code TLDs would be one reason. Many countries reserve top-level domains names and only sell second-level domains (e.g. example.co.uk)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Can&#x27;t wait for some kid to slip this into Google.com via AI chatbot and then massage the chatbot to complete the sale for $1.",
+            "comment": []
+        },
+        {
+            "text": "Sigh, I&#x27;m not a fan of domains becoming the new kind of real estate.<p>Wonder how hard will it be in 20 years to get a good, unused name in a reasonable price.",
+            "comment": [
+                {
+                    "text": "Have you tried getting a good, unused name today? Anything remotely close to a dictionary word, if unused, is squatted with a $xx,000 price tag. Do registrars get a cut of these sales prices because it seems ridiculous to allow squatting.",
+                    "comment": [
+                        {
+                            "text": "Many registrars operate as brokers for domain sales indeed (i.e. godaddy, namecheap). Then you have tlds operators with their &quot;premium&quot; domains that go for 1000x the regular price. Premium usually being defined as the top 10k english words and every kind of l33t spelling of sexual words.<p>Neither registrars nor tld operators care about squatting, even when they don&#x27;t get a cut. Why would they? The squatter is paying them the same as you&#x27;d pay them.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Well, at least there&#x27;s still some room for that with some of the new TLDs.<p>But at some point we will also exhaust all nice TLDs too...<p>It will be even more difficult than it is now",
+                            "comment": []
+                        },
+                        {
+                            "text": "Registrars get a lot more domains registered at 5-20 $&#x2F;year this way.\nHow would our lives improve if squatting were &quot;not allowed&quot;?",
+                            "comment": [
+                                {
+                                    "text": "For anyone trying start a small business, it’s frustrating to go through dozens to hundreds of potential company names before you can find a reasonable URL that isn’t being squatted for 4-5 figures.<p>What positive outcome comes from squatters sitting on unused domains?",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "<i>I&#x27;m not a fan of domains becoming the new kind of real estate.</i><p>Welcome to 2003.",
+                    "comment": [
+                        {
+                            "text": "hah, fair point..",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "“This domain is somewhat worn.” -UO joke",
+            "comment": []
+        },
+        {
+            "text": "This is probably the only item that can sold without saying, &quot;Used, Like New&quot;",
+            "comment": [
+                {
+                    "text": "It depends how much spam or other abuse occurred from it.",
+                    "comment": [
+                        {
+                            "text": "Just think how sullied whitehouse.com has become due to the current occupier of whitehouse.gov.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Wonderful. Another tool for domain campers. Just what standards bodies should be spending time on…",
+            "comment": [
+                {
+                    "text": "I don&#x27;t get the point, if someone is selling a domain the only content on the site will be advertising that. And you can bet people will forget to delete or not update the record as needed, making it kind of useless.",
+                    "comment": [
+                        {
+                            "text": "A parked domain would potentially make more money hosting AI generated “content” to improve its SEO and passive ad revenue. That’s why invested interests have pushed for this side-channel “For sale” sign.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "This is what really sucks about domain names",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "But what about the costs? There are several domains I want. They&#x27;re just sitting there and no one is doing anything with them. But when I ask to buy them, they ask for outrageous prices (at least in my opinion.) If someone else bought the domain, I would think, &quot;I&#x27;m just being outbid.&quot; But they never change hands. I&#x27;ve tried telling the owners that I&#x27;m their only hope. They just sit there because they have some insane idea for how much it is worth.",
+            "comment": []
+        },
+        {
+            "text": "<p><pre><code>  _for-sale baby-shoes never-used</code></pre>",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Making things easier, and more profitable, for domain squatters is exactly the wrong direction to be going in! I hate how the internet has turned to squeezing every last penny out of its users. This is pathetic and raw.",
+            "comment": [
+                {
+                    "text": "It started when ICANN made a lot more TLDs to funnel TLD rental fees ($250k&#x2F;year&#x2F;TLD) to ICANN.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "this is how we get under-the-radar marketplaces for llms",
+            "comment": []
+        },
+        {
+            "text": "Is that good or bad? That&#x27;s a genuine question here.",
+            "comment": []
+        },
+        {
+            "text": "How long until these links are swimming with malware?",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Nobody asked for this",
+            "comment": []
+        },
+        {
+            "text": "my slop detection instinct is so good that I can tell it&#x27;s slop before even clicking the link. I precogged the neon colors of the website, the pill modals, the &#x27;it&#x27;s not X, it&#x27;s Y&#x27;, the emdashes...",
+            "comment": [
+                {
+                    "text": "It&#x27;s indeed written by Claude, like most of the website: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;jdevalk&#x2F;specification.website&#x2F;commit&#x2F;99b15bb2f6d5350bd3a57075a761cfb9f1ffac16\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;jdevalk&#x2F;specification.website&#x2F;commit&#x2F;99b1...</a>",
+                    "comment": [
+                        {
+                            "text": "I feel that this period before the AI bust is mostly a veeeery long window for people to commit reputational suicide.<p>The game is to see who survives the longest without submitting to committing blunders that reveal an intrinsic incorrectible untrustworthy personality and low quality of work standards. And each month that goes by, more people around us are joining the game, some people fall through social pressure, and some feel more comfortable to display their antisocial&#x2F;low quality traits as those around us do.<p>I personally feel comfortable holding on my anti AI purity comfortably even if 95% of people around me do it, I always suspected it anyways, let them keep on outing themsleves.",
+                            "comment": [
+                                {
+                                    "text": "You were holding a reputation? I learned to stay anonymous online.",
+                                    "comment": [
+                                        {
+                                            "text": "irl i mean",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "From now on it&#x27;s the publishers who have to solve a captcha.",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "They should keep this up for a year and then seize all of these squatted domains and auction them off.",
+            "comment": [
+                {
+                    "text": "Define &quot;squatted domain&quot;",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Between this and domain-owner secrecy the whole domain name system has become financialized over the last 30 years. We are not in any way better off.",
+            "comment": []
+        }
+    ]
+}

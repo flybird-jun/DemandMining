@@ -1,0 +1,31 @@
+```json
+{
+  "topic": "Plug-in solar panels (balcony/garden solar) emerging in US backyards",
+  "users": [
+    "Homeowners with small outdoor spaces (yards, balconies, patios)",
+    "Renters who can't install traditional rooftop solar",
+    "Urban/suburban residents in states with high electricity prices",
+    "DIY-oriented homeowners",
+    "People in apartments, condos, or homes with unsuitable roofs"
+  ],
+  "pain_points": [
+    "Traditional rooftop solar is too expensive and has long payback periods",
+    "Rooftop solar installation requires permits, inspections, and lengthy processes",
+    "Renters and apartment dwellers are locked out of rooftop solar entirely",
+    "Complex incentive programs (tax credits, rebates) are confusing and hard to navigate",
+    "Many roofs are unsuitable due to age, orientation, shading, or ownership restrictions",
+    "HOA restrictions prevent rooftop solar installations in some areas",
+    "Existing net metering policies and utility pushback make solar less attractive",
+    "Lack of awareness that plug-in solar exists as a category",
+    "Confusion about what's legal, what's safe, and what actually works"
+  ],
+  "existing_solution": [
+    "Traditional rooftop solar (SolarCity, Sunrun, Tesla Solar) — expensive, complex",
+    "DIY solar kits from wholesalers — require electrical knowledge and permits",
+    "Portable solar generators (Jackery, Bluetti) — for off-grid use, not home integration",
+    "Doing nothing and paying full utility bills"
+  ],
+  "opportunity": "Yes, significant. Multiple product/service opportunities exist: (1) A curated marketplace or direct-to-consumer brand for plug-in solar kits with clear US-specific guidance on legality by state/utility, simplified setup, and integrated monitoring apps; (2) A software/information platform that maps plug-in solar legality, expected savings, and compatible equipment by zip code (similar to SolarReviews but for plug-and-play); (3) An installation-matching or concierge service that handles the small but growing demand for backyards/balcony systems; (4) Smart energy management software that helps users with small systems maximize self-consumption and track ROI against utility bills. The market is clearly early — many commenters are confused about what's legal or available — indicating a discovery and education gap that a well-branded product company could fill.",
+  "score": 72
+}
+```

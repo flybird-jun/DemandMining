@@ -1,0 +1,392 @@
+{
+    "item_id": 49230022,
+    "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+    "url": "https://halfhill.com/byte/1998-12_alpha.html",
+    "text": "",
+    "comment": [
+        {
+            "text": "Digital, HP, and IBM had the foresight to supply NCSA with Windows NT machines with their respective not-Intel chips in them to make sure that they had a web browser on their platforms. I got the honor of using the Alpha machine, and so it got the most QA by far. I recall spending an unnecessary amount of time not only staring at the heat sink but occasionally showing it to the new guy so they could confirm my astonishment.<p>Having the free hardware mostly worked, but there was a long time before all of the data alignment bugs got sorted out. It got to the point where my CS classes had progressed enough that I started looking for them myself. Literally the first development tasks I got paid to do was code reviewing for word alignment bugs on 64 bit code. It was a long goddamned time ago so it&#x27;s pretty fuzzy but IIRC not all 3 processors had exactly the same restrictions for all data types. So if it worked on Alpha it usually worked on the other 2 but not 100%.<p>I didn&#x27;t have to deal with 64 bit software at work again for another 10 years, at which point people looked at me like I was trying to be edgy when I just shrugged. No, really, I was looking at 64 bit code errors 10 years ago.",
+            "comment": [
+                {
+                    "text": "Most of the barriers for Alpha adoption were problems inherent in the 32-bit to 64-bit transition.  Alignment problems, yes, but another killer problem was that 64-bit pointers were twice as large.<p>The software I was writing at the time (EDA) took almost exactly twice as much memory.   So if we needed more than 4GB, we could go to a 64-bit machine, but unless you bought even more than  8GB, you couldn&#x27;t really run on bigger problems.<p>As you note, all those problems had to be sorted out 10 years later, when AMD finally forced Intel&#x27;s hand into selling 64-bit computers.",
+                    "comment": [
+                        {
+                            "text": "AMD only pressured Intel into adapting the 64-bit extensions to the x86 architecture, The Intel native 64-bit system was the Itanium. Which they were hoping would break x86 and it&#x27;s messy open legacy that allowed AMD to profit off it.<p>A question on terminology, I come from bsd world so prefer i386, amd64, ia64(the itanium) whereas the linux side appears to prefer x86 x86-64 Nothing wrong with it(it describes the architecture fine) but I assume that x86-64 is intel face saving propaganda.",
+                            "comment": [
+                                {
+                                    "text": "&gt; A question on terminology, I come from bsd world so prefer i386, amd64, ia64(the itanium) whereas the linux side appears to prefer x86 x86-64 Nothing wrong with it(it describes the architecture fine) but I assume that x86-64 is intel face saving propaganda.<p>There exist two different (and slightly incompatible) implementations of 64-bit x86, which the respective CPU vendors call AMD64 and Intel 64 (previous names of the latter: EM64T and IA-32e).<p>So, what Intel implements is <i>not</i> AMD64, but something slightly different.<p>Concerning the small incompatibilities between AMD64 and Intel 64, see for example<p>&gt; <a href=\"https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;29833938&#x2F;what-is-the-compatible-subset-of-intels-and-amds-x86-64-implementations\" rel=\"nofollow\">https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;29833938&#x2F;what-is-the-com...</a>",
+                                    "comment": [
+                                        {
+                                            "text": "",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "If you go far back enough &quot;x86-64&quot; was the original unbranded name.  I wrote to AMD back at the time and they sent me a 5-volume set of programmer&#x27;s reference manuals labelled x86-64, dated 2002.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "In those days, I was using SGI machines to build web sites for folks .. the Indy was very popular for this purpose.  One day I was given a DEC Alpha machine to evaluate and see if it was a worthwhile addition to our inventory.<p>It came with NT, so there was some friction to just adding it to our services.  These days were very frustrating - Microsoft was hell-bent on killing Unix, and later Linux also - and there was a lot of back and forth in our engineering team whether we wanted to invest in this hassle.<p>We didn&#x27;t.  I had that machine under my desk doing basically nothing for a year, before I sent it back.<p>If there had been a bit more insight into the nature of things, and if it had been running a Unix variant, we would have given it a better chance.<p>So then it was even more frustrating when SGI did a deal with the devil in later years, and tried to get its customers switch to NT, also.  That killed SGI, in my opinion.<p>Looking back now, it&#x27;s kind of incredible the resistance to Unix in those days, and how it was all going to be replaced with some &quot;New Technology&quot;.  Linux won.  SGI didn&#x27;t.  And DEC was an early victim they should have learned from, in my opinion.",
+            "comment": [
+                {
+                    "text": "From Microsoft’s POV they soundly beat Unix in the 1990s because they were primarily focused on the GUI workstation market.<p>In 1991 the market for high-end desktop software like engineering, video editing and 3D modeling tools was dominated by Unix and classic Mac. In 1999 all of those applications were on Windows NT.<p>Vendors like Autodesk and Avid were building for Windows first. New graphics acceleration hardware targeted PC add-on cards rather than being exclusive to a workstation vendor (SGI tried this approach with their NT box and it flopped).<p>In retrospect it was just commercial Unix that had lost the game, but it wasn’t obvious at the time that Linux could reclaim this market. And Mac OS X was considered by many a doomed project (after all Apple had been promising a new OS for the entire ‘90s, nobody knew how deeply the NeXT acquisition would transform the company).",
+                    "comment": [
+                        {
+                            "text": "Engineering never went completely to Windows NT.<p>Between 1997 and 2007, I worked at 3 different companies, in 3 different countries (2 in Europe + Israel) as Design Engineer in electronics.<p>All the serious engineering programs for EDA&#x2F;CAD were run on Solaris and accessed from Windows with X-terminal programs.<p>Towards the end of that decade, the Opteron-based servers were both much faster and much cheaper than the Sun servers or the Fujitsu servers, so the EDA&#x2F;CAD programs were migrated from Solaris to Linux, while the Windows computers continued to run only the X-terminal programs for accessing the servers.<p>At the beginning of that decade, I also used a Sun workstation, but those disappeared after 1999, because they were much too slow in comparison with a PC with Intel Pentium III or with AMD Athlon.<p>It is likely that the reason why those EDA&#x2F;CAD programs did not have Windows versions at that time was that they already required a lot of memory, typically much more than 4 GB, so they migrated from Solaris to Linux only after the availability of x86-64 servers, while having a Windows version was not possible before mid 2006, when Intel joined AMD in providing 64-bit CPUs even for PCs, not only for servers, so the market share of 64-bit PCs became non-negligible.",
+                            "comment": [
+                                {
+                                    "text": "Fair enough, while the engineers used Microsoft things, the telecommunications industry - and many, many others - simply switched to Linux.<p>I know only a handful of hardware designers who use Linux&#x2F;MacOS, and if they do, for sure there&#x27;s a Windows VM or a spare machine in the cubical too.<p>Some sort of stasis has been accomplished.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Yeah, even in like 1996&#x2F;1997 for certain industries there were hints as to the way things were going, even if it took 4&#x2F;5 years for the transition to fully take place.<p>For example, in 1996&#x2F;1997, Digital Domain (VFX industry) used a &#x27;render farm&#x27; cluster of Carrera Alpha workstations running NT to render the Titanic film, instead of SGIs running IRIX. (SGIs were still often used on the artists workstations though, but progressively that shifted).<p>By 2001, many of those machines were x86 which were then often as fast as the SGIs and Alphas, even with x86&#x27;s stack-based floating point architecture which handicapped it a bit, and the significantly higher memory bandwidth and larger caches of the SGIs.",
+                            "comment": [
+                                {
+                                    "text": "In 1999, AMD Athlon became the first x86 CPU that was able to do both an addition and a multiplication during one clock cycle, for the 80-bit x87 floating-point numbers.<p>The previous Intel CPUs of the P6 family, from Pentium Pro to Pentium III, required 2 clock cycles for that, i.e. they reached at most half the throughput of Athlon at the same clock frequency. And Athlon had an even higher clock frequency.<p>So the launch of Athlon was one of the greatest jumps in floating-point performance per socket in the history of x86 CPUs.<p>It had a higher clock frequency than any Alpha. IBM POWER CPUs could do much more per clock cycle than Athlon, but their clock frequency was much lower, so Athlon was still faster.<p>One year and a half later Intel launched Pentium 4, which could match the throughput per clock cycle of Athlon, but only when executing new SSE2 programs, not when executing any legacy program.",
+                                    "comment": [
+                                        {
+                                            "text": "This was such a huge transition for FEM on x86-64.  We went from UltraSPARC III 1.2GHz 24 CPU system with 128GB of RAM to a smaller Opteron two chassis cluster linked with Infiniband, 500GB 32core&#x2F;8NUMA nodes per server, and the speedup was almost 10x.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Regarding the &quot;Titanic&quot; film, from the Linux Journal (<a href=\"https:&#x2F;&#x2F;www.linuxjournal.com&#x2F;article&#x2F;2494\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linuxjournal.com&#x2F;article&#x2F;2494</a>):<p>&gt; We rapidly concluded the DEC Alpha-based systems served our batch-processing needs very well. They provide extremely high floating-point performance in commodity packaging. We were able to identify certain floating-point-intensive applications as port targets. The Alpha systems could be configured with large amounts of memory and fast networking at extremely attractive price points. Overall, the DEC Alpha had the best price&#x2F;performance match for our needs. [...]<p>&gt; At this point, the decision was made to purchase 160 433MHz DEC Alpha systems from Carrera Computers of Newport Beach, California. Of those 160 machines, 105 of the machines are running Linux, the other 55 are running NT. The machines are connected with 100Mbps Ethernet to each other and to the rest of our facility. [...]<p>&gt; The floating-point power of the DEC Alpha made jobs run about 3.5 times faster than on our old SGI systems.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I believe the original Toy Story was &#x27;created&#x27; on SGIs, but the render farm was SPARC.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "A video of an 1994 presentation put together for Hot Chips VI on the 21164: <a href=\"https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=OHupqMbLj1g\" rel=\"nofollow\">https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=OHupqMbLj1g</a><p>An April 1992 University Video Communications presentation on the Alpha architecture <a href=\"https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso\" rel=\"nofollow\">https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso</a> and then from 38m 19s on the 21064 CPU <a href=\"https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso&amp;t=2299s\" rel=\"nofollow\">https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso&amp;t=2299s</a> . From about 2m52s <a href=\"https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso&amp;t=172s\" rel=\"nofollow\">https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=klg1FtHADso&amp;t=172s</a> to 4m 43s Richard L. Sites gives the Alpha team’s predictions from 1992 for the next 12-25 of CPU development, which seem to have been fairly on the nail.<p>(Sites hasn’t been idle recently either! He’s responsible for the ultra-low-overhead KUTrace: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=40972099\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=40972099</a> )",
+            "comment": []
+        },
+        {
+            "text": "The bit about how the AMD Athlon (K7) uses the same bus, and how they planned to make Slot A Alphas where the only adjustment an Althon motherboard would need is a different BIOS. Imagine what might have been, especially as Alpha Windows 2000 had a built in FX!32. Cheap Alpha systems with a good x86 compatibility story, it could&#x27;ve been a contender.<p>(Yeah, I know, several stars would&#x27;ve had to align for it to actually work).",
+            "comment": [
+                {
+                    "text": "&quot;Cheap&quot; and &quot;Alpha&quot; would have been hard to pull of simultaneously. But it would have been really cool.",
+                    "comment": [
+                        {
+                            "text": "The AXPpci 33 boards were pretty cheap at some point. I had one at the end of the 90s and I think it was 100-200 Dutch guilders.",
+                            "comment": [
+                                {
+                                    "text": "Pretty cheap and pretty slow, relative to other Alphas.  The various ATX-sized PC164s motherboards were the ones that should have sealed the deal for Digital, but intel had PPro at about the same time, with similar performance, less cost and probably most importantly ran all the software people already had and vendors didn&#x27;t have to port to a new arch[1].<p>What might have been.<p>[1] Yes, yes...PPro sucks on 16-bit software.  My personal experience was that was a red herring by the benchmark-jockies, because it wasn&#x27;t <i>that</i> much slower, and virtually none of the many, many PPro machines I was responsible for ran DOS&#x2F;Win3 software.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "There was a problem with that idea, DEC engineers working for AMD made K7 too fast for Alpha to compete.",
+                    "comment": [
+                        {
+                            "text": "There was a second problem with that, Digital proved in court that Intel stole their architecture to put into the Pentium.<p>Part of the settlement was that Intel had to fab for Digital for a long time and pay for a bunch of their patents. The Digital folks made it sound like it was a victory for them but it felt like the beginning of the end, and sure enough it was.<p>I think Alpha&#x27;s big problem was people were still migrating to 32 bit code and here was a bunch of smartasses trying to push 64 bit processors 10 years before x86-64 became the flagship for Intel-compatible processors. During the time when &#x27;Internet time&#x27; was a thing people said regularly and unironically. 10 years was <i>forever</i>.",
+                            "comment": [
+                                {
+                                    "text": "Sounds like similar paper &quot;win&quot; to DEC OpenVMS lawsuit against Microsoft where MS penalty was supporting Alpha while DEC trained its enormous sales&#x2F;engineering arm to sell and support NT thus killing any incentives to buy DEC hw in the first place. DEC moved upstream the value chain and Microsoft moved tons of NT to all existing DEC corporate customers.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&quot;I am old, and have lived through four ages of the west, (the 8, 16, 32, and 64-bit ages), and have seen many defeats, and many fruitless victories.&quot;",
+                                    "comment": [
+                                        {
+                                            "text": "Some wise person in the 90&#x27;s looked at the 16-32 bit transition, and side-eyed the 64 bit machines that were already available. He noted how differently we write software on 32 bit hardware (flat memory addressing, virtual memory, etc), and wondered what sorts of things we&#x27;d do differently on 64 bit. It took a while, but I think the answer is virtual machines, and multiplexing virtual addresses in a single process. There are some key techniques for highly concurrent garbage collection that use features meant for VMs to accelerate mark and sweep by switching the address space of objects that have been swept, and using some page faulting tricks to handle objects that are being written and swept at the same time.<p>We won&#x27;t have to go to 128 bit processors for address space reasons. So I wonder what the justifications will be for doing so? And what features people will <i>actually</i> use it for when they have it? I suppose in some ways SIMD has skipped mostly over 128 to go to 256 and 512 bits though, hasn&#x27;t it?<p>But I also know of 2 top-tier JITed languages that can use pointer packing to use 32 bit pointers for heap sizes under 32GB to save tons of memory. So 128 bit words would make pointers obnoxiously expensive.",
+                                            "comment": [
+                                                {
+                                                    "text": "According to the mighty google (and other HN comments) we are running out of address space at about 1 bit per year or so. So most of us will not live to see the need for 128 bit computers.\nAn interesting thing to think about is this: how extraordinary it was to live through 3 or 4 of these transitions. If we keep running out of bits at the rate of one per year (and we don&#x27;t go extinct) that means that most humans will never life through any transitions.\nWe are either the lucky ones (because we got to seee so many transitions) or the unlucky ones (because we are the ones who had to cope with the disruptions of doubling pointer lengths.)",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "John Mashey?",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I seem to remember that Alpha’s were very fast for the time but their maximum optimization level waived IEEE floating point conformance.  This, of course, drove us nuts trying to validate ports of numerically intensive code.  Less interesting chips with lower optimization and limited market penetration.<p>Now, HP’s PA-RISC chips…. Those things were fast and easier to work with. Curiously, with SoftPC they could do windows faster than a 486 could.  Slaughtered all sorts of mini-supers they did.<p>Would have been interesting if alpha survived to compete with SGI’s MIPS.",
+            "comment": [
+                {
+                    "text": "I worked on the first PA-RISC workstations (“snakes”, 1989-1991). PA-RISC started as a fairly pure RISC design and was consequently very simple and predictable (short pipeline, 1 delay slot, no complex instructions). The philosophy of the design team was to make the system fast with high clock speeds, short pipelines, and big caches, all big fundamental variables in the performance equation.<p>Alpha was much more sophisticated but also a lot more complex. The Alpha memory model, in particular, was quite complex with lots of cache control and barrier primitives, IIRC. But it could fly when you got the stars to align.<p>Edit: Alpha also came out later and PA-RISC also got more complex in later generations.",
+                    "comment": [
+                        {
+                            "text": "I feel like PA-RISC actually landed with a handful of useful somewhat-complex instructions. It always struck me as the best architecture from that era, making the correct trade-off of avoided microcode but adopted stuff like completers and shift-and-add operations to minimize instruction count and maximize work done per pipeline.",
+                            "comment": [
+                                {
+                                    "text": "Yea, there were things like shift and add to do multiplication more efficiently, but they were all one-cycle instructions. It was very regular that way, all designed around a clean pipeline without a stalls or bypassing. But, consequently, it originally didn’t even have integer multiplication or division, just shift and add and a “divide step” that you could repeat&#x2F;loop. Looking at the instruction set just now, I chuckled at how simple it was. It makes RISC-V look complex.<p>See: ftp.parisc-linux.org&#x2F;docs&#x2F;arch&#x2F;pa11_acd.pdf<p>Edit: actually, it did have fixed point multiply via the floating point unit (opcode XMPYU). No fixed point divide, though.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "VAX compatibility was very important to DEC- the Alpha has hardware to handle the non-IEEE VAX floating point formats.",
+                    "comment": []
+                },
+                {
+                    "text": "what did they not implement from 754? Given the design of the processor i can imagine them being very aggressive with assumptions around exception handling &#x2F; traps - iirc this is actually the original reason why Tomasulo algorithm exists because the first out-of-order processors didn&#x27;t actually make any guarantees about the order that you would observe these side effects.",
+                    "comment": [
+                        {
+                            "text": "Alpha punts handling of denormals, infinities and NaNs to software emulation, but that wasn&#x27;t particularly unusual: some sparc CPUs and early implementations of Arm VFP floating point did the same.<p>Looking at the alpha architecture manual, the fp emulation traps are imprecise, which imposes constraints on codegen to make it work right: the &quot;trap shadow&quot; extends from the potentially trapping insn until a following trap barrier, and in the shadow you mustn&#x27;t e.g. use a register more than once as a destination, have a branch, or modify registers that are inputs to any insns in the shadow. (The idea is that the hardware will have already executed some of the insns in the shadow by the time it realises it needs to trap, and the handler has to be able to emulate the trapping insn and resume execution at the insn just after that, so it will re-execute all the insns in the shadow.) That&#x27;s obviously pretty inconvenient for codegen, so I wouldn&#x27;t be surprised if the  compiler provided some kind of fast-math mode where it didn&#x27;t trap and you just had to avoid generating denormals, infinities, etc.<p>I think making the fp using code have to be written carefully to work with the software emulation of edge cases is unusual -- I don&#x27;t think either sparc or arm imposed that requirement, and instead trap precisely, or at least before anything happens where it would matter that the fp insn is emulated late.",
+                            "comment": [
+                                {
+                                    "text": "Thinking longer about Alpha&#x27;s imprecise faults made me realize that signaling NaNs can be quite useful in such case",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "600Mhz Alphas existed when there was 195mhz MIPS",
+                    "comment": [
+                        {
+                            "text": "turns out there is more involved in performance than just clock rate<p>who knew? (everyone)",
+                            "comment": [
+                                {
+                                    "text": "And the Alpha was faster<p>The last line of the parent post makes it sound as if the chips didn&#x27;t exist at the same time.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "My memory is that the Alpha and OSF&#x2F;1 hit at the same time. OSF&#x2F;1 had a different model of shared library stuff, and I recall it being something which sometimes demanded a reboot to get a runtime cache rebuilt&#x2F;linked so things worked as you expected. I may be mis-remembering, I think DEC had coded some pull up smarts to optimise the lib -&gt; indirect -&gt; actual call path into the shortest path possible.<p>I also recall the syslog being absolutely FLOODED with &quot;unaligned access at...&quot; messages.<p>It was fast. It was very fast. If you knew how to make the compiler to the precompile, test run, introspect, recompile cycle, it would work out from some sample state the right choices (branch prediction ordering?) and make your fast code even faster.",
+            "comment": [
+                {
+                    "text": "Unaligned access was common issue on many RISCs, which depending on specific Unix variant and runtime settings might mean regularly getting SIGBUS for code ported from other architectures.<p>Without BWX instructions from EV56 (21164A) you also could not make memory access smaller than 32bits",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It’s so good to re-read Tom Halfhill’s articles. I wonder where he’s been in the past… checks notes… 30 years I haven’t seen his writings.",
+            "comment": [
+                {
+                    "text": "He was my favorite author at Byte.",
+                    "comment": [
+                        {
+                            "text": "His LinkedIn says he’s retired for six years now. I hope he’s enjoying retirement.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It&#x27;s important in the historical context of the Alpha AXP to also remember the DEC PRISM architecture.  Canceled in 1988.  One of many architectures killed off by DEC.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;DEC_PRISM\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;DEC_PRISM</a><p>Killing Prism sent David Cutler into the arms of Microsoft.<p>Another dead architecture was Jupiter: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jupiter_project\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jupiter_project</a><p>Killing Jupiter sent many of DEC&#x27;s DECsystem-10 customers to IBM.<p>Years later, they both seem like bad decisions.",
+            "comment": []
+        },
+        {
+            "text": "Fun fact - Linus first trip to the United States was related to Linux-on-Alpha port and sponsored by Digital Equipment Corporation.",
+            "comment": [
+                {
+                    "text": "The Alpha CPUs didn’t implement the div instruction and Linus’ assembly version was faster than DEC’s in some cases.<p><a href=\"https:&#x2F;&#x2F;git.kernel.org&#x2F;pub&#x2F;scm&#x2F;linux&#x2F;kernel&#x2F;git&#x2F;stable&#x2F;linux.git&#x2F;tree&#x2F;arch&#x2F;alpha&#x2F;lib&#x2F;divide.S\" rel=\"nofollow\">https:&#x2F;&#x2F;git.kernel.org&#x2F;pub&#x2F;scm&#x2F;linux&#x2F;kernel&#x2F;git&#x2F;stable&#x2F;linux...</a>",
+                    "comment": [
+                        {
+                            "text": "That&#x27;s nice. (Not uncommon in early RISC, (e.g. PowerPC had some similar limitations for 64 bit ints), and various assembly fun ensued).",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; outside of the highly specialized embedded-application market, RISC is in retreat<p>with hindsight it is funny to realize that RISCs come back would start from inside that highly specialized market in the form of ARM.",
+            "comment": [
+                {
+                    "text": "And just like the 90s, every major tech company is making their own RISC chip[1]! Apple Silicon, Tensor, Graviton, Axion, Cobalt, Grace....<p>[1] - Though not exactly since they&#x27;re all ARM ISA at the foundation.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "From back when IA-64 (A.K.A. Itanium) was supposed to take Intel to the promised land.",
+            "comment": [
+                {
+                    "text": "Without AMD, maybe it would have.",
+                    "comment": [
+                        {
+                            "text": "No, it wouldn&#x27;t have.<p>Without AMD rescuing x86, PowerPC wouldn&#x27;t have died. MIPS wouldn&#x27;t have died, and faces with the need to brake the 4Gn barrier on consumer equipment microsoft would have had windows running on three or four competing architectures until 2013 when everything would have switched to ARM.<p>Itanium would have already been a rotting corpse.<p>AMD rescued Intel from its own management.",
+                            "comment": [
+                                {
+                                    "text": "Sure it would, Windows XP 64 bits was alreary on Itanium, and NT versions for PowerPC and MIPS were already dead by then.",
+                                    "comment": [
+                                        {
+                                            "text": "First thank you for generously understanding my post despite the vandalism that autocorrect did to it.<p>WindowsNT is remarkably well suited to porting to other arch. This was done on purpose to hedge against x86. Dead one day, reactivated the other. MS needed to brake the 4Gb barrier and they would have done anything to get consumer priced 64bit chips.<p>Itanium was a dog. We had an Itanium SGI &quot;supercomputer&quot;. Everything about it that SGI designed was amazing (hot swapping cpus). The cpu was a dog.",
+                                            "comment": [
+                                                {
+                                                    "text": "Itanium wasn&#x27;t set in stone, a few times CPUs were redesigned to fix architecture issues, naturally for WinIntel that became economic unfeasible the moment AMD64 became an alternative.<p>Without it, Intel would most likely kept iterating and improving Itanium&#x27;s architecture.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "It&#x27;s unclear to me what would have likely happened had AMD stayed on IA32 and Netburst been uncontested. Itanium was far too expensive for consumer machines and it seems very possible that Intel would have fumbled IA64 in a way similar to more recent AVX-512 and their big.little efforts. Easy enough to port XP to Itanium, hard to get those machines into Best Buy or the Dell catalog in any way that makes sense. Had AMD continued Athlon performance improvements and Intel still responded with a P6-derived Pentium M (which even in our timeline was 32-bit) it still seems like there would have been no volume market for IA64 and we still would have eventually ended up with an evolution of IA32 even if it came from Intel instead of AMD.",
+                                            "comment": [
+                                                {
+                                                    "text": "",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "It is all what ifs by now, however I firmly believe if there was no other option other than Wintel, Intel would keep pushing Itanium and sort out the design issues.<p>The thing with AMD64 is that now there is this myth that there was no other alternative than keeping up with x86, and Itanium redesigns for some magical reason were impossible.<p>Other than those redesigns never happened, because AMD64 made economic invalid to pursue them.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I heard about Alpha in that it while being more powerful than x86 it wasn&#x27;t as alien as the competition. The boards had PCI slots and looked like normal PCs, it had Windows NT and Linux. So if your Exchange server was not handling the load you moved it to Alpha and it was good.<p>It also seems faith in IA64 was the meteor that killed most of these self developed RISC architectures.",
+            "comment": [
+                {
+                    "text": "A VAR I worked with back in the day made great scratch for a good number of years flogging MS SQLServer on Alpha for the performance boost, which was apparently more than enough to justify the price premium for those that needed it.",
+                    "comment": []
+                },
+                {
+                    "text": "FWIW Alpha pretty quickly went with mainly PCI + few legacy ISA slots for considerable chunk of the line, unlike competition which used proprietary buses that might have been faster but meant extra level of exotic in procurement",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Man, I loved reading Tom’s articles in BYTE.",
+            "comment": []
+        },
+        {
+            "text": "&gt; David Jessel, the Alpha&#x27;s senior product manager, claims that Alpha fans have nothing to worry about. &quot;Compaq has been fully supportive of the Alpha and is continuing to invest in it,&quot; Jessel said.<p>That worked out swimmingly for Alpha... &gt;sigh&lt;<p>I never programmed Alpha assembly, so I don&#x27;t really have a feel for the architecture. I did deploy some Alpha-based boxes running NT, and they were very nice. They didn&#x27;t feel pieced-together like x86 servers did.",
+            "comment": [
+                {
+                    "text": "On the hardware side, DEC built very-well engineered hardware. The early Alpha machines were very well designed. Even the PC compatible lines of the era were built to a very high quality standard.",
+                    "comment": [
+                        {
+                            "text": "&gt; Even the PC compatible lines of the era were built to a very high quality standard.<p>DEC had a moment between 1990-92 when they did pretty good in PC market.\nOral History of Grant Saviers, part 2 of 2 <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Od830KDrLUU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Od830KDrLUU</a><p>Oral History of Grant Saviers part 1: <a href=\"http:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;2012&#x2F;08&#x2F;102746014-05-01-acc.pdf\" rel=\"nofollow\">http:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;201...</a><p>Oral History of Grant Saviers part 2: <a href=\"https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;2023&#x2F;04&#x2F;102795787-05-01-acc.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;20...</a><p>&#x27;As DEC’s Corporate Vice President of PC Systems and Peripherals from 1990 to 1992 Grant successfully restarted DEC’s PC business from a dormant state and grew revenues to $350M and break-even profitability in 18 months.&#x27;<p>@18 minute timestamp - they copied DELL strategy and it worked, business was growing and then DEC founder and CEO Ken Olsen decided to kill it. Grant got recruited to lead Adaptec.",
+                            "comment": [
+                                {
+                                    "text": "Another somewhat related error in strategy was trying to keep VAX alive for longer than it should have been, especially the ECL versions",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "My understanding is that after Compaq sold the Alpha IP to intel, and quite a lot of the DNA ended up in Nehalem and Sandy Bridge.",
+                    "comment": [
+                        {
+                            "text": "Not sure about that bit...<p>What is well known however, is that a bunch of Alpha engineers wound up at AMD, and a lot of that DNA went into the OG Athlon",
+                            "comment": [
+                                {
+                                    "text": "<p><pre><code>  &gt; Intel developed QPI at its Massachusetts Microprocessor Design Center (MMDC) by\n  &gt; members of what had been the Alpha Development Group, which Intel had acquired\n  &gt; from Compaq and HP and in turn originally came from Digital Equipment\n  &gt; Corporation (DEC).[8] Its development had been reported as early as 2004\n</code></pre>\nfrom <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Intel_QuickPath_Interconnect#Background\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Intel_QuickPath_Interconnect#B...</a><p>QPI was Intel&#x27;s answer to the competition AMD&#x27;s Athlon &#x2F; HyperTransport had created",
+                                    "comment": [
+                                        {
+                                            "text": "The funny part is that arguably both HyperTransport and QPI descend from the interprocessor links designed for Alpha EV7",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "IIRC, the Sunway CPUs used in Chinese supercomputers have an Alpha-like design.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "BYTE magazine has been gone for almost 30 years now. Fuck.<p>Dr Dobbs has been gone for 12, which is still a long time, but when I first read the intro my brain transposed the two and I had a proper freak out before I realized what I&#x27;d done.",
+            "comment": []
+        },
+        {
+            "text": "I remember Byte folding, but I’d blanked that it was a full 28 years ago.",
+            "comment": []
+        },
+        {
+            "text": "For everyone who says that the Alpha was a technically-superior CPU design that should have prevailed, I will draw attention to an interesting fact:<p>&quot;According to Allen Baum, the StrongARM traces its history to attempts to make a low-power version of the DEC Alpha, which DEC&#x27;s engineers quickly concluded was not possible.&quot;<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;StrongARM\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;StrongARM</a><p>While AArch64 has been in the top supercomputer, a phone running on Alpha was not.<p>For this scalability problem, it deserved to die.",
+            "comment": [
+                {
+                    "text": "The issue was not that Alpha ISA was impossible to scale down.<p>The issue was that DEC lacked the resources to run a completely new microarchitecture design to target low-power platforms, and the failure was trying to push an extreme performance chip into low-power envelope instead of designing a new one.<p>AFAIK with ARM the difference is that they started with low-power underpowered chip and modified it to bring the performance up.<p>You&#x27;d have probably similar issues trying to make a phone using Fujitsu A64FX (the supercomputer ARM) into low-power chip.",
+                    "comment": [
+                        {
+                            "text": "This interview with Allen Baum seems to imply that DEC was quite aware of what could easily be done with Alpha, and what could not.<p>I&#x27;m also assuming that ARM code density was better than Alpha (conditional opcodes being a major contributor).<p>&quot;Well, we were looking at doing a low power Alpha and decided that just couldn’t be done, and then looked at the ARM. We think we can make an ARM which is really low power, really high performance, really tiny, and cheap, and we can do it in a year...<p>&quot;Well, I worked on the StrongARM 1500, which was a very interesting product. It was an ARM and a DSP kind of highly combined... And then we finished that project and our group in Palo Alto, we were just gonna start an Alpha project.&quot;<p><a href=\"https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;2018&#x2F;06&#x2F;102717165-05-01-acc.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;20...</a>",
+                            "comment": [
+                                {
+                                    "text": "An important thing to consider is that DEC simply didn&#x27;t have enough CPU design teams, which is also why Alpha essentially had only one-and-half model in the works throughout its history - and the half came from smashing smallest chipset variant into single chip with the CPU for pretty bad performance (too slow memory, mainly). A low-power Alpha CPU would have to be a from scratch design, even if arguably simple to implement ISA-compatible chip.<p>StrongARM was developed in partnership with ARM, not starting from zero, applying some of the techniques Digital developed with Alpha to ARM - reputedly creating the idea that ARM could be fast at all",
+                                    "comment": [
+                                        {
+                                            "text": "DEC also blew a fortune on the ECL VAX.<p>&quot;Meanwhile, the engineering team&#x27;s predictions about the relentless march of CMOS proved true. By 1991, the NVAX was also on the market, offering roughly the same performance for a tiny fraction of the cost and size. At lower performance settings the same design was available in desktop form, outperforming all previous VAX machines. The 9000 managed not only to lose billions of dollars, but also led to the ending of several much more promising designs.&quot;<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;VAX_9000\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;VAX_9000</a><p>DEC also lost Dave Cutler&#x27;s team over PRISM, which was also a deep cut. Deeper than the ECL disaster? Debatable.<p>DEC had no hope in the ECL money furnace and the loss of the VMS architect.",
+                                            "comment": [
+                                                {
+                                                    "text": "Arguably the ECL was just digging themselves deeper, the real failure was upper management fighting any suggestion that VAX has played out and should be replaced. EDIT: Then there&#x27;s the infighting between &quot;big ECL VAX&quot; and everyone else, which was very resource draining.<p>All the CISC vs RISC literature that brought us the memes about &quot;expensive decode&quot; talked mainly about VAX and m68k as CISC. By comparison, x86 was always closer to RISC designs if only by accident of limited resources of 8086. Even NVAX had, IIRC, ridiculously large microcode - and with orthogonal ISA you had to accept every instruction could balloon info long multi step microcode loop before you even start feeding the ALU.<p>Making such complex ISA fast was harder than x86 which in 1990s, with NVAX requiring pipelined decoder in Ibox to feed the rest and non trivially depending on possibility of Mbox (memory) requests from I and E boxes to overlap between two instructions to feed the beast.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Hardly anyone ran NT on these beautiful chips. Tru64 was the OS of choice for these in 1998. Hence the decision by MS to cease support. Running NT on a Dec Alpha would be like running kerosene in your Ferrari’s engine. If you wanted to run Windows NT you could do so a lot cheaper on an x86 PC.",
+            "comment": [
+                {
+                    "text": "Decision to cease support was reputedly done by Compaq, coming as complete surprise to both Compaq-side and Microsoft-side NT teams.<p>As for Alpha, funnily enough the first few years I knew of it, I knew only of NT use with them, because that&#x27;s what the R&amp;D institute my father worked at had.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

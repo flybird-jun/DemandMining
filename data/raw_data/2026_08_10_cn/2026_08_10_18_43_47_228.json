@@ -1,0 +1,52 @@
+{
+    "item_id": 49238735,
+    "title": "将卫星图像变成可自行折叠的纸质地球仪",
+    "url": "https://foldingglobes.com/",
+    "text": "",
+    "comment": [
+        [
+            "二十面体才是经典的吗？我这辈子从来没见过二十面体的地球仪，无论是实体的还是数字的。在为这个二十面体\"地球仪\"挑选标题的时候，大脑或人工神经网络到底发生了什么？",
+            "我在欧洲的许多新奇礼品店或旅游商店里都见过它们。<p><a href=\"https:&#x2F;&#x2F;www.rimemo.com&#x2F;e&#x2F;wap&#x2F;show.php?classid=5&amp;id=29\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rimemo.com&#x2F;e&#x2F;wap&#x2F;show.php?classid=5&amp;id=29</a>",
+            "显然是<i>多面体地球仪中的</i>经典之作<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dymaxion_map\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dymaxion_map</a>",
+            "我个人最喜欢的是 Authagraph，折叠起来它们的形状非常漂亮。我几年前在一家文具店买了一个，它至今还立在那里。<p><a href=\"https:&#x2F;&#x2F;narukawa-lab.jp&#x2F;archives&#x2F;authagraph-map&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;narukawa-lab.jp&#x2F;archives&#x2F;authagraph-map&#x2F;</a>"
+        ],
+        [
+            "> 目前还没有图钉——你的地球仪即使没有图钉也能正常使用，但加上一个\"你在这里\"的标记就能作为礼物送人。<p>（愤慨地）这怎么就能作为礼物送人了？"
+        ],
+        [
+            "6.95 或者让我的大语言模型指向这个网站并复制这个简单的创意。",
+            "几乎所有的创意都可以被复制。数字创意更容易被复制。<p>这里有一剂解药：<a href=\"https:&#x2F;&#x2F;kevinkelly.substack.com&#x2F;p&#x2F;better-than-free\" rel=\"nofollow\">https:&#x2F;&#x2F;kevinkelly.substack.com&#x2F;p&#x2F;better-than-free</a>",
+            "花了几十年时间建立工具来自由地复制和分叉彼此的代码，最终却到达了一个人们付费用 tokens 做同样事情并附带更多噪音的未来。这就是所谓的进步。",
+            "嗯，你仍然可以自由地复制自由软件。"
+        ],
+        [
+            "绝对不是一个不道德的想法，因为这是 100% 凭感觉编程的（vibe-coded）。<a href=\"https:&#x2F;&#x2F;mapscaping.com&#x2F;podcast&#x2F;i-have-been-making-ai-slop-and-you-should-too&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;mapscaping.com&#x2F;podcast&#x2F;i-have-been-making-ai-slop-an...</a>",
+            "既然我们现在有了可折叠手机，是否存在一个（圆形的）数字地球仪（就像经典的那种），我可以通过应用程序控制它，例如向我展示包含\"实时\"天气以及来自 Flightradar24 所有航班的当前世界地图？如果存在这样的地球仪，我愿意花几千美元买一个。就为了能直接在办公桌前看到各种\"实时\"地图。"
+        ],
+        [
+            "一些有趣的评论 <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49093845\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49093845</a>",
+            "不同形状的图标实际上没有太大意义。其中一些的工作原理并不明显，而且许多与实际的图案（在手机上你必须向下滚动才能看到）大不相同。<p>另外，Cahill–Keyes M（我以前从未听说过或见过）被描述为\"经典的 M\"。这并不是很有帮助。"
+        ],
+        [
+            "人们现在还会买……地球仪吗？",
+            "我看到它们在出售，所以可能确实有人买。但是，无论他们是否买，如果有孩子的话，他们应该买。地球仪比地图传达的信息多得多。<p>事实上，更好的是自己动手做一个。"
+        ],
+        [
+            "这真是太棒了！致创作者们（如果你们在这里的话）：如果你们曾经梦想过产品的实际扫描 .svg 和 3D 模拟之间能有一个流畅统一的过渡[1]，我有一些旧代码[2]可以在 three.js 中模拟折纸折叠过程，能够优雅地处理这个问题。它的工作原理是根据每条边上的旋转弹簧来绘制面，每个弹簧锚定在两个点上，并在（分层）过程中执行。<p>代码库目前处于主要是人为清理的混乱状态（说实话真的糟透了，顺便说一句），但对于像这样的一次性、单步骤模拟，提取你需要的部分应该是轻而易举的。<p>抱歉如果这听起来很明显——哈哈——因为如今越来越难判断这一点了<p>[1] 显然理解你们不在页面加载时加载 3D 的原因，所以值得指出的是，同样的效果也许可以通过巧妙的 .svg<->.ts 交换来实现。<p>[2]：<a href=\"https:&#x2F;&#x2F;gitlab.com&#x2F;doering-ai&#x2F;apps&#x2F;origami\" rel=\"nofollow\">https:&#x2F;&#x2F;gitlab.com&#x2F;doering-ai&#x2F;apps&#x2F;origami</a>",
+            "这个一周前就发过了"
+        ],
+        [
+            "创意不错。讨厌这个凭感觉编程的网站。连默认颜色都没改。"
+        ],
+        [
+            "网站在移动端有点粗糙"
+        ],
+        [
+            "[已标记]"
+        ],
+        [
+            "能创造出有趣的东西值得称赞，但随便凭感觉做出一个东西就试图收费，而任何其他人都能以更低的价格生产出同样的产品，这种做法品味很差。",
+            "为什么说这品味差？他并没有阻止任何人。他也没有在搞专利常青化。<p>市场上销售的很多东西都可以被别人以更低的价格制造和销售。<p>如果你愿意，你可以发布一个 GPL 版本。"
+        ]
+    ]
+}

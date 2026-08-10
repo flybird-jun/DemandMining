@@ -1,0 +1,41 @@
+```json
+{
+  "topic": "Jorge - 极简静态网站生成器，支持 Markdown 和 org-mode（特别是为 Emacs/org-mode 用户优化）",
+  "users": [
+    "喜欢使用 org-mode 编写内容的 Emacs 用户",
+    "偏好简洁、轻量级工具的开发者",
+    "Go 语言爱好者",
+    "从 Jekyll 迁移过来但希望更简单替代品的博主",
+    "喜欢命令行工作流的技术写作者"
+  ],
+  "pain_points": [
+    "现有的静态网站生成器（如 Hugo、Jekyll）对 org-mode 支持有限或需要复杂配置",
+    "Jekyll 基于 Ruby，依赖管理繁琐，启动较慢",
+    "Hugo 等工具对 org-mode 用户不友好，强制使用 Markdown",
+    "许多现代网站生成器（如 Next.js、Astro）功能过于复杂，学习曲线陡峭",
+    "需要在本地预览和实时刷新功能（jorge serve 已解决）",
+    "草稿管理和发布流程需要简化"
+  ],
+  "existing_solution": [
+    "Jekyll（Ruby 生态，但对 org-mode 支持有限）",
+    "Hugo（Go 编写，性能好，但主要面向 Markdown）",
+    "Nikola（Python，但配置复杂）",
+    "Hexo（Node.js，插件系统）",
+    "对于 Emacs 用户：ox-twbs、ox-hugo（但与 Hugo 集成复杂）",
+    "Doom Emacs/Spacemacs 自带的一些博客工具"
+  ],
+  "opportunity": "存在一定机会。目标市场是 Emacs/org-mode 用户这一相对小众但忠诚度高的群体。主要机会点在于：1) 构建一个更完整的 org-mode 原生发布平台，包含主题市场；2) 与 Emacs 生态深度集成（如 org-publish 替代方案）；3) 提供托管服务，简化部署流程（类似 Vercel/Netlify 但针对静态博客）。然而，市场规模有限，且作者明确表示这是个人学习项目，表明市场已被充分服务（如 Jekyll 已存在多年）。更大的商业机会可能在于企业级知识管理或团队协作场景，而非个人博客工具。",
+  "score": 20
+}
+```
+
+**简要说明：**
+
+主要判断依据：
+1. **小众市场**：org-mode 用户是 Emacs 社区的子集，整体市场有限
+2. **竞争充分**：静态网站生成器市场已极度饱和（Hugo、Jekyll、Eleventy、Astro 等数百种工具）
+3. **作者定位明确**：明确标注为"个人/学习项目"，暗示其并不追求市场主导地位
+4. **商业化挑战**：开源 CLI 工具变现路径有限，除非转向托管服务（SaaS）
+5. **存在的细分机会**：针对 Emacs 用户的托管博客服务或主题市场，但 TAM（可寻址市场）太小
+
+不建议创业者将主要精力投入此方向，除非有针对 Emacs/org-mode 用户的差异化深度场景（如学术写作发布、长文档管理）。

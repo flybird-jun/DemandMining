@@ -1,0 +1,33 @@
+{
+    "item_id": 49234953,
+    "title": "CRT-TV-Emulator",
+    "url": "https://github.com/AARomanov1985/CRT-TV-Emulator/tree/main",
+    "text": "CRT TV Emulator\nFFmpeg pipeline for end-to-end signal degradation, modeling analog video and audio through combined processing stages.\nThis models the complete physical hardware path as processing steps:\n[Input Video] → [Signal / Media] → [Condition Vector] → [Player / Deck] → [Display Chassis & Acoustics] → [Video Output]\nSources:\nTV\n(\ntv/\n) — broadcast reception quality (strong/weak, color/BW)\nVHS\n(\nvhs/\n) — cassette hardware, plus a tape condition (\nvhs_cond/\n),\nplayed on a deck (\nvhs_player/\n, e.g. budget Funai vs JVC S7600 TBC)\nDVD\n(\ndvd/\n) — a disc model, played on a DVD deck (\ndvd_player/\n) that\nalso carries the output connection character (composite vs component)\nPrerequisites\nbash\n(4.0 or newer)\nffmpeg\nbuilt with standard video filter and audio processing libraries\nUsage\nInteractive Execution\nchmod +x convert.sh\n./convert.sh\nNon interactive:\nprintf '1\\n3\\n5\\n/path/to/clip.mp4\\n' | ./convert.sh\nOutput files are written to an\nout/\ndirectory alongside the source using the naming pattern:\n<basename>_<source>[_<condition>]_<player>_<chassis>.mkv\nLicense\nMIT",
+    "comment": [
+        {
+            "text": "the thing is with these CRT emulators is that they always look so over-artifacted. I looked at CRTs for a big part of my life and they didn&#x27;t actually look like this. Maybe if you took a photo of them, but not in full motion.<p>With real CRTs you don&#x27;t notice the scanlines so much due to interlacing at double the frame rate. And they are kinda fuzzy so they&#x27;re not so clear anyway.<p>I wonder if a really fast, say 240Hz display could simulate this better somehow.",
+            "comment": [
+                {
+                    "text": "I think another way to do this would be to develop a proper physical simulation that foregoes any notion of realtime. It can take 24 hours to bake 5 minutes of CRT output.<p>We use the simulator to generate test data that can be used to train an emulator. The emulator can be deployed as a model that provides the CRT effect in real time. We already have things like neural upscaling and denoising. This could be a similar idea.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This must be similar to what seemingly every documentary on Netflix uses in all their editing when showing any sort of footage taken more than 5 years ago.<p>Some show will be showing a clip of an interview recorded in 2020, and for some reason it’s edited to appear to be a poorly-stored VHS when the original was almost certainly a 1080p or 4K digital recording.",
+            "comment": []
+        },
+        {
+            "text": "Does this mean we’ve finally caught up with the Japanese?",
+            "comment": []
+        },
+        {
+            "text": "FFmpeg filter pipelines for batch simulating vintage CRT TV + VHS&#x2F;DVD",
+            "comment": []
+        },
+        {
+            "text": "A lot of these are principled simulations, which is fine, but what I wouldn&#x27;t give for a data-driven reproduction. At the end of the day, it&#x27;s a learnable function that we have more than enough deep learning machinery to arbitrarily approximate.",
+            "comment": []
+        }
+    ]
+}

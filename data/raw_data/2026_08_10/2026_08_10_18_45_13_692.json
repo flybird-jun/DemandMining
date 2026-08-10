@@ -1,0 +1,192 @@
+{
+    "item_id": 49226742,
+    "title": "Dithered QR Codes",
+    "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+    "text": "Making your own dithered QR codes\nQR codes: the basics\nA QR code is really just a way of encoding a few bytes of data in a way that can be easily read froma photo by a smartphone or similar device. They're designed to be very robust to bad focus, bad printing, funny angles, and missing areas. Exactly how they work isn't terribly important, but for the purposes of this page, a QR code is a grid of squares that divide into two parts — the function patterns (which are the bold shapes in the above example) and the data modules (everything else). The function modules are mostly used to let the scanner find the QR code easily, so they have to be very clear and distinct. The data modules are where the actual data is stored, along with some extra header data etc, and since those are only read after the scanner has used the function modules to work out exactly where the QR code is, they can be modified a bit more. This is often used by brands to create QR codes that look a bit distinctive, and while this kind of modification makes them a bit less robust when scanning, but you can generally get away with a fair bit before the codes become unscannable.\nPutting pictures in QR codes\nThis is\na QR code I saw on Mastodon\n. One of the modifications you can do with the data modules is to shrink them — the scanner will look where the finder patterns say the centres of the pixels should be, and so as long as the code isn't distorted when you try to scan it. That means the rest of the space is yours to play with. Dave divides each pixel into a three-by-three grid, and uses the middle one to store the data, and the others for a photo. The result is a low-res, one-bit photo with some salt-and-pepper noise on it.\nDithering\nObviously when we crush an image into a low colour depth, we don't normally just threshold it — that is, make the dark pixels black and the light pixels white. We normally use a kind of chequerboard effect to create midtones as well.\nA Bayer filter\ncan be used to apply this idea across a whole image without having to sacrifice too much fine detail.\nError diffusion\nAn attempt to improve on this method was Floyd-Steinberg dithering.\nIn this method, you start in the top left and threshold the pixel normally — if it's more than 50% brightness, you make it white, and otherwise you make it black. Say it was 70% brightness — we're going to make it white, which is 100% brightness, which means we've added 30% of a pixel too much brightness. To counteract that, we're going to \"diffuse\" that error to other pixels — all the nearby pixels that we haven't thresholded yet are made a few percend darker, to a total of 30% of a pixel. When we come to threshold those pixels, we'll take that into account. The idea is that once we've thresholded the entire picture, every part of the image will be, on average, closer to the correct brightness than more regular dithering. The irregular patterns are also a bit less distracting.\nQR codes with error-diffusion dithering\nThe other advantage of this irregular dithering is that the salt-and-pepper noise caused by the QR code data modules is much harder to spot. But it's still there, and it's why the image looks so noisy. I mean, it would look\nfairly\nnoisy anyway because it's a 147×147 pixel one-bit image, but\nsome\nof that noise is because one in nine of the pixels are effectively random colours.\nBut we can solve that using\nmore error diffusion\n.\nError-diffusing the data modules\nIn this case, we're doing two passes on the error diffusion. The second is the same as normal, but the first is specifically to mask the data modules. We already know what colour all of those pixels have to be, so we can make them those colours and diffuse that error to the surrounding eight pixels. The error will potentially be quite big — normally we get to choose the colour so the error can never be more than 50%, but here we might have to make a pixel in a dark area pure white and end up creating 95% error. That sounds bad, but that's exactly why it's so important to diffuse this error instead of just accepting it.\nYou can see that this makes the image much cleaner.\nGetting fancy with it\nThe generator tool\nallows you to do some extra tricks. You can rotate the QR code before adding the image, and tinker with the QR code settings to see if any of the alternative encodings happen to look nicer.\nYou can also allow the generator to change a few of those 95%-error data modules — QR codes have enough error correction in them that you can afford to change a few pixels and they'll still scan. (That's how QR codes with logos in the middle work.) But in practice that doesn't really affect image quality much if you diffuse the error from the data modules and it seriously affects how well the code scans.\nUsing these in real life\nThis all works pretty well if you don't take it too far and the code is going to be on a big screen or a poster or something. If it's on, say, a paper flyer that could get crumpled then you're going to need more of that redundancy, robustness and error correction that we gave up to make the QR code pretty. Ultimately it's a trade-off between aesthetics and scannability — and remember that just because a code scans on\nyour\nphone, from a laptop screen, doesn't mean it will scan on a random stranger's potato phone from a printout in bad lighting.\nAlso bear in mind that the generator tool makes tiny images with no margin — some margin is needed to make a QR code scan reliably, and browsers will normally blur images when upscaling them if you don't\ndisable that with CSS\n. The margin has to be the opposite colour to the middle of the big three \"finder\" pattern squares — normally that's white but you can generate inveted QR codes that need a black background instead.",
+    "comment": [
+        {
+            "text": "Russ Cox’s QArt Codes[0] modifies how the URL is encoded to embed an image while keeping the QR code fully valid, without relying on error correction.<p>[0] <a href=\"https:&#x2F;&#x2F;research.swtch.com&#x2F;qart\" rel=\"nofollow\">https:&#x2F;&#x2F;research.swtch.com&#x2F;qart</a><p>Related QArt discussions on HN:\n[1] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=15213044\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=15213044</a> (2017-09-10, 61 points, 6 comments)\n[2] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=3836935\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=3836935</a> (2012-04-13, 56 points, 9 comments)\n[3] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8549772\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8549772</a> (2014-11-03, 56 points, 4 comments)",
+            "comment": []
+        },
+        {
+            "text": "You can use colour as well: <a href=\"https:&#x2F;&#x2F;janglingpointer.github.io&#x2F;Image_To_QR&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;janglingpointer.github.io&#x2F;Image_To_QR&#x2F;</a><p>The guy that made that did a writeup on reddit: <a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PixelArt&#x2F;comments&#x2F;1v52x96&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PixelArt&#x2F;comments&#x2F;1v52x96&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "This reminds me of car safety features, how drivers have become more complacent to offset the benefits. QR codes were made to be robust in the face of errors, but over time this has been eaten into for aesthetic purposes. Businesses commonly put a logo in the center, eating up some error correction budget. This likely has a similar effect.",
+            "comment": [
+                {
+                    "text": "A few weeks ago I saw the first QR  code I&#x27;ve personally witnessed that I&#x27;m pretty sure is completely unscannable. The company logo stretched well out of the center block. It was on the back of a semi in the Chicago area. I didn&#x27;t get the greatest shot of it on my phone (as a passenger), because it was driving away as I tried, so it wasn&#x27;t quite proof it couldn&#x27;t scan, but I&#x27;m pretty sure it ate more than 100% of the error correction margin.<p>Based on the trends, I expect it is only the first of several I will see.",
+                    "comment": [
+                        {
+                            "text": "Doesn&#x27;t everyone QA their QR codes? I thought it would be as obvious as making sure you got the right address and&#x2F;or phone number on an ad before distributing it.",
+                            "comment": [
+                                {
+                                    "text": "You&#x27;d think.  My local authority is reorganising refuse collection and did a mailshot to let everyone know the new collection rota.  Then they did another because the dates on the first one were wrong.  The incompetence is staggering.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I’ve run into a few of these. And yesterday some kind of payment scanning QR code at SF’s Filipino Pistahan festival didn’t scan and I had to type in the text below. Annoying.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I always find it funny when companies don&#x27;t put any attempt to shorten the URL, filling it with plaintext url parameters, resulting in <i>huge</i> QR codes that can barely be scanned due to the density.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Once you understand how QR codes work it is more about &quot;creativity&quot; of what you want to do with your options! Next to shapes, contrast you can also use color and mix design approaches. <a href=\"https:&#x2F;&#x2F;qrocodile.io\" rel=\"nofollow\">https:&#x2F;&#x2F;qrocodile.io</a> is a free tool that tries to push those limits of QR codes and keep it scanable and recreatable (vs. 1-time AI generated codes). It has a module based approach, so each module (pattern) can have a different approach on how to render a QR. I think a dithered QR code module is missing... something that could be added! :)",
+            "comment": []
+        },
+        {
+            "text": "I always think of Russ Cox’s blog posts as canonical here: <a href=\"https:&#x2F;&#x2F;research.swtch.com&#x2F;qart\" rel=\"nofollow\">https:&#x2F;&#x2F;research.swtch.com&#x2F;qart</a>",
+            "comment": []
+        },
+        {
+            "text": "By the same author: <a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andrewt&#x2F;115056697540191327\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andrewt&#x2F;115056697540191327</a>",
+            "comment": []
+        },
+        {
+            "text": "These are also very cool: <a href=\"https:&#x2F;&#x2F;antfu.me&#x2F;posts&#x2F;ai-qrcode\" rel=\"nofollow\">https:&#x2F;&#x2F;antfu.me&#x2F;posts&#x2F;ai-qrcode</a><p>Diffusion image generation constrained to also be a valid QR code",
+            "comment": []
+        },
+        {
+            "text": "You can also run animations in QR codes: <a href=\"https:&#x2F;&#x2F;cgv.cs.nthu.edu.tw&#x2F;Projects&#x2F;Recreational_Graphics&#x2F;Halftone_QRCodes&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;cgv.cs.nthu.edu.tw&#x2F;Projects&#x2F;Recreational_Graphics&#x2F;Ha...</a><p>So, technically, you can run Doom inside a QR code?",
+            "comment": [
+                {
+                    "text": "I&#x27;m now waiting for someone to post the Bad Apple meme but all in QR codes",
+                    "comment": [
+                        {
+                            "text": "<a href=\"https:&#x2F;&#x2F;pony.social&#x2F;@luna&#x2F;115057532794342459\" rel=\"nofollow\">https:&#x2F;&#x2F;pony.social&#x2F;@luna&#x2F;115057532794342459</a>",
+                            "comment": []
+                        },
+                        {
+                            "text": "it&#x27;s been done a couple of times :)<p>Here&#x27;s my version that still keeps the full squares: <a href=\"https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=qQkWjzqMbuA\" rel=\"nofollow\">https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=qQkWjzqMbuA</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This made me wonder if you could do it with color and apparently you can: <a href=\"https:&#x2F;&#x2F;1mentat.github.io&#x2F;qr-code-shenanigans&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;1mentat.github.io&#x2F;qr-code-shenanigans&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m not impressed.<p>the whole technique hinges on qr scanners reading only middle point of the squares<p>The moment you encounter developer that thought &quot;for redundancy let&#x27;s sample the whole square&quot; (which is a very natural thought) - it breaks<p>I kinda expected working the limits of error correction, honestly. Not this blunt circumvention &quot;because it works on my machine&quot;",
+            "comment": [
+                {
+                    "text": "I think sampling &quot;the whole square&quot; might actually not be that good for decoding even standard QR codes as aliasing at the edges of each code module (&quot;pixel&quot; of the code) in a camera image would actually make the distincion between 1s and 0s more difficult.<p>Your argument still partially applies though, as introducing new unrelated colors at the module edges could also lead to aliasing effects when the code is too small for example.",
+                    "comment": []
+                },
+                {
+                    "text": "The specification of qr codes says you should look only at the centres, iirc.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I recognize the domain name from playing some of his daily puzzles, namely Ronin and Cell Tower.<p><a href=\"https:&#x2F;&#x2F;www.andrewt.net&#x2F;puzzles&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.andrewt.net&#x2F;puzzles&#x2F;</a>",
+            "comment": []
+        },
+        {
+            "text": "This is really neat!<p>A question I had about QR codes:<p>Let’s say I want to produce a QR code that is as close as possible to an image (let’s say the Nike swoosh logo), if I just added that to the center and added the 3 orientation markers on the corners it wouldn’t be a proper QR code yet, my question is what is the minimal amount of edits I would need to do from that symbol to get a valid QR code?<p>I’m thinking of something like people buying and hoarding domains in early 00’s (even now), if I could generate the minimal QR code (minimal is important here in the same way that .com is treated as superior to .ca or .net) of well-known symbols and buy the resulting domain it points to (if it even points to a domain) couldn’t I sell this to companies with the associated domain as a re-direct as well?",
+            "comment": [
+                {
+                    "text": "Using their logo in this way is probably a trademark violation, so they would be able to get your QR code “for free” (minus the costs involved with consulting their legal division).",
+                    "comment": []
+                },
+                {
+                    "text": "From another comment:<p><a href=\"https:&#x2F;&#x2F;research.swtch.com&#x2F;qart\" rel=\"nofollow\">https:&#x2F;&#x2F;research.swtch.com&#x2F;qart</a><p>Looks like this is definitely possible, the results aren&#x27;t as clean as you might hope though. Maybe they could be improved by introducing some intentional errors (which were explicitly avoided here).",
+                    "comment": []
+                },
+                {
+                    "text": "You could maybe determine this using a SAT solver. You would have to encode the entire QR code specification. I was thinking of doing this to find a minimalist QR code that just had as few black cells as possible.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "You can alpha blend a QR code onto images easily and fit them into graphic designs<p><a href=\"https:&#x2F;&#x2F;mastodon.social&#x2F;@UP8&#x2F;115939341268444811\" rel=\"nofollow\">https:&#x2F;&#x2F;mastodon.social&#x2F;@UP8&#x2F;115939341268444811</a><p><a href=\"https:&#x2F;&#x2F;mastodon.social&#x2F;@UP8&#x2F;113494337763505908\" rel=\"nofollow\">https:&#x2F;&#x2F;mastodon.social&#x2F;@UP8&#x2F;113494337763505908</a> (R&amp;D)",
+            "comment": []
+        },
+        {
+            "text": "I played around with this a bit, first I did a photo of a cat I just took at a cat cafe, but the black and white cat didn’t turn out well with the dithering algorithm, so then I tried a selfie and pushing the radius up, it came out looking good, but then I tried aiming my iPhone camera at the screen and it didn’t see a QR code, only the face from the selfie. The ones on the main page, though, worked fine.",
+            "comment": []
+        },
+        {
+            "text": "Coincidentally came across this after reading a comment [1] under the recent post on _for-sale DNS records, visiting milk.com and scrolling through the owner&#x27;s  Mastodon<p>[1] <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49224882\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49224882</a>",
+            "comment": []
+        },
+        {
+            "text": "I think the first time I saw this was the Stable Diffusion controlnet that did the trick. Definitely an entertaining trick <a href=\"https:&#x2F;&#x2F;latentcat.com&#x2F;en&#x2F;blog&#x2F;qrcode-controlnet\" rel=\"nofollow\">https:&#x2F;&#x2F;latentcat.com&#x2F;en&#x2F;blog&#x2F;qrcode-controlnet</a>",
+            "comment": [
+                {
+                    "text": "The approach in the article using dithering is in some sense more elegant and mathematically clever. But the level of visual representation from control nets&#x2F;SD is really compelling.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Is that Lena with Sean Connery’s face??",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;mortenhannemose.github.io&#x2F;lena&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;mortenhannemose.github.io&#x2F;lena&#x2F;</a> I suspect.",
+                    "comment": [
+                        {
+                            "text": "LOL! It&#x27;s a sign of the times that, before I saw the year, I thought &quot;that has to be AI generated&quot;, because this sort of outlandish silliness is exactly the type of thing that genAI excels at.",
+                            "comment": []
+                        },
+                        {
+                            "text": "That&#x27;s absolutely hilarious",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "That’s very cool, but I’d be worried most regular people wouldn’t recognize it as a QR code and never scan it in the first place.",
+            "comment": []
+        },
+        {
+            "text": "I like the writing style. The first section is super clear about what QR code is in ~200 words",
+            "comment": []
+        },
+        {
+            "text": "the two last one didn&#x27;t scan at all on my phone :&#x2F;",
+            "comment": []
+        },
+        {
+            "text": "Pretty cool!",
+            "comment": []
+        },
+        {
+            "text": "I find it slightly disconcerting that lena has a mustache.",
+            "comment": []
+        },
+        {
+            "text": "Nice writeup!<p>Only needs a Rick Astley QR code (;-&gt;",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Damnthatsinteresting&#x2F;comments&#x2F;ublxtm&#x2F;i_encoded_this_qr_code_to_show_the_video_the_code&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Damnthatsinteresting&#x2F;comments&#x2F;ublxt...</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Greetings,<p>I could not find any LICENSE file or statement on the Codeberg repo. We must therefore conclude that the code is © Copyright 2025-2026, by the author(s), all rights reserved. Crazy to think there are already 3 forkers who&#x27;ve forked you.<p>Furthermore, let us not forget the patent-holder of QR Codes, DENSO WAVE, and their Frequently Asked Questions:<p><a href=\"https:&#x2F;&#x2F;www.qrcode.com&#x2F;en&#x2F;faq.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.qrcode.com&#x2F;en&#x2F;faq.html</a><p><pre><code>  Users of QR Code must be careful about deforming the code by overlaying it with an illustration or putting a a design on it. If it is deformed, the QR Code&#x27;s error correction function is invoked where even a tiny missing or smeared part renders the reading operation impossible, or the response of the operation may become slow.\n  If you are contemplating arranging an illustration or design involving a QR Code, please consult with DENSO WAVE about your project beforehand.</code></pre>",
+            "comment": [
+                {
+                    "text": "As far as I can tell the specification only demands the code modules (pixels) to be square (which is already often ignored in &quot;aesthetic&quot; QR codes which use e.g. round dots instead) and arranged in a square grid. Not that each grid cell has to be filled completely by the respective module. So this might actually be compliant!",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

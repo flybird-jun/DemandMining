@@ -1,0 +1,44 @@
+{
+    "item_id": 49231777,
+    "title": "Show HN: Today's cities on a globe of Earth's tectonic past and future",
+    "url": "https://douwe.com/projects/tectonic_globe",
+    "text": "Rotate\nAdd\nTime\nToday\nModern Earth\n0 Ma\nToday's countries and cities are used as colored crust markers. Country polygons are split by the\n present-day static polygons from the Merdith 2021 plate model, then each country-on-plate fragment is\n reconstructed backward with pyGPlates finite rotations. The future side is a constant-motion\n extrapolation from young plate rotations with a few coarse collision handoffs, so treat it as an\n interactive sketch rather than a forecast. Red areas mark plate fragments that still overlap after\n reconstruction.",
+    "comment": [
+        {
+            "text": "Very nicely done.  Plate coloring helped, as did the red highlights for plates pressuring each other.<p>New for me: I didn&#x27;t realize eastern russia was at the north pole 220 Mya, and rotated and came south; at the same time, no real China, and India was at the South pole. America&#x27;s, Africa, Australia didn&#x27;t change much, but huge changes elsewhere.",
+            "comment": []
+        },
+        {
+            "text": "Alas, no Singapore.  I wonder if you can add more cities?",
+            "comment": [
+                {
+                    "text": "there&#x27;s actually a little [+] button that allows you to add one city",
+                    "comment": [
+                        {
+                            "text": "Thanks, that worked!",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This is really cool!<p>I&#x27;m wondering what data you&#x27;re using and if you can impose a more precise coordinate system into the visualizations with ways to track a specific point (perhaps starting from polygons or GPS coordinates). It seems the visualization includes sea level rise but it&#x27;s hard to figure out if its getting other details right like the California’s Transverse Ranges uplift (~20 mYa to present)  which moved the Los Angeles basin several hundred kilometers northwest all while San Diego and Baja California were also rearranged.",
+            "comment": []
+        },
+        {
+            "text": "Is the triangle ‘play’ button supposed to do something? Maybe hug of death going on?",
+            "comment": [
+                {
+                    "text": "It feels like I might need 130 million years to watch the whole thing play out",
+                    "comment": [
+                        {
+                            "text": "Oh well, I didn&#x27;t have anything planned",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

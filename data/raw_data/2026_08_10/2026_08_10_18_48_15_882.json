@@ -1,0 +1,782 @@
+{
+    "item_id": 49195231,
+    "title": "Mario Meets Pareto",
+    "url": "https://www.mayerowitz.io/blog/mario-meets-pareto",
+    "text": "Mayerowitz.io\nMario meets Pareto\nStep on the Front Line and Beat your Friends\nWritten by\nAntoine Mayerowitz\n0\n0\n0\n0\nIn Mario Kart 8, choosing your driver, kart's body, tires, and glider isn't just\n about style — it's as crucial as your racing skills to win a race. Ever\n wondered how to truly find the best ones?\nFor each of those four elements, you have tens of options. For each option,\n there are distinct statistics (speed, acceleration, ...) affecting your\n performance.\nThis adds up to an unbelievable amount of builds to choose from.\nHopefully, many choices are just stylistic — they have identical\n statistics — but even after ignoring those duplicates, it remains a tough\n job to navigate the thousands of options.\nIs there any chance to find the\nbest\nbuild or is it\n just luck? Should you favor\nspeed\nto be the fastest, or\nacceleration\nto quickly recover after taking a hit? Let me show you a solution proposed over a\n century ago by economist Vilfredo Pareto.\nFinding the fastest driver is as simple as ranking them by their\nspeed\nstatistic. Here you might think that\nBowser or\nWario are a no-brainer.\nBut you can't just rely on\n speed\n to find the optimal build. You have to consider\n one as well. Now, finding the best\ndriver\nbody\ntire\nglider\nis not trivial anymore — you have to make trade-offs between\nspeed\nacceleration\nhandling\nweight\noffroad\nmini turbo\nand\nspeed\nacceleration\nhandling\nweight\noffroad\nmini turbo\nReset\nLook closely though! You'll find out that some options are always\ndominated\n. Let's focus on this poor\nKoopa for instance.\nCat Peach has more speed for the same acceleration, and\nToadette has more acceleration for the same speed. Between you and me, if you\n want to win, never allow\nKoopa to sit in your kart!\nYou can identify all efficient drivers that, unlike Koopa, are never dominated\n on both\nspeed\nand\nacceleration\n. Together, they form what is called\n the\nPareto front\n(or frontier).\nMind you: not all elements of the frontier are equally good. You probably won't\n pick a driver sitting on the edge of the frontier because you want some balance\n between\nspeed\nand\nacceleration\n. The Pareto\nefficiency\nis an\n objective criteria to filter out suboptimal choices, but you still need to make up\n your final decision.\nGiven your play style and skills, you may put more\nweight\non one statistic over\n the other. Those preferences will reveal the component on the frontier that\n suits you the best.\nspeed\nacceleration\nhandling\nweight\noffroad\nmini turbo\nspeed\nacceleration\nhandling\nweight\noffroad\nmini turbo\nBest\ndriver\nbody\ntire\nglider\n: {}\nIn practice, you not only choose a driver, but a full set of body, wheels, and glider.\n In the next section, I'll display every build as a distinct point. It will however make\n the number of choices explode. But Pareto's with us!\nWe've had a bit of fun here, but don't you see the pattern? We're often faced with\n similar trade-offs. You want a\nmeal that's both cheap and delicious\n? A job that's both well-paid, easy, and fulfilling?\nA portfolio with low risks and high returns\n? A flexible and strong material that's also easy to produce?\nA fair taxation that remains efficient\n?\nA high quality LLM that is also fast and cost-efficient\n. In all these cases, you're facing a multi-objective optimization problem, and you\n have to make trade-offs.\nOf course, if you already know the exact weights you want to assign to each dimension\n (i.e., you know your utility function), you reduce the problem to a single objective\n optimization. This is because you can combine the dimensions with the weights into a\n single quantity to optimize (often called utility, cost, or fitness). In that case, you\n don't need Pareto at all.\nBut you're often faced with situations where your utility function is unknown or\n uncertain. In those situations, the Pareto front helps you eliminate objectively all the\n sub-optimal options. It won't reveal the one best option right from the outset, but you\n may now experiment with these efficient options and select the one that fits you the\n best.\nAcknowledgments\nI've made some simplifying assumptions in this article to keep it readable for a large\n audience. In truth, the statistics that I presented are translated into derived in-game\n stats that are not always linear with the base statistics. Additionally, there are 4\n speed stats and 4 handling stats for all gears (except for the driver), but I decided to\n simply average those. I've also completely hidden the functional form of the utility\n function, which can play a great role. To get access to more details behind this article\n or if you just like my work and want to see more in the future, please consider\ndonating some coins\n.\nCredits\nSuper Mario Wiki\nMario Kart 8 Deluxe in-game statistics\nHenry H.\nMario Kart and the Pareto Frontier\n, 2015",
+    "comment": [
+        {
+            "text": "This is a really important concept for developers.<p>One aspect for developers that I see quite often is the assertion that &quot;We can&#x27;t have X without giving up more Y&quot;, most commonly &quot;we can&#x27;t have more security without giving up on user experience&quot;. With the Pareto idea in mind, we can see that that statement is true, <i>if and only if</i> you are in fact on the Pareto frontier of security and user experience already.<p>However, many times these confident pronouncements are being made when the system under question is quite evidently not on the Pareto frontier in the first place and indeed you can get more of one without giving up the other.<p>Making it more tricky is that in business, you can <i>never</i> discard &quot;money&quot; as a dimension, so unless you&#x27;re taking &quot;money&quot; as one of the dimensions in the original comparison you want to do, it sneaks its way in. Or, a composite time&#x2F;money, or &quot;cost to business&quot;, or some other similar concept, time &amp; money aren&#x27;t orthogonal and don&#x27;t need to be treated as two separate dimensions in general, though you can if you want. Which puts you into the 3D case, and as the page says, that grows the frontier quite a lot, which is good in some ways and bad in others. Nevertheless, in my opinion it is still often the case that even in that space we are often making &quot;tradeoffs&quot; without checking that we&#x27;re on the Pareto frontier in the first place.",
+            "comment": [
+                {
+                    "text": "Agreed with what you said, when you&#x27;re only considering security and usability you&#x27;re often not at a Pareto optimal state, but once you add cost into the picture you see a lot more cases of being on the Pareto optimal boundary, or at least in case where the next improvement only comes with significant effort (by re-platforming, for example).",
+                    "comment": [
+                        {
+                            "text": "I guess that makes sense.  as you get to higher dimensions, most points sit very close to the surface.  So if we&#x27;re trading off N things and N &gt;&gt; 1, expect to basically always be at the pareto boundary.",
+                            "comment": [
+                                {
+                                    "text": "On the other hand, we should recognize that, to put it plainly, not all dimensions on the frontier have the same level of importance.<p>Any technological and societal progress is going to have negative consequences. To give just one example, completely curing cancer will put many doctors (and other healthcare professionals who aren&#x27;t paid as well as doctors are) out of a job. It will definitely cause at least a few children to go hungry. It will probably cause a few suicides when some oncologists start to &quot;feel useless.&quot; This does not mean we shouldn&#x27;t cure cancer if the opportunity arises.<p>Our society, driven by clickbait, rage and social media hot takes, tends to overweight the dimensions at which new technology makes things worse. There are many news stories about social-media-fueled teen suicides or AI datacenter water use, very few about how talking to family abroad no longer requires astronomical long-distance bills.",
+                                    "comment": [
+                                        {
+                                            "text": "The article does talk about putting weights on the dimensions to account for different dimensions having different importance.",
+                                            "comment": [
+                                                {
+                                                    "text": "For one we need to start talking about <i>taking off the weights</i> from security dimension, because it&#x27;s becoming ridiculously overemphasized for things where it frankly doesn&#x27;t matter much for. All at the cost of &quot;usability&quot;, which is a fancy word for saying <i>people&#x27;s time and effort</i>, which is literally the <i>only</i> truly non-renewable, priceless resource we have.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "My experience has been that security is mostly treated as some contractual obligation that has little benefit and just costs money so the minimum amount of effort that prevents charges of gross negligence is put in. But I’m glad to hear that apparently there are places that take it more seriously.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Passkeys, 2FA being deployed the more intensely the more trivial and non-critical for users a site is, mobile platforms getting absurdly locked down, naive takes on &quot;lethal trifecta&quot; sucking out whatever little air in AI discussions that was left by IP apologists&quot;. In the real world, everyone in this industry seems to be showing off pointing out potential vulnerabilities and security considerations in any new idea or concept that appears - as if that were something to be proud of, instead of a solemn duty that more than likely will just prevent a nice thing from existing in the first place.<p>From where I stand, the industry is <i>obsessed</i> with security, way past the point of rational thought.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Yes, I don&#x27;t mean to imply that this is some sort of clear majority situation or anything. I just mean that I&#x27;ve definitely both seen on HN and participated in real life in some conversations in which it was taken as given that we <i>must</i> give up one thing to get another when nobody had in fact established that we were on the Pareto frontier. Or, considered from a local point of view, whether the tradeoff really was inevitable. I have had cases where we could have had both, with no difficulty.",
+                            "comment": [
+                                {
+                                    "text": "I’m very high dimensional spaces as they occur in real life projects with difficult to measure dimensions (eg how much does implementing something cost and how much does <i>not</i> implementing something cost) it seems very difficult to determine where you are in your space. Most companies run their product mostly on feels because anything else would quickly lead to analysis paralysis.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Yes, the difference between coding (writing software) and engineering (making informed trade offs about system design) is effectively bound up in analyses like those supported by concepts like pareto efficiency.<p>One should keep in mind though that not all problems have a neat solution. Many spaces have multiple efficient points that still need to be chosen from, and many pareto optimization problems actually become NP hard computationally when the problem is large enough.",
+                    "comment": [
+                        {
+                            "text": "Say someone wanted to transition from coding to engineering. What path would you have them take? What should they learn?",
+                            "comment": [
+                                {
+                                    "text": "I would say start with software architecture books for large or highly distributed systems. This will get you thinking beyond code level to system component level with subject matter that&#x27;s familiar.<p>From there I would round things out with general systems theory books and even dabble in some non-software engineering texts just to get a sense of how people reason about designing systems and evaluating trade-offs. That&#x27;s just my two cents on it.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&quot;making tradeoffs&quot; is an excuse for management to cut corners to get their feature faster at the cost of future developer pain and suffering<p>you know how japanese oni would roll human souls into soba noodles? [1]<p>that&#x27;s what modern corporate software company management does :)<p>[1] i learned about this from the very funny gintama funeral episode",
+                    "comment": [
+                        {
+                            "text": "developer pain inversely proportional to the amount of tech debt that exists!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "there&#x27;s something equivalent in the business world - mostly used by businesses not run by psychopaths - where you optimize inside 2 triangles with the points on the triangle being cost, profit, &amp; user utility&#x2F;happiness.",
+                    "comment": [
+                        {
+                            "text": "Are they conjoined triangles?",
+                            "comment": [
+                                {
+                                    "text": "hope u see this :)<p><a href=\"https:&#x2F;&#x2F;imgur.com&#x2F;a&#x2F;wy2fLEw\" rel=\"nofollow\">https:&#x2F;&#x2F;imgur.com&#x2F;a&#x2F;wy2fLEw</a>",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "this is a silly oversimplification",
+                    "comment": []
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I did similar analysis a couple years ago for optimizing item builds in WoW classic. The tricky part in WoW is that there are 15ish item slots with hundreds of item choices for each slot, so the total number of builds is well over 100^15.<p>I ended up using a divide-and-conquer style approach, where I 1) pruned items that weren&#x27;t on the Pareto frontier individually for each slot, 2) took the two slots X and Y that had the least items after pruning and grouped them by calculating Z:={x+y|x∈X,y∈Y}, 3) pruned items that weren&#x27;t on the Pareto frontier in Z, and 4) repeated steps 2-3 until there was only one group remaining, comprised of the full Pareto-optimal item builds.<p>This ran in a couple of seconds, as opposed to the other solutions I tried that took somewhere between minutes and years. The downside was that including set bonuses into the model took extra work.",
+            "comment": [
+                {
+                    "text": "Fascinating! Do you still have any of the code or datasets&#x2F;datasources laying around?",
+                    "comment": [
+                        {
+                            "text": "The data came from wow.tools (which has since been replaced by <a href=\"https:&#x2F;&#x2F;wago.tools\" rel=\"nofollow\">https:&#x2F;&#x2F;wago.tools</a>) and Wowhead. I still have some code but it has so many ad-hoc scripts and sections that I commented in&#x2F;out while experimenting that I&#x27;d feel embarrassed sharing it.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I did not understand <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49096439\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49096439</a>, but I understood this.",
+            "comment": [
+                {
+                    "text": "I am the complete opposite of that. My attention wanes when someone fails to get to the point, instead dwelling in irrelevant details which are not intrinsically interesting. Have to muster the motivation to concentrate in such circumstances, and doing so is not enjoyable.",
+                    "comment": [
+                        {
+                            "text": "What&#x27;s the Pareto front of &quot;get to the point&quot; vs. &quot;attempt to tell a compelling story&quot;?",
+                            "comment": []
+                        },
+                        {
+                            "text": "is this also true when the irrelevant details <i>are</i> (by coincidence) interesting (to you)? it sounds to me like GP is interested in mario kart and you simply aren&#x27;t, so this is a perfectly natural result.",
+                            "comment": [
+                                {
+                                    "text": "I’m not interested on Mario kart at all and still found the article to be interesting.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "But Wikipedia tells you in the first paragraph what it&#x27;s all about.<p>A &quot;Pareto front represents the set of solutions where no solution outperforms any other solution in the set at every objective, and every solution not in the set is outperformed by at least one solution in the Pareto front in every objective&quot;",
+                    "comment": [
+                        {
+                            "text": "Knowing a definition is not the same as understanding. I know this first hand from interviewing people who at the beginning of the interview can confidently tell me the definition of certain principles in statistics that I ask them about, and then later on in the very same interview when I present to them a real world scenario to analyze, they are completely oblivious that the very concept they explained to me so articulately when we started the interview is the very same concept needed to solve the real world scenario being presented to them.<p>In general Wikipedia isn&#x27;t a great way to learn new concepts; it&#x27;s a good reference when you&#x27;re already familiar with something and need to brush up on it.",
+                            "comment": [
+                                {
+                                    "text": "I agree. What I meant to say is that the Wikipedia article tells you upfront where it is going. In TFA, you need to push many little paragraph cards across the screen before you get an idea what you are going to learn.",
+                                    "comment": [
+                                        {
+                                            "text": "True, but remember that everyone learns differently.  I read the bit you quoted four times, and while I can parse it, the actual <i>understanding</i> doesn&#x27;t sink in for me.  The Mario Kart article (even if much longer to read) helped me actually <i>feel</i> what it means.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I can only imagine the guy that made Mario Meets Pareto waiting for some Pareto related post to hit the front page before sharing his",
+                    "comment": [
+                        {
+                            "text": "I remember seeing this on HN frontpage already in the past, and indeed here it is: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "wiki is usually not great at teaching new concepts, better as a reference for someone who already learned something.",
+                    "comment": []
+                },
+                {
+                    "text": "It turns out a lot of things are extremely accessible to a lot more people when you teach them as concrete, relatable scenarios in simple language with useful visualizations instead of abstract X, Y foos and bars described with an unfamiliar jargon term every 3rd word. We really need to do better when it comes to pedagogy.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; You probably won&#x27;t pick a driver sitting on the edge of the frontier because you want some balance between speed and acceleration<p>for super mario kart speedruns go with bowser&#x2F;dk: <a href=\"https:&#x2F;&#x2F;www.speedrun.com&#x2F;smk&#x2F;runs&#x2F;zp68nr8m\" rel=\"nofollow\">https:&#x2F;&#x2F;www.speedrun.com&#x2F;smk&#x2F;runs&#x2F;zp68nr8m</a><p>That seemed to hold up for Mario Kart 8 too going with Bowser at the edge of their pareto frontier, <a href=\"https:&#x2F;&#x2F;www.speedrun.com&#x2F;mk8\" rel=\"nofollow\">https:&#x2F;&#x2F;www.speedrun.com&#x2F;mk8</a><p>needing acceleration is a skill issue",
+            "comment": [
+                {
+                    "text": "This used to be true on older patches but it&#x27;s not at all how top players play these days. See e.g. <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ejt52UgnhAo\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ejt52UgnhAo</a> for an example of the meta that prevailed for top-level versus play around the end of MK8&#x27;s lifespan (Yoshi Biddybuggy Roller or Yoshi Teddybuggy Roller depending on your preferred drift style) or <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=vvrCP50Gfj4\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=vvrCP50Gfj4</a> for a breakdown of some of the latest time trial world records. At the beginning of the game&#x27;s lifecycle top speed was the most important stat, but as more tricks were developed and the game&#x27;s balance was adjusted, having faster and more consistent miniturbo boosts became much more important.<p>(Mario Kart World, which isn&#x27;t covered in this article, has a more standard speed vs acceleration trade off but in that game high-max-speed (heavy) combos have even worse problems due to the way the rail grind mechanic was implemented and what seems to be an unforeseen interaction with the coin curve see e.g. <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;shorts&#x2F;sPyur6BkiOs\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;shorts&#x2F;sPyur6BkiOs</a>)",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s optimizing for different environments and opponents, the speed runs only have to deal with the AI not human players and take such crazy paths the AI isn&#x27;t around to really mess with them so they don&#x27;t have to worry about reaccelerating. In versus it&#x27;s much less likely you&#x27;ll be able to avoid all the other players so you need to be able to get back up to speed after being hit. A common strategy in the online vs mode is actually back running to collect better items then cashing them in rapidly to win.",
+                    "comment": []
+                },
+                {
+                    "text": "Speedruns are for playing the track solo, right?<p>If you&#x27;re playing normally (with other people and items), even the most skilled player can&#x27;t avoid getting hit by some universal items and will benefit from acceleration.<p>Hence, as the author notes, the balanced build with Peach being favored among competitive players.",
+                    "comment": [
+                        {
+                            "text": "Even with items enabled across both categories, you&#x27;re optimizing for different things. In the speedrun case you&#x27;re optimizing for the fastest possible peak time, while with regular racing you&#x27;re optimizing for the most consistent performance and winning.<p>The speedrun category build can be worse on average but make up for it by providing higher peaks when you get lucky.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Acceleration is not very important at a high enough level because you can mini-turbo up to top speed when you get hit.",
+                            "comment": []
+                        },
+                        {
+                            "text": "GP first link is to a speedrun in the all cups category, played with items and computer opponents. There&#x27;s a video included.<p>People do speedrun the individual tracks solo in other categories.",
+                            "comment": [
+                                {
+                                    "text": "For a speedrun you don&#x27;t care about 100 failed runs as long as you get the world record once. You&#x27;re basically hoping to get lucky that the computer opponent won&#x27;t hit you. Obviously you&#x27;re going to pick the greediest (i.e highest speed) choice in that setting, that doesn&#x27;t make it good in normal gameplay.",
+                                    "comment": [
+                                        {
+                                            "text": "",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "It&#x27;s a fair point that such an environment will be different than playing against other humans",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; <i>needing acceleration is a skill issue</i><p>Skill level is an attribute you use to weight the dimensions.  Sure, if you&#x27;re an expert player who rarely gets hit (and can optimally use a mini boost to recover when you do), acceleration doesn&#x27;t matter as much.  But most people are not expert players, and play too casually to ever get to that level.  Ignoring acceleration just won&#x27;t create a fun experience for them.",
+                    "comment": []
+                },
+                {
+                    "text": "On the other hand, if you are a casual and want to dominate 99% races you enter at people&#x27;s homes, pick Toadette (with Mr. Scooty). I don&#x27;t think I&#x27;ve lost since 2019.",
+                    "comment": []
+                },
+                {
+                    "text": "Lol skill issue... Right! But that&#x27;s how you choose your weights. If you&#x27;re not a great driver you need to give more consideration to acceleration.",
+                    "comment": []
+                },
+                {
+                    "text": "no, even in time trials it depends on the track. If top speed were the most important metric you would see the same meta build for every world record time trial, but that&#x27;s not the case.<p>Also, miniturbo is the single most important stat in the game, not top speed",
+                    "comment": []
+                },
+                {
+                    "text": "Acceleration is pointless because of the hidden Mini Turbo stat",
+                    "comment": []
+                },
+                {
+                    "text": "Adding skill is just another dimension to the calculation.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "There are a few things that are assumed to be true when talking about the Pareto frontier here, but aren’t always true.<p>One, that more of something is always better, e.g. it is always better to have more speed.<p>Maybe, but what if having too much speed causes you to run off the track and perform worse? It could be that there is actually a peak in the utility of speed that declines as it increases.<p>There could also be important relations between attributes that make determining a Pareto frontier impossible or at least more difficult. For example, some pairs of attributes work best when they are a specific ratio, and increasing one or the other will actually decrease utility unless the other is increased at the same time.",
+            "comment": [
+                {
+                    "text": "One way of defining Wisdom is the ability to look at a set of metrics and discern when an adjustment or adaptation to them is needed in order to better approach the true objective we are optimizing toward—since the true objective is almost never perfectly described by any of the metrics that we can find to approximate it.<p>Eventually, almost every attribute we can practically and objectively measure is at best a proxy measure for the thing we <i>actually</i> want to know, which is, in this case, &quot;Most likely to win races.&quot; The thing we actually want to measure is often hard, impossible, or impractical to objectively measure, which is why we resort to proxies in the first place. By &quot;proxy measure&quot; we mean, not a perfect 1:1 to the thing we want to measure, but containing some amount of signal about it.<p>So yes, sometimes there&#x27;s a peak in the utility of speed. But perhaps that trade-off can be modeled by another attribute called &quot;Proneness to fly off the track&quot; which increases as speed does, and is weighted such that the peak and then taper-off of benefit in speed is captured between the combination of the two of them.<p>But then, any vehicle that has the same speed but lower &quot;Proneness to fly off the track&quot; would be objectively preferable to any equally-fast vehicle with greater &quot;Proneness to fly off the track.&quot; And so it continues.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; [is it really] always better to have more speed[?]<p>I&#x27;m reminded of two things that in a way support your premise with the second example being more relevant. Both are outside what’s being discussed exactly, more about knock-on effects maybe, anyway:<p>The first is that Angry Birds found the speed of launching birds into structures was important for engagement: it cannot be too fast.<p>The second is from a commenter somewhere who said they had or worked on software that took ten minutes to boot in the morning, which is when employees made coffee and talked and brainstormed. Everyone was disappointed when after refactoring, the software booted immediately.",
+                    "comment": [
+                        {
+                            "text": "The second story made be think of XKCD 1172.<p><a href=\"https:&#x2F;&#x2F;xkcd.com&#x2F;1172&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xkcd.com&#x2F;1172&#x2F;</a>",
+                            "comment": [
+                                {
+                                    "text": "Love spacebar heating",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I agree that many assumptions are made, but the concept was presented well in combination with something most people can relate to.  They mention in the Acknowledgements section at the end of the post that assumptions are made, but not sure if they added it after your post or not.  When something goes viral on HN authors tends to add things...<p>I think to truly do a deep dive into the best overall character in Mario Kart would be a fairly complex task.  We&#x27;d need data from years of real games and players to even get started.  As an ML engineer&#x2F;software engineer who played a lot of Mario Kart back in the day, this post was a very enjoyable read for me.",
+                    "comment": []
+                },
+                {
+                    "text": "Wouldn&#x27;t that just change the shape of the pareto frontier? It stops at some point (when marginal utility becomes negative) - but this is not special, they typically stop at 0 as well.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Of course I, and most of the dads I know, optimise for something else: what’s the car that will keep me competitive, but probably losing, to the kids?",
+            "comment": [
+                {
+                    "text": "I don&#x27;t.  I need to keep winning until I can&#x27;t to keep the boy in his place.  He is getting closer every time.  I know my day is soon to end, and a new house champion will reign.",
+                    "comment": [
+                        {
+                            "text": "I’m still trying to beat my dad at ping pong.  He’s 75.",
+                            "comment": [
+                                {
+                                    "text": "Keep at it tiger, you&#x27;ll get him one day!",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ha exactly. Can&#x27;t let the kids win for free.",
+                            "comment": []
+                        },
+                        {
+                            "text": "This was going to be my reply. Can&#x27;t let them get ahead of you too quick.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Better get the trophy ready",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "My trick is to just never power slide when I need to be handicapped to not ruin the kids Christmas. Or tap the accel A button in a PWM pattern.",
+                    "comment": []
+                },
+                {
+                    "text": "I often use the wii wheel as my handicap for family, but my wife (new to games) is now good enough that I might need to switch that soon.<p>When my oldest was first trying Mario Kart, his uncle came over and played against him blindfolded (and still won). It was very entertaining to watch.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Previous discussion (2024): <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246</a>",
+            "comment": []
+        },
+        {
+            "text": "I love when people do an amazing job carefully explaining something complicated in a way that makes it seem very intuitive. Excellent job. Way to show off those technical communication chops!",
+            "comment": []
+        },
+        {
+            "text": "Ive been played. Me and my brother used to play this all the time. He would always beat me and whenever I would win it would be a momentous occasion. Turns out his build was directly on the pareto frontier and mine was not even close. Damn you brother. Hes totally screwed next time we play",
+            "comment": []
+        },
+        {
+            "text": "I would really love to be able to explore this data, e.g. what is the &quot;worst&quot; driver? Is there an inverse Pareto front?",
+            "comment": [
+                {
+                    "text": "&gt; Is there an inverse Pareto front?<p>Yes, trivially. Just look at the opposite end of each metric. Pareto optimality doesn&#x27;t know&#x2F;care what each metrics means, since it keeps them all separate.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "On a tangent, I was a bit confused by the everyday examples given in this article.<p>&quot;We&#x27;re often faced with similar trade-offs. You want a meal that&#x27;s both cheap and delicious? A job that&#x27;s both well-paid, easy, and fulfilling?&quot;<p>I really don&#x27;t feel like &quot;easy&quot; is a dimension I wish to optimize for in a job. It almost feels opposite to what I&#x27;ve actually optimized for - since for me a fulfilling job usually means full of deep technical challenges. I want a job without unnecessary friction, without interpersonal drama, even one that&#x27;s low stress. But definitely not easy.",
+            "comment": [
+                {
+                    "text": "<p><pre><code>  &gt; I want a job without unnecessary friction, without interpersonal drama, even one that&#x27;s low stress.\n</code></pre>\nThat&#x27;s part of how I see an &quot;easy&quot; job. Where I can focus on working on the actual tasks at hand.<p>Doesn&#x27;t matter if the actual job is filling glasses of water or building rockets; as long as I can focus on it for 100% of my working hours, I&#x27;d see it as an &quot;easy&quot; job.",
+                    "comment": []
+                },
+                {
+                    "text": "I get what you’re saying, but I wouldn’t say easy is the opposite of challenging. As a quick example, I would surely find a day job of manual labor harder and significantly less enjoyable than a day job of software engineering challenges.<p>(And please note that I do not mean to imply that there are no challenges in manual labor or that software engineering is more important.)",
+                    "comment": []
+                },
+                {
+                    "text": "I think the author didn&#x27;t want to go too in depth for the sake of simplicity, very similar to the blog post itself, which just hit the surface.  That being said, many more dimensions can be made out of easy - when I think of easy, I think of technically easy, management easy, drama levels, west coast nice vs east coast nice easy, etc...  Depending on the individual they could probably split the word easy alone into 5 to 15 dimensions.",
+                    "comment": []
+                },
+                {
+                    "text": "They’re just hypothetical examples, not meant to apply to everyone.",
+                    "comment": []
+                },
+                {
+                    "text": "It sounds like you&#x27;re saying &quot;easy&quot; and &quot;fulfilling&quot; cannot coexist, and obviously they are in tension, but a Pareto frontier still exists there.",
+                    "comment": []
+                },
+                {
+                    "text": "Maybe instead of &quot;easy&quot; what they really meant that axis to convey is something more like &quot;low stress&quot; or &quot;not frustrating&quot;",
+                    "comment": []
+                },
+                {
+                    "text": "Well then, you would prioritize &quot;fulfilling&quot; in your utility function. Others might make a different choice; e.g. a single parent who needs to save time and energy for family might prefer &quot;easy&quot; at the cost of boring drudgery",
+                    "comment": [
+                        {
+                            "text": "I think what I am saying is more that &quot;easy&quot; is too broad a vector to optimize along because it combines too much - both good and bad. I don&#x27;t want a job without challenges of any kind.<p>But I definitely want a job without stress, danger, or physical strain on my body. Perhaps I am just looking for a similar word which doesn&#x27;t imply anything about the complexity of the task at hand.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Felt like covert advertisements.",
+                    "comment": []
+                },
+                {
+                    "text": "what you choose for the dimensions is arbitrary, they only chosen thusly to prove the point.<p>I don&#x27;t think I&#x27;ve ever seen an example of pareto that wasn&#x27;t pseudo scientific drivel.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "2020: <a href=\"https:&#x2F;&#x2F;www.civisanalytics.com&#x2F;resources&#x2F;the-best-mario-kart-character-according-to-data-science\" rel=\"nofollow\">https:&#x2F;&#x2F;www.civisanalytics.com&#x2F;resources&#x2F;the-best-mario-kart...</a><p>OG credit to: Henry Hinnefeld\n2015: <a href=\"https:&#x2F;&#x2F;hinnefe2.github.io&#x2F;python&#x2F;tools&#x2F;2015&#x2F;09&#x2F;21&#x2F;mario-kart.html\" rel=\"nofollow\">https:&#x2F;&#x2F;hinnefe2.github.io&#x2F;python&#x2F;tools&#x2F;2015&#x2F;09&#x2F;21&#x2F;mario-kar...</a>",
+            "comment": []
+        },
+        {
+            "text": "If you liked the playing card interaction at the start (I did), I run a random side project where you (or your coding agent) can build similar 3d cards:<p><a href=\"https:&#x2F;&#x2F;requirement5.com\" rel=\"nofollow\">https:&#x2F;&#x2F;requirement5.com</a><p>build a card here: <a href=\"https:&#x2F;&#x2F;requirement5.com&#x2F;create\" rel=\"nofollow\">https:&#x2F;&#x2F;requirement5.com&#x2F;create</a> (and the CLI instructions are there too)<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;vilt9&#x2F;requirement5\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;vilt9&#x2F;requirement5</a>",
+            "comment": [
+                {
+                    "text": "I noticed DaisyUI also has a component for this just a couple of days back - <a href=\"https:&#x2F;&#x2F;daisyui.com&#x2F;components&#x2F;hover-3d&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;daisyui.com&#x2F;components&#x2F;hover-3d&#x2F;</a>",
+                    "comment": [
+                        {
+                            "text": "This is the OG: <a href=\"https:&#x2F;&#x2F;poke-holo.simey.me&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;poke-holo.simey.me&#x2F;</a> - inspired me as an old pokemon collector",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This doesn&#x27;t account for vehicle size (important for red shell wall breaking[0]) and drifting style[1].<p>[0] A redshell wall break is when you point your vehicle near a wall to break a redshell without using a defense item.\n[1] Drifting style is either inward or outward. Inward drift has more intuitive controlls and is way better for intermidiate players, but pro players dislike it because is removes various difficult tricks.<p>I recommend yoshi on the yoshi bike with azure rollers and the paper glider.",
+            "comment": []
+        },
+        {
+            "text": "(2024) according to <a href=\"https:&#x2F;&#x2F;www.mayerowitz.io&#x2F;blog\" rel=\"nofollow\">https:&#x2F;&#x2F;www.mayerowitz.io&#x2F;blog</a> and <a href=\"https:&#x2F;&#x2F;github.com&#x2F;SuperMayo&#x2F;mayerowitz.io&#x2F;tree&#x2F;main&#x2F;src&#x2F;routes&#x2F;(standalone)&#x2F;blog&#x2F;mario-meets-pareto\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SuperMayo&#x2F;mayerowitz.io&#x2F;tree&#x2F;main&#x2F;src&#x2F;rou...</a>",
+            "comment": []
+        },
+        {
+            "text": "I used to play Diddy Kong Racing for the Nintento 64 a lot and what I learned is that the smaller carts with fast acceleration were good for learning how to navigate around the course and for battle royal, but the heavier drivers like Banjo had the highest top speed, and I developed better steering capabilities to time each curve, eventually making it sometimes the only way to win the race.",
+            "comment": []
+        },
+        {
+            "text": "Apologies for the self-promotion, but I learned about the Pareto Front from this site a while back - and applied it to Mini PCs with <a href=\"https:&#x2F;&#x2F;minipcs.zip\" rel=\"nofollow\">https:&#x2F;&#x2F;minipcs.zip</a> which plots Mini PCs based on Compute vs Price (and other metrics) - highlighting the pareto front to find the optimal unit.",
+            "comment": [
+                {
+                    "text": "Thanks for posting this! It&#x27;s an awesome tool. Makes me want to buy more tiny PCs. My only feedback is many of the ebay listings it points to are sold out, but I assume there&#x27;s a limit to the freshness you can get. Still though, I found pretty good rates of success just pasting the important parts of the name of the sold-out listing into search.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I love how the data from top players shows that they&#x27;re using a build on the Pareto Front, i.e. that the wisdom of crowds settles on a meta that is optimum. I wonder if we analyzed other games, if the meta were all consistently on the Pareto Front (WoW, Diablo, w&#x2F;e). Likely so.",
+            "comment": [
+                {
+                    "text": "Probably but they could be arrived at via different means. In WoW for instance top players run simulated combat using third party tools to compare different gearing setup, often to determine if a new piece of gear is better than their current piece. This often isn&#x27;t immediately obvious if the stats are completely different and &quot;simming&quot; is the easiest way to evaluate a piece of gear.",
+                    "comment": []
+                },
+                {
+                    "text": "Competitive players (from Mario Kart in particular) are doing this type of data mining and analysis ever since the game releases, and sharing them in tightly knit communities.<p>The analysis comes before the meta settles, so of course it’s consistent :)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This article isn’t quite accurate; acceleration is surprisingly unimportant in Mario Kart and not really considered a major factor when choosing a  optimal combo.\nThe optimal combo is solely decided on the basis of speed and mini-turbo. Otherwise good analysis.",
+            "comment": []
+        },
+        {
+            "text": "Can anyone explain why Rosalina is not Pareto optimal here? It kind of looks like she should be.",
+            "comment": [
+                {
+                    "text": "Because Donkey Kong gives more speed for exactly the same acceleration. I.e. you sacrifice nothing and gain something by switching away.<p>EDIT: If you mean that Rosalina looks slightly higher on the graph, I believe that&#x27;s just a visual effect to allow multiple characters to occupy the same square - the stats are all integers.",
+                    "comment": [
+                        {
+                            "text": "&gt; If you mean that Rosalina looks slightly higher on the graph, I believe that&#x27;s just a visual effect to allow multiple characters to occupy the same square - the stats are all integers.<p>Ah, yeah. That is what I meant. Thanks!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; You can identify all efficient drivers that, unlike Koopa, are never dominated on both speed and acceleration. Together, they form what is called the <i>Pareto front</i> (or frontier).<p>Coincidently, this <i>Pareto Front</i> concept is currently on the front page on HN at #10 (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49096439\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49096439</a>) and apparently, it was posted before this post.",
+            "comment": []
+        },
+        {
+            "text": "Excellent. This is some kind of 3D PowerPoint. How did he do that?",
+            "comment": [
+                {
+                    "text": "Author here. The source code is available at <a href=\"https:&#x2F;&#x2F;github.com&#x2F;SuperMayo&#x2F;mayerowitz.io\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SuperMayo&#x2F;mayerowitz.io</a>.<p>It’s called scrollytelling. For this particular project, I borrowed a lot from <a href=\"https:&#x2F;&#x2F;mlu-explain.github.io&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;mlu-explain.github.io&#x2F;</a>. For the 3D elements, I used Threejs and a custom vertex shader for the 3D plot.",
+                    "comment": [
+                        {
+                            "text": "Is there a version I can just read as text  without having to push every paragraph out of the way with my fingers across an unevenly colored background that shines through?<p>I get that this form of presentation may be great for many people, but for my brain, it makes it extremely hard to engage with the content.",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;m sorry, this is <i>by design</i> colorful and interactive. If you still want to read about this topic in a less &quot;juicy&quot; way, you can can take a look at this other article: <a href=\"https:&#x2F;&#x2F;hinnefe2.github.io&#x2F;python&#x2F;tools&#x2F;2015&#x2F;09&#x2F;21&#x2F;mario-kart.html\" rel=\"nofollow\">https:&#x2F;&#x2F;hinnefe2.github.io&#x2F;python&#x2F;tools&#x2F;2015&#x2F;09&#x2F;21&#x2F;mario-kar...</a>",
+                                    "comment": [
+                                        {
+                                            "text": "Thanks a lot for the link!<p>I appreciate your work to make this topic accessible in an interactive format. Somehow, in this case, it&#x27;s too much for me.<p>I think the ratio of information to interactivity is too low. It&#x27;s like I have to push around a tiny keyhole to slowly access information. The graphs look fun, but their fancifulness is distracting me.<p>I don&#x27;t usually mind interactivity, but I think usually it is embedded in the text, instead of gating it, if that makes sense.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I guess the author used a different framework but I like this one: <a href=\"https:&#x2F;&#x2F;animejs.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;animejs.com&#x2F;</a>",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s cool until it breaks halfway through on Firefox, making the page unusable in that browser.",
+                    "comment": []
+                },
+                {
+                    "text": "Looks like html+css+js+webgl",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "So Pareto’s the third brother then?",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246</a> for the discussion 2 years ago",
+            "comment": []
+        },
+        {
+            "text": "I did not know the term but I&#x27;m thinking that the old project management triangle (cheap, good, fast) is a specialisation of that concept.",
+            "comment": []
+        },
+        {
+            "text": "What I&#x27;ve found is that my favorite person is not optimal... I have decided that I&#x27;m going to believe that the driver is worth more than the sum of their choices. And when I lose I&#x27;ll just accept it as my own failing of skill.\n#rosalina",
+            "comment": []
+        },
+        {
+            "text": "Nice article, I&#x27;m sad to learn that I shouldn&#x27;t be using Koopa. How are Peach and Mario not dominated on acceleration by Tanooki Mario and Luigi respectively?<p>Also, wonderful visualizations, but the change between blue and white backgrounds is really jarring to me.",
+            "comment": [
+                {
+                    "text": "Koopa came out in offroad vs weight..without being <i>that</i> familiar with the game, I don&#x27;t know whether that would ever be important enough to care about",
+                    "comment": []
+                },
+                {
+                    "text": "I always pick koopa, I always win",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "A lot of these optimization problems can benefit from using a genetic algorithm: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;lodenrogue&#x2F;genetic-algorithm-js\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;lodenrogue&#x2F;genetic-algorithm-js</a>",
+            "comment": []
+        },
+        {
+            "text": "I always thought in these games; picking acceleration is a way for you to recover from your mistakes. If you made no mistakes the speed would win. So, it is always better to pick the harder option and have a room to improve",
+            "comment": [
+                {
+                    "text": "That&#x27;s not the full picture though, because other players can hit you with items, and it&#x27;s sometimes unavoidable.<p>If you get hit by a blue shell with a build fully optimized for speed at the cost of acceleration, it&#x27;s likely to cost you the race.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Previously on HN: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=39936246</a>",
+            "comment": []
+        },
+        {
+            "text": "80&#x2F;20 Rule in Mario Games - <a href=\"https:&#x2F;&#x2F;8020.in&#x2F;mario-games\" rel=\"nofollow\">https:&#x2F;&#x2F;8020.in&#x2F;mario-games</a>",
+            "comment": []
+        },
+        {
+            "text": "I didn&#x27;t know that even characters of similar size had different stats",
+            "comment": []
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Finally, this page has some information that&#x27;s actually useful in real life.",
+            "comment": []
+        },
+        {
+            "text": "Holy! This is one of the best articles i ever read here. Really, really cool.",
+            "comment": []
+        },
+        {
+            "text": "To think I gimped myself so much by using baby Rosalina on a scooter with rollers",
+            "comment": []
+        },
+        {
+            "text": "Finally an important and realistic application of economic theory to real life!",
+            "comment": []
+        },
+        {
+            "text": "Thanks! Very useful information. I will never play for Bowser again.",
+            "comment": [
+                {
+                    "text": "It might still be the best option, depending on your play group. For example, if you’re in a play group with a bunch of novices and you’re destroying them, like finishing a full lap before the second place, choosing Bowser gives you a handicap. Lowers your chances of winning but increases fun for the group as a whole.",
+                    "comment": []
+                },
+                {
+                    "text": "Once at a Mario Kart 8 tournament I was helping run there was a kid who had picked Bowser and max speed and he was struggling to make every turn.<p>I switched him to the meta build and suddenly boom, he went from like 10th to 2nd against the AIs.<p>It&#x27;s kinda weird that you can shoot yourself in the foot so much when picking your kart in this game.",
+                    "comment": [
+                        {
+                            "text": "To some degree it&#x27;s because certain options work better in other game modes and settings. For example, there are characters and karts in Mario Kart Wii which are only viable on a handful of tracks, but can dominate those tracks in time trials. A very basic opening cup track with only gentle turns might get dominated by a high speed character and kart combo with middling stats everywhere else.<p>That&#x27;s why certain tracks were played with the Torpedo&#x2F;Spear in that game. It&#x27;s very fast, but has the turning radius of a bus on ice. Great on something like Mario Circuit, probably a complete catastrophe on something like Bowser&#x27;s Castle or Rainbow Road.<p>There&#x27;s also battle mode, but I have no idea which karts are preferred there.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; It&#x27;s kinda weird that you can shoot yourself in the foot so much when picking your kart in this game.<p>Nintendo optimises for fun, not competitive play. Infamously, to curb the competitiveness of Super Smash Bros (SSB) Melee, they introduce a random tripping mechanic in the following SSB (Brawl). Everyone hated it so they removed it in the one after that.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; I will never play for Bowser again.<p>What do you mean &quot;play for Bowser&quot;?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This was fun, thank you",
+            "comment": []
+        },
+        {
+            "text": "In Firefox reader mode, there&#x27;s like 5 paragraphs of text. I am unable to digest the content on the website itself. Can someone confirm if the 5 paragraphs is the whole content or if I have large parts of it missing?",
+            "comment": [
+                {
+                    "text": "The article includes interactive graphs and scrolling animations that explain them, as well as data.",
+                    "comment": []
+                },
+                {
+                    "text": "Turn off reader there are graphics along with the paragraphs. Reminds me of the complaints that used to be super common from people religiously refusing to enable javascript and complaining when breaking the site breaks the site.",
+                    "comment": [
+                        {
+                            "text": "For me (Firefox on Windows, not in reader mode) the graphics stop showing at the &quot;585 builds&quot; paragraph.<p>Besides, if something doesn&#x27;t work in reader mode, it&#x27;s also likely to not work with screen readers. People who use those don&#x27;t have much of a choice in what they can enable or not.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Why do you think people refused to enable javascript?",
+                            "comment": [
+                                {
+                                    "text": "I saw a lot of people saying various things along the lines of &quot;not running strangers code on my machine&quot; and some &quot;you should serve me the site working even if JS is disabled&quot;. The exact reason doesn&#x27;t really matter it&#x27;s more that if you&#x27;re intentionally gimping the website you don&#x27;t really get to complain about the site not loading.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I don&#x27;t refuse to enable JS. I do, however, refuse to use website with broken scrolling. It makes me physically sick.",
+                                    "comment": [
+                                        {
+                                            "text": "Does this site do that to you?",
+                                            "comment": [
+                                                {
+                                                    "text": "Very much so. It&#x27;s one of the worst cases (but not the worst, not even the worst this week) I&#x27;ve seen around here.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "What&#x27;s broken about the scroll? For me it acts like basically any other scrolling presentation design used on hundreds of different websites.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "I guess the whole idea of &quot;scrolling presentation design&quot; is broken? I certainly wouldn&#x27;t mind if it stopped being a thing. It feels like 90% of websites that I find annoying as of late are of this type.<p>This page has some elements that scroll and some elements that don&#x27;t scroll. And some elements that switch between scrolling and not scrolling. And some animations are controlled by scroll position, meaning they bounce back and forth while I try to find my bearings on the scroll wheel. Everything is fighting for my attention all at once, which prevents me from focusing on anything in particular. Most of all, it prevents me from focusing on the scrolling itself - and scrolling requires extreme focus here considering you never know what will happen and how much you need to scroll for it to happen. Is text going to slide in? Is a picture going to suddenly pop up? Is an existing picture going to transform to something else? Will it transform gradually as I scroll, or is it going to do it all suddenly in one step?<p>In short - it breaks the UI metaphor of scrolling an infinite roll of paper, and that in turn breaks my brain. I just can&#x27;t follow what&#x27;s happening, there&#x27;s too much non-scrolling action happening when I scroll. There&#x27;s also too much empty space between paragraphs.",
+                                                                    "comment": []
+                                                                },
+                                                                {
+                                                                    "text": "And hundreds of different websites are unusable or borderline so. This is one of the negative effects of JS, but at this point the JS of those times isn&#x27;t even the worst, because you&#x27;d be able to block and modify parts of it to some degree. The latest trends are going further and further in not just running user-hostile code on my machine but in a way that can&#x27;t even be modified.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "It looks like it. There are four images that pop up and start animating numbers, and those aren&#x27;t visible in the built in reader. I use Tranquility Reader which ime tends to do a bit better, but it still wasn&#x27;t readable. Looking at the source, that content seems to be created only on scroll with javascript, so it won&#x27;t be able to be read accessibly. I had to close it so I can&#x27;t say what else is missing.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Nice figuratively demonstrating, I think it can be a impressive lecture material if my teacher&#x2F;prof use this kind of demonstration.",
+            "comment": []
+        },
+        {
+            "text": "beautiful site",
+            "comment": []
+        },
+        {
+            "text": "wow that took alot of work. nice job",
+            "comment": []
+        },
+        {
+            "text": "Shame it isn&#x27;t Luis Pareto.",
+            "comment": []
+        },
+        {
+            "text": "Fun but still didn&#x27;t tell me who the &quot;best&quot; player is.",
+            "comment": [
+                {
+                    "text": "There&#x27;s no ultimate best player&#x2F;build. When you factor in that each cart has different stats depending on the terrain, there&#x27;s a &quot;best&quot; build for each track.",
+                    "comment": []
+                },
+                {
+                    "text": "Dependent on your play style and which of the 3 main attributes you care about.<p>Did you even read the post?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Mario was an elite?",
+            "comment": []
+        },
+        {
+            "text": "Lakitu ftw",
+            "comment": []
+        },
+        {
+            "text": "Peach was goated in Super Mario Bros 2 as well. I always pick her.",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "The site is really broken on mobile.",
+            "comment": [
+                {
+                    "text": "I cannot be the only one who atrongly dislikes this bloated web design. I hit back after scrolling a bit",
+                    "comment": [
+                        {
+                            "text": "Until recently I thought I hated sites that messed with the scroll out of principle, but then I found a handful of them that do a good job of it. This is one of them.",
+                            "comment": [
+                                {
+                                    "text": "This is a good job?  It takes me a half dozen scroll actions to get each sentence of text.  I&#x27;m not risking a carpal tunnel flare-up just to get through effectively one paragraph of content.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "The key here is to have a foreground layer that always responds to scroll and informs the background layer based on its position",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I did the same but not because i dislike it, because it is just broken, layout constantly shifting and so on.",
+                            "comment": []
+                        },
+                        {
+                            "text": "No, you&#x27;re not. A lot of the web is becoming increasingly unusable for me because of things like this.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Also on Firefox android and working great. What&#x27;s your browser&#x2F;os?",
+                    "comment": []
+                },
+                {
+                    "text": "Can you tell me what’s going on?\nI tried my best to make it work on every device, but handling mobile is hard, and especially when you’re messing with interactivity and 3D.",
+                    "comment": []
+                },
+                {
+                    "text": "Works for me with Firefox on android and ublock origin.",
+                    "comment": []
+                },
+                {
+                    "text": "Works wonderfully on iPhone",
+                    "comment": [
+                        {
+                            "text": "I&#x27;m on latest one and nope it&#x27;s glitchy af.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Works for me in Firefox on Android anyway",
+                    "comment": []
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

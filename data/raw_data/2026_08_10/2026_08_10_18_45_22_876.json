@@ -1,0 +1,335 @@
+{
+    "item_id": 49228663,
+    "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+    "url": "https://github.com/jmarshall23/msword",
+    "text": "Microsoft Word for Windows 1.1a - Native x64 Port\nThis project is a fully working native Windows x64 port of Microsoft Word for\nWindows 1.1a, whose historical codename was\nOpus\n. It builds the original\nWord source and resources together with modern replacements for the 16-bit\nassembly, segmented-memory, and Win16 platform boundaries.\nThe result is the original Word application and user experience running as a\n64-bit Windows executable. This is not an emulator or a reimplementation using\na modern editor control.\nRequirements\n64-bit Windows\nVisual Studio 2022 with\nDesktop development with C++\nA Windows 10 or Windows 11 SDK installed through Visual Studio\nCMake 3.25 or newer\nPowerShell\nBuild and run\nClone the repository, configure the included CMake preset, and build it from a\nPowerShell prompt:\ngit clone https:\n//\ngithub.com\n/\njmarshall23\n/\nmsword.git\nSet-Location\nmsword\\src\n\ncmake\n--\npreset x64\n-\ndebug\ncmake\n--\nbuild\n--\npreset x64\n-\ndebug\n&\n..\\bin\\\nWORD1.exe\nFor an optimized build, use the release preset instead:\ncmake\n--\npreset x64\n-\nrelease\ncmake\n--\nbuild\n--\npreset x64\n-\nrelease\n&\n..\\bin\\\nWORD1.exe\nThe presets use the Visual Studio 2022 x64 generator. After configuration, the\ngenerated solution can also be opened directly from\nout\\MicrosoftWordX64Port.sln\n; use\nWORD1\nas the startup project.\nTest\nRun the complete Debug test suite from the repository root:\nctest\n--\ntest-dir\n.\\out\n-\nC Debug\n--\noutput\n-\non\n-\nfailure\nOr, when your current directory is\nsrc\n:\nctest\n--\ntest-dir\n..\\out\n-\nC Debug\n--\noutput\n-\non\n-\nfailure\nFor a release build, replace\nDebug\nwith\nRelease\n. The suite covers the\nported x64 runtime, original Word data structures and command tables, process\nstartup, and automated UI workflows including typing, selection, formatting,\ndialogs, and saving.\nProject layout\nPath\nPurpose\nsrc/Opus/\nOriginal Microsoft Word/Opus application source and resources\nsrc/OpusEtAl/\nOriginal supporting tools, libraries, and build inputs\nsrc/OpusProg/\nHistorical program documentation\nsrc/port/original/\nx64 compatibility layer, translated routines, and tests\nsrc/port/tools/\nNative replacements for historical build-time tools\nsrc/cmake/\nResource and source-generation helpers\nout/\nCMake cache and generated Visual Studio solution\nbuild/\nIntermediate tools, tests, probes, PDBs, and diagnostics\nbin/\nFinal executable and runtime files\nout\n,\nbuild\n, and\nbin\nare generated locally during configuration and\ncompilation.\nHow the port works\nThe original C and resource files remain the authoritative implementation.\nThe port adds only the platform work needed to build and run that code safely\non 64-bit Windows:\n16-bit x86 assembly entry points are translated to fixed-width C or C++.\nSegmented and double-indirect memory handles are mapped to an x64-safe native\nruntime.\nWin16-specific startup, messaging, graphics, file, and resource behavior is\nadapted to current Win32 APIs.\nOriginal command, dialog, cursor, bitmap, and other generated assets are\nrebuilt by native host tools as part of the CMake graph.\nUnit, runtime, smoke, and UI tests guard compatibility with the original\nalgorithms and application behavior.\nCMake inventories the legacy assembly tree but does not compile those modules\ninto native targets. This keeps the historical implementation available as a\nreference while ensuring all shipped code is valid for AMD64.\nUseful targets\nTarget\nDescription\nWORD1\nThe native x64 Microsoft Word executable\nopus_original_engine\nOriginal Word application engine compiled for x64\nopus_x64_runtime\nNative runtime and translated assembly behavior\nopus_word1_ui_test\nAutomated end-to-end UI test driver\nlegacy_sources\nIDE-visible reference collection of the original assembly\nBuild a specific target with:\ncmake\n--\nbuild\n--\npreset x64\n-\ndebug\n--\ntarget WORD1\nContributing\nChanges should preserve the original Word behavior while keeping all native\ninterfaces pointer-width safe. Prefer source-equivalent translations of\nhistorical routines, isolate unavoidable Windows API adaptation at the port\nboundary, and add focused tests for newly translated behavior.\nCopyright\nThe historical source files retain their original Microsoft and third-party\ncopyright notices. This repository does not currently include a top-level\nlicense file; review the applicable rights before redistributing the source or\nbinaries.",
+    "comment": [
+        {
+            "text": "Back in &#x27;85-6 I developed training for USDA (using Dan Bricklin&#x27;s Demo) for a curses version of Word 5 that ran on 3B2s with SysV v2. I&#x27;d be very happy to see that ported to Linux or one of the BSDs.<p>In fact, I&#x27;d love to see both Word and Excel &#x27;98 on one of my workstations. IMHO things went South after that.<p>I had to use Windows and Office off and on with clients up to 2010 and I&#x27;m sure that Excel provided some important edge-case functionality after &#x27;98, but for me the UI went steadily to sh*t.",
+            "comment": [
+                {
+                    "text": "FWIW, Office 97 works perfectly under Wine, so there&#x27;s nothing stopping you from continuing to use it, well, except maybe the lack of support for modern OOXML formats. An alternative could be Abiword and Gnumeric, both are super lightweight and retain the classic Office 97-style UI and support OOXML formats (though somewhat limited compared to LibreOffice).",
+                    "comment": [
+                        {
+                            "text": "Microslop’s free “Office format converters” pack from Microsoft adds support for new office formats to old office versions. Read and write.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "office 2003 (for word + excel at least) were peak - after the ribbon it all went downhill",
+                    "comment": [
+                        {
+                            "text": "I just installed my copy in a new Win10 VM. With the added OOXML support pack, there&#x27;s nothing left wanting.",
+                            "comment": [
+                                {
+                                    "text": "Does the activation still work for these are do you have to use a hack to get them running? I still have a TON of older Office 2003 licenses, I&#x27;d love to go back.  I&#x27;ve hated modern Office with the ribbon for half my life now.",
+                                    "comment": [
+                                        {
+                                            "text": "The product keys still work. You can skip online activation. Only annoyance is needing to run once as admin to make the EULA acceptance write to the registry.<p>I have a stockpile of patches that I preserved a while back that are not readily available today.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Please don&#x27;t. There are so many unpatched exploits for old Office... opening any document could trash your whole system or silently steal information from you.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;lock.cmpxchg8b.com&#x2F;wordperfect.html\" rel=\"nofollow\">https:&#x2F;&#x2F;lock.cmpxchg8b.com&#x2F;wordperfect.html</a> describes getting the UNIX release of Word Perfect running on modern Linux. There was a SCO release of Word in 1990, so plausibly that could be fudged into a similar setup?",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; Dan Bricklin&#x27;s Demo<p>There&#x27;s a name I haven&#x27;t heard in a while.  During our undergrad (90s), we used it to mock up UI designs for one of our early courses.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you need something much easier then you can run Word 2.0 (well any Windows 3.0+ 16bit app) easily on x64 Windows 10&#x2F;11 <a href=\"https:&#x2F;&#x2F;files.catbox.moe&#x2F;dy4bqy.png\" rel=\"nofollow\">https:&#x2F;&#x2F;files.catbox.moe&#x2F;dy4bqy.png</a><p>All you need is this <a href=\"https:&#x2F;&#x2F;github.com&#x2F;otya128&#x2F;winevdm\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;otya128&#x2F;winevdm</a>",
+            "comment": []
+        },
+        {
+            "text": "Tried to build it but it references a `cmake&#x2F;GenerateMenuHelpHeader.cmake` that seems to be absent from the repository?",
+            "comment": []
+        },
+        {
+            "text": "Should also add disk space to the requirement list.<p>People will be shocked when they realize word didn’t require gigabytes…",
+            "comment": []
+        },
+        {
+            "text": "A screenshot or two would have been nice",
+            "comment": [
+                {
+                    "text": "There are pics from the developer in this article (not sure why he neglected them in the README):<p><a href=\"https:&#x2F;&#x2F;www.neowin.net&#x2F;news&#x2F;developer-ported-word-for-windows-11a-from-1990-to-run-natively-on-windows-11&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.neowin.net&#x2F;news&#x2F;developer-ported-word-for-window...</a>",
+                    "comment": [
+                        {
+                            "text": "Top-left window icon looks garbled. A porting bug, maybe?",
+                            "comment": [
+                                {
+                                    "text": "I think it&#x27;s just that 16x16 icons didn&#x27;t become a thing in Windows until Windows 95, and so older apps don&#x27;t supply one. Windows will then scale down the 32x32 icon instead, and it&#x27;s never really done it that attractively, and I suspect the black and white nature of this icon really suffers.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Wow, it really looks like Win 10&#x2F;11. Microsoft is back to the roots now. \nBut Word 1.0 even has 3d GUI elements. They must have had impressive computers back then.",
+                            "comment": [
+                                {
+                                    "text": "CTL3D.DLL .. I remember installing Office for Windows 3.1. It would update this system DLL and make the UI of the entire system look more 3D.<p><a href=\"https:&#x2F;&#x2F;external-content.duckduckgo.com&#x2F;iu&#x2F;?u=https%3A%2F%2Fwww.betaarchive.com%2Fimageupload%2F2017-01%2F1484489955.th.90198.png&amp;f=1&amp;nofb=1&amp;ipt=d92d4f4d30765b52214c9ae17f6923ece03fb54d17323fe86fea5ab66c0fd328\" rel=\"nofollow\">https:&#x2F;&#x2F;external-content.duckduckgo.com&#x2F;iu&#x2F;?u=https%3A%2F%2F...</a>",
+                                    "comment": [
+                                        {
+                                            "text": "I&#x27;m pretty sure it was an opt-in thing for individual programs, if an app didn&#x27;t intentionally use it they kept the old look.<p>I&#x27;ve always thought that it&#x27;s a bit of an undocumented and slightly forgotten bit of Windows 3.1, most things on the internet only show the flat style. I guess people doing retro things often only mess around a bit with the base OS, and don&#x27;t really install things like Office 4.x on top of it.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "It’s mere decades ago!",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "so true - modern windows has no contrast between windows - so terrible",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "There is a screenshot in the original source code release: <a href=\"https:&#x2F;&#x2F;computerhistory.org&#x2F;blog&#x2F;microsoft-word-for-windows-1-1a-source-code&#x2F;?key=microsoft-word-for-windows-1-1a-source-code\" rel=\"nofollow\">https:&#x2F;&#x2F;computerhistory.org&#x2F;blog&#x2F;microsoft-word-for-windows-...</a>",
+                    "comment": [
+                        {
+                            "text": "Direct link: <a href=\"https:&#x2F;&#x2F;computerhistory.org&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;08&#x2F;ms-word-for-win-word-for-windows-1.1a-2.png\" rel=\"nofollow\">https:&#x2F;&#x2F;computerhistory.org&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;08&#x2F;ms-wo...</a><p>Versus the port: <a href=\"https:&#x2F;&#x2F;cdn.neowin.com&#x2F;news&#x2F;images&#x2F;uploaded&#x2F;2026&#x2F;08&#x2F;1786171652_word_1.1a_port.webp\" rel=\"nofollow\">https:&#x2F;&#x2F;cdn.neowin.com&#x2F;news&#x2F;images&#x2F;uploaded&#x2F;2026&#x2F;08&#x2F;17861716...</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Might the lack there of be copyright related? I guess not something you want to burn your hands on.",
+                    "comment": [
+                        {
+                            "text": "The original source for WfW 1.1a was open sourced (I realize that doesn&#x27;t mean there isn&#x27;t copyright, but it&#x27;s unlikely to be the reason that there are no pics):<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;danielcosta&#x2F;MSWORD\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;danielcosta&#x2F;MSWORD</a>",
+                            "comment": [
+                                {
+                                    "text": "The point of open source is to address and concerns around copyright. And this source is not open source by the definition most people use when they refer to “open source”. It’s still proprietary but source available.<p>However I will say, this source is unlikely to be useful to anyone beyond academic curiosity. So for the purposes of this project, the source license is “good enough”.",
+                                    "comment": [
+                                        {
+                                            "text": "More concretely, Microsoft&#x27;s license [0] gives you at most one of the four essential freedoms:<p>0. Freedom to run for any purpose? No.<p>1. Freedom to modify the program? Maybe; Microsoft can revoke it without cause at any time.<p>2. Freedom to distribute unmodified? No.<p>3. Freedom to distribute modified? No.<p>I&#x27;m using the free software definition [1] because it&#x27;s simpler and clearer than the open source definition [2], which is usually considered mostly equivalent in practice, but as far as I can tell Microsoft&#x27;s license satisfies zero of the latter&#x27;s ten criteria, apart from perhaps non-discrimination and technology-neutrality. Most of the criteria of the open source definition have to do with distribution, which is not allowed by Microsoft&#x27;s license.<p>[0] <a href=\"https:&#x2F;&#x2F;computerhistory.org&#x2F;blogs&#x2F;microsoft-research-license-agreement-msword-v-1-1a&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;computerhistory.org&#x2F;blogs&#x2F;microsoft-research-license...</a><p>[1] <a href=\"https:&#x2F;&#x2F;www.gnu.org&#x2F;philosophy&#x2F;free-sw.en.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.gnu.org&#x2F;philosophy&#x2F;free-sw.en.html</a><p>[2] <a href=\"https:&#x2F;&#x2F;opensource.org&#x2F;osd\" rel=\"nofollow\">https:&#x2F;&#x2F;opensource.org&#x2F;osd</a>",
+                                            "comment": [
+                                                {
+                                                    "text": "[dead]",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "We should care about Microsoft&#x27;s licenses exactly as much as Microsoft cares about ours.",
+                                            "comment": [
+                                                {
+                                                    "text": "Only if you have a lawyer department as large as theirs.<p>But to be fair&#x2F;realistic, as an individual, I&#x27;ve never worried about their licenses (for myself, my friends, and family). The only time I did was when installing their software in professional&#x2F;commercial contexts, that&#x27;s where they do most of their enforcement as far as I know... and only when the scale is egregious.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I don&#x27;t have a lawyer department. What I do have is a server paid in XMR.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "The license isn&#x27;t really open source. It&#x27;s more like source available. Non-commercial use only.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;danielcosta&#x2F;MSWORD&#x2F;blob&#x2F;master&#x2F;LICENSE\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;danielcosta&#x2F;MSWORD&#x2F;blob&#x2F;master&#x2F;LICENSE</a><p>says<p>You may use, copy, compile, and create Derivative Works of the software, and run the software and Derivative Works on simulators or hardware solely for non-commercial research, experimentation, and educational purposes. Examples of non-commercial uses are teaching, academic research, public demonstrations, and personal experimentation. “Derivative Works” means modifications to the software, in source code or object code form, made by you pursuant to this agreement.\nYou may copy and refer to any documentation provided as part of the software.\nYou may not distribute or publish the software or Derivative Works.\nYou may not use or test the software to provide a commercial service unless Microsoft permits you to do so under another agreement.\nYou may publish and present papers or articles on the results of your research, and while distribution of all or substantial portions of the software is not permitted, you may include in any such publication or presentation an excerpt of up to fifty (50) lines of code for illustration purposes.",
+                                    "comment": [
+                                        {
+                                            "text": "It’s interesting that the license says “You may not distribute or publish the software or Derivative Works.”<p>There is now a published GitHub of a derivative work.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "WinWord 2 or maybe 6 had everything I ever needed.",
+            "comment": []
+        },
+        {
+            "text": "how complicated would a port to linux be ?",
+            "comment": [
+                {
+                    "text": "I prompted Claude Opus 5 (I don&#x27;t really have the Fable tokens to spare) to do just that (via winelib).  It&#x27;s gotten to the point where it opens, runs for three seconds, and abruptly exits.<p>edit:  got it running but a ton of things are do-nothing, and the fonts are completely rubbish.  Not really worth posting ATM, but I&#x27;ll see if it can fix things further by running the UI tests and telling it some of the things that don&#x27;t work...<p>(That it was able to build and run <i>at all</i> with just a few prompts is a HFS moment, though!)",
+                    "comment": [
+                        {
+                            "text": "An interesting thing that came up is that MSVC uses 32-bit longs instead of 64, so a pure gcc&#x2F;winelib build is another level of 64-bit porting.<p>Claude then suggested using mingw instead, which makes sense...",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "This was the first thing that crossed my mind when I read about this port. It&#x27;s heartening to find out I&#x27;m not the only one!",
+                    "comment": []
+                },
+                {
+                    "text": "Just use WINE?",
+                    "comment": [
+                        {
+                            "text": "A native Linux application would be preferable, even if it does work with WINE (which I don&#x27;t know... yet).",
+                            "comment": [
+                                {
+                                    "text": "Win32 is Linux&#x27;s only stable ABI.",
+                                    "comment": [
+                                        {
+                                            "text": "A fair statement, but a stable ABI is only needed when you don&#x27;t have the source. Seeing as most of the value proposition of Linux is that having the source is good, I find no fault in an unstable ABI.",
+                                            "comment": [
+                                                {
+                                                    "text": "Source available is of little use for many of the current breed of languages and libraries. Even standard C support is starting to break down as incompatible &quot;standard&quot; newC is being pushed because some C++ guy didn&#x27;t like K&amp;R function definitions.<p>Linux&#x27;s remarkably stable kernel ABI is the only reason we can still use a lot of unbuildable dependency hell stuff on Docker containers.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Winemaker + winegcc.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Afraid 16bit Word versions have a &quot;Garbage&quot; rating on Wine.",
+                            "comment": [
+                                {
+                                    "text": "I guess I misunderstood. It was ported to 64bit I thought",
+                                    "comment": [
+                                        {
+                                            "text": "was my impression as well",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Cool!",
+            "comment": []
+        },
+        {
+            "text": "No compiled binary is available?",
+            "comment": [
+                {
+                    "text": "If you’re the target audience you don’t need one.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": [
+                {
+                    "text": "ermmm care to explain whY? tis just different pointer arithmetics, and given this was written in C, shouldn&#x27;t be so immensely difficult?",
+                    "comment": [
+                        {
+                            "text": "Because the C standard is notorious for saying things like the <i>minimum</i> size of an `int` is 16 bits. Changes in the size of data types would create issues when calling the Windows API or saving data to disk. Heck, the program is from the very early 1990&#x27;s. C wasn&#x27;t standardized until 1989 and compilers were notorious for having their own interpretation of C (what we would call extensions these days). Finally, developers often optimize large programs with machine dependent code. In the early 1990&#x27;s, a full featured word processor would be considered a very large program.<p>Even today, C is not a terribly portable language when compared to it&#x27;s modern peers. It is portable when compared to assembly languages and languages contemporary to its creation.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Hold on let them ask Claude again",
+                            "comment": []
+                        },
+                        {
+                            "text": "it’s just because allot of projects throw in the towel<p>but some don’t<p>agentic engineering would make this easy, especially when following the blueprint of the projects that do this translation already",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt;This project is a fully working native Windows x64 port of Microsoft Word for Windows 1.1a, whose historical codename was Opus.<p>Not to be confused with the Anthropic LLM model Opus - what was once an old codename is as good as new once again!",
+            "comment": [
+                {
+                    "text": "It’s a common word amongst people with even a bit of erudition. In truth, using it for any kind of software is overusing it.",
+                    "comment": [
+                        {
+                            "text": "For erudites Word is a much better name. We seldom use that verbum.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "My first guess (and probably the first guess of many of the old school nerds) was that the MS Word codename is from Opus the penguin from Berkeley Breathed&#x27;s Bloom County comic strip and that seems to be correct.<p>High five for anyone who still remembers the brief Bill the Gates arc in the comic or the Banana Computer parody ad of Apple starring Gene Simmons (<a href=\"https:&#x2F;&#x2F;computerhistory.org&#x2F;blog&#x2F;the-banana-junior-6000-computers-and-comedy&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;computerhistory.org&#x2F;blog&#x2F;the-banana-junior-6000-comp...</a> , about halfway down the page).",
+                    "comment": []
+                },
+                {
+                    "text": "Would be ironic if Claude Opus was used in making this port. IMHO the README does have a bit of LLM smell to it.",
+                    "comment": [
+                        {
+                            "text": "I came here to say that. Though not in a bad way; the economics of what is possible but practical&#x2F;impractical changes greatly with LLMs, and I suspect and hope we will be figuring out the ramifications for a while.",
+                            "comment": [
+                                {
+                                    "text": "Agreed... I suspect we&#x27;re not <i>too</i> far off from being able to say &quot;port this Win16 application to Win64&quot; if we&#x27;re not there already... and most of it will be harness improvements!",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Check in the github src directory.",
+                            "comment": [
+                                {
+                                    "text": "What should one check for?",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "“Opus” is&#x2F;was a lot of things: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Opus#Computing\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Opus#Computing</a>",
+                    "comment": []
+                },
+                {
+                    "text": "And not to be confused with its plural form &quot;opera&quot;.",
+                    "comment": [
+                        {
+                            "text": "Indeed the name of the art form is just Italian for &quot;work&quot;.<p>Also, a direct cognate with &quot;operate&quot;, &quot;operation&quot;, etc.",
+                            "comment": []
+                        },
+                        {
+                            "text": "the Romans, btw, knew two kinds of labour: labor, -is the laborious one (see ?), and opus, the achievement",
+                            "comment": []
+                        },
+                        {
+                            "text": "Wow, TIL.",
+                            "comment": []
+                        },
+                        {
+                            "text": "The Oracle corporation would like to speak to you about the name of their property management system.<p>(Also some Norwegians and a Web browser?)",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

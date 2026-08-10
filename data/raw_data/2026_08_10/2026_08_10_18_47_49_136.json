@@ -1,0 +1,727 @@
+{
+    "item_id": 49198464,
+    "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+    "url": "https://provenmetal.com",
+    "text": "Hey HN, we’re Will &amp; Johnny from ProvenMetal (<a href=\"https:&#x2F;&#x2F;provenmetal.com\">https:&#x2F;&#x2F;provenmetal.com</a>). You send us design files or specs and we give you assembled boards domestically in days.<p>The US produced 30% of PCBs globally in 2000, now they produce 4%. Chinese manufacturers have completely dominated this space at 55% of global production.<p>Now, the need for a domestic PCB supply chain is higher than ever before, yet the infrastructure has been dissolving over the last 2 decades. What is left is mostly small family run manufacturers (CMs) that have been operating in largely the same, labor intensive way since the early 2000’s.<p>When you place an order through a CM it typically takes several days to receive a quote and complete design for manufacture review, and then you have to source all of the components (the hardest part) and bare boards yourself, then wait anywhere from a few days to several weeks for the assembly and testing of those boards.<p>We started off assembling circuit boards out of a garage with prosumer grade equipment (NeoDen YY1, Glenbrook X-ray, solder paste stencils, and manual rework stations). We believed that by owning the manufacturing process, we could turn all the front of house automations inwards. But here’s the thing… manufacturing circuit boards with prosumer grade equipment out of a garage takes a huge amount of time. Suddenly we were spending 90% of our time assembling circuit boards instead of growing the business. We were completely capacity constrained, with fancy software automations that are not the binding constraint at low volumes.<p>Then we got our heads out of the weeds, took a step back, and realized that we were trying to solve the wrong bottlenecks.<p>These manufacturers are good at manufacturing and terrible at the front of house (quoting, DFM review, and part procurement). When you look at the full process, you realize that assembly is not the bottleneck. So we stopped trying to solve the problem that we can’t solve at this stage.<p>We measured the bottlenecks and nailed down the ones that we are best positioned to solve right now.<p>When a customer wants a domestically manufactured circuit board, it is not a straight forward process. We are making that process easy through front of house automation. A customer gives us their design files, and we automatically procure components, and co-ordinate bare board fabs and assembly houses to get quotes, design review, and manufacturing completed in a very tight loop.<p>How we solve part procurement (you can’t assemble boards with no parts!): When a user places an order with us, our system automatically sources their bill of materials across US and overseas distributors. However, when we work with customers during the design process, our plug-ins interact with KiCAD and Altium, sending the BOM to our ordering platform, which allows us to automatically procure components before layout is finalized.<p>KiCAD plugin: (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;proven-metal&#x2F;provenmetal-kicad\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;proven-metal&#x2F;provenmetal-kicad</a>)<p>Altium plugin: (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;proven-metal&#x2F;provenmetal-altium\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;proven-metal&#x2F;provenmetal-altium</a>)<p>This enables us to order long lead time parts in advance, suggest alternatives if parts are out of stock, and solve the biggest bottleneck in the process. We store parts in our hq in SF, and then kit the boards and route them through our network. We also do long term storage of parts for long lead time items.<p>How we solve endless emails: Every manufacturer wants the same information in a different shape. There’s usually a few days of back and forth emailing to achieve clarity. We’re building a profile per manufacturer and sending the order to fit their requirements. This may sound trivial but it removes a multi-day round trip on most orders, which on a quick-turn build is a meaningful share of the time.<p>How to solve design review: Each manufacturer has individual capability sheets, and so we have a heuristic harness that Fable 5 uses to check the board for DFM issues. We’re building a streamlined process for end-to-end pcb manufacturing, but is that enough to solve the supply chain? Not a chance. Capacity is the problem, and no amount of smart software will solve it. We’re extracting real slack from the system today, that slack is finite, and at some volume the only remaining move is adding physical capacity. We think that’s where this goes.<p>We charge a simple margin on the order value depending on order complexity with fully transparent quote breakdowns. We took our first paying order in less than a week and we’ve done roughly $70k across 11 orders in 6 weeks.<p>We are very interested in your opinion. We’re working in a problem space that has problems everywhere, we’re constantly pulled in wild directions regarding which problems we solve and how we go about solving them. What do you know that we can learn from?",
+    "comment": [
+        {
+            "text": "Good luck! One valuable differentiation you could provide is a line of credit. If you can’t win on price, you can help your customers win on cash-conversion cycle.<p>I’ve been making hardware for 20 years. My highest-volume product was Flybrix, a LEGO drone kit manufactured by Seeed and UniPrecision in China and by Sparqtron in Fremont, California. I’d be happy to work with you on a v2 reboot: Flybrix Swarmz, because every American high school needs a drone swarm.<p>Beyond that, I’ve worked with many domestic suppliers and built ITAR-controlled products as well. Even without owning the production capacity, if you can offer Net 90 on fabrication and extend credit for components--beyond existing DigiKey, Arrow, Mouser, and vendor credit lines--then I can build products and get paid without putting all the capital at risk upfront.<p>Factoring is expensive, especially against a purchase order rather than an invoice, and I don’t know of anyone offering working-capital credit based solely on an SBIR award.<p>Credit is what makes the spice flow.",
+            "comment": [
+                {
+                    "text": "Wow. Sounds like a super interesting product. Hadn&#x27;t considered lines of credit yet, but definitely would be valuable to some higher ticket customers.",
+                    "comment": [
+                        {
+                            "text": "We currently use a small US contract manufacturer that works pretty much as you say. The turn times are terrible (7+ weeks, not 7 days), and this is a major issue, but there are exactly two reasons we continue to use them:<p>1. Line of credit - we are not billed until we take delivery of tested product. \n2. Willingness to handle high mix, low volume products. One product line example: a dozen SKUs with 95-98% parts in common on 2 PCBs, a single set of parts (that we aren&#x27;t billed for up front) and quoting to build 20 of SKU 1, 50 of SKU 2, 10 of SKU 3, etc. without charging 2-3x the price.<p>We manufacture in the research &#x2F; test equipment &#x2F; defense space and I&#x27;ve heard similar things from other small hardware companies that are like us.",
+                            "comment": [
+                                {
+                                    "text": "My experience with lines of credit isn&#x27;t unique, and I think it&#x27;s one of the underrated advantages of doing business in the US: we have a sufficiently stable commercial legal system that a huge amount of the economy can run on credit.<p>I have thought that there is a big opportunity financing components by optioning the sale of overstocked parts ahead of time. For a consumer electronics product that had heavy Q4 sales, my annual sales were entirely dependent on how many chips I could order by October 19, but then I&#x27;d have excess stock every January because things are sold in reels of varying sizes.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Ok, fair points. 2. is our focus right now and then we may add 1. over time.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Sad to see the Lego drone sold out, hope you get that reboot going!",
+                    "comment": []
+                },
+                {
+                    "text": "Credit based on a SBIR is a great idea. Seems like something the Small Business Administration should offer.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Any idea what pricing will be like? The fact that you call out Drone and Defense industries on your page suggests to me this is extremely expensive.<p>I recently priced out getting a PCB done in China and its insanely cheap. My design isnt complicated, a few ICs, a few connectors, an a dozen or so passives. PCB manufacturing, parts, and soldering&#x2F;assembly is on the order of $10-20 total per board and that is with zero volume discounts. The parts alone would cost that much in the US, and I suspect the sort of companies that you contract out to also aren&#x27;t really interested in tiny orders so they would probably quote huge setup fees (looks like your average order so far is ~$7000).",
+            "comment": [
+                {
+                    "text": "Think of this service basically for the same purpose as why Crye pants and stuff are manufactured domestically in the USA. But applied to circuit boards.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Berry_Amendment\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Berry_Amendment</a><p>More specifically there are a number of new wide-spanning bans on import of mainland china made drone components such as flight controller boards, ESCs, power distribution boards, motors.<p>The definition of &quot;Blue UAS&quot; pre-dates recent more aggressive changes made by the current US executive branch of the government, but is still relevant:<p><a href=\"https:&#x2F;&#x2F;www.google.com&#x2F;search?client=firefox-b-d&amp;q=blue+UAS+definition\" rel=\"nofollow\">https:&#x2F;&#x2F;www.google.com&#x2F;search?client=firefox-b-d&amp;q=blue+UAS+...</a>",
+                    "comment": [
+                        {
+                            "text": "This is exactly our initial market. We realized you can&#x27;t beat China for a long time, so what do you do in that time? Service demand where you have a structural advantage.",
+                            "comment": [
+                                {
+                                    "text": "Can I ask if you are working with any established US defense-oriented electronics firms that go further up the supply chain in auditing&#x2F;documenting sources and chain of custody of components and the whole BOM? Having US made circuit boards is great but if a certain model of microcontroller only comes from one or two sources and they&#x27;re in mainland CN, that&#x27;s a known caveat that has to be documented somewhere... Or if the same product is available at a higher price from a different location. That sort of thing.<p>One example I could offer is APD, the ESC manufacturer in Australia. They sell ESCs used both in the commercial cinema&#x2F;filming industry (big quads and coaxial octos carrying RED Komodo size cameras), but also for defense...",
+                                    "comment": [
+                                        {
+                                            "text": "Haven&#x27;t yet worked with them, but that is one of our goals. We produce documentation to trace all components up the supply chain. In cases where the part is truly only available in CN, we clearly state this.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Yes, pricing is much higher than China over here, mainly due to the non-existent support for high-mix low-volume work. NRE adds a lot, and so the prices are high right now. This is why we need to own the stack, optimize for high-mix, and drive down costs over time. It will take a lot of work.",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s also the immense know-how Chinese manufacturers have accumulated at this point. For a 5-piece hobby order $25 shipped, I got feedback confirming a wrong-looking part of my design before they printed.",
+                    "comment": [
+                        {
+                            "text": "And their ability to pollute without regard for life or the future.",
+                            "comment": [
+                                {
+                                    "text": "[dead]",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Which manufacturer was that?",
+                            "comment": [
+                                {
+                                    "text": "JLCPCB.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;ll hijack this point to talk about robotics - I think we agree 1) It&#x27;s not ideal for China to control production for _all_ of the things we use here.<p>2) What they already are good at they&#x27;ll continue to improve at, because of domain knowledge &amp; ecosystem<p>3) The reason they are ahead in the first place is labor cost &amp; the QOL workers will tolerate (and intentional government investment)<p>4) The only way around this is for the US to invest into robotics (labor) &amp; subsidize american manufacturing (ecosystem)",
+                    "comment": [
+                        {
+                            "text": "&gt; The reason they are ahead in the first place is labor cost &amp; the QOL workers will tolerate<p>That hasn&#x27;t been accurate in a decade. Chinese labor costs have been higher than Mexico since before Covid. They have more efficient firms, business processes and so much more. The parenthesized &quot;(and intentional government investment)&quot; is related to how they developed nimbler systems, but ignores the totality of industrial policy.",
+                            "comment": [
+                                {
+                                    "text": "In this case specifically they also have a huge amount of automation and process learnings from being around for 20+ years.",
+                                    "comment": [
+                                        {
+                                            "text": "They also have a pretty organised society and a strong focus on education, so given money they will run with it a long way.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I totally agree that we need to reinvigorate manufacturing in the US and that it’s going to take the government (federal level) to make this happen. But for some reason we’d rather give those tax dollars to billionaires and elect incompetents like the current president.",
+                            "comment": []
+                        },
+                        {
+                            "text": "Agreed completely. The recent bans are one way of doing this but not the most sustainable long term at all.<p>We have two options, give up and allow China to control all production, or start the hard battle to improve manufacturing here.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It will definitely be expensive, and if you raised any eyebrow, you will get “made in the US” remarks immediately. Regarding “drone”, it’s a buzz word, in the past two years everyone is piggy backing on it like how all industries did with “crypto” years ago and “cyber” years before, or others with “AI” in software world now, “drone” is the word for hardware related, any new product or startup that has hardware involved, you will see this word quickly. I hate it and I hate how they ruined this amazing hobby with all their corporate defense BS, but oh well.",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s important to focus on where real innovation in the space is happening, and to me that&#x27;s in drones. Some of the hype is overstated but drones are the new additions to conflict, and they&#x27;re clearly not going away.",
+                            "comment": [
+                                {
+                                    "text": "A lot of the hype is overstated, and I have been in drone world since 2014, but because of the weaponization of them and the global atmosphere of militarization, there’s a LOT of money pouring in now, so everyone wants a piece of that cake. In reality, their (the fpv ones specifically) success rates are around 1&#x2F;10, but only the successful ones are shown for obvious reasons.<p>Also, I did mention back in 2020 that drones are the only practical type of robotics compared to others, although I meant for good purposes not how they are used right now.",
+                                    "comment": [
+                                        {
+                                            "text": "Yes even if the success rates are 1&#x2F;10 they are still causing serious damage for their cost in modern conflicts. Agreed that the hype is overstated.",
+                                            "comment": [
+                                                {
+                                                    "text": "And if the success rate is 1&#x2F;10 but the cost is 1&#x2F;100… that’s still a win as far as the war chest is concerned.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "One of your major choices is how much you want to specialise, vs be a general service. I expect you&#x27;re in the phase of discovering that.  Now, with the disclaimer I&#x27;m just a random guy who knows not-much about business - and is just a small hobbyist electronics guy - it seems clear that your stiffest headwinds are at General Service. I would be leery of how much success you&#x27;d have there, because general PCB service is something the world has A LOT MORE of than it had 10 years ago, and the economics are on balance unfavourable to you.<p>But to (very slightly!) paraphase you, you think it&#x27;s important to focus on drones&#x2F;defense and other nationalist areas where the future is canted toward you, and while that is not an area I&#x27;d enjoy working in myself (no personal judgement on you, but I&#x27;d rather spend my life doing things other than conflict and war), that is clearly what you know to be your first-rank business chance.",
+                                    "comment": [
+                                        {
+                                            "text": "Yes I agree. If it turns out that there is not enough demand to service in defense, we can use the optimizations found from the defense market to take a stab at the general market. It doesn&#x27;t make sense to start with that off the bat.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Still remember when people mostly referred to them as &quot;quadcopters.&quot;",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "This is essentially the problem with a lot of US fabs. Many exist only as a technicality for the defense industry to make things domestically. This means they get the &quot;$1,000 hammer&quot; margins. When you approach them for a prototype, they essentially don&#x27;t want your business.",
+                    "comment": []
+                },
+                {
+                    "text": "Drones and defense have nothing to do with expense. It is 100% about getting on the approved vendor list, at which point the prices go up.<p>It’s not like PCB boards in the defense industry are somehow special, though they probably should be.",
+                    "comment": [
+                        {
+                            "text": "&gt; Drones and defense have nothing to do with expense<p>I would disagree?  Look at Helsing, the german manufacturer of loitering  munitions, and its direct competitors who are trying hard to get per-unit costs way down. Without even mentioning the myriad of Ukrainian manufacturers who are building cheap and cheerful things under $10,000 per unit (or even under $2500 per unit).  There is a very real push within all NATO militaries now to basically copy many of the capabilities the Ukrainians have built in the last 4-5 years.<p>Not saying that we won&#x27;t still have lots of huge dollar items and massive programs like the AGM-158 JASSM, but there&#x27;s a <i>reason</i> why the US paid a company to basically clone the Shahed-136 as the LUCAS at under $50k per unit.",
+                            "comment": [
+                                {
+                                    "text": "Volume unit costs matter a lot. What matters less is cost during prototyping and development, where speed to iteration becomes way more important.",
+                                    "comment": [
+                                        {
+                                            "text": "I absolutely agree, if you have just a few people who are each paid 180k a year sitting around waiting for something to arrive because the low-quantity prototyping vendor is slow, it&#x27;s not the best use of resources at all. One of the reasons why certain companies spend a lot of money buying their own laser sintering 3D printers for low volume test-fit protoypes in the aerospace industry, or invest in their own small-scale CNC stuff to do similar.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "medium to large defence companies tend to have in house board fabs. I worked in one.",
+                    "comment": [
+                        {
+                            "text": "yes, what was the utilization like?",
+                            "comment": [
+                                {
+                                    "text": "20-40% capacity. Reserve available. Turnaround same day on a board (2 layer). Next day 4 layer. Two days exotic (rogers etc). Pick, place, soldered 2 days or delivered to lab immediately after panel cut.<p>If they had a fast production run in they could extend to 24 hours operation and triple base capacity.<p>They did a fair bit of TH though which was manually stuffed and wave soldered which could slow stuff down considerably.",
+                                    "comment": [
+                                        {
+                                            "text": "Very interesting, I&#x27;m wondering if that low-utilization rate justifies the capex of building a line.",
+                                            "comment": [
+                                                {
+                                                    "text": "It&#x27;s mostly for security reasons. Both supply chain and secrecy.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "Low utilisation would be a good thing as they would value availability to the line very highly.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Yes and no, I could imagine a system where they have on demand capacity with a company like us and pay for that service.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "I see what you did there. :-)\nGood luck with your venture btw.",
+                                                                    "comment": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I ran a hardware startup for about a decade. We ended up doing all PCB assembly in China. We did try to find this in the USA, but it was indeed too slow and expensive.<p>The bottleneck in assembling a PCB is usually component sourcing. My product was not the most complicated, and even then, to assemble in Shenzhen, China, it often took a few weeks to get all the components.<p>The core issue here is that latency is determined by the outliers. Assembly can&#x27;t start until you have all units, and the hardest to source one is the bottleneck!<p>To me, the core innovation here is to plug into the design software to source these long tail items ahead of time.<p>It&#x27;s pretty interesting that usually when the PCB is being designed, the designer has no awareness of supply chain. They&#x27;ll bake in a chip that has a 4 week lead time without even realizing it, when a similar component might be one cent more expensive with much faster lead time.",
+            "comment": [
+                {
+                    "text": "This is our first step to work more closely with the designer throughout the process.<p>Currently there&#x27;s a wall between the designer and the manufacturer, which hurts lead times massively, we&#x27;re aiming to bring that down.",
+                    "comment": [
+                        {
+                            "text": "I&#x27;d love a kicad plugin where not just lead times but current stock etc are showed live, and for anything marginal a button I can smash to order it in advance.<p>Even if 50% of the time I didn&#x27;t end up using that component, that would still be an amazing service.<p>We pre-order parts to JLC during the design process. I know people using JLC aren&#x27;t your target but my advise would be to not ignore how gloriously friction-less it is now buying parts into private inventory - and with no ongoing fees as well. They have really nailed it.",
+                            "comment": [
+                                {
+                                    "text": "Some financial engineering could help here too. That abandoned inventory is useful to somebody, but warehousing can be non trivial… how do you get liquid and reroute the parts?<p>There’s some flavor of consignment waiting to happen here.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "That&#x27;s exactly what we are trying to do.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Not to negate your core points but almost all the HW engineers I&#x27;ve worked with who are experienced absolutely consider sourcing and availability in the decision making process.<p>It was a reason years ago Maxim&#x27;s ICs were almost always on a &quot;never design in&quot; list since obtaining them was near impossible in reasonable time frames.<p>Most &quot;seasoned&quot; HW engineers who are working lower volumes verify availability with distributors and for high-volume (i.e. 100K units+&#x2F;yr) work with sourcing people internal to company to get commitments for key ICs.",
+                    "comment": []
+                },
+                {
+                    "text": "<p><pre><code>  the designer has no awareness of supply chain.\n</code></pre>\nWell, you’re asking for a design that boils down to a single channel downconverting I&#x2F;Q ADC for 21.4 MHz IF, how many such products do you think there are? The ones by TI have been discontinued,  your FPGA has no budget to do it and you don’t want one with more oumph so ADI it is … and Mouser says they have 800 on order, so that’s our only option.",
+                    "comment": [
+                        {
+                            "text": "But a chip for a 21.6 MHz IF may have 300000 in stock right now, you see the problem?",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Is there an opportunity for the design software to suggest alternatives to avoid those long wait time for certain components. E.g. you could also use that kind of capacitor and it is available in 24h.",
+                    "comment": [
+                        {
+                            "text": "Yes we&#x27;re going to build that into it. In the pipeline definitely.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This is an exciting project! My main feedback: you can definitely tell the website content is AI-generated. It&#x27;s okay to vibe code the design, but I really hesitate when I see vibed writing.",
+            "comment": [
+                {
+                    "text": "You&#x27;re right, putting more attention to that now.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Love the energy, but I can hardly believe the title &quot;Proven Metals&quot; because your website does not stand up to basic scrutiny:<p>1) First issue: I do not know what your manufacturing constraints are for PCBs...the number of layers is not documented. I don&#x27;t even know if you support FlexPCBs.<p>2) I suppose I could figure out if you could make my boards in seven days if I played your upload game...but I should have to do that. Even the following site, with its clunky UI, makes it more clear what they can or can&#x27;t do:\n<a href=\"https:&#x2F;&#x2F;quickturnpcb.co.kr&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;quickturnpcb.co.kr&#x2F;</a><p>3) You say you ship &quot;tested&quot; boards, but what does that mean? Firmware testing? Emissions testing? If you ultimately choose the MPNs, does that mean you own the failures if the board doesn&#x27;t come up?<p>4) It&#x27;s not clear if you accept consigned parts. It&#x27;s not even clear if you are properly storing the parts you are kitting with respect MSL, ESD, etc.<p>5) In the end, what makes you any different from a typical broker like Millenium Circuits Limited? (Not that I am endorsing them, as I have had terrible experience from them as well)<p>6) If you are owning testing and promising quick turnarounds, I would assume you are actually shipping test fixtures to the CM before they ship so they can rework if necessary. But again unclear from your description",
+            "comment": [
+                {
+                    "text": "1) Well noted, we are working on fixing that\n2) Agreed, fixed with 1)\n3) We should be more clear about testing. We offer a range of tests (in house x-ray, functional, bring-up) that we should show more clearly.\n4) This will be made more clear on the site\n5) We don&#x27;t aim to be a broker in the end. We aim to own the whole stack. This is how we start.\n6) True, we do in-house testing and rework, which should be more clear on the site.",
+                    "comment": [
+                        {
+                            "text": "I looked at your site again and see you made changes.\nStop working so fast, it&#x27;s actually hurting your presentation pretty badly.\nI see &quot;We make PCBs fast&quot;. I suppose it may mean something to the layman, but to me it just means you do what 4PCB does, except not in 24 hrs like they do. But never mind about determining turn time. When I click that I only see a single time listed (5 days). But if I look at the top of the screen I see another turn time of 7 days.<p>Just stop working on this site for 3-4 days and get your mission statement together. Maybe put some pictures of actual test fixtures if you test boards or any of your rework equipment. Every PCB&#x2F;PCBA shop out there puts rework videos on its &#x27;gram. It&#x27;s just really hard to understand your business with this edgy&#x2F;terse hustler kind of talk. Or your careers page where I get the sense that move fast and break things is the backend philosophy. Not a good look for someone who wants PCBs fast.<p>I so want this to work but holy cow I can&#x27;t even understand where you guys are coming from.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I hope you guys are successful because I would love to see more US options in this space. Realistically, you can get boards in 7 days from China, and competing with them on price seems like a challenge. So that leaves ITAR and people who need boards even faster. Sounds like that’s where you’re focusing your energy already.\nWhat pick and place are you using now that you’ve moved on from the Neoden world?",
+            "comment": [
+                {
+                    "text": "Yes that&#x27;s where we&#x27;re putting our energy right now. We do most of our assembly with CMs now, but looking at Juki when we open our facility.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "When you say PCB at the beginning are you referring to raw PCBs or PCBAs? Presumably your service will be sourcing raw PCBs from China still and just doing PCBA?<p>When my pal’s raw PCB company went out of business, you could buy a finished PCB from China for less than the cost of FR4, which also came from China. How do you intend to address this supply chain risk? Once China raises your cost of raw PCBs your price argument no longer works.<p>Also, are you sourcing components from US sources or using China? Recently I stopped purchasing from Digikey and Mouser because their services are much slower than they used to be, and I now get components much faster and for lower cost in China.",
+            "comment": [
+                {
+                    "text": "We source PCBs from both China and USA. Some of our customers want incredibly fast turn where Chinese shipping times don&#x27;t cut it.<p>&gt; How do you intend to address this supply chain risk?<p>Haven&#x27;t yet figured it out. Options are opening bare board fabs or partnering with US fabs and panelizing orders.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This would be incredible for innovation if we can bring this back domestically.  It&#x27;s very hard given lack of raw materials and the supply chain around it often also requires robust network but hopefully this spurs something.<p>This is something that takes real expertise though, kind of a moonshot for an inexperienced team unfortunately.  Would be cool if had mission driven backers otherwise will just end up being hobbyist material.  Relying on defense (bubble?) gives at least some breathing room as not actually competing against china for better prices.",
+            "comment": [
+                {
+                    "text": "Agreed. For this to work the entire supply chain has to support it. There are starts like mouser and digikey, but the raw materials and production capabilities are even more important.<p>We believe starting with defense will give us capabilities that we can then bring to other verticals, and will help us make optimizations that bring the cost down. It&#x27;s impossible to beat china off the bat though.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "&gt; Suddenly we were spending 90% of our time assembling circuit boards instead of growing the business<p>&gt; When you look at the full process, you realize that assembly is not the bottleneck.<p>I’m confused, which one is it?<p>I assume the growth story isn’t great when you factor in the non-automatable tasks and big capital outlays, so your product leaves that to existing CMs and scales the software stack instead?<p>Do you see this product as being beneficial to subcontractors (presumably still doing the 90% manual work), or does this legitimately reduce the actual workload&#x2F;costs at the production level?",
+            "comment": [
+                {
+                    "text": "Sorry for the confusion, our time was spent doing manual work because we didn&#x27;t have much automation at all. For the industry, assembly is not the biggest immediate bottleneck, with it being quite commodotized. However, we plan to open an automated assembly facility in the next few months to take stronger advantage of our front-of-house automations.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you can get to JLCPCB levels of automation (in their fab) and produce a better frontend experience (shouldn&#x27;t be too hard, JLC&#x27;s is awful but still one of the better ones) then that will be amazing! North America desperately needs something like this. Good luck!",
+            "comment": []
+        },
+        {
+            "text": "I love to see new players in this space! We’ve done a ton of PCBA through Macrofab. My relationship with them goes back far enough to have been a beta customer and I’ve chatted on the phone with the CEO a few times. It’s interesting comparing what you’re offering and what they offer. When I started using them, the fact that you could just upload Eagle or KiCAD files, get an instant quote, and verify MPN&#x2F;BOM and parts placement online… without having to zip up and email Gerbers was extraordinary. Their lead-time is longer than yours, around 3 weeks, but the pricing has always kinda hit a sweet spot.<p>I noticed your KiCAD plugin there too. I am super curious to see what your workflow and pricing looks like. There are definitely times when the 7-day turnaround will be a game changer for us.<p>I guess one gate there: do you ship to Canada? We do have a US branch that could do the export-import for us, but way easier if we don’t have to route it through them as far as end-to-end delivery time goes.",
+            "comment": [
+                {
+                    "text": "Thanks for the feedback. We can ship to Canada, haven&#x27;t done it yet, but open to it!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Congrats on launch! Have you considered providing engineering consulting as a part of the package? We always started with an amazing CM here in the US and scaled manufacturing in China. We usually spent more with our US CM to go 0 -&gt; 1 -&gt; 500 than what we paid the Chinese manufacturer to go from 500 -&gt; 100,000. He was an amazing guy with consultants sitting at every aspect of the process. We would not have succeeded without the us CM.<p>I always thought there was a business in making that consulting easy to find. Its usually a very hard thing to find good consultants.",
+            "comment": []
+        },
+        {
+            "text": "Last autumn we sourced boards (both fab and assembly) in the US.  The vendors I’d used in the past in MV and Sunnyvale are gone but some folks are still around. Getting the boards made was slow for the reasons you said but the real problem was the parts: by mid summer 2025 the supply chains had become so disrupted that getting parts from mouser and digi-key was difficult. Design in a part with 6000 in inventory only to find by the time you ordered there were none because someone had scooped them all, unclear when they’d be replenished.  Managing, connectors that didn’t match the datasheet.  Etc.<p>Never again.  Chinese shops are faster than US manufacturing.  And they take Digikey and mouser part numbers.",
+            "comment": []
+        },
+        {
+            "text": "&gt; Now, the need for a domestic PCB supply chain is higher than ever before, yet the infrastructure has been dissolving over the last 2 decades. What is left is mostly small family run manufacturers (CMs) that have been operating in largely the same, labor intensive way since the early 2000’s.<p>Would really like to see you guys succeed. We definitely need more manufacturers in the US. But this isn&#x27;t quite true. Not now, and I&#x27;m not sure it&#x27;s ever been the case in the two decades plus that I&#x27;ve been in hardware. Apart from manufacturers like Sierra Circuits in the Bay Area and Advanced PCB in Colorado that have been around all of that time, we had Tempo (in SF then but no longer), and now have MacroFab (Houston) and CircutHub (also YC, somewhere on the East Coast I think).",
+            "comment": [
+                {
+                    "text": "True, there are a few standout cases of larger CMs. Tempo was the poster child and they did a lot of things right. MacroFab and CircuitHub will be great competitors to have, and as stated in earlier threads we believe our edge will come from owning the entire stack from design to testing.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m trying to find your capabilities. I.e trace and space minimums, hole to edge minimums, min annular ring, etc. Are you not at that stage yet? Will you ever publish a standard spec?",
+            "comment": []
+        },
+        {
+            "text": "Does the 7 day turnaround hold up for more complex boards (8-12 layers, laser drilled, blind micro-vias etc.)? Not looking for a detailed quote - just a hand waving answer.<p>I&#x27;m in the UK and we have our own electronics assembly but the actual PCBs are made elsewhere. Lead time on a bare board almost seems to be a direct multiple of the number of layers, however much you are willing to pay. Our ability to design and build prototypes has got faster and faster on some projects, but having the board made is the limiting immovable factor.",
+            "comment": []
+        },
+        {
+            "text": "I work in a building with a board assembly line that sits idle most of the time. They have tried securing outside contract work to fill in the gaps. No takers yet.<p>The only domestic drivers for board fab and assembly are autmotive and defense. They already have their supply chains running.",
+            "comment": [
+                {
+                    "text": "Makes sense. Is it that most of the time is spent switching jobs or that there&#x27;s just not enough jobs going through it?<p>You&#x27;re right that automotive and defense make up most of the demand. We also see demand from teams who can&#x27;t use JLC&#x2F;PCBway due to the difficulty of cosigning parts outside their catalogue.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I think this is a huge opportunity — speed, domestic production _and_ overall usability of the process - i do think appearing serious business matters a lot in this space, i found your site a little lacking in terms of prose, details, etc. Really great idea though.",
+            "comment": [
+                {
+                    "text": "Site is not cutting it anymore, going to dedicate some better effort to bring it up to standard.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Is there a standard parts list of immediately available parts, like JLBPCB? [1]<p>[1] <a href=\"https:&#x2F;&#x2F;jlcpcb.com&#x2F;parts&#x2F;in-stock-parts\" rel=\"nofollow\">https:&#x2F;&#x2F;jlcpcb.com&#x2F;parts&#x2F;in-stock-parts</a>",
+            "comment": [
+                {
+                    "text": "Everything in stock on US distributors, but we will make a tool for this too.",
+                    "comment": [
+                        {
+                            "text": "No, that&#x27;s misleading. &quot;Immediately available&quot; means parts <i>you</i> already have in stock and can start populating without waiting for another supplier - it doesn&#x27;t mean things that you could order.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This looks like it has a long way to go before it is usable. Clicking &#x27;Capabilities&#x27; largely just gives me the 7 day turn spiel again, while I&#x27;d expect something about min trace &#x2F; space, HDI capabilities, number of layers, any fancy laminates, etc. For assembly I&#x27;d need to know more about min pitch &#x2F; package size, available types of solder paste, etc. If you&#x27;re doing PCB sourcing AND assembly (like it sounds like in the text here), that is not clear on the site.<p>Also, for slow old industries (like Automotive), you&#x27;d likely need a fast way to coordinate NDAs just to get an engineer to be allowed to share the design files with you.",
+            "comment": [
+                {
+                    "text": "You&#x27;re right. I&#x27;m updating the website with capabilities now. The NDA simplification is also a good idea, we will implement that as well. Thanks!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I just had a board come in (domestic) after I think a few months. We&#x27;re repeatedly running into issues with quoting and manufacturing taking ages. Especially quoting. We do our assembly in house though so I&#x27;m not concerned about that, but also we&#x27;re usually (though not always) incredibly low volume so board houses don&#x27;t like us.",
+            "comment": []
+        },
+        {
+            "text": "&gt; we have a heuristic harness that Fable 5 uses to check the board for DFM issues<p>So OpenAI gets a full copy of every customer board? I wish that was mentioned on the upload page.",
+            "comment": [
+                {
+                    "text": "I&#x27;m pretty sure Fable 5 isn&#x27;t by OpenAI",
+                    "comment": [
+                        {
+                            "text": "Oops, true. I regard Anthropic and OpenAI as essentially the same company. Neither of them seem capable of securing their infrastructure.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;m super excited to try your service and the KiCad plug-in to move supply-chain dialogue closer to point-of-creation makes a TON of sense.  That and the speed seem to be the two points of differentiation from Macrofab, who is my current supplier.  They will be stiff competition for you as they are a great shop and have a good software interface and a lot of capabilities. I imagine using you guys for quick turn-around needs and them for production and scale?",
+            "comment": [
+                {
+                    "text": "Yes macrofab has a great service. We are best for quick turn, but long term we aim to cater for production as well. All in good time.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "A very welcome service! Here&#x27;s a request: I haven&#x27;t tried the process, so maybe you do, but if you don&#x27;t offer a variety of PCB materials you will potentially lose opportunity in the mmWave space where antennas are printed on the PCB so the material must be from a subset of those material that are available overall.",
+            "comment": []
+        },
+        {
+            "text": "Nice but the USA are not our global friends anymore.<p>Anything available in the EU?",
+            "comment": [
+                {
+                    "text": "Disclaimer: CTO &amp; Co-Founder of AISLER here<p>We&#x27;re trying to make electronic manufacturing (PCB &amp; PCBA) simple, affordable and speedy. A high grade of automation allows prices starting at 12.20 Euros including VAT and shipping. Our software platform is completely built in-house, including state-of-the-art ODB++ integration.\nLet me know if you&#x27;ve any questions, happy to answer.",
+                    "comment": [
+                        {
+                            "text": "Thanks for being open to questions. I always wanted to know this:<p>3 copies of a simple 50x50mm, 6 layer, board is 184€ and takes 13 days to make as per <a href=\"https:&#x2F;&#x2F;aisler.net&#x2F;en&#x2F;products&#x2F;boards\" rel=\"nofollow\">https:&#x2F;&#x2F;aisler.net&#x2F;en&#x2F;products&#x2F;boards</a> - for comparison, JLC makes five 100x100mm 6-layer PCBs in 11 days, for $2. (And no, it&#x27;s not only because of the (always available) coupon. Pricing generally gets <i>better</i> at higher quantities.)<p>So my question is: why is 6 layers so expensive? Are you really truly economically unable to even get close to JLC, or do you just not care about prototyping orders (or the overlap between hobbyists and professionals), or are these smaller boards a too large part of your revenue that you can&#x27;t compromise, or is it more a case of being stuck in an outdated legacy mindset where 6 layers is &quot;a lot&quot; and must be allocated to &quot;serious business&quot; only, or is it something else? Or am I just completely off about proper market segmentation? (Same for going to 2oz copper.)<p>Please don&#x27;t take offense at the way I&#x27;m asking; I really really want to be your customer. I&#x27;m never going back to unnecessarily constrained shitty 2 or even 4 layer designs, when a simple part&#x2F;sig, gnd, vcc, sig&#x2F;gnd, gnd, part&#x2F;sig stackup makes design soooo much easier even for simple circuits. But I really would love to know why nothing comes close to JLC one level up from novice PCBs.",
+                            "comment": [
+                                {
+                                    "text": "Happy to answer that question! In the end it&#x27;s a numbers game. Manufacturing gets cheaper with higher demand. For 6 layers the demand is rather low. We&#x27;ve figures from a US PCB comparison site and the share of 6 layers and more is below 5%, everything else is 2 and 4 layers.\nJLC serves a huge domestic market, so even with niche products they can do order pooling. That&#x27;s not possible for us, thus the difference between 4 layers (€28.29) and 6 layers (€184.83). If there would be more demand in general, we could offer much lower prices.",
+                                    "comment": [
+                                        {
+                                            "text": "Thank you. I hadn&#x27;t expected it to just be lack of demand&#x2F;scale. All the best with Aisler; I really hope the EU&#x27;s renewed interest in local production will lead to more business for you.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I&#x27;ve only found B2B oriented companies in the EU.<p>Edit:\n<a href=\"https:&#x2F;&#x2F;aisler.net&#x2F;en&#x2F;partners&#x2F;librepcb\" rel=\"nofollow\">https:&#x2F;&#x2F;aisler.net&#x2F;en&#x2F;partners&#x2F;librepcb</a><p><a href=\"https:&#x2F;&#x2F;www.eurocircuits.com\" rel=\"nofollow\">https:&#x2F;&#x2F;www.eurocircuits.com</a><p><a href=\"https:&#x2F;&#x2F;beta-layout.com\" rel=\"nofollow\">https:&#x2F;&#x2F;beta-layout.com</a><p>LibrePCB from Aisler seems to be most like jlcpcb.<p>You do pay a lot more though due to industrial regulations. Only lead free solder is allowed in the EU, and chemical regulations and waste disposal laws will drive up the price a lot compared to similar services in China and the USA.",
+                    "comment": [
+                        {
+                            "text": "FYI: Aisler is the PCB manufacturer and assembler (based in Aachen iirc). LibrePCB is CAD software.",
+                            "comment": []
+                        },
+                        {
+                            "text": "China mostly produces ROHS compliant PCBA anyways. This is a non-issue",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Eurocircuits is the closest equivalent I&#x27;ve used. Notionally 2 weeks PCB fab and assembly (but don&#x27;t always meet this), and they can stock your parts in advance (though I don&#x27;t know if this improves their lead times at all). They have a good setup for dealing with the most common causes of ordering faff by essentially giving you the tools to match up the BOM and pick and place details as well as good DFM stuff. Generally when I go through it there&#x27;s no further back and forth.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;ve used <a href=\"https:&#x2F;&#x2F;aisler.net&#x2F;en\" rel=\"nofollow\">https:&#x2F;&#x2F;aisler.net&#x2F;en</a> (based in Aachen) plenty of times. I like their quality and I was able to pull off some stupidly toleranced layouts. (This is as a hobbyist building some one-off circuit boards). I haven&#x27;t used their assembly service.",
+                    "comment": []
+                },
+                {
+                    "text": "Not as familiar with the EU market, but have heard good things about Eurocircuits",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "You guys should really be making an end to end PCB machine, sourcing the parts and part inventory for custom PCBs really should be the responsibility of the end user.",
+            "comment": [
+                {
+                    "text": "Possibly, but our users find value in not having to kit, store, or ship parts to CMs.",
+                    "comment": [
+                        {
+                            "text": "I&#x27;m skeptical this is a cost effective for low volume prototyping which is where the speed of made in America matters.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "whats the closest to this that exists today? (??? + pick and place?)",
+                    "comment": [
+                        {
+                            "text": "I&#x27;m not the expert but Gemini doesn&#x27;t say anything exists besides the Voltera V-One (which obviously doesn&#x27;t work for complex PCBs). I am imagining something like a PCB microfactory the size of a container (or even smaller) that completely handles PCB etch and drill, solder paste application, PnP, baking, and testing.",
+                            "comment": [
+                                {
+                                    "text": "That would be super cool. Difficulty comes with multi-layer PCBs, hard to find a solution for laminating.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "PCBA lines are largely automated as of today, issues start when you do high-mix work. Most time ends up being spent switching between jobs and programming machines, meaning that tool usage time is low.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "We (tscircuit) are trying to develop a PCB fabrication method that&#x27;s compatible with US regulation (i.e. a dry process without etchants)- we&#x27;re seeing awesome results using UV lasers [1]. Would love to chat sometime!<p>[1] <a href=\"https:&#x2F;&#x2F;x.com&#x2F;seveibar&#x2F;status&#x2F;2085438976622780654?s=20\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;seveibar&#x2F;status&#x2F;2085438976622780654?s=20</a>",
+            "comment": [
+                {
+                    "text": "I would be super interested in chatting. Sending a DM.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "1. Do you fabricate in-house, or through partner fabs? If partners, where are they located?<p>2. Can you do 6-layer 1+4+1 HDI - laser microvias (0.100 mm), stacked microvias over buried vias, sequential lamination?<p>3. Can you do via-in-pad fill and planarize (Type VII &#x2F; VIPPO)? I have ~218 vias on one board needing it.<p>4. What&#x27;s your minimum copper-to-copper clearance? Can you do 0.075 mm with a waiver.",
+            "comment": [
+                {
+                    "text": "1. Through partner fabs located mainly in the Bay Area but also across the US.<p>2,3,4. Some of our partner fabs can, publishing a detailed spec sheet asap",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Congratulations!<p>Your timing could not have been better. Yesterday I was talking to a friend about starting a company to tap into the domestic solar inverter market that is about to have a healthy growth due to FCC banning foreign made inverters with radios.<p>We are planning to build it around STM32 or ESP32 with US parts sourcing and manufacturing.<p>We are in the project scoping phase. Hopefully we can get something going soon.",
+            "comment": [
+                {
+                    "text": "Interesting stuff, definitely a lot of new demand due to the FCC rules. Curious to see how they hold up though.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "<i>Drone and defense teams get boards back in 7 days.</i><p>Quick turn in the US is 2 to 4 days.[1] That&#x27;s expensive but available.<p>[1] <a href=\"https:&#x2F;&#x2F;www.surfacemountsolutions.com&#x2F;services&#x2F;quick-turn-pcb-assembly\" rel=\"nofollow\">https:&#x2F;&#x2F;www.surfacemountsolutions.com&#x2F;services&#x2F;quick-turn-pc...</a>",
+            "comment": [
+                {
+                    "text": "Yes, a bunch of companies offer it but we aim to make it more available for a lower cost.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Each of these pretty established suppliers offer this service:<p>- Sunstone<p>- Advanced Assembly<p>- Sierra Circuits<p>- Osh Park<p>They all have ~7 day lead time or shorter. It all comes down to choosing simple processes with generic parts.<p>Do you have your own machines or just outsource these orders and ensure the supply chain stuff moves along quickly?<p>I like the idea, more heads in the game makes it cheaper for everyone, but this seems like another hat in the ring.",
+            "comment": [
+                {
+                    "text": "They all have this service, but they don&#x27;t often stick to these lead times in my experience. We help hold them accountable and in the long term we are opening a facility to bring the cost down further.",
+                    "comment": []
+                },
+                {
+                    "text": "I don&#x27;t believe OSH Park does PCB assembly, only the manufacture of the PCBs themselves.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The &quot;Capabilities&quot; section was not what I was expecting. Layers, via sizing, HDI - where&#x27;s the details?",
+            "comment": [
+                {
+                    "text": "Updating that as we speak.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "#1: How does this compare in price, parts lib, features etc to JLC? Obviously the price and parts avail will be a challenge.<p>#2: Is this accessible for hobbyists, prototypes, small companies etc, or is it a service for gov&#x2F;mil stuff that isn&#x27;t allowed to use China? (Blue UAS etc)<p>I&#x27;m excited and would love to order a board.",
+            "comment": [
+                {
+                    "text": "#1 price is more expensive than China, parts availability is higher.<p>#2 it is accessible, but more expensive so if cost is your main constraint it&#x27;s not the right choice.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I don&#x27;t know whether you&#x27;re looking at small-to-medium batch indie stuff, or big customers, but if it&#x27;s the former I&#x27;d reach out to Josh Lifton from Crowd Supply.  Surprisingly accessible guy and this would be a great fit for them.",
+            "comment": []
+        },
+        {
+            "text": "Curious how the pricing compares to overseas fabs once you factor in the 7-day turn — is that gap closing enough for non-defense teams to switch too, or is this mainly aimed at people who need the domestic supply chain regardless of cost?",
+            "comment": [
+                {
+                    "text": "Non-defense teams find value in getting fab done overseas and then turning to us for assembly and procurement. Bare boards are super expensive here.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It’s tricky to compete with your own suppliers. For example, see Microsoft’s dance with Dell &amp; HP when they launched Surface. How do you plan to keep the CMs happy while you’re operating your own line?",
+            "comment": [
+                {
+                    "text": "We can do this by continuing to give them work. They are currently happy with us routing jobs through them, and I expect this to continue. It means they don&#x27;t have to go searching for customers.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Cool! I wish there was a way to print boards for hobby purposes. What is the lowest price you would work with? Ballpark",
+            "comment": [
+                {
+                    "text": "That&#x27;s what I came here to ask! I&#x27;d happily fill some slack in production pipelines, by picking the IDGAF-about-speed-or-color option, if that makes it hobbyist-affordable.<p>Heck, I&#x27;d probably pay a bit more, just for knowing it never leaves US soil. But not, like, aerospace prices.<p>I guess the question becomes, what&#x27;s the cost of an idle line? Is there merit to running very-cheap production instead of letting it sit idle? What&#x27;s the smallest order they can profitably process, and will that go down as the order automation improves?<p>(I have always <i>loathed</i> getting boards made in the US, because there&#x27;s always a &quot;call for quote&quot; button where there should be &quot;add to cart&quot;. The JLC upload-gerbers-and-go experience is legitimately superior, and that pisses me off. I&#x27;m super excited that someone&#x27;s finally fixing that.)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "JLCPCB can make boards in less than 7 days easily and for non drone and defense companies.",
+            "comment": []
+        },
+        {
+            "text": "Big congratulations Will. Eager to try when I&#x27;m over next",
+            "comment": []
+        },
+        {
+            "text": "Any resources to learn how to design a circuit board?",
+            "comment": [
+                {
+                    "text": "Youtube tutorials are pretty great to get started",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "PCB made in USA. Fantastic! I love this project.",
+            "comment": []
+        },
+        {
+            "text": "I hate to ask this..but how exactly do you plan to turn this into a scalable business beyond being yet another Oshkosh? Sure it&#x27;s profitable but there&#x27;s a reason hardware manufacturing is generally outsourced to the lowest bidder. Outside of targeting specific sectors e.g. defence, how else do you plan to remain competitive globally? Manufacturing hardware (especially if you are not Apple) is generally a capital intensive, low profit margin business that is extremely sensitive to labor costs. The fact that the past two decades of growth in the US is dominated by tech companies is precisely because software and the associated network effects are able to drive disproportionate amount of growth, unlike hardware. The further down the value chain in hardware the more commoditized you are.",
+            "comment": [
+                {
+                    "text": "I think you’re actually asking good questions!<p>&gt; scalable business beyond being yet another Oshkosh<p>OSH Park is fabulous for what they do, but they don’t do PCBA.<p>I’m not OP, but I think I can provide some insight anyway:<p>&gt; Outside of targeting specific sectors e.g. defence, how else do you plan to remain competitive globally<p>I think that trying to be competitive globally would be a dumb play for these folks, they’re optimizing for something different.<p>Defence is one sector where this model works, no doubt. But there’s a bigger market that doesn’t have a great domestic story yet (I’m in Canada and work with a variety of CA and US PCB&#x2F;PCBA houses): fast-turn low-volume PCBA, either for prototype iteration or for industrial one-offs. While I work on a specific “sort of defence adjacent” project right now, my past consulting work would’ve benefitted quite a bit from being able to turn around full PCBA work in 7 days. Macrofab end-to-end was usually 3-4 weeks and cutting that iteration time down would’ve had a solid effect on reducing project timelines if it could’ve happened for a reasonable price. There are domestic manufacturers who have optimized for that… but the price was not something my clients were willing to pay to accelerate their projects. If this hits a sweet spot there… that’ll be really exciting for me.<p>(I’ve already sent it to my team to start looking at)",
+                    "comment": [
+                        {
+                            "text": "Defense adjacent work is another place where we&#x27;re seeing some strong pull.<p>&gt; scalable business beyond being yet another Oshkosh<p>Yes, OSH Park is awesome. They could add PCBA, but we see the long-term value in owning the full stack (from design to testing of finished boards). Stops us from having a knife fight all the way down.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; I hate to ask this..but how exactly do you plan to turn this into a scalable business beyond being yet another Oshkosh?<p>There are a number of small but very specialized US based defense sub-component manufacturers that support 15 to 20 people with very good paying jobs, building stuff exactly like NDAA compliant UAS flight controllers. Not everything needs to become gargantuan to be a success.<p>There can also be very good money in manufacturing specialized things that require the work to be done by US citizens with a TS or TS&#x2F;SCI clearance if you can get into that market.",
+                    "comment": []
+                },
+                {
+                    "text": "",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "What are minimums?",
+            "comment": [
+                {
+                    "text": "Minimum board count: 5<p>Releasing detailed capability docs on our website today or tomorrow.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "how does it compare to <a href=\"https:&#x2F;&#x2F;www.circuithub.com\" rel=\"nofollow\">https:&#x2F;&#x2F;www.circuithub.com</a> ?",
+            "comment": [
+                {
+                    "text": "Circuit hub has something very interesting in the works. They&#x27;re a few steps ahead of us.<p>We however plan to own the full stack, from design to board bring-up and testing. We believe that design is becoming commoditized with AI tools, but these systems need manufacturers that are involved from the start to bring down lead times.",
+                    "comment": [
+                        {
+                            "text": "what do you mean by in the works?  i&#x27;ve used them for years and they were in YC over a decade ago<p>sounds like your goal is to be an embedded systems job shop based on AI instead of engineers?  What&#x27;s your value over existing AI-accelerated job shops that leverage existing quick-turn domestic PCBA suppliers?  as a not-so-random example, <a href=\"https:&#x2F;&#x2F;otekengineer.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;otekengineer.com&#x2F;</a>",
+                            "comment": [
+                                {
+                                    "text": "Yes, though it was only somewhat recently that they transitioned to building their own automated facility.<p>We don&#x27;t plan to do the design ourselves, we realize that our users will be using AI design tools that need to be integrated with the factory. We will build that link.",
+                                    "comment": [
+                                        {
+                                            "text": "what&#x27;s your vision for that link?<p>it&#x27;s not clear to me what the interface to the user is, or who the user is",
+                                            "comment": [
+                                                {
+                                                    "text": "A PCB design tool that has manufacturing built in, for use by humans or agents.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; Drone and defense teams get boards back in 7 days<p>Oh",
+            "comment": []
+        },
+        {
+            "text": "Amazing, now if we could just get this for silicon wafers :D  All joking aside, would be great to get something like this for shuttle run wafer taping vs the current 6+ month window.",
+            "comment": [
+                {
+                    "text": "Absolutely. Let&#x27;s do it for everything",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "HN allows ads now?",
+            "comment": [
+                {
+                    "text": "Launch HN posts for YC-funded startups have been happening several times weekly for nearly 7 years. Job posts for YC-funded startups have been on HN, almost since the beginning.",
+                    "comment": []
+                },
+                {
+                    "text": "Do you know where you are lol? HN is ran by YC. All of the ads are YC ads for that reason",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

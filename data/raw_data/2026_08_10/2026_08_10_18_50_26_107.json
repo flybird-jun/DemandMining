@@ -1,0 +1,331 @@
+{
+    "item_id": 49202690,
+    "title": "What is a product?",
+    "url": "https://roge.onwrite.app/what-is-a-product",
+    "text": "black road bike\nPhoto by\nMikkel Bech\non\nUnsplash\nI've seen, and probably you have seen too, far too many prototypes out there created with AI treated as products, because it is\nthat\neasy to prompt two sentences and get something that resembles a real thing. Do you want a website to sell your old furniture? Done. You want an Instagram clone? Done. What about a full-feature LinkedIn replacement? Done. Except, it is not really done.\nEvery other week, Anthropic or OpenAI launches a new version of their models, and every other week, the internet is flooded with examples of what those models are capable of. Beautiful designs and prototypes fill up our feeds, giving us, simple mortals, a taste of what the future looks like, on localhost. No link needed.\nI am impressed. Are you impressed? Well, you should be. But when I think about this for two seconds, I realized that four years after Sam Altman tweeted about his new chatbot, I haven't seen any real competitor of YouTube, or Figma, or Google, or Instagram created solely with AI. If this thing is so powerful, where is all the innovation? Shouldn't all of us be creating our own version of GTA 6 from our garage – I mean, our couch – at this point?\nIt turns out a prototype is not a product. Most of what we see on YouTube that was created by the dude, who never touched a line of code before, between two cups of coffee is not even a prototype; it's nothing. If you are generous, you can call it a demo, a draft, maybe?\nA real product is hard to build. I'm not saying there aren't people out there creating useful stuff in record time. What I am saying is that you shouldn't be impressed by everything you see online. Don't feel bad if you don't have anything to show up with all the free intelligence available nowadays. Almost nobody has.\nA real product has real users, a real market and solves real problems.\nWhen I think about most of the products we use daily, like X.com or Google, I wonder why nobody has a real competitor of these things before. It was not a lack of intelligence or know-how. Many companies were created with this goal in mind, but none succeeded because a product is more than the parts that compound it.\nI could prompt a basic Instagram feature in a few hours, maybe a few days, but would it mean I created a product? If nobody uses it or cares, is it still a product? What makes a product is its users. If nobody is using the thing you built, you don't have a product, you have a toy. Have fun playing with it.\nProduct",
+    "comment": [
+        {
+            "text": "I agree with the point generally but:<p>&gt; I haven&#x27;t seen any real competitor of YouTube, or Figma, or Google, or Instagram created solely with AI.<p>Is a ridiculous set of products to expect competitors for. First all but 1 rely heavily on network effects. YouTube is a low cost provider. Think about it, they provide unlimited high quality video storage for free. They process 500 hours of content every minute. Google and Instagram have a huge network all users benefit from. AI can&#x27;t help you bootstrap this network.<p>The only one that&#x27;s fair is Figma, and considering Figma is down 30% from IPO price (much lower from ending day close), it&#x27;s fair to say there are competitors to Figma, including the LLMs themselves.<p>That begs the question: what is product? Is &quot;an app for designers to change style and communicate with developers&quot; the product? Or is the product &quot;to make websites look pretty and well organized&quot;? The former, Figma is great. But if the product is the latter, LLMs are a real threat. No one would bother building a &quot;better Figma&quot; today, why would they? They would just solve the problem Figma purports to solve",
+            "comment": [
+                {
+                    "text": "Yeah, I agree that YouTube, Instagram, and so on are a high bar. Not even the people who created these companies twenty years ago would be able to replicate the success of these products. My goal with this article was to highlight the hidden complexities behind any meaningful product. For example, how will I store the user info and settings? What if the user regrets buying my product? What if it is too complex? Who are the target users? And so on. Many questions that no single prompt can satisfactorily give us answers to without putting real thought into the thing, and none of this is shown in the demos we see around. Anyway, I loved all the insights I got here. Thanks for taking your time to write a reply.",
+                    "comment": [
+                        {
+                            "text": "I also think you under appreciate the value of toy software. We’ve spent 20 years talking about serious practices for making serious software but what if the next 20 years is about making personal toys that scratch our own itch? Perhaps LLMs fill this need quite well and they aren’t suppose to replicate what already exists.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "OpenAI tried to create a Instagram competitor and failed miserably",
+                    "comment": []
+                },
+                {
+                    "text": "That list is a pretty high bar but you can make it as low as you like and it’s still crickets.",
+                    "comment": [
+                        {
+                            "text": "Read the second half of my response.<p>The next Google won&#x27;t be a search engine with 10 blue links. Why would anyone create slightly better legacy apps.<p>For instance, Claude is 100% a competitor to Salesforce and there are go to market companies like Clay that manage outreach of a salesforce. Small companies can easily spin out a simple system that can source people to reach out, track follow ups, help w copy and even coordinate email.",
+                            "comment": []
+                        },
+                        {
+                            "text": "That’s because no one wants to admit that their product is vibe coded… But there are plenty of vibe coded products out there making money from actual users.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It’s a great question, but I don’t think the article answers it.<p>Not in any academic sense, but in a real-world sense a software product is something that as a user you can rely on to solve a problem. Rely is doing the heavy lifting in that sentence.<p>You can rely on a vendor’s product if (a) they’re going to be around for a long time, otherwise the investment into adopting it isn’t worth it; (b) the vendor is committed to solving your problem in an ongoing way - meaning they understand enough of the domain (ideally more than you do) that they’re going to be a partner even as your own needs evolve; (c) they deliver the product in a dependable way - high uptime and security.<p>So it comes down to “can you depend on this software over time?”",
+            "comment": [
+                {
+                    "text": "A product is much more than the software and its reliability. The business side is just as big of a lift. You need to build a <i>business</i>, not just a product. A business includes understanding the value proposition, not just a potential solution in the form of a tool. It includes understanding how the software fits in to the target customer&#x27;s workflow, and how it provides real value. You need to be able to communicate that value proposition to the customers, investors and your employees, amongst other stakeholders. Later, this transforms into understanding the sales cycle and how to use marketing to grow your users. The business side has always been the hard part. Software was always easy to build. The hard part is knowing <i>what</i> to build that really provides value.",
+                    "comment": []
+                },
+                {
+                    "text": "I hate the ‘product’ word. In the 90’s I was involved in a travel startup, and the software people would be talking about ‘product’ meaning the website that we where building, and the travel people meant what we where offering in the way of hotels, insurance, flights and excursions.<p>The word ‘product just left everyone confused.<p>If one uses a word like platform, application, prototype, offering, ‘products’ this makes it clearer than just the generic ‘product’. It’s even better if goal is applied as well. For example Flight finder Application, or Video Playback Platform.",
+                    "comment": [
+                        {
+                            "text": "&gt; I hate the ‘product’ word. In the 90’s I was involved in a travel startup, and the software people would be talking about ‘product’ meaning the website that we where building, and the travel people meant what we where offering in the way of hotels, insurance, flights and excursions.<p>In that case (but IMO it applies to almost everything that&#x27;s not selling a software or technical solution per se) the product IS the hotel&#x2F;insurance&#x2F;flights&#x2F;excursions package. There is no other way. The website was never the product, it was just a channel. The difference is that especially back then the only way to use that channel was to build it by yourself. And that&#x27;s something that actually happens for big enough brick&amp;mortar stores: they do have an internal department that manages the stores, buy&#x2F;rent the spaces, furnish and decorate them etc.",
+                            "comment": [
+                                {
+                                    "text": "&gt; There is no other way. The website was never the product<p>I find that quite often teams responsible for part of the infrastructure speak of their part as the “product”, with the consumer of that product possibly being a different team in the same company, not necessarily outside of it. I can totally see how for the website team, the website is “the” product under most circumstances.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "This just reads like someone&#x27;s cross at the AI hype and wanted to take a shot, but missed.<p>The underlying point --that network effects exist and determine the success of a product-- has always been the case, long before AI made it possible to vibe code a rough Instagram clone in a weekend.<p>Anyway, if you want a successful new product, the path to success (obviously) isn&#x27;t likely to be copying an existing behemoth, but offering something new, unique and valuable.  That&#x27;s always been the (exceptionally difficult) challenge, and AI doesn&#x27;t help with this.  But I think we can be confident that in the future, as humans do create new, unique, and valuable products, some of them will probably be vibe coded.",
+            "comment": [
+                {
+                    "text": "You may say that, but it seems to me that by definition vibecoding things will make them less unique because the technology is best suited to reproducing best practices even when those are cumbersome. Your best case scenario is a nontechnical person with a bright idea vibecoding something far beyond their ability to understand, and that&#x27;s a recipe for implementation problems that&#x27;ll harm the value of the novel thing being created.",
+                    "comment": [
+                        {
+                            "text": "You can still create enormous value modelling things that are well understood, and even boring. Most LOB SaaS wasn&#x27;t created from deep Google-level engineering, it was taken in modelling an ugly workflow in CRUD and creating customer records, job scheduling, worker assignments, quotations, recurring contracts, invoices, inspection checklists. Most Construction Tech startups for instance today is this.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt;A real product has real users, a real market and solves real problems.<p>This misses the mark.<p>A <i>product</i> is something which can be <i>exchanged</i> with others, transferred into their agency, for them to own and use according to their free will.<p>They don&#x27;t have to use it or indeed &#x27;be a user&#x27; - it is up to them whether or not utility is derived.  The only requirement is that it is exchangeable and that agency has been transferred in such a manner that all parties involved in the exchange are satisfied with the transfer of agency.<p>A <i>project</i> is some activity which has an expectation of changing state over time.<p>Project management means <i>projecting the scope and sphere of that activity into the future</i>, in order to change its state in such a way, hopefully, that something exchangeable is <i>produced</i>.  Product management means, <i>making sure a satisfactory exchange occurs between the creator of a product and its new owner.</i><p>So many people get this wrong.<p>It is not a product if it&#x27;s a project.  It is only a product <i>once it has been exchanged with another entity</i> for their purposes.<p>You can have many, many projects which will never become products, because they won&#x27;t be exchanged with others.  You can have products which are valued by their owner in ways unintended by their creators.  The value and utility is arbitrary to whether or not something is a product - the <i>only</i> requirement for something to become a product is that it is exchanged.<p>Successful product(S) are exchanged at scale.  A single product can be very successful if the scale of that exchange is high.  A lot of products can be very successful if the number of exchanges is great.<p>Until the <i>exchange</i> occurs, it&#x27;s not a product.  It&#x27;s a resource.  Inventory.<p>Side <i>projects</i> become <i>products</i> only once they are exchanged.<p>There really are plenty of Google analogs.  There are plenty of chatbot analogs. Any one of us can recreate Instagram or X. These competitive analogs simply have not become products, because they have not been <i>exchanged</i>.  Products which harness human collectivity have the problem of not being exchanged at scale until the collective decides to <i>participate in the exchange</i>, i.e. recommend their friends sign up to join them.<p>The problem with easily started new side projects is that they are not so easily exchanged at sufficient scale.",
+            "comment": [
+                {
+                    "text": "Not sure I understand the need for the exchange at scale. If I build a tool that lets a single person automate a tedious calculation then as long as they can depend on me maintaining it then it’s a product as far as I’m concerned.",
+                    "comment": [
+                        {
+                            "text": "Yes, I guess I wasn&#x27;t clear: it&#x27;s a product if it is exchanged - at all.  At any scale.  (There was a missing &#x27;any&#x27; in my original statement.)<p>You can sell a single product for an enormous price, you can sell 1,000 products at a low price - the only thing that matters is that the two parties agree to conduct the exchange <i>at any scale</i> and, most importantly, that it actually occurs.<p>Common to both high-end scale and low-end scale scenarios, is that the <i>exchange occurred and all parties agree to it</i>.  That&#x27;s the only thing that makes something a product - the exchange.",
+                            "comment": [
+                                {
+                                    "text": "Not sure how that’s helpful in the context of the question the article poses:  What is the difference between a vibe coded thing and a “real” product?",
+                                    "comment": [
+                                        {
+                                            "text": "Not sure how you&#x27;re missing it. He&#x27;s making a distinction between the concept of a Project and a Product. I agree with the distinction and he seems to be saying that the author has the wrong concept of what a product is but to answer your parent comment is saying that there&#x27;s no difference between a vibe coded thing and a &#x27;real&#x27; product so long as there has been some satisfactory transfer of agency and an exchange between user and product creator at any scale. So he&#x27;s essentially saying that the author may be conflating vibe coded PROJECT (with a vibe coded PRODUCT) and that if so comparing a vibe coded PROJECT with any &#x27;real&#x27; (whatever that means) product is an unfair comparison and on the flip side if they&#x27;re comparing vive coded PRODUCT with a real PRODUCT then they&#x27;re one and the same thing from the perspective that there was an transfer of agency and utility has been exchanged between user and product creator. I happen to agree with parent comment. It&#x27;s an airtight argument that it doesn&#x27;t matter how yu made it. The distinction between vibe coded and &#x27;real&#x27; product is fuzzy at best. The real distinction lies between a PROJECT and a PRODUCT.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "It doesn’t matter one bit how you made it, as long as you’ve got someone who is willing to exchange with you, for it.  That is the only factor in determining whether something is a product or not.<p>Nobody wants to know how the sausage is made.  Vibe coding is just sausage-making.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "My office has cut down SaaS costs by a couple of tens of grand a year, simply by making our own versions using LLMs.<p>It is not that we didn&#x27;t have the expertise to do so to begin with, but it would simply have been too expensive and time consuming. That was solved once the models became good enough.<p>There&#x27;s a lot of money in the SaaS world, where the products are both unglamorous and one-trick pony-ish. Making your product LLM-proof can be challenging today, unless you happen to own a lot of data or lots of compute, and those two are the drivers behind your product.",
+            "comment": [
+                {
+                    "text": "Do you mind sharing the SaaS you were able to replace? If you don’t want to share the name, category would be interesting as well.",
+                    "comment": []
+                },
+                {
+                    "text": "For my small team we are not creating our versions, we&#x27;re just more likely to find a self hostable version and use an LLM to help setup in production. For us it&#x27;s a middle ground between the build your own SaaS and paying $10ks. But in some instances we do still pay for the other company to own the on call.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The issue is most of these demo are created by developers. Most of the developers don&#x27;t have interests or skills in product and design. So they use AI to write code, not build product.<p>Another mistake everyone making is not building better and bigger products. What is used to take a month to develop is now possible in few days but most don&#x27;t put the same effort as before to make bigger and better products. They just do they same as what they used to do before but quickly. This is a mistake. AI uplifted everything so products built with AI should go to next level.<p>I&#x27;m an indie mac app developer. My first product took me 6 months to develop without much AI. I just released my second app ( <a href=\"https:&#x2F;&#x2F;www.vinaa.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.vinaa.ai&#x2F;</a> ) but took the same time to develop as I wanted it to be the best AI chat app. So I spent a month building my own markdown renderer in TextKit as existing library are not fast enough. I wouldn&#x27;t done this if I don&#x27;t use AI.",
+            "comment": [
+                {
+                    "text": "&gt; developers don&#x27;t have interests or skills in product and design<p>I&#x27;ve found the opposite to be trie very often.",
+                    "comment": [
+                        {
+                            "text": "That is actually a good thing. There is a term for this - <a href=\"https:&#x2F;&#x2F;blog.pragmaticengineer.com&#x2F;the-product-minded-engineer&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.pragmaticengineer.com&#x2F;the-product-minded-engine...</a>\nBefore that this is optional but now that coding is automated, this is becoming an essential skill.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I think a product should answer a specific need, it cannot be fully defined internally, it is an expression of some need in the environment which makes it a legitimate product. A product with no viability soon ceases to be a product. Generating code is not the same with answering a need, it is orthogonal. Good products have market fit, not necessarily are themselves well written apps.<p>The vibe-coded demos everyone&#x27;s tired of are code with no environmental need pulling on them.",
+            "comment": []
+        },
+        {
+            "text": "The problem is that getting your first user or first $1 is not particularly easier with even the best LLMs to help you. Distribution is brutal — Google doesn’t want to index new sites, Twitter doesn’t want to distribute lowbie posts, right here HN’s &#x2F;new queue is mercurial ..<p>So building is faster, but marketing—not so much",
+            "comment": [
+                {
+                    "text": "What happened to HN&#x27;s new queue? What changed? I only watch homepage so I wouldn&#x27;t know.<p>Also, dang ought to make a new tab &quot;Trends&quot; (or just name that &quot;AI&quot;) and move all AI&#x2F;LLM&#x2F;etc posts there. We might possibly see something other than AI then.<p>&gt; So building is faster, but marketing—not so much<p>Producers are AI&#x2F;agents now but consumers are still human beings. Maybe it will be different when it will be: by the AI, for the AI, of the AI… etc and humans will be safely out of the consumption loop.",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s just stuffed full of AI slop products, same as before AI but now with AI.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I think there are people you can pay to ensure your post gets to the front page.",
+                    "comment": [
+                        {
+                            "text": "You are not indicating that&#x27;s dang, are you? I&#x27;d never believe that :D",
+                            "comment": [
+                                {
+                                    "text": "No of course not. Just residential proxy botnet groups with Telegram addresses.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Maybe what these llms open up is the ability to create personal tools to get xyz job done, rather than creating companies with polished products. Perhaps for the latter you&#x27;d still need some combination of team, timing, etc.<p>But the question of should I spin up my own website in a few minutes or use wordpress for my blog is now open. Your personal tools can compete with what&#x27;s out there and you may decide what you build in one session is more compelling than what the &quot;pros&quot; are offering.<p>And for personal tools you are much more forgiving for the mistakes if it gets whatever task you want done.",
+            "comment": []
+        },
+        {
+            "text": "If the things created with AI lack originality, they are nothing more than clones, rather than prototypes. While I agree with the majority of the text, I really don&#x27;t understand why the amateurish efforts of so many are taken so seriously, to the point where people actually obsess over them. The marketing of these outputs by individuals or organizations with no prior connection to the industry (especially on platforms like YouTube, Reddit, HackerNews, etc.) is driven solely by self-interest. These ideas only excite the laypeople and the naive. For a professional or anyone who actually knows how things work, these are—as the name implies—just tools for now, not the be-all and end-all.",
+            "comment": []
+        },
+        {
+            "text": "I don&#x27;t disagree but for some of the examples given (YouTube, Instagram, X.com) a huge entry barrier is the network effect. Even if AI could perfectly clone these products in a day, that still doesn&#x27;t translate to instant market share.",
+            "comment": [
+                {
+                    "text": "And the resource you need to host so much data",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "In real terms a product is the delivery of a service or other item of value. Specifically within the realm of software it is the promise of the delivery of software that will do what it says it will do, and then maintain or fix it where it falls short.<p>E.g. it&#x27;s now about the delivery of a service rather than the challenge of building it (e.g. the moat) and then the delivery of service of it afterwards. Non functional requirements like data management and security, legal requirements and hosting are still valuable things that aren&#x27;t front of mind for most developers creating their own tooling.",
+            "comment": []
+        },
+        {
+            "text": "But is the definition of the product really just something that has loads of users. If so than the best &quot;product engineers&quot; are just people with gigantic following since every url they share would get traction.<p>Imo a better distinguisher of demos and products is: &quot;is your thing CAPABLE of solving a real problem&quot; (even if it isn&#x27;t doing so at a scale atm). Google+ was a product (not a super successfull one), eventhough it didn&#x27;t have many users. Conversely, a viral interactive gimmick can attract millions of users in a day without really being a product at all.",
+            "comment": []
+        },
+        {
+            "text": "Since everyone has access to the same tools, what exactly has changed about building a new business? Are people really expecting brand new companies to just displace the existing ones? What separates one company from another looks the same as always to me risk tolerance, etc. Now with the added benefit of a lot more competitors, plenty of who can&#x27;t actually execute, all making noise in the market.",
+            "comment": []
+        },
+        {
+            "text": "A product is just a software output packaged for sale. Most products these days are actually services, where delivery of the application is as important as its development. One man’s prototype is another man’s MVP. You can’t No True Scotsman your way into discounting the fact that low quality software can still make money.",
+            "comment": []
+        },
+        {
+            "text": "In term of business, the era of &quot;MVPs&quot; have long sailed already, probably 95% of every projects released now is done so lazily that you can know in the first 5 seconds that the company will die in the coming months.",
+            "comment": []
+        },
+        {
+            "text": "A product is something you can pitch to an investor for money. All else is irrelevant.",
+            "comment": []
+        },
+        {
+            "text": "Why hasn&#x27;t someone upended LinkedIn? It is not because the product is incomplete. It is because LinkedIn is the incumbent with millions of users and an ecosystem and culture and gravity around it.",
+            "comment": []
+        },
+        {
+            "text": "Agreed.  legitimate products are being washed out by AI, because every person thinks they can just build whatever the product does themselves.  And, maybe they could, but it still takes a while to build something that transcends a weekend mock up.<p>AI obviously is powerful and quick to build, but intellect, intelligence, and creativity will still lead to disproportional outcomes for users.  After all, AI still relies on effective prompting to build well.<p>The real danger, then, is not AI churning out endless slop, it&#x27;s actually that the slop degrades the perceived quality of actual products and legitimate effort.<p>Measuring by users is one metric, yes, and a good one. But, quality of output and performance beyond a simple prompt is what will make the difference.  Products couldn&#x27;t only be measured by the number of users, but also by quality and ingenuity.<p>Lastly, the products of tomorrow will not defy AI, but will build on top of them.  AI will build and perform a higher level of compute, yes, but the products will orchestrate AI workflows, rather than deterministic outputs. Guided reasoning, orchestration, and value creation are human qualities, not AI.",
+            "comment": []
+        },
+        {
+            "text": "The most successful products are Cartesian.",
+            "comment": []
+        },
+        {
+            "text": "For a second I thought this was going to be about abstract-algebra&#x2F;category-theory",
+            "comment": []
+        },
+        {
+            "text": "Whilst I agree with the sentiment, there is some irony that the blog itself looks to be vibe-coded too.",
+            "comment": [
+                {
+                    "text": "i am curious. what makes you think this blog looks &quot;vibe-coded&quot;?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you build it they will come is a lie from a movie. But alas, AI didn&#x27;t change that",
+            "comment": []
+        },
+        {
+            "text": "A real product must have its own to problem solve. Real users are evident for it",
+            "comment": []
+        },
+        {
+            "text": "Does a product include the ability to acquire and retain customers?",
+            "comment": []
+        },
+        {
+            "text": "&gt; If nobody is using the thing you built, you don&#x27;t have a product, you have a toy<p>Hard disagree. I think the articles goes in a good direction when it comes to the question but this ending is short of a satisfying answer",
+            "comment": []
+        },
+        {
+            "text": "What is a product? So you take two natural numbers `a` and `b`, and you want to sum `a` for `b` times, or vice versa. Then things become complicated if you want to do that quickly...",
+            "comment": []
+        },
+        {
+            "text": "A miserable pile of requirements!",
+            "comment": []
+        },
+        {
+            "text": "This article is riddled with logical fallacies. And this is a very Silicon Valley-esque, growth-minded, narrow way of thinking about this new world we live in.<p>I maintain half a dozen products, some of which enjoy only a handful of dedicated users, and I consider them all a resounding success. We are living in a new future of readily available custom software for extremely niche use cases.<p>&gt; Don&#x27;t feel bad if you don&#x27;t have anything to show up with all the free intelligence available nowadays. Almost nobody has.<p>But I can empathize with the author&#x27;s attempt at &quot;vibe writing&quot; something meaningful, considering that they seemingly don&#x27;t have anything better to &quot;show up with&quot;.",
+            "comment": []
+        },
+        {
+            "text": "I think it ultimately just comes down to laziness. People are increasingly loathe to make multi-year plans and stick to them, for various reasons.<p>Building something like a YouTube competitor is theoretically doable by a small team. It’s vastly more possible with AI tools than it was a decade ago.<p>But the “muscle” of doing difficult things has atrophied for many people, in large part because the AI tools themselves reduce your ability to actually do the work. If day after day, you just prompt an AI to make things for you, do research for you, etc. then you gradually stop working that muscle yourself.<p>It makes me think that the ideal usage of AI tools might be a deliberately limited one: do everything on your own, but check in with the AI once a week for review.",
+            "comment": [
+                {
+                    "text": "A youtube competitor is a CDN problem, i.e., business deals",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "A product is something consumable.",
+            "comment": []
+        },
+        {
+            "text": "product is operation of the ring that is on the outside of the brackets in distributive property",
+            "comment": []
+        },
+        {
+            "text": "&quot;A miserable little pile of secrets.&quot;",
+            "comment": [
+                {
+                    "text": "Productkind ill needs a savior such as you.",
+                    "comment": [
+                        {
+                            "text": "it pretty nice",
+                            "comment": []
+                        },
+                        {
+                            "text": "But enough slop have at you!",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": [
+                {
+                    "text": "Please add to your prompt: &quot;Make it concise&quot; and &quot;Do not use &#x27;—&#x27;&quot;",
+                    "comment": [
+                        {
+                            "text": "lol, I&#x27;m not familiar with English.",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s why I want to help :)",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,204 @@
+{
+    "item_id": 49203626,
+    "title": "Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]",
+    "url": "https://www.youtube.com/watch?v=GS7CxAtV5Ks",
+    "text": "Full documentary: <a href=\"https:&#x2F;&#x2F;www.bbc.co.uk&#x2F;programmes&#x2F;b0074rxx\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.co.uk&#x2F;programmes&#x2F;b0074rxx</a>",
+    "comment": [
+        {
+            "text": "I live in Australia. One day I received a very excited phonecall at a ludicrously early time from a Canadian Mathematician I knew (John McKay, Concordia. He&#x27;s dead now but had been a figure in my childhood from his time in Edinburgh in the 60s. he had worked with John Conway early in both their careers) telling me this was rumoured to be coming, and asking me to get the word out and find out what I could. I pointed out I wasn&#x27;t a mathematician or very well connected, he said &quot;doesn&#x27;t matter: Get to your national broadcaster and ask them to verify the story&quot;<p>So I rang the ABC and asked to speak to the Science Desk. This was at around 7am by this time. I was connected immediately to Robyn Williams, the premier science communicator at the ABC, despite having no name, no evident back story or trust. He was absolutely delightful to talk to, agreed with a laugh that he often got excited calls about people squaring the circle or finding repeat patterns in PI digits and was used to crank callers, listened to me, probably did some checks and then said he&#x27;d contact somebody at Cambridge and see what the gen was. My memory is he called me back a little while later saying they&#x27;d confirmed a room was booked for a significant public announcement seminar, and thanked me for the tip. This was a long time ago, it&#x27;s equally likely I misremembered and he gave me a name to check with in the UK and I did the leg work. The point is, I wasn&#x27;t just told to bugger off.<p>Nowadays it would be all over twitter. John was a bit old school and liked phone calls. They had internet emails in 92 of course I think he just liked the physicality of a call.",
+            "comment": [
+                {
+                    "text": "I love these little anecdotes on HN, they are like a little dessert post-main-post. Thanks for sharing :-) what an incredible thing to have had the scoop on!",
+                    "comment": []
+                },
+                {
+                    "text": "Lovely story, thank you :)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Unfortunately this clip cuts just before the most emotional part. At 01:29 as he&#x27;s about to break down, he says – this is my memory, sorry, paraphrasing:<p>&quot;Nothing I ever do again…&quot; – and then, having barely held it together for the last 30 seconds, he has to stop. It brings me to tears every time I watch it.<p>A man realising the sheer magnitude of the thing he did. It&#x27;s the most relevant part for humanity today.<p>Ah! Found it. This is a better clip. <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=BaKyvr4ar1Q\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=BaKyvr4ar1Q</a>",
+            "comment": [
+                {
+                    "text": "Most people never do their great work.<p>Bob Dylan reflecting on his early work <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;shorts&#x2F;Fh3pAJf-vdU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;shorts&#x2F;Fh3pAJf-vdU</a><p>I wish to live my life so I can say one day &#x27;Nothing I ever do again will..&quot;",
+                    "comment": []
+                },
+                {
+                    "text": "Thank you for linking it.  What a powerful moment.",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "(disclaimer: I haven&#x27;t watched this yet)<p>Mathematicians &#x2F; folks knowledgeable on the subject - do you think Fermat had an error in his (lost) proof? Or that there exists a solution that perhaps is more straightforward than Wiles&#x27;s?<p>My understanding is that Wiles had to use a ton of math (and invent some new math?) that had not yet been invented in Fermat&#x27;s time.",
+            "comment": [
+                {
+                    "text": "One of the arguments I have heard that he did not have a proof is the following.<p>He wrote his note in his copy of Arithmetica around 1637.<p>He most likely wrote his proof for the case of n=4 in the 1640s.<p>He sent letters to other mathematicians in 1640, 1657 where he talks about the case of n=3 but writes in such a way that it seems like he does not have the answer.<p>Why would he write n=4 after? If he had a generalized proof?<p>Why would he tease other mathematicians with a special case in 1657 if he already had a generalized proof?",
+                    "comment": []
+                },
+                {
+                    "text": "Pretty sure Fermat didn’t have a proof.<p>For one thing, Fermat wasn’t actually a “professional” mathematician. He was a lawyer and judge and was known for having remarkable intuition but not really troubling himself too much with details of proofs etc.  For example Descartes famously called him a “deficient mathematician”[1] in an angry exchange of letters over a technique that Fermat had discovered to geometrically construct a tangent to a particularly problematic curve called Descartes’ Folia using a technique we would now recognise as being the definition of the derivative as the limit of the difference quotient.<p>[1] Explained entertainingly here <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;xKfEmbWBgvM?is=qLnPvPXGDqgJCDC3\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;xKfEmbWBgvM?is=qLnPvPXGDqgJCDC3</a>",
+                    "comment": [
+                        {
+                            "text": "Many accomplished mathematicians were not professional mathematicians. Surprisingly enough, many were in fact lawyers.<p>Descartes was himself a lawyer (by training) then there were Leibnitz, Cayley, Viete. If you include Physics you will get a bigger list.<p>Descartes and Fermat ran a mutual admiration society, don&#x27;t read to much into it.<p>Both had independently come up with coordinate geometry, linking algebra and geometry<p>I agree Fermat probably had a wrong proof but curb your condescension towards lawyers making contributions in mathematics.",
+                            "comment": [
+                                {
+                                    "text": "You misunderstand. I have a tremendous respect for Fermat. I just meant he didn’t feel compelled to be totally rigorous. There are examples of contemporaries complaining about him skipping steps and hand waving etc. That was just how he did things.",
+                                    "comment": [
+                                        {
+                                            "text": "Agreed. Modern rigour is, well, quite modern.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; do you think Fermat had an error<p>Yes, with million-to-one odds.  Though I&#x27;d say &quot;error or equivalent shortcoming, for the general case&quot;.<p>&gt; that perhaps is more straightforward than Wiles&#x27;s?<p>I don&#x27;t recall a mathematical definition of &quot;straightforward&quot;, but yes.  Ignoring minor improvements, I&#x27;d guess there&#x27;s a much better proof...though that might require a century of new developments in related parts of mathematics, before we&#x27;ll have the necessary tools to write it down.",
+                    "comment": []
+                },
+                {
+                    "text": "Consensus is that there&#x27;s no way he had a correct, general proof.<p>My personal guess is he figured out later that his proof was broken or limited and never got around to fixing it.",
+                    "comment": [
+                        {
+                            "text": "The funny thing is that whether or not he had a proof, it was only definitively proved because he claimed he had a proof, so in a roundabout sense, he&#x27;s still responsible for the theorem being proved. It&#x27;s kind of crazy to think about your words carrying so much weight that somebody from hundreds of years in the future will dedicate (a significant portion of) their life to them.",
+                            "comment": [
+                                {
+                                    "text": "&gt; he&#x27;s still responsible for the theorem being proved.<p>I think you have an odd definition of &quot;responsible&quot;. Many (most?) theorems start out as conjectures, and I would strongly disagree that just because someone first formulated a problem that they&#x27;re &quot;responsible&quot; for the eventual solution.",
+                                    "comment": [
+                                        {
+                                            "text": "It&#x27;s not just that he formulated the problem, though. It was specifically the fact that he claimed he had a proof which led to the proof, and it was only because people credibly believed he had one that they spent so much effort trying to (supposedly, re-)discover it.",
+                                            "comment": [
+                                                {
+                                                    "text": "&gt; and it was only because people credibly believed he had one that they spent so much effort trying to (supposedly, re-)discover it.<p>That&#x27;s not true. Even early on, most mathematicians doubted he had a proof. But I&#x27;d check out the history of the problem as described on Wikipedia. There was considerable research into the problem before Fermat, and general research into Diophantine equations had gone on for over a thousand years before Fermat. I have no doubt there would have been significant interest into solving the problem even if Fermat had never written his &quot;I have a proof but it&#x27;s too big to fit in the margin&quot; note.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I have to agree. Even if it hadn&#x27;t been designated as Fermat&#x27;s Last Theorem, the problem would likely have ended up in some comparable list of interesting conjectures (e.g. Hilbert&#x27;s problems, the Erdős problems, the Millennium Prize problems, etc).",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "I think he had a hunch, and maybe in his mathematic mind he got to the right answer by the wrong path<p>But yes had him not pointed it out maybe it would have been relegated to a mathematical curiosity or something<p>I think there&#x27;s a deeper (but simpler) reason for it, besides the way Wiles proved it",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "We haven’t yet reached the era in which we’re allowed to know about the technique. The simple, intuitive proof will become available to us when the time is right.",
+                            "comment": [
+                                {
+                                    "text": "[dead]",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Quite literally, WTF is that supposed to mean?",
+                                    "comment": [
+                                        {
+                                            "text": "It&#x27;s the internet.  Don&#x27;t feed the trolls.  Or the loons.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I don&#x27;t know that much about math but I&#x27;ve read that one possibility is he had found a valid proof for n=4 and assumed that it generalized. Hopefully someone else who knows more about the subject chimes in!",
+                    "comment": []
+                },
+                {
+                    "text": "When I was at uni my number theory lecturer said that if Fermat had a solution, it was only valid for regular primes.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Andrew Wiley gently smiles, does his thing an voila!<p>Q.E.D. we agree and we all shout hurra<p>as he confirms what Fermat<p>jotted down on that margin<p>which could have used some enlarging",
+            "comment": [
+                {
+                    "text": "Now it&#x27;s back to reality<p>Feeling the finality<p>Of his greatest achievement<p>He couldn&#x27;t believe it<p>But it&#x27;s true, now he&#x27;s feelin&#x27; blue<p>So between me and you:<p>Think twice before you do",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Aside: the AI summary of this attributes the wrong person. This is Andrew Wiles.",
+            "comment": [
+                {
+                    "text": "Do you mean Atish Joygobin, for the background music?",
+                    "comment": []
+                },
+                {
+                    "text": "Who solved FLT.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;ve only skimmed it but Simon Singh&#x27;s book on it seems reasonably accessible to non-experts<p>One interesting thing of FLT is Wiles is on record as saying it opened the door (I think. This is from memory) to Langlands Program, a series of mathematical connections<p>Harder problems of course exist, Riemann Hypothesis et al but FLT still took hundreds of years to solve",
+            "comment": [
+                {
+                    "text": "Langlands is a massive programme but originated with Langlands conjecturing in 1967 about some deep connections between two seemingly unconnected areas of mathematics (number theory and harmonic analysis).  In particular, he started with what was then called Taniyama-Shimura-Weil conjecture which concerns the number of integer solutions to particular types of equations of elliptic curves following (for no immediately obvious reason) a harmonic series. Wiles’ proof of FLT proved a special case of TSW and involved techniques which some of his students then used to prove the TSW conjecture in full generality, so is now called the “modularity theorem”.<p>In fact the Langlands programme began with Langlands writing his ideas in a letter which he wrote to Andre Weil because of his association with the TSW conjecture.<p>I enjoyed this explanation <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;4dyytPboqvE?is=VFFjLHSk7vgosN54\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;4dyytPboqvE?is=VFFjLHSk7vgosN54</a> by Ed Frenkel.",
+                    "comment": []
+                },
+                {
+                    "text": "I read Simon Singh&#x27;s book as a young teenager - loved it!",
+                    "comment": []
+                },
+                {
+                    "text": "I read Singh&#x27;s book a few years ago, I really enjoyed it and left with a basic understanding of the underlying math",
+                    "comment": []
+                },
+                {
+                    "text": "You remember correctly.  His result is a special case of Langlands.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Just to check, this video isn&#x27;t NSFW is it?",
+            "comment": [
+                {
+                    "text": "This comment left me so bewildered that I wanted to create a hackernews account just to comment this.",
+                    "comment": [
+                        {
+                            "text": "It might be a joke in reference to the video&#x27;s title, &quot;I loved every minute of it, however hard it had been&quot;.",
+                            "comment": [
+                                {
+                                    "text": "ohh lmaoo",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "depends, I would say it is not safe for work as it makes you question what are you doing there :)<p>its phenomenology porn",
+                    "comment": []
+                },
+                {
+                    "text": "YouTube generally doesn&#x27;t allow that",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        }
+    ]
+}

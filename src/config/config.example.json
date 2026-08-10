@@ -1,4 +1,5 @@
 {
     "ai_api_url": "",
-    "ai_api_key": ""
+    "ai_api_key": "",
+    "raw_data_path":""
 }

@@ -1,0 +1,24 @@
+{
+    "item_id": 49214775,
+    "title": "逆向工程中的心理战 (2015)",
+    "url": "https://github.com/xoreaxeaxeax/repsych",
+    "text": "REpsych\n：逆向工程中的心理战\ngithub.com/xoreaxeaxeax/repsych // domas // @xoreaxeaxeax\n概述\nREpsych 工具集是一个概念验证，演示了如何通过程序的\n控制流\n图\n（CFG）生成图像。\n一个典型函数的 CFG\n一个由 REpsych 生成的 CFG\n这个项目并没有特别的目的（除了展示它可以做到），但一些（不严肃的）应用场景在\nDEF CON\n演讲\n中进行了概述。\n该程序在所有测试过的 IDA Pro 逆向工程工具版本上都能可靠运行，在其他 CFG 查看器（Hopper、BinNavi、radare2 等）上则能半可靠运行。\n使用方法\n该工具集将源图像转换为可运行的程序，使得程序的控制流图能够生成源图像。\n要从图像生成新程序：\n将图像以 24 BPP 位图格式保存在 gfx/ 文件夹中。\n在项目根目录下运行 \"make image\"，其中 \"image\" 是你的图像名称，不含扩展名。\n将创建两个可运行的程序：repsych_v1 和 repsych_v2。每个程序使用不同的策略来确保 CFG 渲染器正确放置 CFG 节点。\n提示\n该工具会为源图像的每个像素创建一个基本块（CFG 节点）；因此，你应该尝试使用较小的源图像（不超过 100x100），并且可能需要增加 CFG 查看器中允许的节点数量。\n当使用文字图像作为工具输入时，首先将图像转换为 2 BPP 黑白位图，然后再转换为 24 BPP 位图；这将去除非黑色和非白色颜色，并在控制流图中获得最佳效果。\n示例\n参考\n该技术在\nDEF CON\n演讲\n中有详细介绍。\n演讲幻灯片可在\n此处\n获取。\n作者\nREpsych 是 Christopher Domas（\n@xoreaxeaxeax\n）的一个概念验证项目。",
+    "comment": [
+        [
+            "def con 的演讲（2015）值得一看，如果你想消磨大约 40 分钟的话，链接在此<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HlUe0TUHOIc\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HlUe0TUHOIc</a>"
+        ],
+        [
+            "这让我想起了伊恩·M·班克斯的《<i>费尔苏姆·恩德金</i>》，小说中的城堡利用其智能织物向试图钻穿其墙壁的工人投掷幽灵，以此抵抗调查！"
+        ],
+        [
+            "- 我不太理解，有人能解释一下这是做什么的吗",
+            "像 IDA 或 Ghidra 这样的逆向工具可以为在目标二进制文件中找到的函数生成控制流图（<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Control-flow_graph\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Control-flow_graph</a>）<p>这个工具生成的函数在这样渲染时显示为图像"
+        ],
+        [
+            ""
+        ],
+        [
+            ""
+        ]
+    ]
+}

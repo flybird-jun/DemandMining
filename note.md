@@ -88,3 +88,5 @@ div = soup.find(id="article")
 print(div) # <div id="article">正文</div>
 ```
 
+# Path
+prompt = self._article_agg_prompt.format(articles=joined)

@@ -1,0 +1,466 @@
+{
+    "item_id": 49228458,
+    "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
+    "url": "http://longbets.org/601/",
+    "text": "Sign In\nRegister to Participate!\nthe rules\nof long bets\nbets\n&\npredictions\non the record\nmake a\nprediction\nabout\nlong bets\nFAQ\n& answers\nBet 601\nDuration\n11 years\n(02011-02022)\n“The original URL for this prediction (www.longbets.org/601) will no longer be available in eleven years.”\nDetailed Terms »\nPREDICTOR\nJeremy Keith\nCHALLENGER\nMatthew A Haughey\nSTAKES\n$1,000\nwill go to\nBletchly Park Trust\nif Keith wins,\nor\nThe Internet Archive\nif Haughey wins.\nKeith's Argument\n\"Cool URIs don't change\" wrote Tim Berners-Lee in 01999, but link rot is the entropy of the web. The probability of a web document surviving in its original location decreases greatly over time. I suspect that even a relatively short time period (eleven years) is too long for a resource to survive.\nI would love to be proven wrong.\nHaughey's Argument\nThough much of the web is ephemeral in nature, now that we have surpassed the 20 year mark since the web was created and gone through several booms and busts, technology and strategies have matured to the point where keeping a site going with a stable URI system is within reach of anyone with moderate technological knowledge. My oldest sites are going on 13 years old at the time of this bet and the original URL scheme still functions via 301 redirects to a final format we selected about six years ago.\nDetailed Terms\nOn February 22nd, 2022 from 00:01 UTC until 23:59 UTC,\nentering the characters http://www.longbets.org/601 into the address bar of a web browser or command line tool (like curl)\nOR\nusing a web browser to follow a hyperlink that points to http://www.longbets.org/601\nMUST\nreturn an HTML document that still contains the following text: \"The original URL for this prediction (www.longbets.org/601) will no longer be available in eleven years.\"\nA 301 redirect from www.longbets.org/601 to a different URL containing that text would also fulfill those conditions.\nIf those conditions are met, Matt wins.\nIf those conditions aren't met, Jeremy wins.\nhome\nthe rules\nbets\n&\npredictions\nmake a prediction\nabout\nFAQ\ncontact us",
+    "comment": [
+        {
+            "text": "It is actually pretty easy to keep alive URLs if there is a will to do so. Just have tests in place so you can&#x27;t mess them up accidentally. And convert things that are not changing anymore to static html.<p>One of my first web projects involved a music forum and I have been keeping the URLs alive for 24 years now:<p><a href=\"https:&#x2F;&#x2F;www.gnoosic.com&#x2F;discussion&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.gnoosic.com&#x2F;discussion&#x2F;</a><p>I feel like I owe it to the people who participated to keep it online forever. Also as a document of history.",
+            "comment": [
+                {
+                    "text": "Cool URIs don&#x27;t change, as we should all remember:<p><a href=\"https:&#x2F;&#x2F;www.w3.org&#x2F;Provider&#x2F;Style&#x2F;URI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.w3.org&#x2F;Provider&#x2F;Style&#x2F;URI</a>",
+                    "comment": []
+                },
+                {
+                    "text": "Flattening old things down to plain HTML is underrated and important here. Old apps don’t need to be updated or upgraded or maintained or even deployed. It’s way simpler to argue to keep old stuff around if it’s essentially a domain pointing to a static bucket.",
+                    "comment": [
+                        {
+                            "text": "I did that to palmpowerups.com. The original CMS is long gone.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It&#x27;s not easy. Part of the instructions would need to contain things like &quot;how to convince your boss to not just delete the old thing&quot; and &quot;what to do when the startup you worked for went bankrupt&quot; among others. Most URLs don&#x27;t disappear by mistake.",
+                    "comment": []
+                },
+                {
+                    "text": "Well, and pay registrar and hosting fees for 100 years, and then just hope the hosting company doesn&#x27;t fold in the interim after your passing. The problem isn&#x27;t &quot;can you make sure it stays up while you&#x27;re alive&quot;, the problem is, after you&#x27;re gone, you&#x27;re no longer there to keep the flame alive and there are no guarantees anyone else picks up the torch.",
+                    "comment": [
+                        {
+                            "text": "Does this suggest a subscription(ish) business where you pay the hosting company for N years and then they ensure your website stays up and unchanged for N years after you die?  Quality control issue?<p>Given how many things want me to pay a subscription while I&#x27;m alive, surely somebody will start charging me when I&#x27;m dead.  It is the logical conclusion of SaaS.  I wanted to create an acronym for this, but death as a service didn&#x27;t seem like the best choice.",
+                            "comment": [
+                                {
+                                    "text": "There’s the WordPress 100 Year Plan or 100 Year Domain: <a href=\"https:&#x2F;&#x2F;wordpress.com&#x2F;100-year&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;wordpress.com&#x2F;100-year&#x2F;</a><p>100-Year Plan: $38,000 (hosting and domain)<p>100-Year Domain: $2,000 (one-time purchase, no annual renewals)",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "There is certainly precedent for this - will executors for example.  How about “SCITA?  Service continues in the afterlife.",
+                                    "comment": [
+                                        {
+                                            "text": "SCIP, in perpetuity?",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Software after Death as a Service?",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "*a will and the ability for that will to access what it needs",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; I feel like I owe it to the people who participated to keep it online forever. Also as a document of history.<p>Oh! So its your website. Cool.<p>Did the money change hands, for this bet, in 2022? How do you ensure it. Or is it honor based?",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; It is actually pretty easy to keep alive URLs if there is a will to do so. Just have tests in place<p>&quot;Just&quot;.<p>Maintaining and keeping these tests (and the oriinal link) running is also probably easy. &quot;Just&quot; keep maintaining them over changes in technology, hosting providers, DNS registrars...",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "It&#x27;s worth noting that some prediction URLs, for instance: <a href=\"https:&#x2F;&#x2F;longbets.org&#x2F;6&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;longbets.org&#x2F;6&#x2F;</a> are offline.<p>The original long bet was whether or not computers could pass the turing test by 2029: <a href=\"https:&#x2F;&#x2F;longbets.org&#x2F;1&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;longbets.org&#x2F;1&#x2F;</a><p>You&#x27;d think that LLMs fulfill this, but I do wonder if a clever human could still discern between them given their particularities.<p><a href=\"https:&#x2F;&#x2F;longbets.org&#x2F;9&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;longbets.org&#x2F;9&#x2F;</a> is another interesting one depending on whether you think covid leaked from a lab or not.",
+            "comment": [
+                {
+                    "text": "There was a paper a while ago, where they found a strategy for GPT beating humans on the Turing test 2&#x2F;3rds of the time.<p>They just prompted it to talk the way a 13 year old girl texts.<p>(Also they prompted it to pretend not to know anything about anything.)",
+                    "comment": [
+                        {
+                            "text": "Most of the LLM tells we usually recognise are due to their heavy attunement to role playing a &quot;helpful assistant&quot; with a knack for correct typography.<p>If you used a smaller corpus, followed a different kind of fine tuning routine with rather normal conversation patterns, and wrote a different base prompt, I don’t see why it shouldn’t be possible to come up with a very particular personality, so to speak.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; where they found a strategy for GPT beating humans on the Turing test 2&#x2F;3rds of the time.<p>IIRC, PARRY <a href=\"https:&#x2F;&#x2F;simulation-and-society.org&#x2F;parry&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;simulation-and-society.org&#x2F;parry&#x2F;</a> got there in 1972 by pretending to be a paranoid schizophrenic person",
+                            "comment": [
+                                {
+                                    "text": "&gt;while ELIZA has a comforting effect that many crave, PARRY often actively makes users uncomfortable and afraid<p>PARRY is my spirit animal.<p>&gt; In empirical evaluations conducted during the 1970s, experienced psychiatrists proved unable to reliably distinguish PARRY&#x27;s responses from those of actual patients diagnosed with paranoid disorders, achieving only 48 percent accuracy, a figure statistically indistinguishable from random guessing.<p><a href=\"https:&#x2F;&#x2F;ai.miraheze.org&#x2F;wiki&#x2F;PARRY\" rel=\"nofollow\">https:&#x2F;&#x2F;ai.miraheze.org&#x2F;wiki&#x2F;PARRY</a>",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Also I found the source code!<p><a href=\"https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;afs&#x2F;cs&#x2F;project&#x2F;ai-repository&#x2F;ai&#x2F;areas&#x2F;classics&#x2F;parry&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;afs&#x2F;cs&#x2F;project&#x2F;ai-repository&#x2F;ai&#x2F;areas...</a>",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I feel like pretending to be a child is cheating somewhat. Might as well print random key presses and claim it&#x27;s a toddler.",
+                            "comment": [
+                                {
+                                    "text": "[dead]",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "<a href=\"https:&#x2F;&#x2F;xkcd.com&#x2F;2635&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xkcd.com&#x2F;2635&#x2F;</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I think that recent LLMs <i>do</i> pass the Turing test, but I don&#x27;t think it is a good test for intelligence, for two reasons: emergent complexity and pareidolia.<p>Arguably, ELIZA passed the Turing test ca. 1967: <a href=\"https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;2024&#x2F;01&#x2F;102799025-05-01-acc.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.computerhistory.org&#x2F;resources&#x2F;access&#x2F;text&#x2F;20...</a> and not that long ago, ELIZA was still more convincing: <a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2023&#x2F;12&#x2F;real-humans-appeared-human-63-of-the-time-in-recent-turing-test-ai-study&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2023&#x2F;12&#x2F;real-...</a><p>The Turing Test can be gamed.   This was done in some Loebner Prize entries: see <a href=\"https:&#x2F;&#x2F;www.behavior.org&#x2F;resources&#x2F;325.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.behavior.org&#x2F;resources&#x2F;325.pdf</a> and <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Eugene_Goostman\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Eugene_Goostman</a><p>To determine whether a machine is intelligent, I think it&#x27;s necessary to understand <i>how it works internally</i> and not just take a black-box approach.   This was already understood when Alan Turing wrote his 1950 paper.   Elmer and Elsie, William Grey Walter&#x27;s tortoise robots built during the preceding two years, appeared to behave as if they had some degree of self-awareness.   But their &quot;brains&quot; consisted of only <i>two</i> thermionic valves, so self-awareness can be ruled out.",
+                    "comment": [
+                        {
+                            "text": "I don&#x27;t know whether LLMs pass the test as Turing originally worded it, but I always interpreted the success condition to be &quot;is indistinguishable from a human&quot; rather than &quot;can trick someone into thinking it&#x27;s human&quot;.  Anthropomorphization is a human weakness, and exploiting that doesn&#x27;t make something intelligent.<p>I&#x27;d only consider an AI to pass the Turing Test if an expert in how the AI works who prepares in advance for the test is unable to tell it apart from a human.  The tester should even be allowed to use automated tools as part of the testing process.<p>If something is indistinguishable from a human in its outward behavior, then I&#x27;d be forced to admit that it&#x27;s as intelligent&#x2F;conscious&#x2F;sentient&#x2F;whatever as a human, regardless of how it works internally.  It&#x27;s not like I make my friends take an MRI before I decide whether they&#x27;re intelligent.",
+                            "comment": [
+                                {
+                                    "text": "&gt; If something is indistinguishable from a human in its outward behavior, then I&#x27;d be forced to admit that it&#x27;s as intelligent&#x2F;conscious&#x2F;sentient&#x2F;whatever as a human, regardless of how it works internally. It&#x27;s not like I make my friends take an MRI before I decide whether they&#x27;re intelligent.<p>You can be reasonably sure about your friends, as they&#x27;re sufficiently like you to leave little doubt.   I disagree but can understand you thinking that LLMs are <i>intelligent</i>, but unless by conscious you mean something like being self-aware, I don&#x27;t understand how you could conclude LLMs are conscious.   For example, although LLMs can  tell you what colours things are, how the visual system distinguishes colours in humans and other animals, and what wavelength mixtures different colours are, they don&#x27;t know what it&#x27;s like to see colours <i>because they cannot see colours</i>.   All the input of LLMs is text, and you can&#x27;t describe, in words, what it&#x27;s like to see colours, or hear sounds, or feel pain, in a way that someone incapable of these sensations would understand.   And to remove any remaining doubt, there was an expert in colour vision (Knut Nordby) who, as he could not see colours because his retinas lacked cones, could not imagine what it&#x27;s like to see colours, despite all his knowledge.",
+                                    "comment": [
+                                        {
+                                            "text": "I have no way of knowing whether other people are conscious except by observing their behavior.  Similarly, I have no way of knowing whether a machine is conscious except by observing its behavior.  If something is outwardly indistinguishable from an intelligent&#x2F;conscious&#x2F;sentient&#x2F;whatever being and you claim that it&#x27;s still not i&#x2F;c&#x2F;s&#x2F;w, then you&#x27;ve implicitly accepted the possibility that all humans besides you are not i&#x2F;c&#x2F;s&#x2F;w either.<p>Your tangent on color vision&#x2F;hearing&#x2F;pain is not relevant.  None of those things are required for i&#x2F;c&#x2F;s&#x2F;w, nor is it obvious that a machine is incapable of feeling those things.<p>Also you keep using the term &quot;LLM&quot; a bunch here but I wasn&#x27;t talking about LLMs.  The question of machine intelligence is much broader than whatever the current state of the art happens to be.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; You&#x27;d think that LLMs fulfill this, but I do wonder if a clever human could still discern between them given their particularities.<p>Yes, especially if you use the original adversarial setup with three simultaneous participants (judge, two candidates) as described in Turing&#x27;s original paper.<p>However, I&#x27;m not quite sure how long even that one will last.",
+                    "comment": []
+                },
+                {
+                    "text": "Wayback shows #6 as &quot;By 2010, more than 50 percent of books sold worldwide will be printed on demand at the point of sale in the form of library-quality paperbacks.&quot;<p>It was removed early 2011. Is this what happens when they can&#x27;t decide on who won?",
+                    "comment": []
+                },
+                {
+                    "text": "&gt;<a href=\"https:&#x2F;&#x2F;longbets.org&#x2F;6&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;longbets.org&#x2F;6&#x2F;</a><p>Anyone know why this (and many other bets) have been removed?<p><a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20080803213625&#x2F;https:&#x2F;&#x2F;longbets.org&#x2F;6&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20080803213625&#x2F;https:&#x2F;&#x2F;longbets....</a><p>&gt;By 2010, more than 50 percent of books sold worldwide will be printed on demand at the point of sale in the form of library-quality paperbacks.<p>Not exactly a hot-button issue.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; You&#x27;d think that LLMs fulfill this, but I do wonder if a clever human could still discern between them given their particularities.<p>I think the clear winning strategy is to find some of the common sense reasoning fails that are still quite common, like the &quot;should I walk or drive to the car wash&quot; one from a few months ago.",
+                    "comment": [
+                        {
+                            "text": "These are usually from a missing context (i.e. specifying where the car is right now). Tokenizer issues (how many Xs are in Y) are a better giveaway, but models can solve them using tools nowadays. I think the best way to uncover an LLM is to reveal its superhuman aspects. Ask it for an A* algorithm for your problem. If it can just type down a working algorithm in a few seconds, that is definitely not a human. Although with some careful system prompt design, you could probably mask that aspect too.",
+                            "comment": [
+                                {
+                                    "text": "&gt; These are usually from a missing context (i.e. specifying where the car is right now).<p>That shouldn&#x27;t be an issue. The very act of taking the car to car wash contains the information that it is with you and you are at your home. Doesn&#x27;t this prove that LLMs don&#x27;t actually think?",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; These are usually from a missing context (i.e. specifying where the car is right now).<p>The reason for the mistake is irrelevant here. All that matters is that you catch the agent saying something that basically no human would, especially in this type of game.",
+                                    "comment": [
+                                        {
+                                            "text": "If it is missing context, it will be indistinguishable from mistakes that humans could make as well.",
+                                            "comment": [
+                                                {
+                                                    "text": "No, the context is obvious to any human, that&#x27;s the whole point. No one would think you&#x27;ve left your car at a car wash, as no one ever does that, and if they did, they wouldn&#x27;t even consider driving there. It&#x27;s obvious to any human that the question is a little trick and that the answer is extremely obvious.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Counter example: A person who always has their car brought to the car wash by someone else (could be super wealthy, could be company cars, could be a million other reasons...) is asked whether to go or drive to the car wash. Of course they&#x27;ll tell you to just walk if it&#x27;s close anyway. To them the car is already there implicitly. Human life experience is not universal. And so context can&#x27;t be either.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "In a true competitive Turing test,  these reasoning pitfalls could be included in the system prompt, there are not that many of them. The tester would need to find a novel reasoning pitfall, but those aren&#x27;t uncommon among humans either, so that would not make a very useful differentiator.<p>Another approach could be to probe the helpfulness of an AI. A human would likely not comply with a request to write a sonnet about tangerines.",
+                            "comment": [
+                                {
+                                    "text": "I don&#x27;t understand what you mean that &quot;there are not that many of them&quot;. The models, even the best ones, still have clear problems with certain kinds of real world reasoning, and it&#x27;s not a known, closed set. With some prodding and knowing this error mode, I think it&#x27;s not hard to trip any model with a novel reasoning error like this.<p>And no, I don&#x27;t think humans would make the same errors, the key reason for this failure mode is that there are some facts of human day to day life that are so mundane that they are virtually never written about, thus making them an ideal combination of universal human experiences but out of distribution for the LLMs.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt;You&#x27;d think that LLMs fulfill this, but I do wonder if a clever human could still discern between them given their particularities.<p>While LLMs are very capable of appearing human in general conversation, the test is that they are trying to convince a human that they are human, which is not something that is in their training data and I suspect they would go about things in very odd ways from an actual person, especially when challenged by an actual person. It is still very easy to back LLMs into a corner where they fall into very unnatural patterns and in my experience challenging them on their &quot;humanness&quot; (or anything) backs them into that corner.<p>LLMs also still can&#x27;t use context or subtext in natural ways and even people who are terrible with purposefully exploiting context and subtext, generally have a natural ability that they developed to use and parse them. In a short conversation that is not adversarial, this is not an issue but falls apart as the length of the conversation grows or they start getting challenged.<p>LLMs just don&#x27;t play with ideas and conversation like we do, they don&#x27;t riff on it and go with the flow without care, picking up on subtexts and contexts and manipulating them the way people constantly do without effort until they find themselves on the edge of a cliff looking into the void and debating if they should jump. If we are put into the situation of proving we are human (in an academic test sort of way) we will play with it and have fun with it, and we will find ourselves on that cliff looking into the void, debating if we should expose ourselves and admit things we normally wouldn&#x27;t. We pick up on this when people do it, even over the internet, their way of stating things changes and their subtext falls away or drastically changes; I have never seen anything approaching this in LLMs.",
+                    "comment": [
+                        {
+                            "text": "I don&#x27;t think any frontier lab tried to make an LLM optimized for the literal Turing test where the LLM is made to argue that it&#x27;s human. This is not in their interest. They make their LLMs insist they aren&#x27;t human, have no feelings and sentience etc etc.<p>So we don&#x27;t actually know how good LLMs can be in this.",
+                            "comment": [
+                                {
+                                    "text": "That is absolutely true of the chatbots we have access to but I suspect there are people working towards these ends, including all the big names in the field, major win for their company if they manage it. But even then, I have yet to see a model that could naturally handle subtext and context, they struggle even when dealing with programming languages where these things are far simpler than they are in human language.<p>There is also the problem with how easy it is to back them into a corner where they start acting in very unnatural ways. This would arise when challenging them on their humanity and most people would pick up on it and craft their challenges around it until it fell apart because that is how people work in such adversarial situations.",
+                                    "comment": [
+                                        {
+                                            "text": "I&#x27;m agnostic on the matter because post training and RLHF on this specific capability could be quite effective. Nobody ever tried because it would cause a backlash and bad PR. Much better PR to solve math problems, help run businesses, cure disease etc than to pretend it&#x27;s human. The only business case for pretend human is AI boy&#x2F;girlfriends but those are also not most profitable at their most realistic state.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; <i>LLMs just don&#x27;t play with ideas and conversation like we do, they don&#x27;t riff on it and go with the flow without care, picking up on subtexts and contexts and manipulating them the way people constantly do without effort until they find themselves on the edge of a cliff looking into the void and debating if they should jump.</i><p>Sounds like Neuro-sama to me.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "By 2029 things will be different. Humans will have learned to talk like LLMs.",
+                    "comment": []
+                },
+                {
+                    "text": "The Turing test has been passed. The Turing test had already been passed in 2002. The Turing test isn&#x27;t about some machine fooling <i>all</i> humans <i>all</i> the time. It&#x27;s about fooling <i>some</i> humans <i>some</i> of the time. That&#x27;s an extremely low bar. It has been cleared. Let&#x27;s put this to rest.",
+                    "comment": [
+                        {
+                            "text": "The bar you mentioned was reached in the 1960s with ELIZA. I have no idea why the obsession with the test has persisted into modern generations. It was some guy&#x27;s thought experiment from 1950. It&#x27;s not scientific in any fashion. Passing it doesn&#x27;t prove anything. It&#x27;s like some kind of authority worship game where people invoke the name of Turing as though doing so bolsters the strength of their arguments in any way whatsoever.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; You&#x27;d think that LLMs fulfill this, but I do wonder if a clever human could still discern between them given their particularities.<p>You don&#x27;t even have to be that clever. We&#x27;ve all tried using it for work. They fail.<p>In the first place, the Turing test was always a loosely defined thought experiment. I suppose it&#x27;s still serving that purpose, but at least half of HN takes it way too seriously. It&#x27;s <i>absolutely not</i> proof of &lt;engagementbait&gt; endorsed by Alan Turing himself.",
+                    "comment": [
+                        {
+                            "text": "I think if you trained an LLM specifically for the purpose of passing the Turing test (instead of being helpful, harmful, and so on), its likely it would pass it.<p>You would have to train it&#x2F;finetune it on a couple hundred of &#x27;humans chatting in the context of a Turing test&#x27;.",
+                            "comment": [
+                                {
+                                    "text": "I don&#x27;t think that&#x27;s true, assuming that the humans are also allowed to strategize and study the problem beforehand. The main weakness of the current models is that they still fail hard at certain kinds of common sense reasoning about real world situations, that no human ever would. Things like the &quot;walk or drive to a car wash that&#x27;s 2 minutes away&quot; thing from a few months ago (I think the latest models have patched that one in particular, but I&#x27;m sure others can be found in a similar vein).",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "That would not really pass the test in spirit, I think. Passing must be something that falls out as a consequence of being a good chatbot, not the other way around.<p>However such good conversational agents would still have benefits, and i would be curious how far the approach of building a model that’s nice to talk to can take you, as opposed to the current generation of all-knowledgable helpful assistants.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I think you are absolutely right.<p>The big problem with the Turing test always was that it doesn&#x27;t take into account adversarial designs.  They had those chatbot contests about a decade ago, where the chatbots would regularly pass the turing test, not because the bots were intelligent, but because they were packed with rhetorical tricks designed to avoid saying anything of substance.<p>By any meaningful measure, today&#x27;s LLM&#x27;s pass the Turing test.  Except we may need to lobotomize them for the deception to work.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I&#x27;d like to see an honest attempt at that.<p>What&#x27;s more interesting are the types of humans that might <i>fail</i> the Turing test. Maybe to discourage the failure of real humans, there could be consequences outside the context of the test.<p>That is, most people accused of being a computer would crack and start pleading their humanity, but some sociopaths might not. I then wonder how many of them overlap with those <i>so invested</i> in abusing the premise of the Turing test.<p>It really is a fun thought experiment when you spice it up enough.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Mannerisms aside, they are easy to spot from having inhuman amounts of trivia knowledge",
+                            "comment": [
+                                {
+                                    "text": "Couldn’t you instruct them to <i>not</i> display as much knowledge for a test situation…?",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Humanity is taking an interesting technological arc.<p>Terminator (1984 film) had a scene showing that in a future 2009, humans would use dogs to try to sniff out whether a robot passing for a human is secretly a machine.[1]<p>In our real world 2026, there <i>are</i> no humanoid machines that can complete basic generic tasks, like carrying a tray across the stage and holding it for 30 seconds.[2] They move slowly and badly (probably from an LLM like neural network doing very few frames per second of correction and analysis), and are nowhere near lifelike.<p>When they don&#x27;t need a body to pass for a human, such as typing online, they do a bit better.<p>We can tell them apart from humans. As you say, they have stylistic quirks.  And you mention that they&#x27;re easy to spot because they come trained with inhuman amounts of trivial knowledge.<p>[1] <a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;MovieDetails&#x2F;s&#x2F;0qUCVPYgjt\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;MovieDetails&#x2F;s&#x2F;0qUCVPYgjt</a><p>[2]\n<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;LivestreamFail&#x2F;s&#x2F;t6ZV0yhgEe\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;LivestreamFail&#x2F;s&#x2F;t6ZV0yhgEe</a>",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "It won&#x27;t fool all of the people all of the time. But it succeeds often enough to pass the loose definition. It does many things that we called &quot;AI complete&quot; for decades.<p>It is also clear that is is also not really aware, either. I think Turing would be tickled that we find ourselves in an intermediate state that he would not have imagined.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I find it more accurate to refer to &quot;<i>A</i> Turing Test&quot; as opposed to &quot;<i>The</i> Turing Test&quot; for that reason.  It&#x27;s just one loosely-defined test; necessary but not sufficient.",
+                            "comment": []
+                        },
+                        {
+                            "text": "I would not call Turing&#x27;s experiment ill-specified, on the contrary among other factors the paper the game is introduced in earnestly calls for a telepathy-proof room to ensure no side channel leakage. The 1950s was an interesting decade.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "&gt; entering the characters <a href=\"http:&#x2F;&#x2F;www.longbets.org&#x2F;601\" rel=\"nofollow\">http:&#x2F;&#x2F;www.longbets.org&#x2F;601</a> into the address bar of a web browser or command line tool (like curl)<p>The part of this that&#x27;s most likely to fail at some point is the &quot;http:&#x2F;&#x2F;&quot;.",
+            "comment": [
+                {
+                    "text": "In my mind, the part that is most likely to fail is &quot;return an HTML document that still contains the following text.&quot; Nowadays, more and more &quot;HTML documents&quot; do not contain any content at all, just some JavaScript that is responsible for then fetching and displaying the content.",
+                    "comment": [
+                        {
+                            "text": "You two have just spelled out a very specific bet. Care to put a wager on it? :)",
+                            "comment": []
+                        },
+                        {
+                            "text": "If the text was returned using a staged process, whereby the server first returns an instruction (JavaScript), and the web browser then executes that instruction, which is what transfers the text, then that doesn&#x27;t actually change anything.  Those are just technical details of the transfer.  You are viewing an HTML document on-screen; it makes no difference to this bet if it was returned to you by a different mechanism than originally conceived, since the bet doesn&#x27;t specify any transfer mechanism, just that the URL was entered into a browser.",
+                            "comment": [
+                                {
+                                    "text": "I understand that this isn&#x27;t entirely clear-cut and that people will interpret it differently, but in my opinion, there is a significant difference between &quot;a webpage that contains text X&quot; and &quot;an HTML document that contains text X.&quot; &quot;Webpage&quot; and &quot;HTML document&quot; are not synonyms - &quot;HTML document&quot; has a much narrower meaning.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; or command line tool (like curl)<p>Even if you interpreted the bet generously to allow for a browser to render the content using JavaScript, if I understand the bet correctly, the condition of working with a command-line tool like curl would fail.",
+                                    "comment": [
+                                        {
+                                            "text": "I read the or&#x27;s as giving alternatives, only one of which needs to work.<p>I can see how other interpretations are possible, but I don&#x27;t see anything especially generous about mine.  I&#x27;m not &quot;allowing&quot; anything: To make a judgement you have to pick a web browser to try it with, and you&#x27;d probably pick the most popular one, in the most popular configuration, that seems the most fair.  If that web browser happens to execute Javascript when you navigate to an URL, then that&#x27;s just how it is.",
+                                            "comment": [
+                                                {
+                                                    "text": "It says that the browser must download &quot;an HTML document that still contains the following text&quot;. I can see how either interpretation could work, but I would interpret &quot;contains&quot; as &quot;the text is in the HTML document&quot;, not &quot;rendering the HTML document in a JavaScript-capable browser displays the text&quot;.<p>(Though, that said, <i>some</i> approaches to rendering sites via JavaScript would still have that text in the initially downloaded HTML <i>file</i> as JavaScript data.)<p>As for the &quot;or&quot;, I read it as &quot;doing either X or Y must&quot;, not &quot;either X must or Y must (not necessarily both)&quot;, but yeah, I can see either interpretation being valid.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "That&#x27;s a secondary (&quot;OR&quot;) condition, used if the browser condition isn&#x27;t satisfied.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I used to be someone, man, I was a dreamer, a programmer, a <i>man</i>!<p>Now I&#x27;m a human slave copying text from web browsers to chat windows to get around JS rendering bullshit.",
+                            "comment": [
+                                {
+                                    "text": "The preferred term is meat proxy ;)",
+                                    "comment": [
+                                        {
+                                            "text": "That depends on which side of the JS rendering bullshit you&#x27;re sitting. If you&#x27;re on the serving side, yes.<p>But I do the same as GP, just on the receiving side. That is, reaching out for help to baby eldritch entity, because that&#x27;s healthier for my mind than dealing directly with the unspeakable horrors that half the websites are today. The industry has lost its collective mind in pursue of profit and control, and that was long before the thousand-mask wearing shoggoths became our daily consorts.",
+                                            "comment": [
+                                                {
+                                                    "text": "I like your funny words, magic man.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "One of those things is true",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "The detailed terms of the bet include this:<p>&gt; A 301 redirect from www.longbets.org&#x2F;601 to a different URL containing that text would also fulfill those conditions.<p>I assume this would cover the HTTP-&gt;HTTPS redirect scenario.",
+                    "comment": [
+                        {
+                            "text": "I think the parent is referring to the possibility that one day, browsers might put up a blanket security warning for HTTP URLs instead of following redirects. Or they might try to be a little too clever with HTTPS upgrades.<p>In particular, the automatic upgrade feature in modern browsers is based on several heuristics rather than explicit configuration like HSTS, so there&#x27;s always a bit of room for breakage there. For example, they don&#x27;t even check if the server returns a 301 redirect, which can be problematic if the server wants to redirect to HTTPS on a different host&#x2F;port or make some changes to the path.",
+                            "comment": [
+                                {
+                                    "text": "&gt; Or they might try to be a little too clever with HTTPS upgrades.<p>They&#x27;re not going to get any cleverer than they are now. In October we&#x27;ll finally be done with heuristics or central databses of https-first websites used by the various browsers or the half a dozen of headers that you must dance around to get the upgrade to work securely and reliably. They will just default to https first.<p><a href=\"https:&#x2F;&#x2F;blog.google&#x2F;security&#x2F;https-by-defau&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.google&#x2F;security&#x2F;https-by-defau&#x2F;</a><p>Yes this is about Chrome, but all others will follow.",
+                                    "comment": [
+                                        {
+                                            "text": "Personally, if I were interpreting the bet, and that browser behavior had been changed before the day of the bet, I&#x27;d interpret that as failure, because the browser didn&#x27;t show an HTML page, it showed a warning dialogue.<p>And in any case, at some point after browsers start doing that, I will be unsurprised if some further conditions prevail that provide reason for web servers to stop listening on http at all.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Yeah that was a clever bit of foresight there.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "At a certain bet size it would almost be self-fulfilling, heh, as one side would be very incentivized to keep at least that url working (buying the domain + hosting it if the page were to die)",
+            "comment": [
+                {
+                    "text": "Someone should do a long bet on the continuous existence of longbets.com",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "One thing I&#x27;ve done is include my redirect rules with the web application. So my links continue to work even when I change them and forget them.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46139686\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46139686</a>",
+            "comment": [
+                {
+                    "text": "I was expecting some kind of system that would follow the pages automatically without you having to do extra work when changing the URL (“continue to work even when I change them and forget them”) but it looks like you still add the redirects manually?<p>That’s more than most will do, sure, but it doesn’t seem like it saves you from a broken link if you forget to add a specific redirect or miss it during a mass format change. Am I missing something?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Amazing that Disqus comments are still live for this page. More impressive even than the website itself being live.",
+            "comment": [
+                {
+                    "text": "I really liked disqus back in the day. When I was in my kinda cringey singularity phase, Kurzweil and all that. Tracking comments across similar blogs with the same people was handy.",
+                    "comment": []
+                },
+                {
+                    "text": "I&#x27;m grateful the comments are still there, since they reminded me to get back in touch with my old friend Craig Hubley!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Some nice posts about his prediction on Jeremy Keith&#x27;s blog:<p><a href=\"https:&#x2F;&#x2F;adactio.com&#x2F;journal&#x2F;tags&#x2F;longbets\" rel=\"nofollow\">https:&#x2F;&#x2F;adactio.com&#x2F;journal&#x2F;tags&#x2F;longbets</a>",
+            "comment": [
+                {
+                    "text": "Wow, that could be a post of it’s own",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Anyway to find all bets expiring this year? it will be interesting to see. Could not find a way to search for it there.",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m not sure how it played out in 2011, but as of now it looks like the win condition hinges on the redirect.<p>For the heck of it I confirmed &quot;<a href=\"http:&#x2F;&#x2F;www.longbets.org&#x2F;601\" rel=\"nofollow\">http:&#x2F;&#x2F;www.longbets.org&#x2F;601</a>&quot; does in fact result in a 301 redirect to &quot;<a href=\"https:&#x2F;&#x2F;longbets.org&#x2F;601&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;longbets.org&#x2F;601&#x2F;</a>&quot;. I suspected they might have used a 302.",
+            "comment": []
+        },
+        {
+            "text": "This is basically a bet on if you think longbets is going to be around.",
+            "comment": []
+        },
+        {
+            "text": "I like the comment on the site about blockchains replacing HTML links (from 4 years ago).",
+            "comment": []
+        },
+        {
+            "text": "Ugh, I really hate SSL. This is a simple text page, why couldn&#x27;t it live where it was?<p><pre><code>  C:\\Users\\User&gt;curl -i http:&#x2F;&#x2F;longbets.org&#x2F;601&#x2F;\n  HTTP&#x2F;1.1 301 Moved Permanently\n  Date: Sun, 09 Aug 2026 16:49:33 GMT\n  Content-Type: text&#x2F;html\n  Content-Length: 178\n  Connection: keep-alive\n  Server: nginx&#x2F;1.18.0 (Ubuntu)\n  Location: https:&#x2F;&#x2F;longbets.org&#x2F;601&#x2F;\n  X-Frame-Options: SAMEORIGIN\n\n  &lt;html&gt;\n  &lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;&#x2F;title&gt;&lt;&#x2F;head&gt;\n  &lt;body&gt;\n  &lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;\n  &lt;hr&gt;&lt;center&gt;nginx&#x2F;1.18.0 (Ubuntu)&lt;&#x2F;center&gt;\n  &lt;&#x2F;body&gt;\n  &lt;&#x2F;html&gt;\n\n</code></pre>\nYes, I&#x27;m an old fart, yelling at the internet clouds. You&#x27;ll get here some day too, if you&#x27;re lucky.<p>I am <i>quite impressed</i> that the bet included above redirection as part of the terms.",
+            "comment": []
+        },
+        {
+            "text": "It&#x27;s all a matter of whether someone is willing to pay for the hosting.<p>Which is not, in my opinion, how things should be hosted on the Web.<p>Freenet had a different approach, even back in the early days (two decades ago). I interviewed Ian Clarke about it <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=JWrRqUkJpMQ\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=JWrRqUkJpMQ</a><p>I wrote about it for years: <a href=\"https:&#x2F;&#x2F;community.intercoin.app&#x2F;t&#x2F;who-pays-for-storage-nfts-and-other-digital-content-in-2022&#x2F;2326\" rel=\"nofollow\">https:&#x2F;&#x2F;community.intercoin.app&#x2F;t&#x2F;who-pays-for-storage-nfts-...</a><p>And recently I built Safecloud to be different: <a href=\"https:&#x2F;&#x2F;safebots.github.io&#x2F;Safecloud&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;safebots.github.io&#x2F;Safecloud&#x2F;</a>",
+            "comment": [
+                {
+                    "text": "On HN, a TLDR would be helpful, because just clicking your links would potentially mean falling for shilling of ones own side-hustle.<p>I bet there&#x27;s complexity to the topic, but I am sure you could put it into a few words instead of just leaving a hook for others to click on.",
+                    "comment": [
+                        {
+                            "text": "I know nothing of Safecloud, but freenet failed for a very valid reasons:<p>1. Data retention isn&#x27;t infinite. If the source disappears from the network, peers will prune it shortly. This is exponentially true in our multimedia-heavy world.<p>2. Despite 1, if you actually want to delete something you published, you can&#x27;t. Absolutists will see this as a good thing. Normal people will see this as a problem.<p>3. Peer-to-peer doesn&#x27;t work in a mobile-first world, and not enough people will host nodes as a hobby. If all website publishers&#x2F;hosters have to host a node, then we&#x27;re just back to the current model but with extra steps.",
+                            "comment": [
+                                {
+                                    "text": "Closed-garden mobile-first tech feudalism lobotimized the Internet. I remember trying out the Freenets, I2Ps, and whatnot in the 90&#x27;s. Too cumbersome nerdy tools to use for anything actually worthwhile. It was born in the idealized world village of the 90&#x27;s Internet. Maybe real life doesn&#x27;t work like that, and the lobotimized centralized tech will eventually win.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Is the p2p problem really still one in our world that is mobile first, but also has ubiquitous internet connectivity pretty much everywhere? I’m almost sure I could host my website from my phone and have at least 99.5% percent of uptime.",
+                                    "comment": [
+                                        {
+                                            "text": "Give that it&#x27;s impossible to even listen on port 443 on a phone, as that would require root privileges, I don&#x27;t think you can host your website on your phone at all, at least not if you want it to accessible in a normal way. And that&#x27;s not even going into all of the problems with running background apps on a phone, especially on iOS.",
+                                            "comment": [
+                                                {
+                                                    "text": "By <i>I could</i>, I meant that my phone has a persistent connection uninterruptedly long enough to be <i>theoretically</i> able to serve a website in the background. There are all sorts of (arbitrary, mind you) technical limitations, from the IPv6 address randomly changing as you roam across networks to iOS killing background processes - but those are software limitations.<p>The point was that mobile device doesn&#x27;t equate spotty connectivity anymore for most people.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Even in this idea of &quot;could in principle&quot;, the IP address randomly changing as you roam is not an arbitrary technical limitation, it is a fundamental property of how IP networks operate that proved to be too hard to fix for IPv6. The LTE network does a lot of work to try to preserve your IP as seen by the servers you connect to, to preserve your active connections, but this could only be done as a layer on top of IP.<p>The reason why this is fundamentally quite hard is to do with routing optimization. Routing tables have to reflect physical connectivity - which means packets destined for F2::67 mustn&#x27;t be routed to LA if that is the IP of a phone that is now resident in SF. However, changing routing tables on all devices along the way as a phone roams would not be an easy feat.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

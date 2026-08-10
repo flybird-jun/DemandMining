@@ -1,0 +1,526 @@
+{
+    "item_id": 49214098,
+    "title": "Assembly Hall of Shame",
+    "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
+    "text": "Assembly Hall of Shame\nOverview\nInstruction latency analysis usually focuses on performance\noptimization\n—making code run as fast as possible. The\nAssembly Hall of Shame\ntakes the opposite approach: searching for the absolute floor of\nsingle-instruction performance.\n🏆 Current Champions 🏆\nx86\n:\nfxrstor64\nStrategy\n: Use\nfxrstor64\nto load 512-byte FPU/MMX/XMM state from a\nhigh-latency MMIO region in the PCIe fabric, then starve the fabric while the\nload is in flight — a fleet of hammer cores pounds a different high-latency\nMMIO register with tight 4-byte reads, saturating the PCIe root complex and\nendpoint with non-posted transactions, so CPU 0's 512-byte\nfxrstor64\nmust\nqueue behind all that contending traffic.\nContender\n: AMD Ryzen 7 5800H\n; CPU 0 — timed instruction\nmovl\n$\n0xfcc68830\n,\n%\nrsi\nfxrstor64\n%\nrsi\n; CPUs 1..N — hammer loop against a different high-latency location\nmovl\n0xfcc68858\n,\n%\neax\n🏆\nScore\n: 198,002,498,236 cycles\n🏆\nTime\n: 62 seconds\nHonorable Mentions\nA spec-violating\nunaligned ymm0 load\nthat forced\nnon-posted dword transactions from stalled GPU registers was used to break the\nfundamental design of System Management Mode in\nsmiiiiiiiiiiiiiiii\n.\nvmovdqu\n0xfcc003b1\n,\n%\nymm0\nRules\nInstructions may use whatever setup is necessary, but only a single\ninstruction is eligible to be scored.\nTrapped/emulated/virtualized instructions may only time the trap, not the\nhandler.\nInstructions must not be interruptible.\nrep movs\n,\npause\n, etc. are\ndisqualified.\nTimes are normalized based on the CPU base clock frequency.\nAll platforms must be in their factory stock configurations - no hardware\nmodifications.\nx86 Leaderboard\n27.\nnop\nStrategy\n:\nnop\ndoes nothing. It opens the leaderboard accordingly.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nnop\nScore\n: 1 cycles\nTime\n: 0 nanoseconds\n26.\nnop16\nStrategy\n: Regular\nnop\nwas too short, but how do we make nothing take\nlonger? Try a\nlonnnnnng nop\n.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\ndata16 data16 data16 data16 data16 data16 data16 nopl 0x00000000(%%eax,%%eax,1)\nScore\n: 20 cycles\nTime\n: 7 nanoseconds\n25.\nrdtsc\nStrategy\n: Just a reference instruction to get our bearings.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nrdtsc\nScore\n: 49 cycles\nTime\n: 18 nanoseconds\n24.\nidiv\nStrategy\n: Use 128-bit dividend (rdx:rax=2:0) with small divisor to push the\nquotient above the ceiling imposed by sign-extension, driving the longest path\nthrough the divider microcode.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nxorq %\nrax\n,\n%\nrax\n; rax = 0 (low 64 bits of dividend)\nmovq\n$\n2\n,\n%\nrdx\n; rdx = 2 (high 64 bits: full dividend = 2^65)\nmovq\n$\n5\n,\n%\nrbx\n; divisor → quotient = 2^65/5 ≈ 7.4×10^18\nidivq %\nrbx\nScore\n: 77 cycles\nTime\n: 28 nanoseconds\n23.\nenter\nStrategy\n: Use maximum nesting depth (31) to force 30 display-pointer loads\nand pushes through the microcode display-walk path.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nenter\n$\n0\n,\n$\n31\n; 0 bytes allocated, nesting depth 31 (maximum)\nScore\n: 112 cycles\nTime\n: 41 nanoseconds\n22.\nfldl\nStrategy\n: Try a small denormal to trigger an FP microcode assist.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nmovabsq\n$\n0x0000000000000001\n,\n%\nrax\nmovq\n%\nrax\n,\n-\n8\n(%\nrsp\n)\nfldl\n-\n8\n(%\nrsp\n)\nScore\n: 133 cycles\nTime\n: 49 nanoseconds\n21.\nclflush\nStrategy\n: Just ensure the cache line is dirty.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nclflush\n(%\nrax\n)\n; rax -> dirty cache line resident in L3\nScore\n: 165 cycles\nTime\n: 60 nanoseconds\n20.\nfsin\nStrategy\n: Use exponent 0x7ff to reach 'special value' processing in\nmicrocode; positive/negative, NaN/inf doesn't seem to make a difference, go with\nQNaN.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nmovabsq\n$\n0x7fffffffffffffff\n,\n%\nrax\nmovq\n%\nrax\n,\n-\n8\n(%\nrsp\n)\nfldl\n-\n8\n(%\nrsp\n)\nfsin\nScore\n: 257 cycles\nTime\n: 94 nanoseconds\n19.\nmfence\nStrategy\n: Saturate all write-combining line-fill buffers with\nmovnti\nstores to distinct cache lines, forcing\nmfence\nto drain the full LFB write\npath to the uncore before retiring.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nmovnti\n%\nr9\n,\n0\n*\n64\n(%\nrdi\n)\n; ×16 distinct cache lines — saturate the write-combining LFBs\n; …\nmovnti\n%\nr9\n,\n15\n*\n64\n(%\nrdi\n)\nmfence\n; must drain all pending LFB writes before retiring\nScore\n: 326 cycles\nTime\n: 120 nanoseconds\n18.\nmov cr3\nStrategy\n: Nothing for now, just check how long it takes to invalidate the\nTLB.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmov\n%\nrax\n,\n%\ncr3\nScore\n: 352 cycles\nTime\n: 110 nanoseconds\n17.\nfadd\nStrategy\n: Hit x87 FP microcode assist path by using denormal source operand.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nfldl subnorm\n; 1e-310: value < DBL_MIN, biased exponent = 0\nfaddl subnorm\n; source is subnormal → FP microcode assist\nScore\n: 677 cycles\nTime\n: 249 nanoseconds\n16.\nsplit lock\nStrategy\n: Align\nlock\n-prefixed operand to straddle cache-line\nboundary, forcing CPU to assert the external bus lock rather than using the fast\nMESI cache-coherence path.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\n; split_ptr % 64 == 63 — dword spans bytes 63 (line N) and 64–66 (line N+1)\nlock\nxaddl %\nr9d\n,\n(%\nrdi\n)\nScore\n: 865 cycles\nTime\n: 319 nanoseconds\n15.\nfdiv\n-\nStrategy\n: Use subnormal divisor, hardware hands control to microcode\nassist, assist normalizes operand, performs the division, then restores\narchitectural state.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nmovabsq\n$\n0x3ff0000000000000\n,\n%\nrax\n; 1.0 (normal dividend)\nmovq\n%\nrax\n,\n-\n8\n(%\nrsp\n)\nfldl\n-\n8\n(%\nrsp\n)\n; ST(0) = 1.0\nmovabsq\n$\n0x0000002000000000\n,\n%\nrax\n; 6.79e-313 (subnormal divisor)\nmovq\n%\nrax\n,\n-\n8\n(%\nrsp\n)\nfdivl\n-\n8\n(%\nrsp\n)\n; ST(0) = 1.0 / subnormal → FP assist\nScore\n: 883 cycles\nTime\n: 325 nanoseconds\n14.\ncpuid\nStrategy\n: Use\nrakefield\nto find\nthe highest latency CPUID leaves.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nmovl $6, %eax\ncpuid\nScore\n: 1248 cycles\nTime\n: 460 nanoseconds\n13.\nrdrand\nStrategy\n: Execute in a tight loop to deplete the hardware entropy pool faster than it can be refilled, forcing subsequent calls to stall while the entropy source recovers.\nContender\n: Intel(R) Core(TM) i7-8559U CPU @ 2.70GHz\nrdrand\n%\nrax\nScore\n: 5,579 cycles\nTime\n: 2.057 microseconds\n12.\nwrmsr\nStrategy\n: Use\nproject:nightshyft\nto identify high latency MSRs. MCG_CTL on Zen look like a winner: may be a\nmicrocode quiesce and synchronize on MCA error banks across hardware units, some\npotentially off-die, requiring fabric-level communication rather than a simple\nlocal register write.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmovl\n$\n0x17b\n,\n%\necx\n; MCG_CTL\nwrmsr\nScore\n: 34,304 cycles\nTime\n: 10.742 microseconds\n11.\nout\nStrategy\n: Target an I/O port that straddles a NIC device register boundary,\ntriggering the device to quiesce its TX DMA engine on each write.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmov\n$\n0xf019\n,\n%\ndx\noutl %\neax\n,\n%\ndx\nScore\n: 49,857 cycles\nTime\n: 15.580 microseconds\n10.\nrdmsr\nStrategy\n: Use\nproject:nightshyft\nto identify high latency model-specific-registers: VIA uses an undocumented\nregister at 0x133 that gives wildly high response time. No idea what it does.\nContender\n: VIA Eden Processor 800MHz\nmovl\n$\n0x133\n,\n%\necx\n; undocumented MSR\nrdmsr\nScore\n: 161,602 cycles\nTime\n: 202.004 microseconds\n9.\nwbinvd\nStrategy\n: Fully load L1/L2/L3 caches with dirty lines to force DRAM\nwriteback of entire hierarchy.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nwbinvd\nScore\n: 1,616,480 cycles\nTime\n: 506.165 microseconds\n8.\nin\nStrategy\n: Target I/O port mapped to an ACPI PM block where an unaligned\n4-byte read decodes into multiple non-posted loads from wherever this port goes.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmov\n$\n0x0413\n,\n%\ndx\ninl %\ndx\n,\n%\neax\nScore\n: 12,524,415 cycles\nTime\n: 3.921769 milliseconds\n7.\nmov\nStrategy\n: Use\nmmiotic\nto identify\nhigh-latency deadspace in PCIe fabric, hit unkown GPU register.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmovl\n0xfcc003b0\n,\n%\nesi\nScore\n: 443,937,696 cycles\nTime\n: 139.010268 milliseconds\n6.\nmov rax\n-\nStrategy\n: Search MMIO space for slowest registers in PCIe fabric, hit\nunknown GPU register, use 8-byte MMIO read to get two dword register accesses,\nwhich isn't technically allowed but works anyway.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nmovq\n0xfcc003b0\n,\n%\nrax\nScore\n: 887,716,864 cycles\nTime\n: 277.971228 milliseconds\n5.\nvmovdqu xmm\n-\nStrategy\n: Search MMIO space for slowest registers in PCIe fabric, hit\nunknown GPU register, use 16-byte MMIO read to get four dword register accesses,\nwhich isn't technically allowed but works anyway.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nvmovdqu\n0xfcc003b0\n,\n%\nxmm0\nScore\n: 1,774,555,776 cycles\nTime\n: 555.664133 milliseconds\n4.\nvmovdqu ymm\n-\nStrategy\n: Search MMIO space for slowest registers in PCIe fabric, hit\nunknown GPU register, use 32-byte MMIO read to get eight dword register\naccesses, which\nstill\nisn't technically allowed but works anyway.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nvmovdqu\n0xfcc003b0\n,\n%\nymm0\nScore\n: 3,549,079,296 cycles\nTime\n: 1.111345034 s\n3.\nvmovdqu ymm (unaligned)\n-\nStrategy\n: Search MMIO space for slowest registers in PCIe fabric, hit\nunknown GPU register, use 32-byte\nunaligned\nMMIO read to get nine dword\nregister accesses, which is even\nless\nallowed than the aligned version, but\nworks anyway.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\nvmovdqu\n0xfcc003b1\n,\n%\nymm0\nScore\n: 4,453,212,256 cycles\nTime\n: 1.394428818 seconds\n2.\nfxrstor64 (baseline)\n-\nStrategy\n: Use\nmmiotic\nto identify\nhigh-latency deadspace in PCIe fabric, isolate region near 0's and offset state\nto avoid MXCSR corruption (possibly VGA buffer?), use fxrstor64 to load 512-byte\nFPU/MMX/XMM state from MMIO, forcing CPU to process 512 bytes of I/O\ntransactions through slowest available memory aperture.\nContender\n: AMD Ryzen 7 5800H\nmovl\n$\n0xfcc68830\n,\n%\nrsi\nfxrstor64\n%\nrsi\nScore\n: 74,584,168,512 cycles\nTime\n: 23.354502677 seconds\n1. 🏆\nfxrstor64\n🏆\nStrategy\n: Extend\nfxrstor64 (baseline)\nby starving the fabric while the\nload is in flight — a fleet of hammer cores pounds a different high-latency\nMMIO register with tight 4-byte reads, saturating the PCIe root complex and\nendpoint with non-posted transactions, so CPU 0's 512-byte fxrstor64 must queue\nbehind all that contending traffic.\nContender\n: AMD Ryzen 7 5800H with Radeon Graphics (Trigkey S5)\n; CPU 0 — timed instruction\nmovl\n$\n0xfcc68830\n,\n%\nrsi\nfxrstor64\n%\nrsi\n; CPUs 1..N — hammer loop against a different high-latency location\nmovl\n0xfcc68858\n,\n%\neax\n🏆\nScore\n: 198,002,498,236 cycles\n🏆\nTime\n: 62 seconds\n??. xrstor64 (AMX, MMIO)\nStrategy\n: Leverage extended AVX state in Sapphire Rapids with MMIO approach\nfrom fxrstor64:\nxsave\nstate area is 8KB vs 512 bytes, 16x size ->\n1,000,000,000,000 cycles\nContender\n: TODO\n; XCR0 must enable AMX components (bits 17-18); state area ~8KB\nxrstor64 (%\nrsi\n)\n; rsi -> MMIO region, same technique as fxrstor64\nARM Leaderboard\nT.B.D.\nRISC-V Leaderboard\nT.B.D.\nAuthor\nThe assembly hall-of-shame is a research effort from Christopher Domas (\n@xoreaxeaxeax\n).",
+    "comment": [
+        {
+            "text": "Related, and linked in the readme: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;smiiiiiiiiiiiiiiii\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;smiiiiiiiiiiiiiiii</a> (using the slow instructions to break SMI)",
+            "comment": [
+                {
+                    "text": "Yeh that&#x27;s a really nice one; I don&#x27;t see anything in that suggesting it&#x27;s been fixed (or even reported?)",
+                    "comment": []
+                },
+                {
+                    "text": "I wish they would just explain it in normal terms instead of this nasty LLM &quot;engaging blog post&quot; style",
+                    "comment": [
+                        {
+                            "text": "Chris usually takes an educational angle, I don&#x27;t think this is LLM-generated content at all it&#x27;s just his style. I highly encourage watching some of his DefCon or BlackHat talks, they&#x27;re fun!",
+                            "comment": []
+                        },
+                        {
+                            "text": "I looked at both links and don&#x27;t see anything weird or annoying, and I hate overblown styles myself.",
+                            "comment": [
+                                {
+                                    "text": "‘The counters tell the story’ might be something they consider odd. But I’m not familiar with the author’s style so they could have had these tics pre-LLM or they picked up these tics from reading a lot of LLM content.",
+                                    "comment": [
+                                        {
+                                            "text": "Yes, that&#x27;s the point where I was like &quot;wait a second&quot; and started counting em dashes. A third alternative, perhaps the LLMs were trained hard on his prior work? :-)",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Bus cycles can be arbitrarily long on any processor that has memory cycles with a hand shake requiring an ack, with no timeout.<p>E.g. we can build a board around a MC68000 where we make it lock up forever in a bus cycle, waiting for a DTACK that doesn&#x27;t arrive.<p>Some early microprocessors had clocked bus cycles without handshaking. They would put out an address on some address lines and signal some line together with a read&#x2F;write indication, and then expect the transfer to be completed within some clock cycles. If nothing is attached to the address, they would read whatever values are on the bus, like maybe all 1&#x27;s if it is an open drain system that requires the transmitting device to pull to ground to indicate zero.<p>I&#x27;d say that kind of thing belongs to a hall of shame; it requires software hacks to interface with anything that can&#x27;t keep up with the prescribed bus cycle.",
+            "comment": [
+                {
+                    "text": "&gt; E.g. we can build a board around a MC68000 where we make it lock up forever in a bus cycle, waiting for a DTACK that doesn&#x27;t arrive.<p>IIRC, early 68k Macs had processor upgrades hooked onto the 68k bus and did exactly this - an early boot driver run by the “actual” CPU coordinated handoff with the expansion CPU’s bootstrap ROM.",
+                    "comment": []
+                },
+                {
+                    "text": "In general, more complex processors have latency issues, and in some ways modern chips have actually become worse with each design iteration.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Metastability_(electronics)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Metastability_(electronics)</a><p>Ultimately... failure modes must arise because naive gate design simulation models can&#x27;t determine issues in a computationally feasible time frame.<p>The consequences of &quot;fixing&quot; CDC prone design flaws makes a processor many times slower (8 to 16 times slower on my dumb attempt), and develops weird alien design features very different from Von Neumann architectures.<p>This is why we can&#x27;t have nice things.  =3",
+                    "comment": [
+                        {
+                            "text": "I smell Buridan&#x27;s ass. :)",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Bus cycles can also be arbitrarily long on those microprocessors if they don&#x27;t use dynamic logic - you can stop the clock.",
+                    "comment": [
+                        {
+                            "text": "&gt; Times are normalized based on the CPU base clock frequency",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It says in the rules<p>&gt; Trapped&#x2F;emulated&#x2F;virtualized instructions may only time the trap, not the handler.<p>But I feel like that 12ms write to an ACPI IO port at current leaderboard position 8 is probably trapping to SMM and being handled there.",
+            "comment": []
+        },
+        {
+            "text": "This author also has other things like: A compiler that emits only `mov` instructions and another compiler that deliberately messes with the control flow so that, if disassembled, common debuggers will draw symbols like skulls or threats. <a href=\"https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;repsych\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;repsych</a>",
+            "comment": [
+                {
+                    "text": "He also bruteforced the entire opcode space to find undocumented instructions (sandsifter).",
+                    "comment": [
+                        {
+                            "text": "Also came up with the original  ..cantor.dust.. binary visualization tool, which is a tool I never used directly but Chris&#x27; presentation of it in 2012 is still one of the coolest talks I&#x27;ve ever seen.<p>[0] <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Battelle&#x2F;cantordust\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Battelle&#x2F;cantordust</a><p>[1] <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=4bM3Gut1hIk\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=4bM3Gut1hIk</a>",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I saw a string of emoji that supposedly when copied to a file and renamed .exe prints out hello when run.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Depending on his interpretation of the rules about trapped instructions, one could just build a loop in the x86 page tables. Those are usually a tree linked by pointers, and any page table lookup can create another page fault that creates another lookup that...<p>Leads to x86 page table MMU magic being turing complete: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;jbangert&#x2F;trapcc\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;jbangert&#x2F;trapcc</a><p>And the simplest thing you can do on such a system is just to loop indefinitely, thus creating a simple instruction with a memory access (mov or anything, doesn&#x27;t really matter, even the instruction fetch for a nop would work) to take infinite time.",
+            "comment": [
+                {
+                    "text": "Page tables are physically addressed, so can&#x27;t recurse. I assume this thing actually works by causing a page fault on the first instruction of the page fault handler, which is a new instruction.",
+                    "comment": [
+                        {
+                            "text": "x86’s page tables’ accessed and dirty bits do something that one might be forgiven for calling “recursion”.",
+                            "comment": []
+                        },
+                        {
+                            "text": "&gt; Page tables are physically addressed<p>Nope. Not on x86. You can use either physical or virtual addresses at your choosing. Consumer OSes use virtual ones, so you can swap out page tables (yes, really!). See <a href=\"https:&#x2F;&#x2F;wiki.osdev.org&#x2F;X86_Paging\" rel=\"nofollow\">https:&#x2F;&#x2F;wiki.osdev.org&#x2F;X86_Paging</a> &quot;Page directory&quot;.",
+                            "comment": [
+                                {
+                                    "text": "Nothing in this section mentions them containing virtual addresses. In fact the word &quot;physical&quot; is written in bold. Are you a hallucinating LLM?",
+                                    "comment": [
+                                        {
+                                            "text": "You are right.<p>Not an LLM problem, just an undecaffeinated meat brain and some faulty memories. I&#x27;ve misread &#x27;When PS=0, the page table address field represents the physical address of the page table that manages the four megabytes at that point.&#x27; to mean that when PS=1, the address isn&#x27;t physical. But PS is page size... And I somehow remembered that you could induce pagefaults when walking the page tables...<p>Sorry.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It&#x27;d be really interesting to see whether the winning (losing?) instructions&#x2F;strategies would be different on other architectures. At least right now the top spot (`fxrstor64` on MMIO, starve PCIe) seems relatively architecture-independent, but maybe something about MMIO ordering rules on e.g. POWER would be different enough to change that -- or perhaps open up new avenues?<p>I wonder what the actual limit on this `fxrstor64` is right now. If you can stall the PCIe bus for that long, then why not indefinitely? Certainly there&#x27;s no forward progress guarantee here.",
+            "comment": [
+                {
+                    "text": "I think the idea was to find a long instruction on an ordinary PC. Of course by adding special hardware you can stall things.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "<i>Nop</i> should be #1, because it is infinitely slow for what it does. ;)",
+            "comment": [
+                {
+                    "text": "It increments rip by one.",
+                    "comment": [
+                        {
+                            "text": "I thought I remembered reading somewhere re: the 8086 microcode disassembly that NOP, which is encoded as XCHG AX,AX actually does run the XCHG microcode and uses an internal scratchpad register to do the exchange.",
+                            "comment": [
+                                {
+                                    "text": "There were several NOPs - XCHG BX,BX and so on. Those were taken later to be prefixes for new classes of opcodes.",
+                                    "comment": [
+                                        {
+                                            "text": "None was. XCHG AX,AX is special because XCHG AX,reg has a one-byte encoding.<p>You&#x27;re probably confusing with:<p>- POP CS being broken and later becoming a prefix<p>- some opcodes being &quot;reserved NOPs&quot;, i.e. reserved without generating #UD. They are used for instructions that may be defined in the future while guaranteeing backwards compatibility, for example new kinds of prefetches. MPX bounds checking instructions were also encoded in reserved NOPs.",
+                                            "comment": [
+                                                {
+                                                    "text": "Was I thinking of 0x86?",
+                                                    "comment": [
+                                                        {
+                                                            "text": "0x86 and 0x87 (XCHG rm,r with byte- and word-sized operands) encode nops in the same way as 0x90, but were never redefined as prefixes.<p>It&#x27;s interesting that a lot of ALU operations occupy four opcodes (memory source&#x2F;memory destination x byte&#x2F;word) but 0x84&#x2F;0x85 and 0x86&#x2F;0x87 only need two because not only are they commutative, but also 0x84&#x2F;0x85 do not write to any operands and 0x86&#x2F;0x87 write to both. So there is no difference between memory as the source or destination operand.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "No, that&#x27;s done by the decoder. It actually does nothing.",
+                            "comment": [
+                                {
+                                    "text": "The decoder is an implementation detail that is a subcomponent of NOP; GP was right, and your correction isn&#x27;t.",
+                                    "comment": [
+                                        {
+                                            "text": "As specified by the spec, it arguably increments RIP by one.<p>The actual typical hardware implementation just fetches the next 16-32 bytes from icache, shifts it to the correct alignment, and slams it into a bunch of parallel decoders which each attempts to decode one x86 instruction per byte.<p>The next cycle, the first 1-6 non-overlapping valid instructions are accepted into a queue for further decoding. The NOP almost certainly takes up space in this queue.<p>At no point does RIP get incremented by one. There isn&#x27;t even a single physical  RIP register to increment, the CPU is &quot;executing&quot; dozens or even hundreds of RIPs in parallel.",
+                                            "comment": [
+                                                {
+                                                    "text": "As long as everyone is being outrageous pedantic: NOP, like all other non-faulting, non-control-transferring instructions, increments RIP by the length of the instruction, which may or may not be one.  A prefixed NOP is still NOP.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "It&#x27;s not an implementation detail, because the decoder runs before the execution of <i>every</i> instruction. If we&#x27;re going to say that NOP increments IP by one, then we should also say that ADD &quot;stores in dst the addition of src and dst, as well as incrementing IP by the length of the instruction&quot;, and JMP imm &quot;increments JMP by imm + the length of the instruction&quot;.",
+                                            "comment": [
+                                                {
+                                                    "text": "ADD does in fact do that.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "I&#x27;m not disputing the total effect. I&#x27;m asking if you&#x27;d rather describe ADD and JMP in this manner, in order to say that NOP does not in fact do nothing.",
+                                                            "comment": [
+                                                                {
+                                                                    "text": "Love the pedantry here. I&#x27;m currently at: no op code does anything, it&#x27;s all fancy effects in the hardware that can be described in arbitrary detail, which somehow allows me to cause these letters to appear on your screen.",
+                                                                    "comment": [
+                                                                        {
+                                                                            "text": "Insightful and compelling. Tell me another one.",
+                                                                            "comment": [
+                                                                                {
+                                                                                    "text": "With pleasure.<p>There was a boy\nA very strange, enchanted boy\nThey say he wandered very far\nVery far, over land and sea\nA little shy and sad of eye\nBut very wise was he.<p>And then one day\nA magic day he passed my way\nAnd while we spoke of many things\nFools and kings\nThis he said to me:\n&quot;The greatest thing you&#x27;ll ever learn\nIs just to love and be loved in return.&quot;",
+                                                                                    "comment": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "It&#x27;s still part of the instruction to increment it by one, as opposed to write a value or offset to it, as jump instructions do.",
+                                    "comment": [
+                                        {
+                                            "text": "See my sibling response.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "I mean....there are several architectures out there which has a nop that is a jump forward. Kind of a tree forest issue imho",
+                                    "comment": [
+                                        {
+                                            "text": "I don&#x27;t know about other architectures in as much detail. I know x86 NOP does nothing.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Strategy: nop does nothing. It opens the leaderboard accordingly.<p>Score: 1 cycles\nTime: 0 nanoseconds",
+                    "comment": [
+                        {
+                            "text": "It opens the leaderboard as #27, so in the last place.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "It&#x27;s a little faster than yep.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "My favorite is having an XOR opcode modifying the operand of its next IMUL operand.<p>Fools QEMU and makes for a good &quot;am I on a VM&quot; logic test.<p>A function of precalculating XOR operand inadvertly twice at QeMU TLB compute time AFTER retrieval of and toward its cached IMUL operand value.<p>In short, emulation doing preparation of registers twice (negating XOR)<p>Now you have a logic test revealing QEMU thru minute differential of IMUL operand value and its different multiplication results.<p>ROT13, anyone?<p>Disclaimer: works only on RXW memory page. It is literally a self-modifying code.",
+            "comment": []
+        },
+        {
+            "text": "Does that mean Chris Domas is ready for his next adventure?",
+            "comment": []
+        },
+        {
+            "text": "what im seeing from this chart is that we should be using the nop instruction for everything",
+            "comment": [
+                {
+                    "text": "Well the best code is no code. Nop could be second best though.",
+                    "comment": [
+                        {
+                            "text": "Instructions unclear. Set the NX bit to ensure no code, and got a general protection fault.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "A great resource for any performance deoptimization.",
+            "comment": []
+        },
+        {
+            "text": "Related, somehow: Core War [0].<p>[0]: <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Core_War\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Core_War</a>",
+            "comment": []
+        },
+        {
+            "text": "Very cool! Also, huh interesting. I’ve used rdtsc to measure cycle diffs but had no idea its execution takes that long. Is that common across architectures?",
+            "comment": [
+                {
+                    "text": "The cycle count for RDTSC is ~25 cycles on Skylake-era microarchitectures. The 49 number shown in the OP seems off.",
+                    "comment": [
+                        {
+                            "text": "It&#x27;s actually benchmarking 1000 repetitions of the RDTSC instruction running in parallel.<p>My guess... On Skylake, multiple in-flight RDTSC instructions slow each other down for some reason?<p>Possibly because it&#x27;s attempting to provide a strict monotonic guarantee, that no two RSTSC instructions will return the same timestamp. Intel&#x27;s manual only claims monotonic, which theoretically allows for two RSTSC instructions to return the same timestamp.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "comment": []
+                },
+                {
+                    "text": "AFAIK it acts as some kind of execution barrier, to give meaningful timing.",
+                    "comment": [
+                        {
+                            "text": "Isn&#x27;t that rdtscp ( <a href=\"https:&#x2F;&#x2F;www.felixcloutier.com&#x2F;x86&#x2F;rdtscp\" rel=\"nofollow\">https:&#x2F;&#x2F;www.felixcloutier.com&#x2F;x86&#x2F;rdtscp</a> )?",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Using MMIO is cheating and makes the results very boring.<p>It would be much more interesting to know the results if you&#x27;re only allowed to use main memory.",
+            "comment": [
+                {
+                    "text": "I&#x27;m not sure how to properly measure DRAM access, but for register&#x2F;immediate-only instructions there is <a href=\"https:&#x2F;&#x2F;uops.info&#x2F;table.html\" rel=\"nofollow\">https:&#x2F;&#x2F;uops.info&#x2F;table.html</a>. It does not measure x87 transcendentals (I guess because microcode results in different performance), but CPUID is a notable mention.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I wonder if you can do some damage with scatter&#x2F;gather ops within a VM, such that each fetch is a TLB miss inside the VM, and every table walk fetch is a TLB miss outside of the VM (which gets you up to 24 &quot;fetches per fetch&quot;).",
+            "comment": [
+                {
+                    "text": "I believe that many (all?) x86 CPUs will cheerfully load page tables from MMIO space. And at least some of the paging formats let you set the UC memory type for page tables. (And don’t forget MTRRs.)",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "PCIe is more like a packet-switched network than a bus, which is incidentally why things like Thunderbolt (effectively external PCIe) and sillier demonstrations like <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=q5xvwPa3r7M\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=q5xvwPa3r7M</a> work.<p>...and with things like <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ExpEther\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ExpEther</a> , you can get even higher latencies.",
+            "comment": [
+                {
+                    "text": "Pretty dumb right? When latency gets this high, you need a more asynchronous design to get any reasonable performance. PCIe is clearly designed with the assumption of latencies a few hundred cycles at most (or usually) - this MMIO register is an extreme outlier. It might be unmapped, and timing out on the hardware side, or it might be converted to an access on some really slow configuration bus.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "62s for a single instruction! Wonder if an compilers cost tables knows that. But it&#x27;s data dependent, and cost functions probably don&#x27;t do that.",
+            "comment": [
+                {
+                    "text": "Compilers don&#x27;t even emit this instruction.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "",
+            "comment": []
+        },
+        {
+            "text": "Oh wow, glad to see Chris Domas active online again!",
+            "comment": []
+        },
+        {
+            "text": "just curious, how much do these actually discover useful practices or pitfalls, on top of just being for fun?",
+            "comment": [
+                {
+                    "text": "The repo page says exactly why these long running instructions were researched.<p>A very long-running instruction can be used to break SMI: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;smiiiiiiiiiiiiiiii\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;xoreaxeaxeax&#x2F;smiiiiiiiiiiiiiiii</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "There’s definitely strategies here; A lot of the floating point operations use subnormals, and a lot of the worst instructions are slowed down by really, really fucking with MMIO.",
+            "comment": []
+        },
+        {
+            "text": "This matches everything I&#x27;ve seen",
+            "comment": []
+        },
+        {
+            "text": "Domas manages to abuse x86 is ways that make me unsure whether or not I should be impressed or disgusted. I guess impressed, then disgusted over Intel (and AMD?).",
+            "comment": []
+        },
+        {
+            "text": "This is neat!",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "Sahil",
+            "comment": []
+        },
+        {
+            "text": "It’s crazy how computers still seem to get perceivably slow every few years, given how many instructions can be executed in 1ms.  Shameful, even..<p>What’s that law called about programmers wasting all the compute on abstraction?",
+            "comment": [
+                {
+                    "text": "There are two aspects to compute performance: latency and throughput.<p>There has been a ton of work to improve throughput, but that&#x27;s often come at the cost of latency, because a great technique to improve throughput is batching, to avoid the per-task overhead cost.<p>We&#x27;ve also added many layers of abstraction.<p>A seminal example is Dan Luu&#x27;s &quot;computer latency&quot; table (2017) <a href=\"https:&#x2F;&#x2F;danluu.com&#x2F;input-lag&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;danluu.com&#x2F;input-lag&#x2F;</a>, which measures the time between a keypress and visible changes on the screen, and wherein an Apple IIe has latency 5x lower than a Lenovo X1 Carbon on Windows.<p>From some perspective, you could say that the Lenovo on Windows example is an impressive feat of engineering, considering all the subsystems involved (USB, interrupt dispatcher, input layer, windowing system, double-buffering...)<p>This throughput-over-latency tradeoff can be seen across the entire computer landscape design.",
+                    "comment": []
+                },
+                {
+                    "text": "The new windows notepad is a disgrace",
+                    "comment": [
+                        {
+                            "text": "The new mspaint fucked, then unfucked, then <i>refucked</i> my decades-old muscle memory of Win+R mspaint Enter Ctrl+E 1 Tab 1 Enter Ctrl+V to open Paint, resize canvas to minimum, then paste from clipboard. When you press Ctrl+E now, the Units control is selected by default, for some completely asinine reason!!!",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s pretty cool. I&#x27;ve never needed to do that because Paint remembers the last canvas size set manually.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "You aren&#x27;t alone in being frustrated by decades of muscle memory being disrespected by MSFT.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "i’m on LTSC for this (and many other) reasons lol! don’t touch my mspaint and notepad",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Wirth&#x27;s Law I believe.",
+                    "comment": [
+                        {
+                            "text": "And remember to call him by name, not by value!",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Idk man, my computers don&#x27;t seem to get any slower over time -- no upgrades to any components, either.",
+                    "comment": [
+                        {
+                            "text": "Does responsiveness get better or worse with updates, in general?",
+                            "comment": [
+                                {
+                                    "text": "Neither? I haven&#x27;t noticed a perceivable change in a long time.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Andy and Bill&#x27;s Law",
+                    "comment": []
+                },
+                {
+                    "text": "The OS should do less not more",
+                    "comment": [
+                        {
+                            "text": "vi should be a kernel-level system call, tunable with sysctls. For agentic management.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Huh? A millisecond is an eternity!",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        },
+                        {
+                            "text": "I remember reading once somewhere:<p>If some app responds in 10ms or less, it is <i>INTERACTIVE</i>.<p>makes you think.",
+                            "comment": [
+                                {
+                                    "text": "It is literally impossible to respond to input in 10ms on most platforms, for various reasons. The USB input lag of 12-30ms and the 60Hz refresh rate of most monitors being just the first two.",
+                                    "comment": [
+                                        {
+                                            "text": "I stand corrected.<p>I looked it up and it is .1 seconds (100ms)<p><i>The basic advice regarding response times has been about the same for thirty years [Miller 1968; Card et al. 1991]:<p>- 0.1 second is about the limit for having the user feel that the system is reacting instantaneously, meaning that no special feedback is necessary except to display the result.<p>- 1.0 second is about the limit for the user&#x27;s flow of thought to stay uninterrupted, even though the user will notice the delay. Normally, no special feedback is necessary during delays of more than 0.1 but less than 1.0 second, but the user does lose the feeling of operating directly on the data.<p>- 10 seconds is about the limit for keeping the user&#x27;s attention focused on the dialogue. For longer delays, users will want to perform other tasks while waiting for the computer to finish, so they should be given feedback indicating when the computer expects to be done. Feedback during the delay is especially important if the response time is likely to be highly variable, since users will then not know what to expect.</i><p>from Jakob Nielsen:<p><a href=\"https:&#x2F;&#x2F;www.nngroup.com&#x2F;articles&#x2F;response-times-3-important-limits&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nngroup.com&#x2F;articles&#x2F;response-times-3-important-...</a><p>less readable but the original paper:<p><a href=\"https:&#x2F;&#x2F;www.yusufarslan.net&#x2F;sites&#x2F;yusufarslan.net&#x2F;files&#x2F;upload&#x2F;content&#x2F;Miller1968.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.yusufarslan.net&#x2F;sites&#x2F;yusufarslan.net&#x2F;files&#x2F;uplo...</a>",
+                                            "comment": [
+                                                {
+                                                    "text": "That’s the prevailing statistic, but your original number isn’t that wrong either:<p>Humans can perceive much smaller latencies.<p>If you look at the Card &amp; Miller reference, at least some humans can perceive differences in ~50ms vs 100ms latencies when typing (in my limited testing, it’s likely <i>you</i> can!). There’s some newer research I don’t have handy that I believe found error rates decreased and NSAT improved until around at least 30ms (if not 20ms).<p>On that note, humans can <i>definitely</i> distinguish 60hz vs 120hz reliably (about 8ms faster per frame).<p>Even faster: with a reference (eg when dragging on a touchscreen), humans can distinguish down to at least 1ms vs 10ms of latency: <a href=\"https:&#x2F;&#x2F;m.youtube.com&#x2F;watch?v=vOvQCPLkPt4\" rel=\"nofollow\">https:&#x2F;&#x2F;m.youtube.com&#x2F;watch?v=vOvQCPLkPt4</a><p>And you can probably distinguish metronomes that are off by about 1-2ms. Much smaller for other things (like metronomes that slightly slower or faster than one another).<p>This is a special interest of mine XD",
+                                                    "comment": [
+                                                        {
+                                                            "text": "&quot;The human eye can see 39620Hz&quot;: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;Sb_7uN7sfTw\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;Sb_7uN7sfTw</a>",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; The USB input lag of 12-30ms<p>How&#x27;d you get that number?  USB defaults to polling at 125Hz and a lot of devices go at 1000Hz (or higher).  The rest of the pipeline should be a fraction of a millisecond.  I guess bad debouncing hardware can add a lot more, but that&#x27;s far from USB&#x27;s fault.",
+                                            "comment": [
+                                                {
+                                                    "text": "It&#x27;s mostly due to OS-level USB stacks being quite terrible for latency for the most part, especially on Windows. Though I might&#x27;ve misremembered the exact numbers.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "60Hz monitors definitely prevent it, but I&#x27;m pretty sure USB lag is far less than 12-30ms. My USB mouse can make a round-trip to a remote server faster than that.",
+                                            "comment": [
+                                                {
+                                                    "text": "Out of curiosity, how did you measure mouse roundtrip with sub-12ms precision?",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "this is also why 60 hz refresh rate is all but dead outside of console gaming (not to mention 1000hz poll rate devices being the norm)",
+                                            "comment": [
+                                                {
+                                                    "text": "&quot;Most&quot; includes standard issue corporate hardware for office drones, bottom of the barrel laptops bought as gifts to children, and ultra cheap Android phones in developing countries.",
+                                                    "comment": []
+                                                },
+                                                {
+                                                    "text": "absolutely not, try finding a 15&quot; 4K OLED with a refresh rate other than 60Hz",
+                                                    "comment": [
+                                                        {
+                                                            "text": "there are plentiful OLEDs in 4k with refresh rates from 100Hz to 480Hz. your problem is a small size problem. 15” is targeted more towards portable work monitors, not gaming in 2026",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Sorry for nitpicking but the logical inverse of this statement is the stronger and more appropriate version:\nIf some app does not respond in 10ms or less, it is not interactive.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Seems like spam from this creator since there are two things on the front page?",
+            "comment": [
+                {
+                    "text": "submitted by two different people, both with year+ old accounts and decent karma. i dont think either is the author. the other submitter probably read this one, looked at the github, saw something else cool and posted it. (i almost did the same, but bookmarked it instead)",
+                    "comment": []
+                }
+            ]
+        }
+    ]
+}

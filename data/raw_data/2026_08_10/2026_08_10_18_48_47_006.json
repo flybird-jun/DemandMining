@@ -1,0 +1,396 @@
+{
+    "item_id": 49208458,
+    "title": "Show HN: textlog – A quiet, text-only microblogging platform, open-source, no JS",
+    "url": "https://textlog.cc/about",
+    "text": "about\nA quieter place for your thoughts.\ntextlog is a simple social text log: write short notes, follow people and hashtags, and join conversations without turning every thought into a performance.\nNotes are limited to 280 characters. The constraint keeps them quick to write and read, making room for one thought at a time.\nSmall by design\ntextlog is built around words: notes, people, hashtags, and conversations. It is intentionally small, straightforward, and easy to follow. There are no engagement tricks or pressure to build an audience.\nYour profile and notes are public. Joining is free, and you can download or delete your account data whenever you like. If you feel like it, you can also\ndonate\nto support the service.\nBe a good neighbour\nShare what is yours to share, treat other people with respect, and don’t use the service for harassment, abuse, spam, impersonation, or anything unlawful. We may moderate or remove content that puts the community or the service at risk.\nWhat's next?\njoin the community\nor\nbrowse notes",
+    "comment": [
+        {
+            "text": "I like this project. Simple, open-source, nice UI.",
+            "comment": [
+                {
+                    "text": "Claude ui",
+                    "comment": [
+                        {
+                            "text": "it&#x27;s gpt 5.6 sol actually, credit where credit&#x27;s due",
+                            "comment": [
+                                {
+                                    "text": "[dead]",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Thank you!",
+                    "comment": []
+                },
+                {
+                    "text": "Agreed. A documented data export or stable feed would complement the minimal UI well: it would let a quiet service stay intentionally simple without making a user&#x27;s archive feel trapped.",
+                    "comment": [
+                        {
+                            "text": "Impressed they already had a download! <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit</a><p><pre><code>  Download your data\n  Export your account, notes, connections, and activity as a JSON file.\n</code></pre>\n-<p>btw you can write comments yourself Natalia! In fact that’ll keep ya compliant, we’re human-to-human here",
+                            "comment": []
+                        },
+                        {
+                            "text": "Already there[0], and also an API[1] to build things on top! And it&#x27;s all open-source[2], so if we miss something we can add it.<p>[0]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;account&#x2F;edit</a><p>[1]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;api\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;api</a><p>[2]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Reminds me of org-social (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tanrax&#x2F;org-social</a>)<p>&gt; Notes are limited to 280 characters. The constraint keeps them quick to write and read, making room for one thought at a time.<p>No thanks.",
+            "comment": [
+                {
+                    "text": "Hi, I&#x27;m sorry you don&#x27;t like the limitation :( this is for short thoughts you want to share, not really huge conversations, there are better places for that IMO.",
+                    "comment": [
+                        {
+                            "text": "The character limit is, in my opinion, the primary reason Twitter became so bad. It encourages absolute language (qualifiers take up characters!) It discourages any level of nuance.<p>I use Mastodon which has a 500 limit, and even that sometimes is not enough.",
+                            "comment": [
+                                {
+                                    "text": "The opposite of short exists.<p><a href=\"https:&#x2F;&#x2F;tuhat.net&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;tuhat.net&#x2F;about</a><p>Also open source.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Why use any? Why force yourself to comply with the arbitrary limitations imposed by some third party somehwere.  For what?",
+                                    "comment": [
+                                        {
+                                            "text": "Because otherwise you&#x27;re having online discourse with yourself.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "What do you mean with &quot;became bad&quot;? It started out with a 140 characters limit in 2006 and kept that for more than 10 years. So its the other way around: it became worse, when the character limit increased. Though I don&#x27;t think its due to the character limit either way.",
+                                    "comment": [
+                                        {
+                                            "text": "It was bad long before they increased the character limit.<p>Saying shitty&#x2F;toxic stuff can be done concisely. Giving a nuanced response is simply not possible. So people respond with jokes&#x2F;sarcasm&#x2F;counter toxic stuff. And the cycle continues.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "well, you may consider rewarding known quality users with an extended limit, say double. the others can pay ;)",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s how enshittification begins. Next thing you know and there are blue badges next to profiles.",
+                                    "comment": [
+                                        {
+                                            "text": "lol Yes enshittification is the thing I want to avoid, so hard decisions need to be made that will not make everybody happy. Still, this is open-source[0], so we can open a discussion (ideally alongside a PR) and evolve it.<p>[0]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog</a>",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "haha, yeah good idea. Also customize the theme as others wanted. So many opportunities here. :P",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "[flagged]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Yes! I&#x27;ve always said twitter was better before images&#x2F;multimedia!",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20070123220857&#x2F;http:&#x2F;&#x2F;twitter.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20070123220857&#x2F;http:&#x2F;&#x2F;twitter.co...</a><p>For those that never had an opportunity to see it.",
+                    "comment": []
+                },
+                {
+                    "text": "Old web vibes!",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "The 280 char limit seems arbitrary, given you cant even keep the about page within that limit: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;about\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;about</a><p>If you are going to limit it to short posts, maybe the length of a short post is the length to limit it to, rather than emulating the 2xSMS of every twitter clone?<p>Other than that, it looks really clean and neat - I just dont think being 280 chars adds anything other than resulting in people posting with pagination as per X 1&#x2F;3.",
+            "comment": [
+                {
+                    "text": "I like the idea of a shorter character limit as it nudges users to a specific mode of interaction: short thoughts&#x2F;updates and not long-winded soliloquies. It&#x27;s signalling that interaction with this platform doesn&#x27;t demand much of your time or attention. I don&#x27;t know what the about page has to do with it, but you have to draw the line somewhere.<p>That said, I&#x27;m not a social media user besides HN I guess.",
+                    "comment": [
+                        {
+                            "text": "For perspective: you just commented 404 chars. Your first paragraph alone was 346.<p>My comment on the about page was that it needed more than 280 chars to communicate what the app is about - even the title + intro exceeds the limit.<p>If it is truly believed that 280 chars is enough to communicate an idea, then the about page should follow that philosophy.",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;m considering raising to 500. Care enough to open an issue[0] so that maybe there is a discussion we can track?<p>[0]: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;stagas&#x2F;textlog&#x2F;issues</a>",
+                                    "comment": [
+                                        {
+                                            "text": "Honestly, I don&#x27;t really care that much. The project looks like fun, and I wish you the best with it, but I don&#x27;t really post on microblogging platforms myself.<p>I just wanted to give a bit of feedback as someone who reads them - and point out that on almost every twitter&#x2F;bluesky submission to HN they are using ways to work around the 280&#x2F;300 char limitations.<p>To play devils advocate - 500 also seems a bit arbitrary ;) If I were making a platform like this myself, I would go for a power of 2 that makes sense for storage&#x2F;buffering. Maybe 1KiB including all meta, etc. You could comfortably fit a post the size of your about page, and all associated meta in that - even when serialised as JSON or something. I&#x27;d go from there and work backwards to come up with a size that has a real technical purpose.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Make it a setting and let people decide for themselves.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "It needs to be short - there is already a limit that worked well - why bikeshed it more?",
+                    "comment": [
+                        {
+                            "text": "A limit that worked well for who?<p>Almost every twitter&#x2F;x post submitted to HN has people labelling their posts as &quot;X of Y&quot; threads, using images as text, or using pro account posts.<p>You can see it yourself: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=twitter.com</a>\nIve just looked at 30 and each of them exceed 280 chars by far.",
+                            "comment": [
+                                {
+                                    "text": "It works well for microbloggers.",
+                                    "comment": [
+                                        {
+                                            "text": "But clearly not the microbloggers on twitter&#x2F;x, Bluesky, etc, who use the patterns I mentioned.",
+                                            "comment": [
+                                                {
+                                                    "text": "Those are definitionally not microbloggers. It&#x27;s ok for a platform explicitly <i>for</i> microblogging to not cater to their macroblogging desires.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Definitionally not?<p>&quot;Microblogs, for example on Twitter...&quot; <a href=\"https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;microblog\" rel=\"nofollow\">https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;microblo...</a><p>&quot;Some popular social networks such as X (formerly Twitter), Threads, Tumblr, Mastodon, and Bluesky can be viewed as collections of microblogs.&quot; <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microblogging\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microblogging</a>",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I think this is the opposite of bikeshedding, it&#x27;s literally a core feature and constraint.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "You could fork and do whatever no?",
+                    "comment": [
+                        {
+                            "text": "Sure, but I don&#x27;t care that much. It is a Show HN, so I was giving feedback.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I really like this approach. I wonder if it needs such complexity for the rendering. Could you have built this as a SSG template?",
+            "comment": [
+                {
+                    "text": "Hi, thanks! There is a lot of nuance on the rendered pages, I figured server-side React was the best choice - plus it&#x27;s a technology I&#x27;m comfortable with and might also encourage contributions.",
+                    "comment": [
+                        {
+                            "text": "Would you be okay if I directed Claude to leverage your design and build a very simple Hugo template against it for my own personal use?",
+                            "comment": [
+                                {
+                                    "text": "Why not, try it :)",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I recently started a section on my personal site for absolutely minimal and simple microblogging that I could Ctrl-F through: <a href=\"https:&#x2F;&#x2F;knlb.dev&#x2F;scribbles&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;knlb.dev&#x2F;scribbles&#x2F;</a> -- I should probably give this a shot.",
+            "comment": [
+                {
+                    "text": "Hey, nice! If you want to try it, we have an API[0] you can pull your user feed from!<p>[0]: <a href=\"https:&#x2F;&#x2F;textlog.cc&#x2F;api\" rel=\"nofollow\">https:&#x2F;&#x2F;textlog.cc&#x2F;api</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I built something for a similar goal, make it easy for someone to start their blog. But instead it&#x27;s a static website, clone the repo, adjust the config.ts, write the posts in markdown, host anywhere: <a href=\"https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;starter.bryanhogan.com&#x2F;</a>",
+            "comment": [
+                {
+                    "text": "&gt; The simplest way to build a high-quality website.<p>The build (generation) step should be able to execute on&#x2F;inside the browser runtime (using standardized APIs, not hardcoded against proprietary APIs that the NodeJS people invented).<p>See also &lt;<a href=\"https:&#x2F;&#x2F;crussell.ichi.city&#x2F;pager.app.htm\" rel=\"nofollow\">https:&#x2F;&#x2F;crussell.ichi.city&#x2F;pager.app.htm</a>&gt;",
+                    "comment": [
+                        {
+                            "text": "That would mean using a completely different architecture, and I think there many benefits to using Astro. I like your underlying goal of fewer environment-specific dependencies, but the ones used here were carefully selected because they do provide a benefit.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Please don&#x27;t use !important at scale <a href=\"https:&#x2F;&#x2F;github.com&#x2F;BryanHogan&#x2F;astro-starter-template&#x2F;commit&#x2F;aa8831b5a2ee1d386c4e5514bcba068a4246edc1\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;BryanHogan&#x2F;astro-starter-template&#x2F;commit&#x2F;...</a>",
+                    "comment": [
+                        {
+                            "text": "This is the one use-case where !important makes the most sense, as it&#x27;s a utility class they you only use if you want it. The other solution would be to make other CSS less specific, e.g. using `where` in the markdown.css file, but that would be more messy.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "It&#x27;s blazing fast too. Good job. But is it purely text? Or do you support&#x2F;will support, images and videos?",
+            "comment": [
+                {
+                    "text": "Thanks! Purely text. Inline images&#x2F;etc. can be supported by someone building a browser extension. I wanted to keep the core distraction free.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Signed up, will use it. Having trouble seeing how long this will actually exist though, because people are miserable and it WILL be ruined.",
+            "comment": []
+        },
+        {
+            "text": "This is really neat!<p>The main thing that stood out to me was, unlike many other micro&#x2F;minimalist blogging platforms, textlog has individual notes (as opposed to blogs) as the primary unit. I feel that this choice often makes it psychologically easier for users to post something quickly without getting stuck on managing their blog’s brand and identity. Nothing wrong with the latter, but it comes with a trade-off.<p>And I really like the visual design: very clean and minimalistic, but also pleasant.",
+            "comment": []
+        },
+        {
+            "text": "Im having trouble getting to the site when using quad9 dns. Site works fine when using cloudflare dns though.",
+            "comment": []
+        },
+        {
+            "text": "I&#x27;m a certified dark mode hater, so in that light, that&#x27;s a no-go for me: there seems to be no way to change the theme.",
+            "comment": [
+                {
+                    "text": "It picks up your system theme, so you can&#x27;t be dark mode hater since you&#x27;re already using it for your OS :P i didn&#x27;t want to complicate it with user settings yet, but it can be added if there is demand.",
+                    "comment": [
+                        {
+                            "text": "Maybe OP customized the system “dark theme” to be extra light.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Doesn&#x27;t your user agent support user stylesheets?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I made something similar<p>Source: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;est&#x2F;gitweets\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;est&#x2F;gitweets</a><p>Demo: <a href=\"https:&#x2F;&#x2F;f.est.im&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;f.est.im&#x2F;</a><p>The site and data is self-contained as a git repo.<p>A git commit is a post. Blobs are pictures.<p>Comments are stored in git notes.",
+            "comment": []
+        },
+        {
+            "text": "Love the restraint. Feels like an anti-social social club to me.",
+            "comment": []
+        },
+        {
+            "text": "That&#x27;s really nice! I really like the UI of the site, its calm and soothing.",
+            "comment": []
+        },
+        {
+            "text": "Interesting approach. I think the &quot;individual notes instead of blogs&quot; idea is an important UX decision. Many tools fail because they ask users to commit to an identity before they have something worth sharing.",
+            "comment": []
+        },
+        {
+            "text": "i&#x27;m experiencing a weird scenario. all time is asking me for a magic link :( I click on that link and again the same screen, ask for a magic link (said the old one expired). It may be our mimecast blocking something?",
+            "comment": [
+                {
+                    "text": "Uhm maybe your client visits the magic link eagerly and when you visit it manually it&#x27;s already been used?",
+                    "comment": [
+                        {
+                            "text": "i worked with my gmail but not corporate. mimecast does something wrong",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "See also <a href=\"https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;buckket&#x2F;twtxt</a><p><a href=\"https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt\" rel=\"nofollow\">https:&#x2F;&#x2F;indieweb.org&#x2F;twtxt</a>",
+            "comment": [
+                {
+                    "text": "I would like to invite you to read this article: <a href=\"https:&#x2F;&#x2F;en.andros.dev&#x2F;blog&#x2F;ba142044&#x2F;twtxt-vs-org-social-the-evolution-of-an-idea&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;en.andros.dev&#x2F;blog&#x2F;ba142044&#x2F;twtxt-vs-org-social-the-...</a>\nWhat do you think?",
+                    "comment": [
+                        {
+                            "text": "Interesting! My biggest reaction is I don&#x27;t use Emacs. Is Emacs a requirement? You&#x27;re right that Org adds features but it also shrinks the pool of people who will try this.",
+                            "comment": [
+                                {
+                                    "text": "It&#x27;s not necessary. I almost always use iOS.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I think twtxt is really cool. I have one on my site but I don&#x27;t use it, unfortunately",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "reminds me of <a href=\"https:&#x2F;&#x2F;bearblog.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;bearblog.dev&#x2F;</a>",
+            "comment": [
+                {
+                    "text": "<a href=\"https:&#x2F;&#x2F;prose.sh\" rel=\"nofollow\">https:&#x2F;&#x2F;prose.sh</a> for an ssh app to manage a blog",
+                    "comment": [
+                        {
+                            "text": "(which is their service, and most of their comments are just promotion for their services)",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Should do the same but for 4chan.",
+            "comment": []
+        },
+        {
+            "text": "What makes it ’quiet’?",
+            "comment": [
+                {
+                    "text": "No likes, no karma points, no unnecessary notifications, no JS &quot;X new posts&quot; popups, no engagement trickery, no gamification. Just sharing thoughts and replying to others.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Thanks for the write-up",
+            "comment": []
+        },
+        {
+            "text": "twitter reborn<p>:thumbs-up:",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

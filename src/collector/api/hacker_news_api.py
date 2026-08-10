@@ -9,14 +9,10 @@ import aiohttp
 
 from collector.net import aio_http_wrap
 
-
-BASE_URL = "https://hacker-news.firebaseio.com/v0"
-
-
 class HackerNewsApi:
     """HackerNews v0 API 的静态封装。"""
 
-    BASE_URL: str = BASE_URL
+    BASE_URL: str = "https://hacker-news.firebaseio.com/v0"
 
     # ---------------- Items ----------------
 

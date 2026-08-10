@@ -1,0 +1,23 @@
+```json
+{
+  "topic": "Wireblast：基于 AF_XDP 在 Go 中实现 100 Gbps 数据包生成器",
+  "users": [
+    "网络工程师",
+    "DPDK/AF_XDP 性能优化研究者",
+    "网络安全测试人员",
+    "基础设施/SRE 工程师",
+    "网络硬件厂商 QA 团队"
+  ],
+  "pain_points": [
+    "现有商业流量生成器（如 Ixia、Spirent）价格昂贵，中小团队无法负担",
+    "开源流量生成工具（如 tcpreplay、scapy）吞吐量无法达到 100Gbps 线速",
+    "DPDK 方案需要绑定网卡、独占大页内存，部署复杂且影响宿主机",
+    "基于 Go 的高性能网络工具较少，需要用户自己用 C/Rust 写 AF_XDP 程序",
+    "难以对防火墙、IDS/IPS、负载均衡器等进行真实线速压力测试",
+    "AF_XDP 原生 demo（xdpgenerator）依赖复杂、文档零散、难以集成到 CI/CD"
+  ],
+  "existing_solution": "商业硬件流量生成器（Ixia、Spirent、cPacket）、DPDK pktgen、AF_XDP 官方 xdpgenerator（仅 demo 级）、tcpreplay（吞吐有限）",
+  "opportunity": "存在中等机会。Wireblast 填补了'基于 Go 的 AF_XDP 用户态高性能数据包生成器'这一细分空白。但该项目本身已是开源实现，潜在产品形态包括：(1) 商业版带 GUI、TLS/DPI 攻击场景库、测试报告分析；(2) SaaS 化的云端网络设备压测认证服务；(3) 打包成 Docker 一键部署方案 + Web 控制台，瞄准 CI/CD 集成需求。然而目标用户群（NRE、芯片/设备厂商 QA）较窄，且已有同类开源项目和强势商业玩家，机会窗口有限。",
+  "score": 35
+}
+```

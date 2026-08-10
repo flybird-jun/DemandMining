@@ -1,0 +1,387 @@
+{
+    "item_id": 49180649,
+    "title": "Making difficulty curves in games",
+    "url": "http://www.davetech.co.uk/difficultycurves",
+    "text": "The games industry is weird because we are always trying to create systems that keep the game just hard enough to stop people from seeing the rest of the product.\nMy thought process all started from this Tweet:\nWe agonised over this when we made lemmings and we took a long time smoothing the difficulty curve and we broke up the step changes into different sections, like chapters rather than difficulty settings. This let the user choose and set expectations.\n— Russell Kay (@RussellKay)\nMay 23, 2018\nWhat is a Difficulty Curve?\nSo briefly when I talk about a difficulty curve I’m talking about how games scale the difficulty for each level / puzzle. For example, you don’t want to introduce too many gameplay systems too quickly, but also you don’t want the first 10min of each level very slowly teaching the player something they already understood 5min ago.\nThis gets hard as a game developer because we are playing the game all the time and inadvertently get really good. It’s hard to put yourself back into the mind-set of someone playing our game for the first time, and simple things like how tricky a jump should be or what each button does becomes meaningless.\nI think there is a perception that games need to get harder and harder the further in the player gets. But really this isn’t true, you just want to give players the feeling of getting better and the digital-pat-on-the-back for doing so.\nI Present To You, The Difficulty Saw!\nRather than seeing the game as getting more difficult on the whole, we are grouping mechanics together like in the original Tweet.\nWhat do I mean when I say New Mechanic? This might be:\nA new enemy type\nA new ability the player has\nA new type of puzzle\nA way of using a system in the game (like Mario’s triple jump)\nA new item\nUsing an existing system in a different way\nCombining multiple existing mechanics in a new way\nAdding a new rule (like time limit)\nNow I’m not saying a new mechanic should be introduced every level, I’m not saying a level should start at 50% easier than the one before and be 150% harder by the end, I’m not saying a game should only be 4 levels long, I’m not saying that the increase each time should be the same (for example games that are easy to learn hard to master), I’m not saying mechanics should only be introduced at the start of a level, I’m not saying there should be only one new mechanic a level.\nSmoothing the Curve\nOur objective is still to “Smooth out the curve” and I know it looks like we have made this worse, but to be clear when we try and make it more gradual we are talking about removing outlying variances (either too hard or too easy) and giving each mechanic its own difficulty curve.\nWhy is This Graph Important?\nPlayers want to feel like they are always progressing (both in their own skill and towards the end of the game) so the more time in your game they are going up this curve generally the better the game (this is a massive simplification I know)\nIf at any point your graph is too steep / shallow this is when people get frustrated / bored. Now there is a problem with the fact that each person will have their own unique gradient (and each puzzle will have a different learning curve per person as well).\nTricks for Keeping Everyone on the Right Part of the Curve:\nDO:\nPut in optional collectables\nProvide tricky alternate routes that skips easy parts\nHave areas that give you a better high score\nAchievements that reward people playing with a disadvantage\nDynamically adjust the difficulty depending on how well the player is doing.\n<- This is actually magic sauce and could be the topic of a whole talk.\nHave multiple endings.\nAllow people to grind for exp or practice if they feel they are not capable of an area.\nHave multiple paths so if the player gets stuck they can do another task until they have the skills needed to go down the main path.\nMake it obvious what equipment players need to be using for this puzzle (by giving it to them right away, giving them ammo for the needed weapon, colour coding things, removing previous equipment that is not needed for this puzzle)\nGive people multiple ways to learn something (text, voice over, button prompt, particles showing where they need to go, environmental graphics, lighting, help popups, visual cues)\nGive subtle graphical hints (In Mario there will be a little flower or coin where you need to start a jump)\nJust visually show them (often in games before being given a new weapon you will see an enemy use it on the other side of a window, or you will see the kind of damage it has done to other NPCs in the room)\nDON'T:\nDon’t make the game easier for people who are doing better (for example putting skill points in an area only expert players can get to)\nDon’t punish someone for doing bad and make future attempts harder\nDon’t allow someone to skip an area if they haven’t learnt the skill they need\nDon’t hide things as the main mechanic of a puzzle\nDon’t put a long cutscene / intro that can’t be skipped in an area with lots of retry attempts.\nDon’t display things the player doesn’t need to know right now (don’t overwhelm them with descriptions of skills that are not on their path)\nOf course none of these are mandatory but I wouldn’t break too many in one go\nSomething I should have noted long before this is every game has its own curve, you may get feedback from your friends that a task is too easy/hard, but they might not be who you are targeting. You might be making a casual mobile game that has a really long shallow curve, or a brutally hard game where the player spends 100 lives just trying to get past each section.\nAgain I’m making massive simplifications but I wanted to show the large range of personality types and it multiplies in complexity when you start combining them together and adjusting for personal skill level etc.\nThis is why it is IMPOSSIBLE to make a game for everyone!\nDon’t try and make a game that fits everyone, you need to pick a target market and get feedback from people in that group.\nA Really Generic Level Breakdown:\nLet’s go through an example level design that illustrates learning wall jumping (however you should insert your own far more interesting mechanic).\nTeaching the mechanic:\nStart in safe area and the only way out is the wall jump\nThere should be minimal distractions\nThe main thing to learn should be easily visible, well lit, and potentially highlighted with particles, pickups, a scuff where they need to jump)\n(after this point you know the player can wall jump)\nMain body:\nWall jump with manageable danger (enemy in front / spikes under)\nWall jump mixed with a mechanic they learnt in a previous level\nWall jump with pressure (enemies / lava chasing behind you)\nFinale:\nBasic technique made harder with a quirk (avoiding obstacles)\nOptional area where the player can show off what they learnt to get a collectable.\nFinding the skill curve of my game?\nOf course at some point you will be sending out copies or screenshots of your game to get criticism, but after that you are going to want a more empirical way of collecting data.\nMany games like Mario Maker\nrecord the location when a player dies\n, now this isn’t going to help tell you if someone is stuck on a puzzle, but if you have a level where all the deaths are in a very small area it’s likely you will find that part is above the difficulty curve. I don’t want you to remove all deaths from your levels, but it is better if they are evenly spread out.\nCollecting\nlevel complete stats\ncan also be very helpful. If 80% of people finish level 4 but only 20% of people finish level 5 you know level 5 is either too hard or too boring. Likewise if level 11 is completed more than level 10 you might find level 11 is more fun than level 10 and you need to retrospectively make your levels more like level 11.\nYou can make\nasking friends\nmore objective by having direct questions like “what did you think about level 8?” or “How long did you spend on level 9?” however you then want to record this on a spreadsheet and combine it with other testers data, if you have outlying data that is something you need to deal with.\nWith current technology it is really easy to\ncapture footage / stream gameplay\n. This means you can watch people and understand what they are thinking. It is worth knowing that when people know they are being watched they do tend to act differently, but you might see players trying the wrong solution to a puzzle and this will help you adjust things to point people in the correct direction.\nUsing\nStreamers and reviewers\nis great because they are likely to be used to playing / reviewing games and they will voice what the press will say about your game. The downside is if you are already engaging with reviewers it’s going to be too late to make substantial changes.\nIf you ever end up\ntaking your game to an expo\nyou will get a steady flow of people trying your game for the first time. This is a great ideal time to watch people, ask them questions and really perfect your games on-boarding process. Now it’s not ideal circumstances for the player because it’s always loud / busy and they will probably be burnt out and have a short attention span. However by sitting down and playing the game they have shown that they are a potential buyer (even if they are not in your target market)\nQA testers and review sites\n, getting Quality Assurance testers is expensive, however there are plenty of websites and forums where you can submit your game for feedback.\nDon’t just make the game harder; Show the player they are getting better.\nSomething that works well is to show people how far they have come, you see games having nods back to previous puzzles, often they add something fresh or obfuscate it but it’s nice for the player to see how much better they are now. Plenty of times I’ve been playing a game and I didn’t get a simple puzzle because I’m expecting something harder, but it turns out the answer is a twist on something I learnt earlier in the game.\nOn this same vein I get really excited when I find out a game had a really hard puzzle on the first level hidden in plain sight, but it isn’t until later levels that you learn how the puzzle works. It’s like a locked door where the key is knowledge. (I wanted to give some examples of this but then I thought just naming the game is a massive spoiler)\nThis does allow us to talk about one fantastic trick that really ties into the whole idea of keeping people on the correct part of the graph.\nHiding a shortcut with pure knowledge\n. Portal 2 has a great example of this, one of the levels has the start and end of the level right near each other, and with some clever placement of portals it is possible to skip the whole level, however it uses techniques you don’t learn until later in the game, the developers knew about this but said if someone is able to trick their way straight to the end then the level has nothing to teach them.\nGiving People Highs and Lows of Adrenalin\nOne thing that films have become very good at is switching between periods of high action adrenalin and calm. The reason for this is as humans we get saturated with similar stimuli and start to block it out. Knowing when to switch is a real art form, the feeling is also exaggerated by the contrast between the two.\nThere is also a trick of trying to outdo what came previously so as you watch something it is always emotionally peeking one way or another.\nBringing this back to game design I think we should be using this kind of technique, not just for emotional things but for difficulty, entertainment, learning skills etc etc.\nHERE YOU CAN SEE...\nSo while this whole article has been talking about level difficulty my original thought stream was about how quickly the player unlocks new rooms that they can add to their spaceship in Undercrewed. But it’s all the same thing! This same concept can be used for difficulty, introducing game mechanics, introducing new skills and abilities, introducing new enemies, introducing new play modes.\nI have a subsequent article here with\nexamples of adjusting difficulty and how to monitor it\n.",
+    "comment": [
+        {
+            "text": "<i>&gt;Dynamically adjust the difficulty depending on how well the player is doing. &lt;- This is actually magic sauce and could be the topic of a whole talk.</i><p>Please never do this. This deceptively looks smart to a game designer, but actual players read this like a book and then it feels cheap and massively unrewarding for them.",
+            "comment": [
+                {
+                    "text": "This depends a lot on the game and the situation. If hidden well enough i suspect it can play well. I really enjoyed the difficulty of Half Life Alyx for instance. I was saving my resources carefully because they seemed very sparse.<p>But then I noticed that the loot was entirely dynamic. I forget the exact items, but if you only use one grenade it will only generate one refill hidden around the next area. If you use all your resources though, the upcoming loot gets massively increased and you can usually get almost all of it back right away. I learned this partway through and completely changed my playstyle and really broke the immersion to see the game difficulty change in realtime. I reloaded a save and played differently, and the next area was <i>filled</i> with loot instead of empty. But when asking my friends what they thought, none of them noticed that the game was doing this, and they all thought it was well balanced.<p>On the other hand, some Mario games now will essentially have a &quot;you are dying a lot, here is a star power up to help you out, or heres luigi to play the level for you&quot; mechanic. For a super casual game, such a mechanic is great. Its optional. If you want to lock-in and beat the hard level, you can just not grab the powerup, or say no to the prompt. But if you are getting frustrated, you can skip the hard parts and fly through to the next level and get right back to having fun.",
+                    "comment": [
+                        {
+                            "text": "The Alyx example is interesting, because I see that system as being designed to avoid breaking immersion. Specifically, to avoid entering an &quot;unwinnable&quot; state i.e. where the player restarts from a save&#x2F;checkpoint. I do understand how noticing the underlying system can pull you out of the game though.",
+                            "comment": [
+                                {
+                                    "text": "Intuitively, people want to save up ammo because they never know when there&#x27;s gonna be a big fight, and they don&#x27;t want to be caught low on ammo.<p>I had the same experience, I was trying to be very accurate with the guns and thought, wow, there&#x27;s hardly any ammo to pick up in this game. Partway through I got tired of being stingy and started being less careful, having fun going rambo, and suddenly ammo was spawning everywhere.<p>I think it would be much better if the game just spawned enough to max out your pools fairly early, so you can focus less on inventory and more on combat. Then they can adjust the size of the ammo pools to tune how accurate they want you to be.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "I think part of the issue is that Alyx doesn&#x27;t really have any other options to fight besides guns that need ammo or however many grenades you&#x27;re choosing to carry. They didn&#x27;t have melee as a design decision, but it means they need to keep you topped up on ammo or you&#x27;re defenseless.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; But when asking my friends what they thought, none of them noticed that the game was doing this, and they all thought it was well balanced.<p>Sounds like the design is working as intended?",
+                            "comment": [
+                                {
+                                    "text": "The issue IMO is that there&#x27;s a subset of gamers who really do not want games to try to balance things automatically, e.g. people who really hate skill-based matchmaking. Most people will enjoy the system, but this subset sees a balancing feedback loop as punishment for being &quot;too good&quot;.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Agreed. Something like Dark Souls where an enemy is an enemy and it&#x27;ll smash you if you&#x27;re underleveled is so much more satisfying than something like Oblivion where enemy health inexplicably goes up based on your level. It also gives you the satisfaction of going back to earlier areas that were scary and laughing off the puny enemies.",
+                    "comment": [
+                        {
+                            "text": "Totally different when it comes to multiplayer matchmaking, though. There I wish games were even more aggressive and exact at matching you to players around your skill level. Nothing worse than casually sitting down after work for a quick multiplayer PVP game of any sort and getting totally annihilated by a streamer who plays 20 hours per day.",
+                            "comment": [
+                                {
+                                    "text": "I used to really enjoy this aspect of older games like Warcraft 3 and TF2.<p>You&#x27;d get the one guy on your server who was just in another league compared to everyone else, and it was so satisfying to get the kill on him.  And sometimes, it would be you pubstomping.<p>Then again, back then I don&#x27;t think people cared as much about winning and losing.",
+                                    "comment": [
+                                        {
+                                            "text": "Something definitely was lost with the addition of ranked ladders and global skill-based matchmaking systems. It was quite a long time, maybe 10y, before TF2 even got one.<p>And yet it had a healthy, if unhyped, competitive scene long before that.",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "There&#x27;s a trade-off between how long you wait and the skill spread of the team. IIRC at the very top, for DOTA2, the pros complained enough for the devs to make a &quot;wait longer&quot; matchmaking mode.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "&gt; There I wish games were even more aggressive and exact at matching you to players around your skill level.<p>PvP involves sandbagging and a variety of fragile gimmick strategies. (Oh, and cheating. For slow enough turn-based games, players can cheat with a separate physical device, which can&#x27;t be detected.)<p>The system can&#x27;t <i>measure</i> skill level accurately against a player base that&#x27;s actively antagonistic to such measurement, so of course it can&#x27;t match players well on that basis.<p>Even abstract games of perfect information, like chess and Go, have this problem online.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "SBMM also a double-edged sword. Some people like to play game relaxed. Random matchmaking gives them chance to win. \nBut SBMM means having sweaty games all the time.\nI do prefer SBMM but I’ve seen people upset about it",
+                                    "comment": [
+                                        {
+                                            "text": "People who complain about SBMM being &quot;sweaty&quot; are typically stronger players who want to dunk on casuals. For them, it&#x27;s true that non-SBMM is sweaty, because if you&#x27;re even a top 10% player, you&#x27;re gonna dominate most other people.<p>But what if you&#x27;re a bottom 10% player? How non-sweaty is non-SBMM then? Is it not-sweaty to get absolutely demolished all the time even at your best?",
+                                            "comment": [
+                                                {
+                                                    "text": "That depends on the game I think. Games like Battlefield have no problem with players of all skills playing the same match - some are trying hard, some are chiling out, some are doing something silly, either way the scene is so large you can usually choose what you like the best, it all organizes itself naturally. BR games like PUBG always have very different players in one high-ish level match (as it&#x27;s not possible to pick that many players of a matching skill) and that&#x27;s completely fine.<p>Games and leagues where you&#x27;re expected to try hard are entirely different. I&#x27;d say custom tiered PUG queues are much better than common huge pools, this way top players can filter people they&#x27;re training and playing with. In the end I think I rather agree with the grandparent than not, <i>communities</i> typically feel more lively and diverse than blind ladders.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "If the game has a sufficiently large group of players then yes that&#x27;s not as bad. But you&#x27;ll still end up with weak players fairly consistently having a bad time.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "&gt; SBMM also a double-edged sword. Some people like to play game relaxed.<p>That&#x27;s just a different way of saying some people like to play games where their opponent has no chance. So your &quot;relaxation&quot; comes entirely at the expense of others.<p>Single player campaigns are a better way to accomplish this because then you can do whatever you want as far as difficulty goes.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "I think automatic global matchmaking is a bit of a cursed problem because how people want to play a game is multidimensional beyond just their skill level at the game, it may change from session to session, and some players are incentivized to lie about it.<p>You can see some attempts to address this with having casual &#x27;unranked&#x27; and competitive ranked matchmaking modes, but this still runs into whether casual means &#x27;just fuck around and not even try to play the objective&#x27; or &#x27;play the game as a team but not be quite so focused on winning at any cost&#x27;.<p>People who complain about SBMM it because they just want to pubstomp are mostly just whining and want their fun at the expense of 1-11 other players, though. (I recall a conversation on here where someone was saying that the optimum winrate for chess to keep someone engaged is about 80% and did not seem to understand that there was no way to have a group of people playing chess against each other with an average 80% winrate each)",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "It doesn&#x27;t have to be deceptive!<p>In Factorio, you build an automated factory on an alien world whose native inhabitants hate air pollution.<p>If you spend your time gathering resources manually or with a humble-sized factory, there&#x27;d be very little alien hostility. But the better you&#x27;re playing, the grander the factories, the more you&#x27;re polluting, the more aggressive the aliens attack you.<p>Furthermore, trees soak up CO2, so if you preserve them you reduce alien hostility, but if you go fully industrious and build on top of them you invite more alien aggression.<p>I think this concept is delightful and far from deceptive. It makes the game suitable for players of all levels and it meshes with the game mechanism rather than working behind your back.<p>hnews folks would also probably enjoy the cellular-automata-like mechanism of the pollution. Essentially the world is divided into cells and each cell has a pollution value. Pollution dissipates to nearby cells on regular intervals. Cells with trees soak up some pollution, cells with machines produce some pollution. A pollution map is available in-game.",
+                    "comment": [
+                        {
+                            "text": "A big advantage of this system is the transparency. You understand the logic behind it so it doesn&#x27;t feel like someone is trying to trick you.",
+                            "comment": []
+                        },
+                        {
+                            "text": "IIRC, the playtime is also a factor in Factorio. It&#x27;s nice that the trees soak up pollution, but the inability to plant more of them is actually the only thing I really dislike about the game. I want to have a choice to be even greener and even less disruptive to the local inhabitants in the base game, not as a mod &quot;hack&quot;",
+                            "comment": [
+                                {
+                                    "text": "You can plant trees now.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Hard disagree.  All of my favourite games of all time have dynamic difficulty systems.<p>Not stupid stuff like levelling up enemies in Bethesda games - but actual skill based games that get harder depending on how good you are at it: Resident Evil 4, Battle Garegga to name a few.<p>Games that unlock more content as you reach skill gates are the most memorable.",
+                    "comment": []
+                },
+                {
+                    "text": "&gt; then it feels cheap and massively unrewarding for them<p>Or even blocks them, in games that have dynamic leveling. Oblivion is the ur-example, but I&#x27;ve ran across at least two more:<p>1. Been playing Tyranny and there are mentions in the faqs&#x2F;forums that you should disable leveling of skills you don&#x27;t use if you do the new game+ thing where there are no level caps.<p>2. And one that happened to me personally a year or two ago: was playing Grim Dawn and hit my character&#x27;s incompetence ceiling. This is a gear based ARPG&#x2F;Diablo clone so the solution is to get better gear. But you can&#x27;t go back to an easier area to improve your gear because they&#x27;re all auto scaled and every map is the same - too hard now - difficulty. So there goes the uninstall and the lost DLC sales...",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s often a very bad idea. One example is The Elder Scrolls IV: Oblivion. Players are punished for leveling, and many players simply give up and have to do everything on level 1.<p>It&#x27;s essentially punishing players for playing well, and often could be gamed by playing badly intentionally.",
+                    "comment": [
+                        {
+                            "text": "Oblivion&#x27;s problem is even worse than that. You can level up entirely from improving non-combat skills, so the enemies are harder and you&#x27;re only better at jumping.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I think it strongly depends on how it&#x27;s done and how it plays into the feeling of the game. Certain kinds of level scaling can feel pretty cheap, for example, because they kind of work against the feeling of progression you get in the game. Similarly a game obviously making things easier for you can feel like it&#x27;s cheapening the satisfaction of improving at the game, though how important this is varies from person to person.<p>But done well, it can much more reliably create the feeling of being just on the edge of failure but pulling through, which is really satisfying in a lot of games. L4D did this, but Helldivers 2 for example also has a lot of game design focused on creating this kind of feeling.",
+                    "comment": []
+                },
+                {
+                    "text": "On the other hand, the whole Director system of Left 4 Dead works like this and it’s incredible.<p><a href=\"https:&#x2F;&#x2F;cdn.akamai.steamstatic.com&#x2F;apps&#x2F;valve&#x2F;2009&#x2F;ai_systems_of_l4d_mike_booth.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;cdn.akamai.steamstatic.com&#x2F;apps&#x2F;valve&#x2F;2009&#x2F;ai_system...</a>",
+                    "comment": []
+                },
+                {
+                    "text": "It&#x27;s a pretty well proven design pattern.<p>The adage is that the customers never know what they want, and it&#x27;s doubly true when it comes to video games.",
+                    "comment": []
+                },
+                {
+                    "text": "My go-to example is Homeworld 2, where the dynamic difficulty scaling was IMO very poorly hidden.  It was as if the player is being punished for doing the legwork to preserve and expand their fleet across missions even though the game&#x27;s lore and mechanics encourage them to do so.",
+                    "comment": []
+                },
+                {
+                    "text": "Crash Bandicoot did this well. In the original game, you needed to finish without dying and get all of the boxes to get the gem. In future games, some levels would have a “death path” that would only be available if you got to a certain point in the level without dying.",
+                    "comment": []
+                },
+                {
+                    "text": "Yes feels like this can easily be &quot;gamed&quot;<p>For example, if I want friendlier lobbies in arc raiders, I will spawn in with no loadout and purposely surrender.. I can game my difficulty lower",
+                    "comment": []
+                },
+                {
+                    "text": "Ooh very much disagree. Like so many things, when it’s done right, it works real well, it feels good. See Deathloop for a recent example.",
+                    "comment": []
+                },
+                {
+                    "text": "The good way of doing this is to ask the player if the difficulty shall be lowered temporarily just for that level of they keep dying. Then it is transparent and the choice is theirs.",
+                    "comment": [
+                        {
+                            "text": "“We’ve noticed you keep dying to this boss. Would you like to play on the difficulty intended for children instead?”",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Left 4 Dead handled this pretty well in my opinion (i.e. mob spawning behind if you&#x27;re playing too slowly or a tank in front if you&#x27;re going too quick).  I absolutely hated the dynamic adjusting in games like Mario Kart, though.",
+                    "comment": []
+                },
+                {
+                    "text": "&quot;actual players&quot; as opposed to other people who just, what? &quot;use&quot; the game?<p>Sorry, but it&#x27;s hard to take this comment seriously when it reeks of &quot;git gud&quot;.\nSo I&#x27;ll just point out that a lot of people play games, and that there are well-documented instances of games with dynamic difficulty as early as the 80s.",
+                    "comment": [
+                        {
+                            "text": "As opposed to the game designer who came up with an idea that sounds convincing but barely ever tested it. My comment had nothing to do with &quot;git gud&quot;, it&#x27;s poorly worded perhaps.<p>Of course there&#x27;s a ton of this, which is exactly why I complain. Level scaling is probably the easiest to justify because it solves legitimate issues (that are often caused by other poor decisions), but other types are usually much worse.",
+                            "comment": [
+                                {
+                                    "text": "&gt; My comment had nothing to do with &quot;git gud&quot;<p>Fair enough, I applied that lens to it on my own.<p>Allow me to elaborate on my earlier comment and reply to this one here:<p>A <i>ton</i> of it? No, I don&#x27;t see that. It&#x27;s probably the least commonly implemented approach to difficulty (curves).<p>Dynamically adjusted difficulty has been around for a long time, but it&#x27;s never been broadly adopted.\nThere&#x27;s a lot of reasons for this I&#x27;m sure, but a couple of obvious ones are that executives don&#x27;t tend to throw money at features they can&#x27;t see [or game developers in general], and that it&#x27;s a tricky thing to build anyway.<p>It&#x27;s certainly not the default solution to the problem, but there&#x27;s a long history of games implementing some form of dynamically adjusted difficulty. Some of them to great success with the difficulty system itself being celebrated (Xevious, Resident Evil 4, Left 4 Dead), the vast majority of them you have no idea even implemented such a feature, and there&#x27;s also a number of famous examples that were widely derided for it (Oblivion, ...?). [I&#x27;m genuinely stumped to think of another famously bad example, not trying to make it look like there are fewer of one than the other. I&#x27;m sure there are just as many negatively viewed ones as I can come up with positive ones.]<p>While it&#x27;s obviously possible that an individual designer&#x2F;team didn&#x27;t thoroughly test their particular feature, the concept itself has been very well tested in a wide variety of implementations&#x2F;mechanics. And if you&#x27;re playing a game designed by people who didn&#x27;t test it, the difficulty scaling seems likely to be the least of your problems.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "in games like wow where the more powerful you get the harder the enemies become, this reduces incentive to get more powerful. its a simple consequence so im not sure why they do it - probably to keep &quot;time played&quot; metric hovering at the desired level. which imho backfires when time played becomes 0.",
+                    "comment": [
+                        {
+                            "text": "You&#x27;re only looking at one side. Dynamic difficulty also allows players to progress by lowering the health of a boss they&#x27;ve failed to beat for over two hours.<p>Casual players giving up was a problem that no amount of shaming managed to fix (&quot;haha skill issue, sucks to suck&quot;).",
+                            "comment": [
+                                {
+                                    "text": "How is it a problem? Giving up is absolutely fine. Different games are made for different types of players. Who cares what the others think (or you think they think). By trying to cater to everyone you satisfy nobody.",
+                                    "comment": [
+                                        {
+                                            "text": "If a game is so hard that the player gives up, they won&#x27;t buy your next game. That is an existential threat to your game studio.<p>Worse though, if your game is deemed &#x27;unfair&#x27; rather than just &#x27;hard&#x27;, then even the hardcore gamers will avoid it. That&#x27;s enough to kill the business before you even start the next game.<p>Some studios pick the &#x27;hardcore&#x27; market, especially once they&#x27;ve built a reputation and a following, but everyone else <i>needs</i> a more general appeal in order to stay in business.",
+                                            "comment": [
+                                                {
+                                                    "text": "If your studio&#x27;s <i>only</i> goal is to make money and games are a byproduct then it makes sense, but in most of the gamedev it leveled itself out some 10-15 years ago - very few studios outside of mobile gaming target the lowest common denominator audience, most seem to understand that opinionated design adds flavor and sells the game as well. Certain target audiences simply never cross under any circumstances, it&#x27;s not even necessarily &quot;hardcore vs casual&quot;.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Resident Evil 4 famously had a hidden dynamic difficulty setting that made the game easier if the player struggled. I think it worked because RE4 is a linear &#x2F; ambiance based game. The game designer <i>wants</i> the player to progress in the story, and getting stuck on an impossible doesn&#x27;t make sense except if the player chose a challenge mode. Contrast with Morrowing where it makes no sense having common bandit on the road carrying god-like equipment.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "Just make it a concrete option then. What is the point of being sneaky about it?",
+                                    "comment": [
+                                        {
+                                            "text": "Probably because some people want to feel like they&#x27;re succeeding in the &#x27;actual game&#x27; and not the &#x27;Fisher Price version of the game&#x27;. For those people the solution is ultimately to make their reality appear to be that, even though it isn&#x27;t.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "Yeah, Hades did this with God mode and it worked very well.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "This is why Diablo 4 was a complete flop.",
+                    "comment": [
+                        {
+                            "text": "&gt; This is why Diablo 4 was a complete flop.<p>This is interesting to me; can you explain please?",
+                            "comment": [
+                                {
+                                    "text": "Difficulty scaling is done to such an extent that even common enemies scale right along with you. In the opening scene, there is a bear you come across and at level 1 or 2, you are able to one shot it. Then the story takes you on a grand quest where ostensibly you go from a nobody to the savior of the world. However, due to difficulty scaling, if you run into the same bear halfway through the game, it will be harder to kill than when you were level 1.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "I like when your character or your party feels like superheroes for a little while after leveling up, then it gets harder to really test your new ability, then keep repeating that cycle.",
+                    "comment": []
+                },
+                {
+                    "text": "Do you really hate Breathe of the Wild so much?",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This will depend on the game of course, but the best is when you can adjust the difficulty of mechanics individually.<p>City builders do this a lot where you often have lots of difficulty settings you can adjust to tailor the game to your preferred playstyle.<p>I’ll also say this: if you’re making a game and you add in a mechanic or mini-game that is not typical of the genre, make it optional or provide a way to skip it. Few things things in gaming piss me off more than a memory or Simon Says puzzle in an MMO or similar. If I wanted to play puzzle games, I’d be playing a puzzle game, not your game.",
+            "comment": [
+                {
+                    "text": "This works for sandbox or simulation type games, but otherwise I think difficulty sliders are like going to a restaurant and getting all the cooked ingredients in separate plates for you to combine. While that can be fine and cater to the maximum number of people, it&#x27;s a safe approach that wastes good opportunity cost of a great plate of food catered by someone with the skills to do it.<p>If a game can afford a designers to really think what the experience should be, I think the gold standard should be no difficulty slider. Playing the game should be a self-consistent experience that gets more difficult as you get better at the game, and gating the final content with skills is very rewarding and makes the experience feel more &quot;real&quot; than if you just get a super configurable game where everything can be turned on&#x2F;off.",
+                    "comment": [
+                        {
+                            "text": "I’m not suggesting you hit a new player with a wall of configuration options. Guide them into the gameplay experience as you intended it, but also allow them to make changes to settings as relevant to the game.<p>I liked when games used to include cheat codes or debug commands. Let me trivialize the game if I want to. I paid for it and it’s my time I’m spending. Not once did I ever play The Sims as intended. And enjoyed it enough to buy another version or two. I used cheats all the time in WarCraft 2 and StarCraft single player.<p>And when games don’t include that, almost always someone will create a hack or mod that does do that, because there is a demand for it.",
+                            "comment": [
+                                {
+                                    "text": "That&#x27;s fair, but I think each difficulty level needs to be designed as its own challenge, as oppose to the developer exposing the internals of the game so you can turn all the nobs and make anything trivial.<p>In short, there needs to be intention and design, and not just exposing the developer tools, generally speaking.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Ghost Recon Breakpoint is a good example of lots of difficulty settings. You can turn off some annoying parts of the game, set enemy tactical difficulty, disable some survival aspects of the game if you don&#x27;t care about them, and adjust the amount of on-screen information in several steps. For the latter part, you can have a minimap that shows the location of enemies once you&#x27;ve seen them, or not, and you can have waypoints that show the direction of some objective, or not. With all of the on-screen stuff disabled, there would be an awful lot of searching required to find objectives. It&#x27;s pretty cool that everyone can have the amount of difficulty&#x2F;frustration they desire.",
+                    "comment": [
+                        {
+                            "text": "&gt; You can turn off some annoying parts of the game [...] cool that everyone can have the amount of difficulty&#x2F;frustration they desire<p>Depends on the type of game, but I&#x27;d generally prefer those decisions be made by the game designer. If there&#x27;s frustration I want it to feel like overcoming a concrete obstacle, rather than it being self-hindering that accomplishes nothing and that I could&#x27;ve just avoided.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "I remember there were some complaints about the puzzle sections in a recent-ish God of War game where they had clearly tried to avoid this problem but by essentially having NPCs spontaneously tell you the solution to the puzzle at some point, which then just annoyed people who wanted to solve the puzzle themselves.",
+                    "comment": []
+                },
+                {
+                    "text": "seems like this is more of a personal taste issue. I rather enjoy little surprise minigames like this.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "I&#x27;ve been watching a lot of let&#x27;s play content on YouTube for incremental games (it&#x27;s like an ASMR thing) and after watching a lot of these games it is clear that pacing a video game is a challenge. Sometimes the player finds a sneaky way to increase their progress that busts the game, other times they miss the correct path and get stuck in a painful grind. It is also very obvious when the game dev has targeted a play-time metric and forces the game into that metric. Incremental games really expose this dynamic since they are generally pure upgrade mechanic attached to some kind of dopamine generator (flashy lights, rhythmic sounds, etc.)",
+            "comment": [
+                {
+                    "text": "Oddly specific niche jumpscare.  Which games?  Cookie clicker and universal paperclips are the household names, but reactor idle based off of ic2 has been my favorite gameplay-wise.  The 2D adjacency bonus mechanics scratch the same itch tactical games have but without the stakes of messing up strategy.",
+                    "comment": [
+                        {
+                            "text": "Each game itself is mostly throw-away (although a few have some impressive graphics bling which must have taken some effort). I&#x27;ve been watching a channel called &quot;Idle cub&quot; [1] and he posts a new game every day (well, almost, sometimes he&#x27;ll play a demo and then later the full game).<p>Seeing a massive stream of games that all surround the same 12 or so mechanics has been eye opening. The games range in duration from ~2 hours all the way to several days of content, although most premises seem to get old at around 4-6 hours.<p>At first I was doing research for my own game ideas, now I&#x27;m kind of mesmerized by the variety and the general relaxed atmosphere of these idle games.<p>1. <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;@idlecub\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;@idlecub</a>",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Difficulty settings, though. He mentions them only briefly (in this incredible article).<p><i>Normal</i> varies so much.<p>As a &quot;cozy&quot; gamer, I want the standard setting to be something I can play without having to switch my context to to the internet for help or a guide. This was one of many triumps of Baldur&#x27;s Gate 3: the difficulty settings make sense in how they translate to gameplay, and the default is fun.",
+            "comment": [
+                {
+                    "text": "What is ‘normal’ is unfortunately subjective and can mean a lot of different things to different people. Also often what is listed as ’hard’ is often normal, because most people will see ‘normal’ and decide they’re better than that and have a miserable old time.",
+                    "comment": [
+                        {
+                            "text": "This reminds me of UX. Seems like it could be a subdomain.<p>I think I disagree with your basic point, though what you say about normal vs. hard is funny. I&#x27;m fortunate enough to work with a UI&#x2F;UX pro, and these things have right answers; they&#x27;re incredibly obvious <i>after</i> they&#x27;ve been explained to you.",
+                            "comment": []
+                        },
+                        {
+                            "text": "There&#x27;s nothing wrong with opinionated design. The dev has set the bar this high and chosen this thing to represent difficulty levels, either you like it or you don&#x27;t. Catering to everyone is impossible.",
+                            "comment": [
+                                {
+                                    "text": "This is true, but you don’t want people to bounce off the game immediately, so they have a bad time and refund it before giving it a proper go.<p>This can happen if they feel it’s easier or harder then expected.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I haven&#x27;t seen this connection made, but difficulty curves in video games seem to resemble Campbell&#x27;s Hero&#x27;s Journey. There is an initial call to adventure, then some kind of mentor, then confronting the shadow, then a return of the shadow, etc.<p>If the game industry wasn&#x27;t so myopic about recreating reality in graphics, the larger AAA titles could be exploring this more in depth. I think this would hit the jackpot of immersive experience as it could tap into the same psychological mechanisms.",
+            "comment": [
+                {
+                    "text": "That&#x27;s because the hero&#x27;s journey is an attempt to study the physiology of story telling, so it&#x27;s not restricted to the typical written romance. Games just like books and movies are often trying to tell a story and it&#x27;ll eventually follow Campbell&#x27;s book, even if unaware or not trying to.<p>I&#x27;d say that writers do know about this a lot, the problem is that games are becoming progressively more expensive and riskier to make, so money will push new titles to be safer and more boring, which could be why you perceive them as unaware of this, because why not wouldn&#x27;t they want to make a good game?",
+                    "comment": [
+                        {
+                            "text": "I&#x27;m talking about the gameplay experience though. So applying Hero&#x27;s Journey to the player through game design. I see what you mean though.",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Relevant: I&#x27;m just sad that most turn-based JRPG&#x27;s nowadays start off with you thinking about which move is appropriate for each situation, but halfway through they end up to making you use the same 3-4 moves over and over again.<p>Trails games are even worse because there&#x27;s tons of them who feel like they never gotten properly play tested. Killing a level 120 boss with a level 60 squad because you can delay the opponent&#x27;s turn just isn&#x27;t satisfying, especially when the boss is meant to be (narration-wise) so much stronger than you.",
+            "comment": []
+        },
+        {
+            "text": "Experience curves are just as important.<p>However, this article reminded me of this meme<p><a href=\"https:&#x2F;&#x2F;imgur.com&#x2F;gallery&#x2F;eve-online-learning-curve-jj16ThL\" rel=\"nofollow\">https:&#x2F;&#x2F;imgur.com&#x2F;gallery&#x2F;eve-online-learning-curve-jj16ThL</a>",
+            "comment": []
+        },
+        {
+            "text": "I never liked this kind of games - skills are locked depending where you are at the stories.<p>Multiplayer FPS, strategy games, and sport games are still very enjoyable without these mechanisms.",
+            "comment": []
+        },
+        {
+            "text": "I use the &quot;saw&quot; stepped difficulty curve (it&#x27;s a very Nintendo thing) in my recent game BELTRUNNER (Web, Wii, Linux handhelds) <a href=\"https:&#x2F;&#x2F;blog.gingerbeardman.com&#x2F;2026&#x2F;07&#x2F;30&#x2F;beltrunner-game-design-postmortem&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.gingerbeardman.com&#x2F;2026&#x2F;07&#x2F;30&#x2F;beltrunner-game-d...</a>",
+            "comment": []
+        },
+        {
+            "text": "maybe i’m in the minority of gamers overall.. i much prefer when there’s no difficulty setting (like  dark souls, for example) but rather an enormous amount of tools the game gives you to solve a problem.<p>i know there are problems with this approach, but games without a difficulty setting “feel” more like a game to me for whatever reason",
+            "comment": [
+                {
+                    "text": "an old school monster hunter gamer feels the same, and being stuck is part of the fun",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "This is an okay introduction, but it shouldn&#x27;t be considered prescriptive.<p>As with most art forms, the very best and most interesting examples treat rules like these as starting points, not end points.",
+            "comment": []
+        },
+        {
+            "text": "Unrelated to the article, but keyboard scrolling is not working on this site. It seems to be deliberately disabled with a script called t1.js. I wonder why. Please, don&#x27;t mess with keyboard navigation on a blog.",
+            "comment": []
+        },
+        {
+            "text": "Steam reviewer attitude haha!",
+            "comment": []
+        },
+        {
+            "text": "steam reviewer attitude difficulty curve seems pretty accurate!",
+            "comment": []
+        },
+        {
+            "text": "You missed the Terra Invicta &quot;you think it&#x27;s easy, but you&#x27;ll be dead in 40 hours because you are underperforming&quot; curve.",
+            "comment": []
+        },
+        {
+            "text": "[dead]",
+            "comment": []
+        }
+    ]
+}

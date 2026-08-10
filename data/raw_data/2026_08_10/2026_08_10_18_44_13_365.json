@@ -1,0 +1,292 @@
+{
+    "item_id": 49239226,
+    "title": "The Philippines' big offshoring industry is growing despite AI",
+    "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
+    "text": "",
+    "comment": [
+        {
+            "text": "People have a bad intuition about economic mechanisms, but that does not mean that AI won&#x27;t cause huge regressive effects.<p>The transition from independent artisans to factory work didn&#x27;t cause massive unemployment. But it cause the former artisans to lose out, because they no longer had the bargaining power they had before - their work was now a commodity. This resulted in &quot;Engel&#x27;s pause&quot;, a period in which wages stagnated, and so conditions got worse because prices also increased.<p>But AI also isn&#x27;t <i>just</i> automation. It&#x27;s the <i>automation of automation</i>. You may think that you will just level up and learn the new skill set of managing AIs, but the AI companies will be collecting the data to automate <i>that</i> too. Often by watching you.",
+            "comment": [
+                {
+                    "text": "Also worth pointing out Anthropic is a sponsor of The Economist. Probably muddies the water some more.",
+                    "comment": []
+                },
+                {
+                    "text": "Also an analogy with the globalization of manufacturing era. People have I think been prone to assuming that the West has a &quot;magic ingredient&quot; which entitles it to revenues from skilled work forever. A presumption that people overseas, especially in the &quot;south&quot; and &quot;east&quot;, wouldn&#x27;t acquire the same skills or culture. The idea that it is so absolutely critical to software development to be in an office in Silicon Valley that it&#x27;s worth paying enormous premiums even relative to the rest of America and the West (+).<p>That is being disrupted. Ironically, by American AI firms who want a cut of all software engineering salaries globally.<p>(+) UK software developer working for an American multinational here, aware that my salary is &quot;great by UK standards but not by American ones&quot;",
+                    "comment": [
+                        {
+                            "text": "The WFH aficionados that emerged during Covid had no concept of bargain power or power structures.<p>Dunno why there was such resistance from the owning class afterwards with return to office mandates.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "The only crime here is stopping before AI replaces the CEOs and politicians.",
+                    "comment": [
+                        {
+                            "text": "They should go first tbh, but the system we&#x27;ve allowed them to create mean they&#x27;ll go last. The same is true of mass redundancies etc. And even when they do go there&#x27;s golden handshakes&#x2F;parachutes etc involved. No real skills apart from going to business school and having the right social circle, most of em.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "This makes no sense outside of SV.<p>If you work in the broader corporate world, your heads-down work may typically be writing software, but you&#x27;re really more like staff IT. You get promoted into some kind of management role like &quot;architect&quot; and end up owning all the implementation instead of just the code.<p>You get passed the football a lot because that&#x27;s more effective teamwork. You have weight in meetings because the business is smart enough to realize you are not just writing code. Your maintenance is basically <i>all the operations</i> short of the accounting and client manager stuff for that project.<p>AI is irrelevant unless you&#x27;re really feeling a time crunch and have little alternative. Nobody cares how you do it. The meetings are a way bigger deal than the code. These types of devs are the equivalent of a bureaucrat who can sign off on a construction job and then grab a shovel.<p>This is the actual &quot;future&quot; of dev work... ahem it looks a lot like the past and present for everyone else.",
+                    "comment": [
+                        {
+                            "text": "&gt; AI is basically irrelevant unless you&#x27;re really feeling a time crunch and have little alternative<p>Which is all of our industry. You&#x27;re lucky if you&#x27;re in a pocket outside of timr crunch.",
+                            "comment": [
+                                {
+                                    "text": "I&#x27;m just describing what an actual career looks like beyond the first 5 years of grinding away at a startup and then giving into &quot;the man&quot; or whatever.<p>I guess it&#x27;s true that corporate doesn&#x27;t like hiring junior devs, but I&#x27;m not sure it was ever any other way. I&#x27;m not seeing where the fire is at. Corporate won&#x27;t pay you SV wages either, but it&#x27;s still respectable six-figures. You probably don&#x27;t get stock either, but everyone gets a management bonus unless they&#x27;re contractors. This is just basic middle america and it&#x27;s the vast majority of the workforce.<p>I&#x27;m not trying to piss anyone off when I say this, but all the scifi doomer shit is wildly out of touch and preys on the inexperienced. You should question who is behind it.",
+                                    "comment": [
+                                        {
+                                            "text": "ok, explain a potential day in the life of this senior, where they are not <i>required</i> to code with AI.",
+                                            "comment": [
+                                                {
+                                                    "text": "I&#x27;m clearly not going to convince you with that attitude, but hopefully others reading can benefit from the long view.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "[dead]",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "From a recent article in The Economist. It turns out that once again many of the jobs that people predicted would be eliminated by AI have instead received a boost, at least for now. This closely follows another recent report on how Indian BPO firms are surprisingly thriving due to AI.<p>&quot;Moreover, AI is helping offshore workers in the Philippines do new, more complex jobs. They are picking up work training AI models or supervising AI agents. Hospitals in America are increasingly outsourcing the checking of insurance eligibility and filing of medical records to Filipinos packing AI tools. Mr Gallimore says more “high-value” work, such as accountancy or engineering, is going offshore in part because “AI is a leveller. You can now teach someone complex stuff quickly” and still get it done more cheaply than in America or Europe. Some of this is done at so-called global capability centres, captive back offices that are booming in India and also now growing in the Philippines.&quot;<p>It seems like AI has incidentally commoditized the complement (procedural knowledge), and in turn created greater demand for inputs like human judgement and &quot;empathy&quot;.",
+            "comment": [
+                {
+                    "text": "&gt; It seems like AI has incidentally commoditized the complement (procedural knowledge), and in turn created greater demand for inputs like human judgement and &quot;empathy&quot;.<p>I think as well there is currently the following: AI still needs an operator, in the same way than a bulldozer needs a bulldozer operator. And like with bulldozer, there are always something that business stakeholder wanna dig, now that digging is faster.",
+                    "comment": []
+                },
+                {
+                    "text": "I visited India recently and when I saw <i>just</i> how many companies have a GCC there I was mindblown. Lots of cool offices, engineering and technical roles, great work life balance and generally a different vibe. Literally every company that I could recognise had a back office there.",
+                    "comment": [
+                        {
+                            "text": "Do these GCC&#x27;s have great work life balance? They may be better that the service companies, and may pay better, but WLB is shitty everywhere in India as far as I can tell. As an example, the death of Ernest &amp; Young employee Anna Sebastian sparked a lot of discussion in Indian media since it was attributed to work pressure.[1] Another example I recently heard was a USA Texas based company called CorroHealth suddenly closing shop and laying off 800+ employees in India, the employees allege it was retaliation for asking for overtime payment since they were being made to work till 10 pm.[2]<p>If you are an American or European with colleagues in India, and if they are working or attending meetings after regular work hours, they don&#x27;t have good WLB. Given a choice, I doubt they would want to attend the late night meetings. Life in India is already like playing a video game in hard mode, and yet we have to work lot more hours for lot less pay, and be regularly told how shitty offshoring work is.<p>[1]<a href=\"https:&#x2F;&#x2F;www.news18.com&#x2F;viral&#x2F;26-year-old-ey-pune-employee-succumbs-to-work-stress-four-months-after-joining-mother-writes-to-firms-india-boss-9054423.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.news18.com&#x2F;viral&#x2F;26-year-old-ey-pune-employee-su...</a><p>[2]<a href=\"https:&#x2F;&#x2F;www.thehindu.com&#x2F;news&#x2F;national&#x2F;tamil-nadu&#x2F;it-employees-protest-corrohealth-layoffs-demand-stronger-regulations-for-the-sector&#x2F;article71234623.ece\" rel=\"nofollow\">https:&#x2F;&#x2F;www.thehindu.com&#x2F;news&#x2F;national&#x2F;tamil-nadu&#x2F;it-employe...</a>",
+                            "comment": [
+                                {
+                                    "text": "WLB is truly awful in India. People are stretched and stressed out at work, in addition to awful civic conditions which makes travelling to and from work a nightmare. I am not sure how long this can continue.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "&gt; great work life balance<p>Oh dear",
+                            "comment": []
+                        },
+                        {
+                            "text": "What&#x27;s a GCC?",
+                            "comment": [
+                                {
+                                    "text": "Global capability centers where they basically do the business processes and work for US&#x2F;EU companies for fraction the cost.",
+                                    "comment": [
+                                        {
+                                            "text": "So basically like ghost kitchens for white-collar work, with an extra timezone difference?",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "What happened to &#x27;BPO&#x27;?  cool kids?",
+                                            "comment": [
+                                                {
+                                                    "text": "BPO means the US company is outsourcing to an Indian company. A Global Capability Center (GCC) means it&#x27;s a US company subsidiary in India.",
+                                                    "comment": [
+                                                        {
+                                                            "text": "Aka an office or a department in another location where payrates are less than the company median.  Coming up with these initialisms must be hard work, I doubt AI is that clever.",
+                                                            "comment": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Thanks.  Sounds like a good deal.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "TIL",
+                                            "comment": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "&gt; so-called global capability centres, captive back offices that are booming in India ...",
+                                    "comment": [
+                                        {
+                                            "text": "Thanks a lot!",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "“Hospitals in America are increasingly outsourcing the checking of insurance eligibility and filing of medical records to Filipinos packing AI tools. Mr Gallimore says”<p>How is this HIPPA compliant? Please tell me there’s an aspect of HIPPA that requires sensitive data to be only accessed and processed by Americans on shore. You’d think the multiples we pay on health care for worse outcomes would at least be supporting our own domestic middle class with this sort of basic back office white collar work",
+                    "comment": [
+                        {
+                            "text": "",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Yeah, paradoxically Indian software outsourcing is growing. I guess the way the companies are thinking about this is we need some sort of human oversight for all the work the LLMs are doing, might as well pay someone the least amount possible to do that.",
+                    "comment": [
+                        {
+                            "text": "Don&#x27;t understand why this should not have been obvious. If you have technology that allows expensive workers to do things cheaper why wouldn&#x27;t same technology allow cheaper workers to do stuff even cheaper... And cheap is good...",
+                            "comment": [
+                                {
+                                    "text": "Can you explain why freelance writing and translation is being destroyed:<p>&gt; <a href=\"https:&#x2F;&#x2F;researchprofiles.ku.dk&#x2F;en&#x2F;publications&#x2F;winners-and-losers-of-generative-ai-early-evidence-of-shifts-in-f\" rel=\"nofollow\">https:&#x2F;&#x2F;researchprofiles.ku.dk&#x2F;en&#x2F;publications&#x2F;winners-and-l...</a><p>Surely, AI helps them do stuff even cheaper, and cheap is good, so their business should be booming?",
+                                    "comment": [
+                                        {
+                                            "text": "Cheaper price doesn&#x27;t always lead to as large increase in demand. There is only so much writing and translation that is needed. So lowering price does not mean that same amount or more money is spend.<p>On other hand companies getting these services cheaper can mean that they have less pressure to increase prices.<p>I think whole Jevon&#x27;s paradox is misapplied. More efficient use of coal leads to more use cases as they become profitable. Which there was lot of. With many other things like writing or translation there might not be more use cases.",
+                                            "comment": []
+                                        },
+                                        {
+                                            "text": "I know a freelance translator and they have more business than ever, AI being &quot;mostly&quot; right is not good enough in many businesses. You need oversight and most importantly - accountability in the form of a human that can put their stamp of approval.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "I’m not sure if this is true. I really want the hiring story to be true, but the responses I am getting from people on the ground vs industry generated reports isn’t meeting up.<p>The only report that I know of that is available is the ICRIER report.<p>I haven’t read the report itself, but it’s supposed to show modest hiring growth.<p>Conversely I know that most of the outsourcing vendors are seeing reductions in headcount when it comes to outsourced tech operations.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "&gt; Hospitals in America are increasingly outsourcing the checking of insurance eligibility and filing of medical records to Filipinos packing AI tools<p>So, insurance claims are handled by people who operate in different legal system and by unaccountable undererministic system. And people are pressured to perform fast.<p>This is not about &quot;automating complex task&quot;. This is about &quot;create accountability sink for fraud we want them to do and create system that will perform said fraud&quot;.",
+                    "comment": [
+                        {
+                            "text": "The insurance company is still liable in US courts.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Ooph, now the AI will be wrong and the human won&#x27;t know it. And that&#x27;s running our... let me see... life saving care. Cool. cool. cool.",
+                    "comment": [
+                        {
+                            "text": "&quot;Computer says no&quot; has been a trope of terrible customer service long before AI.",
+                            "comment": [
+                                {
+                                    "text": "&quot;Computer says no&quot; is about unhelpful bureaucracy. Being knowingly locked to a specific procedure and unwilling to divert from it is a different thing from mistakes being made that you are blissfully unaware of. The problem is now invisible and the patient is dying for no reason anyone can discern.",
+                                    "comment": [
+                                        {
+                                            "text": "The people who say &quot;computer says no&quot; are also unaware that&#x27;s a problem. It&#x27;s invisible to them. To them the process is the point.<p>I think that two arent as different as you believe.",
+                                            "comment": [
+                                                {
+                                                    "text": "Well, possibly. To paraphrase the great American philosopher Donald Rumsfeld - there are known knowns, known unknowns, unknown knowns and unknown unknowns. And making the actual process a black box for the people managing it will create a lot more Unknown Unknowns.",
+                                                    "comment": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "The &quot;unhelpful bureaucracy&quot; arises precisely because the process is structured so there&#x27;s no point in the chain that can actually consider and solve your problem directly. The process is the point, outsourcing work to the opposite end of the globe has long been a perfect way to guarantee no it&#x27;s robust against errors like &quot;compassion&quot; and &quot;helpfulness&quot;, and that&#x27;s as true of LLMs performing those functions tomorrow as it was of people doing it yesterday.",
+                                            "comment": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Has anything really changed for transparency?",
+                            "comment": []
+                        },
+                        {
+                            "text": "Your average devs are wrong more than the AI is at this point.",
+                            "comment": [
+                                {
+                                    "text": "At a former job for a regional bank in South East Asia my boss used to joke that outsourcing is really great for the company, because now they can fail to deliver their software projects for cheaper.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "This is not about development. This is about rubber stamping insurance denial by an unaccountable system.",
+                                    "comment": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;6nc5B\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;6nc5B</a>",
+            "comment": []
+        },
+        {
+            "text": "Personally I find AI simultaneously powerful and fatiguing.  Hiring someone else to use AI is honestly pretty great.",
+            "comment": []
+        },
+        {
+            "text": "Why wouldn&#x27;t it? The Philippines has a large talent pool of English-speaking workers who can do tons of different IT-related functions that AI can&#x27;t remotely replace.<p>If you have a globally distributed sales team with no single office for example with people throughout APAC, the Philippines is the unquestionable place to hire for IT support roles for that region.",
+            "comment": []
+        },
+        {
+            "text": "YT videos from Philippines would disagree.",
+            "comment": [
+                {
+                    "text": "Do you mind sharing a link to one of these videos?",
+                    "comment": []
+                },
+                {
+                    "text": "People love to complain.",
+                    "comment": []
+                },
+                {
+                    "text": "What YT videos?",
+                    "comment": [
+                        {
+                            "text": "About working conditions in Philippine Offshore Gaming Operators (POGOs) also known as scamming centers?",
+                            "comment": [
+                                {
+                                    "text": "POGOs are criminalized and often operated by illegal immigrant Chinese people, it&#x27;s not really representative. At least that&#x27;s my understanding having lived in Manila for a few years.",
+                                    "comment": []
+                                },
+                                {
+                                    "text": "What does that have to do with the general state of the whole industry? &quot;Scamming&quot; rarely falls into proper &quot;jobs&quot; anyway.",
+                                    "comment": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "YouTube",
+                            "comment": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Somebody&#x27;s got to actually operate those robots, after all",
+            "comment": []
+        },
+        {
+            "text": "Overall it seems we don&#x27;t have good intuitions for what kinda work AI &#x27;displaces&#x27;. Years of hand-wringing about programmers being put out of a job and instead programmers are the ones paying $200&#x2F;mo for LLMs<p>And on the flipside a lot of AI vendor ideas like helping doctors turn voice transcripts into notes has just been annoying for the prospective user--they feel they may as well type it up themselves if they then have to review and correct the AI notes",
+            "comment": []
+        },
+        {
+            "text": "Outside the English-speaking world, there&#x27;s generally been a knowledge gap when it comes to programming. Better resources weren&#x27;t being shared, and AI helps bridge that gap. You could learn the basics, but higher-quality materials were hard to come by. AI actually solves that—so people&#x27;s reactions depend a lot on their environment<p>Even learning through open source participation requires understanding the English speaking culture, and that&#x27;s a kind of knowledge that only people who have lived in those countries can really grasp.<p>In my case, most of my knowledge came from Microsoft&#x27;s learning center materials. To actually learn deeply, I had to read papers. And I only knew about them because I went to graduate school. But there were already many libraries that made it easier to apply that knowledge without reading the papers directly.<p>So I think how useful AI is depends a lot on where you live and what kind of environment you&#x27;re in",
+            "comment": []
+        },
+        {
+            "text": "any links passing through the pay wall ?",
+            "comment": []
+        },
+        {
+            "text": "[flagged]",
+            "comment": []
+        }
+    ]
+}

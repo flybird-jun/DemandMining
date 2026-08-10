@@ -1,0 +1,57 @@
+{
+    "item_id": 49224020,
+    "title": "TinySol，一款适用于 DOS 的小型纸牌游戏",
+    "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+    "text": "TinySol（前身为 MonoSol）是一款免费的小型克朗代克纸牌游戏，专为在老式电脑（尤其是单色屏幕的电脑）上良好游戏体验而设计。\nTinySol 在 GRiDCase 等离子显示屏上的 640×400 模式。\n下载 TinySol v1.3\n(5/25/2026)\n下载 640 个可通关存档文件\n(5/25/2026)\n启动后游戏开始，在进行第一次输入之前会显示说明。\n特性\n体积小巧（仅 3KB）\n可在任何 PC 上运行（8086 及以上）\n支持任何图形\n(CGA, AT&T, EGA, VGA)\n可即时切换视频模式\n支持键盘或鼠标操作\n游戏中状态保存/恢复（撤销）\n保存/加载游戏到磁盘\n可能时自动完成游戏\n计分（微软风格，无计时器）\n兼容性\nTinySol 应该可以在大多数 DOS 电脑上运行。它已在以下环境中测试过。\n真实硬件 8088，640KB，CGA，MS-DOS 3.30（IBM 5150）\n真实硬件 286，640KB，CGA/ATT，MS-DOS 3.30（GRiDCase 1520）\n真实硬件 Pentium 233，MS-DOS 6.22，VGA\n模拟环境 8086，64KB RAM，MS-DOS 2.0，CGA\n模拟环境 DosBox（开发期间的主要测试环境）\n支持的视频模式\n名称\nINT 10h 模式\n分辨率\n按键\nCGA\n06h\n640x200x2\nF1\nAT&T 6300\n40h\n640x400x2\nF2\nEGA\n10h\n640x350x16\nF3\nVGA\n12h\n640x480x16\nF4\n视频模式应能自动检测，但 640×400 AT&T 6300 模式仅对某些 GRiD 电脑自动选择。可以使用 F1-F4 键即时切换模式。\n注意：对于 DosBox 用户，DosBox 似乎不支持 AT&T 6300，但其他模式工作正常。\n注意：流行的 DOS 鼠标驱动程序 CuteMouse 似乎不支持 AT&T 6300 视频模式。鼠标可以工作但光标不可见，所以我使用 Microsoft 鼠标驱动程序 v6 进行测试。DosBox 不需要鼠标驱动程序（它是集成的）。\nTinySol 于 2022 年初用 x86 汇编语言编写，使用 NASM 汇编，是我第一次尝试编写小游戏。目标是开发一款在 GRiD 等离子显示屏上的 640x400x2 模式下看起来清晰锐利，同时体积足够小以便于包含在 ROM 中而不会造成太大影响。\n注意：\n640x400x2 模式有许多不同的名称。AT&T 6300、Olivetti M24、Compaq Portable III、Doublescan CGA 等等。\n键盘控制\n(tinysol.com 或 tinysolm.com)\n1-7\n桌面牌堆\nA-D\n基础牌堆\n8/空格\n牌堆，发 3 张牌\n9/回车\n抽牌堆，选择卡牌\nTab\n自动将选中的卡牌送到基础牌堆\n上/下\n在同一牌堆内修改卡牌选择\n+/-\n保存/恢复游戏状态\nf\n自动完成，如果可能将所有牌送回家\nn\n新游戏\nx\n退出\ns\n将当前游戏保存到名为 'save' 的文件\nF1-F4\n更改视频模式（CGA、AT&T 6300、EGA、VGA）\n鼠标控制\n(tinysolm.com 支持鼠标)\n左键单击\n选择牌堆（来源或目标）\n右键单击\n自动将选中的卡牌送到基础牌堆\n单击 N\n新游戏\n单击 X\n退出\n版本历史\nv1.0\n03/2022\n初始发布\nv1.1\n11/2022\n修复、优化、性能、功能（添加结束画面）\nv1.2\n05/2024\n修复、优化、功能（计分、保存到文件、自动完成）\nv1.3\n05/2026\n修复、优化、多个构建版本（full、med、tiny、micro）。首次作为硬拷贝在 VCFSW 2026 发行。\nTinySol 在野外\n以下是一些 TinySol 在外流传的实例。\nTinySol 运行在 Jerry Parker 的 Zenith Heath/Z-110（8088，256KB，CGA）上，在 VCF Southwest 2026 展出。\nhttps://www.jerrylparker.com/blogs/posts/z110.html\n5/30/2026（VCFSW）TinySol 1.3 在 Victoria Crenshaw 装饰华丽的 286 电脑上运行 FreeDOS 时表现出色。从 5.25 英寸 360KB 软盘执行，并支持鼠标，性能优异！\n5/30/2026（VCFSW）TinySol 1.3 运行在 Jerry Parker 精美修复的 Zenith Heath/Z-110 8088 上，仅有 256KB 内存。从 5.25 英寸 360KB 软盘执行。\n5/29/2026 TinySol 1.3 首次以硬拷贝的形式在 2026 年德克萨斯州西南复古电脑节上首次亮相，然后在 6/1/2026 发布供下载。十六份拷贝以 360K、1.2MB、720K 和 1.44MB 软盘分发，配有手绘艺术作品和使用手册，使用我的点阵 Panasonic KX-P1624 和 IBM 5160 打印在复古蓝色连续纸上。\n2024-01-25 一位用户 Joseph 在运行 1.1 版本时发邮件说，\n“你不知道我一直在多么努力地寻找一款仅使用键盘即可操作且每次发 3 张牌的 DOS 克朗代克游戏。”\n他说 VGA 模式在他的 BOOK 8088 上无法工作，但 EGA 可以。为了提高兼容性，TinySol 1.2 切换到彩色 EGA 和 VGA 模式，而不是纯单色。\n2022-10-11\nÓscar Toledo G.（\nnanochess.org\n）在\nYoutube 视频\n中演示了早期的 1.0 版本。Óscar 还帮助识别了一个精灵渲染问题，该问题在他的 VirtualBox for Mac 上出现，但在 VirtualBox for Win/Linux、DosBox、VMWare、Parallels 或真实硬件上未出现。通过在调用 Int 10h 之前清除方向标志解决了此问题。",
+    "comment": [
+        [
+            "相关，Oscar Toledo 还为 IOCCC 制作了一个小型克朗代克纸牌程序，我想知道它是否受到这个的启发：<p><a href=\"https:&#x2F;&#x2F;nanochess.org&#x2F;klondike_in_c.html\" rel=\"nofollow\">https:&#x2F;&#x2F;nanochess.org&#x2F;klondike_in_c.html</a><p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48450024\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48450024</a> - 5k C 语言 curses 克朗代克纸牌游戏 (2026-06-08, 17 条评论)"
+        ],
+        [
+            "嘿，非常棒！我之前为一次 game jam 制作了一款 386+VGA 纸牌游戏 <a href=\"https:&#x2F;&#x2F;horsedrawngames.itch.io&#x2F;solitaire\" rel=\"nofollow\">https:&#x2F;&#x2F;horsedrawngam.es.itch.io&#x2F;solitaire</a>，我一直打算回去进一步优化它，因为它不应该需要 Pentium！"
+        ],
+        [
+            "Late (late.sh) 提供通过 SSH 玩的纸牌游戏（还有扫雷、俄罗斯方块、战棋、象棋……等等）。你会惊讶于许多游戏可以很好地转换为在简单界面上渲染。"
+        ],
+        [
+            "这才是真正的黑客新闻！做得好 :)"
+        ],
+        [
+            "Solitiny :)<p>&gt; 注意：对于 DosBox 用户，DosBox 似乎不支持 AT&amp;T 6300，但其他模式工作正常。<p>我相当确定 DOSBox 支持 Olivetti M24 图形模式。",
+            "至少在 DOSBox-X 上对我有效。"
+        ],
+        [
+            "如果你对无法解决的纸牌游戏感到沮丧，\n我做了一个保证可以解决的版本：<p>看看：<a href=\"https:&#x2F;&#x2F;solitairle.com\" rel=\"nofollow\">https:&#x2F;&#x2F;solitairle.com</a>"
+        ],
+        [
+            "相关，通过 gopher 玩纸牌游戏 <a href=\"https:&#x2F;&#x2F;cosmicrealms.com&#x2F;blog&#x2F;2019&#x2F;06&#x2F;14&#x2F;solitaire-over-gopher\" rel=\"nofollow\">https:&#x2F;&#x2F;cosmicrealms.com&#x2F;blog&#x2F;2019&#x2F;06&#x2F;14&#x2F;solitaire-over-goph...</a>"
+        ],
+        [
+            "那个等离子显示屏看起来很棒，在我看来它比 LCD 更“模拟”。\n这些还在生产吗，还是这是“消亡”的技术？"
+        ],
+        [
+            "不错，虽然我作为纸牌的菜鸟，我希望它有一个一次发一张牌的选项。"
+        ],
+        [
+            "非常好。我们有没有一个可以在浏览器中玩的网站？有几个 wasm dos 模拟器.."
+        ],
+        [
+            "8086 及以上！了不起"
+        ],
+        [
+            "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260808232424&#x2F;https:&#x2F;&#x2F;classicbits.net&#x2F;coding-and-software&#x2F;my-software&#x2F;monosol&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260808232424&#x2F;https:&#x2F;&#x2F;classicbi...</a><p>因为它已经在 HN 上发布过"
+        ],
+        [
+            "似乎不是开源的？"
+        ],
+        [
+            "我喜欢自认为 C 还行，我原以为我可以做自己的纸牌游戏，但只是想弄清楚我应该如何将所有卡片在内存中布局并跟踪所有不同状态，就让我很快放弃了。",
+            "我会先确定所有已知的边界：<p>52 张牌，所以每张牌可以用一个字节表示。<p>卡片排列为 4 堆每堆最多 13 张，7 列每列最多 13 张，以及一堆最多 24 张剩余牌。（你不需要两堆剩余牌。）<p>那是 167（4 * 13 + 7 * 13 + 24）字节用于卡片，12 字节用于存储长度，1 字节用于存储剩余牌堆中的当前索引。这是一组固定长度的字节数组和固定数量的字节来跟踪长度和一个索引。",
+            "&gt; 7 列每列最多 13 张牌，<p>不完全是。最右边的一个最初有 6 张盖着的牌和 1 张可以放置国王的揭示的牌，所以你可以再在上面放 12 张牌，总共 6+13 = 19 张牌。所以我会为每列创建 7 个数组，每个数组 20 张牌，为了安全起见。或者也可以为每个桌面位置使用 52 长度的数组，这也是一个选择。<p>&gt; 以及一堆最多 24 张剩余牌。（你不需要两堆剩余牌。）<p>嗯。没错，但我可能仍然会使用两个数组/间隙缓冲区而不是带有索引的单个数组。<p>&gt; 12 字节用于存储长度，<p>嗯，你可以保留一个零作为“无卡”值并使用 NUL 终止；卡片的等级从 1（A）开始。<p>另外，别忘了跟踪卡牌的方向：有些正面朝下，有些正面朝上。我通常使用负数来表示正面朝下的卡片 :) <p>总之，整个游戏状态可以放入任何具有板上缓存的处理器的 L1 缓存中，这就是为什么纸牌游戏几乎出现在所有电脑上。",
+            "我认为这取决于纸牌的类型。<p>我觉得克朗代克应该足够简单，使用一组向量/数组/列表，最重要的是确保你的遍历逻辑正确。[0]<p>[0] - 我的意思是，这里有一个 VB.NET 的例子，其中很多游戏逻辑是 FBOW 集成到表单逻辑中的，但它显然是 NET8！<a href=\"https:&#x2F;&#x2F;github.com&#x2F;DualBrain&#x2F;Solitaire&#x2F;blob&#x2F;master&#x2F;Solitaire&#x2F;GameForm.vb\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;DualBrain&#x2F;Solitaire&#x2F;blob&#x2F;master&#x2F;Solitaire...</a>"
+        ],
+        [
+            "干得好"
+        ]
+    ]
+}

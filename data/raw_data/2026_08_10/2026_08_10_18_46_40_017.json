@@ -1,0 +1,87 @@
+{
+    "item_id": 49224020,
+    "title": "TinySol, a tiny solitaire game for DOS",
+    "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+    "text": "TinySol (formerly MonoSol) is a free tiny Klondike Solitaire game designed for good playability on vintage computers, especially those with monochrome screens.\nTinySol in 640×400 mode on the GRiDCase gas-plasma display.\nDownload TinySol v1.3\n(5/25/2026)\nDownload 640 winnable savegame files\n(5/25/2026)\nUpon launch the game begins and instructions are displayed until the first input is made.\nFeatures\nFits anywhere (only 3KB)\nRuns on any PC (8086 and up)\nRuns on any graphics\n(CGA, AT&T, EGA, VGA)\nChange video modes on the fly\nPlay with keyboard or mouse\nIn-Game state Save/Restore (undo)\nSave/Load game to disk\nAuto-finish game when possible\nScoring (Microsoft style, sans timer)\nCompatibility\nTinySol should run on most DOS computers.  It has been tested on the following.\nReal Hardware 8088, 640KB, CGA, MS-DOS 3.30 (IBM 5150)\nReal Hardware 286, 640KB, CGA/ATT, MS-DOS 3.30 (GRiDCase 1520)\nReal Hardware Pentium 233, MS-DOS 6.22, VGA\nEmulation 8086, 64KB RAM, MS-DOS 2.0, CGA\nEmulation DosBox (primary testing during development)\nSupported Video Modes\nName\nINT 10h mode\nResolution\nKey\nCGA\n06h\n640x200x2\nF1\nAT&T 6300\n40h\n640x400x2\nF2\nEGA\n10h\n640x350x16\nF3\nVGA\n12h\n640x480x16\nF4\nThe video mode should be automatically detected except for 640×400 AT&T 6300 mode which will be automatically selected only for some GRiD computers. Modes can be switched on the fly using the F1-F4 keys.\nNOTE: For DosBox users, DosBox doesn’t seem to support AT&T 6300 but the other modes work fine.\nNOTE: CuteMouse, a popular DOS mouse driver, doesn’t seem to support the AT&T 6300 video mode.  The mouse functions but the cursor is not visible so I tested using the Microsoft Mouse driver v6.   DosBox doesn’t require a mouse driver (it’s integrated).\nTinySol was written in x86 Assembly in early 2022, assembled with NASM, and was my first attempt at writing a tiny game.  The goal was a game that would look sharp in 640x400x2 mode on GRiD gas-plasma displays yet also be small enough to include in ROMs without much consequence.\nNOTE:\n640x400x2 mode is referenced by many different names.  AT&T 6300, Olivetti M24, Compaq Portable III, Doublescan CGA, and more.\nKeyboard Controls\n(tinysol.com or tinysolm.com)\n1-7\nTableau piles\nA-D\nFoundation piles\n8/Space\nDeck pile, deal 3 cards\n9/Enter\nDraw pile, select card\nTab\nAuto-send selected card to a foundation pile\nUp/Down\nModify card selection within a pile\n+/-\nSave/Restore game state\nf\nAuto-Finish, sends all cards home if possible\nn\nNew game\nx\nExit\ns\nSave current game to file named ‘save’\nF1-F4\nChange video mode (CGA, AT&T 6300, EGA, VGA)\nMouse Controls\n(tinysolm.com supports mouse)\nLeft Click\nSelect piles (source or destination)\nRight Click\nAuto-send selected card to a foundation pile\nClick the N\nNew game\nClick the X\nExit\nVersion History\nv1.0\n03/2022\nInitial release\nv1.1\n11/2022\nfixes, optimizations, performance, features (added ending screen)\nv1.2\n05/2024\nfixes, optimizations, features (scoring, save to file, auto-finish)\nv1.3\n05/2026\nfixes, optimizations, multiple builds (full, med, tiny, micro).  First distributed as hard copies at VCFSW 2026.\nTinySol in the Wild\nHere are some instances of TinySol out and about.\nTinySol on Jerry Parker’s Zenith Heath/Z-110 (8088, 256KB, CGA) at VCF Southwest 2026.\nhttps://www.jerrylparker.com/blogs/posts/z110.html\n5/30/2026 (VCFSW) TinySol 1.3 ran wonderfully on Victoria Crenshaw’s decked out 286 running FreeDOS.  Executed from a 5.25″ 360KB floppy and with mouse support it performed great!\n5/30/2026 (VCFSW) TinySol 1.3 ran on Jerry Parker’s beautifully restored Zenith Heath/Z-110 8088 with only 256KB of memory.  Executed from a 5.25″ 360KB floppy.\n5/29/2026 TinySol 1.3 first premiered as hard copies at the Vintage Computer Festival Southwest 2026 in Texas before being published for download on 6/1/2026.  Sixteen copies were distributed on 360K, 1.2MB, 720K, and 1.44MB diskettes with hand drawn artwork and user’s manuals printed on vintage blue bar tractor feed paper using my dot matrix Panasonic KX-P1624 and IBM 5160.\n2024-01-25 A user, Joseph, running version 1.1 emailed saying,\n“You have no idea how hard I have been looking for a DOS Klondike game that works with just the keyboard and draws 3 cards at a time.”\nHe said VGA mode didn’t work on his BOOK 8088 but EGA does.  For improved compatibility TinySol 1.2 switched to color EGA and VGA modes instead of pure monochrome.\n2022-10-11\nÓscar Toledo G. (\nnanochess.org\n) demo’d an early version 1.0 in a\nYoutube video\n.  Óscar also helped identify a sprite rendering issue that manifested on his VirtualBox for Mac but not VirtualBox for Win/Linux, DosBox, VMWare, Parallels, or real hardware.  It was resolved by clearing the direction flag before calling Int 10h.",
+    "comment": [
+        {
+            "text": "Related, Oscar Toledo also made a tiny Klondike Solitaire program for IOCCC, I wonder if it was inspired by this one:<p><a href=\"https:&#x2F;&#x2F;nanochess.org&#x2F;klondike_in_c.html\" rel=\"nofollow\">https:&#x2F;&#x2F;nanochess.org&#x2F;klondike_in_c.html</a><p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48450024\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48450024</a> - Klondike Solitaire game for curses in 5k of C (2026-06-08, 17 comments)",
+            "comment": []
+        },
+        {
+            "text": "Hey very nice! I made a 386+VGA Solitaire game a while back for a game jam <a href=\"https:&#x2F;&#x2F;horsedrawngames.itch.io&#x2F;solitaire\" rel=\"nofollow\">https:&#x2F;&#x2F;horsedrawngames.itch.io&#x2F;solitaire</a> I always meant to go back and optimise it more because it shouldn’t require a Pentium!",
+            "comment": []
+        },
+        {
+            "text": "Late (late.sh) has solitaire available to play over SSH (along with minesweeper, tetris, battleships, chess... and many more). You&#x27;d be surprised at how well a lot of games translate just fine to being rendered on a simple interface.",
+            "comment": []
+        },
+        {
+            "text": "This is real hacker news! Well done :)",
+            "comment": []
+        },
+        {
+            "text": "Solitiny :)<p>&gt; NOTE: For DosBox users, DosBox doesn’t seem to support AT&amp;T 6300 but the other modes work fine.<p>I&#x27;m pretty sure DOSBox supports the Olivetti M24 graphics mode.",
+            "comment": [
+                {
+                    "text": "Works for me in DOSBox-X atleast.",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "If you are frustrated by impossible to solve Solitaire games,\nI made a version that is guaranteed solveable:<p>Check it out: <a href=\"https:&#x2F;&#x2F;solitairle.com\" rel=\"nofollow\">https:&#x2F;&#x2F;solitairle.com</a>",
+            "comment": []
+        },
+        {
+            "text": "Related, play Solitaire over gopher <a href=\"https:&#x2F;&#x2F;cosmicrealms.com&#x2F;blog&#x2F;2019&#x2F;06&#x2F;14&#x2F;solitaire-over-gopher\" rel=\"nofollow\">https:&#x2F;&#x2F;cosmicrealms.com&#x2F;blog&#x2F;2019&#x2F;06&#x2F;14&#x2F;solitaire-over-goph...</a>",
+            "comment": []
+        },
+        {
+            "text": "That gas-plasma display looks gorgeous, it looks more &quot;analogue&quot; than lcd to me.\nAre these still produced or is this &quot;dead&quot; technology?",
+            "comment": []
+        },
+        {
+            "text": "Nice, though being a peasant at solitaire i wish it had an option to deal 1 card at a time.",
+            "comment": []
+        },
+        {
+            "text": "Very nice.  How about site where we can play it in the browser?  There are several wasm dos simulators..",
+            "comment": []
+        },
+        {
+            "text": "8086 and up! Amazing",
+            "comment": []
+        },
+        {
+            "text": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260808232424&#x2F;https:&#x2F;&#x2F;classicbits.net&#x2F;coding-and-software&#x2F;my-software&#x2F;monosol&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260808232424&#x2F;https:&#x2F;&#x2F;classicbi...</a><p>As its been HN&#x27;ed",
+            "comment": []
+        },
+        {
+            "text": "Not open source apparently?",
+            "comment": []
+        },
+        {
+            "text": "I like to think I&#x27;m decent with C, and I thought I would be able to make my own solitaire, but just trying to wrap my head around how in the world I was supposed to lay out all the cards in memory and keep track of all the different states had me giving up pretty quickly.",
+            "comment": [
+                {
+                    "text": "I&#x27;d start by identifying all the known boundaries:<p>52 cards, so each card can be represented by a byte.<p>Cards are arranged into 4 stacks of up to 13 cards each, 7 columns of up to 13 cards each, and a pile of up to 24 remaining cards. (You don&#x27;t need two piles of remaining cards.)<p>That&#x27;s 167 (4 * 13 + 7 * 13 + 24) bytes for the cards, 12 bytes to store lengths, and 1 byte to store the current index in the pile of remaining cards. It&#x27;s a fixed number of fixed-length byte arrays and a fixed number of bytes to track lengths and one index.",
+                    "comment": [
+                        {
+                            "text": "&gt; 7 columns of up to 13 cards each,<p>Not quite. The rightmost one initially has 6 closed cards and 1 revealed card which can be a king, so you can put 12 more cards on top of it, for a total of 6+13 = 19 cards. So I&#x27;d make 7 arrays for 20 cards each, just to be safe. Or just use 52-long arrays for every table slot, that too is an option.<p>&gt; and a pile of up to 24 remaining cards. (You don&#x27;t need two piles of remaining cards.)<p>Hm. True, but I&#x27;d still probably use two arrays&#x2F;gap buffer instead of a single array with an index into it.<p>&gt; 12 bytes to store lengths,<p>Eh, you can reserve a zero to be a &quot;no card here&quot; value and use NUL-termination instead; the card ranks start up from 1 (the ace) anyhow.<p>Also, don&#x27;t forget to track card orientations: some of them are face down, some of them are face up. I usually do it by using the negative numbers for the cards face down :)<p>All in all, the whole game state fits into a L1 cache of any processor that even has an on-board cache, which is why card games has been around on pretty much every computer ever made.",
+                            "comment": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Probably depends on the kind of solitaire IMO.<p>I feel like Klondike, -should- be simple enough with a set of vectors&#x2F;arrays&#x2F;lists, the biggest thing is making sure you have the traversal logic right. [0]<p>[0] - I mean, here&#x27;s an example in VB.NET, where a lot of the game logic is FBOW integrated into the form logic, but hey it apparently is NET8! <a href=\"https:&#x2F;&#x2F;github.com&#x2F;DualBrain&#x2F;Solitaire&#x2F;blob&#x2F;master&#x2F;Solitaire&#x2F;GameForm.vb\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;DualBrain&#x2F;Solitaire&#x2F;blob&#x2F;master&#x2F;Solitaire...</a>",
+                    "comment": []
+                }
+            ]
+        },
+        {
+            "text": "Good work",
+            "comment": []
+        }
+    ]
+}
