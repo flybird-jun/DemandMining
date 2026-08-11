@@ -1,18 +1,17 @@
-import logging
+
 import asyncio
 import json
 from collector.extract.hacker_news_collector import HackerNewsCollector
 from storage.storage import storage
+from util import logger
+
 async def run():
     # 初始化日志
-    logging.basicConfig(
-        filename="log/run.log",
-        level = logging.WARNING,
-        format="%(asctime)s.%(msecs)03d | [%(levelname)s] | %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-        encoding = "utf-8")
+    
     with open("src/config/config.json", "r", encoding="utf-8") as fd:
         config = json.load(fd)
+
+    logger.log_init(config["log_path"])
 
     collector = HackerNewsCollector()
     await collector.init()

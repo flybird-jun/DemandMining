@@ -1,5 +1,6 @@
 {
     "ai_api_url": "",
     "ai_api_key": "",
-    "raw_data_path":""
+    "raw_data_path":"",
+    "log_path":""
 }

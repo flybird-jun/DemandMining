@@ -1,13 +1,3 @@
-"""大模型分析模块 (基于 openai 官方 SDK)。
-
-通过 base_url 切换 provider (OpenAI / DeepSeek / 通义千问 / 自建网关等都吃
-OpenAI 兼容协议)。prompt 模板从 analyzer/prompt/ 目录加载。
-
-接口:
-    llm = LLM(api_url, api_key)
-    text = await llm.article_parse(article)
-    summary = await llm.article_aggregation_parse(articles)
-"""
 from __future__ import annotations
 
 import logging
@@ -16,7 +6,7 @@ from typing import Any
 
 from openai import AsyncOpenAI
 from openai import APIError, APIConnectionError, RateLimitError
-
+import asyncio
 
 _PROMPT_DIR = Path(__file__).resolve().parent / "prompt"
 _ARTICLE_PROMPT_PATH = _PROMPT_DIR / "article.prompt"
@@ -55,14 +45,18 @@ class AiClient:
         return path.read_text(encoding="utf-8")
 
     async def _chat(self, prompt: str, entry:str) -> str:
-        try:
-            resp = await self._client.responses.create(
-                model="MiniMax-M3",
-                input=[{"role": "user", "content": entry}],
-                instructions = prompt,
-                temperature=0.2,
-            )
-        except (APIError, APIConnectionError, RateLimitError) as exc:
-            logger.error("LLM call failed: %s", exc)
-            raise
-        return resp.output_text
+        while True:
+            try:
+                resp = await self._client.responses.create(
+                    model="MiniMax-M3",
+                    input=[{"role": "user", "content": entry}],
+                    instructions = prompt,
+                    temperature=0.2,
+                )
+            except RateLimitError as e:
+                await asyncio.sleep(10)
+            except (APIError, APIConnectionError) as exc:
+                logger.error("LLM call failed: %s", exc)
+                raise
+            else:
+                return resp.output_text
