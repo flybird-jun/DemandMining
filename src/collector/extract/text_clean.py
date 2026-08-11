@@ -45,3 +45,7 @@ class TextClean:
         text = re.sub(r"\n{3,}", "\n\n", text)
         text = re.sub(r"[ \t]+", " ", text)
         return text.strip()
+# text
+#         .replace("\u00a0", " ")
+#         .replace("\u200b", "")
+#         .strip()

@@ -16,3 +16,17 @@ reddit/youtube
 需求趋势
 
 当前只支持普通帖子, 后面需要开发所有
+
+Demandmining/
+    |
+    |__ src/
+         |
+         |____ analyzer/
+         |
+         |____ api/
+    |
+    |__ test/
+         |
+         |___ analyzer/
+         |
+         |___ api/

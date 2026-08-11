@@ -90,3 +90,8 @@ print(div) # <div id="article">正文</div>
 
 # Path
 prompt = self._article_agg_prompt.format(articles=joined)
+
+# 进入项目环境
+source .venv/bin/activate
+pip list 查看安装包
+deactivate 退出项目环境

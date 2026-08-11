@@ -1,35 +1,31 @@
-"""冒烟测试: 调用 TextClean.extract_article 并打印结果。"""
-import sys
+from collector.extract.hacker_news_collector import HackerNewsCollector
+#import trafilatura
+import asyncio
+import signal
+import json
 from pathlib import Path
+def dump_tasks(sig, frame):
+    print("\n========== asyncio tasks ==========")
+    for task in asyncio.all_tasks():
+        print("\nTASK:", task)
+        task.print_stack()
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+async def main() -> None:
+    collector = HackerNewsCollector(2)
+    await collector.init()
 
-from collector.extract.text_clean import TextClean
+    await collector._queue.put(49241679)
+    await collector._queue.put(HackerNewsCollector.INVALID_ITEM_ID)
+    item_queue = asyncio.Queue(1)
+    await collector.producer_item(item_queue)
+    item_json = await item_queue.get()
 
+    path = Path(__file__).resolve().parent / "article.md"
+    path.write_text(json.dumps(item_json, ensure_ascii=False, indent = 4), encoding = "utf-8")
+    print(item_json)
 
-def main() -> None:
-    samples = {
-        "article": (
-            "<html><body>"
-            "<nav>nav noise</nav>"
-            "<article><p>Hello world</p><p>Second paragraph</p></article>"
-            "<aside>aside noise</aside>"
-            "</body></html>"
-        ),
-        "main": (
-            "<html><body><main>"
-            "Just a <script>var a=1</script> test."
-            "</main></body></html>"
-        ),
-        "body_fallback": (
-            "<html><body>just body content here</body></html>"
-        ),
-    }
-    for name, html in samples.items():
-        print(f"=== TextClean.extract_article ({name}) ===")
-        out = TextClean.extract_article(html)
-        print(repr(out))
-
+    await collector.destroy()
 
 if __name__ == "__main__":
-    main()
+    signal.signal(signal.SIGUSR1, dump_tasks)
+    asyncio.run(main())
