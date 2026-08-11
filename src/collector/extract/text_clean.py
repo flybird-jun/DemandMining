@@ -1,51 +1,65 @@
-"""HTML / 文本清洗: 把原始 HTML 转换成主要正文文本。
-
-对外暴露 TextClean.extract_article, 是纯函数 (无状态), 适合在协程外反复调用。
-"""
 from __future__ import annotations
-
+import trafilatura
+import unicodedata
 import re
-from typing import ClassVar
-
-from bs4 import BeautifulSoup
-
-
+from html import unescape
+import logging
+logger = logging.getLogger(__name__)
 class TextClean:
-    """静态文本清洗工具集。"""
-
-    NOISE_TAGS: ClassVar[tuple[str, ...]] = (
-        "script",
-        "style",
-        "noscript",
-        "nav",
-        "footer",
-        "header",
-        "aside",
-    )
+    URL_PATTERN = re.compile(r"https?://\S+|www\.\S+", re.I)
+    SPACE_PATTERN = re.compile(r"[ \t]+")
+    NEWLINE_PATTERN = re.compile(r"\n{3,}")
 
     @staticmethod
     def extract_article(html: str) -> str:
-        """从 HTML 提取主文本, 优先取 <article>/<main>, 否则 body / 全文。"""
-        soup = BeautifulSoup(html, "html.parser")
-        for tag in soup(TextClean.NOISE_TAGS):
-            tag.decompose()
+        
+        print(f"原文:\n {html}")
 
-        main = soup.find("article") or soup.find("main")
-        if main:
-            return TextClean._normalize(main.get_text(separator="\n", strip=True))
-
-        body = soup.find("body")
-        if body:
-            return TextClean._normalize(body.get_text(separator="\n", strip=True))
-
-        return TextClean._normalize(soup.get_text(separator="\n", strip=True))
+        # 抽取文章主体
+        text = trafilatura.extract(
+            html,
+            include_comments = False,
+            include_tables = True,
+            output_format = "txt",
+            favor_precision = True
+        )
+        if text is None:
+            logger.info(f"原文:{html}, 但是没抽取到文章主体")
+            return ""
+        # Unicode标准化, 将不同编码的相同字符统一用一种编码表示
+        text = unicodedata.normalize("NFKC",text)
+        # html的转义字符，比如&lt 转换为正常的符号
+        text = unescape(text)
+        # 删除不可见字符
+        text = TextClean._clean_invisible_chars(text)
+        # # 删除不可见的控制字符，避免文本中混入无法显示或影响处理的字符。比如\x1b, \x00, \x07
+        # text = cls.CONTROL_PATTERN.sub("", text)
+        # 处理文本中的 URL。url本身没有意义，统一使用字母URL代替
+        text = TextClean.URL_PATTERN.sub("[URL]",text)
+        # 把连续空格、tab 统一。
+        text = TextClean.SPACE_PATTERN.sub(" ", text)
+        # 控制连续空行数量。
+        text = TextClean.NEWLINE_PATTERN.sub("\n\n",text)
+        
+        return text.strip()
+    import unicodedata
 
     @staticmethod
-    def _normalize(text: str) -> str:
-        text = re.sub(r"\n{3,}", "\n\n", text)
-        text = re.sub(r"[ \t]+", " ", text)
-        return text.strip()
-# text
-#         .replace("\u00a0", " ")
-#         .replace("\u200b", "")
-#         .strip()
+    def _clean_invisible_chars(text: str) -> str:
+        result = []
+        for ch in text:
+            category = unicodedata.category(ch)
+            if category == "Cc":
+                if ch in "\n\t":
+                    result.append(ch)
+                continue
+            # Unicode格式字符
+            if category == "Cf":
+                continue
+            # 不换行空格
+            if ch == "\u00a0":
+                result.append(" ")
+                continue
+            result.append(ch)
+
+        return "".join(result)
