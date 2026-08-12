@@ -19,7 +19,7 @@ async def main() -> None:
     item_queue = asyncio.Queue(1)
     await collector.producer_item(item_queue)
     item_json = await item_queue.get()
-
+    print(type(item_json))
     path = Path(__file__).resolve().parent / "article.md"
     path.write_text(json.dumps(item_json, ensure_ascii=False, indent = 4), encoding = "utf-8")
     print(item_json)
