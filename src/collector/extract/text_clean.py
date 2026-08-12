@@ -24,7 +24,6 @@ class TextClean:
     
     @staticmethod
     def clean_article(html: str) -> str:
-        print(f"原文:\n {html}")
         # 抽取文章主体
         text = trafilatura.extract(
             html,

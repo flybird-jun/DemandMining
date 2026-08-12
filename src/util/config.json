@@ -1,0 +1,6 @@
+{
+    "ai_api_url": "https://api.minimaxi.com/v1",
+    "ai_api_key": "sk-cp-vM48Jh7sp84cGaAi3ltZn82VTyAJ23LEU6F3fu7K3zWhksjt6JuJbCBnz8vyEc-Uxdmruuo4lUsLX0Ndu6Ho3VM15JjJqmGonGSPgY5FS25YOcCNeea51Jo",
+    "raw_data_path": "/root/DemandMining/data/raw_data",
+    "log_path":"/root/DemandMining/log/"
+}

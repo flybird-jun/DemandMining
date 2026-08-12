@@ -3,7 +3,7 @@ import asyncio
 import json
 from collector.extract.hacker_news_collector import HackerNewsCollector
 from storage.storage import storage
-from util import logger
+from util import util
 
 async def run():
     # 初始化日志
@@ -11,7 +11,7 @@ async def run():
     with open("src/config/config.json", "r", encoding="utf-8") as fd:
         config = json.load(fd)
 
-    logger.log_init(config["log_path"])
+    util.log_init(config["log_path"])
 
     collector = HackerNewsCollector()
     await collector.init()
