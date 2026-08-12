@@ -95,3 +95,7 @@ prompt = self._article_agg_prompt.format(articles=joined)
 source .venv/bin/activate
 pip list 查看安装包
 deactivate 退出项目环境
+
+1. 是prompt问题还是模型能力问题？
+2. 哪条指令不够明确？
+3. 如何修改prompt？

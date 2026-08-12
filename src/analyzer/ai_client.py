@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import logging
 from pathlib import Path
 from typing import Any
 
@@ -8,11 +7,13 @@ from openai import AsyncOpenAI
 from openai import APIError, APIConnectionError, RateLimitError
 import asyncio
 
+from util import util
+
 _PROMPT_DIR = Path(__file__).resolve().parent / "prompt"
 _ARTICLE_PROMPT_PATH = _PROMPT_DIR / "article.prompt"
 _ARTICLE_AGG_PROMPT_PATH = _PROMPT_DIR / "article_aggregation.prompt"
 
-logger = logging.getLogger(__name__)
+logger = util.logger
 
 
 class AiClient:
@@ -51,7 +52,7 @@ class AiClient:
                     model="MiniMax-M3",
                     input=[{"role": "user", "content": entry}],
                     instructions = prompt,
-                    temperature=0.2,
+                    temperature=0.1,
                 )
             except RateLimitError as e:
                 await asyncio.sleep(10)

@@ -4,8 +4,8 @@ import unicodedata
 import re
 from html import unescape
 from bs4 import BeautifulSoup
-import logging
-logger = logging.getLogger(__name__)
+from util import util
+logger = util.logger
 class TextClean:
     URL_PATTERN = re.compile(r"https?://\S+|www\.\S+", re.I)
     SPACE_PATTERN = re.compile(r"[ \t]+")

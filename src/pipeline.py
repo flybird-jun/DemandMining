@@ -1,18 +1,11 @@
 
 import asyncio
-import json
 from collector.extract.hacker_news_collector import HackerNewsCollector
 from storage.storage import storage
 from util import util
 
 async def run():
-    # 初始化日志
-    
-    with open("src/config/config.json", "r", encoding="utf-8") as fd:
-        config = json.load(fd)
-
-    util.log_init(config["log_path"])
-
+    # util 导入即完成日志初始化和 config 加载
     collector = HackerNewsCollector()
     await collector.init()
 
@@ -23,7 +16,7 @@ async def run():
     item_producers_count = 20
     item_producers = [asyncio.create_task(collector.producer_item(item_queue)) for i in range(item_producers_count)]
 
-    storage_ = storage(config["raw_data_path"])
+    storage_ = storage(util.config["raw_data_path"])
 
     storage_customer_count = 4
     item_customers = [asyncio.create_task(storage_.save_article(item_queue)) for i in range(storage_customer_count)]

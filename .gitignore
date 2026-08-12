@@ -1,3 +1,4 @@
 src/config/config.json
 __pycache__
 .venv
+demand.egg-info/

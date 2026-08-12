@@ -13,8 +13,8 @@ from collector.api.hacker_news_api import HackerNewsApi
 from collector.collector import Collector
 from collector.extract.text_clean import TextClean
 from collector.net.crawl import Crawl
-import logging
-logger = logging.getLogger(__name__)
+from util import util
+logger = util.logger
 
 class HackerNewsCollector(Collector):
     ITEM_ID_QSIZE = 50
