@@ -3,18 +3,28 @@ import trafilatura
 import unicodedata
 import re
 from html import unescape
+from bs4 import BeautifulSoup
 import logging
 logger = logging.getLogger(__name__)
 class TextClean:
     URL_PATTERN = re.compile(r"https?://\S+|www\.\S+", re.I)
     SPACE_PATTERN = re.compile(r"[ \t]+")
     NEWLINE_PATTERN = re.compile(r"\n{3,}")
-
     @staticmethod
-    def extract_article(html: str) -> str:
-        
-        print(f"原文:\n {html}")
+    def clean_comment(comment:str) -> str:
+        soup = BeautifulSoup(
+            comment,
+            "html.parser",
+        )
+        # <p> 和 <br> 表示文本结构上的换行
+        for tag in soup.find_all(["p", "br"]):
+            tag.insert_before("\n")
 
+        return TextClean._normalize_text(soup.get_text())
+    
+    @staticmethod
+    def clean_article(html: str) -> str:
+        print(f"原文:\n {html}")
         # 抽取文章主体
         text = trafilatura.extract(
             html,
@@ -26,14 +36,15 @@ class TextClean:
         if text is None:
             logger.info(f"原文:{html}, 但是没抽取到文章主体")
             return ""
-        # Unicode标准化, 将不同编码的相同字符统一用一种编码表示
+        
+        return TextClean._normalize_text(text)
+    @staticmethod
+    def _normalize_text(text:str) -> str:
         text = unicodedata.normalize("NFKC",text)
         # html的转义字符，比如&lt 转换为正常的符号
         text = unescape(text)
         # 删除不可见字符
         text = TextClean._clean_invisible_chars(text)
-        # # 删除不可见的控制字符，避免文本中混入无法显示或影响处理的字符。比如\x1b, \x00, \x07
-        # text = cls.CONTROL_PATTERN.sub("", text)
         # 处理文本中的 URL。url本身没有意义，统一使用字母URL代替
         text = TextClean.URL_PATTERN.sub("[URL]",text)
         # 把连续空格、tab 统一。
@@ -42,8 +53,6 @@ class TextClean:
         text = TextClean.NEWLINE_PATTERN.sub("\n\n",text)
         
         return text.strip()
-    import unicodedata
-
     @staticmethod
     def _clean_invisible_chars(text: str) -> str:
         result = []

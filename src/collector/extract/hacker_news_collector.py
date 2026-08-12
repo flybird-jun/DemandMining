@@ -69,16 +69,18 @@ class HackerNewsCollector(Collector):
         except Exception:
             logger.info(f"_get_article:get {url} fail")
             return ""
-        return TextClean.extract_article(html)
+        return TextClean.clean_article(html)
 
     async def _recursive_get_comment_list(self, kids: list) -> list:
         out: list[dict] = []
         for kid in kids:
             kid_json = await HackerNewsApi.get_item(self._session, kid)
             if not kid_json:
+                logger.info(f"comment item_id = {kid} is not json")
                 continue
+            text = TextClean.clean_comment(kid_json.get("text", ""))
             out.append({
-                "text": kid_json.get("text", ""),
+                "text": text,
                 "comment": await self._recursive_get_comment_list(
                     kid_json.get("kids", [])
                 ) if kid_json.get("kids") else [],
