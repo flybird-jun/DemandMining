@@ -29,11 +29,12 @@ class HackerNewsCollector(Collector):
     
     @staticmethod
     def get_text(item:dict) -> str:
-        return item["text"]
+        return "title:" + item["title"] + "\n" + item["text"]
     
     @staticmethod
     def _recursive_add_comment(comment_item:dict, comment:list):
-        comment.append(comment_item["text"])
+        if comment_item["text"] != "" and comment_item["text"] != "[dead]":
+            comment.append(comment_item["text"])
         for sub_comment in comment_item["comment"]:
             HackerNewsCollector._recursive_add_comment(sub_comment, comment)
 

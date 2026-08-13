@@ -40,7 +40,7 @@ async def main() -> None:
     print()
     print("=== article_parse ===")
     try:
-        out = await llm.article_parse(sample)
+        out = await llm.extract_comments(sample)
         print(out)
     except Exception as e:
         print("article_parse 失败:", repr(e))

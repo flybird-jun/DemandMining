@@ -10,7 +10,13 @@ def main() -> None:
         input = json.load(fd)
     body = HackerNewsCollector.get_text(input)
     comments = HackerNewsCollector.get_comments(input)
-    print(f"body is:\n{body}\n")
-    print(f"comments is:\n{comments}\n")
+    # print(f"body is:\n{body}\n")
+    # print(f"comments is:\n{comments}\n")
+    sum = 0
+    for sub in comments:
+        sum += len(sub)
+    (dir / "body.txt").write_text(body)
+    (dir / "comments.txt").write_text(f"{comments}")
+    print(sum)
 if __name__ == "__main__":
     main()
