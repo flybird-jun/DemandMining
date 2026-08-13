@@ -16,10 +16,10 @@ async def run():
     item_producers_count = 20
     item_producers = [asyncio.create_task(collector.producer_item(item_queue)) for i in range(item_producers_count)]
 
-    storage_ = storage(util.config["raw_data_path"])
+    dbms = storage(util.config["raw_data_path"])
 
     storage_customer_count = 4
-    item_customers = [asyncio.create_task(storage_.save_article(item_queue)) for i in range(storage_customer_count)]
+    item_customers = [asyncio.create_task(dbms.save_article(item_queue)) for i in range(storage_customer_count)]
 
     await asyncio.gather(ids_producer, *item_producers)
     # item生产完毕, 设置终结

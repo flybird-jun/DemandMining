@@ -26,6 +26,26 @@ class HackerNewsCollector(Collector):
 
     async def init(self) -> None:
         self._session = aiohttp.ClientSession()
+    
+    @staticmethod
+    def get_text(item:dict) -> str:
+        return item["text"]
+    
+    @staticmethod
+    def _recursive_add_comment(comment_item:dict, comment:list):
+        comment.append(comment_item["text"])
+        for sub_comment in comment_item["comment"]:
+            HackerNewsCollector._recursive_add_comment(sub_comment, comment)
+
+    @staticmethod 
+    def get_comments(item:dict) -> list[list[str]]:
+        comments = []
+        for sub_comment in item["comment"]:
+            comment:list = []
+            HackerNewsCollector._recursive_add_comment(sub_comment, comment)
+            comments.append(comment)
+        return comments
+
     async def destroy(self) -> None:
         await self._session.close()
 

@@ -1,0 +1,90 @@
+{
+  "topic": "本地可运行的开源大模型与代理工作流",
+  "signals": [
+    {
+      "type": "problem",
+      "description": "用户在使用本地大模型时，单次跑分以外的编程调试场景下模型容易陷入循环推理，浪费token且无法完成任务",
+      "category": "提高效率",
+      "according": "comment_in_top_thread: 用户反馈Qwen等模型会反复在think里转圈，进入无限循环，迫使用户自己写proxy去截断思考长度",
+      "strength": "strong"
+    },
+    {
+      "type": "complaint",
+      "description": "用户对云端闭源LLM API服务的不透明变更和不公平计费强烈不满，包括限速变动、暗中切换模型、注入隐藏prompt以增加token消耗等行为",
+      "category": "安全可靠",
+      "according": "comment_in_top_thread: 用户列举了多家主流云厂商暗中替换模型、夜间静默切换低质量模式、悄悄注入额外prompt等行为，并表达对这种不透明的强烈不满",
+      "strength": "strong"
+    },
+    {
+      "type": "problem",
+      "description": "本地模型在长上下文场景下KV Cache不足，导致多agent并行场景首token生成延迟严重",
+      "category": "提高效率",
+      "according": "comment_in_top_thread: 用户表示运行TTRPG多agent系统时，无法保持足够的并行KV cache，超过2个NPC时TTFT显著变长",
+      "strength": "medium"
+    },
+    {
+      "type": "workaround",
+      "description": "用户自行编写代理脚本截断Qwen模型的过度思考，并配合外部大模型判断何时结束思考，以解决模型陷入循环的问题",
+      "category": "自动化",
+      "according": "comment_in_top_thread: 用户描述自己写了A3B proxy，在thinking达到2K token时注入提示语终止思考循环，必要时调用DSV4辅助判断",
+      "strength": "strong"
+    },
+    {
+      "type": "workaround",
+      "description": "用户搭建24/7本地大模型循环系统，持续处理个人日程、邮件、日历和会议提醒，需要自行构建数据库和时间线系统来解决上下文压缩问题",
+      "category": "自动化",
+      "according": "comment_in_top_thread: 用户描述自己花6个月搭建always-on本地agent系统，需要自建数据库软件记录和标注数字信息，按时间分辨率梯度供模型调用",
+      "strength": "strong"
+    },
+    {
+      "type": "complaint",
+      "description": "用户认为云端LLM API的边际成本并不比本地硬件低，但缺乏对模型行为和数据的掌控",
+      "category": "降低成本",
+      "according": "comment_in_top_thread: 用户指出本地运行相比API并非显著昂贵，但用户对把全部上下文上传给API厂商存在强烈隐私顾虑",
+      "strength": "medium"
+    },
+    {
+      "type": "missing_solution",
+      "description": "用户希望存在一种简单、轻量的本地代理harness，配合较小的本地模型就能完成长时运行的agent任务",
+      "category": "自动化",
+      "according": "comment_in_top_thread: 用户在讨论TTRPG场景时表达找不到现成的多agent本地编排工具，最终自己手写C# LLM库解决",
+      "strength": "medium"
+    },
+    {
+      "type": "complaint",
+      "description": "用户对当下家用GPU和内存价格上涨导致运行本地LLM的硬件门槛过高表示不满",
+      "category": "降低成本",
+      "according": "comment_in_top_thread: 用户抱怨M5 Max MacBook Pro和64GB Mac mini价格远超4000欧元，认为硬件价格被AI需求扭曲",
+      "strength": "medium"
+    },
+    {
+      "type": "missing_solution",
+      "description": "用户希望市场提供针对48GB双GPU或显存上限的中等尺寸（约45B）密集模型，目前产品集中在12/16/24/32/64GB档位",
+      "category": "其他",
+      "according": "comment_in_top_thread: 用户指出48GB是未被充分服务的目标显存尺寸，目前很少有45B左右的密集模型针对该档位",
+      "strength": "medium"
+    },
+    {
+      "type": "feature_request",
+      "description": "用户希望开源权重模型同时提供safetensors格式的量化版本，方便更多推理框架加载",
+      "category": "提高效率",
+      "according": "comment_in_top_thread: 用户明确表示希望官方发布safetensors格式量化版本，因为许多框架无法加载PTE和GGUF",
+      "strength": "weak"
+    },
+    {
+      "type": "feature_request",
+      "description": "用户希望本地LLM推理工具提供更可靠的浏览器内容管道（如Firefox扩展），将渲染后的页面自动发送给本地模型处理",
+      "category": "信息获取",
+      "according": "comment_in_top_thread: 用户建议Firefox实现将浏览器内容实时推送给本地服务的接口，认为现有方案难以推动",
+      "strength": "weak"
+    },
+    {
+      "type": "complaint",
+      "description": "用户对本地LLM服务对中文模型和西方模型采用双重标准的不公平讨论氛围感到不满",
+      "category": "其他",
+      "according": "comment_in_top_thread: 用户指出每当中国厂商发布开源权重就一片赞美，Meta发布就一片唱衰的不一致态度",
+      "strength": "weak"
+    }
+  ],
+  "summary": "发现用户主要关注本地大模型运行时的实际痛点，包括模型推理陷入循环浪费token、云端API不透明变更带来的失控感、本地长上下文和并行agent的KV cache不足，以及由此产生的自建脚本、自建数据库、自建harness等大量workaround。同时存在对硬件成本上涨、中等尺寸模型缺失、量化格式不通用等产品和生态层面的不满。"
+}
