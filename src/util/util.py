@@ -19,3 +19,9 @@ logging.basicConfig(
             datefmt = "%Y-%m-%d %H:%M:%S",
             encoding = "utf-8")
 logger = logging.getLogger("demandmining")
+
+class ParentException(Exception):
+    pass
+
+class UninitedException(Exception):
+    pass

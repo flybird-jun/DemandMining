@@ -3,3 +3,4 @@ src/config/config.json
 demand.egg-info/
 .vscode/
 tmp/
+.env
