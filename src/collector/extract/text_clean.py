@@ -32,7 +32,7 @@ class TextClean:
             output_format = "txt",
             favor_precision = True
         )
-        if text is None:
+        if not text:
             logger.info(f"原文:{html}, 但是没抽取到文章主体")
             return ""
         

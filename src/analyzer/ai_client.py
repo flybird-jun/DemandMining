@@ -36,8 +36,8 @@ class AiClient:
         if not articles:
             logger.warning("article_aggregation_parse called with empty list")
             return ""
-        joined = "\n\n---\n\n".join(articles)
-        return await self._chat(self._aggre_analyzer_prompt, joined)
+       # joined = "\n\n---\n\n".join(articles)
+        return await self._chat(self._aggre_analyzer_prompt, f"{articles}", 0.7)
 
     @staticmethod
     def _read_prompt(path: Path) -> str:
@@ -55,7 +55,7 @@ class AiClient:
                     temperature = temperature
                 )
             except RateLimitError as e:
-                await asyncio.sleep(10)
+                await asyncio.sleep(3)
             except (APIError, APIConnectionError) as exc:
                 logger.error("LLM call failed: %s", exc)
                 raise

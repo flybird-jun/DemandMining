@@ -1,4 +1,11 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python.analysis.extraPaths": ["./src"]
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

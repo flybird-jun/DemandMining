@@ -10,3 +10,6 @@ build-backend = "setuptools.build_meta"
 name = "demand"
 version = "0.1.0"
 requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+cache_dir = "/root/DemandMining/tmp/pytest-cache"

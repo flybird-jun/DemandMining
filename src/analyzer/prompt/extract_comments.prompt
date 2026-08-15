@@ -106,12 +106,9 @@
 "It would be cool if someone built X."
 除非用户说明实际使用场景或问题。
 
-# 5. 输出格式python字符串列表
-- 以[开头, ]结尾
-- 不要输出其它的任何内容
+# 5. 输出格式为Json Array
+- 不要输出其它的任何内容, 禁止使用 Markdown 代码块, 禁止输出 ```json 或 ```。输出内容第一字符必须是 [，最后字符必须是 ]。
 - 输出 pretty-printed JSON
 - 缩进使用 2 个空格
-- 每个字段独占一行
 - 数组的每个元素独占一行
-- 对象嵌套时按层级缩进
 ["comment", "comment"]
