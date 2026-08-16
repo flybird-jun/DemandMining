@@ -2,13 +2,13 @@ import pytest
 import pytest_asyncio
 from pathlib import Path
 from util.util import *
-from storage.storage import storage
+from storage.storage import Storage
 @pytest.mark.asyncio(loop_scope="class")
 class TestStorage:
 
     @pytest_asyncio.fixture(scope="function", loop_scope="class", autouse = True, name = "storage_")
     async def setup(self):
-        storage_ = storage(config["raw_data_path"] + "test", config["database_path"] + "test")
+        storage_ = Storage(config["raw_data_path"] + "test", config["database_path"] + "test")
         await storage_.init("test", "test")
         # 执行一遍删除所有数据，防止用例之间的干扰
         try:

@@ -1,7 +1,7 @@
 
 import asyncio
 from collector.extract.hacker_news_collector import HackerNewsCollector
-from storage.storage import storage
+from storage.storage import Storage
 from analyzer.ai_client import AiClient
 from util.util import logger, config
 import json
@@ -46,7 +46,7 @@ async def producer_item_ids(collector:HackerNewsCollector):
     await collector._queue.put(None)
 result_comments = []
 # 处理一篇帖子
-async def process_story(dbms:storage, client:AiClient, queue:asyncio.Queue) -> None:
+async def process_story(dbms:Storage, client:AiClient, queue:asyncio.Queue) -> None:
     while True:
         story = await queue.get()
         if story is None:
@@ -85,7 +85,7 @@ async def run():
     await collector.init()
 
     ai_client = AiClient(config["ai_api_url"], config["ai_api_key"])
-    dbms = storage(config["raw_data_path"])
+    dbms = Storage(config["raw_data_path"])
 
     ids_producer = asyncio.create_task(producer_item_ids(collector))
 

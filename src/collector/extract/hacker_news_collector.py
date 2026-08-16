@@ -1,94 +1,115 @@
-"""HackerNewsCollector: 编排 HackerNewsApi + Crawl + TextClean。
-
-完全静态化/外部依赖注入:
-    - api 提供原始数据
-    - crawl 提供正文抓取能力
-    - text_clean 负责 HTML -> 纯文本
-"""
 from __future__ import annotations
-import asyncio
-from typing import Any
 import aiohttp
 from collector.api.hacker_news_api import HackerNewsApi
-from collector.collector import Collector
 from collector.extract.text_clean import TextClean
 from collector.net.crawl import Crawl
-from util import util
-logger = util.logger
-
-class HackerNewsCollector(Collector):
-    ITEM_ID_QSIZE = 50
-    def __init__(self, item_id_qsize: int = ITEM_ID_QSIZE) -> None:
-        super().__init__(item_id_qsize, api = HackerNewsApi)
+from util.util import logger, ParentException
+import time
+from storage.storage import Storage
+from queue import Queue
+from runtime.coroutine_manager import CoroutineManager, Event
+from analyzer.ai_client import AiClient
+class HackerNewsCollector:
+    def __init__(self, storage:Storage, cor_mgr:CoroutineManager, ai_client:AiClient) -> None:
         self._session : aiohttp.ClientSession
+        self._schedule_interval = 300 # 300s 收集一次
+        self._last_schedule_time = 0
+        self._storage = storage
+        self._cor_mgr = cor_mgr
+        self._ai_client = ai_client
+        self._story_miss_queue = Queue() # 没找到父评论或id 挂到链上后续再插入
+        self._db_item_hwm = 0
+        self._remote_max_item_id = 0
+        self._batch_completed_count = 0
 
     async def init(self) -> None:
-        timeout = aiohttp.ClientTimeout(
-            total=30,
-            connect=10,
-            sock_connect=10,
-            sock_read=20,
-        )
+        timeout = aiohttp.ClientTimeout(total = 30, connect = 10, sock_connect = 10, sock_read = 20)
         self._session = aiohttp.ClientSession(timeout = timeout)
-    @staticmethod
-    def get_text(item:dict) -> str:
-        return "title:" + item["title"] + "\n" + item["text"]
-    
-    @staticmethod
-    def _recursive_add_comment(comment_item:dict, comment:list):
-        if comment_item["text"] != "" and comment_item["text"] != "[dead]":
-            comment.append(comment_item["text"])
-        for sub_comment in comment_item["comment"]:
-            HackerNewsCollector._recursive_add_comment(sub_comment, comment)
-
-    @staticmethod 
-    def get_comments(item:dict) -> list[list[str]]:
-        comments = []
-        for sub_comment in item["comment"]:
-            comment:list = []
-            HackerNewsCollector._recursive_add_comment(sub_comment, comment)
-            comments.append(comment)
-        return comments
+        self._cor_mgr.register_scheduler_loop_func(self.scheduler)
 
     async def destroy(self) -> None:
         await self._session.close()
-
-    async def producer_item_ids(self) -> None:
-        new_stories_ids = await HackerNewsApi.get_top_stories(self._session)
-        for i, item_id in enumerate(new_stories_ids, 1):
-            await self._queue.put(item_id)
-        await self._queue.put(None)
-
-    async def producer_item(self, out_queue: asyncio.Queue) -> None:
-        while True:
-            try:
-                item_id = await self._queue.get()
-                print(f"start produce {item_id}")
-                if item_id is None:
-                    await self._queue.put(item_id)
-                    break
-
-                item_json = await HackerNewsApi.get_item(self._session, item_id)
-                if not item_json or item_json.get("type") != "story":
-                    logger.info(f"get {item_id} failed")
-                    continue
-                text = ""
-                if "url" in item_json:
-                    text = await self._get_article(item_json["url"]) if not "text" in item_json else item_json["text"]
-                else:
-                    logger.info("{item_id} don't have url: {item_json}")
-                out: dict[str, Any] = {
-                    "item_id":item_id,
-                    "title": item_json.get("title", ""),
-                    "url": item_json.get("url", ""),
-                    "text": text,
-                    "comment": await self._recursive_get_comment_list(item_json.get("kids", []))
+    
+    async def _get_item_callback(self, data:dict) -> None:
+        try:
+            if data["type"] == "story":
+                text = await self._get_story_text(data["url"])
+                await self._storage.save_story_text(data["id"], text)
+                data["summary"] = await self._ai_client.summary_text("title:" + data["title"] + ", Text:" + text)
+                await self._storage.save_story(data)
+            
+            elif data["type"] == "comment":
+                data["text"] = TextClean.clean_comment(data["text"])
+                await self._storage.save_comment(data)
+            else:
+                logger.info(f"f{data['type']} item_id:f{data['id']} discard")
+            
+            self._batch_completed_count += 1
+        except ParentException:
+            if data["parent"] <= self._db_item_hwm:
+                story_info = {
+                    "id":data["parent"],
+                    "time": 0,
+                    "title":"",
+                    "type":"story",
+                    "url":"",
+                    "summary":""
                 }
-                await out_queue.put(out)
-            except Exception as e:
-                continue
+                await self._storage.save_story(story_info)
+                await self._get_item_callback(data)
+                logger.info(f"{data['parent']} construct empty")
+            else:
+                self._story_miss_queue.put(data)
+        except Exception as e:
+            logger.exception(f"story item failed error = {type(e).__name__}:'{e}', data = {data}")
+            self._batch_completed_count += 1 # 异常不再重试，但是event已经执行完毕了，所以也要加1
+            
+    async def _process_miss_queue(self):
+        item_list = []
+        while not self._story_miss_queue.empty():
+            item_list.append(self._story_miss_queue.get())
+        
+        item_list.sort(key = lambda x: x["id"])
+        for item in item_list:
+            await self._get_item_callback(item)
+        # 这些都是异常的item, 打印出来，后续定位
+        while not self._story_miss_queue.empty():
+            data = self._story_miss_queue.get()
+            logger.error(f"{data} parent is None")
+    # 注册到协程管理器的scheduler函数
+    async def scheduler(self) -> None:
+        # 将缺失story_id的评论重新插入到storage
+        qsize = self._story_miss_queue.qsize()
+        try:
+            for i in range(0, qsize):
+                data = self._story_miss_queue.get()
+                await self._get_item_callback(data)
 
-    async def _get_article(self, url:str) -> str:
+            cur_time = time.time()
+            if cur_time - self._last_schedule_time > self._schedule_interval:
+                # 需要将上一次没插回去的数据处理干净
+                await self._process_miss_queue()
+                # 上一次发布的event还没执行完毕, 本次就不发布event了
+                if self._remote_max_item_id - self._db_item_hwm != self._batch_completed_count:
+                    logger.warning(f"expected={self._remote_max_item_id - self._db_item_hwm}, completed={self._batch_completed_count}")
+                    return
+                
+                if self._remote_max_item_id != 0:
+                    await self._storage.update_item_id_hwm(self._remote_max_item_id)
+                self._batch_completed_count = 0
+                self._last_schedule_time = cur_time
+                self._remote_max_item_id = await HackerNewsApi.get_max_item_id(self._session)
+                self._db_item_hwm = await self._storage.get_item_id_hwm()
+
+                for item_id in range(self._db_item_hwm + 1, self._remote_max_item_id + 1):
+                    cor_obj = HackerNewsApi.get_item(self._session, item_id)
+
+                    e = Event(cor_obj, None, self._get_item_callback)
+                    await self._cor_mgr.send_event(e)
+        except Exception as e:
+            logger.exception(f"HackerNewsCollector scheduler failed, {type(e).__name__}:'{e}' ")
+
+    async def _get_story_text(self, url:str) -> str:
         if not url:
             logger.info(f"url is None")
             return ""
@@ -99,18 +120,3 @@ class HackerNewsCollector(Collector):
             return ""
         return TextClean.clean_article(html)
 
-    async def _recursive_get_comment_list(self, kids: list) -> list:
-        out: list[dict] = []
-        for kid in kids:
-            kid_json = await HackerNewsApi.get_item(self._session, kid)
-            if not kid_json:
-                logger.info(f"comment item_id = {kid} is not json")
-                continue
-            text = TextClean.clean_comment(kid_json.get("text", ""))
-            out.append({
-                "text": text,
-                "comment": await self._recursive_get_comment_list(
-                    kid_json.get("kids", [])
-                ) if kid_json.get("kids") else [],
-            })
-        return out

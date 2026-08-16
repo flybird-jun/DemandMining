@@ -2,8 +2,9 @@ from pathlib import Path
 import aiofiles
 import asyncpg
 from util.util import *
+import asyncio
 import subprocess
-class storage:
+class Storage:
 
     def __init__(self, raw_data_path: str, dump_path: str):
 
@@ -30,7 +31,7 @@ class storage:
                                        "FOREIGN KEY (parent_id) REFERENCES comment(comment_id));")
                     
                     await conn.execute("CREATE TABLE storyhwm (item_max_id BIGINT, ai_parse_time BIGINT);")
-                    await conn.execute("INSERT INTO storyhwm VALUES(49300000, 49300000);")
+                    await conn.execute("INSERT INTO storyhwm VALUES(49300000, 0);")
 
         except Exception as e:
             await self._pool.close()
@@ -49,22 +50,7 @@ class storage:
                             "-f", f"{self._db_dump_path}",
                         ], check=True)
 
-    async def save_item(self, data: dict) -> None:
-        if not hasattr(self, "_pool"):
-            raise UninitedException() 
-        try:
-            if data["type"] == "comment":
-                await self._save_comment(data)
-            elif data["type"] == "story":
-                await self._save_story(data)
-            else:
-                logger.info(f"don't care '{data['type']}' type, item_id = {data['id']} ")
-        except ParentException as e:
-            raise e
-        except Exception as e:
-            logger.error(f"save item {data['id']} failed, data = f{data}, error = {type(e).__name__}:'{e}'")
-
-    async def update_story_hwm(self, item_max_id:int) -> None:
+    async def update_item_id_hwm(self, item_max_id:int) -> None:
         async with self._pool.acquire() as conn:
             await conn.execute("Update storyhwm Set item_max_id = $1 WHERE item_max_id < $1;", item_max_id)
 
@@ -72,7 +58,7 @@ class storage:
         async with self._pool.acquire() as conn:
             await conn.execute("Update storyhwm Set ai_parse_time = $1 WHERE ai_parse_time < $1;", ai_parse_time)
 
-    async def get_story_id_hwm(self) -> int:
+    async def get_item_id_hwm(self) -> int:
         async with self._pool.acquire() as conn:
             return await conn.fetchval("Select item_max_id From storyhwm;")
         
@@ -129,7 +115,7 @@ class storage:
         summary: str
     }
     """
-    async def _save_story(self, story: dict) -> None:
+    async def save_story(self, story: dict) -> None:
         sql_args = (story["id"], story["time"], story["title"], story["type"], story["url"], story["summary"])
         async with self._pool.acquire() as conn:
             await conn.execute("INSERT INTO story (story_id, time, title, type, Url, summary) VALUES ($1, $2, $3, $4, $5, $6);", *sql_args)
@@ -143,20 +129,22 @@ class storage:
         "time": int
     }
     """
-    async def _save_comment(self, comment: dict) -> None:
+    async def save_comment(self, comment: dict) -> None:
         parent_id = comment["parent"]
-        
         async with self._pool.acquire() as conn, conn.transaction():
-            story_id = await self._resolve_story_id(conn, parent_id)
+            story_id = await self._search_story_id(conn, parent_id)
             if parent_id == story_id:
                 sql_args = (comment["id"], story_id, comment["time"], comment["text"], None)
             else:
                 sql_args = (comment["id"], story_id, comment["time"], comment["text"], parent_id)
-            await conn.execute("INSERT INTO comment (comment_id, story_id, time, text, parent_id) "
-                               "VALUES ($1, $2, $3, $4, $5);", *sql_args)
-            await conn.execute("Update story Set time = $1 Where story_id = $2;", comment["time"], story_id)
+            try:
+                await conn.execute("INSERT INTO comment (comment_id, story_id, time, text, parent_id) "
+                                "VALUES ($1, $2, $3, $4, $5);", *sql_args)
+                await conn.execute("Update story Set time = $1 Where story_id = $2;", comment["time"], story_id)
+            except asyncpg.UniqueViolationError:
+                logger.info(f"pg unique violation, item_id = f{comment['id']}")
 
-    async def _resolve_story_id(self, conn, parent_id: int) -> int:
+    async def _search_story_id(self, conn, parent_id: int) -> int:
         id = await conn.fetchval("SELECT story_id FROM story WHERE story_id = $1;", parent_id)
         if id is not None:
             return id
