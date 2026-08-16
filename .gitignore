@@ -4,3 +4,4 @@ demand.egg-info/
 .vscode/
 tmp/
 .env
+#__pycache__

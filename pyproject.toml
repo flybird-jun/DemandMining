@@ -13,3 +13,4 @@ requires-python = ">=3.10"
 
 [tool.pytest.ini_options]
 cache_dir = "/root/DemandMining/tmp/pytest-cache"
+pythonpath = ["src"]
