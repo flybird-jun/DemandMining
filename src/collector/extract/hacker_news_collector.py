@@ -8,15 +8,13 @@ import time
 from storage.storage import Storage
 from queue import Queue
 from runtime.coroutine_manager import CoroutineManager, Event
-from analyzer.ai_client import AiClient
 class HackerNewsCollector:
-    def __init__(self, storage:Storage, cor_mgr:CoroutineManager, ai_client:AiClient) -> None:
+    def __init__(self, storage:Storage, cor_mgr:CoroutineManager) -> None:
         self._session : aiohttp.ClientSession
         self._schedule_interval = 300 # 300s 收集一次
         self._last_schedule_time = 0
         self._storage = storage
         self._cor_mgr = cor_mgr
-        self._ai_client = ai_client
         self._story_miss_queue = Queue() # 没找到父评论或id 挂到链上后续再插入
         self._db_item_hwm = 0
         self._remote_max_item_id = 0
@@ -33,18 +31,25 @@ class HackerNewsCollector:
     async def _get_item_callback(self, data:dict) -> None:
         try:
             if data["type"] == "story":
-                text = await self._get_story_text(data["url"])
+                if 'url' in data:
+                    text = await self._get_story_text(data["url"])
+                else:
+                    text = ""
+                    data['url'] = ""
+                    if 'title' not in data:
+                        data['title'] = ""
+                
                 await self._storage.save_story_text(data["id"], text)
-                data["summary"] = await self._ai_client.summary_text("title:" + data["title"] + ", Text:" + text)
                 await self._storage.save_story(data)
             
             elif data["type"] == "comment":
-                data["text"] = TextClean.clean_comment(data["text"])
+                data["text"] = TextClean.clean_comment(data.get("text", ""))
                 await self._storage.save_comment(data)
             else:
                 logger.info(f"f{data['type']} item_id:f{data['id']} discard")
             
             self._batch_completed_count += 1
+            print()
         except ParentException:
             if data["parent"] <= self._db_item_hwm:
                 story_info = {
@@ -52,8 +57,7 @@ class HackerNewsCollector:
                     "time": 0,
                     "title":"",
                     "type":"story",
-                    "url":"",
-                    "summary":""
+                    "url":""
                 }
                 await self._storage.save_story(story_info)
                 await self._get_item_callback(data)
@@ -96,6 +100,7 @@ class HackerNewsCollector:
                 
                 if self._remote_max_item_id != 0:
                     await self._storage.update_item_id_hwm(self._remote_max_item_id)
+                
                 self._batch_completed_count = 0
                 self._last_schedule_time = cur_time
                 self._remote_max_item_id = await HackerNewsApi.get_max_item_id(self._session)

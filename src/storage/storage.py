@@ -26,7 +26,7 @@ class Storage:
                                              "storyhwm")
                 print(f"init")
                 if not exists:
-                    await conn.execute("CREATE TABLE story (story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT, summary TEXT);")
+                    await conn.execute("CREATE TABLE story (story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT);")
                     await conn.execute("CREATE TABLE comment (comment_id BIGINT PRIMARY KEY, story_id BIGINT, time BIGINT, text TEXT, parent_id BIGINT NULL, "
                                        "FOREIGN KEY (story_id) REFERENCES story(story_id),"
                                        "FOREIGN KEY (parent_id) REFERENCES comment(comment_id));")
@@ -122,9 +122,9 @@ class Storage:
     }
     """
     async def save_story(self, story: dict) -> None:
-        sql_args = (story["id"], story["time"], story["title"], story["type"], story["url"], story["summary"])
+        sql_args = (story["id"], story["time"], story["title"], story["type"], story["url"])
         async with self._pool.acquire() as conn:
-            await conn.execute("INSERT INTO story (story_id, time, title, type, Url, summary) VALUES ($1, $2, $3, $4, $5, $6);", *sql_args)
+            await conn.execute("INSERT INTO story (story_id, time, title, type, Url) VALUES ($1, $2, $3, $4, $5);", *sql_args)
 
     """
     comment 格式:

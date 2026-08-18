@@ -4,6 +4,7 @@ import inspect
 from collections.abc import Callable
 from typing import Any
 from util.util import *
+
 class Event:
     def __init__(self, cor_object:types.CoroutineType, future:asyncio.Future | None, callback:Callable[..., Any] | None):
         self.cor_object = cor_object
@@ -18,10 +19,11 @@ class CoroutineManager:
         self._running = True
         self._scheduler_handle : asyncio.Task | None = None
         self._monitor_callback:list[tuple[Callable[..., Any], tuple[Any, ...]]] = []
+        self._scheduler_period = 30
     # 监控是否有协程退出，回收_cor_handle资源
     async def scheduler_loop(self, *args):
         while self._running:
-            await asyncio.sleep(30)
+            await asyncio.sleep(self._scheduler_period)
             for callback, args in self._monitor_callback:
                 try:
                     result = callback(*args)
@@ -53,12 +55,14 @@ class CoroutineManager:
             
             try:
                 result = await event.cor_object
+                
                 if event.future is not None:
                     event.future.set_result(result)
                 if event.callback is not None:
                     result_ = event.callback(result)
                     if inspect.isawaitable(result_):
                         await result_
+
             except Exception as e:
                 if event.future is not None and not event.future.done():
                     event.future.set_exception(e)
@@ -74,12 +78,14 @@ class CoroutineManager:
                 break
         await self._queue.put(event)
 
-    async def destory(self):
+    async def stop(self):
         await self._queue.put(None)
         self._running = False
         for cor in self._cor_handle:
             if cor is not None:
                 await cor
+        
+    async def destory(self):
         # 释放task引用
         self._cor_handle = []
         if self._scheduler_handle is not None:

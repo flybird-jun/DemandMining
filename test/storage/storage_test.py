@@ -16,7 +16,6 @@ class TestStorage:
                 await conn.execute("Drop Table comment;")
                 await conn.execute("Drop Table story;")
                 await conn.execute("Drop Table storyhwm;")
-                print(f"drop")
         except Exception as e:
             print(f"{e}")
         await storage_.destory()

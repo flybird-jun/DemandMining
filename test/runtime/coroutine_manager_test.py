@@ -11,7 +11,7 @@ class TestCoroutineManager:
         manager = CoroutineManager(max_cor_num=4)
         await manager.run()
         yield manager
-        await manager.destory()
+        await manager.stop()
 
     async def test_init_state(self, manager):
         # CoroutineManager.__init__ 后的字段状态
