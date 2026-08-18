@@ -17,6 +17,7 @@ class Storage:
             dump_dir_path.mkdir(parents=True, exist_ok=True)
         self._db_dump_path = dump_dir_path / "backup.dump"
         self._pool:asyncpg.Pool
+
     async def init(self, user:str = "demand_mining", database:str = "demand_mining") -> None:
         try:
             self._pool = await asyncpg.create_pool(host="127.0.0.1", port=5432, user = user, database = database)
@@ -63,9 +64,14 @@ class Storage:
             return await conn.fetchval("Select item_max_id From storyhwm;")
         
     async def get_story_ids(self) -> list:
-        async with self._pool.acquire() as conn:
-            last_timestamp =  await conn.fetchval("Select ai_parse_time From storyhwm;")
-            rows = await conn.fetch("Select story_id From story Where time > $1;", last_timestamp)
+        async with self._pool.acquire() as conn, conn.transaction():
+            hwm =  await conn.fetchrow("Select item_max_id, ai_parse_time From storyhwm;")
+            new_ai_parse_time = conn.fetch("Select time From story Where id =$1;", hwm["item_max_id"])
+
+            rows = await conn.fetch("Select story_id From story Where time > $1 And time <= $2;", 
+                                    hwm["ai_parse_time"], new_ai_parse_time)
+            if rows is None:
+                return []
             result = [row["story_id"] for row in rows]
             return result
     
@@ -85,7 +91,7 @@ class Storage:
             
             result["text"] = story_info["title"] + "," + story_info["summary"]
             
-            rows = await conn.fetch("Select text From comment Where story_id = $1", story_id)
+            rows = await conn.fetch("Select text From comment Where story_id = $1 ", story_id)
             if len(story_info) == 0:
                 return result
             result["comment"] = [row["text"] for row in rows]
