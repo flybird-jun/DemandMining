@@ -11,7 +11,7 @@ class TextClean:
     SPACE_PATTERN = re.compile(r"[ \t]+")
     NEWLINE_PATTERN = re.compile(r"\n{3,}")
     @staticmethod
-    def clean_comment(comment:str) -> str:
+    def clean_passage(comment:str) -> str:
         soup = BeautifulSoup(
             comment,
             "html.parser",
@@ -23,7 +23,7 @@ class TextClean:
         return TextClean._normalize_text(soup.get_text())
     
     @staticmethod
-    def clean_article(html: str) -> str:
+    def clean_html(html: str) -> str:
         # 抽取文章主体
         text = trafilatura.extract(
             html,

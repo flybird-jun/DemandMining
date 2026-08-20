@@ -5,9 +5,7 @@ import time
 from typing import ClassVar
 from urllib.parse import urlparse
 from urllib.robotparser import RequestRate, RobotFileParser
-
 import aiohttp
-from collector.net import aio_http_wrap
 
 class RobotsChecker:
     """robots.txt 解析 + 限速决策, 静态化接口。"""

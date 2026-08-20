@@ -1,4 +1,5 @@
 src/config/config.json
+test/config.json
 .venv
 demand.egg-info/
 .vscode/

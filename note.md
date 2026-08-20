@@ -160,6 +160,9 @@ await conn.copy_records_to_table("users", records=[("Alice", 20), ("Bob", 30)], 
 更改db权限:postgres=# ALTER DATABASE demand_mining OWNER TO demand_mining;
 使用用户登录pg:psql -h localhost -p 5432 -U demand_mining -d demand_mining
 
+# pytest使用命令
+执行某个py文件 pytest -v xxx.py
+
 1. 是prompt问题还是模型能力问题？
 2. 哪条指令不够明确？
 3. 如何修改prompt？

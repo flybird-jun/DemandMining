@@ -1,10 +1,9 @@
 import pytest
 import pytest_asyncio
 import aiohttp
-from collector.api.hacker_news_api import HackerNewsApi
+from hacker_news.hacker_news_api import HackerNewsApi
 @pytest.mark.asyncio(loop_scope="class")
 class TestHackerNewsApi:
-
     @pytest_asyncio.fixture(scope="class", loop_scope="class", autouse = True, name = "session")
     async def setup(self):
         timeout = aiohttp.ClientTimeout(total=15)
@@ -59,14 +58,14 @@ class TestHackerNewsApi:
 
     async def test_get_item(self, session):
         # 评论
-        item_id = 49309057
+        item_id = 49309057 # 48820709 dead comment, 49309057 used
         item = await HackerNewsApi.get_item(session, item_id)
         assert isinstance(item, dict)
         assert item["id"] == item_id
         assert "type" in item
         assert item["type"] == "comment"
         # story
-        item_id = 49299605
+        item_id = 49299605 # 48868688 dead story, 49299605 used
         item = await HackerNewsApi.get_item(session, item_id)
         assert isinstance(item, dict)
         assert item["id"] == item_id

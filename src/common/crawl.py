@@ -10,8 +10,8 @@ from typing import Any, ClassVar
 
 import aiohttp
 
-from collector.net import aio_http_wrap
-from collector.net.robot_checker import RobotsChecker
+from common import aio_http_wrap
+from common.robot_checker import RobotsChecker
 
 class Crawl:
     @staticmethod

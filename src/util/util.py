@@ -1,27 +1,28 @@
 import logging
-
 import json
+import shutil
 from pathlib import Path
 
-cur_dir = Path(__file__).resolve().parents[0]
-config_path =  cur_dir / "config.json"
-config_example_path = cur_dir / "config.example.json"
+# config = None
 
-if config_path.exists():
-    config = json.loads(config_path.read_text())
-else:
-    config = json.loads(config_example_path.read_text())
+# logger = None
 
+# def util_init():
+
+#     global config, logger
+    # 加载config
+config_dir_path = Path(__file__).resolve().parents[2] / "run"
+
+config_path = config_dir_path / "config.json"
+config = json.loads(config_path.read_text())
+# 加载logger
 logging.basicConfig(
-            filename = config["log_path"] + "/run.log",
-            level = logging.WARNING,
-            format = "%(asctime)s.%(msecs)03d | [%(levelname)s] | %(message)s",
-            datefmt = "%Y-%m-%d %H:%M:%S",
-            encoding = "utf-8")
+    filename = config["log_path"] + "/run.log",
+    level = logging.WARNING,
+    format = "%(asctime)s.%(msecs)03d | [%(levelname)s] | %(message)s",
+    datefmt = "%Y-%m-%d %H:%M:%S",
+    encoding = "utf-8")
 logger = logging.getLogger("demandmining")
-
-class ParentException(Exception):
-    pass
 
 class UninitedException(Exception):
     pass

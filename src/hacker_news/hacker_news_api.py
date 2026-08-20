@@ -7,7 +7,7 @@ from typing import Any
 
 import aiohttp
 
-from collector.net import aio_http_wrap
+from common import aio_http_wrap
 
 class HackerNewsApi:
     """HackerNews v0 API 的静态封装。"""

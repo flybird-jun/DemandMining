@@ -66,7 +66,9 @@ class CoroutineManager:
             except Exception as e:
                 if event.future is not None and not event.future.done():
                     event.future.set_exception(e)
-                logger.exception("worker execute failed")
+                if event.callback is not None:
+                    event.callback(None)
+                logger.exception(f"worker execute failed, {repr(event.cor_object)}")
             
 
     async def send_event(self, event:Event) -> None:

@@ -2,5 +2,8 @@
     "ai_api_url": "",
     "ai_api_key": "",
     "raw_data_path":"",
+    "database_path":"",
+    "pg_user":"demand_mining",
+    "pg_database_name":"demand_mining",
     "log_path":""
 }
