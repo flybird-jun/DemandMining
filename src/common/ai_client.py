@@ -8,17 +8,17 @@ import asyncio
 from util import util
 logger = util.logger
 
-class AiClient:
-    _PROMPT_DIR = Path(__file__).resolve().parent / "prompt"
+class LlmClient:
+    _PROMPT_DIR = Path(__file__).resolve().parents[1] / "prompt"
     _SUMMARY_TEXT_PATH = _PROMPT_DIR / "summary_text.prompt"
     _EXTRACT_COMMENTS_PATH = _PROMPT_DIR / "extract_comments.prompt"
     _AGGRE_ANALYZER_PATH = _PROMPT_DIR / "aggregation_analyzer.prompt"
     
     def __init__(self,api_url: str, api_key: str) -> None:
         self._client = AsyncOpenAI(api_key=api_key, base_url=api_url.rstrip("/"))
-        self._summary_text_prompt = self._read_prompt(AiClient._SUMMARY_TEXT_PATH)
-        self._extract_comments_prompt = self._read_prompt(AiClient._EXTRACT_COMMENTS_PATH)
-        self._aggre_analyzer_prompt = self._read_prompt(AiClient._EXTRACT_COMMENTS_PATH)
+        self._summary_text_prompt = self._read_prompt(LlmClient._SUMMARY_TEXT_PATH)
+        self._extract_comments_prompt = self._read_prompt(LlmClient._EXTRACT_COMMENTS_PATH)
+        self._aggre_analyzer_prompt = self._read_prompt(LlmClient._EXTRACT_COMMENTS_PATH)
 
     # 抽取有效评论
     async def extract_comments(self, article: str) -> str:
@@ -56,9 +56,11 @@ class AiClient:
                 )
             except RateLimitError as e:
                 await asyncio.sleep(3)
-            except (APIError, APIConnectionError) as exc:
-                logger.error("LLM call failed: %s", exc)
-                raise
+            except (APIError, APIConnectionError) as e:
+                logger.error("LLM call failed: %s", e)
+                raise e
+            except Exception as e:
+                raise e
             else:
                 return resp.output_text
     

@@ -3,7 +3,7 @@ import pytest_asyncio
 import asyncio
 from unittest.mock import patch
 from pathlib import Path
-from hacker_news import HackerNewsCollector
+from hacker_news import HackerNewsCollector, HackerNewsStorage
 from runtime.coroutine_manager import CoroutineManager
 from common.dbms import Dbms
 from util.util import *
@@ -11,30 +11,20 @@ from util.util import *
 @pytest.mark.asyncio(loop_scope="class")
 class TestHackerNewsCollector:
     @pytest_asyncio.fixture(scope="class", loop_scope="class", autouse = True, name = "collector")
-    async def setup(self):
-        dbms = Dbms()
-        await dbms.init()
-        # 执行一遍删除所有数据，防止用例之间的干扰
-        try:
-            async with dbms.pg_pool.acquire() as conn, conn.transaction():
-                await conn.execute("Drop Table comment;")
-                await conn.execute("Drop Table story;")
-                await conn.execute("Drop Table storyhwm;")
-        except Exception as e:
-            print(f"{e}")
-        await dbms.destory()
-
+    async def setup(self, clean_env):
         cor_mgr = CoroutineManager(10)
         cor_mgr._scheduler_period = 1
         await cor_mgr.run()
-        hacker_news_collector = HackerNewsCollector(cor_mgr)
+        storage = HackerNewsStorage()
+        await storage.init()
+        hacker_news_collector = HackerNewsCollector(cor_mgr, storage)
         await hacker_news_collector.init()
         yield hacker_news_collector
 
         await cor_mgr.stop()
         await hacker_news_collector.destroy()
-        await dbms.destory()
         await cor_mgr.destory()
+        await storage.destory()
     async def test_hacker_news_collector(self, collector, monkeypatch):
         async def mock_get_max_item_id(session):
             return 49300000 + 200

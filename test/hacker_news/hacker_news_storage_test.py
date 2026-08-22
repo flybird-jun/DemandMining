@@ -6,13 +6,13 @@ from hacker_news.hacker_news_storage import HackerNewsStorage
 @pytest.mark.asyncio(loop_scope="class")
 class TestHackerNewsStorage:
     @pytest_asyncio.fixture(scope="function", loop_scope="class", autouse = True, name = "storage")
-    async def setup(self):
+    async def setup(self, clean_env):
         hacker_news_storage = HackerNewsStorage()
         await hacker_news_storage.init()
         yield hacker_news_storage
         await hacker_news_storage.destory()
 
-    async def test_save_item(self, storage_):
+    async def test_save_item(self, storage):
         story = {
             "id": 49299605,
             "time": 1786719600,
@@ -21,7 +21,7 @@ class TestHackerNewsStorage:
             "title": "Qwen 3.8 27B",
             "summary": "Qwen 3.8 27B summary"
         }
-        await storage_.save_item(story)
+        await storage.save_item(story)
 
         comment = {
                     "id": 49305335,
@@ -30,13 +30,13 @@ class TestHackerNewsStorage:
                     "text": "Credit where it",
                     "parent": 49299605
                   }
-        await storage_.save_item(comment)
+        await storage.save_item(comment)
 
     async def test_item_id_hwm(self, storage):
         # init() 会插入初始高水位 49300000
-        assert await storage.get_story_id_hwm() == 49300000
+        assert await storage.get_item_id_hwm() == 49300000
         await storage.update_item_id_hwm(49350000)
-        assert await storage.get_story_id_hwm() == 49350000
+        assert await storage.get_item_id_hwm() == 49350000
 
     async def test_parsed_item_hwm(self, storage):
         assert await storage.get_parsed_item_hwm() == 0

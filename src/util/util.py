@@ -3,14 +3,6 @@ import json
 import shutil
 from pathlib import Path
 
-# config = None
-
-# logger = None
-
-# def util_init():
-
-#     global config, logger
-    # 加载config
 config_dir_path = Path(__file__).resolve().parents[2] / "run"
 
 config_path = config_dir_path / "config.json"

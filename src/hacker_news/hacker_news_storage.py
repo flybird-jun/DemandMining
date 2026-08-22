@@ -20,8 +20,7 @@ class HackerNewsStorage:
                     await conn.execute("CREATE TABLE story "
                         "(story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT);")
                     await conn.execute("CREATE TABLE comment "
-                        "(comment_id BIGINT PRIMARY KEY, time BIGINT, text TEXT, parent_id BIGINT NULL, "
-                        "FOREIGN KEY (parent_id) REFERENCES comment(comment_id));")
+                        "(comment_id BIGINT PRIMARY KEY, time BIGINT, text TEXT, parent_id BIGINT);")
                     
                     await conn.execute("CREATE TABLE storyhwm (item_max_id BIGINT, parsed_item_hwm BIGINT);")
                     await conn.execute("INSERT INTO storyhwm VALUES(49300000, 0);")
@@ -40,7 +39,8 @@ class HackerNewsStorage:
     async def update_item_id_hwm(self, item_max_id:int) -> None:
         try:
             async with self._dbms.pg_pool.acquire() as conn:
-                await conn.execute("Update storyhwm Set item_max_id = $1 WHERE item_max_id < $1;", item_max_id)
+                x = await conn.execute("Update storyhwm Set item_max_id = $1 WHERE item_max_id < $1;", item_max_id)
+                print(x)
         except Exception as e:
             logger.exception(f"update_item_id_hwm item_id = {item_max_id} failed, error = {type(e).__name__}:'{e}'")
             raise e
@@ -48,7 +48,8 @@ class HackerNewsStorage:
     async def get_item_id_hwm(self) -> int:
         try:
             async with self._dbms.pg_pool.acquire() as conn:
-                return await conn.fetchval("Select item_max_id From storyhwm;")
+                x = await conn.fetchval("Select item_max_id From storyhwm;")
+                return x
         except Exception as e:
             logger.exception(f"get_item_id_hwm failed, error = {type(e).__name__}:'{e}'")
             raise e
@@ -74,12 +75,12 @@ class HackerNewsStorage:
             logger.exception(f"save parsed_item = {parsed_item_hwm} failed, error = {type(e).__name__}:'{e}'")
             raise e
         
-    async def get_parsed_item_hwm(self, parsed_item_hwm:int) -> int:
+    async def get_parsed_item_hwm(self) -> int:
             try:
                 async with self._dbms.pg_pool.acquire() as conn:
-                    return await conn.execute("Select parsed_item_hwm From storyhwm;")
+                    return await conn.fetchval("Select parsed_item_hwm From storyhwm;")
             except Exception as e:
-                logger.exception(f"save parsed_item = {parsed_item_hwm} failed, error = {type(e).__name__}:'{e}'")
+                logger.exception(f"get parsed_item failed, error = {type(e).__name__}:'{e}'")
                 raise e
 
     async def save_item(self, item:dict) -> None:

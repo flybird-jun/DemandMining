@@ -6,25 +6,25 @@ from util.util import logger
 import time
 from runtime.coroutine_manager import CoroutineManager, Event
 class HackerNewsCollector:
-    def __init__(self, cor_mgr:CoroutineManager) -> None:
+    def __init__(self, cor_mgr:CoroutineManager, storage:HackerNewsStorage) -> None:
         self._session : aiohttp.ClientSession
         self._schedule_interval = 300 # 300s 收集一次
         self._last_schedule_time = 0
-        self._storage = HackerNewsStorage()
+        self._storage = storage
         self._cor_mgr = cor_mgr
         self._db_item_hwm = 0
         self._batch_completed_count = 200
         self._batch_count = 200
 
     async def init(self) -> None:
-        await self._storage.init()
+        # await self._storage.init()
         timeout = aiohttp.ClientTimeout(total = 30, connect = 10, sock_connect = 10, sock_read = 20)
         self._session = aiohttp.ClientSession(timeout = timeout)
         self._cor_mgr.register_scheduler_loop_func(self.scheduler)
 
     async def destroy(self) -> None:
         await self._session.close()
-        await self._storage.destory()
+        # await self._storage.destory()
     
     async def _get_item_callback(self, data:dict | None) -> None:
         if data is None:
