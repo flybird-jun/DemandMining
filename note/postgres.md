@@ -16,7 +16,7 @@ for row in rows:
     print(row["id"], row["name"])
 
 # 其他DML
-result = await conn.execute("""UPDATE usersSET name = $1 WHERE id = $2""", "Jack", 123)
+result = await conn.execute(""UPDATE usersSET name = $1 WHERE id = $2"", "Jack", 123)
 print(result)
 
 # prepare语句

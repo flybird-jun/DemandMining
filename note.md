@@ -103,3 +103,13 @@ deactivate 退出项目环境
 1. 是prompt问题还是模型能力问题？
 2. 哪条指令不够明确？
 3. 如何修改prompt？
+
+
+API Key
+sk-ws-H.EYLIYXI.dAx2.MEUCIBUF6DMzq2FYEExzSkF0MU9o3iNhzMzLDjuunByLBlWCAiEAnz1ZlzR7mNBhAlz1FxWMN5qJMTe_v2YFMzIU4Tllcqs
+API Host
+ws-5l10arvcjqjoyhho.cn-beijing.maas.aliyuncs.com
+OpenAI 兼容地址
+https://ws-5l10arvcjqjoyhho.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+DashScope
+https://ws-5l10arvcjqjoyhho.cn-beijing.maas.aliyuncs.com/api/v1

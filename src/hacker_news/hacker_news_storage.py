@@ -9,21 +9,25 @@ class HackerNewsStorage:
         if not self._raw_data_path.exists():
             self._raw_data_path.mkdir(parents=True, exist_ok=True)
         self._dbms = Dbms()
-
+        self._delta_story_sql = (Path(__file__).parent / "group_new_comments_by_story.sql").read_text()
     async def init(self) -> None:
         try:
             await self._dbms.init()
             async with self._dbms.pg_pool.acquire() as conn, conn.transaction():
                 exists = await conn.fetchval("SELECT EXISTS "
-                    "(SELECT 1 FROM information_schema.tables Where table_name = 'storyhwm');")
+                    "(SELECT 1 FROM information_schema.tables Where table_name = 'hwm');")
                 if not exists:
                     await conn.execute("CREATE TABLE story "
                         "(story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT);")
                     await conn.execute("CREATE TABLE comment "
                         "(comment_id BIGINT PRIMARY KEY, time BIGINT, text TEXT, parent_id BIGINT);")
                     
-                    await conn.execute("CREATE TABLE storyhwm (item_max_id BIGINT, parsed_item_hwm BIGINT);")
-                    await conn.execute("INSERT INTO storyhwm VALUES(49300000, 0);")
+                    await conn.execute("CREATE TABLE hwm (item_max_id BIGINT, parsed_item_hwm BIGINT, filter_rule_hwm BIGINT);")
+
+                    await conn.execute("CREATE TABLE filter_rule "
+                                       "(id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, story_id BIGINT, comment_id BIGINT UNIQUE);")
+
+                    await conn.execute("INSERT INTO hwm VALUES(49300000, 0, 0);")
 
                     logger.info("storage init succ")
                 else:
@@ -39,7 +43,7 @@ class HackerNewsStorage:
     async def update_item_id_hwm(self, item_max_id:int) -> None:
         try:
             async with self._dbms.pg_pool.acquire() as conn:
-                x = await conn.execute("Update storyhwm Set item_max_id = $1 WHERE item_max_id < $1;", item_max_id)
+                x = await conn.execute("Update hwm Set item_max_id = $1 WHERE item_max_id < $1;", item_max_id)
                 print(x)
         except Exception as e:
             logger.exception(f"update_item_id_hwm item_id = {item_max_id} failed, error = {type(e).__name__}:'{e}'")
@@ -48,7 +52,7 @@ class HackerNewsStorage:
     async def get_item_id_hwm(self) -> int:
         try:
             async with self._dbms.pg_pool.acquire() as conn:
-                x = await conn.fetchval("Select item_max_id From storyhwm;")
+                x = await conn.fetchval("Select item_max_id From hwm;")
                 return x
         except Exception as e:
             logger.exception(f"get_item_id_hwm failed, error = {type(e).__name__}:'{e}'")
@@ -70,7 +74,7 @@ class HackerNewsStorage:
     async def update_parsed_item_hwm(self, parsed_item_hwm:int) -> None:
         try:
             async with self._dbms.pg_pool.acquire() as conn:
-                await conn.execute("Update storyhwm Set parsed_item_hwm = $1 WHERE parsed_item_hwm < $1;", parsed_item_hwm)
+                await conn.execute("Update hwm Set parsed_item_hwm = $1 WHERE parsed_item_hwm < $1;", parsed_item_hwm)
         except Exception as e:
             logger.exception(f"save parsed_item = {parsed_item_hwm} failed, error = {type(e).__name__}:'{e}'")
             raise e
@@ -78,7 +82,7 @@ class HackerNewsStorage:
     async def get_parsed_item_hwm(self) -> int:
             try:
                 async with self._dbms.pg_pool.acquire() as conn:
-                    return await conn.fetchval("Select parsed_item_hwm From storyhwm;")
+                    return await conn.fetchval("Select parsed_item_hwm From hwm;")
             except Exception as e:
                 logger.exception(f"get parsed_item failed, error = {type(e).__name__}:'{e}'")
                 raise e
@@ -88,6 +92,49 @@ class HackerNewsStorage:
             await self._save_story(item)
         elif item["type"] == "comment":
             await self._save_comment(item)
+    # 返回[min_item_id, max_item_id]之间的被改动过的story和评论
+    async def get_delta_origin_infos(self, min_item_id:int, max_item_id:int):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetch(self._delta_story_sql, min_item_id, max_item_id)
+        except Exception as e:
+            logger.exception(f"step1_resolve_comment_groups failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def get_comment(self, comment_id:int):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetchrow("Select * From comment Where comment_id = $1;", comment_id)
+        except Exception as e:
+            logger.exception(f"get_comment failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def get_story(self, story_id:int):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetchrow("Select * From story Where story_id = $1;", story_id)
+        except Exception as e:
+            logger.exception(f"get_story failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def save_filter_rule(self, story_id:int | None, comment_id:int) -> None:
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                await conn.execute("INSERT INTO filter_rule (story_id, comment_id) VALUES ($1, $2);", story_id, comment_id)
+        except asyncpg.UniqueViolationError:
+            logger.info(f"save_filter_rule unique violation, comment_id = {comment_id}")
+        except Exception as e:
+            logger.exception(f"save_filter_rule failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def save_filter_rule_hwm(self) -> None:
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                filter_rule_hwm = await conn.fetchval("SELECT pg_get_serial_sequence('filter_rule', 'id');") # 会消耗一个id
+                await conn.execute("Update hwm Set filter_rule_hwm = $1 WHERE filter_rule_hwm < $1;", filter_rule_hwm)
+        except Exception as e:
+            logger.exception(f"save filter_rule_hwm failed, error = {type(e).__name__}:'{e}'")
+            raise e   
         
     async def _save_story(self, story: dict) -> None:
         try:
@@ -109,4 +156,3 @@ class HackerNewsStorage:
         except Exception as e:
             logger.exception(f"{comment['id']} save comment failed, error = {type(e).__name__}:'{e}'")
             raise e
-    
