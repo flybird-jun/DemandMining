@@ -39,7 +39,7 @@ class HackerNewsAnalyzer:
         
         parse_id_hwm = await self._storage.get_parsed_item_hwm()
         await self._storage.update_parsed_item_hwm(parse_id_hwm + self._filter_rule_threshold)
-        
+
         await self._storage.save_filter_rule_hwm()
         self._filter_rules_completed = True
     

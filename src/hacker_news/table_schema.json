@@ -1,0 +1,22 @@
+[
+    {
+        "table_name": "origin_story",
+        "schema": "(story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT)"
+    }, 
+    {
+        "table_name": "origin_comment",
+        "schema": "(comment_id BIGINT PRIMARY KEY, time BIGINT, text TEXT, parent_id BIGINT)"
+    },
+    {
+        "table_name": "filter_rule",
+        "schema": "(id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, story_id BIGINT, comment_id BIGINT UNIQUE)"
+    },
+    {
+        "table_name": "filter_semantic",
+        "schema": "(id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, story_id BIGINT, comment_id BIGINT UNIQUE)"
+    },
+    {
+        "table_name": "hwm",
+        "schema": "(old_item_hwm BIGINT, new_item_hwm BIGINT, old_rule_hwm BIGINT, new_rule_hwm BIGINT, old_semantic_hwm BIGINT, new_semantic_hwm BIGINT)"
+    }
+]

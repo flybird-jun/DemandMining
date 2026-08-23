@@ -3,13 +3,23 @@ import aiofiles
 import asyncpg
 from util.util import *
 from common.dbms import Dbms
+from enum import Enum
+class HwmType(Enum):
+    old_item_hwm = 0
+    new_item_hwm = 1
+    old_rule_hwm = 2
+    new_rule_hwm = 3
+    old_semantic_hwm = 4
+    new_semantic_hwm = 5
 class HackerNewsStorage:
     def __init__(self):
         self._raw_data_path = Path(config["raw_data_path"])
         if not self._raw_data_path.exists():
             self._raw_data_path.mkdir(parents=True, exist_ok=True)
         self._dbms = Dbms()
-        self._delta_story_sql = (Path(__file__).parent / "group_new_comments_by_story.sql").read_text()
+        cur_dir = Path(__file__).parent
+        self._delta_story_sql = (cur_dir / "group_new_comments_by_story.sql").read_text()
+        self._tables = json.loads((cur_dir / "table_schema.json").read_text())
     async def init(self) -> None:
         try:
             await self._dbms.init()
@@ -17,18 +27,9 @@ class HackerNewsStorage:
                 exists = await conn.fetchval("SELECT EXISTS "
                     "(SELECT 1 FROM information_schema.tables Where table_name = 'hwm');")
                 if not exists:
-                    await conn.execute("CREATE TABLE story "
-                        "(story_id BIGINT PRIMARY KEY, time BIGINT, title TEXT, type TEXT, Url TEXT);")
-                    await conn.execute("CREATE TABLE comment "
-                        "(comment_id BIGINT PRIMARY KEY, time BIGINT, text TEXT, parent_id BIGINT);")
-                    
-                    await conn.execute("CREATE TABLE hwm (item_max_id BIGINT, parsed_item_hwm BIGINT, filter_rule_hwm BIGINT);")
-
-                    await conn.execute("CREATE TABLE filter_rule "
-                                       "(id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, story_id BIGINT, comment_id BIGINT UNIQUE);")
-
-                    await conn.execute("INSERT INTO hwm VALUES(49300000, 0, 0);")
-
+                    for table in self._tables:
+                        await conn.execute(f"CREATE TABLE {table['table_name']} {table['schema']};")
+                    await conn.execute("INSERT INTO hwm VALUES(49300000, 0, 0, 0);")
                     logger.info("storage init succ")
                 else:
                     logger.info("storage loaded")
@@ -39,6 +40,54 @@ class HackerNewsStorage:
 
     async def destory(self) -> None:
         await self._dbms.destory()
+
+    async def fetch_hwm(self, type:HwmType) -> int:
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetchval(f"Select {type.name} From hwm;")
+        except Exception as e:
+            logger.exception(f"get_hwm {type.name} failed, error = {type(e).__name__}:'{e}'")
+            raise e
+    async def update_hwm(self, type:HwmType, *args):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                hwm = 0
+                if type == HwmType.old_item_hwm or type == HwmType.new_item_hwm:
+                    hwm = *args
+                else:
+                    table_name = self._tables[int(type.value / 2)]
+                    hwm = await conn.fetchval(f"SELECT pg_get_serial_sequence('{table_name}', 'id');")
+                await conn.execute(f"Update hwm Set {type.name} = $1 WHERE {type.name} < $1;", hwm)
+        except Exception as e:
+            logger.exception(f"update_item_id_hwm item_id = {item_max_id} failed, error = {type(e).__name__}:'{e}'")
+            raise e
+
+    async def get_filter_rule_hwm(self) -> int:
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetchval("Select filter_rule_hwm From hwm;")
+        except Exception as e:
+            logger.exception(f"get_filter_rule_hwm failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def save_filter_semantic(self, story_id, comment_id):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                await conn.execute("INSERT INTO filter_semantic (story_id, comment_id) VALUES ($1, $2);", story_id, comment_id)
+        except asyncpg.UniqueViolationError:
+            logger.info(f"save_filter_semantic unique violation, comment_id = {comment_id}")
+        except Exception as e:
+            logger.exception(f"save_filter_semantic failed, error = {type(e).__name__}:'{e}'")
+            raise e
+        
+    async def update_filter_semantic_hwm(self):
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                filter_rule_hwm = await conn.fetchval("SELECT pg_get_serial_sequence('filter_semantic', 'id');") # 会消耗一个id
+                await conn.execute("Update hwm Set filter_semantic_hwm = $1 WHERE filter_semantic_hwm < $1;", filter_rule_hwm)
+        except Exception as e:
+            logger.exception(f"save filter_rule_hwm failed, error = {type(e).__name__}:'{e}'")
+            raise e 
     
     async def update_item_id_hwm(self, item_max_id:int) -> None:
         try:
@@ -80,12 +129,12 @@ class HackerNewsStorage:
             raise e
         
     async def get_parsed_item_hwm(self) -> int:
-            try:
-                async with self._dbms.pg_pool.acquire() as conn:
-                    return await conn.fetchval("Select parsed_item_hwm From hwm;")
-            except Exception as e:
-                logger.exception(f"get parsed_item failed, error = {type(e).__name__}:'{e}'")
-                raise e
+        try:
+            async with self._dbms.pg_pool.acquire() as conn:
+                return await conn.fetchval("Select parsed_item_hwm From hwm;")
+        except Exception as e:
+            logger.exception(f"get parsed_item failed, error = {type(e).__name__}:'{e}'")
+            raise e
 
     async def save_item(self, item:dict) -> None:
         if item["type"] == "story":
